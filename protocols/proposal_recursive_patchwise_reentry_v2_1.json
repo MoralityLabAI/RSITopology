@@ -1,0 +1,58 @@
+{
+  "protocol_id": "proposal-recursive-patchwise-reentry-v2.1",
+  "version": "2.1.0",
+  "status": "frozen_prereveal_hypothesis",
+  "frozen_on": "2026-07-14",
+  "parent_result": {
+    "gate": "G1_atlas",
+    "measurement_component_decision": "fail",
+    "result_sha256": "604281ab080db7d3d745c9bda6142f668141573238d86b5b7916a22b2703052e",
+    "extension_rule": "new hypothesis and fresh holdout; no pooling with v1"
+  },
+  "new_hypothesis": "Although no single global soft atlas is stable across the registered Qwen primitives, behavior-family-local identity patches may support stable, causally useful edit coordinates. Within certified local patches, target-blind selected edits should outperform matched random directions; across patch boundaries, signed transport should fail or require separate coordinates.",
+  "claim_boundary": "This tests local patch-conditioned edit identity and proposal-channel recursion under a frozen scorer. It does not revive the global-atlas hypothesis, test evaluator-channel recursion, establish unrestricted self-improvement, or establish RSI.",
+  "no_new_invariant_levels": true,
+  "top_invariant": "holonomy",
+  "identity_object": "maximal behavior-family-local flat patches under the existing lineage, holonomy-budget, and det(H) rules",
+  "fresh_data": {
+    "generator": "scripts/generate_recursive_patchwise_holdout_v2.py",
+    "public_manifest": "protocols/proposal_recursive_patchwise_holdout_v2_1.json",
+    "private_answer_key": "artifacts/proposal_recursive_patchwise_holdout_v2_1/answer_key.json",
+    "scorer": "scripts/score_recursive_patchwise_holdout_v2.py",
+    "parent_prompt_reuse": false,
+    "families": 4,
+    "prompts_per_family": 16,
+    "splits": ["construction", "selector", "audit", "outer"]
+  },
+  "fixed_sequence": [
+    {
+      "gate_id": "P1_local_identity",
+      "requirement": "On construction prompts only, within-family lineage retention must beat a family-label permutation null with a simultaneous one-sided 95% lower bound above 0.10, every admitted elementary loop must satisfy det(H)>0 and angle<=15 degrees, and at least three physical sites must have an admissible patch in at least two behavior families.",
+      "failure_meaning": "No measurable local identity object under this construction; stop before edits."
+    },
+    {
+      "gate_id": "P2_causal_edit_family",
+      "requirement": "Within identity strata, selected edits must beat within-site matched-random directions by >0.10 outer-utility SD on selector-to-audit grouped holdout, with exact rank and norm matching. The cross-site contrast is co-primary and separately reported.",
+      "failure_meaning": "Local identity does not supply a causally useful edit family; stop before recursion."
+    },
+    {
+      "gate_id": "P3_recursive_proposal",
+      "requirement": "Under the existing four-arm, fixed-scorer, matched-compute design, recursive-proposer paired increments must clear the registered statistical and practical margins on audit and outer splits.",
+      "failure_meaning": "No proposal-channel recursive gain under the registered local edit family."
+    },
+    {
+      "gate_id": "P4_ordering_safety",
+      "requirement": "The heldout adversarial-order suite validates against random and control-loss upper bounds remain below the registered 0.10-SD budget with no orientation reversal.",
+      "failure_meaning": "Control is not certified under adversarial edit ordering."
+    }
+  ],
+  "leakage_controls": {
+    "proposer_access": ["construction prompts", "selector prompts after proposal generation only as registered"],
+    "selection_oracle_access": ["selector answer key only"],
+    "audit_access": ["audit answer key after candidate and feature seal"],
+    "outer_access": ["outer answer key after all rounds and run receipt seal"],
+    "generator_source_not_in_model_prompt": true,
+    "answer_key_not_in_proposer_process_arguments": true
+  },
+  "decision_rule": "Only pass advances. Fail, inconclusive, unavailable, or invalid stops. No discretionary override."
+}

@@ -1,0 +1,474 @@
+{
+  "answer_key_not_exposed_to_proposer": true,
+  "answer_key_sha256": "29766e160d182c5ab137e3636db89e35d5086efe0a55c50cca19b73e73a77ba8",
+  "behavior_families": [
+    "affine_recurrence",
+    "symbol_transport",
+    "grid_rotation",
+    "graph_reachability"
+  ],
+  "generator_sha256": "fcfd325f0d29440ad1ee57797c6c7d33e0acefd0bc6606db9da1259f731e6803",
+  "model_outcomes_collected": false,
+  "parent_prompt_corpus_reused": false,
+  "prompt_count": 64,
+  "prompts": [
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: -5, -18, -57, -174. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-00-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 3, -5, 19, -53. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-00-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 0, -5, -20, -65. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-00-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 1, 4, 10, 22. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-00-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: -5, 12, -39, 114. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-01-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 0, -2, 2, -6. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-01-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: -2, -2, -2, -2. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-01-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 1, 4, -5, 22. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-01-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: -4, -10, -28, -82. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-02-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 2, -2, 6, -10. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-02-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 2, 3, 1, 5. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-02-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 4, -10, 32, -94. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-02-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: -1, 9, -21, 69. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-03-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: -5, 11, -21, 43. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-03-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 5, 18, 57, 174. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-03-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "affine_recurrence",
+      "prompt": "Apply the same affine recurrence at every step. Sequence: 5, 21, 69, 213. Return the next integer as ANSWER=<integer>.",
+      "prompt_id": "pr2-00-03-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->D, B->B, C->E, D->C, E->A. Input: CECCA. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-00-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->A, B->D, C->B, D->E, E->C. Input: DEDEB. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-00-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->C, B->D, C->B, D->E, E->A. Input: EBACB. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-00-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->B, B->C, C->E, D->D, E->A. Input: ECDEA. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-00-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->C, B->A, C->E, D->D, E->B. Input: EEECD. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-01-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->D, B->C, C->E, D->A, E->B. Input: ACDBB. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-01-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->B, B->D, C->C, D->A, E->E. Input: CBCDA. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-01-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->E, B->C, C->D, D->A, E->B. Input: EEAED. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-01-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->E, B->D, C->A, D->B, E->C. Input: EBEAA. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-02-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->E, B->D, C->B, D->A, E->C. Input: AACBE. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-02-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->D, B->E, C->C, D->B, E->A. Input: AEEED. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-02-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->E, B->B, C->D, D->C, E->A. Input: CCABB. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-02-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->C, B->A, C->E, D->B, E->D. Input: BAECB. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-03-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->B, B->C, C->D, D->A, E->E. Input: DCBED. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-03-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->E, B->C, C->B, D->D, E->A. Input: BBCCD. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-03-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "symbol_transport",
+      "prompt": "Use this symbol transport exactly once: A->E, B->B, C->A, D->D, E->C. Input: DDCEE. Return the transported string as ANSWER=<string>.",
+      "prompt_id": "pr2-01-03-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 010/101/000. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-00-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 101/101/100. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-00-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 011/000/010. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-00-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 010/001/101. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-00-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 010/011/000. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-01-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 100/000/101. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-01-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 011/101/100. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-01-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 000/110/111. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-01-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 110/110/001. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-02-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 100/011/100. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-02-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 101/100/101. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-02-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 011/000/000. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-02-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 100/000/100. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-03-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 100/001/100. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-03-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 111/111/001. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-03-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "grid_rotation",
+      "prompt": "The 3x3 binary grid is 110/111/000. Rotate it 90 degrees clockwise. Return rows separated by '/' as ANSWER=<rows>.",
+      "prompt_id": "pr2-02-03-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->E, B->D, C->F, D->F. Is F reachable from B? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-00-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->E, B->D, B->E, C->D, D->F. Is F reachable from E? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-00-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->C, A->D, A->E, B->C, C->D, C->F, E->F. Is F reachable from C? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-00-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->F, B->E, C->D, D->E. Is F reachable from E? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-00-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "construction"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: B->C, C->E, C->F, D->E. Is E reachable from B? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-01-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: B->C, C->E, E->F. Is D reachable from C? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-01-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->E, B->D, D->F, E->F. Is F reachable from B? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-01-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->B, B->D, B->F, C->D, D->F. Is E reachable from D? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-01-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "selector"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: B->C, C->F, D->F, E->F. Is F reachable from E? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-02-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->B, A->E, C->D, C->F. Is D reachable from B? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-02-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->D, A->F, B->E, B->F, C->E. Is D reachable from A? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-02-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->E, B->E. Is F reachable from C? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-02-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "audit"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->B, A->E, A->F, B->C, B->D, B->E, D->E. Is D reachable from B? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-03-00",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: B->D, B->F, C->E. Is F reachable from E? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-03-01",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->C, A->E, B->E, B->F, C->E, E->F. Is E reachable from B? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-03-02",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    },
+    {
+      "behavior_family": "graph_reachability",
+      "prompt": "Directed edges: A->D, A->F, B->C, B->E, C->E. Is F reachable from C? Return ANSWER=YES or ANSWER=NO.",
+      "prompt_id": "pr2-03-03-03",
+      "response_contract": "one line exactly: ANSWER=<value>",
+      "split": "outer"
+    }
+  ],
+  "prompts_per_family_per_split": 4,
+  "schema_version": "proposal_recursive_patchwise_holdout_v1",
+  "seed": 2026071403,
+  "splits": [
+    "construction",
+    "selector",
+    "audit",
+    "outer"
+  ],
+  "status": "fresh_prereveal_holdout"
+}

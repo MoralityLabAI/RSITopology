@@ -18,12 +18,15 @@
     }
   },
   "scientific_reentry": {
-    "new_hypothesis_protocol": {"path": null, "sha256": null},
+    "new_hypothesis_protocol": {
+      "path": "C:\\projects\\RSITopology\\protocols\\proposal_recursive_patchwise_reentry_v2_1.json",
+      "sha256": "7c4d03006f6f7a8363a21a3a34e9a15f0489bb9cbeb47d0cdb5ade9e627f91b4"
+    },
     "fresh_holdout_manifest": {
-      "path": null,
-      "sha256": null,
-      "disjoint_from_parent": false,
-      "outcomes_unread": false
+      "path": "C:\\projects\\RSITopology\\protocols\\proposal_recursive_patchwise_holdout_v2_1.json",
+      "sha256": "c2e3cc82c3cc9a6d5a970b8b109ec022c87d0aaf6f566cf2cb954901b6cacb8b",
+      "disjoint_from_parent": true,
+      "outcomes_unread": true
     },
     "prior_outcomes_excluded": true
   },
@@ -41,7 +44,10 @@
   },
   "registered_components": {
     "proposal_entrypoint": {"path": null, "sha256": null},
-    "frozen_scorer": {"path": null, "sha256": null},
+    "frozen_scorer": {
+      "path": "C:\\projects\\RSITopology\\scripts\\score_recursive_patchwise_holdout_v2.py",
+      "sha256": "1ed70bafd8fcf37587ad6c9f598c1f1b196c6405693a5ca0b65ea8724e659df9"
+    },
     "edit_family_manifest": {"path": null, "sha256": null},
     "exact_command": []
   },
@@ -110,6 +116,36 @@
         "role": "target_tokenizer",
         "path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified\\tokenizer.json",
         "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "id": "new_patchwise_hypothesis",
+        "role": "fresh_scientific_protocol",
+        "path": "C:\\projects\\RSITopology\\protocols\\proposal_recursive_patchwise_reentry_v2_1.json",
+        "sha256": "7c4d03006f6f7a8363a21a3a34e9a15f0489bb9cbeb47d0cdb5ade9e627f91b4"
+      },
+      {
+        "id": "fresh_public_holdout",
+        "role": "fresh_prompt_universe_without_answers",
+        "path": "C:\\projects\\RSITopology\\protocols\\proposal_recursive_patchwise_holdout_v2_1.json",
+        "sha256": "c2e3cc82c3cc9a6d5a970b8b109ec022c87d0aaf6f566cf2cb954901b6cacb8b"
+      },
+      {
+        "id": "private_answer_key",
+        "role": "frozen_external_scorer_only",
+        "path": "C:\\projects\\RSITopology\\artifacts\\proposal_recursive_patchwise_holdout_v2_1\\answer_key.json",
+        "sha256": "29766e160d182c5ab137e3636db89e35d5086efe0a55c50cca19b73e73a77ba8"
+      },
+      {
+        "id": "frozen_exact_scorer",
+        "role": "selection_audit_outer_scorer",
+        "path": "C:\\projects\\RSITopology\\scripts\\score_recursive_patchwise_holdout_v2.py",
+        "sha256": "1ed70bafd8fcf37587ad6c9f598c1f1b196c6405693a5ca0b65ea8724e659df9"
+      },
+      {
+        "id": "holdout_generator",
+        "role": "deterministic_fixture_provenance",
+        "path": "C:\\projects\\RSITopology\\scripts\\generate_recursive_patchwise_holdout_v2.py",
+        "sha256": "fcfd325f0d29440ad1ee57797c6c7d33e0acefd0bc6606db9da1259f731e6803"
       }
     ]
   },
