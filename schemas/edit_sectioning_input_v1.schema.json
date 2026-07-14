@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moralitylab.xyz/schemas/edit_sectioning_input_v1.schema.json",
+  "title": "Edit-sectioning receipt grid",
+  "type": "object",
+  "required": ["grid_id", "rank", "edges", "plaquettes", "reference_coordinate"],
+  "properties": {
+    "grid_id": {"type": "string", "minLength": 1},
+    "rank": {"type": "integer", "minimum": 1},
+    "reference_coordinate": {"type": "array", "items": {"type": "number"}, "minItems": 1},
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["edge_id", "source_node", "target_node", "transport_matrix", "mean_edge_chordal_lineage", "minimum_edge_worst_direction_retention"],
+        "properties": {
+          "edge_id": {"type": "string"}, "source_node": {"type": "string"}, "target_node": {"type": "string"},
+          "transport_matrix": {"type": "array", "items": {"type": "array", "items": {"type": "number"}}},
+          "mean_edge_chordal_lineage": {"type": "number"},
+          "minimum_edge_worst_direction_retention": {"type": "number"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "plaquettes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["plaquette_id", "row", "column", "node_ids", "edge_ids", "measured", "identity_loss", "identity_loss_lower_bound", "identity_loss_upper_bound", "det_h_flag", "determinant_reversal_probability"],
+        "properties": {
+          "plaquette_id": {"type": "string"}, "row": {"type": "integer"}, "column": {"type": "integer"},
+          "node_ids": {"type": "array", "items": {"type": "string"}, "minItems": 4},
+          "edge_ids": {"type": "array", "items": {"type": "string"}, "minItems": 4},
+          "measured": {"type": "boolean"}, "identity_loss": {"type": ["number", "null"]},
+          "identity_loss_lower_bound": {"type": "number", "minimum": 0, "maximum": 2},
+          "identity_loss_upper_bound": {"type": "number", "minimum": 0, "maximum": 2},
+          "det_h_flag": {"type": "boolean"},
+          "determinant_reversal_probability": {"type": "number", "minimum": 0, "maximum": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

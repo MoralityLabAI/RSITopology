@@ -1,0 +1,3 @@
+{"ts_utc":"2026-07-14T00:00:00Z","event":"authorized_start","run_id":"example-only","owned_pids":[]}
+{"ts_utc":"2026-07-14T00:05:00Z","event":"checkpoint","run_id":"example-only","step":1,"owned_pids":[12345]}
+{"ts_utc":"2026-07-14T00:05:01Z","event":"abort","run_id":"example-only","step":1,"abort_reason":"hard_memory_cap_exceeded","owned_pids":[12345]}

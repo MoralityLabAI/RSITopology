@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moralitylab.xyz/schemas/lineage_certificate_v1.schema.json",
+  "title": "Lineage certificate",
+  "type": "object",
+  "required": [
+    "site_id", "consumer", "artifact_kind", "certification_level",
+    "required_level", "authorized", "margins", "failures",
+    "record_sha256", "policy_id"
+  ],
+  "properties": {
+    "site_id": {"type": "string"},
+    "consumer": {"type": "string"},
+    "artifact_kind": {"type": "string"},
+    "certification_level": {"enum": ["engineering_evidence", "lineage_certified", "holonomy_clean"]},
+    "required_level": {"enum": ["engineering_evidence", "lineage_certified", "holonomy_clean"]},
+    "authorized": {"type": "boolean"},
+    "margins": {"type": "object", "additionalProperties": {"type": "number"}},
+    "failures": {"type": "array", "items": {"type": "string"}},
+    "record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "policy_id": {"type": "string"}
+  },
+  "additionalProperties": false
+}

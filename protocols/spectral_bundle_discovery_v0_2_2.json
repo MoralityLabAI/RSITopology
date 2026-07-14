@@ -1,0 +1,55 @@
+{
+  "protocol_id": "rsi-topology-spectral-bundle-v0.2.2",
+  "amends": "rsi-topology-spectral-bundle-v0.2.1",
+  "status": "engineering_protocol_not_real_model_preregistration",
+  "frozen_on": "2026-07-11",
+  "amendment_reason": "Adds categorical band-selection stability and band-attributed margins after an external mechanism probe showed that a summary layer hid low-to-middle band failover. No gate or threshold changes.",
+  "primary_gates_unchanged": true,
+  "object": "cross-context high-occupancy eigenspaces of mean projectors for frozen low-frequency bands of normalized reliability-weighted sheaf Laplacians",
+  "bands": [["low", 0.0, 0.25], ["middle", 0.25, 0.65], ["high", 0.65, 1.000001]],
+  "selection_rule": "choose the lowest-frequency band meeting the geometry gate in frozen band order; outcome-based band selection is prohibited",
+  "geometry_gate": {
+    "minimum_contexts": 3,
+    "minimum_consensus_occupancy": 0.75,
+    "minimum_consensus_rank": 8,
+    "maximum_computed_rank": 32,
+    "occupancy_margin": "minimum_occupancy minus 0.75; margins below 0.10 emit a fixture-calibrated warning but do not change the gate"
+  },
+  "selection_stability": {
+    "reference": "selected band at the registered reference run; positive-noise sweeps use the smallest strictly positive level",
+    "required_fields": ["selected_band", "reference_selected_band", "selection_stable", "selection_stability_warning"],
+    "warning_rule": "selected_band != reference_selected_band emits a mandatory warning and makes lineage serialization mandatory",
+    "claim_effect": "failover remains engineering evidence pending lineage review; no geometry, policy, or edit threshold changes"
+  },
+  "band_attribution": {
+    "required": true,
+    "rule": "rank, minimum occupancy, occupancy margin, and margin warning are emitted with a band name for every band and for the selected band",
+    "sweep_grouping_key": "selected_band"
+  },
+  "policy_gate": {
+    "split": "leave_one_prompt_or_context_out",
+    "maximum_kl_from_uniform": 0.05,
+    "minimum_relative_mse_improvement": 0.05,
+    "minimum_standardized_heldout_return_uplift": 0.10,
+    "primary_gate": "unchanged from v0.2.1",
+    "realized_ic": "standardized_uplift / sqrt(2 * realized_KL), descriptive only",
+    "outcome_based_kl_cap_selection": "prohibited"
+  },
+  "direct_edit_gate": {
+    "split": "leave_one_prompt_or_context_out",
+    "minimum_relative_mse_improvement": 0.05,
+    "minimum_advantage_over_matched_rank_haar": 0.02,
+    "application": "prohibited_in_discovery_stage; emit normalized proposal and hash only"
+  },
+  "standing_controls": {
+    "dense_occupancy_calibration": "selected_band is a required grouping key and failover warning source",
+    "occupancy_matched_low_lineage": "common orthogonal conjugation holds the complete occupancy spectrum and selected band fixed while rotating identity; unit construction validation required before capped scale-up",
+    "sparse_geometry_noise": "zero remains a legacy RNG compatibility point; positive sweeps use the smallest positive reference"
+  },
+  "receipt_requirements": {
+    "environment": ["Python version", "Python executable", "platform", "numpy", "scipy", "scikit-learn"],
+    "external_replays": "must record source archive SHA-256 and remain diagnostic-only",
+    "selection_summary": "must never report rank or occupancy without selected_band"
+  },
+  "claim_boundary": "A pass identifies a stable spectral bundle useful for grouped prediction and bounded candidate allocation. Selection stability distinguishes band failover from within-band lineage loss. Neither establishes real-model self-improvement, compactification, or RSI."
+}

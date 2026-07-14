@@ -1,0 +1,34 @@
+{
+  "bundle_id": "rsi-topology-monitor-holonomy-v0.3-20260712",
+  "created_on": "2026-07-12",
+  "verification": {
+    "full_test_suite": "24 passed",
+    "independent_source_archive_sha256": "F297580DEDBF2E3161D972F599E513EA6EA30526C66BB3CFFEF41AD28AC7AB64"
+  },
+  "canonical_claims": {
+    "analytic_origin_curvature_degrees_per_unit_area": 85.37071147449267,
+    "curved_rank_two_canonical_angle_degrees": 62.17264500317497,
+    "minimum_edge_worst_direction_retention": 0.9900332889206206,
+    "curvature_area_r_squared": 0.9999753665895493,
+    "noise_variance_perimeter_r_squared": 0.9479721259216227,
+    "orientation_component": "preserving in both planted conditions; reversal is a mandatory superseding flag"
+  },
+  "sha256": {
+    "rsi_topology/holonomy.py": "96B7D48228282FC96D0783080D01C317D29F68E64530802E39349D9F7C952DD8",
+    "scripts/run_monitor_holonomy_control.py": "85D9E90D86093D5C3D55DB59D7BC700675684F293EC4DFEDC308E43C270DF4A0",
+    "scripts/run_monitor_holonomy_noise_null.py": "E6C9B0DF000B8C876DE07E12D71BE1BDE85EDA737B8AF747C1CFC67AAA3B1BDF",
+    "tests/test_holonomy.py": "E61403B64CAA142C8BE1CB610E9DF17DEB000AA057F386AE4C1CDCFB280CED0F",
+    "tests/test_holonomy_from_spec.py": "9D5C55F7DB6ABCB8FE7BDACC26C3110E00D45DF51D877B515AAEA69044609E62",
+    "reports/monitor_holonomy_insight.md": "9E1C4601D6C7B7D36B482951F937B78761AA7F3DE9F6086E56579C47266D380C",
+    "protocols/monitor_holonomy_noise_null_v0_1.json": "0BCA7E7A1D30BBC6DBD9596715E4B02F651083AFBE9D7CEBA0D0CF1A5C290D8A",
+    "protocols/monitor_holonomy_noise_null_v0_2.json": "FBE943368BF8DFCFC75A1A1E8B07A0925B62D1DD1228E8E9CE4617BFE264964E",
+    "artifacts/monitor_holonomy_control_v0_3.json": "B0F44EFF349B6C7DF77EA271EF6123DB304A3C764A5471AC02B4B8D4912E4C33",
+    "artifacts/monitor_holonomy_noise_null_v0_1.json": "0D34F99278B29677672960DA970097A9528138A9730B41964899F0829FCA955D",
+    "artifacts/monitor_holonomy_noise_null_v0_2.json": "12B52E523ABDC156E99186CC4A1C88FECED45B13FB9B0653D1F25A8CF56FDEA5",
+    "artifacts/external_fable_files7/IMPORT_MANIFEST.json": "0555953871F056D77D8A1DE59BE3A24507948A4776AD9F953721140CD87E7BCC",
+    "artifacts/external_fable_files7/holonomy_from_spec_repro.py": "2003C7F2BAE0B6420B9EA58107EA8629DC86986AFDC3604FC1D9640A302F7469",
+    "artifacts/external_fable_files7/holonomy_from_spec_reproduction.md": "066A7EC7DD12632F3BD10DECA8F6FA6370C9C5B754072F3D5CC35F3F292A30AB",
+    "visualizations/monitor-holonomy.html": "7630DC6336AF0031AE035D8AE681BA7EBDB1057AC1860C7210610CD2254C955E"
+  }
+}
+

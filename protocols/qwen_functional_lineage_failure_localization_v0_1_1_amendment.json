@@ -1,0 +1,14 @@
+{
+  "protocol_id": "qwen-functional-lineage-failure-localization-v0-1-1-amendment",
+  "version": "0.1.1",
+  "status": "frozen_prereveal_engineering_amendment",
+  "frozen_on": "2026-07-13",
+  "parent_protocol_sha256": "21e57498a5826c1f46f669b3d7449b2e805b942b44da04da50c744d0785dd14a",
+  "outcomes_existed_at_freeze": false,
+  "scientific_metrics_changed": false,
+  "reason": "The first launch stopped before reading source artifacts because direct script execution did not place the repository root on sys.path. This amendment pins the import bootstrap and amendment validation; the frozen metrics, thresholds, sources, and decision rules are unchanged.",
+  "implementation_sha256": {
+    "cli": "5f70afc297468ef06724af1c73c9f3ed078f3415e0c891d6ba5f65f450f1fab9",
+    "failure_localization_module": "bb23e969ce6498fa0febd157c5fdcf8c7caea1bb0686cc11a0564a9e77823f41"
+  }
+}

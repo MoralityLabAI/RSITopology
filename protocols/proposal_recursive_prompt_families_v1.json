@@ -1,0 +1,29 @@
+{
+  "artifact_id": "proposal-recursive-prompt-families-v1",
+  "version": "1.0.0",
+  "status": "frozen_current_corpus_assessment",
+  "frozen_on": "2026-07-14",
+  "source_prompt_manifest": "D:/projects/VDP/JSpace/artifacts/identity_calibration_run_v1/prompts/arc_prompt_groups.json",
+  "source_prompt_manifest_file_sha256": "a4f246fd30450d9cee510f93c9fc55b5605115a79ad36bb83b78c45a1b9c9db3",
+  "source_prompt_corpus_sha256": "4aac9f77d9531073e9196ff0df625109cec336e046e6ce8f40db6009c716fc1d",
+  "registered_prompt_count": 8,
+  "behavior_family_assignments": {},
+  "assignment_rule": "Assignments must be target-blind, semantic-behavior labels frozen before atlas outcomes, and must define genuinely interchangeable prompts rather than merely sharing a benchmark split.",
+  "sufficiency": {
+    "minimum_family_count": 4,
+    "minimum_prompts_per_family": 4,
+    "minimum_independent_replicas_per_prompt": 4,
+    "minimum_unordered_prompt_pairs_per_family": 6,
+    "minimum_valid_deviation_rows_per_family": 16,
+    "complete_assignment_required": true
+  },
+  "current_status": "unavailable_insufficient_prompt_families",
+  "current_reason": "The eight ARC groups contain heterogeneous questions and have no sealed interchangeable-behavior family assignments. Easy versus Challenge is a difficulty/source label, not a behavior-family equivalence relation.",
+  "decision_effect": "G1_atlas cannot fully pass and the recursive experiment remains blocked until a versioned fresh prompt-family artifact satisfies every numeric floor.",
+  "prompt_scale_definition": {
+    "A_hat_p": "Mean canonical response operator across the registered independent replica/checkpoint cells for prompt p.",
+    "A_bar_b_p": "Leave-one-prompt-out mean of A_hat_q over all q in the frozen behavior family b(p), q != p.",
+    "ascii": "lambda_prompt = Q_0.95(lambda_max((A_hat_p - A_bar_b(p))^T @ (A_hat_p - A_bar_b(p)))).",
+    "prose": "Take the 95th percentile over prompts of the largest eigenvalue of the squared within-family prompt deviation."
+  }
+}

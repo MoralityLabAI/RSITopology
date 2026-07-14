@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsi-topology"
+version = "0.1.0"
+description = "Bounded spectral-bundle discovery over JSpace harmonic geometry"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "scikit-learn"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

@@ -1,0 +1,64 @@
+{
+  "protocol_id": "vpd_identity_stratification_v0_2",
+  "schema_version": "0.2.0",
+  "named_consumer": "vpd_edit_program",
+  "registration_timing": "Seal features, contrast assignments, candidate and pair IDs, identity certificates, support diagnostics, registry hash, and protocol hash before outcome generation or reveal.",
+  "arms": ["intervention", "matched_random"],
+  "contrasts": {
+    "direction_value": {
+      "estimand": "Attribution-selected direction minus matched-random direction at the same site.",
+      "site_rule": "site_id must be identical within pair",
+      "direction_rule": {
+        "intervention": "attribution_selected",
+        "matched_random": "matched_random"
+      }
+    },
+    "site_selection": {
+      "estimand": "Attribution-selected site minus matched-random site while direction policy is fixed.",
+      "site_rule": "site_id must differ within pair",
+      "direction_rule": "direction_policy must be identical within pair"
+    }
+  },
+  "exact_matching_fields": [
+    "contrast_type",
+    "run_replicate",
+    "prompt_group",
+    "family",
+    "norm",
+    "rank",
+    "layer_index",
+    "component_type",
+    "identity_stratum"
+  ],
+  "site_selection_calipers": {
+    "distance": "2*abs(a-b)/(abs(a)+abs(b)+1e-12)",
+    "maximum_jacobian_visibility_distance": 0.2,
+    "maximum_baseline_activation_rms_distance": 0.2
+  },
+  "identity_strata": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "primary_outcome": "accepted",
+  "secondary_outcomes": ["repair_auc", "initial_decay"],
+  "unit_of_independence": "run_replicate",
+  "primary_analysis": "For each contrast separately, report paired intervention-minus-matched-random effects within each identity stratum with a two-sided run-replicate-cluster sign-flip test.",
+  "support_reporting": "Report pair counts, empty strata, Jacobian-visibility distance, and activation-RMS distance. Never silently discard or pool unsupported candidates.",
+  "prohibited": [
+    "pooling_direction_value_and_site_selection_estimands",
+    "pooled_or_unqualified_effect_across_identity_strata",
+    "evaluation_row_as_independent_unit",
+    "post_outcome_matching_or_stratum_changes",
+    "missing_extra_or_duplicate_candidate_ids",
+    "outcome_join_before_seal"
+  ],
+  "stop_rules": {
+    "empty_stratum": "Report not_established_in_stratum; do not pool.",
+    "broken_pair": "Invalid run.",
+    "caliper_failure": "Pair is ineligible before sealing and must be reported as outside matched support.",
+    "registry_or_sealed_hash_mismatch": "Invalid reveal.",
+    "signed_edit_below_holonomy_clean": "Record as unauthorized engineering evidence; do not relabel or claim harness authorization."
+  },
+  "clean_conclusion": "Direction value and site-selection value are distinct estimands. Each is reported only against its matched-random control within the same preregistered identity stratum."
+}

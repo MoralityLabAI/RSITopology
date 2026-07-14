@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+tmp/
+.packaging/
+.airis-pilot/
+.codex/
+
+# Local run noise and editor/OS metadata.
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Generated experimental receipts remain local unless deliberately packaged.
+artifacts/

@@ -1,0 +1,39 @@
+{
+  "protocol_id": "vpd_identity_stratification_v0_1",
+  "schema_version": "0.1.0",
+  "named_consumer": "vpd_edit_program",
+  "registration_timing": "Seal identity features, candidate IDs, pair IDs, registry hash, and protocol hash before outcome generation or reveal.",
+  "arms": ["intervention", "matched_random"],
+  "matching_fields": [
+    "site_id",
+    "run_replicate",
+    "prompt_group",
+    "family",
+    "norm",
+    "rank",
+    "identity_stratum"
+  ],
+  "identity_strata": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "primary_outcome": "accepted",
+  "secondary_outcomes": ["repair_auc", "initial_decay"],
+  "unit_of_independence": "run_replicate",
+  "primary_analysis": "Paired intervention-minus-matched-random effect within each identity stratum, with a two-sided run-replicate-cluster sign-flip test.",
+  "prohibited": [
+    "pooled_or_unqualified_effect_across_identity_strata",
+    "evaluation_row_as_independent_unit",
+    "post_outcome_stratum_changes",
+    "missing_extra_or_duplicate_candidate_ids",
+    "outcome_join_before_seal"
+  ],
+  "stop_rules": {
+    "empty_stratum": "Report not_established_in_stratum; do not pool.",
+    "broken_pair": "Invalid run.",
+    "registry_or_sealed_hash_mismatch": "Invalid reveal.",
+    "signed_edit_below_holonomy_clean": "Record as unauthorized engineering evidence; do not relabel."
+  },
+  "clean_conclusion": "At identity strata represented by valid matched pairs, intervention effects are reported only relative to matched-random edits within the same preregistered stratum."
+}

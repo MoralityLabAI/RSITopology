@@ -1,0 +1,34 @@
+{
+  "protocol_id": "rsi-topology-one-prompt-operator-benchmark-v0.1",
+  "status": "prepared_not_registered",
+  "purpose": "measure construction validity, serialization, eigensolver cost, and local low-band rank for one real prompt before any multi-prompt or outcome-bearing run",
+  "claim_boundary": "A pass authorizes only a multi-prompt prereveal engineering run. One prompt cannot establish cross-prompt bundle stability, policy utility, direct-edit utility, self-improvement, or RSI.",
+  "inputs_required": {
+    "jspace_protocol_version": "1.0.4",
+    "model_id_revision_and_weight_sha256": "REQUIRED",
+    "tokenizer_id_and_sha256": "REQUIRED",
+    "single_prompt_id_and_corpus_sha256": "REQUIRED",
+    "module_graph_mapping": "REQUIRED",
+    "candidate_sites_and_common_space_layout": "REQUIRED",
+    "exact_command_environment_and_implementation_commit": "REQUIRED"
+  },
+  "resource_registration": {
+    "run_id": "REQUIRED",
+    "memory_limit_mb": "REQUIRED_EXPLICIT",
+    "cpu_percent": "REQUIRED_EXPLICIT",
+    "io_limit_mb_s": "REQUIRED_EXPLICIT",
+    "timeout_seconds": "REQUIRED_EXPLICIT",
+    "checkpoint_interval": "REQUIRED_EXPLICIT",
+    "chunk_strategy": "REQUIRED_EXPLICIT"
+  },
+  "outcomes": "prohibited",
+  "weight_mutation": "prohibited",
+  "gates": {
+    "B0_bundle_integrity": "CSR bundle reloads at its sealed hash with one exact registered edit-space layout and no missing/reused/unreferenced arrays",
+    "N0_naturality": "JSpace v1.0.4 exact incidence universe passes from sealed naturality maps",
+    "R0_reliability": "at least two registered norm strata pass JSpace R0",
+    "M0_matrix_free_cost": "run completes inside registered caps without swap, timeout, cleanup failure, or dense d-by-d mean-projector materialization",
+    "E0_low_band_solver": "seeded sparse eigensolver returns finite residuals and a reproducible low-band rank; rank is descriptive and has no minimum pass threshold"
+  },
+  "next_step_if_passed": "register at least five independent multi-prompt operators, seal geometry before outcomes, then run grouped policy/edit prediction gates"
+}

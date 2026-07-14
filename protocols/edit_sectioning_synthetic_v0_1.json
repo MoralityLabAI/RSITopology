@@ -1,0 +1,55 @@
+{
+  "protocol_id": "edit_sectioning_synthetic_v0_1",
+  "schema_version": "0.1.0",
+  "status": "registered_before_canonical_run",
+  "frozen_on": "2026-07-12",
+  "named_consumers": ["vpd_edit_program", "hrmmmm_control_harness"],
+  "invariant_ceiling": "holonomy_clean",
+  "new_invariant_levels": false,
+  "question": "Can registered elementary-loop holonomy partition a context-by-checkpoint grid into useful transported-edit patches without manufacturing structure under uniform curvature?",
+  "sectioning_rule": {
+    "cell_admission": "measured and det_h_flag=false and identity_loss_upper_bound<=holonomy_budget",
+    "patch": "maximal four-neighbor connected component of admitted plaquettes",
+    "coordinate": "one registered coordinate transported from the lexicographically first patch node along a deterministic sorted spanning tree",
+    "worst_case_bound": "maximum registered elementary-plaquette identity-loss upper bound in the patch",
+    "unmeasured_cells": "excluded pending audit",
+    "composite_loop_claim": "not certified"
+  },
+  "persistence": {
+    "budgets": [0.0, 0.005, 0.012, 0.02, 0.05, 0.1, 0.202, 0.25],
+    "component_tracking": "elder component survives a merge; later components receive death and merged_into receipts"
+  },
+  "audit_placement": {
+    "uncertainty": "4*q*(1-q), where q is interval-implied probability of budget-clean and orientation-preserving",
+    "boundary_impact": "one plus the number of additional measured patches the plaquette could connect",
+    "ranking": "descending expected_boundary_uncertainty_reduction, then plaquette_id"
+  },
+  "fixtures": {
+    "rank": 2,
+    "grid_nodes": [2, 10],
+    "mixed_curvature_losses": [0.01, 0.01, 0.01, 0.01, 0.2, 0.01, 0.01, 0.01, 0.01],
+    "uniformly_curved_loss": 0.2,
+    "primary_budget": 0.05,
+    "minimum_edge_worst_direction_retention": 0.9900332889206206
+  },
+  "utility_gate": {
+    "heldout_groups": 128,
+    "seed": 20260712,
+    "observation_noise_scale": 0.8,
+    "total_rank_each_arm": 8,
+    "total_squared_norm_each_arm": 1.0,
+    "baselines": ["one_global_edit", "per_context_independent"],
+    "pass": "lower endpoint of grouped bootstrap 95% CI for patch-minus-baseline utility is greater than zero for both baselines",
+    "bootstrap_draws": 4096
+  },
+  "negative_control_gate": {
+    "pass": "uniformly-curved fixture returns status=no_admissible_multi_patch_section and edit_count=0"
+  },
+  "noise_stability_gate": {
+    "replicates": 128,
+    "seed": 20260712,
+    "identity_loss_noise_sd": 0.004,
+    "pass": "registered mixed-fixture patch count lies inside the empirical 2.5%-97.5% noise-null patch-count band"
+  },
+  "claim_boundary": "All gates are CPU-synthetic. A pass validates the sectioning instrument on planted receipts only and does not establish transformer edit utility."
+}

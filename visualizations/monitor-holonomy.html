@@ -1,0 +1,366 @@
+<div id="monitor-holonomy-lab">
+  <style>
+    #monitor-holonomy-lab {
+      color: var(--foreground);
+      width: 100%;
+    }
+    #monitor-holonomy-lab .mh-stats {
+      margin: 0 0 12px;
+    }
+    #monitor-holonomy-lab .mh-controls {
+      margin: 0 0 10px;
+    }
+    #monitor-holonomy-lab .mh-field {
+      position: relative;
+      width: 100%;
+    }
+    #monitor-holonomy-lab .mh-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+      color: var(--foreground);
+    }
+    #monitor-holonomy-lab .mh-grid-line {
+      stroke: var(--border);
+      stroke-width: 1;
+    }
+    #monitor-holonomy-lab .mh-axis-line {
+      stroke: var(--muted-foreground);
+      stroke-width: 1.25;
+    }
+    #monitor-holonomy-lab .mh-loop-line {
+      fill: none;
+      stroke: var(--viz-series-1);
+      stroke-width: 2.5;
+    }
+    #monitor-holonomy-lab .mh-monitor-line {
+      stroke: var(--viz-series-2);
+      stroke-width: 1.5;
+    }
+    #monitor-holonomy-lab .mh-monitor-tip {
+      fill: var(--viz-series-2);
+    }
+    #monitor-holonomy-lab .mh-start-line {
+      stroke: var(--viz-series-1);
+      stroke-width: 3;
+    }
+    #monitor-holonomy-lab .mh-return-line {
+      stroke: var(--viz-series-3);
+      stroke-width: 3;
+    }
+    #monitor-holonomy-lab .mh-start-tip {
+      fill: var(--viz-series-1);
+    }
+    #monitor-holonomy-lab .mh-return-tip {
+      fill: var(--viz-series-3);
+    }
+    #monitor-holonomy-lab .mh-gauge {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 1.5;
+    }
+    #monitor-holonomy-lab .mh-label {
+      fill: var(--foreground);
+      font-weight: 400;
+    }
+    #monitor-holonomy-lab .mh-muted-label {
+      fill: var(--muted-foreground);
+      font-weight: 400;
+    }
+    #monitor-holonomy-lab .mh-detail {
+      min-height: 1.4em;
+      margin-top: 4px;
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      #monitor-holonomy-lab .mh-chart {
+        min-height: 300px;
+      }
+    }
+  </style>
+
+  <div class="viz-grid mh-stats" aria-live="polite">
+    <div class="card viz-stat">
+      <div class="text-muted">Min edge worst-direction retention</div>
+      <div class="viz-stat-value" id="mh-local">0.9900</div>
+    </div>
+    <div class="card viz-stat">
+      <div class="text-muted">Loop rotation</div>
+      <div class="viz-stat-value" id="mh-phase">62.17°</div>
+    </div>
+    <div class="card viz-stat">
+      <div class="text-muted">Signed monitor return</div>
+      <div class="viz-stat-value" id="mh-return">0.467</div>
+    </div>
+  </div>
+
+  <div class="viz-controls mh-controls">
+    <label class="form-label" for="mh-mode">
+      Connection
+      <select class="form-select" id="mh-mode">
+        <option value="curved" selected>Curved / noncommuting</option>
+        <option value="flat">Flat / commuting</option>
+      </select>
+    </label>
+    <label class="form-label" for="mh-step">
+      Local drift <span id="mh-step-value">0.10</span>
+      <input class="form-range" id="mh-step" type="range" min="0.02" max="0.16" step="0.01" value="0.10">
+    </label>
+    <label class="form-label" for="mh-size">
+      Steps per side <span id="mh-size-value">10</span>
+      <input class="form-range" id="mh-size" type="range" min="2" max="20" step="1" value="10">
+    </label>
+  </div>
+
+  <div class="mh-field">
+    <svg class="mh-chart" id="mh-chart" viewBox="0 0 720 360" role="img" aria-labelledby="mh-svg-title mh-svg-desc">
+      <title id="mh-svg-title">Monitor transport around a context and training loop</title>
+      <desc id="mh-svg-desc">A square context by training grid shows local transported monitor directions and a gauge compares the starting direction with the direction returned after one loop.</desc>
+    </svg>
+  </div>
+  <div class="text-small text-muted mh-detail" id="mh-detail" aria-live="polite">Block-energy return 1.000 · mean edge chordal lineage 0.9947 · det(H) +1.000</div>
+</div>
+
+<script>
+(() => {
+  const root = document.getElementById('monitor-holonomy-lab');
+  const chart = root.querySelector('#mh-chart');
+  const modeInput = root.querySelector('#mh-mode');
+  const stepInput = root.querySelector('#mh-step');
+  const sizeInput = root.querySelector('#mh-size');
+  const localValue = root.querySelector('#mh-local');
+  const phaseValue = root.querySelector('#mh-phase');
+  const returnValue = root.querySelector('#mh-return');
+  const stepValue = root.querySelector('#mh-step-value');
+  const sizeValue = root.querySelector('#mh-size-value');
+  const detail = root.querySelector('#mh-detail');
+  const svgNS = 'http://www.w3.org/2000/svg';
+
+  function matrix(rows, columns, fill = 0) {
+    return Array.from({ length: rows }, () => Array(columns).fill(fill));
+  }
+
+  function identity(size) {
+    const out = matrix(size, size);
+    for (let i = 0; i < size; i += 1) out[i][i] = 1;
+    return out;
+  }
+
+  function add(a, b) {
+    return a.map((row, i) => row.map((value, j) => value + b[i][j]));
+  }
+
+  function scale(a, scalar) {
+    return a.map(row => row.map(value => value * scalar));
+  }
+
+  function multiply(a, b) {
+    const out = matrix(a.length, b[0].length);
+    for (let i = 0; i < a.length; i += 1) {
+      for (let k = 0; k < b.length; k += 1) {
+        for (let j = 0; j < b[0].length; j += 1) {
+          out[i][j] += a[i][k] * b[k][j];
+        }
+      }
+    }
+    return out;
+  }
+
+  function transpose(a) {
+    return a[0].map((_, column) => a.map(row => row[column]));
+  }
+
+  function matrixNormOne(a) {
+    let maximum = 0;
+    for (let j = 0; j < a[0].length; j += 1) {
+      let total = 0;
+      for (let i = 0; i < a.length; i += 1) total += Math.abs(a[i][j]);
+      maximum = Math.max(maximum, total);
+    }
+    return maximum;
+  }
+
+  function expm(a) {
+    const norm = matrixNormOne(a);
+    const squarings = Math.max(0, Math.ceil(Math.log2(Math.max(norm, 1))));
+    const reduced = scale(a, 1 / (2 ** squarings));
+    let result = identity(a.length);
+    let term = identity(a.length);
+    for (let order = 1; order <= 30; order += 1) {
+      term = scale(multiply(term, reduced), 1 / order);
+      result = add(result, term);
+    }
+    for (let index = 0; index < squarings; index += 1) result = multiply(result, result);
+    return result;
+  }
+
+  function generator(i, j, amount = 1) {
+    const out = matrix(4, 4);
+    out[i][j] = amount;
+    out[j][i] = -amount;
+    return out;
+  }
+
+  function frameAt(s, t, context, training) {
+    const transform = expm(add(scale(context, s), scale(training, t)));
+    return transform.map(row => [row[0], row[1]]);
+  }
+
+  function polarTransport(source, target) {
+    const overlap = multiply(transpose(target), source);
+    const a = overlap[0][0];
+    const b = overlap[0][1];
+    const c = overlap[1][0];
+    const d = overlap[1][1];
+    const denominator = Math.hypot(a + d, c - b);
+    const cosine = (a + d) / denominator;
+    const sine = (c - b) / denominator;
+    const transport = [[cosine, -sine], [sine, cosine]];
+
+    const gram00 = a * a + c * c;
+    const gram01 = a * b + c * d;
+    const gram11 = b * b + d * d;
+    const trace = gram00 + gram11;
+    const determinant = gram00 * gram11 - gram01 * gram01;
+    const gap = Math.sqrt(Math.max(0, trace * trace - 4 * determinant));
+    const squared = [
+      Math.max(0, Math.min(1, (trace + gap) / 2)),
+      Math.max(0, Math.min(1, (trace - gap) / 2))
+    ];
+    return { transport, squared };
+  }
+
+  function buildPoints(steps, stepSize) {
+    const side = steps * stepSize;
+    const points = [];
+    for (let i = 0; i <= steps; i += 1) points.push([i * stepSize, 0]);
+    for (let j = 1; j <= steps; j += 1) points.push([side, j * stepSize]);
+    for (let i = steps - 1; i >= 0; i -= 1) points.push([i * stepSize, side]);
+    for (let j = steps - 1; j >= 1; j -= 1) points.push([0, j * stepSize]);
+    return points;
+  }
+
+  function compute(mode, steps, stepSize) {
+    const context = add(generator(0, 2), generator(1, 3, 0.7));
+    const training = mode === 'flat'
+      ? add(generator(0, 2, 0.7), generator(1, 3, -1))
+      : add(generator(0, 3, 0.7), generator(1, 2, -1));
+    const points = buildPoints(steps, stepSize);
+    const frames = points.map(([s, t]) => frameAt(s, t, context, training));
+    let holonomy = identity(2);
+    const phases = [0];
+    const lineages = [];
+    for (let i = 0; i < frames.length; i += 1) {
+      const next = (i + 1) % frames.length;
+      const edge = polarTransport(frames[i], frames[next]);
+      holonomy = multiply(edge.transport, holonomy);
+      lineages.push(...edge.squared);
+      phases.push(Math.atan2(
+        holonomy[1][0] - holonomy[0][1],
+        holonomy[0][0] + holonomy[1][1]
+      ));
+    }
+    const phase = phases[phases.length - 1];
+    return {
+      points,
+      phases,
+      side: steps * stepSize,
+      minimumLineage: Math.min(...lineages),
+      meanLineage: lineages.reduce((sum, value) => sum + value, 0) / lineages.length,
+      phase,
+      signedReturn: Math.cos(phase),
+      energyReturn: 1
+    };
+  }
+
+  function svgElement(name, attributes = {}, text = '') {
+    const element = document.createElementNS(svgNS, name);
+    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, String(value)));
+    if (text) element.textContent = text;
+    return element;
+  }
+
+  function drawLine(group, x1, y1, x2, y2, className) {
+    group.appendChild(svgElement('line', { x1, y1, x2, y2, class: className }));
+  }
+
+  function drawArrow(group, x, y, angle, length, lineClass, tipClass) {
+    const x2 = x + Math.cos(angle) * length;
+    const y2 = y - Math.sin(angle) * length;
+    drawLine(group, x, y, x2, y2, lineClass);
+    group.appendChild(svgElement('circle', { cx: x2, cy: y2, r: 2.6, class: tipClass }));
+  }
+
+  function render() {
+    const mode = modeInput.value;
+    const stepSize = Number(stepInput.value);
+    const steps = Number(sizeInput.value);
+    const result = compute(mode, steps, stepSize);
+    stepValue.textContent = stepSize.toFixed(2);
+    sizeValue.textContent = String(steps);
+    localValue.textContent = result.minimumLineage.toFixed(4);
+    phaseValue.textContent = `${Math.abs(result.phase * 180 / Math.PI).toFixed(2)}°`;
+    returnValue.textContent = result.signedReturn.toFixed(3);
+    detail.textContent = `Block-energy return ${result.energyReturn.toFixed(3)} · mean edge chordal lineage ${result.meanLineage.toFixed(4)} · det(H) +1.000`;
+
+    while (chart.firstChild) chart.removeChild(chart.firstChild);
+    chart.appendChild(svgElement('title', { id: 'mh-svg-title' }, 'Monitor transport around a context and training loop'));
+    chart.appendChild(svgElement('desc', { id: 'mh-svg-desc' }, 'Local monitor coordinates are transported around a context by training loop and compared with the starting coordinate.'));
+
+    const plot = { left: 72, top: 35, size: 280 };
+    const grid = svgElement('g');
+    const gridCount = Math.min(steps, 10);
+    for (let i = 0; i <= gridCount; i += 1) {
+      const offset = plot.size * i / gridCount;
+      drawLine(grid, plot.left + offset, plot.top, plot.left + offset, plot.top + plot.size, 'mh-grid-line');
+      drawLine(grid, plot.left, plot.top + offset, plot.left + plot.size, plot.top + offset, 'mh-grid-line');
+    }
+    drawLine(grid, plot.left, plot.top + plot.size + 18, plot.left + plot.size, plot.top + plot.size + 18, 'mh-axis-line');
+    drawLine(grid, plot.left - 18, plot.top + plot.size, plot.left - 18, plot.top, 'mh-axis-line');
+    grid.appendChild(svgElement('text', { x: plot.left + plot.size / 2, y: 352, 'text-anchor': 'middle', class: 'mh-label text-small' }, 'training checkpoint'));
+    grid.appendChild(svgElement('text', { x: 18, y: plot.top + plot.size / 2, transform: `rotate(-90 18 ${plot.top + plot.size / 2})`, 'text-anchor': 'middle', class: 'mh-label text-small' }, 'prompt / story context'));
+    chart.appendChild(grid);
+
+    const mapPoint = ([s, t]) => [
+      plot.left + plot.size * s / result.side,
+      plot.top + plot.size * (1 - t / result.side)
+    ];
+    const closedPoints = [...result.points, result.points[0]].map(mapPoint);
+    chart.appendChild(svgElement('polyline', {
+      points: closedPoints.map(point => point.join(',')).join(' '),
+      class: 'mh-loop-line'
+    }));
+
+    const arrows = svgElement('g');
+    const stride = Math.max(1, Math.ceil(result.points.length / 28));
+    for (let index = stride - 1; index < result.points.length; index += stride) {
+      const targetIndex = (index + 1) % result.points.length;
+      const [x, y] = mapPoint(result.points[targetIndex]);
+      drawArrow(arrows, x, y, result.phases[index + 1], 11, 'mh-monitor-line', 'mh-monitor-tip');
+    }
+    chart.appendChild(arrows);
+
+    const gauge = svgElement('g');
+    const centerX = 560;
+    const centerY = 178;
+    const radius = 88;
+    gauge.appendChild(svgElement('circle', { cx: centerX, cy: centerY, r: radius, class: 'mh-gauge' }));
+    drawLine(gauge, centerX - radius - 8, centerY, centerX + radius + 8, centerY, 'mh-grid-line');
+    drawLine(gauge, centerX, centerY - radius - 8, centerX, centerY + radius + 8, 'mh-grid-line');
+    drawArrow(gauge, centerX, centerY, 0, 70, 'mh-start-line', 'mh-start-tip');
+    drawArrow(gauge, centerX, centerY, result.phase, 70, 'mh-return-line', 'mh-return-tip');
+    gauge.appendChild(svgElement('text', { x: centerX + 78, y: centerY - 7, 'text-anchor': 'middle', class: 'mh-label text-small' }, 'start'));
+    const returnedLabelX = centerX + Math.cos(result.phase) * 82;
+    const returnedLabelY = centerY - Math.sin(result.phase) * 82 + 4;
+    gauge.appendChild(svgElement('text', { x: returnedLabelX, y: returnedLabelY, 'text-anchor': 'middle', class: 'mh-label text-small' }, 'returned'));
+    gauge.appendChild(svgElement('text', { x: centerX, y: 302, 'text-anchor': 'middle', class: 'mh-label text-small' }, 'signed feature coordinate'));
+    gauge.appendChild(svgElement('text', { x: centerX, y: 323, 'text-anchor': 'middle', class: 'mh-muted-label text-small' }, 'closed-loop comparison'));
+    chart.appendChild(gauge);
+  }
+
+  modeInput.addEventListener('change', render);
+  stepInput.addEventListener('input', render);
+  sizeInput.addEventListener('input', render);
+  render();
+})();
+</script>

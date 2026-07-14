@@ -1,0 +1,55 @@
+{
+  "protocol_id": "rsi-topology-lineage-angle-calibration-v0.1",
+  "parent_protocol": "rsi-topology-spectral-bundle-v0.2.2",
+  "lineage_protocol": "rsi-topology-spectral-bundle-lineage-followup-v0.1.1",
+  "status": "prepared_standing_synthetic_calibration_not_real_model_gate",
+  "purpose": "Validate the shape and multi-seed stability of the occupancy-matched within-band lineage instrument; do not tune real-model thresholds.",
+  "fixture": {
+    "dimension": 24,
+    "planted_rank": 6,
+    "contexts": 4,
+    "candidates_per_context": 24,
+    "geometry_noise": 0.08,
+    "seeds": [20260711, 20260712, 20260713],
+    "rotation_degrees": [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90]
+  },
+  "reference_rule": "theta=0 low-band consensus separately for each seed",
+  "construction_invariants": {
+    "selected_band": "low at every dose",
+    "rank": "constant within seed",
+    "complete_occupancy_spectrum": "maximum absolute difference from the seed reference <= 1e-10",
+    "candidate_vectors_and_outcomes": "bit-identical within seed"
+  },
+  "shape_diagnostics": {
+    "mean_chordal_lineage": "expected to track cos^2(theta) up to context-geometry and solver residuals",
+    "monotonicity": "nonincreasing within seed, reported as a construction check",
+    "cos2_residual": "descriptive; no tolerance is promoted from the external one-seed sweep",
+    "policy_and_edit_flip_locations": "descriptive fixture constants, explicitly prohibited as thresholds",
+    "tail_noise": "report standardized uplift at 80, 85, and 90 degrees without redefining the policy gate"
+  },
+  "receipt_requirements": [
+    "environment",
+    "seed",
+    "rotation_degrees",
+    "selected_band",
+    "reference_selected_band",
+    "selection_stability_warning",
+    "rank",
+    "minimum_occupancy",
+    "band_occupancy_margins",
+    "maximum_occupancy_spectrum_difference",
+    "lineage_features",
+    "cos2",
+    "absolute_chordal_cos2_error",
+    "planted_overlap_synthetic_only",
+    "policy_standardized_uplift",
+    "policy_passed",
+    "edit_passed"
+  ],
+  "execution": {
+    "hard_cap_wrapper_required": true,
+    "checkpoint": "after every seed-angle cell",
+    "outcome_tuned_gate_changes": "prohibited"
+  },
+  "claim_boundary": "A successful calibration establishes synthetic dose-response shape and construction invariants only. It cannot establish real-model lineage utility or any self-improvement threshold."
+}

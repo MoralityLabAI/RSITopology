@@ -1,0 +1,122 @@
+{
+  "schema_version": "proposal_recursive_run_preparation_v2_0_3",
+  "run_id": "proposal-recursion-qwen17-v2-preparation",
+  "status": "preparation_only",
+  "created_on": "2026-07-14",
+  "claim_boundary": "Operational preparation only. This registration does not reopen the failed v1 branch, authorize source-data access, launch a model, or constitute evidence of recursive improvement.",
+  "scientific_parent": {
+    "gate_decision": "fail",
+    "failed_gate_extension_rule_acknowledged": true,
+    "required_extension": "A new hypothesis/protocol and fresh disjoint holdout are mandatory; the v1 result cannot be reopened by adding observations.",
+    "result": {
+      "path": "C:\\projects\\RSITopology\\artifacts\\qwen_soft_atlas_measurement_v1\\measurement_gate_result.json",
+      "sha256": "604281ab080db7d3d745c9bda6142f668141573238d86b5b7916a22b2703052e"
+    },
+    "protocol": {
+      "path": "C:\\projects\\RSITopology\\protocols\\proposal_recursive_improvement_v1.json",
+      "sha256": "ed70b3a96ee6da67a9c6769726c054b5675a96d0490c360bcc8cbe00f0b4478c"
+    }
+  },
+  "scientific_reentry": {
+    "new_hypothesis_protocol": {"path": null, "sha256": null},
+    "fresh_holdout_manifest": {
+      "path": null,
+      "sha256": null,
+      "disjoint_from_parent": false,
+      "outcomes_unread": false
+    },
+    "prior_outcomes_excluded": true
+  },
+  "target": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "model_path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified",
+    "weight_shards_sha256": [
+      "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5",
+      "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9"
+    ],
+    "proposal_channel_only": true,
+    "evaluator_channel_excluded": true,
+    "rounds": 5
+  },
+  "registered_components": {
+    "proposal_entrypoint": {"path": null, "sha256": null},
+    "frozen_scorer": {"path": null, "sha256": null},
+    "edit_family_manifest": {"path": null, "sha256": null},
+    "exact_command": []
+  },
+  "resource_envelope": {
+    "caps_confirmed_by_user": false,
+    "hard_host_working_set_mb": 5632,
+    "hard_combined_commit_mb": 9199,
+    "gpu_commit_allowance_mb": 3567,
+    "hard_cpu_pct": 50,
+    "io_abort_mb_s": 50,
+    "swap_bytes": 0,
+    "timeout_seconds": 21600,
+    "checkpoint_every_rounds": 1,
+    "checkpoint_every_seconds": 300,
+    "chunk_strategy": "one proposal batch, one selected edit application, and one heldout evaluation cell at a time",
+    "abort_is_valid_outcome": true,
+    "hard_cap_wrapper": {
+      "path": "D:\\projects\\VDP\\JSpace\\scripts\\run_qwen17_component_pilot_jobobject.ps1",
+      "sha256": "14c77077bf94fade58456f087b192bba8f2fbbcd7b51cb9c38726ede3ef612e5"
+    },
+    "wrapper_validation_receipt": {
+      "path": "C:\\projects\\RSITopology\\artifacts\\qwen3_1p7b_one_prompt\\research_engine_preflight_correction.json",
+      "sha256": "e4122be0e8ad63e318779d4b319e05f28a4292d5b9a0203b480006b87a954c7d"
+    },
+    "cleanup_script": {
+      "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+      "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+    },
+    "hard_cap_validation_status": "passed"
+  },
+  "source_universe": {
+    "complete": false,
+    "entries": [
+      {
+        "id": "parent_measurement_result",
+        "role": "immutable_parent_failure",
+        "path": "C:\\projects\\RSITopology\\artifacts\\qwen_soft_atlas_measurement_v1\\measurement_gate_result.json",
+        "sha256": "604281ab080db7d3d745c9bda6142f668141573238d86b5b7916a22b2703052e"
+      },
+      {
+        "id": "parent_protocol",
+        "role": "immutable_parent_protocol",
+        "path": "C:\\projects\\RSITopology\\protocols\\proposal_recursive_improvement_v1.json",
+        "sha256": "ed70b3a96ee6da67a9c6769726c054b5675a96d0490c360bcc8cbe00f0b4478c"
+      },
+      {
+        "id": "model_shard_1",
+        "role": "target_weights",
+        "path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified\\model-00001-of-00002.safetensors",
+        "sha256": "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5"
+      },
+      {
+        "id": "model_shard_2",
+        "role": "target_weights",
+        "path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified\\model-00002-of-00002.safetensors",
+        "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9"
+      },
+      {
+        "id": "model_index",
+        "role": "target_weights",
+        "path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified\\model.safetensors.index.json",
+        "sha256": "0d660e94b165eb912669a5249dff44b83188c4777a07ddb9611fb78d91b0578d"
+      },
+      {
+        "id": "tokenizer",
+        "role": "target_tokenizer",
+        "path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified\\tokenizer.json",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      }
+    ]
+  },
+  "legacy_prompt_warning": {
+    "reuse_as_fresh_holdout": false,
+    "lineage_protocol_registered_sha256": "4aac9f77d9531073e9196ff0df625109cec336e046e6ce8f40db6009c716fc1d",
+    "currently_observed_sha256": "a4f246fd30450d9cee510f93c9fc55b5605115a79ad36bb83b78c45a1b9c9db3",
+    "decision": "quarantine_from_new_holdout_until_provenance_is_reconciled"
+  }
+}

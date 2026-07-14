@@ -1,0 +1,32 @@
+{
+  "schema_version": "proposal_recursive_formula_sentinels_v1",
+  "required_ascii_source_substrings": [
+    "lambda_prompt =",
+    "(A_hat_p - A_bar_b(p))^T",
+    "@",
+    "V =",
+    "median_{gamma in Gamma_adv}(L_heldout(gamma))",
+    "Q_0.95(L_heldout(Gamma_random))",
+    "Any non-valid instrument status deterministically forces that gate to `not_evaluated`.",
+    "There is no alpha-spending path in version 1.",
+    "fresh disjoint holdouts"
+  ],
+  "required_pdf_text_substrings": [
+    "lambda_prompt =",
+    "(A_hat_p - A_bar_b(p))^T",
+    "V =",
+    "median_{gamma in Gamma_adv}(L_heldout(gamma))",
+    "Q_0.95(L_heldout(Gamma_random))",
+    "any instrument_status other than valid forces gate_decision=not_evaluated",
+    "There is no alpha-spending path in version 1.",
+    "fresh disjoint holdouts"
+  ],
+  "machine_formula_checks": {
+    "lambda_prompt": {
+      "required_tokens": ["=", "-", "^T", "@", "Q_0.95", "lambda_max"]
+    },
+    "adversarial_suite_V": {
+      "required_tokens": ["=", "-", "median", "Q_0.95", "L_heldout"]
+    }
+  }
+}

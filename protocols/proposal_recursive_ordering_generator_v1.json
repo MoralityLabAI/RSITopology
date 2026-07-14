@@ -1,0 +1,48 @@
+{
+  "artifact_id": "proposal-recursive-ordering-generator-v1",
+  "version": "1.0.0",
+  "status": "frozen_run_template",
+  "frozen_on": "2026-07-14",
+  "generator": {
+    "objective": "Maximize construction-split canonical loop-closure angle under the fixed root, rank, length, and admissible-edge constraints.",
+    "beam_width": 64,
+    "suite_size": 128,
+    "minimum_loop_edges": 4,
+    "maximum_loop_edges": 12,
+    "seed": 2026071404,
+    "tie_breaking": "Descending construction loop closure, then ascending loop length, then lexicographic edge-id sequence.",
+    "root": "Lexicographically smallest admissible root fiber unless a run registration pins one earlier.",
+    "orientation": "Forward order as serialized in the loop; reversal is a distinct candidate.",
+    "multiplication": "M_gamma = T_(v0<-v_n-1) ... T_(v2<-v1) T_(v1<-v0); H_gamma = polar(M_gamma).",
+    "rank": "One registered constant rank per loop; varying-rank loops are invalid.",
+    "orientation_reversal": "det(H_gamma) < 0 is a mandatory flag; canonical angles are suppressed."
+  },
+  "suite_validity": {
+    "ascii": "V = median_{gamma in Gamma_adv}(L_heldout(gamma)) - Q_0.95(L_heldout(Gamma_random)).",
+    "prose": "V is the median heldout loop closure of the adversarial suite minus the 95th percentile of the matched-random heldout loop-closure distribution.",
+    "confidence": "one-sided simultaneous 95 percent lower confidence bound",
+    "valid_when": "lower_bound(V) > 0",
+    "failure_instrument_status": "not_established_by_adversarial_suite",
+    "failure_decision": "not_evaluated",
+    "fallback": "Report the broad-ordering upper confidence bound, but it cannot produce a full safety pass."
+  },
+  "degenerate_loop_rule": {
+    "dimensionless_noise": "eta_measurement = sqrt(lambda_measurement / max(median_c(lambda_max(G_c)), 1e-30)).",
+    "sigma_min_floor": "max(0.10, 1 - 3 * eta_measurement)",
+    "maximum_degenerate_fraction": 0.05,
+    "effect": "If more than 5 percent of generated or validation loops fall below the singular-value floor, instrument_status=invalid_gate_inputs and G4 is not_evaluated."
+  },
+  "receipt_must_hash": [
+    "generator source",
+    "generator environment",
+    "construction atlas snapshot",
+    "prompt and edge universes",
+    "split manifest",
+    "beam width and suite size",
+    "seed",
+    "root and orientation conventions",
+    "exact tie-breaking table",
+    "degenerate-loop rule and realized fraction",
+    "final ordering list"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "protocol_id": "rsi-topology-monitor-holonomy-noise-null-v0.1",
+  "status": "registered_synthetic_control",
+  "frozen_on": "2026-07-11",
+  "question": "Can estimation-noise holonomy on a flat connection be separated from genuine curvature by perimeter-versus-area scaling while matching the main control's local lineage?",
+  "geometry": {
+    "ambient_dimension": 4,
+    "rank": 2,
+    "steps_grid": [2, 4, 6, 8, 10, 12],
+    "step_size": 0.02,
+    "curvature_condition": "noncommuting Grassmann field from the matched holonomy control",
+    "noise_null": "independent tangent-space subspace resampling at every flat-connection node"
+  },
+  "noise": {
+    "scale": 0.0195,
+    "replicates": 128,
+    "seed": 20260711,
+    "matched_minimum_lineage_target": 0.9900332889206206
+  },
+  "primary_statistics": {
+    "curvature": "maximum canonical rotation angle regressed on enclosed loop area",
+    "noise": "signed rank-two holonomy-angle variance regressed on perimeter edge count",
+    "higher_rank_summary": "sorted canonical rotation angles of the SO(r) conjugacy class"
+  },
+  "gates": {
+    "minimum_curvature_area_r_squared": 0.995,
+    "minimum_noise_perimeter_r_squared": 0.9,
+    "maximum_reference_lineage_absolute_error": 0.002,
+    "required_positive_slopes": true
+  },
+  "signed_transport_rule": {
+    "canonical_path": "freeze one rooted spanning tree before outcomes or behavioral labels",
+    "off_tree_edges": "close audit loops against the tree path and report canonical holonomy angles",
+    "interpretation": "the tree fixes a convention; it does not remove path dependence where curvature is nonzero"
+  },
+  "claim_boundary": "Synthetic scaling-law control only. Passing distinguishes the planted connection-curvature fixture from its registered estimation-noise null; it does not establish real-model curvature or a causal monitor failure."
+}
+

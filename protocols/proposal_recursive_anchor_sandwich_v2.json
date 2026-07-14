@@ -1,0 +1,60 @@
+{
+  "protocol_id": "proposal-recursive-anchor-sandwich-v2",
+  "version": "2.0.3",
+  "status": "frozen_prereveal_schema",
+  "frozen_on": "2026-07-14",
+  "objective": "Externally bracket the immutable protocol/environment before source-data access and the exact run receipt after outcome sealing.",
+  "pre_anchor": {
+    "target": "canonical pre_anchor_payload.json",
+    "required_anchor_purpose": "run_authorization",
+    "required_file_hashes": [
+      "all scientific protocols and margins",
+      "gate evaluator source",
+      "run implementation source",
+      "tests",
+      "complete source-data universe manifest",
+      "random seeds and split manifests",
+      "environment_lock.json"
+    ],
+    "environment_lock_included": true,
+    "minimum_status_before_source_read": "bitcoin_verified_with_nonempty_bitcoin_verified_blocks",
+    "runner_rule": "The runner must validate the pre-anchor target, Bitcoin attestation, exact file universe, and every file hash before opening model primitives, prompts, labels, or outcomes.",
+    "self_reported_run_start_is_chronology_evidence": false
+  },
+  "post_anchor": {
+    "target": "exact canonical run_receipt.json bytes",
+    "submission_rule": "Immediately after the write-once run receipt is complete, submit its SHA-256 through the registered OpenTimestamps client.",
+    "release_guard": "The release script must refuse to emit any manifest until the post proof exists, its target equals the run-receipt SHA-256, and either at least one external calendar attestation is serialized for a provisional release or at least one independently verified Bitcoin block is serialized for a final release.",
+    "provisional_release_status": "calendar_submitted_pending_bitcoin",
+    "final_release_status": "bitcoin_verified",
+    "provisional_label": "provisional_pending_bitcoin_upgrade",
+    "upgrade_rule": "Preserve the initial pending proof bytes and hash. Store each upgraded proof as a versioned new file; never overwrite the initial proof."
+  },
+  "sandwich_claim": {
+    "claim": "The exact frozen protocol, evaluator, source universe, and environment existed no later than the verified pre-anchor block, and the exact run receipt existed no later than the verified post-anchor block.",
+    "does_not_claim": "External anchors alone do not prove that an arbitrary executable honored the protocol; the pre-anchored runner and receipt reconciliation provide that link.",
+    "required_receipt_links": [
+      "pre-anchor target and proof hashes",
+      "pre-anchor Bitcoin block height and time",
+      "post-anchor target and proof hashes",
+      "post-anchor calendar set",
+      "post-anchor Bitcoin block height and time after upgrade",
+      "runner source and environment hashes"
+    ]
+  },
+  "client_registration": {
+    "client_name_and_version_required": true,
+    "client_source_or_package_hash_required": true,
+    "calendar_urls_required": true,
+    "network_submission_stdout_hash_required": true,
+    "verification_stdout_hash_required": true
+  },
+  "implementation": [
+    "rsi_topology/anchor_guard_v2.py",
+    "scripts/record_ots_anchor.py",
+    "scripts/v2_release_guard.py"
+  ],
+  "discretionary_override": "prohibited",
+  "schema_anchor_distinction": "A schema_chronology_only anchor dates the design but can never authorize source-data access. The later run-specific pre-anchor must use anchor_purpose=run_authorization and seal the complete run universe.",
+  "supersedes": "The pending, never-authorized v2.0.0 and v2.0.2 submissions plus the unanchored v2.0.1 schema draft; no source-data access occurred under any of them. V2.0.2 already prevented authorization by purpose, but v2.0.3 gives the schema anchor a non-run role and filename."
+}

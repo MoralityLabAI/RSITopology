@@ -1,0 +1,13 @@
+{
+  "run_id": "example-only",
+  "status": "aborted",
+  "abort_reason": "hard_memory_cap_exceeded",
+  "peak_ram_mb": 5632,
+  "avg_ram_mb": 4210,
+  "peak_io_mb_s": 12.4,
+  "cpu_pct": 48.1,
+  "steps_completed": 1,
+  "checkpoints": ["checkpoint-round-1"],
+  "cleanup_passed": true,
+  "example_only": true
+}

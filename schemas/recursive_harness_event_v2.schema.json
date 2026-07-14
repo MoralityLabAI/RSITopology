@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recursive_harness_event_v2.schema.json",
+  "type": "object",
+  "required": ["ts_utc", "event"],
+  "properties": {
+    "ts_utc": {"type": "string"},
+    "event": {
+      "enum": [
+        "authorized_start",
+        "checkpoint",
+        "abort",
+        "completed",
+        "failed",
+        "cleanup_failed",
+        "blocked_or_failed"
+      ]
+    },
+    "run_id": {"type": "string"},
+    "step": {"type": "integer", "minimum": 0},
+    "abort_reason": {"type": ["string", "null"]},
+    "owned_pids": {"type": "array", "items": {"type": "integer"}}
+  },
+  "additionalProperties": true
+}

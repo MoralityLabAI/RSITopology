@@ -1,0 +1,59 @@
+{
+  "protocol_id": "rsi-topology-spectral-bundle-lineage-followup-v0.1",
+  "status": "proposal_only_target_blind_diagnostic",
+  "parent_protocol": "rsi-topology-spectral-bundle-v0.2.1",
+  "motivation": "A stable high-occupancy bundle can remain internally coherent while losing continuity with the capability-bearing reference subspace. Occupancy measures coherence, not identity.",
+  "primary_parent_gates_unchanged": true,
+  "reference_rule": {
+    "synthetic_sweeps": "smallest strictly positive registered perturbation level",
+    "real_model": "preregistered calibration prompt/run family chosen without outcomes",
+    "zero_noise": "legacy RNG compatibility point; prohibited as the paired positive-noise reference"
+  },
+  "target_blind_features": {
+    "mean_chordal_lineage": "trace(P_ref P_t) / min(rank(P_ref), rank(P_t))",
+    "reference_recall": "trace(P_ref P_t) / rank(P_ref)",
+    "current_precision": "trace(P_ref P_t) / rank(P_t)",
+    "worst_direction_retention": "minimum squared singular value of U_ref^T U_t, with zero padding under rank loss",
+    "log_volume_retention": "mean log(sigma_i^2 + 1e-8) over reference directions",
+    "maximum_principal_angle_degrees": "largest principal angle, with 90 degrees assigned to missing reference dimensions"
+  },
+  "soft_lineage_operator": "A_t = P_t P_ref P_t, a positive-semidefinite contraction used descriptively beside the hard consensus projector",
+  "rl_feature": "x^T A_t x / ||x||^2; compare against hard bundle energy and the full frozen nuisance/Jacobian baseline under the same grouped splits",
+  "edit_feature": "coordinates after target-blind orthogonal Procrustes alignment of U_t to U_ref; proposals remain normalized, hashed, and unapplied",
+  "sealing": {
+    "timing": "all lineage features and reference assignments are serialized and hashed before outcome join",
+    "required_receipt_fields": [
+      "candidate_or_context_id",
+      "reference_id",
+      "rank_reference",
+      "rank_current",
+      "mean_chordal_lineage",
+      "reference_recall",
+      "current_precision",
+      "worst_direction_retention",
+      "log_volume_retention",
+      "maximum_principal_angle_degrees",
+      "operator_hashes",
+      "feature_table_sha256"
+    ]
+  },
+  "evaluation": {
+    "primary_question": "Does lineage add grouped-held-out predictive value beyond occupancy, rank, eigengap, edit norm, nuisance covariates, and Jacobian visibility?",
+    "splits": ["leave_one_prompt_group_out", "leave_one_run_replicate_out"],
+    "metrics": ["delta_log_loss_for_acceptance", "delta_mse_for_repair_or_return", "PR_AUC_secondary"],
+    "status_rule": "descriptive until replicated real-model outcomes; no gate may be introduced from the same outcomes used to tune it"
+  },
+  "controls": [
+    "matched-rank Haar reference",
+    "within-rank shuffled reference assignment",
+    "occupancy-matched low-lineage construction",
+    "lineage-matched occupancy-degraded construction"
+  ],
+  "stop_conditions": [
+    "reference assignment cannot be made without outcomes",
+    "operator hashes or exact edit-space layouts differ",
+    "lineage feature table is not sealed before outcome join",
+    "grouped evaluation lacks independent run replicates"
+  ],
+  "claim_boundary": "A positive result would show that target-blind subspace continuity adds predictive information beyond coherence. It would not establish semantic identity, safe self-improvement, compactification, or RSI."
+}

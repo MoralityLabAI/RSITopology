@@ -1,0 +1,87 @@
+{
+  "protocol_id": "qwen-functional-lineage-failure-localization-v0-1",
+  "version": "0.1.0",
+  "status": "frozen_target_blind_diagnostic",
+  "frozen_on": "2026-07-13",
+  "outcomes_used": false,
+  "registered_result_unchanged": "noise_floor_only",
+  "signed_interventions_authorized": false,
+  "source_artifacts": {
+    "summary": "398d027e0fb12fdf1149e80f45ed77159b85f017f5ef7efbffd2cf78eb0c1ebe",
+    "primitives": "69b6ed5c678c27283b1792807d08240af190369ea49593a1a90b96a1696ed0f5"
+  },
+  "implementation_sha256": {
+    "cli": "05dc40ff27f0bd10a14206af34a2fe696727112d2519bd62abc4eef7106754b8",
+    "failure_localization_module": "bb23e969ce6498fa0febd157c5fdcf8c7caea1bb0686cc11a0564a9e77823f41"
+  },
+  "test_sha256": "cf9bc7789b196e6c70f922f58ba2d9e50920481d7ca54c839550946fe86dc739",
+  "design": {
+    "module_paths": [
+      "model.layers.16.self_attn.v_proj",
+      "model.layers.17.self_attn.v_proj",
+      "model.layers.18.self_attn.v_proj",
+      "model.layers.19.self_attn.v_proj",
+      "model.layers.20.self_attn.v_proj",
+      "model.layers.21.self_attn.v_proj",
+      "model.layers.22.self_attn.v_proj",
+      "model.layers.23.self_attn.v_proj",
+      "model.layers.24.self_attn.v_proj",
+      "model.layers.25.self_attn.v_proj",
+      "model.layers.26.self_attn.v_proj",
+      "model.layers.27.self_attn.v_proj"
+    ],
+    "prompt_groups": [
+      "arc-group-00",
+      "arc-group-01",
+      "arc-group-02",
+      "arc-group-03",
+      "arc-group-04",
+      "arc-group-05",
+      "arc-group-06",
+      "arc-group-07"
+    ],
+    "prompt_group_halves": {
+      "P0": ["arc-group-00", "arc-group-01", "arc-group-02", "arc-group-03"],
+      "P1": ["arc-group-04", "arc-group-05", "arc-group-06", "arc-group-07"]
+    },
+    "replicas": ["a0", "a1", "b0", "b1"],
+    "replica_halves": {
+      "S0": ["a0", "a1"],
+      "S1": ["b0", "b1"]
+    },
+    "checkpoints": [1, 4, 8]
+  },
+  "maximum_rank": 8,
+  "relative_singular_value_floor": 0.0001,
+  "minimum_boundary_gap_ratio": 1.25,
+  "frozen_metrics": {
+    "spectral_cell_classification": "For every module x rank x prompt x replica x checkpoint cell, apply the v2 relative spectral floor and boundary-gap rule to the sealed singular spectrum.",
+    "eligible_family": "All 96 local cells pass and all four registered consensus fits satisfy the same boundary-gap rule.",
+    "heldout_cell_retention": "For each registered cross-fit direction and evaluation cell, lambda_min(V_fit^T P_cell V_fit). The four evaluation quadrants form an exact partition of the 96 cells.",
+    "gauge_invariant_energy_retention": "trace(V_fit^T P_cell V_fit) / rank.",
+    "certification_fragility_curve": "Sort the 96 held-out cell retentions ascending and report the remaining minimum after excluding exactly x worst cells for x=0,...,95. Crossing requires a strict margin above the unchanged familywise null threshold.",
+    "worst_quantiles": "NumPy linear-interpolation quantiles at 0, 0.01, 0.05, 0.10, 0.25, 0.50, 0.75, and 1.0.",
+    "axis_decomposition": "Balanced orthogonal main-effect sums of squares for prompt, replica, and checkpoint on the 96 cell retentions; residual contains interactions and unexplained variation.",
+    "leave_one_level_out": "Remove one complete prompt, replica, or checkpoint level from evaluation only and recompute the remaining minimum. Descriptive only; it cannot alter the registered gate."
+  },
+  "diagnostic_thresholds": {
+    "axis_dominance_fraction": 0.5,
+    "sparse_failure_maximum_fraction": 0.1,
+    "single_axis_level_rescue": "At least one leave-one-level-out remaining floor is strictly above the unchanged null threshold."
+  },
+  "reconciliation_gates": {
+    "exact_1152_signature_and_spectrum_universe": true,
+    "stored_spectra_reproduce_atol_rtol": 1e-12,
+    "eligible_families_match_source_summary": true,
+    "projector_and_summary_max_abs_error": 1e-10,
+    "source_artifact_and_implementation_hashes_match": true
+  },
+  "decision_rules": {
+    "sparse_failure": "At most 10% of the 96 cell retentions are at or below the registered null.",
+    "diffuse_failure": "More than 10% of the 96 cell retentions are at or below the registered null.",
+    "axis_dominant": "One balanced main effect explains at least 50% of total retention sum of squares.",
+    "mixed_or_interaction": "No registered main effect explains at least 50% of total retention sum of squares.",
+    "authorization": "No diagnostic result authorizes outcomes, finite-norm edits, signed rewards, or threshold relaxation."
+  },
+  "claim_boundary": "This audit localizes where the already-failed target-blind identity certificate breaks. Quantile, exclusion, energy, and axis results are diagnostic and cannot replace the preregistered minimum-retention decision. They do not measure behavioral control loss or self-improvement risk directly."
+}

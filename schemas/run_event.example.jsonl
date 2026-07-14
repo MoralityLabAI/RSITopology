@@ -1,0 +1,4 @@
+{"ts":"2026-07-11T00:00:00Z","event":"start","run_id":"spectral-control-001","caps":{"ram_mb":1024,"cpu_pct":25,"io_mb_s":20},"checkpoint_interval":"one_fixture_phase","chunk_strategy":"64 candidate rows; matrix-free mean projector"}
+{"ts":"2026-07-11T00:00:05Z","event":"checkpoint","step":1,"path":"artifacts/synthetic_discovery/geometry_pre_reveal_receipt.json"}
+{"ts":"2026-07-11T00:00:10Z","event":"complete","steps_completed":2}
+

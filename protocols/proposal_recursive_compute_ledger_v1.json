@@ -1,0 +1,37 @@
+{
+  "artifact_id": "proposal-recursive-compute-ledger-v1",
+  "version": "1.0.0",
+  "status": "frozen_run_template",
+  "frozen_on": "2026-07-14",
+  "primary_design": "gradient_free_all_arms",
+  "gradient_or_jvp_operations": "prohibited_in_primary_design",
+  "matched_quantities_per_arm": [
+    "five rounds",
+    "proposal calls",
+    "candidate count per call",
+    "attention-masked padded input tokens",
+    "generated decoding steps",
+    "selection-oracle calls",
+    "audit scorer calls",
+    "outer-holdout evaluations"
+  ],
+  "padding": "Inputs use attention-masked padding. Proposal text ends at first EOS; post-EOS computation is discarded while fixed decoding continues for exact dense-operation accounting.",
+  "proposal_length_pilot": {
+    "minimum_samples_per_condition": 1000,
+    "conditions": ["W0", "frozen perturbed proxy"],
+    "prompt_disjoint_from_experiment": true,
+    "cap_rule": "Take the larger one-sided 99 percent bootstrap upper confidence bound for the empirical 99th percentile across the two conditions, add 8 tokens, and round upward to the next multiple of 8.",
+    "bootstrap_draws": 4096,
+    "bootstrap_seed": 2026071405,
+    "must_hash": ["pilot prompts", "pilot seeds", "W0 identity", "perturbed proxy identity", "length vector", "cap calculation"]
+  },
+  "truncation": {
+    "maximum_rate_per_arm": 0.01,
+    "maximum_absolute_rate_difference_between_any_arms": 0.005,
+    "simultaneous_confidence_level": 0.95,
+    "invalid_status": "invalid_compute_match_truncation",
+    "decision_effect": "G3 gate_decision=not_evaluated"
+  },
+  "contingency_only": "Any future gradient/JVP arm requires a new protocol and hardware-calibrated accounting. No forward-equivalent multiplier is registered in v1.",
+  "receipt_must_hash": ["ledger source", "environment", "model and tokenizer", "pilot", "run config", "per-arm operation counts", "truncation table"]
+}

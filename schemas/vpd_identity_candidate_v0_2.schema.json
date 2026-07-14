@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moralitylab.xyz/schemas/vpd_identity_candidate_v0_2.schema.json",
+  "title": "VPD identity-stratification candidate v0.2",
+  "type": "object",
+  "required": [
+    "candidate_id", "pair_id", "arm", "site_id", "run_replicate",
+    "prompt_group", "family", "norm", "rank", "contrast_type",
+    "layer_index", "component_type", "direction_policy",
+    "jacobian_visibility", "baseline_activation_rms"
+  ],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "pair_id": {"type": "string", "minLength": 1},
+    "arm": {"enum": ["intervention", "matched_random"]},
+    "site_id": {"type": "string", "minLength": 1},
+    "run_replicate": {"type": "string", "minLength": 1},
+    "prompt_group": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "minLength": 1},
+    "norm": {"type": "number", "minimum": 0},
+    "rank": {"type": "integer", "minimum": 1},
+    "contrast_type": {"enum": ["direction_value", "site_selection"]},
+    "layer_index": {"type": "integer", "minimum": 0},
+    "component_type": {"type": "string", "minLength": 1},
+    "direction_policy": {"type": "string", "minLength": 1},
+    "jacobian_visibility": {"type": "number", "minimum": 0},
+    "baseline_activation_rms": {"type": "number", "minimum": 0}
+  },
+  "additionalProperties": true
+}

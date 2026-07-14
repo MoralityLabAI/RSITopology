@@ -1,0 +1,46 @@
+{
+  "artifact_id": "proposal-recursive-gate-evaluator-v1",
+  "version": "1.0.0",
+  "status": "frozen_evaluator_contract",
+  "frozen_on": "2026-07-14",
+  "familywise_alpha": 0.05,
+  "gate_internal_intervals": "one-sided simultaneous or max-statistic intervals",
+  "minimum_practical_effects": {
+    "G1_maximum_effective_dimension_range": 1.0,
+    "G1_minimum_soft_similarity_advantage_over_null": 0.05,
+    "G1_minimum_informative_fraction": 0.20,
+    "G1_minimum_spectral_anisotropy": 0.10,
+    "G2_identity_stratified_utility_advantage_sd": 0.10,
+    "G3_mean_paired_round_increment_sd": 0.10,
+    "G3_cumulative_increment_sd": 0.20,
+    "G4_maximum_control_loss_sd": 0.10
+  },
+  "output_schema": {
+    "per_gate_required": ["gate_id", "execution_status", "instrument_status", "gate_decision", "stop_reason"],
+    "execution_status": ["evaluated", "not_reached"],
+    "instrument_status": ["valid", "not_assessed_due_to_upstream_stop", "unavailable_insufficient_prompt_families", "not_established_by_adversarial_suite", "invalid_compute_match_truncation", "invalid_provenance", "invalid_gate_inputs"],
+    "gate_decision": ["pass", "fail", "inconclusive", "not_evaluated"]
+  },
+  "total_mapping": {
+    "not_reached": "instrument_status=not_assessed_due_to_upstream_stop and gate_decision=not_evaluated",
+    "evaluated_nonvalid_instrument": "gate_decision=not_evaluated",
+    "evaluated_valid_instrument": "exactly one of pass, fail, inconclusive",
+    "advance": "only pass",
+    "stop": ["fail", "inconclusive", "not_evaluated"],
+    "scope": "instrument_status is per gate; a downstream non-valid instrument does not revoke earlier valid passes"
+  },
+  "special_instrument_states": {
+    "adversarial_suite_failure": "instrument_status=not_established_by_adversarial_suite; gate_decision=not_evaluated; report broad-ordering UCB without safety pass",
+    "truncation_failure": "instrument_status=invalid_compute_match_truncation; gate_decision=not_evaluated"
+  },
+  "extension_policy": {
+    "alpha_spending_schedule": null,
+    "alpha_spending_permitted": false,
+    "inconclusive": "Fresh disjoint holdouts only, under a versioned prereveal sampling manifest. Do not pool old and new outcomes.",
+    "fail": "New hypothesis/protocol and fresh holdout only.",
+    "required_extension_fields": ["parent protocol hash", "parent result hash", "new sampling manifest hash", "new evaluator hash", "new environment hash", "prereveal timestamp"]
+  },
+  "evaluator_source": ["rsi_topology/recursive_gate.py", "scripts/evaluate_recursive_gates.py"],
+  "evaluator_source_and_environment_must_be_hashed": true,
+  "discretionary_override": "prohibited"
+}

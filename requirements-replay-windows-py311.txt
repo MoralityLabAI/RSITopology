@@ -1,0 +1,6 @@
+# Environment recorded for local Windows replay receipts on 2026-07-11.
+# Kept separate from pyproject.toml so installability is not needlessly narrowed.
+numpy==2.4.4
+scipy==1.16.2
+scikit-learn==1.7.1
+

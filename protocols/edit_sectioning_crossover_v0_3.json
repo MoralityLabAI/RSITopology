@@ -1,0 +1,60 @@
+{
+  "protocol_id": "edit_sectioning_crossover_v0_3",
+  "amends": "edit_sectioning_synthetic_v0_2",
+  "schema_version": "0.3.0",
+  "status": "registered_before_canonical_run",
+  "frozen_on": "2026-07-12",
+  "purpose": "Calibrate when holonomy-patch pooling beats independent edits and falsify utility claims when planted edit-identity boundaries are decoupled from holonomy boundaries.",
+  "invariant_ceiling": "holonomy_clean",
+  "new_invariant_levels": false,
+  "fixture": {
+    "source": "registered mixed-curvature 2x10 node grid",
+    "eligible_cells": ["p-0", "p-1", "p-2", "p-3", "p-5", "p-6", "p-7", "p-8"],
+    "holonomy_patches": [["p-0", "p-1", "p-2", "p-3"], ["p-5", "p-6", "p-7", "p-8"]],
+    "true_boundary_offsets": [-2, -1, 0, 1, 2],
+    "true_angles_radians": [0.0, 1.5707963267948966],
+    "primary_holonomy_budget": 0.05
+  },
+  "observation_model": {
+    "observation": "theta_i + Normal(0,sigma^2)",
+    "independent_estimator": "per-cell arithmetic mean angle",
+    "patch_estimator": "arithmetic mean of all observations inside each holonomy patch",
+    "global_estimator": "arithmetic mean over every eligible cell",
+    "serialized_edit_coordinate": "[cos(theta_hat), sin(theta_hat)] / sqrt(N)",
+    "utility": "negative mean squared angular error"
+  },
+  "surface": {
+    "noise_sigma": [0.0, 0.1, 0.2, 0.4, 0.8, 1.2],
+    "observations_per_cell": [1, 2, 4, 8, 16, 32],
+    "grouped_replicates": 512,
+    "seed": 20260713,
+    "gate_bootstrap_draws": 4096
+  },
+  "analytic_model": {
+    "patch_bias": "B^2 = mean_i((theta_i - mean(theta in assigned patch))^2)",
+    "variance_advantage": "A = mean_i(1 - 1/k_patch(i)) = 1 - J/N",
+    "patch_minus_independent": "A*sigma^2/n - B^2",
+    "analytic_crossover": "sigma^2/n = B^2/A"
+  },
+  "derived_defect_regime": {
+    "selection": "For each nonzero offset, choose the registered (sigma,n) with largest sigma^2/n satisfying A*sigma^2/n <= 0.1*B^2; break ties by larger sigma then smaller n.",
+    "gate": "Patch-minus-independent grouped-bootstrap 95% CI upper endpoint is below zero and empirical mean differs from the analytic expectation by no more than 3 standard errors."
+  },
+  "recoupled_gate": {
+    "cell": {"offset": 0, "sigma": 0.8, "observations_per_cell": 1},
+    "gate": "Patch-minus-independent and patch-minus-global grouped-bootstrap 95% CI lower endpoints are above zero."
+  },
+  "surface_calibration_gate": {
+    "minimum_fraction_within_three_standard_errors": 0.98,
+    "minimum_sign_agreement_away_from_zero": 0.95,
+    "away_from_zero": "absolute analytic effect greater than 3 empirical standard errors"
+  },
+  "capacity_accounting": {
+    "registered_capacity_rank_each_arm": 8,
+    "active_signed_coordinates": {"one_global_edit": 1, "patch_plan": 2, "per_context_independent": 8},
+    "matched_total_squared_norm": 1.0,
+    "interpretation": "Inactive padding matches registered capacity accounting, not effective active rank."
+  },
+  "connector_audit_gate": "With only p-4 unmeasured and both adjacent low-curvature regions measured, p-4 must touch two patches and report boundary_impact=2.",
+  "claim_boundary": "CPU-synthetic calibration only. A pass supports the conditional pooling claim when holonomy patches align with edit identity; it does not establish real-model alignment or self-improvement."
+}

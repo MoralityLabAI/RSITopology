@@ -1,0 +1,127 @@
+{
+  "protocol_id": "qwen-soft-atlas-measurement-v1",
+  "version": "1.0.0",
+  "status": "frozen_prereveal_measurement_gate",
+  "frozen_on": "2026-07-14",
+  "target_blind": true,
+  "outcomes_permitted": false,
+  "prior_result_unchanged": "noise_floor_only",
+  "source_sha256": {
+    "primitives": "69b6ed5c678c27283b1792807d08240af190369ea49593a1a90b96a1696ed0f5",
+    "summary": "398d027e0fb12fdf1149e80f45ed77159b85f017f5ef7efbffd2cf78eb0c1ebe",
+    "prompt_manifest": "a4f246fd30450d9cee510f93c9fc55b5605115a79ad36bb83b78c45a1b9c9db3"
+  },
+  "prompt_corpus_sha256": "4aac9f77d9531073e9196ff0df625109cec336e046e6ce8f40db6009c716fc1d",
+  "implementation_sha256": {
+    "runner": "a9cd8fcf652ae98b232ea1b297fe055a2aed01913068acf26d52fccb48db6827",
+    "recursive_gate": "16880fdd1cf9a28257bac2ef7d9b1fda7402597ffce18f299dc95f9a32c9e24d"
+  },
+  "test_sha256": "20bcaa0f76a129482162ba45a13c5ec6fd731c77127c2dbe679bd668a2c1d140",
+  "prompt_family_artifact_sha256": "c5451f9e972cd171335dcc50b7307973be20e15f31d49045e683b9858e1aea38",
+  "universe": {
+    "required_signatures": 1152,
+    "required_cells": 96,
+    "required_measurement_edges": 112,
+    "signature_shape": [12, 16],
+    "probe_dimension": 12
+  },
+  "design": {
+    "module_paths": [
+      "model.layers.16.self_attn.v_proj",
+      "model.layers.17.self_attn.v_proj",
+      "model.layers.18.self_attn.v_proj",
+      "model.layers.19.self_attn.v_proj",
+      "model.layers.20.self_attn.v_proj",
+      "model.layers.21.self_attn.v_proj",
+      "model.layers.22.self_attn.v_proj",
+      "model.layers.23.self_attn.v_proj",
+      "model.layers.24.self_attn.v_proj",
+      "model.layers.25.self_attn.v_proj",
+      "model.layers.26.self_attn.v_proj",
+      "model.layers.27.self_attn.v_proj"
+    ],
+    "prompt_groups": [
+      "arc-group-00",
+      "arc-group-01",
+      "arc-group-02",
+      "arc-group-03",
+      "arc-group-04",
+      "arc-group-05",
+      "arc-group-06",
+      "arc-group-07"
+    ],
+    "prompt_group_halves": {
+      "P0": ["arc-group-00", "arc-group-01", "arc-group-02", "arc-group-03"],
+      "P1": ["arc-group-04", "arc-group-05", "arc-group-06", "arc-group-07"]
+    },
+    "replicas": ["a0", "a1", "b0", "b1"],
+    "replica_halves": {
+      "S0": ["a0", "a1"],
+      "S1": ["b0", "b1"]
+    },
+    "checkpoints": [1, 4, 8],
+    "quadrants": ["Q00", "Q01", "Q10", "Q11"],
+    "crossfit_directions": ["Q00->Q11", "Q11->Q00", "Q01->Q10", "Q10->Q01"]
+  },
+  "canonical_operator": {
+    "gram": "G_c = sum_m S_m,c @ S_m,c^T",
+    "A_hat": "unique positive-semidefinite square root of G_c",
+    "normalization": "none; source functional-response magnitudes are retained",
+    "right_gauge_invariant": true,
+    "soft_projector": "P_c(lambda) = G_c @ inverse(G_c + lambda I)",
+    "effective_dimension": "trace(P_c(lambda))"
+  },
+  "noise": {
+    "formula": "lambda_measurement = Q_0.95(lambda_max((A_hat_i - A_hat_j)^T @ (A_hat_i - A_hat_j)))",
+    "quantile": 0.95,
+    "edges_per_prompt": 14,
+    "edge_rule": "all four adjacent-checkpoint chains plus replica pairs a0-a1 and b0-b1 at every checkpoint",
+    "prompt_variance_role": "candidate behavioral signal, excluded from lambda_measurement"
+  },
+  "regularization": {
+    "exponents_j": [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "formula": "lambda_j = lambda_measurement * 10^(j/4)",
+    "central_j": [-2, -1, 0, 1, 2],
+    "posthoc_subwindow_selection": "prohibited"
+  },
+  "retention": {
+    "fit": "mean soft projector over the fit quadrant",
+    "cell_score": "Hilbert-Schmidt cosine between fit mean and evaluation-cell soft projector",
+    "aggregation": "minimum over all evaluation cells and four reciprocal crossfit directions",
+    "dimension_profile": "median trace(P) across all 96 cells",
+    "anisotropy": "sqrt(1 - participation_rank(P)/12)"
+  },
+  "null": {
+    "construction": "independent block-Haar quadrant frames preserve every local spectrum and 4/4/4 context blocks while breaking cross-quadrant identity",
+    "block_sizes": [4, 4, 4],
+    "draws": 4096,
+    "threshold_seed": 2026071401,
+    "audit_seed": 2026071402,
+    "familywise_alpha": 0.05,
+    "threshold": "95th percentile of the maximum central-window null retention per draw",
+    "maximum_audit_false_support_rate": 0.0625
+  },
+  "bootstrap": {
+    "cluster_unit": "prompt",
+    "draws": 4096,
+    "seed": 2026071403,
+    "alpha": 0.05,
+    "band": "max-absolute-deviation simultaneous band across all 17 lambda values"
+  },
+  "margins": {
+    "maximum_effective_dimension_range": 1.0,
+    "minimum_soft_similarity_advantage_over_null": 0.05,
+    "minimum_informative_fraction": 0.20,
+    "minimum_spectral_anisotropy": 0.10
+  },
+  "decision": {
+    "pass": "Every central-window condition strictly clears its margin: d_eff range < 1.0, simultaneous bands have positive common-intersection margin, observed-minus-null retention > 0.05, informative fraction > 0.20, median anisotropy > 0.10, and the audit null is valid.",
+    "fail": "At least one valid-instrument condition strictly crosses its adverse boundary: d_eff range > 1.0, common-intersection margin < 0, observed-minus-null retention < 0, informative fraction < 0.20, or median anisotropy < 0.10.",
+    "inconclusive": "Every valid-instrument outcome between pass and fail, including equality.",
+    "not_evaluated": "The null calibration or provenance is invalid.",
+    "prompt_corpus_if_pass": "warranted_next_investment",
+    "prompt_corpus_if_fail": "do_not_invest_stop_branch",
+    "prompt_corpus_if_inconclusive": "fresh-disjoint-holdout extension only"
+  },
+  "claim_boundary": "This target-blind gate tests whether a gauge-invariant soft behavioral response geometry is stable above replica/checkpoint measurement noise in the existing Qwen3-1.7B primitives. It does not identify coordinated weight-space edits, use behavioral outcomes, authorize signed edits, measure recursive improvement, or establish RSI."
+}

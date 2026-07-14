@@ -1,0 +1,32 @@
+{
+  "run_id": "REQUIRED_UNIQUE_ID",
+  "dry_run": false,
+  "model_id": "REQUIRED",
+  "model_revision": "REQUIRED",
+  "model_weight_sha256": "REQUIRED_SHA256",
+  "tokenizer_id": "REQUIRED",
+  "tokenizer_sha256": "REQUIRED_SHA256",
+  "prompt_id": "REQUIRED",
+  "prompt_corpus_sha256": "REQUIRED_SHA256",
+  "jspace_protocol_sha256": "REQUIRED_SHA256",
+  "implementation_commit": "REQUIRED_GIT_COMMIT",
+  "exact_command": [],
+  "environment_lock_sha256": "REQUIRED_SHA256",
+  "module_graph_mapping": {},
+  "candidate_sites": [],
+  "norm_grid": [0.25, 0.5, 1.0],
+  "candidate_ranks": [],
+  "candidate_count": 0,
+  "resource_caps": {
+    "memory_mb": 0,
+    "cpu_percent": 0,
+    "io_mb_s": 0,
+    "swap_bytes": 0,
+    "timeout_seconds": 0
+  },
+  "checkpoint_interval": "REQUIRED",
+  "chunk_strategy": "REQUIRED",
+  "outcomes_prohibited": true,
+  "weight_mutation_prohibited": true
+}
+

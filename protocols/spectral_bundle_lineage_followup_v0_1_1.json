@@ -1,0 +1,31 @@
+{
+  "protocol_id": "rsi-topology-spectral-bundle-lineage-followup-v0.1.1",
+  "amends": "rsi-topology-spectral-bundle-lineage-followup-v0.1",
+  "parent_protocol": "rsi-topology-spectral-bundle-v0.2.2",
+  "status": "proposal_only_target_blind_diagnostic",
+  "correction": "The motivating dense-fixture transition was categorical low-to-middle band failover, not demonstrated within-band migration. Lineage detected the swap but added no value over selected_band for that mechanism.",
+  "primary_parent_gates_unchanged": true,
+  "cheap_check_precedence": "Always evaluate selected-band stability first. Incremental lineage value must be demonstrated within selected-band strata and beyond the categorical warning.",
+  "load_bearing_control": {
+    "name": "occupancy_matched_low_lineage",
+    "construction": "conjugate every context operator by one common orthogonal rotation mixing the planted low-band subspace with an orthogonal equal-rank subspace",
+    "held_fixed": ["selected_band", "consensus_rank", "complete_consensus_occupancy_spectrum", "candidate vectors", "outcomes", "random-number stream"],
+    "varied": "principal-angle lineage to the planted reference",
+    "unit_status": "implemented; scale-up remains subject to resource enforcement",
+    "success_condition": "band stability remains true while lineage tracks planted overlap and downstream utility changes"
+  },
+  "target_blind_features": {
+    "mean_chordal_lineage": "trace(P_ref P_t) / min(rank(P_ref), rank(P_t))",
+    "reference_recall": "trace(P_ref P_t) / rank(P_ref)",
+    "current_precision": "trace(P_ref P_t) / rank(P_t)",
+    "worst_direction_retention": "minimum squared singular value of U_ref^T U_t with zero padding under rank loss",
+    "log_volume_retention": "mean log(sigma_i^2 + 1e-8) over reference directions",
+    "maximum_principal_angle_degrees": "largest principal angle with 90 degrees assigned to missing reference dimensions"
+  },
+  "evaluation": {
+    "primary_question": "Within selected-band strata, does lineage add grouped-held-out predictive value beyond band identity, occupancy, rank, eigengap, norm, nuisance covariates, and Jacobian visibility?",
+    "splits": ["leave_one_prompt_group_out", "leave_one_run_replicate_out"],
+    "status_rule": "descriptive until replicated real-model outcomes; no threshold may be tuned and evaluated on the same outcomes"
+  },
+  "claim_boundary": "The unit control shows that lineage can separate identity from occupancy and band labels by construction. Real-model incremental value remains unestablished."
+}

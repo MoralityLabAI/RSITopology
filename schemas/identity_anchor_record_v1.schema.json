@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moralitylab.xyz/schemas/identity_anchor_record_v1.schema.json",
+  "title": "Spectral identity anchor record",
+  "type": "object",
+  "required": [
+    "site_id", "consumer", "artifact_kind", "reference_node", "site_node",
+    "reference_basis_sha256", "current_basis_sha256", "selected_band",
+    "spanning_tree_transport_path", "edge_receipts", "loop_receipts",
+    "holonomy_budget", "det_h_flag"
+  ],
+  "properties": {
+    "site_id": {"type": "string", "minLength": 1},
+    "consumer": {"enum": ["hrmmmm_control_harness", "vpd_edit_program", "blue_beam"]},
+    "artifact_kind": {"type": "string", "minLength": 1},
+    "reference_node": {"type": "string", "minLength": 1},
+    "site_node": {"type": "string", "minLength": 1},
+    "reference_basis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "current_basis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "selected_band": {"type": "string", "minLength": 1},
+    "spanning_tree_transport_path": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "edge_receipts": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "loop_receipts": {"type": "array", "items": {"$ref": "#/$defs/loop"}},
+    "holonomy_budget": {
+      "type": "object",
+      "required": ["maximum_canonical_angle_degrees", "maximum_identity_loss"],
+      "properties": {
+        "maximum_canonical_angle_degrees": {"type": "number", "minimum": 0},
+        "maximum_identity_loss": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "det_h_flag": {"type": "boolean"},
+    "metadata": {"type": "object"}
+  },
+  "$defs": {
+    "edge": {
+      "type": "object",
+      "required": [
+        "edge_id", "source_node", "target_node", "selected_band",
+        "source_basis_sha256", "target_basis_sha256", "transport_sha256",
+        "mean_edge_chordal_lineage", "minimum_edge_worst_direction_retention"
+      ],
+      "properties": {
+        "edge_id": {"type": "string"}, "source_node": {"type": "string"},
+        "target_node": {"type": "string"}, "selected_band": {"type": "string"},
+        "source_basis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "target_basis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "transport_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "mean_edge_chordal_lineage": {"type": "number"},
+        "minimum_edge_worst_direction_retention": {"type": "number"}
+      },
+      "additionalProperties": false
+    },
+    "loop": {
+      "type": "object",
+      "required": ["loop_id", "edge_ids", "determinant", "det_h_flag", "maximum_canonical_angle_degrees", "identity_loss"],
+      "properties": {
+        "loop_id": {"type": "string"},
+        "edge_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "determinant": {"type": "number"}, "det_h_flag": {"type": "boolean"},
+        "maximum_canonical_angle_degrees": {"type": ["number", "null"]},
+        "identity_loss": {"type": "number"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

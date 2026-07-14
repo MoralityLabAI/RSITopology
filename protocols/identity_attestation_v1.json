@@ -1,0 +1,36 @@
+{
+  "protocol_id": "identity_attestation_v1",
+  "schema_version": "1.0.0",
+  "named_consumers": [
+    "hrmmmm_control_harness",
+    "vpd_edit_program",
+    "blue_beam"
+  ],
+  "invariant_levels": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "anchor_required_fields": [
+    "reference_basis_sha256",
+    "selected_band",
+    "spanning_tree_transport_path",
+    "edge_receipts",
+    "holonomy_budget",
+    "det_h_flag"
+  ],
+  "lineage_thresholds": {
+    "minimum_mean_edge_chordal_lineage": 0.95,
+    "minimum_edge_worst_direction_retention": 0.9
+  },
+  "frozen_consumer_rule": {
+    "signed_intervention": "holonomy_clean",
+    "signed_reward": "holonomy_clean",
+    "disparate_weight_edit": "holonomy_clean",
+    "energy_reward": "lineage_certified",
+    "bundle_energy_reward": "lineage_certified",
+    "all_other_uses": "engineering_evidence"
+  },
+  "orientation_rule": "Any det(H)<0 sets det_h_flag and prohibits holonomy_clean certification.",
+  "claim_boundary": "Certificates attest registered spectral identity only; they do not establish safety, capability preservation, or improvement."
+}

@@ -1,0 +1,10 @@
+# Hash-bound protocols, receipts, scripts, and reports must retain identical
+# bytes across Windows and Unix checkouts.
+* text=auto eol=lf
+
+*.zip binary
+*.pdf binary
+*.ots binary
+*.npz binary
+*.npy binary
+*.safetensors binary

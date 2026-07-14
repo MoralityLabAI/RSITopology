@@ -1,0 +1,22 @@
+{
+  "artifact_id": "proposal-recursive-ordering-split-v1",
+  "version": "1.0.0",
+  "status": "frozen_run_template",
+  "frozen_on": "2026-07-14",
+  "split_unit": "prompt-family x edge receipt",
+  "construction_fraction": 0.5,
+  "validation_fraction": 0.5,
+  "assignment": "SHA256(protocol_id || prompt_family_id || edge_id || split_seed); the lowest 128-bit integer is compared with floor(2^128 * 0.5).",
+  "split_seed": "proposal-recursive-ordering-split-v1-20260714",
+  "requirements": {
+    "disjoint": true,
+    "exact_universe_coverage": true,
+    "minimum_construction_loops": 32,
+    "minimum_validation_loops": 32,
+    "prompt_family_stratification": true,
+    "outcomes_visible_at_split": false
+  },
+  "construction_use": "Beam search and ordering selection use only construction-split transports.",
+  "validation_use": "Loop closure and suite validity are recomputed on target-blind heldout transports.",
+  "run_instance_requirement": "A run cannot evaluate G4 until the concrete prompt, edge, loop, and atlas universes plus this deterministic assignment are sealed."
+}

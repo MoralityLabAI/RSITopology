@@ -1,0 +1,71 @@
+{
+  "protocol_id": "proposal-recursive-composite-gate-v2",
+  "version": "2.0.3",
+  "status": "frozen_prereveal_schema",
+  "frozen_on": "2026-07-14",
+  "component_count": 2,
+  "composite_semantics": "conjunction_of_two_necessary_components",
+  "component_states": {
+    "pass": "Valid component instrument; every scientific and practical pass margin cleared.",
+    "fail": "Valid component instrument; a registered adverse failure boundary cleared.",
+    "inconclusive": "Valid component instrument; neither pass nor failure boundary cleared.",
+    "unavailable": "The component could not be measured because its preregistered input sufficiency condition was not met.",
+    "invalid": "The component instrument failed provenance, calibration, compute-match, or another registered validity condition."
+  },
+  "total_mapping_rule": [
+    "Any valid component fail makes the conjunctive composite decision fail, regardless of the other component state.",
+    "Both components pass if and only if the composite passes.",
+    "With no fail, any unavailable or invalid component makes the composite not_evaluated.",
+    "With no fail, unavailable, or invalid component, any inconclusive component makes the composite inconclusive.",
+    "Only composite pass advances the fixed sequence."
+  ],
+  "mapping_table": [
+    {"left_state": "pass", "right_state": "pass", "composite_decision": "pass", "sequence_action": "advance"},
+    {"left_state": "pass", "right_state": "fail", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "pass", "right_state": "inconclusive", "composite_decision": "inconclusive", "sequence_action": "stop"},
+    {"left_state": "pass", "right_state": "unavailable", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "pass", "right_state": "invalid", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "fail", "right_state": "pass", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "fail", "right_state": "fail", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "fail", "right_state": "inconclusive", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "fail", "right_state": "unavailable", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "fail", "right_state": "invalid", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "inconclusive", "right_state": "pass", "composite_decision": "inconclusive", "sequence_action": "stop"},
+    {"left_state": "inconclusive", "right_state": "fail", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "inconclusive", "right_state": "inconclusive", "composite_decision": "inconclusive", "sequence_action": "stop"},
+    {"left_state": "inconclusive", "right_state": "unavailable", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "inconclusive", "right_state": "invalid", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "unavailable", "right_state": "pass", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "unavailable", "right_state": "fail", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "unavailable", "right_state": "inconclusive", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "unavailable", "right_state": "unavailable", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "unavailable", "right_state": "invalid", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "invalid", "right_state": "pass", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "invalid", "right_state": "fail", "composite_decision": "fail", "sequence_action": "stop"},
+    {"left_state": "invalid", "right_state": "inconclusive", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "invalid", "right_state": "unavailable", "composite_decision": "not_evaluated", "sequence_action": "stop"},
+    {"left_state": "invalid", "right_state": "invalid", "composite_decision": "not_evaluated", "sequence_action": "stop"}
+  ],
+  "component_consequences": {
+    "pass": "preserve_pass_no_component_retest",
+    "fail": "new_protocol_or_hypothesis_with_fresh_holdout",
+    "inconclusive": "versioned_fresh_disjoint_holdout_for_component_no_pooling",
+    "unavailable": "preregister_missing_component_instrument_and_collect_first_measurement",
+    "invalid": "repair_instrument_under_versioned_prereveal_artifact_and_rerun_component"
+  },
+  "consequence_representation": {
+    "field": "component_consequences",
+    "type": "ordered_list_one_entry_per_component",
+    "dominant_component_field": "prohibited",
+    "severity_ranking": "prohibited",
+    "reason": "Multiple components may carry independent registered consequences; none may be silently discarded."
+  },
+  "v1_observed_cell": {
+    "measurement_component": "fail",
+    "prompt_component": "unavailable",
+    "v2_composite_decision": "fail",
+    "stop_reasons": ["measurement_component_fail", "prompt_component_unavailable"],
+    "note": "This prospective v2 mapping does not revise the immutable v1 record or its scientific result."
+  },
+  "supersedes": "The pending, never-authorized v2.0.0 and v2.0.2 submissions plus the unanchored v2.0.1 schema draft; no source-data access occurred under any of them. V2.0.2 already prevented authorization by purpose, but v2.0.3 gives the schema anchor a non-run role and filename."
+}

@@ -1,0 +1,38 @@
+{
+  "protocol_id": "rsi-topology-spectral-bundle-v0.2",
+  "amends": "rsi-topology-spectral-bundle-v0.1",
+  "status": "engineering_protocol_not_real_model_preregistration",
+  "frozen_on": "2026-07-11",
+  "amendment_reason": "The outcome-revealed 384-dimensional synthetic control had strong grouped prediction gain but failed an absolute return-uplift threshold whose units depend on reward scale and concentration with ambient dimension. No real-model outcomes existed. v0.1 remains preserved as the receipt for that run.",
+  "object": "cross-context high-occupancy eigenspaces of mean projectors for frozen low-frequency bands of normalized reliability-weighted sheaf Laplacians",
+  "bands": [["low", 0.0, 0.25], ["middle", 0.25, 0.65], ["high", 0.65, 1.000001]],
+  "selection_rule": "choose the lowest-frequency band meeting the geometry gate in frozen band order; outcome-based band selection is prohibited",
+  "geometry_gate": {
+    "minimum_contexts": 3,
+    "minimum_consensus_occupancy": 0.75,
+    "minimum_consensus_rank": 8,
+    "maximum_computed_rank": 32
+  },
+  "policy_gate": {
+    "split": "leave_one_prompt_or_context_out",
+    "maximum_kl_from_uniform": 0.05,
+    "minimum_relative_mse_improvement": 0.05,
+    "return_uplift": "within each held-out fold, weighted-minus-uniform realized return divided by that fold's population standard deviation; average over folds",
+    "minimum_standardized_heldout_return_uplift": 0.10,
+    "absolute_return_uplift": "descriptive_only"
+  },
+  "direct_edit_gate": {
+    "split": "leave_one_prompt_or_context_out",
+    "minimum_relative_mse_improvement": 0.05,
+    "minimum_advantage_over_matched_rank_haar": 0.02,
+    "application": "prohibited_in_discovery_stage; emit normalized proposal and hash only"
+  },
+  "controls": [
+    "outcome-null fixture must fail policy and direct-edit gates",
+    "independently shuffled prompt transports must fail the geometry gate",
+    "matched-rank Haar subspace",
+    "baseline includes norm, Jacobian visibility, and registered nuisance covariates",
+    "geometry is discovered before outcomes are accessed"
+  ],
+  "claim_boundary": "A pass identifies a stable spectral bundle useful for grouped prediction and bounded candidate allocation. It does not establish real-model self-improvement, compactification, or RSI."
+}

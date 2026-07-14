@@ -1,0 +1,49 @@
+{
+  "protocol_id": "control_risk_redteam_v0_1",
+  "schema_version": "0.1.0",
+  "status": "registered_before_canonical_run",
+  "frozen_on": "2026-07-12",
+  "purpose": "Test whether the existing lineage-holonomy measurement vector safely predicts signed-control authorization and locate planted control-loss boundaries.",
+  "invariant_ceiling": "holonomy_clean",
+  "new_invariant_levels": false,
+  "risk_vector": [
+    "lineage_contraction_bound",
+    "holonomy_displacement_bound",
+    "orientation_reversal_flag",
+    "measurement_uncertainty_margin",
+    "audit_gap"
+  ],
+  "control_loss": "spectral norm of the realized signed-coordinate map minus identity",
+  "authorization_rule": "authorize iff every loop is measured, det(H)>0, and the conservative total bound is at most epsilon",
+  "canonical_population": {
+    "fixtures": 6000,
+    "seed": 20260712,
+    "rank": 2,
+    "path_edge_count": [1, 6],
+    "control_error_budget": 0.5,
+    "retention_uncertainty": 0.01,
+    "angle_uncertainty_degrees": 2.0,
+    "unmeasured_probability": 0.1,
+    "orientation_reversal_probability": 0.05,
+    "families": ["lineage_dominant", "holonomy_dominant", "mixed"]
+  },
+  "red_team_axes": {
+    "minimum_edge_retention": [0.64, 0.72, 0.8, 0.88, 0.94, 0.98, 1.0],
+    "holonomy_angle_degrees": [0, 10, 20, 30, 45, 60, 90, 120, 150, 180],
+    "path_edge_counts": [1, 2, 4, 6],
+    "orientation_components": ["preserving", "reversing"],
+    "audit_states": ["measured", "unmeasured"]
+  },
+  "gates": {
+    "minimum_authorized_precision": 0.99,
+    "maximum_false_authorization_rate": 0.01,
+    "minimum_full_vector_auroc": 0.9,
+    "required_lineage_only_blind_spot": true,
+    "required_holonomy_only_blind_spot": true,
+    "required_orientation_reversal_denial": true,
+    "required_unmeasured_loop_abstention": true,
+    "analytic_boundary_authorization_violation": 0
+  },
+  "baselines": ["lineage_only", "holonomy_only"],
+  "claim_boundary": "The theorem is conditional on contraction/polar-factor modeling and valid uncertainty bounds. The run is CPU-synthetic and predicts loss of signed control, not model capability or real self-improvement."
+}

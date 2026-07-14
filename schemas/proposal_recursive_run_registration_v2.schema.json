@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "proposal_recursive_run_registration_v2.schema.json",
+  "title": "Proposal-recursion run preparation v2.0.3",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "scientific_parent",
+    "scientific_reentry",
+    "registered_components",
+    "resource_envelope",
+    "source_universe"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "proposal_recursive_run_preparation_v2_0_3"
+    },
+    "run_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["preparation_only", "registered_prereveal"]},
+    "scientific_parent": {
+      "type": "object",
+      "required": ["gate_decision", "failed_gate_extension_rule_acknowledged", "result"],
+      "properties": {
+        "gate_decision": {"const": "fail"},
+        "failed_gate_extension_rule_acknowledged": {"const": true},
+        "result": {"$ref": "#/$defs/artifact"}
+      }
+    },
+    "scientific_reentry": {
+      "type": "object",
+      "required": ["new_hypothesis_protocol", "fresh_holdout_manifest", "prior_outcomes_excluded"],
+      "properties": {
+        "new_hypothesis_protocol": {"$ref": "#/$defs/artifact"},
+        "fresh_holdout_manifest": {
+          "allOf": [
+            {"$ref": "#/$defs/artifact"},
+            {
+              "type": "object",
+              "properties": {
+                "disjoint_from_parent": {"const": true},
+                "outcomes_unread": {"const": true}
+              },
+              "required": ["disjoint_from_parent", "outcomes_unread"]
+            }
+          ]
+        },
+        "prior_outcomes_excluded": {"const": true}
+      }
+    },
+    "registered_components": {
+      "type": "object",
+      "required": ["proposal_entrypoint", "frozen_scorer", "edit_family_manifest", "exact_command"],
+      "properties": {
+        "proposal_entrypoint": {"$ref": "#/$defs/artifact"},
+        "frozen_scorer": {"$ref": "#/$defs/artifact"},
+        "edit_family_manifest": {"$ref": "#/$defs/artifact"},
+        "exact_command": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "resource_envelope": {
+      "type": "object",
+      "required": [
+        "caps_confirmed_by_user",
+        "hard_host_working_set_mb",
+        "hard_combined_commit_mb",
+        "gpu_commit_allowance_mb",
+        "hard_cpu_pct",
+        "io_abort_mb_s",
+        "swap_bytes",
+        "timeout_seconds",
+        "checkpoint_every_rounds",
+        "checkpoint_every_seconds",
+        "hard_cap_wrapper",
+        "wrapper_validation_receipt",
+        "cleanup_script",
+        "hard_cap_validation_status"
+      ],
+      "properties": {
+        "caps_confirmed_by_user": {"const": true},
+        "swap_bytes": {"const": 0},
+        "hard_cap_validation_status": {"const": "passed"}
+      }
+    },
+    "source_universe": {
+      "type": "object",
+      "required": ["complete", "entries"],
+      "properties": {
+        "complete": {"const": true},
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "allOf": [
+              {"$ref": "#/$defs/artifact"},
+              {
+                "type": "object",
+                "required": ["id"],
+                "properties": {"id": {"type": "string", "minLength": 1}}
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}
