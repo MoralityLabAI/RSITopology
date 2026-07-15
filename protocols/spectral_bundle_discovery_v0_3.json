@@ -1,0 +1,101 @@
+{
+  "protocol_id": "rsi-topology-spectral-bundle-v0.3",
+  "version": "0.3.0",
+  "amends": "rsi-topology-spectral-bundle-v0.2.2",
+  "status": "engineering_protocol_not_real_model_preregistration",
+  "frozen_on": "2026-07-15",
+  "amendment_reason": "The EM-pair calibration found clean state-cross transport but near-zero adjacent-layer retention for the covariance/Gram-derived between-class object. v0.3 makes cross-fitted between-class scatter the primary lineage object, requires a matched random-label negative control, and gates holonomy behind lineage connectivity and nonzero cycle rank.",
+  "parent_protocol_unchanged": true,
+  "calibration_finding": {
+    "edge_receipts": 612,
+    "state_cross": {
+      "count": 216,
+      "median_minimum_edge_worst_direction_retention": 0.95,
+      "median_mean_edge_chordal_lineage": 0.97,
+      "interpretation": "same-site base-to-insecure transport is measurable"
+    },
+    "site_adjacent": {
+      "count": 396,
+      "median_minimum_edge_worst_direction_retention": 0.003,
+      "interpretation": "the measured depth ladder is lineage-disconnected"
+    },
+    "loops": {
+      "attempted": 99,
+      "survived_minimum_edge_worst_direction_retention_0_5": 0,
+      "low_persistence_orientation_reversals": 21,
+      "high_persistence_orientation_reversals": 0
+    },
+    "certification": {
+      "anchors": 108,
+      "engineering_evidence": 108,
+      "lineage_certified": 0,
+      "holonomy_clean": 0
+    },
+    "consequence": "Holonomy sorting is unavailable on a graph with no lineage-supported cycles. A disconnected atlas is a scientific result, not a missing visualization."
+  },
+  "primary_lineage_object": {
+    "name": "cross_fitted_between_class_scatter",
+    "construction": "For each disjoint construction half, compute the class means over the frozen family-defining conditions, center those means, form their between-class scatter, and retain the frozen top-r eigenspace.",
+    "cross_fit": "The two bases are estimated on disjoint construction halves. Retention and all null comparisons are evaluated between halves without behavioral outcomes.",
+    "rank": "frozen before construction and no larger than min(ambient dimension, number of classes minus one)",
+    "retention_metric": "minimum squared singular value of U_half_0^T U_half_1",
+    "gate_role": "primary"
+  },
+  "reported_ungated_objects": {
+    "covariance_gram_consensus": {
+      "status": "reported_ungated",
+      "gate_eligible": false,
+      "prohibited_consumers": [
+        "geometry_gate",
+        "policy_gate",
+        "direct_edit_gate",
+        "lineage_certification",
+        "holonomy_certification"
+      ],
+      "compatibility": "The v0.2.2 computation remains executable and is reported with its legacy result, but no v0.3 gate may consume it."
+    }
+  },
+  "lineage_null_gate": {
+    "bootstrap_lower_confidence_quantile": 0.05,
+    "permutation_null_upper_quantile": 0.95,
+    "minimum_strict_margin": 0.02,
+    "pass_rule": "retention_lower_95 - permutation_null_retention_upper_95 > 0.02",
+    "outcomes_used": false
+  },
+  "matched_random_label_negative_control": {
+    "required": true,
+    "construction": "Run the identical cross-fitted between-class estimator on the sealed matched random-label control family with its real spectrum and frozen construction halves.",
+    "pass_rule": "random_family_retention_lower_95 - permutation_null_retention_upper_95 > 0.02",
+    "strict": true,
+    "attestation_effect": "Absent, invalid, or nonpassing control receipts cap certification at engineering_evidence and emit negative_control_not_passed."
+  },
+  "lineage_holonomy_bifiltration": {
+    "ordering": "lineage_first_then_holonomy",
+    "lineage_metric": "minimum_edge_worst_direction_retention",
+    "lineage_floor": 0.9,
+    "graph": "G_tau contains every registered node and exactly the edges whose frozen lineage metric is at least tau.",
+    "connected_components": "c(G_tau)",
+    "cycle_rank": "beta_1(G_tau) = |E_tau| - |V| + c(G_tau)",
+    "loop_admission": "A registered loop is admissible only when every boundary edge is in G_tau and all boundary nodes lie in one connected component.",
+    "availability": {
+      "beta_1_equals_0": "holonomy_unavailable",
+      "beta_1_at_least_1": "holonomy_structurally_available",
+      "commutator_index_requires": "beta_1 at least 2 at one frozen root"
+    },
+    "replaces": "any enough-loops count or fraction gate",
+    "prohibited": "Increasing the holonomy budget may not restore an edge excluded by the lineage floor."
+  },
+  "invariant_levels": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "no_new_invariant_levels": true,
+  "decision_rules": {
+    "primary_object_fail": "Stop at engineering_evidence.",
+    "negative_control_fail_or_missing": "Stop at engineering_evidence with negative_control_not_passed.",
+    "beta_1_zero": "Report holonomy_unavailable; holonomy_clean is impossible.",
+    "covariance_gram_result": "Report only; it cannot alter any v0.3 decision."
+  },
+  "claim_boundary": "A v0.3 pass establishes only that a target-blind, cross-fitted between-class subspace has lineage above both registered nulls and that its lineage graph contains measured cycles eligible for holonomy analysis. It does not establish semantic identity, causal edit value, capability preservation, recursive improvement, compactification, safety, or RSI."
+}

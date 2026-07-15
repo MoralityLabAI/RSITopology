@@ -2,11 +2,21 @@
 
 from .discovery import (
     ConsensusBand,
+    CrossFittedLineageObject,
     DiscoveryConfig,
     DiscoveryResult,
+    PhaseOneLineageObjectsV03,
+    discover_between_class_scatter_object,
     discover_consensus_bands,
+    discover_lineage_objects_v03,
     evaluate_discovery,
     subspace_lineage,
+)
+from .bifiltration import (
+    BifiltrationEdge,
+    BifiltrationLoop,
+    LineageHolonomyBifiltration,
+    build_lineage_holonomy_bifiltration,
 )
 from .jspace_bridge import load_operator_bundle, write_operator_bundle
 from .attestation import (
@@ -80,11 +90,19 @@ from .sectioning_crossover import run_sectioning_crossover_v03
 
 __all__ = [
     "ConsensusBand",
+    "CrossFittedLineageObject",
     "DiscoveryConfig",
     "DiscoveryResult",
+    "PhaseOneLineageObjectsV03",
+    "discover_between_class_scatter_object",
     "discover_consensus_bands",
+    "discover_lineage_objects_v03",
     "evaluate_discovery",
     "subspace_lineage",
+    "BifiltrationEdge",
+    "BifiltrationLoop",
+    "LineageHolonomyBifiltration",
+    "build_lineage_holonomy_bifiltration",
     "load_operator_bundle",
     "write_operator_bundle",
     "ENGINEERING_EVIDENCE",

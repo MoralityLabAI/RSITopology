@@ -89,8 +89,10 @@ The June Research_Engine edit receipts lack the actual edit matrices and
 source provenance required to reconstruct the geometry; they may inform power
 planning but cannot validate the edit gate retrospectively.
 
-Current engineering protocol: `protocols/spectral_bundle_discovery_v0_2_2.json`.
-The v0.1 protocol and its absolute-uplift failure remain preserved. Large or
+Preserved parent engineering protocol:
+`protocols/spectral_bundle_discovery_v0_2_2.json`; the current additive
+amendment is `protocols/spectral_bundle_discovery_v0_3.json`. The v0.1 protocol
+and its absolute-uplift failure remain preserved. Large or
 model-bearing runs are currently blocked by
 `reports/resource_enforcement_audit.md`; only unit-scale controls are allowed
 until CPU and I/O cgroups are delegated or an approved container path exists.
@@ -100,6 +102,25 @@ KL-normalized information coefficient. External Fable replays remain
 diagnostic-only.
 v0.2.2 likewise changes no gate; it binds every geometry summary to its band
 and makes selection failover explicit.
+
+Protocol v0.3 is an additive amendment and leaves v0.2.2 unchanged. It changes
+the primary lineage object to the frozen top-r eigenspace of cross-fitted
+between-class scatter over family-defining class means. The prior
+covariance/Gram consensus remains executable but is `reported_ungated`; no
+v0.3 gate may consume it. Certification is capped at
+`engineering_evidence` unless a matched random-label control clears its
+permutation null by a strict margin above `0.02`.
+
+The amendment follows the EM-pair calibration: 216 same-site state-cross
+edges transported cleanly (median worst-direction retention `0.95`), while
+396 adjacent-layer edges had median retention approximately `0.003`; none of
+99 attempted loops survived the `0.5` persistence floor, and all 108 anchors
+remained `engineering_evidence`. v0.3 therefore filters the transport graph at
+the frozen lineage floor before considering holonomy. It reports
+`holonomy_unavailable` when
+`beta_1(G_tau) = |E_tau| - |V| + c(G_tau)` is zero; this cycle-rank condition
+replaces any arbitrary “enough loops” check. See
+[`protocols/spectral_bundle_discovery_v0_3.json`](protocols/spectral_bundle_discovery_v0_3.json).
 
 The sparse fixture's `geometry_noise=0` point is a legacy-RNG compatibility
 baseline. Positive-noise sweeps consume an additional skew draw and must use
