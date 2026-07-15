@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Gödel Globe — RSITopology holonomy receipts</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">RSITOPOLOGY · IDENTITY ATTESTATION</p>
+      <h1>Gödel globe</h1>
+    </div>
+    <div class="top-actions">
+      <span id="load-status" class="status" role="status">Loading renderer…</span>
+      <button id="about-button" class="button button-quiet" type="button">About this view</button>
+      <label class="button button-primary" for="file-picker">Load receipts</label>
+      <input id="file-picker" class="sr-only" type="file" accept=".json,.jsonl,application/json,application/x-ndjson" multiple>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar sidebar-left" aria-label="Loop browser">
+      <section class="controls" aria-label="Globe filters">
+        <label>
+          <span>Family</span>
+          <select id="family-filter">
+            <option value="all">All families</option>
+          </select>
+        </label>
+        <label>
+          <span>Rank</span>
+          <select id="rank-filter">
+            <option value="all">All ranks</option>
+          </select>
+        </label>
+        <label>
+          <span>State shell</span>
+          <select id="state-filter">
+            <option value="both">Base + insecure</option>
+            <option value="base">Base</option>
+            <option value="insecure">Insecure</option>
+          </select>
+        </label>
+        <label class="search-control">
+          <span>Search node id</span>
+          <input id="node-search" type="search" placeholder="L40 / graph_reachability">
+        </label>
+      </section>
+
+      <section class="loop-browser">
+        <div class="section-heading">
+          <h2>Measured loops</h2>
+          <span id="loop-count" class="count">0</span>
+        </div>
+        <div id="loop-list" class="loop-list" role="listbox" aria-label="Loops sorted by maximum canonical angle"></div>
+      </section>
+    </aside>
+
+    <section id="drop-zone" class="viewport-wrap" aria-label="Interactive three-dimensional holonomy globe">
+      <canvas id="globe-canvas" aria-label="Gödel globe graph visualization"></canvas>
+      <div id="drop-hint" class="drop-hint" aria-hidden="true">
+        <strong>Drop receipt files</strong>
+        <span>edge, loop, anchor, certificate JSONL + optional calibration JSON</span>
+      </div>
+      <div class="viewport-overlay overlay-top-left">
+        <span id="dataset-name">Synthetic demo</span>
+        <span id="dataset-stats">—</span>
+      </div>
+      <div class="viewport-overlay overlay-bottom-left legend" aria-label="Lineage color legend">
+        <div class="legend-title">Mean chordal lineage</div>
+        <div class="legend-gradient"></div>
+        <div class="legend-labels"><span id="legend-min">0.00</span><span id="legend-mid">0.50</span><span id="legend-max">1.00</span></div>
+      </div>
+      <div class="viewport-overlay overlay-bottom-right cert-legend" aria-label="Node certification legend">
+        <span><i class="dot dot-gray"></i>Engineering</span>
+        <span><i class="dot dot-amber"></i>Lineage</span>
+        <span><i class="dot dot-green"></i>Holonomy clean</span>
+      </div>
+      <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+    </section>
+
+    <aside class="sidebar sidebar-right" aria-label="Selected loop details">
+      <div class="section-heading">
+        <h2>Loop receipt</h2>
+        <span id="loop-badge" class="badge badge-neutral">No selection</span>
+      </div>
+      <div id="loop-details" class="details empty-details">
+        Select a measured loop to inspect its closure receipt and play the measured transport.
+      </div>
+    </aside>
+  </main>
+
+  <dialog id="about-dialog">
+    <div class="modal-heading">
+      <h2>About this view</h2>
+      <button id="about-close" class="button button-quiet" type="button">Close</button>
+    </div>
+    <p>This visualization shows measured discrete-graph holonomy embedded in a stylized geometry. The globe, shell spacing, and frame-dragging swirl are presentational; canonical angles, determinant flags, lineage values, identity loss, and certification margins come only from loaded receipts.</p>
+  </dialog>
+
+  <script src="./js/demo-data.js"></script>
+  <script src="./js/data-loader.js"></script>
+  <script src="./js/globe.js"></script>
+  <script src="./js/app.js"></script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import { Line2 } from "three/addons/lines/Line2.js";
+    import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+    import { LineGeometry } from "three/addons/lines/LineGeometry.js";
+    import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
+    import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
+
+    window.dispatchEvent(new CustomEvent("godel-three-ready", {
+      detail: { THREE, OrbitControls, Line2, LineMaterial, LineGeometry, LineSegments2, LineSegmentsGeometry }
+    }));
+  </script>
+</body>
+</html>

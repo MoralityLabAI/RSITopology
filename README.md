@@ -36,6 +36,15 @@ VPD protocol v0.2 preregisters two non-interchangeable estimands: direction
 value within one site and site-selection value across identity-matched sites.
 Neither may be pooled across identity strata or with the other contrast.
 
+## Gödel globe receipt viewer
+
+[`godel-globe/index.html`](godel-globe/index.html) is a zero-build, direct-file
+Three.js viewer for edge lineage, loop holonomy, determinant flags, identity
+loss, and node certification receipts. It includes a 20-node synthetic fixture,
+defensive JSONL loading, measured loop-closure transport animation, receipt
+filters, and copyable provenance details. See
+[`godel-globe/README.md`](godel-globe/README.md) for usage and validation.
+
 ## Holonomy-bounded edit sectioning
 
 `section_edits()` converts context-by-checkpoint identity receipts into maximal
