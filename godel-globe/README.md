@@ -2,6 +2,8 @@
 
 The Gödel globe is a static, interactive viewer for edge, loop, anchor, and lineage-certificate receipts emitted by the RSITopology identity-attestation stack. It embeds the receipt graph on two stylized spherical shells and animates only the measured loop-closure rotation.
 
+For the broader product argument—why mechinterp interfaces should distinguish feature visibility from transportable feature identity—see [MECHINTERP_TOOL_UX_DIRECTION.md](MECHINTERP_TOOL_UX_DIRECTION.md).
+
 ## Open it
 
 1. Open `index.html` directly in a current Chrome, Edge, or Firefox browser. No local server or build command is required.
