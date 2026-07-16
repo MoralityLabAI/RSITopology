@@ -117,7 +117,7 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
     if any(value <= 0 for value in caps):
         raise ValueError("all state-capture caps must be explicit and positive")
     validation = json.loads(
-        args.hard_cap_validation_receipt.read_text(encoding="utf-8")
+        args.hard_cap_validation_receipt.read_text(encoding="utf-8-sig")
     )
     validation_status = validation.get(
         "hard_cap_validation_status", validation.get("status")
