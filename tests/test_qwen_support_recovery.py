@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 
 import pytest
 
@@ -29,3 +30,20 @@ def test_cyclic_windows_are_complete_and_deterministic():
     assert cyclic_window(5, 8) == tuple(f"shard-{index:02d}" for index in range(8))
     with pytest.raises(ValueError):
         cyclic_window(0, 0)
+
+
+def test_dense_local_followup_preserves_the_holonomy_tower():
+    value = json.loads(
+        (ROOT / "protocols" / "qwen08_dense_local_holonomy_v0_1.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert value["status"] == "registered_not_run"
+    assert value["prompt_design"]["prompts_per_state"] == 4608
+    assert value["bifiltration"]["connected_cycle_rank"] == (
+        value["bifiltration"]["possible_edges_per_connected_cell"]
+        - value["bifiltration"]["nodes_per_cell"]
+        + 1
+    )
+    assert value["fixed_stop_states"]["beta_1_zero"] == "holonomy_unavailable"
+    assert value["new_invariant_levels"] is False
