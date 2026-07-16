@@ -4,8 +4,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 import sys
+
+# Keep BLAS from multiplying the process-level CPU budget internally.  These
+# values are set before importing NumPy-bearing analysis modules.
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 

@@ -7,6 +7,7 @@ $specPath = (Resolve-Path -LiteralPath $RunSpecPath).Path
 $spec = Get-Content -LiteralPath $specPath -Raw | ConvertFrom-Json
 if ($spec.schema_version -notin @(
   "qwen_holonomy_state_capture_authorization_v0_1",
+  "qwen_holonomy_geometry_analysis_authorization_v0_1",
   "qwen_holonomy_jobobject_probe_v0_1"
 )) { throw "Unsupported run-spec schema" }
 $caps = $spec.resource_caps
