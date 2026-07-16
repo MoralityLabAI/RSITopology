@@ -144,6 +144,37 @@ class CrossFittedLineageObject:
 
 
 @dataclass(frozen=True)
+class CrossFittedRankFiltration:
+    """Nested v0.3 lineage objects evaluated on shared resampling draws.
+
+    Every rank is a prefix of the same thin-SVD basis on a given draw.  This
+    both preserves the registered between-class object and avoids repeating an
+    ambient-dimensional eigendecomposition once per candidate rank.
+    """
+
+    objects: tuple[CrossFittedLineageObject, ...]
+    maximum_rank: int
+    replicates: int
+    seed: int
+
+    @property
+    def supported_rank(self) -> int:
+        passed = [item.rank for item in self.objects if item.passed]
+        return max(passed, default=0)
+
+    def receipt(self) -> dict[str, Any]:
+        return {
+            "object_kind": "cross_fitted_between_class_rank_filtration",
+            "maximum_rank": self.maximum_rank,
+            "supported_rank": self.supported_rank,
+            "replicates": self.replicates,
+            "seed": self.seed,
+            "shared_resampling_draws": True,
+            "rank_receipts": [item.receipt() for item in self.objects],
+        }
+
+
+@dataclass(frozen=True)
 class PhaseOneLineageObjectsV03:
     """Primary v0.3 object, mandatory control, and legacy ungated report."""
 
@@ -230,11 +261,16 @@ def _between_class_scatter_basis(
         )
     means = np.vstack([np.mean(values[class_values == label], axis=0) for label in classes])
     centered = means - np.mean(means, axis=0, keepdims=True)
-    scatter = centered.T @ centered / len(classes)
-    eigenvalues, eigenvectors = np.linalg.eigh(scatter)
-    order = np.argsort(eigenvalues)[::-1]
-    selected = order[:rank]
-    return eigenvectors[:, selected], np.maximum(eigenvalues[selected], 0.0)
+    # The between-class scatter has rank at most classes - 1.  Its nonzero
+    # eigenvectors are the right singular vectors of the centered class-mean
+    # matrix, so a thin SVD is exactly equivalent to materializing the d x d
+    # scatter while remaining practical for transformer-width activations.
+    _, singular_values, right_t = np.linalg.svd(
+        centered / math.sqrt(len(classes)), full_matrices=False
+    )
+    basis = right_t[:rank].T
+    eigenvalues = np.maximum(singular_values[:rank] ** 2, 0.0)
+    return basis, eigenvalues
 
 
 def _validate_construction_halves(
@@ -367,6 +403,116 @@ def discover_between_class_scatter_object(
         null_margin=margin,
         minimum_strict_margin=minimum_strict_margin,
         passed=bool(margin - minimum_strict_margin > 1e-12),
+    )
+
+
+def discover_between_class_rank_filtration(
+    *,
+    features: Array,
+    family_labels: Sequence[Any],
+    construction_halves: Sequence[Any],
+    maximum_rank: int,
+    object_kind: str = "cross_fitted_between_class_scatter",
+    gate_role: str = "primary",
+    replicates: int = 256,
+    seed: int = 20260715,
+    minimum_strict_margin: float = 0.02,
+) -> CrossFittedRankFiltration:
+    """Evaluate every prefix rank with one shared bootstrap/permutation run."""
+
+    if gate_role not in {"primary", "matched_random_label_negative_control"}:
+        raise ValueError("gate_role must name a registered v0.3 lineage role")
+    if replicates < 32:
+        raise ValueError("at least 32 bootstrap/permutation replicates are required")
+    if not np.isfinite(minimum_strict_margin) or minimum_strict_margin < 0.0:
+        raise ValueError("minimum_strict_margin must be finite and nonnegative")
+    values, labels, half_values, halves = _validate_construction_halves(
+        features, family_labels, construction_halves
+    )
+    class_count = len(np.unique(labels))
+    allowed_rank = min(values.shape[1], class_count - 1)
+    if maximum_rank < 1 or maximum_rank > allowed_rank:
+        raise ValueError(
+            f"maximum_rank must be between one and min(d, classes-1)={allowed_rank}"
+        )
+
+    half_masks = (half_values == halves[0], half_values == halves[1])
+    half_features = (values[half_masks[0]], values[half_masks[1]])
+    half_labels = (labels[half_masks[0]], labels[half_masks[1]])
+    first_basis, first_eigenvalues = _between_class_scatter_basis(
+        half_features[0], half_labels[0], maximum_rank
+    )
+    second_basis, second_eigenvalues = _between_class_scatter_basis(
+        half_features[1], half_labels[1], maximum_rank
+    )
+
+    bootstrap = np.empty((replicates, maximum_rank), dtype=np.float64)
+    permutation = np.empty((replicates, maximum_rank), dtype=np.float64)
+    rng = np.random.default_rng(seed)
+    for replicate in range(replicates):
+        boot_first_x, boot_first_y = _bootstrap_within_classes(
+            half_features[0], half_labels[0], rng
+        )
+        boot_second_x, boot_second_y = _bootstrap_within_classes(
+            half_features[1], half_labels[1], rng
+        )
+        boot_first, _ = _between_class_scatter_basis(
+            boot_first_x, boot_first_y, maximum_rank
+        )
+        boot_second, _ = _between_class_scatter_basis(
+            boot_second_x, boot_second_y, maximum_rank
+        )
+
+        perm_first_y = half_labels[0][rng.permutation(len(half_labels[0]))]
+        perm_second_y = half_labels[1][rng.permutation(len(half_labels[1]))]
+        perm_first, _ = _between_class_scatter_basis(
+            half_features[0], perm_first_y, maximum_rank
+        )
+        perm_second, _ = _between_class_scatter_basis(
+            half_features[1], perm_second_y, maximum_rank
+        )
+        for rank in range(1, maximum_rank + 1):
+            bootstrap[replicate, rank - 1] = subspace_lineage(
+                boot_first[:, :rank], boot_second[:, :rank]
+            )["worst_direction_retention"]
+            permutation[replicate, rank - 1] = subspace_lineage(
+                perm_first[:, :rank], perm_second[:, :rank]
+            )["worst_direction_retention"]
+
+    objects: list[CrossFittedLineageObject] = []
+    for rank in range(1, maximum_rank + 1):
+        lower = float(np.quantile(bootstrap[:, rank - 1], 0.05, method="linear"))
+        null_upper = float(
+            np.quantile(permutation[:, rank - 1], 0.95, method="linear")
+        )
+        margin = lower - null_upper
+        objects.append(
+            CrossFittedLineageObject(
+                object_kind=object_kind,
+                gate_role=gate_role,
+                rank=rank,
+                basis_by_half=(first_basis[:, :rank], second_basis[:, :rank]),
+                eigenvalues_by_half=(
+                    first_eigenvalues[:rank],
+                    second_eigenvalues[:rank],
+                ),
+                lineage=subspace_lineage(
+                    first_basis[:, :rank], second_basis[:, :rank]
+                ),
+                bootstrap_retentions=bootstrap[:, rank - 1].copy(),
+                permutation_null_retentions=permutation[:, rank - 1].copy(),
+                retention_lower_95=lower,
+                permutation_null_retention_upper_95=null_upper,
+                null_margin=margin,
+                minimum_strict_margin=minimum_strict_margin,
+                passed=bool(margin - minimum_strict_margin > 1e-12),
+            )
+        )
+    return CrossFittedRankFiltration(
+        objects=tuple(objects),
+        maximum_rank=maximum_rank,
+        replicates=replicates,
+        seed=seed,
     )
 
 

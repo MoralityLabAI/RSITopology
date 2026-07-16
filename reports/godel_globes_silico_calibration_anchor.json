@@ -1,0 +1,84 @@
+{
+  "artifact_type": "external_calibration_anchor",
+  "schema_version": "1.0.0",
+  "created_utc": "2026-07-16T16:05:21.4637493Z",
+  "consumer_protocol_id": "godel-globes-falsification-v0.1",
+  "source_run": {
+    "run_id": "qwen17_planted_reward_full_precision_silico_v1_retry1",
+    "protocol_id": "vpd-planted-reward-full-precision-qwen17-v1",
+    "local_archive_path": "D:\\Research_Engine\\runs\\qwen17_planted_reward_full_precision_silico_v1_retry1",
+    "remote_archive_path": "/mnt/data/artifacts/silico/manual/vpd-qwen17-full-precision-20260715T005957Z/qwen17_planted_reward_full_precision_silico_v1_retry1",
+    "status": "diagnostic_complete",
+    "slurm": {
+      "job_id": "10233",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:05:46"
+    }
+  },
+  "integrity": {
+    "artifact_entries_expected": 40,
+    "artifact_entries_retrieved": 40,
+    "remote_and_local_manifests_match": true,
+    "summary_sha256": "41cb6ec5a7316c6151bb4b125c6f112caca7ce96f9f3e176f3f9555fe19bfd70",
+    "retrieval_receipt_sha256": "119d6fe7a7bc711e6c67a855dcf8a83f1caeea8f79c9811e71d78cbeb51f4146",
+    "bundle_checksums_sha256": "9928771d5d7fa496578612c2bc6446c4b15f3189d04aa34b73e738e33e04cdad"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "weight_shards": [
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "bytes": 3441185608,
+        "sha256": "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5"
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "bytes": 622329984,
+        "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9"
+      }
+    ]
+  },
+  "registered_sites": [
+    "model.layers.19.self_attn.v_proj",
+    "model.layers.23.self_attn.v_proj",
+    "model.layers.27.self_attn.v_proj"
+  ],
+  "registered_scales": [
+    0.01,
+    0.03,
+    0.1,
+    0.3
+  ],
+  "calibration_findings": {
+    "full_float32_same_precision_passing_sites_at_every_registered_scale": 3,
+    "full_bfloat16_same_precision_passing_sites_at_every_registered_scale": 0,
+    "frozen_local_four_bit_transport_passing_sites": {
+      "full_float32": 0,
+      "full_bfloat16": 0
+    },
+    "precision_dependent_coordinate_drift": true,
+    "full_float32_recalibrated_channel_supported": true,
+    "full_bfloat16_recalibrated_channel_supported": false
+  },
+  "resource_observation": {
+    "scientific_runner_elapsed_seconds": 126.70735589484684,
+    "peak_gpu_allocated_mb": 8068.404296875,
+    "peak_gpu_reserved_mb": 8454.0,
+    "peak_rss_mb": 4858.03125,
+    "gpu": "NVIDIA A100-SXM4-80GB"
+  },
+  "use_policy": {
+    "role": "calibration_only",
+    "motivates_registered_runtime_shells": [
+      "full_float32",
+      "full_bfloat16"
+    ],
+    "consumed_by_confirmatory_gate": false,
+    "may_supply_identity_or_holonomy_evidence": false,
+    "may_authorize_reward_or_weight_edits": false,
+    "may_authorize_rl_probe_or_training": false
+  },
+  "claim_boundary": "This planted-channel diagnostic distinguishes arithmetic and coordinate-reference behavior under its registered prompts, sites, scales, and precision arms. It does not establish unseen-prompt transfer, natural VPD validity, training durability, RL benefit, family-resolved global sections, cross-context lineage, or holonomy in the Goedel Globes protocol."
+}

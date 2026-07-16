@@ -22,6 +22,15 @@ const loops = readJsonl("demo_loop_receipts.jsonl");
 const certificates = readJsonl("demo_lineage_certificates.jsonl");
 const calibration = JSON.parse(fs.readFileSync(path.join(root, "fixtures", "demo_calibration.json"), "utf8"));
 
+const extended = context.window.GodelData.parseNodeId(
+  "full_float32/L22/graph_reachability/shard-03/rank-2"
+);
+assert.equal(extended.state, "full_float32");
+assert.equal(extended.layer, 22);
+assert.equal(extended.family, "graph_reachability");
+assert.equal(extended.context_shard, "shard-03");
+assert.equal(extended.rank, 2);
+
 const data = context.window.GodelData.compile({
   name: "fixture-validation",
   edges,

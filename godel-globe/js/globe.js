@@ -10,6 +10,7 @@
       this.data = null;
       this.filters = { family: "all", rank: "all", state: "both", search: "" };
       this.nodePositions = new Map();
+      this.stateRadii = new Map();
       this.edgePaths = new Map();
       this.loopPaths = new Map();
       this.edgePickMap = [];
@@ -117,6 +118,8 @@
     setData(data) {
       this.clearData();
       this.data = data;
+      const states = Array.from(new Set(data.nodes.map((node) => node.state))).sort();
+      this.stateRadii = new Map(states.map((state, index) => [state, 9.4 + index * 1.75]));
       this.createShells();
       this.computeNodePositions();
       this.createSwirls();
@@ -137,18 +140,21 @@
     shellRadius(state) {
       if (state === "base") return 9.4;
       if (state === "insecure") return 11.15;
-      const hash = window.GodelData.stableHash(state);
-      return 10.15 + (hash % 5) * 0.32;
+      return this.stateRadii.get(state) || 10.15;
     }
 
     createShells() {
       const THREE = this.THREE;
       const states = new Set(this.data.nodes.map((node) => node.state));
+      let stateIndex = 0;
       for (const state of states) {
+        const hue = (0.54 + stateIndex * 0.14) % 1;
+        const shellColor = new THREE.Color().setHSL(hue, 0.55, 0.42);
+        const emissiveColor = new THREE.Color().setHSL(hue, 0.65, 0.10);
         const geometry = new THREE.SphereGeometry(this.shellRadius(state), 48, 32);
         const material = new THREE.MeshPhysicalMaterial({
-          color: state === "insecure" ? 0x6547aa : 0x2d7896,
-          emissive: state === "insecure" ? 0x160b30 : 0x061e2c,
+          color: shellColor,
+          emissive: emissiveColor,
           transparent: true,
           opacity: state === "insecure" ? 0.035 : 0.05,
           roughness: 0.8,
@@ -166,6 +172,7 @@
         );
         wire.renderOrder = -3;
         this.graphRoot.add(wire);
+        stateIndex += 1;
       }
     }
 

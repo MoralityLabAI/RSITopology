@@ -45,10 +45,13 @@
     }
 
     let family = "unknown";
-    if (layerIndex >= 0 && parts[layerIndex + 1]) family = parts.slice(layerIndex + 1).join("/");
+    if (layerIndex >= 0 && parts[layerIndex + 1]) family = parts[layerIndex + 1];
     else if (parts.length > 1) family = parts[parts.length - 1];
 
-    return { id: raw, state, layer, family };
+    const shard = parts.find((part) => /^shard-\d+$/i.test(part)) || null;
+    const rankPart = parts.find((part) => /^rank-\d+$/i.test(part));
+    const rank = rankPart ? Number(rankPart.split("-")[1]) : null;
+    return { id: raw, state, layer, family, context_shard: shard, rank };
   }
 
   function normalizeEdge(raw, line) {

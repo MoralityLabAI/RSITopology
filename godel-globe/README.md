@@ -19,6 +19,13 @@ The same files can be dragged onto the globe. The picker accepts arbitrary filen
 
 The local JavaScript is split into small browser scripts rather than local ES-module imports because Chromium blocks local `file://` module graphs. The page uses an inline ES-module bridge for pinned Three.js CDN modules, preserving direct-file operation without a server.
 
+Runtime-state options are populated from loaded node IDs. The real v0.1
+identity run uses `full_float32` and `full_bfloat16` shells; the bundled demo
+retains the older `base` and `insecure` labels. Node IDs may append context and
+rank segments, for example
+`full_float32/L22/graph_reachability/shard-03/rank-2`; the family filter uses
+the first segment after the layer.
+
 ## Receipt contract
 
 Each JSONL file contains one JSON object per nonblank line. Extra fields are ignored.

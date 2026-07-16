@@ -37,8 +37,10 @@
   function populateFilters() {
     const families = Array.from(new Set(data.nodes.map((node) => node.family))).sort();
     const ranks = Array.from(new Set(data.edges.map((edge) => edge.rank))).sort((a, b) => a - b);
+    const states = Array.from(new Set(data.nodes.map((node) => node.state))).sort();
     fillSelect(elements["family-filter"], [{ value: "all", label: "All families" }, ...families.map((family) => ({ value: family, label: humanize(family) }))]);
     fillSelect(elements["rank-filter"], [{ value: "all", label: "All ranks" }, ...ranks.map((rank) => ({ value: String(rank), label: `Rank ${rank}` }))]);
+    fillSelect(elements["state-filter"], [{ value: "both", label: "All runtime states" }, ...states.map((state) => ({ value: state, label: humanize(state) }))]);
   }
 
   function fillSelect(select, options) {

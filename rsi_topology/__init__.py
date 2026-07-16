@@ -3,10 +3,12 @@
 from .discovery import (
     ConsensusBand,
     CrossFittedLineageObject,
+    CrossFittedRankFiltration,
     DiscoveryConfig,
     DiscoveryResult,
     PhaseOneLineageObjectsV03,
     discover_between_class_scatter_object,
+    discover_between_class_rank_filtration,
     discover_consensus_bands,
     discover_lineage_objects_v03,
     evaluate_discovery,
@@ -87,14 +89,34 @@ from .risk_gate import (
 from .risk_redteam import run_control_risk_redteam
 from .risk_analysis import summarize_boundary_surface
 from .sectioning_crossover import run_sectioning_crossover_v03
+from .godel_capture import (
+    CAPTURE_SCHEMA,
+    PROMPT_SCHEMA,
+    CaptureStore,
+    audit_prompt_answer_keys,
+    build_synthetic_capture,
+    generate_prompt_manifest,
+    runtime_environment,
+    validate_capture_index,
+    validate_prompt_manifest,
+)
+from .godel_analysis import (
+    ANALYSIS_SCHEMA,
+    analyze_godel_capture,
+    classify_runtime_support,
+    node_id,
+    write_analysis_bundle,
+)
 
 __all__ = [
     "ConsensusBand",
     "CrossFittedLineageObject",
+    "CrossFittedRankFiltration",
     "DiscoveryConfig",
     "DiscoveryResult",
     "PhaseOneLineageObjectsV03",
     "discover_between_class_scatter_object",
+    "discover_between_class_rank_filtration",
     "discover_consensus_bands",
     "discover_lineage_objects_v03",
     "evaluate_discovery",
@@ -162,4 +184,18 @@ __all__ = [
     "run_control_risk_redteam",
     "summarize_boundary_surface",
     "run_sectioning_crossover_v03",
+    "PROMPT_SCHEMA",
+    "CAPTURE_SCHEMA",
+    "ANALYSIS_SCHEMA",
+    "CaptureStore",
+    "audit_prompt_answer_keys",
+    "generate_prompt_manifest",
+    "runtime_environment",
+    "validate_prompt_manifest",
+    "validate_capture_index",
+    "build_synthetic_capture",
+    "analyze_godel_capture",
+    "classify_runtime_support",
+    "node_id",
+    "write_analysis_bundle",
 ]
