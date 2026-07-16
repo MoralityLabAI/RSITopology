@@ -172,6 +172,10 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
         "status": "authorized_for_qwen_holonomy_state_capture",
         "run_id": args.run_id,
         "state_id": args.state_id,
+        "wrapper_output_dir": str(
+            (args.capture_output_dir.resolve() / "_wrapper").resolve()
+        ),
+        "checkpoint_strategy": "one_state_site_context_shard_geometry_half",
         "protocol_sha256": sha256_file(args.protocol),
         "geometry_manifest_sha256": sha256_file(args.geometry_manifest),
         "caps_confirmed_by_user": True,
