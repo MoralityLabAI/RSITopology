@@ -45,6 +45,14 @@ defensive JSONL loading, measured loop-closure transport animation, receipt
 filters, and copyable provenance details. See
 [`godel-globe/README.md`](godel-globe/README.md) for usage and validation.
 
+The v0.1 real-model protocol now uses the current harness rather than rebuilding
+it: family-resolved v0.3 between-class objects, mandatory control calibration,
+the lineage-first `beta_1` gate, precision × context loops, existing patch
+sectioning, and the existing certificate API. Its deterministic 1,152-prompt
+manifest and target-blind capture/replay commands are documented in
+[`docs/GODEL_GLOBES_V0_1.md`](docs/GODEL_GLOBES_V0_1.md). The preserved Silico
+float32/bfloat16 result is treated as calibration only.
+
 ## Holonomy-bounded edit sectioning
 
 `section_edits()` converts context-by-checkpoint identity receipts into maximal
@@ -96,6 +104,26 @@ and its absolute-uplift failure remain preserved. Large or
 model-bearing runs are currently blocked by
 `reports/resource_enforcement_audit.md`; only unit-scale controls are allowed
 until CPU and I/O cgroups are delegated or an approved container path exists.
+
+## Confinement-width CPU validation
+
+Six additive CPU experiments now test the classical data-rate/invariance-
+entropy mechanism used by the Confinement Width manuscript: split read/write
+rate limits, spectral scaling with `h2(A_u)`, finite-horizon margin, evaluator-
+transversal modes, sufficiency-audit scaling, and spherical 3-spin sampler
+robustness. Universal volume obstructions are never pooled with constructive
+controller results or Monte Carlo evidence. See
+[`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md) and
+[`docs/CONFINEMENT_VALIDATION_SUITE.md`](docs/CONFINEMENT_VALIDATION_SUITE.md).
+The bounded 2026-07-16 outcomes, including the stopped spin-glass pilot, are in
+[`reports/CONFINEMENT_VALIDATION_PILOT.md`](reports/CONFINEMENT_VALIDATION_PILOT.md).
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/run_confinement_smoke.ps1
+```
+
+The full configurations are specifications only; they are not run by tests or
+smoke scripts.
 v0.2.1 leaves every v0.2 primary threshold unchanged, adds environment-stamped
 receipts, sparse geometry noise, occupancy-margin warnings, and a descriptive
 KL-normalized information coefficient. External Fable replays remain

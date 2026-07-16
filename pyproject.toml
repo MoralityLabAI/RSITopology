@@ -9,6 +9,11 @@ description = "Bounded spectral-bundle discovery over JSpace harmonic geometry"
 requires-python = ">=3.11"
 dependencies = ["numpy", "scipy", "scikit-learn"]
 
+[project.optional-dependencies]
+test = ["pytest", "hypothesis"]
+
+[tool.setuptools.packages.find]
+include = ["rsi_topology*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-
