@@ -1,0 +1,22 @@
+{
+  "comparisons": [
+    {
+      "byte_identical_overlap_count": 0,
+      "path": "C:\\projects\\RSITopology\\protocols\\godel_globes_prompt_manifest_v0_1.json",
+      "prompt_count": 838,
+      "sha256": "19dc2bbe38ab959036ab1e437e10536e0b4dec12792afccf7134d17ffc865794"
+    },
+    {
+      "byte_identical_overlap_count": 0,
+      "path": "C:\\projects\\RSITopology\\protocols\\qwen_holonomy_causal_outer_manifest_v0_1_1.json",
+      "prompt_count": 460,
+      "sha256": "3dec1f1693a4789ddf4e4439fe54551960f96a4d067c330f22558e7144093cc4"
+    }
+  ],
+  "dense_manifest_path": "C:\\projects\\RSITopology\\protocols\\qwen08_dense_local_prompt_manifest_v0_1.json",
+  "dense_manifest_sha256": "b7d2e98e90158b1a5f67981f5ec40261c672c64739263927dc5322861cacbd39",
+  "dense_prompt_count": 4608,
+  "passed": true,
+  "schema_version": "qwen08_dense_local_prompt_separation_v0_1",
+  "scientific_protocol_sha256": "964d979372dac37b65746c9018d1629b9bb3223a045c26eb82d3967c189d1518"
+}

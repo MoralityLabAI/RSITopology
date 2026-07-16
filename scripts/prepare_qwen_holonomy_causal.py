@@ -151,6 +151,20 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
         "causal_prompt_module": ROOT / "rsi_topology" / "qwen_holonomy_causal.py",
         "preparation_entrypoint": Path(__file__).resolve(),
     }
+    scientific_protocol = None
+    if args.scientific_protocol is not None:
+        scientific_protocol = args.scientific_protocol.resolve()
+        scientific_value = json.loads(
+            scientific_protocol.read_text(encoding="utf-8-sig")
+        )
+        if scientific_value.get("protocol_id") != "qwen08_dense_local_holonomy_v0_1":
+            raise ValueError("unsupported scientific capture protocol")
+        source_paths["dense_local_module"] = (
+            ROOT / "rsi_topology" / "qwen_dense_local.py"
+        )
+        source_paths["dense_local_preparation_entrypoint"] = (
+            ROOT / "scripts" / "prepare_qwen08_dense_local.py"
+        )
     for path in source_paths.values():
         tracked = subprocess.run(
             ["git", "ls-files", "--error-unmatch", str(path.relative_to(ROOT))],
@@ -241,6 +255,12 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
             args.quantization,
         ],
     }
+    if scientific_protocol is not None:
+        value["scientific_protocol"] = {
+            "path": str(scientific_protocol),
+            "sha256": sha256_file(scientific_protocol),
+            "protocol_id": "qwen08_dense_local_holonomy_v0_1",
+        }
     write_once_or_equal(args.output, canonical_json_bytes(value))
     print(json.dumps(value, indent=2, sort_keys=True))
 
@@ -283,6 +303,7 @@ def parser() -> argparse.ArgumentParser:
         "--quantization", choices=("4bit", "float16"), default="4bit"
     )
     authorization_parser.add_argument("--capture-output-dir", type=Path, required=True)
+    authorization_parser.add_argument("--scientific-protocol", type=Path)
     authorization_parser.add_argument("--output", type=Path, required=True)
     authorization_parser.add_argument("--confirm-caps", action="store_true")
     authorization_parser.set_defaults(function=prepare_state_authorization)

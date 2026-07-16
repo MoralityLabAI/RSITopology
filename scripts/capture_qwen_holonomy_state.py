@@ -113,6 +113,17 @@ def _validate_authorization(
         path = Path(str(raw_path))
         if not path.is_file() or sha256_file(path) != hashes[name]:
             raise ValueError(f"authorized source changed: {name}")
+    scientific = value.get("scientific_protocol")
+    if scientific is not None:
+        if not isinstance(scientific, Mapping):
+            raise ValueError("scientific protocol binding is malformed")
+        path = Path(str(scientific.get("path", "")))
+        if (
+            scientific.get("protocol_id") != "qwen08_dense_local_holonomy_v0_1"
+            or not path.is_file()
+            or sha256_file(path) != scientific.get("sha256")
+        ):
+            raise ValueError("scientific protocol binding is missing or changed")
 
 
 def _load_model(
@@ -349,6 +360,10 @@ def capture(args: argparse.Namespace) -> None:
             "model_file_sha256": model_hashes,
             "chunks": sorted(chunks, key=lambda row: row["chunk_id"]),
         }
+        if "scientific_protocol" in authorization:
+            index["scientific_protocol"] = dict(
+                authorization["scientific_protocol"]
+            )
         write_once_or_equal(index_path, canonical_json_bytes(index))
         status = "completed"
     except TimeoutError as error:

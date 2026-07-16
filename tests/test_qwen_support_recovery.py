@@ -3,6 +3,11 @@ import json
 
 import pytest
 
+from rsi_topology.qwen_dense_local import (
+    generate_dense_manifest,
+    prompt_byte_set,
+    validate_dense_manifest,
+)
 from rsi_topology.qwen_support_recovery import cyclic_window, load_protocol
 
 
@@ -47,3 +52,21 @@ def test_dense_local_followup_preserves_the_holonomy_tower():
     )
     assert value["fixed_stop_states"]["beta_1_zero"] == "holonomy_unavailable"
     assert value["new_invariant_levels"] is False
+
+
+def test_dense_local_manifest_is_exact_and_separated_from_prior_splits():
+    dense = generate_dense_manifest(
+        protocol_path=ROOT / "protocols" / "qwen08_dense_local_holonomy_v0_1.json"
+    )
+    prior_paths = (
+        ROOT / "protocols" / "godel_globes_prompt_manifest_v0_1.json",
+        ROOT / "protocols" / "qwen_holonomy_causal_outer_manifest_v0_1_1.json",
+    )
+    prior = [json.loads(path.read_text(encoding="utf-8")) for path in prior_paths]
+    validate_dense_manifest(
+        dense,
+        protocol_path=ROOT / "protocols" / "qwen08_dense_local_holonomy_v0_1.json",
+        separation_artifacts=prior,
+    )
+    assert dense["prompt_count"] == 4608
+    assert all(not (prompt_byte_set(dense) & prompt_byte_set(item)) for item in prior)
