@@ -29,12 +29,17 @@ from .qwen_state_capture import (
 
 
 ANALYSIS_PROTOCOL_ID = "qwen08_holonomy_geometry_analysis_v0_1"
+DENSE_ANALYSIS_PROTOCOL_ID = "qwen08_dense_local_holonomy_analysis_v0_1"
+SUPPORTED_ANALYSIS_PROTOCOL_IDS = {
+    ANALYSIS_PROTOCOL_ID,
+    DENSE_ANALYSIS_PROTOCOL_ID,
+}
 PAIR_INDEX_SCHEMA = "qwen08_holonomy_pair_capture_index_v0_1"
 
 
 def load_analysis_protocol(path: str | Path) -> dict[str, Any]:
     value = json.loads(Path(path).read_text(encoding="utf-8-sig"))
-    if value.get("protocol_id") != ANALYSIS_PROTOCOL_ID:
+    if value.get("protocol_id") not in SUPPORTED_ANALYSIS_PROTOCOL_IDS:
         raise ValueError("unexpected Qwen geometry-analysis protocol")
     if value.get("new_invariant_levels") is not False:
         raise ValueError("analysis protocol introduces an invariant level")
@@ -69,7 +74,7 @@ def pair_analysis_protocol(
     if pair_tuple not in registered:
         raise ValueError("pair is not registered")
     return {
-        "protocol_id": f"{ANALYSIS_PROTOCOL_ID}:{pair_slug(pair_tuple)}",
+        "protocol_id": f"{registration['protocol_id']}:{pair_slug(pair_tuple)}",
         "runtime_precisions": list(pair_tuple),
         "candidate_sites": list(registration["candidate_sites"]),
         "primary_object": dict(registration["primary_object"]),
@@ -82,7 +87,7 @@ def pair_analysis_protocol(
         "aggregate_identity_gate": dict(registration["aggregate_identity_gate"]),
         "consumer_rules": dict(registration["consumer_rules"]),
         "claim_boundary": str(registration["claim_boundary"]),
-        "analysis_registration_protocol_id": ANALYSIS_PROTOCOL_ID,
+        "analysis_registration_protocol_id": str(registration["protocol_id"]),
     }
 
 
@@ -104,6 +109,16 @@ def validate_registered_inputs(
         raise ValueError("capture protocol hash mismatch")
     capture_protocol = load_causal_protocol(capture_path)
 
+    scientific_entry = registration.get("scientific_protocol")
+    scientific_hash = None
+    if scientific_entry is not None:
+        scientific_path = _resolve_bound_path(
+            str(scientific_entry["path"]), root=root
+        )
+        scientific_hash = sha256_file(scientific_path)
+        if scientific_hash != str(scientific_entry["sha256"]):
+            raise ValueError("scientific protocol hash mismatch")
+
     manifest_entry = registration["prompt_manifest"]
     manifest_path = _resolve_bound_path(str(manifest_entry["path"]), root=root)
     if sha256_file(manifest_path) != str(manifest_entry["sha256"]):
@@ -124,6 +139,18 @@ def validate_registered_inputs(
             geometry_manifest=manifest,
             index_path=path,
         )
+        if value.get("protocol_sha256") != str(capture_entry["sha256"]):
+            raise ValueError(f"state capture protocol binding mismatch: {state_id}")
+        if value.get("geometry_manifest_sha256") != str(manifest_entry["sha256"]):
+            raise ValueError(f"state capture manifest binding mismatch: {state_id}")
+        if scientific_hash is not None:
+            scientific = value.get("scientific_protocol")
+            if not isinstance(scientific, Mapping) or scientific.get(
+                "sha256"
+            ) != scientific_hash:
+                raise ValueError(
+                    f"state capture scientific binding mismatch: {state_id}"
+                )
         paths[state_id] = path
     return registration, capture_protocol, manifest, paths
 

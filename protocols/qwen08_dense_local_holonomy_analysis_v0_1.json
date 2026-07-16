@@ -1,0 +1,119 @@
+{
+  "protocol_id": "qwen08_dense_local_holonomy_analysis_v0_1",
+  "schema_version": "1.0.0",
+  "status": "frozen_after_target_blind_capture_before_geometry_read",
+  "frozen_on": "2026-07-16",
+  "purpose": "Resolve whether the preregistered denser local Qwen0.8B capture recovers lineage-connected, noise-valid context-by-checkpoint identity geometry.",
+  "claim_boundary": "This target-blind analysis may establish or falsify local family-resolved lineage, cycle availability, and noise-valid discrete holonomy on the frozen base-to-naive engineering grid. It cannot establish semantic identity, causal edit value, VPD efficacy, capability preservation, compactification, recursive improvement, or RSI.",
+  "scientific_protocol": {
+    "path": "protocols/qwen08_dense_local_holonomy_v0_1.json",
+    "sha256": "964d979372dac37b65746c9018d1629b9bb3223a045c26eb82d3967c189d1518"
+  },
+  "capture_protocol": {
+    "path": "protocols/qwen_holonomy_causal_transfer_v0_1.json",
+    "sha256": "a56473f6628887fb7dc7df43dc7660010be4f95a526d6587d0d6ec95ebabe872"
+  },
+  "prompt_manifest": {
+    "path": "protocols/qwen08_dense_local_prompt_manifest_v0_1.json",
+    "sha256": "b7d2e98e90158b1a5f67981f5ec40261c672c64739263927dc5322861cacbd39"
+  },
+  "state_capture_indices": {
+    "base": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\state_capture_index.json",
+      "sha256": "7b887ab7c40f8731f3cbb40243161f46c4925b029b0ef3ea7cfca89c7af789da"
+    },
+    "naive_qlora": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_naive_capture_v0_1\\state_capture_index.json",
+      "sha256": "d2777ef88aa2113108fd9f6af9fd1fab23b22815116e418c1d6a26540d3fdf5e"
+    }
+  },
+  "state_pairs": [
+    ["base", "naive_qlora"]
+  ],
+  "candidate_sites": [
+    "model.layers.11",
+    "model.layers.15",
+    "model.layers.19",
+    "model.layers.23"
+  ],
+  "primary_object": {
+    "kind": "cross_fitted_between_class_scatter",
+    "ranks": [1, 2, 3, 4, 5, 6, 7, 8],
+    "rank_selection": "largest prefix rank passing the strict bootstrap-versus-label-permutation margin at every state x context node in a site x family cell",
+    "bootstrap_replicates": 128,
+    "minimum_strict_null_margin": 0.02,
+    "covariance_gram_status": "reported_ungated"
+  },
+  "instrument_calibration": {
+    "kind": "matched_random_named_family positive construction plus within-half label-permutation null",
+    "required_margin": 0.02,
+    "failure_effect": "Cap all certificates at engineering_evidence with negative_control_not_passed."
+  },
+  "graph": {
+    "node": "model_state/site/family/context_shard/rank",
+    "edges": "adjacent context shards within each state plus same-shard cross-state edges",
+    "lineage_floor": 0.9,
+    "minimum_mean_edge_chordal_lineage": 0.95,
+    "expected_nodes_per_fully_connected_cell": 8,
+    "expected_edges_per_fully_connected_cell": 10,
+    "beta_1_formula": "beta_1 = |E_tau| - |V| + c(G_tau)",
+    "expected_beta_1_if_fully_connected": 3,
+    "beta_1_zero": "holonomy_unavailable; certification cannot reach holonomy_clean"
+  },
+  "holonomy": {
+    "budget": {
+      "maximum_canonical_angle_degrees": 5.0,
+      "maximum_identity_loss": 0.05
+    },
+    "measurement_split": "geometry_validation",
+    "construction_validation_agreement": "determinant component must agree and maximum-angle difference must not exceed max(1 degree, matched noise upper 95)",
+    "prompt_resampling_replicates": 128,
+    "nontrivial_signal": "Validation maximum canonical angle must exceed the matched flat/noise 95th percentile; aggregate support requires at least three sites across two families.",
+    "det_negative": "categorical orientation reversal; suppress canonical angles"
+  },
+  "corotation": {
+    "object": "gauge-invariant ambient partial-isometry transport",
+    "comparison": "within-family distance versus matched cross-family distance at equal supported rank",
+    "gate": "95% lower confidence bound of cross-family median distance minus within-family median distance is strictly positive",
+    "failure_effect": "Render independent family globes; do not invalidate identity attestation."
+  },
+  "gauge_preflight": {
+    "reframings": 32,
+    "tolerance": 1e-8
+  },
+  "sectioning": {
+    "budgets": [0.0, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5],
+    "shard_prefixes": [2, 4],
+    "navigation_ceiling_per_family": 40
+  },
+  "aggregate_identity_gate": {
+    "minimum_physical_sites": 3,
+    "minimum_behavior_families": 2
+  },
+  "consumer_rules": {
+    "signed_intervention": "holonomy_clean",
+    "signed_reward": "holonomy_clean",
+    "disparate_weight_edit": "holonomy_clean",
+    "energy_reward": "lineage_certified",
+    "bundle_energy_reward": "lineage_certified",
+    "all_other_uses": "engineering_evidence"
+  },
+  "analysis_order": [
+    "validate scientific, capture, manifest, state-index, and chunk hashes",
+    "apply the real-label versus permutation rank gate at every state x context node",
+    "choose the largest common supported rank per site x family cell",
+    "build G_tau and compute beta_1 before loop measurement",
+    "compare admitted loop holonomy to the frozen prompt-resample noise null",
+    "emit receipts without consuming behavioral outcomes"
+  ],
+  "fixed_stop_states": {
+    "no_common_supported_rank": "reject_local_between_class_object_at_development_scale",
+    "beta_1_zero": "holonomy_unavailable",
+    "loops_below_noise": "lineage_only_no_noise_valid_holonomy",
+    "geometry_without_aggregate_support": "engineering_geometry_only",
+    "noise_valid_aggregate_loops": "open_frozen_causal_outer_stage"
+  },
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}
