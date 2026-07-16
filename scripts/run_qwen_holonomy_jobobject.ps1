@@ -8,13 +8,56 @@ $spec = Get-Content -LiteralPath $specPath -Raw | ConvertFrom-Json
 if ($spec.schema_version -notin @(
   "qwen_holonomy_state_capture_authorization_v0_1",
   "qwen_holonomy_geometry_analysis_authorization_v0_1",
-  "qwen_holonomy_jobobject_probe_v0_1"
+  "qwen_holonomy_jobobject_probe_v0_1",
+  "godel_capture_authorization_v0_1"
 )) { throw "Unsupported run-spec schema" }
+$isGodelCapture = $spec.schema_version -eq "godel_capture_authorization_v0_1"
 $caps = $spec.resource_caps
-foreach ($field in @("memory_mb", "cpu_percent", "io_mb_s", "timeout_seconds")) {
+foreach ($field in @("memory_mb", "cpu_percent", "io_mb_s", "timeout_seconds", "gpu_allowance_mb", "checkpoint_every_seconds")) {
   if ([double]$caps.$field -le 0) { throw "Missing positive cap: $field" }
 }
 if ([int]$caps.swap_bytes -ne 0) { throw "Only zero registered swap is accepted" }
+$freePhysicalMbAtStart = 0.0
+$minimumFreeMemoryMb = 0.0
+if ($isGodelCapture) {
+  foreach ($field in @("host_reserve_mb", "minimum_free_memory_mb")) {
+    if ([double]$caps.$field -le 0) { throw "Missing positive cap: $field" }
+  }
+  if ([double]$caps.minimum_free_memory_mb -ne ([double]$caps.memory_mb + [double]$caps.host_reserve_mb)) {
+    throw "minimum_free_memory_mb must equal memory_mb plus host_reserve_mb"
+  }
+  $minimumFreeMemoryMb = [double]$caps.minimum_free_memory_mb
+  $operatingSystem = Get-CimInstance Win32_OperatingSystem
+  $freePhysicalMbAtStart = [double]$operatingSystem.FreePhysicalMemory / 1024.0
+  if ($freePhysicalMbAtStart -lt $minimumFreeMemoryMb) {
+    throw "insufficient physical RAM for registered no-swap preflight: free=$([math]::Round($freePhysicalMbAtStart,1))MB required=$minimumFreeMemoryMb MB"
+  }
+
+  $currentWrapperPath = [System.IO.Path]::GetFullPath($PSCommandPath)
+  $currentWrapperHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $currentWrapperPath).Hash.ToLowerInvariant()
+  $registeredWrapper = $spec.hard_cap_wrapper
+  if ($null -eq $registeredWrapper) { throw "Godel authorization lacks hard_cap_wrapper" }
+  if ([System.IO.Path]::GetFullPath([string]$registeredWrapper.path) -ne $currentWrapperPath) {
+    throw "Authorized wrapper path differs from executing wrapper"
+  }
+  if ([string]$registeredWrapper.sha256 -ne $currentWrapperHash) {
+    throw "Authorized wrapper hash differs from executing wrapper"
+  }
+
+  $validationArtifact = $spec.hard_cap_validation_receipt
+  if ($null -eq $validationArtifact) { throw "Godel authorization lacks hard-cap validation receipt" }
+  $validationPath = [System.IO.Path]::GetFullPath([string]$validationArtifact.path)
+  if (-not (Test-Path -LiteralPath $validationPath)) { throw "Hard-cap validation receipt missing" }
+  $validationHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $validationPath).Hash.ToLowerInvariant()
+  if ([string]$validationArtifact.sha256 -ne $validationHash) { throw "Hard-cap validation receipt hash mismatch" }
+  $validation = Get-Content -LiteralPath $validationPath -Raw | ConvertFrom-Json
+  if ($validation.schema_version -ne "qwen_holonomy_hard_cap_validation_v0_1" -or $validation.hard_cap_validation_status -ne "passed") {
+    throw "Hard-cap validation receipt is not a registered pass"
+  }
+  if ([string]$validation.wrapper.sha256 -ne $currentWrapperHash) {
+    throw "Hard-cap validation receipt does not bind the executing wrapper"
+  }
+}
 $command = @($spec.exact_inner_command)
 if ($command.Count -lt 2) { throw "Run spec has no executable command" }
 $python = (Resolve-Path -LiteralPath ([string]$command[0])).Path
@@ -29,6 +72,15 @@ $pidPath = Join-Path $runDir "owned_pids.json"
 $cleanupPath = Join-Path $runDir "cleanup_summary.json"
 $cleanupScript = [string]$spec.cleanup_script.path
 if (-not (Test-Path -LiteralPath $cleanupScript)) { throw "Cleanup script missing" }
+if ($isGodelCapture) {
+  $cleanupHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $cleanupScript).Hash.ToLowerInvariant()
+  if ([string]$spec.cleanup_script.sha256 -ne $cleanupHash) {
+    throw "Authorized cleanup script hash mismatch"
+  }
+  if ([string]$validation.cleanup.sha256 -ne $cleanupHash) {
+    throw "Hard-cap validation receipt does not bind the cleanup script"
+  }
+}
 
 function Write-WrapperEvent([hashtable]$Value) {
   $Value.ts_utc = [DateTime]::UtcNow.ToString("o")
@@ -134,6 +186,11 @@ $peakGpu = 0.0
 $ramSamples = New-Object System.Collections.Generic.List[double]
 $cpuSamples = New-Object System.Collections.Generic.List[double]
 $started = Get-Date
+$checkpointSignalPath = $null
+$checkpointGraceSeconds = 60.0
+if ($isGodelCapture) {
+  $checkpointSignalPath = Join-Path ([string]$spec.capture_parameters.output_dir) "events.jsonl"
+}
 try {
   $memorySet = [QwenHolonomyJob]::ConfigureMemory($job, $memoryBytes)
   if (-not $memorySet) { throw "Failed to set aggregate/process memory cap" }
@@ -174,6 +231,15 @@ try {
     if ($ioBreaches -ge 3) { $abortReason = "sustained_io_cap_exceeded" }
     if ($gpuMb -gt [double]$caps.gpu_allowance_mb) { $abortReason = "gpu_allowance_exceeded" }
     if (($now - $started).TotalSeconds -gt [double]$caps.timeout_seconds) { $abortReason = "timeout" }
+    if ($isGodelCapture) {
+      $lastSignal = $started
+      if (Test-Path -LiteralPath $checkpointSignalPath) {
+        $lastSignal = (Get-Item -LiteralPath $checkpointSignalPath).LastWriteTime
+      }
+      if (($now - $lastSignal).TotalSeconds -gt ([double]$caps.checkpoint_every_seconds + $checkpointGraceSeconds)) {
+        $abortReason = "checkpoint_stale"
+      }
+    }
     if ($abortReason) {
       Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
       break
@@ -223,6 +289,8 @@ try {
     peak_gpu_mb = [math]::Round($peakGpu, 3)
     steps_completed = $steps
     checkpoint_strategy = [string]$spec.checkpoint_strategy
+    free_physical_mb_at_start = [math]::Round($freePhysicalMbAtStart, 3)
+    minimum_free_memory_mb = [math]::Round($minimumFreeMemoryMb, 3)
     elapsed_seconds = [math]::Round(((Get-Date) - $started).TotalSeconds, 3)
     cleanup_summary = $cleanupPath
     cleanup_passed = [bool]($cleanup -ne $null -and $cleanup.cleanup_passed -eq $true)

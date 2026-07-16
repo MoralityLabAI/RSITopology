@@ -81,6 +81,26 @@ def _validate_authorization(
         path = Path(str(artifact.get("path", "")))
         if not path.is_file() or sha256_file(path) != artifact.get("sha256"):
             raise ValueError(f"authorization {name} is missing or changed")
+    validation_artifact = value.get("hard_cap_validation_receipt")
+    if not isinstance(validation_artifact, Mapping):
+        raise ValueError("authorization lacks hard_cap_validation_receipt")
+    validation_path = Path(str(validation_artifact.get("path", "")))
+    if (
+        not validation_path.is_file()
+        or sha256_file(validation_path) != validation_artifact.get("sha256")
+    ):
+        raise ValueError("authorization hard-cap validation receipt is missing or changed")
+    validation = json.loads(validation_path.read_text(encoding="utf-8-sig"))
+    if (
+        validation.get("schema_version")
+        != "qwen_holonomy_hard_cap_validation_v0_1"
+        or validation.get("hard_cap_validation_status") != "passed"
+    ):
+        raise ValueError("hard-cap validation receipt is not a registered pass")
+    if validation.get("wrapper", {}).get("sha256") != value["hard_cap_wrapper"]["sha256"]:
+        raise ValueError("hard-cap validation receipt does not bind authorized wrapper")
+    if validation.get("cleanup", {}).get("sha256") != value["cleanup_script"]["sha256"]:
+        raise ValueError("hard-cap validation receipt does not bind authorized cleanup")
     if value.get("environment_lock") != runtime_environment():
         raise ValueError("runtime environment differs from the sealed capture environment")
     paths = value.get("source_paths")
@@ -125,6 +145,117 @@ def _load_progress(path: Path, *, run_id: str) -> dict[str, Any]:
     return value
 
 
+def _partial_group_paths(
+    output: Path, *, runtime: str, shard: str, half: str
+) -> tuple[Path, Path]:
+    root = output / "partials" / runtime / shard
+    return root / f"{half}.npz", root / f"{half}.json"
+
+
+def _write_partial_group(
+    output: Path,
+    *,
+    runtime: str,
+    shard: str,
+    half: str,
+    sites: list[str],
+    prompt_ids: list[str],
+    captured: Mapping[str, list[np.ndarray]],
+) -> tuple[Path, Path]:
+    """Write an atomic, hash-bound partial shard/half checkpoint."""
+
+    data_path, metadata_path = _partial_group_paths(
+        output, runtime=runtime, shard=shard, half=half
+    )
+    data_path.parent.mkdir(parents=True, exist_ok=True)
+    arrays: dict[str, np.ndarray] = {}
+    site_keys: dict[str, str] = {}
+    for index, site in enumerate(sites):
+        key = f"site_{index:03d}"
+        values = np.concatenate(captured[site], axis=0).astype(np.float32, copy=False)
+        if len(values) != len(prompt_ids) or not np.all(np.isfinite(values)):
+            raise RuntimeError(f"partial checkpoint row/finiteness failure at {site}")
+        arrays[key] = values
+        site_keys[site] = key
+    temporary = data_path.with_suffix(data_path.suffix + ".tmp")
+    with temporary.open("wb") as handle:
+        np.savez(handle, **arrays)
+    temporary.replace(data_path)
+    metadata = {
+        "schema_version": "godel_capture_partial_group_v0_1",
+        "runtime_precision": runtime,
+        "context_shard": shard,
+        "half": half,
+        "prompt_ids": prompt_ids,
+        "row_count": len(prompt_ids),
+        "site_keys": site_keys,
+        "data_sha256": sha256_file(data_path),
+    }
+    _atomic_json(metadata_path, metadata)
+    return data_path, metadata_path
+
+
+def _load_partial_group(
+    output: Path,
+    *,
+    runtime: str,
+    shard: str,
+    half: str,
+    sites: list[str],
+    expected_prompt_ids: list[str],
+) -> tuple[int, dict[str, np.ndarray]]:
+    data_path, metadata_path = _partial_group_paths(
+        output, runtime=runtime, shard=shard, half=half
+    )
+    if not data_path.exists() and not metadata_path.exists():
+        return 0, {}
+    if not data_path.is_file() or not metadata_path.is_file():
+        raise ValueError("partial checkpoint is incomplete")
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    if metadata.get("schema_version") != "godel_capture_partial_group_v0_1":
+        raise ValueError("partial checkpoint schema mismatch")
+    expected_identity = {
+        "runtime_precision": runtime,
+        "context_shard": shard,
+        "half": half,
+    }
+    if any(metadata.get(name) != value for name, value in expected_identity.items()):
+        raise ValueError("partial checkpoint identity mismatch")
+    prompt_ids = metadata.get("prompt_ids")
+    if (
+        not isinstance(prompt_ids, list)
+        or prompt_ids != expected_prompt_ids[: len(prompt_ids)]
+        or int(metadata.get("row_count", -1)) != len(prompt_ids)
+    ):
+        raise ValueError("partial checkpoint prompt prefix mismatch")
+    if metadata.get("data_sha256") != sha256_file(data_path):
+        raise ValueError("partial checkpoint data hash mismatch")
+    site_keys = metadata.get("site_keys")
+    if not isinstance(site_keys, Mapping) or set(site_keys) != set(sites):
+        raise ValueError("partial checkpoint site universe mismatch")
+    restored: dict[str, np.ndarray] = {}
+    with np.load(data_path, allow_pickle=False) as archive:
+        if set(archive.files) != set(site_keys.values()):
+            raise ValueError("partial checkpoint array universe mismatch")
+        for site in sites:
+            values = np.asarray(archive[str(site_keys[site])], dtype=np.float32)
+            if len(values) != len(prompt_ids) or not np.all(np.isfinite(values)):
+                raise ValueError(f"partial checkpoint values invalid at {site}")
+            restored[site] = values
+    return len(prompt_ids), restored
+
+
+def _remove_partial_group(
+    output: Path, *, runtime: str, shard: str, half: str
+) -> None:
+    data_path, metadata_path = _partial_group_paths(
+        output, runtime=runtime, shard=shard, half=half
+    )
+    for path in (metadata_path, data_path):
+        if path.exists():
+            path.unlink()
+
+
 def capture(args: argparse.Namespace) -> None:
     try:
         import torch
@@ -160,6 +291,9 @@ def capture(args: argparse.Namespace) -> None:
     summary_path = output / "summary.json"
     progress_path = output / "capture_progress.json"
     run_id = str(authorization["run_id"])
+    checkpoint_every_seconds = float(
+        authorization["resource_caps"]["checkpoint_every_seconds"]
+    )
     progress = _load_progress(progress_path, run_id=run_id)
     completed = {item["chunk_id"]: item for item in progress["chunks"]}
     tokenizer = None
@@ -180,6 +314,7 @@ def capture(args: argparse.Namespace) -> None:
         for runtime in protocol["runtime_precisions"]:
             loaded_runtime = runtime
             dtype = torch.float32 if runtime == "full_float32" else torch.bfloat16
+            _event(events, "runtime_load_start", runtime=runtime)
             model = AutoModelForCausalLM.from_pretrained(
                 model_path,
                 local_files_only=True,
@@ -187,6 +322,7 @@ def capture(args: argparse.Namespace) -> None:
                 low_cpu_mem_usage=True,
             ).to(args.device)
             model.eval()
+            _event(events, "runtime_loaded", runtime=runtime)
             captured: dict[str, list[np.ndarray]] = {
                 site: [] for site in protocol["candidate_sites"]
             }
@@ -215,11 +351,35 @@ def capture(args: argparse.Namespace) -> None:
                         for site in protocol["candidate_sites"]
                     }
                     if required_ids <= set(completed):
+                        _remove_partial_group(
+                            output, runtime=runtime, shard=shard, half=half
+                        )
                         _event(events, "chunk_group_skipped", runtime=runtime, shard=shard, half=half)
                         continue
                     for site in captured:
                         captured[site].clear()
-                    for start in range(0, len(rows), args.batch_size):
+                    prompt_ids = [item["prompt_id"] for item in rows]
+                    partial_count, restored = _load_partial_group(
+                        output,
+                        runtime=runtime,
+                        shard=shard,
+                        half=half,
+                        sites=list(protocol["candidate_sites"]),
+                        expected_prompt_ids=prompt_ids,
+                    )
+                    if partial_count:
+                        for site, values in restored.items():
+                            captured[site].append(values)
+                        _event(
+                            events,
+                            "partial_checkpoint_restored",
+                            runtime=runtime,
+                            shard=shard,
+                            half=half,
+                            row_count=partial_count,
+                        )
+                    last_partial_checkpoint = time.monotonic()
+                    for start in range(partial_count, len(rows), args.batch_size):
                         batch = rows[start : start + args.batch_size]
                         encoded = tokenizer(
                             [item["prompt"] for item in batch],
@@ -236,8 +396,31 @@ def capture(args: argparse.Namespace) -> None:
                                 torch.cuda.max_memory_allocated() / (1024 * 1024),
                             )
                         del encoded
+                        processed = start + len(batch)
+                        if (
+                            time.monotonic() - last_partial_checkpoint
+                            >= checkpoint_every_seconds
+                            and processed < len(rows)
+                        ):
+                            _write_partial_group(
+                                output,
+                                runtime=runtime,
+                                shard=shard,
+                                half=half,
+                                sites=list(protocol["candidate_sites"]),
+                                prompt_ids=prompt_ids[:processed],
+                                captured=captured,
+                            )
+                            last_partial_checkpoint = time.monotonic()
+                            _event(
+                                events,
+                                "partial_checkpoint",
+                                runtime=runtime,
+                                shard=shard,
+                                half=half,
+                                row_count=processed,
+                            )
                     current_indices = None
-                    prompt_ids = [item["prompt_id"] for item in rows]
                     for site in protocol["candidate_sites"]:
                         values = np.concatenate(captured[site], axis=0).astype(np.float32, copy=False)
                         if len(values) != len(rows) or not np.all(np.isfinite(values)):
@@ -279,6 +462,9 @@ def capture(args: argparse.Namespace) -> None:
                         },
                     }
                     _atomic_json(progress_path, progress)
+                    _remove_partial_group(
+                        output, runtime=runtime, shard=shard, half=half
+                    )
                     _event(events, "checkpoint", runtime=runtime, shard=shard, half=half, chunk_count=len(chunks))
 
             for handle in handles:

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from typing import Mapping
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -27,12 +28,62 @@ from rsi_topology.godel_capture import (
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = ROOT / "protocols" / "godel_globes_falsification_v0_1.json"
+HARD_CAP_VALIDATION_SCHEMA = "qwen_holonomy_hard_cap_validation_v0_1"
 
 
 def _load_manifest(path: Path) -> dict:
     value = json.loads(path.read_text(encoding="utf-8"))
     validate_prompt_manifest(value)
     return value
+
+
+def _validate_hard_cap_receipt(
+    validation: Mapping[str, object],
+    *,
+    wrapper_path: Path,
+    cleanup_path: Path,
+) -> None:
+    """Bind a passed validation receipt to the exact launch machinery."""
+
+    if validation.get("schema_version") != HARD_CAP_VALIDATION_SCHEMA:
+        raise ValueError("hard-cap validation receipt schema is not registered")
+    validation_status = validation.get(
+        "hard_cap_validation_status", validation.get("status")
+    )
+    if validation_status != "passed":
+        raise ValueError("hard-cap validation receipt is not passed")
+    checks = validation.get("checks")
+    required_checks = {
+        "success_path",
+        "memory_cap_configured",
+        "memory_probe_terminated",
+        "memory_probe_stayed_at_cap",
+        "cpu_cap_configured",
+        "cpu_probe_completed",
+        "cpu_observed_below_margin",
+        "io_monitor_aborted",
+        "timeout_aborted",
+        "all_cleanup_passed",
+    }
+    if not isinstance(checks, Mapping) or any(
+        checks.get(name) is not True for name in required_checks
+    ):
+        raise ValueError("hard-cap validation receipt lacks passing required checks")
+
+    expected = {
+        "wrapper": wrapper_path.resolve(),
+        "cleanup": cleanup_path.resolve(),
+    }
+    for name, registered_path in expected.items():
+        artifact = validation.get(name)
+        if not isinstance(artifact, Mapping):
+            raise ValueError(f"hard-cap validation receipt lacks {name} binding")
+        artifact_path = Path(str(artifact.get("path", ""))).resolve()
+        if artifact_path != registered_path:
+            raise ValueError(f"hard-cap validation {name} path mismatch")
+        current_hash = sha256_file(registered_path)
+        if artifact.get("sha256") != current_hash:
+            raise ValueError(f"hard-cap validation {name} hash mismatch")
 
 
 def generate(args: argparse.Namespace) -> None:
@@ -157,13 +208,13 @@ def prepare_authorization(args: argparse.Namespace) -> None:
     if args.batch_size < 1:
         raise ValueError("batch size must be positive")
     validation = json.loads(
-        args.hard_cap_validation_receipt.read_text(encoding="utf-8")
+        args.hard_cap_validation_receipt.read_text(encoding="utf-8-sig")
     )
-    validation_status = validation.get(
-        "hard_cap_validation_status", validation.get("status")
+    _validate_hard_cap_receipt(
+        validation,
+        wrapper_path=args.hard_cap_wrapper,
+        cleanup_path=args.cleanup_script,
     )
-    if validation_status != "passed":
-        raise ValueError("hard-cap validation receipt is not passed")
     if args.swap_bytes != 0:
         raise ValueError("live capture requires --swap-bytes 0")
     positive = (
@@ -173,6 +224,7 @@ def prepare_authorization(args: argparse.Namespace) -> None:
         args.timeout_seconds,
         args.gpu_allowance_mb,
         args.checkpoint_every_seconds,
+        args.host_reserve_mb,
     )
     if any(value <= 0 for value in positive):
         raise ValueError("all resource caps must be explicit and positive")
@@ -246,6 +298,8 @@ def prepare_authorization(args: argparse.Namespace) -> None:
         },
         "resource_caps": {
             "memory_mb": args.memory_mb,
+            "host_reserve_mb": args.host_reserve_mb,
+            "minimum_free_memory_mb": args.memory_mb + args.host_reserve_mb,
             "cpu_percent": args.cpu_percent,
             "io_mb_s": args.io_mb_s,
             "timeout_seconds": args.timeout_seconds,
@@ -266,6 +320,13 @@ def prepare_authorization(args: argparse.Namespace) -> None:
             "device": args.device,
             "batch_size": args.batch_size,
         },
+        "checkpoint_strategy": (
+            "durable_partial_group_at_or_before_registered_interval_and_"
+            "full_shard_half_group"
+        ),
+        "wrapper_output_dir": str(
+            (args.capture_output_dir.resolve() / "_wrapper")
+        ),
         "exact_inner_command": [
             sys.executable,
             str(capture_entrypoint.resolve()),
@@ -327,6 +388,7 @@ def parser() -> argparse.ArgumentParser:
     )
     prepare_parser.add_argument("--cleanup-script", type=Path, required=True)
     prepare_parser.add_argument("--memory-mb", type=int, required=True)
+    prepare_parser.add_argument("--host-reserve-mb", type=int, required=True)
     prepare_parser.add_argument("--cpu-percent", type=int, required=True)
     prepare_parser.add_argument("--io-mb-s", type=int, required=True)
     prepare_parser.add_argument("--timeout-seconds", type=int, required=True)

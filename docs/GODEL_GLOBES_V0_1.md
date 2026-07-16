@@ -128,12 +128,31 @@ python scripts/run_godel_globes_v0_1.py prepare-authorization `
   --hard-cap-wrapper <wrapper.ps1-or-sh> `
   --hard-cap-validation-receipt <passed-receipt.json> `
   --cleanup-script <post-run-cleanup.ps1> `
-  --memory-mb <cap> --cpu-percent <cap> --io-mb-s <cap> `
+  --memory-mb <cap> --host-reserve-mb <reserve> `
+  --cpu-percent <cap> --io-mb-s <cap> `
   --timeout-seconds <cap> --gpu-allowance-mb <cap> `
   --checkpoint-every-seconds 300 --swap-bytes 0 --confirm-caps `
   --capture-output-dir <capture-dir> --device cuda --batch-size <size> `
   --output <capture-authorization.json>
 ```
+
+For the registered local CPU lane, the current proposed envelope is 14,000 MB
+job memory plus a 2,048 MB host reserve, 50% CPU, 50 MB/s monitored I/O, a
+12-hour timeout, 1 MB GPU allowance, durable checkpoints at most 300 seconds
+apart, and zero registered swap. The wrapper refuses to start unless free
+physical RAM is at least `memory_mb + host_reserve_mb`; recording
+`swap_bytes=0` alone is not treated as a Windows no-pagefile guarantee.
+
+The authorization is itself the Job Object run spec. Launch it only through:
+
+```powershell
+powershell -NoProfile -File scripts/run_qwen_holonomy_jobobject.ps1 `
+  -RunSpecPath protocols/godel_globes_capture_authorization_v0_1.json
+```
+
+The passed validation receipt must bind the exact wrapper and cleanup-script
+hashes used by the authorization. A receipt for an earlier wrapper revision is
+invalid even when its top-level status says `passed`.
 
 ## Interpretation
 
