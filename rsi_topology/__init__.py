@@ -107,6 +107,12 @@ from .godel_analysis import (
     node_id,
     write_analysis_bundle,
 )
+from .holonomy_causal import (
+    build_rank_four_loop,
+    evaluate_causal_transfer,
+    generate_causal_transfer_rows,
+    two_path_transports,
+)
 
 __all__ = [
     "ConsensusBand",
@@ -198,4 +204,8 @@ __all__ = [
     "classify_runtime_support",
     "node_id",
     "write_analysis_bundle",
+    "build_rank_four_loop",
+    "evaluate_causal_transfer",
+    "generate_causal_transfer_rows",
+    "two_path_transports",
 ]
