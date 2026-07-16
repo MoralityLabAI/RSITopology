@@ -54,6 +54,9 @@ def test_protocol_has_fail_closed_geometry_and_causal_boundaries():
     value = json.loads(PROTOCOL_PATH.read_text(encoding="utf-8"))
     assert value["new_invariant_levels"] is False
     assert value["development_model"]["ambient_dimension"] == 1024
+    assert value["development_model"]["loader"][
+        "disable_transformers_caching_allocator_warmup"
+    ] is True
     assert len(value["development_model"]["states"]) == 4
     assert value["stage_1_geometry"]["primary_lineage_floor"] == 0.9
     assert value["stage_1_geometry"]["stop_states"]["beta_1_zero"] == (

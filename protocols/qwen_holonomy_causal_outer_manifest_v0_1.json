@@ -15,7 +15,7 @@
   "prompt_count": 576,
   "prompts_per_subcondition_per_shard": 2,
   "protocol_id": "qwen_holonomy_causal_transfer_v0_1",
-  "protocol_sha256": "167b4063f2602c954300e17240c5c9a2ff44c1562a872d28a6fa5f01d7cc266e",
+  "protocol_sha256": "df73992c963347d22efe6fd63210b9dc987fcb833ec8e17823257dfeeeeaa706",
   "rows": [
     {
       "behavior_family": "affine_recurrence",

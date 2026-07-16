@@ -69,7 +69,12 @@
       "model.language_model.layers.23"
     ],
     "activation_object": "first tensor in residual-block output at the final non-padding prompt token",
-    "ambient_dimension": 1024
+    "ambient_dimension": 1024,
+    "loader": {
+      "quantization": "bitsandbytes_nf4_double_quant_float16_compute",
+      "disable_transformers_caching_allocator_warmup": true,
+      "reason": "Transformers 5.3 sizes its optional speed-only warm-up from the unquantized multimodal parameter graph and OOMs before loading this 4-bit checkpoint on a 4 GB GPU. Disabling the warm-up changes allocation scheduling, not weights or forward mathematics."
+    }
   },
   "confirmatory_model": {
     "role": "frozen confirmatory model after development code and thresholds are sealed",

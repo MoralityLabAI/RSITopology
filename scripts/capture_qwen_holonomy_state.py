@@ -153,7 +153,20 @@ def _load_model(
         load_kwargs["torch_dtype"] = torch.float16
     else:
         raise ValueError("quantization must be 4bit or float16")
-    model = AutoModelForCausalLM.from_pretrained(model_path, **load_kwargs)
+    import transformers.modeling_utils as modeling_utils
+
+    disable_warmup = bool(
+        model_info.get("loader", {}).get(
+            "disable_transformers_caching_allocator_warmup", False
+        )
+    )
+    original_warmup = modeling_utils.caching_allocator_warmup
+    if disable_warmup:
+        modeling_utils.caching_allocator_warmup = lambda *_args, **_kwargs: None
+    try:
+        model = AutoModelForCausalLM.from_pretrained(model_path, **load_kwargs)
+    finally:
+        modeling_utils.caching_allocator_warmup = original_warmup
     state = development_state(protocol, state_id)
     if state["kind"] == "peft_adapter":
         from peft import PeftModel
