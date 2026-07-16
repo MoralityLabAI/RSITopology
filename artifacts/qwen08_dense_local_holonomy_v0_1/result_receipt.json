@@ -1,0 +1,68 @@
+{
+  "schema_version": "qwen08_dense_local_holonomy_result_v0_1",
+  "status": "completed_lineage_only_no_noise_valid_holonomy",
+  "scientific_protocol_sha256": "964d979372dac37b65746c9018d1629b9bb3223a045c26eb82d3967c189d1518",
+  "prompt_manifest_sha256": "b7d2e98e90158b1a5f67981f5ec40261c672c64739263927dc5322861cacbd39",
+  "prompt_separation_passed": true,
+  "prompt_count_per_state": 4608,
+  "state_captures": {
+    "base": {
+      "authorization_sha256": "58c0c4241be0e0b292bbb32e359287d24339856dccb95ffbefd46992beb55702",
+      "index_sha256": "7b887ab7c40f8731f3cbb40243161f46c4925b029b0ef3ea7cfca89c7af789da",
+      "summary_sha256": "dd0fd0b20fa12c5cf3d6fdbb771c8970a0c35a232e958f84e29b9a7d17728e2a",
+      "wrapper_summary_sha256": "f898cc51adaafaaca43b1d62f42f04ad9e284d812f38230f4a2d1bf5fb6dcd78",
+      "chunk_count": 32,
+      "peak_cuda_mb": 1454.90380859375,
+      "cleanup_passed": true
+    },
+    "naive_qlora": {
+      "authorization_sha256": "e603a1c54fdeb925c4f18afe73ed2b9165d406becd37ad008efddc3b87a6a2dd",
+      "index_sha256": "d2777ef88aa2113108fd9f6af9fd1fab23b22815116e418c1d6a26540d3fdf5e",
+      "summary_sha256": "5b6babe955ba8887a8a372475c3bf78aa12e7622f3d8745e5bfb79a0ec112df0",
+      "wrapper_summary_sha256": "8b97bb864bf61ac27e7b4a932d69dd1cb420ce51f1f66cf96d8aec99c642ea6c",
+      "chunk_count": 32,
+      "peak_cuda_mb": 1409.73388671875,
+      "cleanup_passed": true
+    }
+  },
+  "analysis": {
+    "registration_sha256": "c7db76598c8b31f507fd4a1e6786f1b74362ed3cdcbdafef7e679b6a011c3690",
+    "authorization_sha256": "4328520aa4a3f42c329535dece775cb54174e1dd8d7818968ff1be9f698cdf70",
+    "pair_capture_index_sha256": "18d3d8d5fcb85cfdcfdcbb6f5383181ca8c3a3e38439ebcbe01866735c14f873",
+    "analysis_result_sha256": "6a153e34dfc1092d7ca21719d56376678cf7d11906a688077d8bba1f97d1a6c7",
+    "release_manifest_sha256": "ec0e4614405019ab5a38465485d7a2881d32c82b236e3561c2e69a99c5d44b3f",
+    "release_manifest_payload_sha256": "b226ab65662f0be4d5809ea7b7d52eebfabec888f5418ae2125d593576f45d3b",
+    "wrapper_summary_sha256": "93a27cac4c02e7f9066794a167e2f4cc02ef8f907480c63911e2a1a9f1ed921b",
+    "cleanup_passed": true
+  },
+  "result": {
+    "node_count": 128,
+    "site_family_grid_count": 16,
+    "cross_runtime_supported_grid_count": 4,
+    "no_supported_grid_count": 12,
+    "supported_family": "graph_reachability",
+    "common_rank_by_supported_grid": 1,
+    "graph_count": 4,
+    "beta_1_by_layer": {
+      "11": 3,
+      "15": 0,
+      "19": 2,
+      "23": 3
+    },
+    "edge_count": 40,
+    "loop_count": 12,
+    "admitted_loop_count": 8,
+    "orientation_reversal_count": 0,
+    "noise_nontrivial_loop_count": 0,
+    "engineering_evidence_certificate_count": 18,
+    "lineage_certified_count": 14,
+    "holonomy_clean_count": 0,
+    "instrument_calibration_passed": true,
+    "gauge_preflight_passed": true,
+    "corotation_status": "not_established_insufficient_equal_rank_family_pairs",
+    "aggregate_gate_passed": false,
+    "causal_outer_opened": false
+  },
+  "rank_one_boundary": "All admitted loops are orientation-preserving rank-one loops. SO(1) is trivial, so their empty canonical-angle spectra and zero identity loss cannot establish higher-rank flatness.",
+  "claim_boundary": "The result establishes only a rank-one graph-reachability lineage object on the frozen Qwen0.8B engineering grid. It does not establish causal edit value, VPD efficacy, capability preservation, compactification, recursive improvement, or RSI."
+}
