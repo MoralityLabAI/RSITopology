@@ -17,6 +17,17 @@ continuous canonical rotation angle to estimate: every receipt has
 is a mathematical rank-one boundary, not evidence that higher-rank transformer
 geometry is flat.
 
+The rank-one object nevertheless has a nontrivial discrete topological test.
+For a real line bundle the full structure group is `O(1) = {+1, -1}`, and the
+sign accumulated around a loop evaluates the first Stiefel--Whitney class
+`w_1` on that cycle.  The admitted elementary loops form cycle bases for the
+lineage graphs at layers 11, 19, and 23.  Every generator has positive sign.
+Therefore `w_1 = 0` on each measured cycle space, and the certified
+graph-reachability line bundle is orientable and trivializable over each of
+those admitted graphs.  This statement is scoped to the measured graphs; it
+does not imply a globally trivial bundle over unmeasured contexts or model
+states.
+
 The registered stop state is therefore:
 
 > `lineage_only_no_noise_valid_holonomy`
@@ -94,6 +105,15 @@ retentions are 0.9012, 0.8937, 0.8974, and 0.9056.  This reproduces the earlier
 localization: context variation, not the engineering checkpoint edge, controls
 lineage connectivity.
 
+The sample-support intervention did what it was supposed to do.  Moving from
+two to sixteen replicas recovered a repeatable line bundle where the earlier
+local object collapsed completely.  Four individual graph-reachability nodes
+even supported rank four.  The common-grid rule reduced every cell to rank one
+because the higher ranks did not survive *all* context shards.  Thus another
+replica increase is not the evidenced next move.  A future, separately
+registered construction should test context-conditioned patches and their
+overlaps, rather than assuming one global higher-rank fiber.
+
 ## Certification and controls
 
 - Instrument calibration passed all registered ranks.
@@ -105,6 +125,14 @@ lineage connectivity.
 - Corotation was not established: only one family supplied equal-rank grid
   edges, so the registered cross-family comparison had zero eligible pairs.
 - Every sectioning grid returned no admissible multi-patch edit section.
+
+A separately provenance-bound natural-feature run previously reported 91.67%
+orientation-reversing loops.  It is not pooled into this dense-run inference,
+but it supplies a useful contrast for future synthesis: the object that passes
+the present lineage gate is an orientable line bundle on its measured cycle
+spaces, whereas the uncertified natural-feature object was dominated by sign
+reversals.  The comparison must retain separate receipts because the objects,
+models, and admission rules differ.
 
 ## Interpretation
 
@@ -118,9 +146,15 @@ This narrows the real-model result to:
 
 > A rank-one graph-reachability lineage object exists on the frozen
 > Qwen3.5-0.8B base-to-naive grid.  Its checkpoint edges are clean and three of
-> four layer grids contain cycles, but rank-one orientation-preserving holonomy
-> is algebraically trivial and cannot support the proposed signed-edit risk
-> signal.
+> four layer grids contain cycles.  Its measured first Stiefel--Whitney class
+> vanishes, so it is orientable and trivializable on those admitted graphs; but
+> its orientation-preserving holonomy is algebraically trivial and cannot
+> support the proposed continuous signed-edit risk signal.
+
+Equally importantly, the decision machinery behaved correctly under a mixed
+result: it retained the rank-one finding, rejected the continuous-holonomy
+claim, and left every downstream authorization closed.  That separation is
+what makes the positive and negative parts independently reusable.
 
 The result does not justify a Qwen1.7B confirmation, causal activation edits,
 VPD weight-edit authorization, compactification, recursive improvement, or RSI

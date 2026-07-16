@@ -63,6 +63,15 @@
     "aggregate_gate_passed": false,
     "causal_outer_opened": false
   },
+  "rank_one_topology": {
+    "structure_group": "O(1)={+1,-1}",
+    "orientation_preserving_subgroup": "SO(1)={+1}",
+    "cycle_bearing_layers": [11, 19, 23],
+    "admitted_cycle_generators": 8,
+    "negative_sign_generators": 0,
+    "first_stiefel_whitney_evaluation": "zero_on_every_measured_cycle_generator",
+    "conclusion": "The certified graph-reachability line bundle is orientable and trivializable over each admitted lineage graph. No claim extends beyond the measured graph universe."
+  },
   "rank_one_boundary": "All admitted loops are orientation-preserving rank-one loops. SO(1) is trivial, so their empty canonical-angle spectra and zero identity loss cannot establish higher-rank flatness.",
   "claim_boundary": "The result establishes only a rank-one graph-reachability lineage object on the frozen Qwen0.8B engineering grid. It does not establish causal edit value, VPD efficacy, capability preservation, compactification, recursive improvement, or RSI."
 }
