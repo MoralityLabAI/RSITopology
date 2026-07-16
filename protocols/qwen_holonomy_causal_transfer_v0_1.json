@@ -63,10 +63,10 @@
     ],
     "state_provenance_limit": "The adapters came from an eight-row engineering smoke run and cannot support a VPD-versus-shuffled scientific claim. They provide a real checkpoint axis only.",
     "activation_sites": [
-      "model.language_model.layers.11",
-      "model.language_model.layers.15",
-      "model.language_model.layers.19",
-      "model.language_model.layers.23"
+      "model.layers.11",
+      "model.layers.15",
+      "model.layers.19",
+      "model.layers.23"
     ],
     "activation_object": "first tensor in residual-block output at the final non-padding prompt token",
     "ambient_dimension": 1024,
@@ -98,7 +98,7 @@
       "construction",
       "geometry_validation"
     ],
-    "causal_manifest": "qwen_holonomy_causal_outer_manifest_v0_1",
+    "causal_manifest": "qwen_holonomy_causal_outer_manifest_v0_1_1",
     "causal_half": "causal_outer",
     "causal_seed": 2026071604,
     "causal_prompt_count": 576,

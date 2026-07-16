@@ -55,20 +55,20 @@ def test_module_resolution_accepts_exact_and_unique_wrapper_suffix():
 def test_expected_state_capture_universe_is_state_site_shard_half():
     keys = expected_state_capture_keys(
         state_id="base",
-        sites=("model.language_model.layers.11", "model.language_model.layers.15"),
+        sites=("model.layers.11", "model.layers.15"),
         context_shards=3,
     )
     assert len(keys) == 12
     assert len(set(keys)) == 12
     assert state_capture_chunk_id(
-        "base", "model.language_model.layers.11", "shard-00", "construction"
-    ).startswith("base--model__language_model")
+        "base", "model.layers.11", "shard-00", "construction"
+    ).startswith("base--model__layers")
 
 
 def test_state_capture_index_requires_exact_chunks_and_finite_arrays(tmp_path: Path):
     protocol = json.loads(json.dumps(PROTOCOL))
     protocol["development_model"]["activation_sites"] = [
-        "model.language_model.layers.11"
+        "model.layers.11"
     ]
     geometry = json.loads(json.dumps(GEOMETRY))
     geometry["context_shards"] = 2
