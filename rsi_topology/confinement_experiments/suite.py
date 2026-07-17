@@ -12,10 +12,14 @@ import numpy as np
 
 from .common import (
     WorkUnit,
+    content_sha256,
+    derived_seed,
+    file_sha256,
     implementation_fingerprint,
     jsonable,
     write_bytes_compare_or_fail,
 )
+from .percolation_phase import evaluate_percolation_cell
 from .linear import (
     aligned_box_cover_bits,
     classify_split_rate,
@@ -38,6 +42,7 @@ EXPERIMENT_IDS = {
     "04_transversal_index",
     "05_sufficiency_audit",
     "06_spin_glass",
+    "07_percolation_phase",
 }
 
 
@@ -188,7 +193,58 @@ def generate_work_units(config: dict[str, Any]) -> list[WorkUnit]:
                     "quadratic_weight": float(quadratic_weight),
                 }
             )
+    elif experiment == "07_percolation_phase":
+        arms = tuple(map(str, params["retention_arms"]))
+        required_arms = {
+            "observed",
+            "pooled_retention_permutation",
+            "within_class_retention_permutation",
+        }
+        if set(arms) != required_arms:
+            raise ValueError("experiment 07 requires the three separately named retention arms")
+        for layers, columns, replicate in product(
+            params["layers"],
+            params["context_columns"],
+            range(int(params["graph_replicates"])),
+        ):
+            graph_identity = f"L={int(layers)}:C={int(columns)}:rep={replicate}"
+            graph_seed = derived_seed(seed, f"07_percolation_phase:graph:{graph_identity}")
+            sign_seed = derived_seed(seed, f"07_percolation_phase:sign:{graph_identity}")
+            for arm, floor, q in product(
+                arms, params["lineage_floors"], params["sign_flip_rates"]
+            ):
+                permutation_seed = derived_seed(
+                    seed,
+                    f"07_percolation_phase:retention:{graph_identity}:arm={arm}",
+                )
+                payloads.append(
+                    {
+                        "layers": int(layers),
+                        "context_columns": int(columns),
+                        "graph_replicate": replicate,
+                        "retention_arm": arm,
+                        "lineage_floor": float(floor),
+                        "q": float(q),
+                        "checkpoint_mean": float(params["checkpoint_retention"]["mean"]),
+                        "checkpoint_sd": float(params["checkpoint_retention"]["sd"]),
+                        "context_mean": float(params["context_retention"]["mean"]),
+                        "context_sd": float(params["context_retention"]["sd"]),
+                        "graph_seed": graph_seed,
+                        "retention_permutation_seed": permutation_seed,
+                        "sign_draw_seed": sign_seed,
+                    }
+                )
     implementation_sha256 = implementation_fingerprint()
+    if experiment == "07_percolation_phase":
+        package_root = Path(__file__).resolve().parents[1]
+        implementation_sha256 = content_sha256(
+            {
+                "confinement_package": implementation_sha256,
+                "percolation": file_sha256(package_root / "percolation.py"),
+                "bifiltration": file_sha256(package_root / "bifiltration.py"),
+                "rank1_w1": file_sha256(package_root / "rank1_w1.py"),
+            }
+        )
     units = [
         WorkUnit(experiment, payload, seed, implementation_sha256)
         for payload in payloads
@@ -222,6 +278,8 @@ def evaluate_work_unit(unit: WorkUnit) -> dict[str, Any]:
             quadratic_weight=payload["quadratic_weight"],
         )
         result["disorder_index"] = payload["disorder_index"]
+    elif experiment == "07_percolation_phase":
+        result = evaluate_percolation_cell(payload, seed=unit.seed)
     else:  # pragma: no cover - protected by generation validation
         raise ValueError(experiment)
     return {"unit_id": unit.unit_id, "seed": unit.seed, **result}
@@ -475,6 +533,87 @@ def aggregate_metrics(experiment: str, rows: list[dict[str, Any]]) -> dict[str, 
                 row["random_detection_standardized_error"] for row in rows
             ),
         }
+    if experiment == "07_percolation_phase":
+        summaries = []
+        keys = sorted(
+            {
+                (
+                    row["retention_arm"],
+                    row["layers"],
+                    row["context_columns"],
+                    row["lineage_floor"],
+                    row["q"],
+                )
+                for row in rows
+            }
+        )
+        for arm, layers, columns, floor, q in keys:
+            selected = [
+                row
+                for row in rows
+                if (
+                    row["retention_arm"],
+                    row["layers"],
+                    row["context_columns"],
+                    row["lineage_floor"],
+                    row["q"],
+                )
+                == (arm, layers, columns, floor, q)
+            ]
+            counts = Counter(row["phase"] for row in selected)
+            summaries.append(
+                {
+                    "retention_arm": arm,
+                    "layers": layers,
+                    "context_columns": columns,
+                    "lineage_floor": floor,
+                    "q": q,
+                    "replicates": len(selected),
+                    "phase_frequencies": {
+                        label: counts.get(label, 0) / len(selected)
+                        for label in ("disconnected", "coherent", "frustrated")
+                    },
+                    "mean_largest_component_fraction": float(
+                        np.mean([row["largest_component_fraction"] for row in selected])
+                    ),
+                    "mean_largest_frustrated_cluster_fraction": float(
+                        np.mean(
+                            [row["largest_frustrated_cluster_fraction"] for row in selected]
+                        )
+                    ),
+                    "mean_coboundary_distance": float(
+                        np.mean([row["coboundary_distance"] for row in selected])
+                    ),
+                }
+            )
+        maximum_q = max(row["q"] for row in rows)
+        q_zero_connected = [
+            row
+            for row in rows
+            if row["q"] == 0.0 and row["connected_component_count"] == 1
+        ]
+        return {
+            "cells": len(rows),
+            "phase_summary": summaries,
+            "retention_arms": sorted({row["retention_arm"] for row in rows}),
+            "finite_sizes": sorted({row["context_columns"] for row in rows}),
+            "invalid_tau_loop_cycle_orderings": sum(
+                row["tau_loop"] is not None
+                and row["tau_cycle"] is not None
+                and row["tau_loop"] > row["tau_cycle"] + 1e-15
+                for row in rows
+            ),
+            "q_zero_connected_noncoherent": sum(
+                row["phase"] != "coherent" for row in q_zero_connected
+            ),
+            "q_zero_connected_cells": len(q_zero_connected),
+            "max_q_negative_edge_exposure_cells": sum(
+                row["q"] == maximum_q and row["negative_edge_count"] > 0
+                for row in rows
+            ),
+            "max_q_cells": sum(row["q"] == maximum_q for row in rows),
+            "claim_boundary": "Synthetic model-only phase calibration; no attestation, causal, edit, or VPD authorization.",
+        }
     valid = [row for row in rows if row["mean_index_fraction"] is not None]
     return {
         "cells": len(rows),
@@ -541,6 +680,28 @@ def evaluate_registered_gates(
                 "maximum_random_detection_standardized_error"
             ]
             <= 4.5,
+        }
+    if experiment == "07_percolation_phase":
+        return {
+            "registered_loop_threshold_never_exceeds_cycle_threshold": metrics[
+                "invalid_tau_loop_cycle_orderings"
+            ]
+            == 0,
+            "q_zero_connected_graphs_are_coherent": metrics[
+                "q_zero_connected_cells"
+            ]
+            > 0
+            and metrics["q_zero_connected_noncoherent"] == 0,
+            "sign_noise_treatment_exposure": metrics[
+                "max_q_negative_edge_exposure_cells"
+            ]
+            >= 0.95 * metrics["max_q_cells"],
+            "named_retention_nulls_present": set(metrics["retention_arms"])
+            == {
+                "observed",
+                "pooled_retention_permutation",
+                "within_class_retention_permutation",
+            },
         }
     return {
         "sampler_instrument_available": metrics["cells_with_critical_points"]
@@ -665,6 +826,38 @@ def render_figure(experiment: str, rows: list[dict[str, Any]], path: Path) -> No
             )
         axis.set(xlabel="fiber dimension q", ylabel="log10 random probes for 95% detection")
         axis.legend(fontsize=7)
+    elif experiment == "07_percolation_phase":
+        observed = [row for row in rows if row["retention_arm"] == "observed"]
+        columns = max(row["context_columns"] for row in observed)
+        selected = [row for row in observed if row["context_columns"] == columns]
+        floors = sorted({row["lineage_floor"] for row in selected})
+        q_values = sorted({row["q"] for row in selected})
+        phase_code = {"disconnected": 0.0, "coherent": 1.0, "frustrated": 2.0}
+        values = np.zeros((len(q_values), len(floors)))
+        for q_index, q in enumerate(q_values):
+            for floor_index, floor in enumerate(floors):
+                cell = [
+                    row for row in selected
+                    if row["q"] == q and row["lineage_floor"] == floor
+                ]
+                values[q_index, floor_index] = np.mean(
+                    [phase_code[row["phase"]] for row in cell]
+                )
+        from matplotlib.colors import ListedColormap
+
+        image = axis.imshow(
+            values,
+            origin="lower",
+            vmin=0,
+            vmax=2,
+            cmap=ListedColormap(["#596275", "#20bf6b", "#eb3b5a"]),
+            aspect="auto",
+        )
+        axis.set_xticks(range(len(floors)), [f"{value:.3f}" for value in floors], rotation=45)
+        axis.set_yticks(range(len(q_values)), [f"{value:.3f}" for value in q_values])
+        axis.set(xlabel="lineage floor tau", ylabel="sign-flip rate q")
+        axis.set_title(f"Observed synthetic phase map (C={columns})")
+        figure.colorbar(image, ax=axis, ticks=[0, 1, 2], label="0 disconnected / 1 coherent / 2 frustrated")
     else:
         valid = [row for row in rows if row["mean_index_fraction"] is not None]
         for sampler in sorted({row["sampler"] for row in valid}):
@@ -700,6 +893,7 @@ def markdown_report(
         "04_transversal_index": "Local versus evaluator-transversal index",
         "05_sufficiency_audit": "Evaluator-sufficiency audit scaling",
         "06_spin_glass": "Spherical 3-spin sampler robustness",
+        "07_percolation_phase": "Lineage and Z/2 gauge-percolation phase calibration",
     }
     return f"""# {labels[experiment]}
 

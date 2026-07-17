@@ -138,7 +138,9 @@ def run_config(
         "experiment": experiment,
         "run_id": run_id,
         "config_sha256": config_hash,
-        "implementation_sha256": implementation_fingerprint(),
+        "implementation_sha256": (
+            units[0].implementation_sha256 if units else implementation_fingerprint()
+        ),
         "work_unit_count": len(units),
         "metrics": metrics,
         "checksums_sha256": content_sha256(checksums),
