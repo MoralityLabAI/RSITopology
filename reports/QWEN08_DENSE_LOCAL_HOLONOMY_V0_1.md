@@ -126,13 +126,15 @@ overlaps, rather than assuming one global higher-rank fiber.
   edges, so the registered cross-family comparison had zero eligible pairs.
 - Every sectioning grid returned no admissible multi-patch edit section.
 
-A separately provenance-bound natural-feature run previously reported 91.67%
-orientation-reversing loops.  It is not pooled into this dense-run inference,
-but it supplies a useful contrast for future synthesis: the object that passes
-the present lineage gate is an orientable line bundle on its measured cycle
-spaces, whereas the uncertified natural-feature object was dominated by sign
-reversals.  The comparison must retain separate receipts because the objects,
-models, and admission rules differ.
+A separately provenance-bound Qwen3-1.7B VPD weight-component identity run
+previously reported 176/192 (91.67%) orientation-reversing split evaluations.
+It is not a natural-feature line-bundle result and is not pooled into this
+dense-run inference, because the model, object, rank, and protocol differ.  The
+defensible cross-run contrast is therefore only descriptive: the certified
+dense-local object is an orientable line bundle on its admitted graph, whereas
+the retrospective VPD component construction was dominated by stable negative
+determinant signs.  A complete `w1` comparison would require the comparator's
+bound edge cocycle and cycle basis.
 
 ## Interpretation
 

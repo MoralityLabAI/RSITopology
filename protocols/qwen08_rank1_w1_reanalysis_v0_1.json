@@ -1,0 +1,80 @@
+{
+  "protocol_id": "qwen08_rank1_w1_reanalysis_v0_1",
+  "schema_version": "1.0.0",
+  "status": "frozen_retrospective_reanalysis_after_elementary_loop_reveal_before_new_derived_computation",
+  "frozen_on": "2026-07-16",
+  "purpose": "Measure the rank-one O(1) edge-sign cocycle, its first Stiefel-Whitney class on admitted dense-local graphs, resampling stability, arithmetic-precision stability, and composite-loop algebra.",
+  "epistemic_status": "retrospective_reanalysis_not_a_new_confirmatory_preregistration",
+  "why_retrospective": "The prior dense analysis already revealed every elementary geometry-validation loop sign as +1, so composite signs are algebraically implied. This protocol may validate implementation, stability, and exact loop-space accounting but may not present the derived composite outcome as new out-of-sample evidence.",
+  "claim_boundary": "This reanalysis may identify and validate a first Stiefel-Whitney class on the already-certified rank-one dense-local graphs. It cannot establish semantic identity, a natural-feature result, causal edit value, VPD efficacy, capability preservation, compactification, recursive improvement, or RSI; it does not reopen any closed downstream stage.",
+  "dense_analysis_registration": {
+    "path": "protocols/qwen08_dense_local_holonomy_analysis_v0_1.json",
+    "sha256": "c7db76598c8b31f507fd4a1e6786f1b74362ed3cdcbdafef7e679b6a011c3690"
+  },
+  "dense_analysis_result": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\analysis_result.json",
+    "sha256": "6a153e34dfc1092d7ca21719d56376678cf7d11906a688077d8bba1f97d1a6c7"
+  },
+  "retrospective_vpd_comparator": {
+    "object": "Qwen3-1.7B VPD weight-component identity construction",
+    "receipt_path": "artifacts/qwen3_1p7b_one_prompt/identity_prereveal_result.json",
+    "receipt_sha256": "7cb5e6cb4f01109af3ede8ff1daabb9e91cf545e5cfc58162cf875412475852c",
+    "predictor_path": "D:\\VPDExperiments\\VPD_2026-05-12_2026-07-15\\raw\\repo\\JSpace\\artifacts\\identity_calibration_run_v1\\real_retry1\\raw_predictors.parquet",
+    "predictor_sha256": "c45876b7998c9f5ec53430082863f1f3c159b19fe7a437f6e15ae834a993190c",
+    "allowed_claim": "Retrospective split-half determinant-sign stability only. No natural-feature label, line-bundle classification, or composite-loop prediction is allowed without a bound cycle basis."
+  },
+  "object": {
+    "family": "graph_reachability",
+    "rank": 1,
+    "states": ["base", "naive_qlora"],
+    "context_shards": ["shard-00", "shard-01", "shard-02", "shard-03"],
+    "site_admission": "Consume only rank-one graph records whose prior bifiltration has beta_1 > 0; elementary generator availability is inherited exactly from its admitted_loop_ids.",
+    "edge_transport": "sign of the rank-one frame overlap; overlaps with absolute value <= 1e-8 are invalid",
+    "loop_sign": "product of O(1) edge transports around the registered oriented loop",
+    "classification": "On each admitted graph, loop signs define w1 in H^1(graph; Z/2). w1=0 iff every cycle-basis sign is +1; for a real line bundle on a graph this is the complete isomorphism invariant."
+  },
+  "derived_composite_checks": {
+    "generator_source": "construction half elementary loops",
+    "target_source": "geometry_validation half contiguous non-elementary loops",
+    "registered_intervals_by_site": {
+      "model.layers.11": [[0, 2], [1, 3], [0, 3]],
+      "model.layers.19": [[0, 2]],
+      "model.layers.23": [[0, 2], [1, 3], [0, 3]]
+    },
+    "constraint_dependence": "Do not use an iid binomial test over loops. Compute the GF(2) rank of the registered composite constraint rows per site and sum ranks across independent site graphs.",
+    "descriptive_exact_null": "If every point prediction hits, report 2^(-total_constraint_rank) under a uniform cohomology-class null. Label this descriptive because the elementary target signs were already revealed."
+  },
+  "resampling": {
+    "replicates": 128,
+    "seed": 2026071617,
+    "observed": "independent within-class row bootstraps for every node and half",
+    "permutation_null": "independent within-node label permutations preserving label counts; estimate rather than assume its agreement rate",
+    "interval": "two-sided 95% Clopper-Pearson",
+    "stability_floor": 0.95,
+    "strict_null_margin": 0.02,
+    "derived_diagnostic_rule": "For every composite: observed prediction lower bound, construction-generator reproducibility lower bound, and validation-loop reproducibility lower bound must each be >= 0.95; observed prediction lower bound must exceed the permutation-null upper bound by > 0.02."
+  },
+  "precision": {
+    "analysis_arithmetic_paths": ["float32", "float64"],
+    "required": "all point loop signs agree between arithmetic paths",
+    "model_runtime_precision_status": "unavailable_single_4bit_model_capture",
+    "prohibited_claim": "Do not call the result runtime-precision-stable. A separate full-precision model capture is required for that claim."
+  },
+  "resource_caps": {
+    "execution": "Windows Job Object",
+    "memory_mb": 4096,
+    "cpu_percent": 50,
+    "io_mb_s": 250,
+    "swap_bytes": 0,
+    "blas_threads": 1,
+    "gpu_used": false
+  },
+  "consumer_rules": {
+    "existing_attestation_levels_only": ["engineering_evidence", "lineage_certified", "holonomy_clean"],
+    "certification_effect": "none; this retrospective diagnostic does not upgrade an existing certificate",
+    "downstream_gates_reopened": false
+  },
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}
