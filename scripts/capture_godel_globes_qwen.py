@@ -12,7 +12,6 @@ import argparse
 import gc
 import json
 from pathlib import Path
-import subprocess
 import sys
 import time
 from typing import Any, Mapping
@@ -49,6 +48,8 @@ def _validate_authorization(
     output_dir: Path,
     device: str,
     batch_size: int,
+    conversion_only: bool,
+    float32_cache_dir: Path | None,
 ) -> None:
     if value.get("status") != "authorized_for_godel_capture":
         raise ValueError("capture authorization status is not launch-authorized")
@@ -119,6 +120,29 @@ def _validate_authorization(
         raise ValueError("capture output directory differs from authorization")
     if parameters.get("device") != device or int(parameters.get("batch_size", 0)) != batch_size:
         raise ValueError("capture device or batch size differs from authorization")
+    expected_mode = "conversion_only" if conversion_only else "capture"
+    if parameters.get("mode") != expected_mode:
+        raise ValueError("capture mode differs from authorization")
+    registered_cache = Path(str(parameters.get("float32_cache_dir", ""))).resolve()
+    expected_cache = (
+        (output_dir.resolve() / "float32_conversion_cache")
+        if conversion_only
+        else float32_cache_dir.resolve()
+        if float32_cache_dir is not None
+        else None
+    )
+    if expected_cache is None or registered_cache != expected_cache:
+        raise ValueError("float32 cache path differs from authorization")
+    if not conversion_only:
+        artifact = value.get("float32_cache_manifest")
+        manifest = registered_cache / "manifest.json"
+        if (
+            not isinstance(artifact, Mapping)
+            or Path(str(artifact.get("path", ""))).resolve() != manifest
+            or not manifest.is_file()
+            or sha256_file(manifest) != artifact.get("sha256")
+        ):
+            raise ValueError("float32 conversion manifest is missing or changed")
 
 
 def _resolve_module(model: Any, path: str) -> Any:
@@ -392,6 +416,8 @@ def capture(args: argparse.Namespace) -> None:
         output_dir=args.output_dir,
         device=args.device,
         batch_size=args.batch_size,
+        conversion_only=args.conversion_only,
+        float32_cache_dir=args.float32_cache_dir,
     )
     model_path = Path(protocol["model_lock"]["local_path"])
     for name, expected in protocol["model_lock"]["files"].items():
@@ -421,6 +447,41 @@ def capture(args: argparse.Namespace) -> None:
     abort_reason = None
     loaded_runtime = None
     peak_cuda_mb = 0.0
+    if args.conversion_only:
+        from convert_godel_base_float32 import convert
+
+        try:
+            _event(events, "start", run_id=run_id, mode="conversion_only")
+            manifest_path = convert(
+                model_path, output / "float32_conversion_cache", events
+            )
+            status = "completed"
+            _atomic_json(
+                summary_path,
+                {
+                    "schema_version": "godel_conversion_summary_v0_1",
+                    "run_id": run_id,
+                    "status": status,
+                    "manifest": str(manifest_path),
+                    "manifest_sha256": sha256_file(manifest_path),
+                    "elapsed_seconds": time.time() - started,
+                },
+            )
+            _event(events, "finish", status=status, summary=str(summary_path))
+            return
+        except Exception as error:
+            _atomic_json(
+                summary_path,
+                {
+                    "schema_version": "godel_conversion_summary_v0_1",
+                    "run_id": run_id,
+                    "status": "failed",
+                    "abort_reason": f"{type(error).__name__}:{error}",
+                    "elapsed_seconds": time.time() - started,
+                },
+            )
+            _event(events, "abort", reason=f"{type(error).__name__}:{error}")
+            raise
     try:
         _event(events, "start", run_id=run_id, batch_size=args.batch_size)
         tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
@@ -433,26 +494,8 @@ def capture(args: argparse.Namespace) -> None:
             _event(events, "runtime_load_start", runtime=runtime)
             converted_manifest = None
             if dtype == torch.float32:
-                conversion_dir = output / "float32_conversion_cache"
-                converted_manifest = conversion_dir / "manifest.json"
-                if not converted_manifest.is_file():
-                    converter = Path(__file__).resolve().with_name(
-                        "convert_godel_base_float32.py"
-                    )
-                    _event(events, "float32_conversion_start", runtime=runtime)
-                    subprocess.run(
-                        [
-                            sys.executable,
-                            str(converter),
-                            "--model-path",
-                            str(model_path),
-                            "--output-dir",
-                            str(conversion_dir),
-                            "--events",
-                            str(events),
-                        ],
-                        check=True,
-                    )
+                assert args.float32_cache_dir is not None
+                converted_manifest = args.float32_cache_dir / "manifest.json"
             model = _load_base_transformer_tensorwise(
                 model_path=model_path,
                 device=args.device,
@@ -691,6 +734,8 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--batch-size", type=int, default=8)
+    parser.add_argument("--conversion-only", action="store_true")
+    parser.add_argument("--float32-cache-dir", type=Path)
     capture(parser.parse_args())
 
 

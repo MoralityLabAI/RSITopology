@@ -70,10 +70,12 @@ logits and generation. Excluding the stored `lm_head.weight` removes roughly
 1.16 GiB from the float32 resident set. Peak conversion overhead is bounded by
 one installed parameter rather than a model-sized transient allocation.
 
-For the float32 runtime, a short-lived child process converts one checkpoint
-tensor at a time into a hash-bound, one-tensor-per-file safetensor cache and
-then exits, returning PyTorch allocator memory to Windows. The capture process
-maps that cache directly into the meta base model. Conversion is
+For the float32 runtime, a separately authorized conversion-only Job run
+converts one checkpoint tensor at a time into a hash-bound,
+one-tensor-per-file safetensor cache and then exits, returning PyTorch allocator
+memory to Windows. A later capture authorization binds the cache-manifest hash,
+and the capture validates every tensor-file hash before mapping that cache
+directly into the meta base model. Conversion is
 value-equivalent to direct loading because every bfloat16 value is exactly
 representable in float32. Conversion checkpoints and tensorwise-load completion
 are explicit run events. The cache costs roughly 6.4 GiB of D: storage and is

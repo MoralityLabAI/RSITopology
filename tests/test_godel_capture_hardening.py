@@ -120,6 +120,8 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
         run_id="test-godel-capture",
         capture_output_dir=capture_output,
         device="cpu",
+        conversion_only=True,
+        float32_cache_dir=None,
         output=output,
     )
     RUNNER.prepare_authorization(args)
@@ -136,6 +138,7 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
         "tensorwise_safetensors_into_meta_base_model"
     )
     assert value["capture_contract"]["logits_materialized"] is False
+    assert value["capture_parameters"]["mode"] == "conversion_only"
     assert value["capture_contract"]["float32_load_strategy"] == (
         "child_process_one_tensor_files_then_mapped_base_model"
     )

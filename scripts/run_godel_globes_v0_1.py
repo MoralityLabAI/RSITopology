@@ -268,6 +268,22 @@ def prepare_authorization(args: argparse.Namespace) -> None:
         "bifiltration_module": ROOT / "rsi_topology" / "bifiltration.py",
         "sectioning_module": ROOT / "rsi_topology" / "sectioning.py",
     }
+    mode = "conversion_only" if args.conversion_only else "capture"
+    cache_dir = (
+        (args.capture_output_dir.resolve() / "float32_conversion_cache")
+        if args.conversion_only
+        else args.float32_cache_dir.resolve()
+        if args.float32_cache_dir is not None
+        else None
+    )
+    if not args.conversion_only:
+        if cache_dir is None:
+            raise ValueError("capture authorization requires --float32-cache-dir")
+        cache_manifest = cache_dir / "manifest.json"
+        if not cache_manifest.is_file():
+            raise FileNotFoundError(cache_manifest)
+    else:
+        cache_manifest = None
     authorization = {
         "schema_version": "godel_capture_authorization_v0_1",
         "status": "authorized_for_godel_capture",
@@ -327,6 +343,8 @@ def prepare_authorization(args: argparse.Namespace) -> None:
             "output_dir": str(args.capture_output_dir.resolve()),
             "device": args.device,
             "batch_size": args.batch_size,
+            "mode": mode,
+            "float32_cache_dir": str(cache_dir),
         },
         "checkpoint_strategy": (
             "durable_partial_group_at_or_before_registered_interval_and_"
@@ -350,8 +368,19 @@ def prepare_authorization(args: argparse.Namespace) -> None:
             args.device,
             "--batch-size",
             str(args.batch_size),
-        ],
+        ]
+        + (["--conversion-only"] if args.conversion_only else [])
+        + (
+            ["--float32-cache-dir", str(cache_dir)]
+            if not args.conversion_only
+            else []
+        ),
     }
+    if cache_manifest is not None:
+        authorization["float32_cache_manifest"] = {
+            "path": str(cache_manifest),
+            "sha256": sha256_file(cache_manifest),
+        }
     write_once_or_equal(args.output, canonical_json_bytes(authorization))
     print(json.dumps(authorization, indent=2, sort_keys=True))
 
@@ -410,6 +439,8 @@ def parser() -> argparse.ArgumentParser:
     prepare_parser.add_argument("--capture-output-dir", type=Path, required=True)
     prepare_parser.add_argument("--device", default="cuda")
     prepare_parser.add_argument("--batch-size", type=int, required=True)
+    prepare_parser.add_argument("--conversion-only", action="store_true")
+    prepare_parser.add_argument("--float32-cache-dir", type=Path)
     prepare_parser.set_defaults(function=prepare_authorization)
     return value
 
