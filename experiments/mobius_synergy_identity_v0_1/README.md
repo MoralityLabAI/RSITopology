@@ -100,6 +100,17 @@ Run the synthetic controls with:
 python -m pytest experiments/mobius_synergy_identity_v0_1/test_mobius.py -q
 ```
 
+## Provenance-only v0.1.1 amendment
+
+The original v0.1 protocol and registration remain byte-for-byte unchanged.
+`protocol_v0_1_1_amendment.json` adds no scientific gate and changes no target,
+rank, null, or margin. It requires exact validation of every indexed activation
+chunk, a sealed analysis environment, and an atomic write-once release. The
+claim-eligible run must use `run_v0_1_1.py` and its separately sealed
+`registration_v0_1_1.json`; the earlier `run.py analyze` command is retained
+only to reproduce the registered v0.1 implementation and must not be used for
+the claim release.
+
 ## Provenance
 
 The transform is motivated by Abel Jansma's *A Compositional Calculus for
