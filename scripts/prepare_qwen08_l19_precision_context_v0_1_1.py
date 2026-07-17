@@ -43,6 +43,8 @@ def main(args: argparse.Namespace) -> None:
     commit, refs = _remote_commit()
     source_paths = {
         "analysis_entrypoint_v0_1_1": ROOT / "scripts" / "run_qwen08_l19_precision_context_v0_1_1.py",
+        "detached_launcher_v0_1_1": ROOT / "scripts" / "start_qwen08_l19_precision_context_v0_1_1.ps1",
+        "preparation_entrypoint_v0_1_1": Path(__file__).resolve(),
         "compute_module_v0_1_1": ROOT / "rsi_topology" / "qwen_precision_context_v0_1_1.py",
         "compute_amendment_v0_1_1": args.compute_amendment.resolve(),
         "reference_analysis_entrypoint": ROOT / "scripts" / "run_qwen08_l19_precision_context.py",
