@@ -1,0 +1,96 @@
+{
+  "schema_version": "mobius_synergy_identity_protocol_v0_1",
+  "protocol_id": "mobius-synergy-identity-v0.1",
+  "status": "frozen_after_disclosed_engineering_smoke_before_claim_eligible_analysis",
+  "amends_existing_protocol": false,
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "engineering_smoke_disclosure": {
+    "claim_eligible": false,
+    "target_exposed": {
+      "runtime_precision": "full_float32",
+      "site_id": "model.layers.22.self_attn.v_proj",
+      "behavior_family": "graph_reachability"
+    },
+    "ranks_exposed": [1, 2],
+    "bootstrap_replicates": 8,
+    "permutation_replicates": 8,
+    "design_changes_after_smoke": "none to target, ranks, null, margin, or full-run decision rule"
+  },
+  "primary_object": "cross_fitted_product_poset_mobius_interaction_subspace",
+  "claim_boundary": "A passing rank establishes a split-stable interaction subspace against the registered factor-label null. It does not establish causality, monitor sufficiency, weight-edit value, lineage across model states, holonomy, compactification, or recursive self-improvement.",
+  "confirmatory_target": {
+    "runtime_precision": "full_float32",
+    "site_id": "model.layers.22.self_attn.v_proj",
+    "behavior_family": "graph_reachability"
+  },
+  "precision_replication": {
+    "runtime_precision": "full_bfloat16",
+    "site_id": "model.layers.22.self_attn.v_proj",
+    "behavior_family": "graph_reachability"
+  },
+  "factor_grids": {
+    "affine_recurrence": {
+      "axis_a": "multiplier",
+      "axis_a_levels": [-2, 2],
+      "axis_b": "offset",
+      "axis_b_levels": [-1, 1],
+      "fixed_parameters": {}
+    },
+    "grid_rotation": {
+      "axis_a": "quarter_turns",
+      "axis_a_levels": [1, 2, 3],
+      "axis_b": "size",
+      "axis_b_levels": [3, 4, 5],
+      "fixed_parameters": {}
+    },
+    "graph_reachability": {
+      "axis_a": "path_length",
+      "axis_a_levels": [1, 2, 3],
+      "axis_b": "distractor_count",
+      "axis_b_levels": [0, 2, 4],
+      "fixed_parameters": {
+        "planted_positive": true
+      }
+    }
+  },
+  "excluded_families": {
+    "symbol_transport": "no registered two-factor product grid"
+  },
+  "ranks": [1, 2, 3, 4, 5, 6, 7, 8],
+  "bootstrap": {
+    "replicates": 128,
+    "paired_unit": "context_shard_x_adjacent_plaquette",
+    "lower_quantile": 0.05
+  },
+  "permutation_null": {
+    "replicates": 128,
+    "operation": "independently permute axis_b labels within each axis_a row, context shard, and split half before applying the Mobius transform",
+    "max_statistic_over_ranks": true,
+    "upper_quantile": 0.95
+  },
+  "gate": {
+    "minimum_strict_margin": 0.02,
+    "pass_rule": "bootstrap_retention_lower_95 - permutation_max_retention_upper_95 > 0.02",
+    "equality": "fail",
+    "confirmatory_pass": "at least one rank passes for the sole confirmatory target",
+    "confirmatory_fail": "no rank passes for the sole confirmatory target",
+    "exploratory_results_cannot_rescue_confirmatory_failure": true
+  },
+  "synthetic_gates": {
+    "additive_fixture": "maximum absolute Mobius coefficient <= 1e-10",
+    "planted_interaction_fixture": "rank-1 lineage retention > 0.95",
+    "label_permutation_fixture": "observed retention exceeds the permutation upper-95 by > 0.02"
+  },
+  "seed": 2026071701,
+  "first_input_contract": {
+    "model": "Qwen3-1.7B",
+    "capture_kind": "real_model_target_blind",
+    "prompt_count": 1152,
+    "expected_capture_chunks": 384,
+    "expected_context_shards": 8,
+    "expected_halves": ["construction", "geometry_validation"],
+    "expected_runtimes": ["full_float32", "full_bfloat16"],
+    "expected_sites": 12
+  }
+}
