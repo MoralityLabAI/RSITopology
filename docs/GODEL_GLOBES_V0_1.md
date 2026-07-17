@@ -57,28 +57,23 @@ prompt token. Generation, gradients, scoring, interventions, and weight writes
 are prohibited.
 
 The runner exposes only the checkpoint's base transformer to the capture. The
-registered Windows stack crashes when `AutoModel` directly reconciles this
-CausalLM-authored checkpoint, so the runner uses the checkpoint's native
-`AutoModelForCausalLM` loader at stored bfloat16 precision, immediately detaches
-its `.model` base transformer, and discards the wrapper and `lm_head` before
-promotion or any forward pass. This is an exact surface reduction for the
-registered sites: the wrapper would call that same base transformer before
-applying `lm_head`, while this protocol prohibits logits and generation.
-Avoiding float32 promotion of the separately stored `lm_head.weight` removes
-roughly 1.16 GiB from the final resident set without changing any hooked
-activation. Wrapper-load and base-extraction events are recorded separately.
-The loader uses `dtype="auto"` to avoid a Windows loader-side conversion and
-then rejects the run unless every floating checkpoint parameter is bfloat16.
+registered Windows stack crashes in both Transformers-managed base/native-bf16
+loader paths, so weight loading is explicit and bounded: instantiate the
+registered `AutoModel` architecture on the meta device, require exact equality
+between its parameter names and the locked safetensor index after removing only
+`lm_head.weight`, then materialize one tensor at a time in the requested
+runtime dtype. The loader rejects missing, extra, duplicate, meta, or
+wrong-dtype parameters before any forward pass. This is an exact surface
+reduction for the registered sites: the causal-LM wrapper would call that same
+base transformer before applying `lm_head`, while this protocol prohibits
+logits and generation. Excluding the stored `lm_head.weight` removes roughly
+1.16 GiB from the float32 resident set. Peak conversion overhead is bounded by
+one checkpoint tensor rather than a model-sized transient allocation.
 
-The locked weight tensors are stored as bfloat16. On the registered Windows
-host, asking the Transformers loader to convert whole safetensor shards to
-float32 crashes reproducibly inside `torch_cpu.dll`. The float32 runtime
-therefore loads the base transformer at its native storage dtype and promotes
-each floating parameter and buffer to float32 in place, one tensor at a time,
-before any forward pass. This is value-equivalent to direct loading because a
-bfloat16 value is exactly representable in float32, while avoiding a
-model-sized transient conversion allocation. Promotion start and completion
-are explicit run events.
+The locked weight tensors are stored as bfloat16. Per-tensor conversion to
+float32 is value-equivalent to direct loading because every bfloat16 value is
+exactly representable in float32. Tensorwise-load completion is an explicit run
+event.
 
 The analyzer then:
 

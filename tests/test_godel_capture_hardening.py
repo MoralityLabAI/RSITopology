@@ -8,7 +8,6 @@ from types import SimpleNamespace
 
 import numpy as np
 import pytest
-import torch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -131,11 +130,11 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
         "base_transformer_without_lm_head"
     )
     assert value["capture_contract"]["checkpoint_loader"] == (
-        "dtype_auto_assert_bfloat16_causallm_then_detach_base_transformer"
+        "tensorwise_safetensors_into_meta_base_model"
     )
     assert value["capture_contract"]["logits_materialized"] is False
     assert value["capture_contract"]["float32_load_strategy"] == (
-        "native_bfloat16_then_incremental_float32_promotion"
+        "per_tensor_bfloat16_to_float32_conversion"
     )
     assert value["hard_cap_validation_receipt"]["sha256"] == RUNNER.sha256_file(
         receipt_path
@@ -154,40 +153,17 @@ def test_base_transformer_resolves_frozen_causallm_site_namespace():
     source = (ROOT / "scripts" / "capture_godel_globes_qwen.py").read_text(
         encoding="utf-8"
     )
-    assert "AutoModelForCausalLM.from_pretrained" in source
-    assert "runtime_base_extracted" in source
+    assert "AutoModelForCausalLM.from_pretrained" not in source
+    assert "runtime_tensorwise_load_completed" in source
 
 
-def test_causallm_loader_shell_is_detached_before_capture():
-    base = object()
-    wrapper = SimpleNamespace(model=base, lm_head=object())
-    assert CAPTURE._extract_base_transformer(wrapper) is base
-    assert wrapper.model is None
-    assert wrapper.lm_head is None
-
-
-def test_incremental_float32_promotion_preserves_nonfloating_state():
-    model = torch.nn.Module()
-    model.weight = torch.nn.Parameter(
-        torch.tensor([1.0, -2.0], dtype=torch.bfloat16)
+def test_checkpoint_key_projection_excludes_only_lm_head():
+    assert CAPTURE._base_parameter_name("lm_head.weight") is None
+    assert CAPTURE._base_parameter_name("model.layers.0.input_layernorm.weight") == (
+        "layers.0.input_layernorm.weight"
     )
-    model.register_buffer("scale", torch.tensor([0.5], dtype=torch.bfloat16))
-    model.register_buffer("indices", torch.tensor([1, 2], dtype=torch.int64))
-
-    CAPTURE._promote_floating_state_to_float32(model, torch)
-
-    assert model.weight.dtype == torch.float32
-    assert model.scale.dtype == torch.float32
-    assert model.indices.dtype == torch.int64
-    assert torch.equal(model.weight, torch.tensor([1.0, -2.0]))
-
-
-def test_native_checkpoint_dtype_assertion_rejects_conversion():
-    model = torch.nn.Linear(2, 2, bias=False, dtype=torch.bfloat16)
-    CAPTURE._assert_native_bfloat16_parameters(model, torch)
-    model.float()
-    with pytest.raises(RuntimeError, match="non-bfloat16"):
-        CAPTURE._assert_native_bfloat16_parameters(model, torch)
+    with pytest.raises(ValueError, match="outside base model"):
+        CAPTURE._base_parameter_name("unexpected.weight")
 
 
 def test_partial_group_checkpoint_roundtrip_and_prefix_guard(tmp_path: Path):

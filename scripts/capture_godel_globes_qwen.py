@@ -138,43 +138,80 @@ def _resolve_module(model: Any, path: str) -> Any:
     return value
 
 
-def _promote_floating_state_to_float32(model: Any, torch: Any) -> None:
-    """Promote native-bf16 checkpoint state one tensor at a time.
-
-    The locked safetensors are stored as bf16.  Direct float32 conversion in
-    the Windows Transformers loader crashes inside torch_cpu.dll on this host.
-    Incremental promotion produces the same representable float32 values while
-    avoiding a second model-sized conversion allocation.
-    """
-
-    with torch.no_grad():
-        for parameter in model.parameters():
-            if parameter.is_floating_point() and parameter.dtype != torch.float32:
-                parameter.data = parameter.data.to(dtype=torch.float32)
-        for buffer in model.buffers():
-            if buffer.is_floating_point() and buffer.dtype != torch.float32:
-                buffer.data = buffer.data.to(dtype=torch.float32)
+def _base_parameter_name(checkpoint_key: str) -> str | None:
+    if checkpoint_key == "lm_head.weight":
+        return None
+    if not checkpoint_key.startswith("model."):
+        raise ValueError(f"unexpected checkpoint key outside base model: {checkpoint_key}")
+    return checkpoint_key.removeprefix("model.")
 
 
-def _assert_native_bfloat16_parameters(model: Any, torch: Any) -> None:
-    unexpected = sorted(
-        {str(parameter.dtype) for parameter in model.parameters()}
-        - {str(torch.bfloat16)}
+def _load_base_transformer_tensorwise(
+    *,
+    model_path: Path,
+    dtype: Any,
+    device: str,
+    torch: Any,
+    auto_config: Any,
+    auto_model: Any,
+    init_empty_weights: Any,
+    set_module_tensor_to_device: Any,
+    safe_open: Any,
+) -> Any:
+    """Materialize the locked base-model parameter universe one tensor at a time."""
+
+    config = auto_config.from_pretrained(model_path, local_files_only=True)
+    with init_empty_weights():
+        model = auto_model.from_config(config)
+    expected = set(dict(model.named_parameters()))
+    index = json.loads(
+        (model_path / "model.safetensors.index.json").read_text(encoding="utf-8")
     )
-    if unexpected:
-        raise RuntimeError(
-            "native checkpoint load produced non-bfloat16 parameters: "
-            + ", ".join(unexpected)
+    weight_map = index.get("weight_map")
+    if not isinstance(weight_map, Mapping):
+        raise ValueError("locked checkpoint index lacks weight_map")
+    mapped: dict[str, tuple[str, str]] = {}
+    for checkpoint_key, shard_name in weight_map.items():
+        base_name = _base_parameter_name(str(checkpoint_key))
+        if base_name is None:
+            continue
+        if base_name in mapped:
+            raise ValueError(f"duplicate mapped base parameter: {base_name}")
+        mapped[base_name] = (str(checkpoint_key), str(shard_name))
+    if set(mapped) != expected:
+        missing = sorted(expected - set(mapped))
+        extra = sorted(set(mapped) - expected)
+        raise ValueError(
+            f"base checkpoint/model parameter mismatch missing={missing} extra={extra}"
         )
-
-
-def _extract_base_transformer(wrapper_model: Any) -> Any:
-    """Detach the registered base transformer from a CausalLM loader shell."""
-
-    base_model = wrapper_model.model
-    wrapper_model.model = None
-    wrapper_model.lm_head = None
-    return base_model
+    by_shard: dict[str, list[tuple[str, str]]] = {}
+    for base_name, (checkpoint_key, shard_name) in mapped.items():
+        by_shard.setdefault(shard_name, []).append((base_name, checkpoint_key))
+    for shard_name, entries in sorted(by_shard.items()):
+        with safe_open(
+            str(model_path / shard_name), framework="pt", device="cpu"
+        ) as archive:
+            for base_name, checkpoint_key in sorted(entries):
+                value = archive.get_tensor(checkpoint_key)
+                if value.dtype != dtype:
+                    value = value.to(dtype=dtype)
+                set_module_tensor_to_device(
+                    model, base_name, device, value=value, dtype=dtype
+                )
+                del value
+    meta = sorted(
+        name for name, parameter in model.named_parameters() if parameter.is_meta
+    )
+    wrong_dtype = sorted(
+        name
+        for name, parameter in model.named_parameters()
+        if parameter.dtype != dtype
+    )
+    if meta or wrong_dtype:
+        raise RuntimeError(
+            f"tensorwise load incomplete meta={meta} wrong_dtype={wrong_dtype}"
+        )
+    return model
 
 
 def _atomic_json(path: Path, value: Mapping[str, Any]) -> None:
@@ -306,7 +343,10 @@ def _remove_partial_group(
 def capture(args: argparse.Namespace) -> None:
     try:
         import torch
-        from transformers import AutoModelForCausalLM, AutoTokenizer
+        from accelerate import init_empty_weights
+        from accelerate.utils import set_module_tensor_to_device
+        from safetensors import safe_open
+        from transformers import AutoConfig, AutoModel, AutoTokenizer
     except ImportError as error:  # pragma: no cover - optional live dependency
         raise RuntimeError("live capture requires torch and transformers") from error
 
@@ -362,26 +402,19 @@ def capture(args: argparse.Namespace) -> None:
             loaded_runtime = runtime
             dtype = torch.float32 if runtime == "full_float32" else torch.bfloat16
             _event(events, "runtime_load_start", runtime=runtime)
-            # The Windows AutoModel loader crashes while reconciling this
-            # CausalLM-authored checkpoint. Use the checkpoint's native loader
-            # at stored bf16, then detach the base and discard the wrapper/head
-            # before promotion or any forward pass. No logits are materialized.
-            wrapper_model = AutoModelForCausalLM.from_pretrained(
-                model_path,
-                local_files_only=True,
-                dtype="auto",
-                low_cpu_mem_usage=True,
+            model = _load_base_transformer_tensorwise(
+                model_path=model_path,
+                dtype=dtype,
+                device=args.device,
+                torch=torch,
+                auto_config=AutoConfig,
+                auto_model=AutoModel,
+                init_empty_weights=init_empty_weights,
+                set_module_tensor_to_device=set_module_tensor_to_device,
+                safe_open=safe_open,
             )
-            _assert_native_bfloat16_parameters(wrapper_model, torch)
-            _event(events, "runtime_wrapper_loaded", runtime=runtime)
-            model = _extract_base_transformer(wrapper_model).to(args.device)
-            del wrapper_model
             gc.collect()
-            _event(events, "runtime_base_extracted", runtime=runtime)
-            if dtype == torch.float32:
-                _event(events, "runtime_promotion_start", runtime=runtime)
-                _promote_floating_state_to_float32(model, torch)
-                _event(events, "runtime_promotion_completed", runtime=runtime)
+            _event(events, "runtime_tensorwise_load_completed", runtime=runtime)
             model.eval()
             _event(events, "runtime_loaded", runtime=runtime)
             captured: dict[str, list[np.ndarray]] = {
