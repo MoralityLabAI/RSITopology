@@ -168,6 +168,12 @@ class PhysicalEdge:
             "rank": self.rank,
             "transport_hash": _orthogonal_hash(self.validation_transport),
             "construction_transport_hash": _orthogonal_hash(self.construction_transport),
+            "construction_transport_det": float(
+                np.linalg.det(self.construction_transport)
+            ),
+            "geometry_validation_transport_det": float(
+                np.linalg.det(self.validation_transport)
+            ),
             "construction_lineage": dict(self.construction_lineage),
             "geometry_validation_lineage": dict(self.validation_lineage),
             "gate_metric_rule": "minimum across construction and geometry_validation",

@@ -152,19 +152,39 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
         "preparation_entrypoint": Path(__file__).resolve(),
     }
     scientific_protocol = None
+    activation_sites = list(protocol["development_model"]["activation_sites"])
     if args.scientific_protocol is not None:
         scientific_protocol = args.scientific_protocol.resolve()
         scientific_value = json.loads(
             scientific_protocol.read_text(encoding="utf-8-sig")
         )
-        if scientific_value.get("protocol_id") != "qwen08_dense_local_holonomy_v0_1":
+        scientific_id = scientific_value.get("protocol_id")
+        if scientific_id not in {
+            "qwen08_dense_local_holonomy_v0_1",
+            "qwen08_context_stageb_v0_1",
+        }:
             raise ValueError("unsupported scientific capture protocol")
-        source_paths["dense_local_module"] = (
-            ROOT / "rsi_topology" / "qwen_dense_local.py"
-        )
-        source_paths["dense_local_preparation_entrypoint"] = (
-            ROOT / "scripts" / "prepare_qwen08_dense_local.py"
-        )
+        if scientific_id == "qwen08_dense_local_holonomy_v0_1":
+            source_paths["dense_local_module"] = (
+                ROOT / "rsi_topology" / "qwen_dense_local.py"
+            )
+            source_paths["dense_local_preparation_entrypoint"] = (
+                ROOT / "scripts" / "prepare_qwen08_dense_local.py"
+            )
+        else:
+            source_paths["context_stageb_module"] = (
+                ROOT / "rsi_topology" / "qwen_context_stageb.py"
+            )
+            source_paths["context_stageb_preparation_entrypoint"] = (
+                ROOT / "scripts" / "prepare_qwen08_context_stageb.py"
+            )
+            registered = set(scientific_value["main_capture"]["sites"]) | set(
+                scientific_value["precision_control"]["sites"]
+            )
+            requested = list(map(str, args.activation_site or ()))
+            if not requested or not set(requested) <= registered:
+                raise ValueError("Stage-B activation sites are absent or unregistered")
+            activation_sites = requested
     for path in source_paths.values():
         tracked = subprocess.run(
             ["git", "ls-files", "--error-unmatch", str(path.relative_to(ROOT))],
@@ -234,8 +254,9 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
             "gradients": False,
             "weight_mutation": False,
             "state_id": args.state_id,
-            "activation_sites": protocol["development_model"]["activation_sites"],
+            "activation_sites": activation_sites,
         },
+        "registered_model_sites": protocol["development_model"]["activation_sites"],
         "exact_inner_command": [
             sys.executable,
             str(capture_entrypoint.resolve()),
@@ -259,7 +280,7 @@ def prepare_state_authorization(args: argparse.Namespace) -> None:
         value["scientific_protocol"] = {
             "path": str(scientific_protocol),
             "sha256": sha256_file(scientific_protocol),
-            "protocol_id": "qwen08_dense_local_holonomy_v0_1",
+            "protocol_id": scientific_value["protocol_id"],
         }
     write_once_or_equal(args.output, canonical_json_bytes(value))
     print(json.dumps(value, indent=2, sort_keys=True))
@@ -304,6 +325,7 @@ def parser() -> argparse.ArgumentParser:
     )
     authorization_parser.add_argument("--capture-output-dir", type=Path, required=True)
     authorization_parser.add_argument("--scientific-protocol", type=Path)
+    authorization_parser.add_argument("--activation-site", action="append")
     authorization_parser.add_argument("--output", type=Path, required=True)
     authorization_parser.add_argument("--confirm-caps", action="store_true")
     authorization_parser.set_defaults(function=prepare_state_authorization)

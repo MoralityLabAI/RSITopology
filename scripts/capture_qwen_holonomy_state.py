@@ -118,12 +118,25 @@ def _validate_authorization(
         if not isinstance(scientific, Mapping):
             raise ValueError("scientific protocol binding is malformed")
         path = Path(str(scientific.get("path", "")))
-        if (
-            scientific.get("protocol_id") != "qwen08_dense_local_holonomy_v0_1"
-            or not path.is_file()
-            or sha256_file(path) != scientific.get("sha256")
-        ):
+        if not path.is_file() or sha256_file(path) != scientific.get("sha256"):
             raise ValueError("scientific protocol binding is missing or changed")
+        scientific_value = json.loads(path.read_text(encoding="utf-8-sig"))
+        if scientific.get("protocol_id") != scientific_value.get("protocol_id"):
+            raise ValueError("scientific protocol ID binding differs")
+        if scientific_value.get("protocol_id") not in {
+            "qwen08_dense_local_holonomy_v0_1",
+            "qwen08_context_stageb_v0_1",
+        }:
+            raise ValueError("unsupported scientific capture protocol")
+    contract = value.get("capture_contract")
+    if not isinstance(contract, Mapping):
+        raise ValueError("capture contract is missing")
+    sites = tuple(map(str, contract.get("activation_sites", ())))
+    registered_sites = set(value.get("registered_model_sites", ()))
+    if registered_sites and not set(sites) <= set(map(str, registered_sites)):
+        raise ValueError("capture contract contains an unregistered model site")
+    if not sites:
+        raise ValueError("capture contract has no activation sites")
 
 
 def _load_model(
@@ -237,7 +250,11 @@ def capture(args: argparse.Namespace) -> None:
             quantization=args.quantization,
             gpu_mb=float(authorization["resource_caps"]["gpu_allowance_mb"]),
         )
-        sites = tuple(protocol["development_model"]["activation_sites"])
+        sites = tuple(
+            map(str, authorization["capture_contract"]["activation_sites"])
+        )
+        if not set(sites) <= set(protocol["development_model"]["activation_sites"]):
+            raise ValueError("capture authorization requests an unknown model site")
         captures: dict[str, list[np.ndarray]] = {site: [] for site in sites}
         current_indices = None
 
