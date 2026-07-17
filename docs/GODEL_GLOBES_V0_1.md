@@ -67,6 +67,8 @@ applying `lm_head`, while this protocol prohibits logits and generation.
 Avoiding float32 promotion of the separately stored `lm_head.weight` removes
 roughly 1.16 GiB from the final resident set without changing any hooked
 activation. Wrapper-load and base-extraction events are recorded separately.
+The loader uses `dtype="auto"` to avoid a Windows loader-side conversion and
+then rejects the run unless every floating checkpoint parameter is bfloat16.
 
 The locked weight tensors are stored as bfloat16. On the registered Windows
 host, asking the Transformers loader to convert whole safetensor shards to

@@ -131,7 +131,7 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
         "base_transformer_without_lm_head"
     )
     assert value["capture_contract"]["checkpoint_loader"] == (
-        "native_bfloat16_causallm_then_detach_base_transformer"
+        "dtype_auto_assert_bfloat16_causallm_then_detach_base_transformer"
     )
     assert value["capture_contract"]["logits_materialized"] is False
     assert value["capture_contract"]["float32_load_strategy"] == (
@@ -180,6 +180,14 @@ def test_incremental_float32_promotion_preserves_nonfloating_state():
     assert model.scale.dtype == torch.float32
     assert model.indices.dtype == torch.int64
     assert torch.equal(model.weight, torch.tensor([1.0, -2.0]))
+
+
+def test_native_checkpoint_dtype_assertion_rejects_conversion():
+    model = torch.nn.Linear(2, 2, bias=False, dtype=torch.bfloat16)
+    CAPTURE._assert_native_bfloat16_parameters(model, torch)
+    model.float()
+    with pytest.raises(RuntimeError, match="non-bfloat16"):
+        CAPTURE._assert_native_bfloat16_parameters(model, torch)
 
 
 def test_partial_group_checkpoint_roundtrip_and_prefix_guard(tmp_path: Path):

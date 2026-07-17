@@ -156,6 +156,18 @@ def _promote_floating_state_to_float32(model: Any, torch: Any) -> None:
                 buffer.data = buffer.data.to(dtype=torch.float32)
 
 
+def _assert_native_bfloat16_parameters(model: Any, torch: Any) -> None:
+    unexpected = sorted(
+        {str(parameter.dtype) for parameter in model.parameters()}
+        - {str(torch.bfloat16)}
+    )
+    if unexpected:
+        raise RuntimeError(
+            "native checkpoint load produced non-bfloat16 parameters: "
+            + ", ".join(unexpected)
+        )
+
+
 def _extract_base_transformer(wrapper_model: Any) -> Any:
     """Detach the registered base transformer from a CausalLM loader shell."""
 
@@ -357,9 +369,10 @@ def capture(args: argparse.Namespace) -> None:
             wrapper_model = AutoModelForCausalLM.from_pretrained(
                 model_path,
                 local_files_only=True,
-                dtype=torch.bfloat16,
+                dtype="auto",
                 low_cpu_mem_usage=True,
             )
+            _assert_native_bfloat16_parameters(wrapper_model, torch)
             _event(events, "runtime_wrapper_loaded", runtime=runtime)
             model = _extract_base_transformer(wrapper_model).to(args.device)
             del wrapper_model
