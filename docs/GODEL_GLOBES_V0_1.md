@@ -63,6 +63,16 @@ sites: the causal-LM wrapper calls the same base transformer before applying
 separately stored `lm_head.weight` removes roughly 1.16 GiB from the float32
 resident set without changing any hooked activation.
 
+The locked weight tensors are stored as bfloat16. On the registered Windows
+host, asking the Transformers loader to convert whole safetensor shards to
+float32 crashes reproducibly inside `torch_cpu.dll`. The float32 runtime
+therefore loads the base transformer at its native storage dtype and promotes
+each floating parameter and buffer to float32 in place, one tensor at a time,
+before any forward pass. This is value-equivalent to direct loading because a
+bfloat16 value is exactly representable in float32, while avoiding a
+model-sized transient conversion allocation. Promotion start and completion
+are explicit run events.
+
 The analyzer then:
 
 1. evaluates ranks 1–8 with one shared bootstrap/permutation run;

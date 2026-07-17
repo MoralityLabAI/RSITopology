@@ -138,6 +138,24 @@ def _resolve_module(model: Any, path: str) -> Any:
     return value
 
 
+def _promote_floating_state_to_float32(model: Any, torch: Any) -> None:
+    """Promote native-bf16 checkpoint state one tensor at a time.
+
+    The locked safetensors are stored as bf16.  Direct float32 conversion in
+    the Windows Transformers loader crashes inside torch_cpu.dll on this host.
+    Incremental promotion produces the same representable float32 values while
+    avoiding a second model-sized conversion allocation.
+    """
+
+    with torch.no_grad():
+        for parameter in model.parameters():
+            if parameter.is_floating_point() and parameter.dtype != torch.float32:
+                parameter.data = parameter.data.to(dtype=torch.float32)
+        for buffer in model.buffers():
+            if buffer.is_floating_point() and buffer.dtype != torch.float32:
+                buffer.data = buffer.data.to(dtype=torch.float32)
+
+
 def _atomic_json(path: Path, value: Mapping[str, Any]) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_bytes(canonical_json_bytes(value))
@@ -330,9 +348,13 @@ def capture(args: argparse.Namespace) -> None:
             model = AutoModel.from_pretrained(
                 model_path,
                 local_files_only=True,
-                dtype=dtype,
+                dtype=torch.bfloat16,
                 low_cpu_mem_usage=True,
             ).to(args.device)
+            if dtype == torch.float32:
+                _event(events, "runtime_promotion_start", runtime=runtime)
+                _promote_floating_state_to_float32(model, torch)
+                _event(events, "runtime_promotion_completed", runtime=runtime)
             model.eval()
             _event(events, "runtime_loaded", runtime=runtime)
             captured: dict[str, list[np.ndarray]] = {

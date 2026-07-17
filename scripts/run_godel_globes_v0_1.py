@@ -314,6 +314,9 @@ def prepare_authorization(args: argparse.Namespace) -> None:
             "gradients": False,
             "weight_mutation": False,
             "model_surface": "base_transformer_without_lm_head",
+            "float32_load_strategy": (
+                "native_bfloat16_then_incremental_float32_promotion"
+            ),
             "runtime_precisions": protocol["runtime_precisions"],
             "candidate_sites": protocol["candidate_sites"],
         },

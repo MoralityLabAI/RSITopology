@@ -8,6 +8,7 @@ from types import SimpleNamespace
 
 import numpy as np
 import pytest
+import torch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -130,6 +131,9 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
         "base_transformer_without_lm_head"
     )
     assert value["capture_contract"]["logits_materialized"] is False
+    assert value["capture_contract"]["float32_load_strategy"] == (
+        "native_bfloat16_then_incremental_float32_promotion"
+    )
     assert value["hard_cap_validation_receipt"]["sha256"] == RUNNER.sha256_file(
         receipt_path
     )
@@ -149,6 +153,22 @@ def test_base_transformer_resolves_frozen_causallm_site_namespace():
     )
     assert "AutoModel.from_pretrained" in source
     assert "AutoModelForCausalLM" not in source
+
+
+def test_incremental_float32_promotion_preserves_nonfloating_state():
+    model = torch.nn.Module()
+    model.weight = torch.nn.Parameter(
+        torch.tensor([1.0, -2.0], dtype=torch.bfloat16)
+    )
+    model.register_buffer("scale", torch.tensor([0.5], dtype=torch.bfloat16))
+    model.register_buffer("indices", torch.tensor([1, 2], dtype=torch.int64))
+
+    CAPTURE._promote_floating_state_to_float32(model, torch)
+
+    assert model.weight.dtype == torch.float32
+    assert model.scale.dtype == torch.float32
+    assert model.indices.dtype == torch.int64
+    assert torch.equal(model.weight, torch.tensor([1.0, -2.0]))
 
 
 def test_partial_group_checkpoint_roundtrip_and_prefix_guard(tmp_path: Path):
