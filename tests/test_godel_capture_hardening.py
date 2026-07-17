@@ -23,6 +23,9 @@ def load_script(name: str, relative: str):
 
 RUNNER = load_script("run_godel_globes_v0_1", "scripts/run_godel_globes_v0_1.py")
 CAPTURE = load_script("capture_godel_globes_qwen", "scripts/capture_godel_globes_qwen.py")
+CONVERTER = load_script(
+    "convert_godel_base_float32", "scripts/convert_godel_base_float32.py"
+)
 
 
 REQUIRED_CHECKS = {
@@ -134,8 +137,9 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
     )
     assert value["capture_contract"]["logits_materialized"] is False
     assert value["capture_contract"]["float32_load_strategy"] == (
-        "native_tensorwise_bfloat16_then_incremental_float32_promotion"
+        "child_process_one_tensor_files_then_mapped_base_model"
     )
+    assert "float32_conversion_entrypoint" in value["source_paths"]
     assert value["hard_cap_validation_receipt"]["sha256"] == RUNNER.sha256_file(
         receipt_path
     )
@@ -166,14 +170,44 @@ def test_checkpoint_key_projection_excludes_only_lm_head():
         CAPTURE._base_parameter_name("unexpected.weight")
 
 
-def test_installed_native_state_promotes_without_touching_integer_buffers():
+def test_float32_conversion_cache_excludes_head_and_hashes_tensor(tmp_path: Path):
     import torch
+    from safetensors import safe_open
+    from safetensors.torch import save_file
 
-    model = torch.nn.Linear(2, 2, bias=False, dtype=torch.bfloat16)
-    model.register_buffer("indices", torch.tensor([1, 2], dtype=torch.int64))
-    CAPTURE._promote_floating_state_to_float32(model, torch)
-    assert model.weight.dtype == torch.float32
-    assert model.indices.dtype == torch.int64
+    model_path = tmp_path / "model"
+    model_path.mkdir()
+    shard = model_path / "model-00001-of-00001.safetensors"
+    save_file(
+        {
+            "model.weight": torch.tensor([[1.0, -2.0]], dtype=torch.bfloat16),
+            "lm_head.weight": torch.ones((1, 2), dtype=torch.bfloat16),
+        },
+        str(shard),
+    )
+    (model_path / "model.safetensors.index.json").write_text(
+        json.dumps(
+            {
+                "weight_map": {
+                    "model.weight": shard.name,
+                    "lm_head.weight": shard.name,
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    output = tmp_path / "converted"
+    manifest_path = CONVERTER.convert(model_path, output, tmp_path / "events.jsonl")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["parameter_count"] == 1
+    entry = manifest["entries"][0]
+    assert entry["base_parameter_name"] == "weight"
+    converted = output / entry["path"]
+    assert entry["sha256"] == CONVERTER.sha256_file(converted)
+    with safe_open(str(converted), framework="pt", device="cpu") as archive:
+        assert archive.get_tensor("weight").dtype == torch.float32
+
+
 
 
 def test_partial_group_checkpoint_roundtrip_and_prefix_guard(tmp_path: Path):

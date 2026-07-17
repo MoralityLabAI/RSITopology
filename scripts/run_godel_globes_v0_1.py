@@ -257,8 +257,10 @@ def prepare_authorization(args: argparse.Namespace) -> None:
     if not remote_contains:
         raise ValueError("capture authorization requires the implementation commit on a remote ref")
     capture_entrypoint = ROOT / "scripts" / "capture_godel_globes_qwen.py"
+    conversion_entrypoint = ROOT / "scripts" / "convert_godel_base_float32.py"
     source_paths = {
         "capture_entrypoint": capture_entrypoint,
+        "float32_conversion_entrypoint": conversion_entrypoint,
         "godel_capture_module": ROOT / "rsi_topology" / "godel_capture.py",
         "godel_analysis_module": ROOT / "rsi_topology" / "godel_analysis.py",
         "discovery_module": ROOT / "rsi_topology" / "discovery.py",
@@ -316,7 +318,7 @@ def prepare_authorization(args: argparse.Namespace) -> None:
             "model_surface": "base_transformer_without_lm_head",
             "checkpoint_loader": "tensorwise_safetensors_into_meta_base_model",
             "float32_load_strategy": (
-                "native_tensorwise_bfloat16_then_incremental_float32_promotion"
+                "child_process_one_tensor_files_then_mapped_base_model"
             ),
             "runtime_precisions": protocol["runtime_precisions"],
             "candidate_sites": protocol["candidate_sites"],

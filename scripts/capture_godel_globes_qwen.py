@@ -12,6 +12,7 @@ import argparse
 import gc
 import json
 from pathlib import Path
+import subprocess
 import sys
 import time
 from typing import Any, Mapping
@@ -146,18 +147,6 @@ def _base_parameter_name(checkpoint_key: str) -> str | None:
     return checkpoint_key.removeprefix("model.")
 
 
-def _promote_floating_state_to_float32(model: Any, torch: Any) -> None:
-    """Promote an installed native-bf16 base model one tensor at a time."""
-
-    with torch.no_grad():
-        for parameter in model.parameters():
-            if parameter.is_floating_point() and parameter.dtype != torch.float32:
-                parameter.data = parameter.data.to(dtype=torch.float32)
-        for buffer in model.buffers():
-            if buffer.is_floating_point() and buffer.dtype != torch.float32:
-                buffer.data = buffer.data.to(dtype=torch.float32)
-
-
 def _load_base_transformer_tensorwise(
     *,
     model_path: Path,
@@ -168,6 +157,7 @@ def _load_base_transformer_tensorwise(
     init_empty_weights: Any,
     set_module_tensor_to_device: Any,
     safe_open: Any,
+    converted_manifest: Path | None = None,
 ) -> Any:
     """Materialize the locked base-model parameter universe one tensor at a time."""
 
@@ -175,9 +165,8 @@ def _load_base_transformer_tensorwise(
     with init_empty_weights():
         model = auto_model.from_config(config)
     expected = set(dict(model.named_parameters()))
-    index = json.loads(
-        (model_path / "model.safetensors.index.json").read_text(encoding="utf-8")
-    )
+    index_path = model_path / "model.safetensors.index.json"
+    index = json.loads(index_path.read_text(encoding="utf-8"))
     weight_map = index.get("weight_map")
     if not isinstance(weight_map, Mapping):
         raise ValueError("locked checkpoint index lacks weight_map")
@@ -195,25 +184,48 @@ def _load_base_transformer_tensorwise(
         raise ValueError(
             f"base checkpoint/model parameter mismatch missing={missing} extra={extra}"
         )
-    by_shard: dict[str, list[tuple[str, str]]] = {}
-    for base_name, (checkpoint_key, shard_name) in mapped.items():
-        by_shard.setdefault(shard_name, []).append((base_name, checkpoint_key))
-    for shard_name, entries in sorted(by_shard.items()):
-        with safe_open(
-            str(model_path / shard_name), framework="pt", device="cpu"
-        ) as archive:
+    installed_dtype = torch.bfloat16
+    if converted_manifest is None:
+        by_shard: dict[str, list[tuple[str, str]]] = {}
+        for base_name, (checkpoint_key, shard_name) in mapped.items():
+            by_shard.setdefault(shard_name, []).append((base_name, checkpoint_key))
+        sources = [
+            (model_path / shard_name, entries)
+            for shard_name, entries in sorted(by_shard.items())
+        ]
+    else:
+        converted = json.loads(converted_manifest.read_text(encoding="utf-8"))
+        if (
+            converted.get("schema_version")
+            != "godel_float32_conversion_cache_v0_1"
+            or converted.get("source_index_sha256") != sha256_file(index_path)
+        ):
+            raise ValueError("float32 conversion manifest is invalid or stale")
+        converted_entries = converted.get("entries")
+        if not isinstance(converted_entries, list):
+            raise ValueError("float32 conversion manifest lacks entries")
+        converted_names = {str(item.get("base_parameter_name")) for item in converted_entries}
+        if converted_names != expected or len(converted_names) != len(converted_entries):
+            raise ValueError("float32 conversion parameter universe mismatch")
+        sources = []
+        for item in converted_entries:
+            target = converted_manifest.parent / str(item["path"])
+            if not target.is_file() or sha256_file(target) != item.get("sha256"):
+                raise ValueError(f"float32 conversion file hash mismatch: {target}")
+            sources.append(
+                (target, [(str(item["base_parameter_name"]), str(item["base_parameter_name"]))])
+            )
+        installed_dtype = torch.float32
+    for source, entries in sources:
+        with safe_open(str(source), framework="pt", device="cpu") as archive:
             for base_name, checkpoint_key in sorted(entries):
                 value = archive.get_tensor(checkpoint_key)
-                if value.dtype != torch.bfloat16:
+                if value.dtype != installed_dtype:
                     raise ValueError(
-                        f"locked checkpoint parameter is not bfloat16: {checkpoint_key}"
+                        f"checkpoint parameter has wrong dtype: {checkpoint_key}"
                     )
                 set_module_tensor_to_device(
-                    model,
-                    base_name,
-                    device,
-                    value=value,
-                    dtype=torch.bfloat16,
+                    model, base_name, device, value=value, dtype=installed_dtype
                 )
                 del value
     meta = sorted(
@@ -222,7 +234,7 @@ def _load_base_transformer_tensorwise(
     wrong_dtype = sorted(
         name
         for name, parameter in model.named_parameters()
-        if parameter.dtype != torch.bfloat16
+        if parameter.dtype != installed_dtype
     )
     if meta or wrong_dtype:
         raise RuntimeError(
@@ -419,6 +431,28 @@ def capture(args: argparse.Namespace) -> None:
             loaded_runtime = runtime
             dtype = torch.float32 if runtime == "full_float32" else torch.bfloat16
             _event(events, "runtime_load_start", runtime=runtime)
+            converted_manifest = None
+            if dtype == torch.float32:
+                conversion_dir = output / "float32_conversion_cache"
+                converted_manifest = conversion_dir / "manifest.json"
+                if not converted_manifest.is_file():
+                    converter = Path(__file__).resolve().with_name(
+                        "convert_godel_base_float32.py"
+                    )
+                    _event(events, "float32_conversion_start", runtime=runtime)
+                    subprocess.run(
+                        [
+                            sys.executable,
+                            str(converter),
+                            "--model-path",
+                            str(model_path),
+                            "--output-dir",
+                            str(conversion_dir),
+                            "--events",
+                            str(events),
+                        ],
+                        check=True,
+                    )
             model = _load_base_transformer_tensorwise(
                 model_path=model_path,
                 device=args.device,
@@ -428,13 +462,10 @@ def capture(args: argparse.Namespace) -> None:
                 init_empty_weights=init_empty_weights,
                 set_module_tensor_to_device=set_module_tensor_to_device,
                 safe_open=safe_open,
+                converted_manifest=converted_manifest,
             )
             gc.collect()
             _event(events, "runtime_tensorwise_load_completed", runtime=runtime)
-            if dtype == torch.float32:
-                _event(events, "runtime_promotion_start", runtime=runtime)
-                _promote_floating_state_to_float32(model, torch)
-                _event(events, "runtime_promotion_completed", runtime=runtime)
             model.eval()
             _event(events, "runtime_loaded", runtime=runtime)
             captured: dict[str, list[np.ndarray]] = {
