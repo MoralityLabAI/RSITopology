@@ -53,6 +53,14 @@ manifest and target-blind capture/replay commands are documented in
 [`docs/GODEL_GLOBES_V0_1.md`](docs/GODEL_GLOBES_V0_1.md). The preserved Silico
 float32/bfloat16 result is treated as calibration only.
 
+The fresh Qwen0.8B L19 precision/context replication is frozen separately in
+[`protocols/qwen08_l19_precision_context_v0_1.json`](protocols/qwen08_l19_precision_context_v0_1.json).
+It compares four-bit NF4/float16-compute against unquantized float16 weights on
+identical fresh prompt bytes, recomputes the complete rank-one matched-null
+margin inside a paired nested bootstrap, and treats rank-one determinant signs
+as diagnostics only. See
+[`reports/qwen08_l19_precision_context_protocol.md`](reports/qwen08_l19_precision_context_protocol.md).
+
 ## Holonomy-bounded edit sectioning
 
 `section_edits()` converts context-by-checkpoint identity receipts into maximal
