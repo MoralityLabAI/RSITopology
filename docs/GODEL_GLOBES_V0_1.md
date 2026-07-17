@@ -56,6 +56,13 @@ captured vector is the registered `v_proj` output at the final non-padding
 prompt token. Generation, gradients, scoring, interventions, and weight writes
 are prohibited.
 
+The runner loads the locked checkpoint through `AutoModel` rather than
+`AutoModelForCausalLM`. This is an exact surface reduction for the registered
+sites: the causal-LM wrapper calls the same base transformer before applying
+`lm_head`, while this protocol prohibits logits and generation. Avoiding the
+separately stored `lm_head.weight` removes roughly 1.16 GiB from the float32
+resident set without changing any hooked activation.
+
 The analyzer then:
 
 1. evaluates ranks 1–8 with one shared bootstrap/permutation run;
@@ -136,11 +143,15 @@ python scripts/run_godel_globes_v0_1.py prepare-authorization `
   --output <capture-authorization.json>
 ```
 
-For the registered local CPU lane, the current proposed envelope is 14,000 MB
-job memory plus a 2,048 MB host reserve, 50% CPU, 50 MB/s monitored I/O, a
-12-hour timeout, 1 MB GPU allowance, durable checkpoints at most 300 seconds
-apart, and zero registered swap. The wrapper refuses to start unless free
-physical RAM is at least `memory_mb + host_reserve_mb`; recording
+For the registered local CPU lane, the production envelope must be derived
+from a two-precision live smoke using the same base-transformer surface. The
+earlier 14,000 MB proposal is retired as overconservative, while a 9,000 MiB
+CausalLM smoke is retained only as evidence that the unused LM head made that
+surface infeasible. The current boundary-smoke target is 8,000 MiB job memory
+plus a 768 MiB host reserve, 50% CPU, 500 MB/s monitored I/O, a one-hour
+timeout, 1 MB GPU allowance, durable checkpoints at most 120 seconds apart,
+and zero registered swap. The wrapper refuses to start unless free physical
+RAM is at least `memory_mb + host_reserve_mb`; recording
 `swap_bytes=0` alone is not treated as a Windows no-pagefile guarantee.
 
 The authorization is itself the Job Object run spec. Launch it only through:

@@ -122,7 +122,15 @@ def _validate_authorization(
 
 def _resolve_module(model: Any, path: str) -> Any:
     value = model
-    for token in path.split("."):
+    tokens = path.split(".")
+    # The frozen site names use the CausalLM wrapper's ``model.layers``
+    # namespace.  The live capture deliberately loads the corresponding base
+    # transformer because logits are prohibited and the LM head is not on any
+    # registered causal path.  Strip only that wrapper prefix; the remaining
+    # module identity is byte-for-byte the same checkpoint object.
+    if tokens and tokens[0] == "model" and not hasattr(value, "model"):
+        tokens = tokens[1:]
+    for token in tokens:
         if token.isdigit():
             value = value[int(token)]
         else:
@@ -259,7 +267,7 @@ def _remove_partial_group(
 def capture(args: argparse.Namespace) -> None:
     try:
         import torch
-        from transformers import AutoModelForCausalLM, AutoTokenizer
+        from transformers import AutoModel, AutoTokenizer
     except ImportError as error:  # pragma: no cover - optional live dependency
         raise RuntimeError("live capture requires torch and transformers") from error
 
@@ -315,10 +323,14 @@ def capture(args: argparse.Namespace) -> None:
             loaded_runtime = runtime
             dtype = torch.float32 if runtime == "full_float32" else torch.bfloat16
             _event(events, "runtime_load_start", runtime=runtime)
-            model = AutoModelForCausalLM.from_pretrained(
+            # No generation or logits are permitted by the capture contract.
+            # Loading the base transformer avoids materializing the separate
+            # lm_head.weight stored in the locked checkpoint while preserving
+            # every registered model.layers.* activation exactly.
+            model = AutoModel.from_pretrained(
                 model_path,
                 local_files_only=True,
-                torch_dtype=dtype,
+                dtype=dtype,
                 low_cpu_mem_usage=True,
             ).to(args.device)
             model.eval()

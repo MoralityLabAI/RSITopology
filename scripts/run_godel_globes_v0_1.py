@@ -310,8 +310,10 @@ def prepare_authorization(args: argparse.Namespace) -> None:
         "capture_contract": {
             "outcomes_read": False,
             "generation": False,
+            "logits_materialized": False,
             "gradients": False,
             "weight_mutation": False,
+            "model_surface": "base_transformer_without_lm_head",
             "runtime_precisions": protocol["runtime_precisions"],
             "candidate_sites": protocol["candidate_sites"],
         },

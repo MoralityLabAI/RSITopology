@@ -126,9 +126,29 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
     assert value["resource_caps"]["minimum_free_memory_mb"] == 16048
     assert value["wrapper_output_dir"] == str((capture_output / "_wrapper").resolve())
     assert "durable_partial_group" in value["checkpoint_strategy"]
+    assert value["capture_contract"]["model_surface"] == (
+        "base_transformer_without_lm_head"
+    )
+    assert value["capture_contract"]["logits_materialized"] is False
     assert value["hard_cap_validation_receipt"]["sha256"] == RUNNER.sha256_file(
         receipt_path
     )
+
+
+def test_base_transformer_resolves_frozen_causallm_site_namespace():
+    leaf = object()
+    base_model = SimpleNamespace(
+        layers=[SimpleNamespace(self_attn=SimpleNamespace(v_proj=leaf))]
+    )
+    assert CAPTURE._resolve_module(
+        base_model, "model.layers.0.self_attn.v_proj"
+    ) is leaf
+
+    source = (ROOT / "scripts" / "capture_godel_globes_qwen.py").read_text(
+        encoding="utf-8"
+    )
+    assert "AutoModel.from_pretrained" in source
+    assert "AutoModelForCausalLM" not in source
 
 
 def test_partial_group_checkpoint_roundtrip_and_prefix_guard(tmp_path: Path):
