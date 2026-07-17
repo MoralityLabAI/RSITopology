@@ -62,18 +62,19 @@ loader paths, so weight loading is explicit and bounded: instantiate the
 registered `AutoModel` architecture on the meta device, require exact equality
 between its parameter names and the locked safetensor index after removing only
 `lm_head.weight`, then materialize one tensor at a time in the requested
-runtime dtype. The loader rejects missing, extra, duplicate, meta, or
-wrong-dtype parameters before any forward pass. This is an exact surface
+native bfloat16 storage dtype. The loader rejects missing, extra, duplicate,
+meta, or wrong-dtype parameters before any forward pass. This is an exact surface
 reduction for the registered sites: the causal-LM wrapper would call that same
 base transformer before applying `lm_head`, while this protocol prohibits
 logits and generation. Excluding the stored `lm_head.weight` removes roughly
 1.16 GiB from the float32 resident set. Peak conversion overhead is bounded by
-one checkpoint tensor rather than a model-sized transient allocation.
+one installed parameter rather than a model-sized transient allocation.
 
-The locked weight tensors are stored as bfloat16. Per-tensor conversion to
-float32 is value-equivalent to direct loading because every bfloat16 value is
-exactly representable in float32. Tensorwise-load completion is an explicit run
-event.
+The locked weight tensors are first installed as bfloat16 with all shard
+mappings closed, then the base model is promoted one parameter/buffer at a time
+for the float32 runtime. Promotion is value-equivalent to direct loading because
+every bfloat16 value is exactly representable in float32. Tensorwise-load and
+promotion completion are explicit run events.
 
 The analyzer then:
 

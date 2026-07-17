@@ -146,10 +146,21 @@ def _base_parameter_name(checkpoint_key: str) -> str | None:
     return checkpoint_key.removeprefix("model.")
 
 
+def _promote_floating_state_to_float32(model: Any, torch: Any) -> None:
+    """Promote an installed native-bf16 base model one tensor at a time."""
+
+    with torch.no_grad():
+        for parameter in model.parameters():
+            if parameter.is_floating_point() and parameter.dtype != torch.float32:
+                parameter.data = parameter.data.to(dtype=torch.float32)
+        for buffer in model.buffers():
+            if buffer.is_floating_point() and buffer.dtype != torch.float32:
+                buffer.data = buffer.data.to(dtype=torch.float32)
+
+
 def _load_base_transformer_tensorwise(
     *,
     model_path: Path,
-    dtype: Any,
     device: str,
     torch: Any,
     auto_config: Any,
@@ -193,10 +204,16 @@ def _load_base_transformer_tensorwise(
         ) as archive:
             for base_name, checkpoint_key in sorted(entries):
                 value = archive.get_tensor(checkpoint_key)
-                if value.dtype != dtype:
-                    value = value.to(dtype=dtype)
+                if value.dtype != torch.bfloat16:
+                    raise ValueError(
+                        f"locked checkpoint parameter is not bfloat16: {checkpoint_key}"
+                    )
                 set_module_tensor_to_device(
-                    model, base_name, device, value=value, dtype=dtype
+                    model,
+                    base_name,
+                    device,
+                    value=value,
+                    dtype=torch.bfloat16,
                 )
                 del value
     meta = sorted(
@@ -205,7 +222,7 @@ def _load_base_transformer_tensorwise(
     wrong_dtype = sorted(
         name
         for name, parameter in model.named_parameters()
-        if parameter.dtype != dtype
+        if parameter.dtype != torch.bfloat16
     )
     if meta or wrong_dtype:
         raise RuntimeError(
@@ -404,7 +421,6 @@ def capture(args: argparse.Namespace) -> None:
             _event(events, "runtime_load_start", runtime=runtime)
             model = _load_base_transformer_tensorwise(
                 model_path=model_path,
-                dtype=dtype,
                 device=args.device,
                 torch=torch,
                 auto_config=AutoConfig,
@@ -415,6 +431,10 @@ def capture(args: argparse.Namespace) -> None:
             )
             gc.collect()
             _event(events, "runtime_tensorwise_load_completed", runtime=runtime)
+            if dtype == torch.float32:
+                _event(events, "runtime_promotion_start", runtime=runtime)
+                _promote_floating_state_to_float32(model, torch)
+                _event(events, "runtime_promotion_completed", runtime=runtime)
             model.eval()
             _event(events, "runtime_loaded", runtime=runtime)
             captured: dict[str, list[np.ndarray]] = {

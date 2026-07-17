@@ -134,7 +134,7 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
     )
     assert value["capture_contract"]["logits_materialized"] is False
     assert value["capture_contract"]["float32_load_strategy"] == (
-        "per_tensor_bfloat16_to_float32_conversion"
+        "native_tensorwise_bfloat16_then_incremental_float32_promotion"
     )
     assert value["hard_cap_validation_receipt"]["sha256"] == RUNNER.sha256_file(
         receipt_path
@@ -164,6 +164,16 @@ def test_checkpoint_key_projection_excludes_only_lm_head():
     )
     with pytest.raises(ValueError, match="outside base model"):
         CAPTURE._base_parameter_name("unexpected.weight")
+
+
+def test_installed_native_state_promotes_without_touching_integer_buffers():
+    import torch
+
+    model = torch.nn.Linear(2, 2, bias=False, dtype=torch.bfloat16)
+    model.register_buffer("indices", torch.tensor([1, 2], dtype=torch.int64))
+    CAPTURE._promote_floating_state_to_float32(model, torch)
+    assert model.weight.dtype == torch.float32
+    assert model.indices.dtype == torch.int64
 
 
 def test_partial_group_checkpoint_roundtrip_and_prefix_guard(tmp_path: Path):
