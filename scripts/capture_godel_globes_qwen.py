@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 import sys
 import time
-from typing import Any, Mapping
+from typing import Any, Callable, Mapping
 
 import numpy as np
 
@@ -182,6 +182,7 @@ def _load_base_transformer_tensorwise(
     set_module_tensor_to_device: Any,
     safe_open: Any,
     converted_manifest: Path | None = None,
+    progress: Callable[[str, int, int], None] | None = None,
 ) -> Any:
     """Materialize the locked base-model parameter universe one tensor at a time."""
 
@@ -232,14 +233,26 @@ def _load_base_transformer_tensorwise(
         if converted_names != expected or len(converted_names) != len(converted_entries):
             raise ValueError("float32 conversion parameter universe mismatch")
         sources = []
-        for item in converted_entries:
+        for item_index, item in enumerate(converted_entries, start=1):
             target = converted_manifest.parent / str(item["path"])
             if not target.is_file() or sha256_file(target) != item.get("sha256"):
                 raise ValueError(f"float32 conversion file hash mismatch: {target}")
             sources.append(
-                (target, [(str(item["base_parameter_name"]), str(item["base_parameter_name"]))])
+                (
+                    target,
+                    [
+                        (
+                            str(item["base_parameter_name"]),
+                            str(item["base_parameter_name"]),
+                        )
+                    ],
+                )
             )
+            if progress is not None:
+                progress("cache_hash_validation", item_index, len(converted_entries))
         installed_dtype = torch.float32
+    parameters_total = sum(len(entries) for _, entries in sources)
+    parameters_loaded = 0
     for source, entries in sources:
         with safe_open(str(source), framework="pt", device="cpu") as archive:
             for base_name, checkpoint_key in sorted(entries):
@@ -252,6 +265,9 @@ def _load_base_transformer_tensorwise(
                     model, base_name, device, value=value, dtype=installed_dtype
                 )
                 del value
+                parameters_loaded += 1
+                if progress is not None:
+                    progress("parameter_install", parameters_loaded, parameters_total)
     meta = sorted(
         name for name, parameter in model.named_parameters() if parameter.is_meta
     )
@@ -496,6 +512,17 @@ def capture(args: argparse.Namespace) -> None:
             if dtype == torch.float32:
                 assert args.float32_cache_dir is not None
                 converted_manifest = args.float32_cache_dir / "manifest.json"
+
+            def load_progress(stage: str, completed: int, total: int) -> None:
+                _event(
+                    events,
+                    "runtime_tensorwise_load_progress",
+                    runtime=runtime,
+                    stage=stage,
+                    completed=completed,
+                    total=total,
+                )
+
             model = _load_base_transformer_tensorwise(
                 model_path=model_path,
                 device=args.device,
@@ -506,6 +533,7 @@ def capture(args: argparse.Namespace) -> None:
                 set_module_tensor_to_device=set_module_tensor_to_device,
                 safe_open=safe_open,
                 converted_manifest=converted_manifest,
+                progress=load_progress,
             )
             gc.collect()
             _event(events, "runtime_tensorwise_load_completed", runtime=runtime)
