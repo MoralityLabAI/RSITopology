@@ -314,6 +314,9 @@ def prepare_authorization(args: argparse.Namespace) -> None:
             "gradients": False,
             "weight_mutation": False,
             "model_surface": "base_transformer_without_lm_head",
+            "checkpoint_loader": (
+                "native_bfloat16_causallm_then_detach_base_transformer"
+            ),
             "float32_load_strategy": (
                 "native_bfloat16_then_incremental_float32_promotion"
             ),

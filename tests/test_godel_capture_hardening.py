@@ -130,6 +130,9 @@ def test_prepare_authorization_emits_wrapper_contract_and_ram_preflight(
     assert value["capture_contract"]["model_surface"] == (
         "base_transformer_without_lm_head"
     )
+    assert value["capture_contract"]["checkpoint_loader"] == (
+        "native_bfloat16_causallm_then_detach_base_transformer"
+    )
     assert value["capture_contract"]["logits_materialized"] is False
     assert value["capture_contract"]["float32_load_strategy"] == (
         "native_bfloat16_then_incremental_float32_promotion"
@@ -151,8 +154,16 @@ def test_base_transformer_resolves_frozen_causallm_site_namespace():
     source = (ROOT / "scripts" / "capture_godel_globes_qwen.py").read_text(
         encoding="utf-8"
     )
-    assert "AutoModel.from_pretrained" in source
-    assert "AutoModelForCausalLM" not in source
+    assert "AutoModelForCausalLM.from_pretrained" in source
+    assert "runtime_base_extracted" in source
+
+
+def test_causallm_loader_shell_is_detached_before_capture():
+    base = object()
+    wrapper = SimpleNamespace(model=base, lm_head=object())
+    assert CAPTURE._extract_base_transformer(wrapper) is base
+    assert wrapper.model is None
+    assert wrapper.lm_head is None
 
 
 def test_incremental_float32_promotion_preserves_nonfloating_state():

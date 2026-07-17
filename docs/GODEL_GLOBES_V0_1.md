@@ -56,12 +56,17 @@ captured vector is the registered `v_proj` output at the final non-padding
 prompt token. Generation, gradients, scoring, interventions, and weight writes
 are prohibited.
 
-The runner loads the locked checkpoint through `AutoModel` rather than
-`AutoModelForCausalLM`. This is an exact surface reduction for the registered
-sites: the causal-LM wrapper calls the same base transformer before applying
-`lm_head`, while this protocol prohibits logits and generation. Avoiding the
-separately stored `lm_head.weight` removes roughly 1.16 GiB from the float32
-resident set without changing any hooked activation.
+The runner exposes only the checkpoint's base transformer to the capture. The
+registered Windows stack crashes when `AutoModel` directly reconciles this
+CausalLM-authored checkpoint, so the runner uses the checkpoint's native
+`AutoModelForCausalLM` loader at stored bfloat16 precision, immediately detaches
+its `.model` base transformer, and discards the wrapper and `lm_head` before
+promotion or any forward pass. This is an exact surface reduction for the
+registered sites: the wrapper would call that same base transformer before
+applying `lm_head`, while this protocol prohibits logits and generation.
+Avoiding float32 promotion of the separately stored `lm_head.weight` removes
+roughly 1.16 GiB from the final resident set without changing any hooked
+activation. Wrapper-load and base-extraction events are recorded separately.
 
 The locked weight tensors are stored as bfloat16. On the registered Windows
 host, asking the Transformers loader to convert whole safetensor shards to

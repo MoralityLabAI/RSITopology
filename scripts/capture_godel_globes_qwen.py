@@ -156,6 +156,15 @@ def _promote_floating_state_to_float32(model: Any, torch: Any) -> None:
                 buffer.data = buffer.data.to(dtype=torch.float32)
 
 
+def _extract_base_transformer(wrapper_model: Any) -> Any:
+    """Detach the registered base transformer from a CausalLM loader shell."""
+
+    base_model = wrapper_model.model
+    wrapper_model.model = None
+    wrapper_model.lm_head = None
+    return base_model
+
+
 def _atomic_json(path: Path, value: Mapping[str, Any]) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_bytes(canonical_json_bytes(value))
@@ -285,7 +294,7 @@ def _remove_partial_group(
 def capture(args: argparse.Namespace) -> None:
     try:
         import torch
-        from transformers import AutoModel, AutoTokenizer
+        from transformers import AutoModelForCausalLM, AutoTokenizer
     except ImportError as error:  # pragma: no cover - optional live dependency
         raise RuntimeError("live capture requires torch and transformers") from error
 
@@ -341,16 +350,21 @@ def capture(args: argparse.Namespace) -> None:
             loaded_runtime = runtime
             dtype = torch.float32 if runtime == "full_float32" else torch.bfloat16
             _event(events, "runtime_load_start", runtime=runtime)
-            # No generation or logits are permitted by the capture contract.
-            # Loading the base transformer avoids materializing the separate
-            # lm_head.weight stored in the locked checkpoint while preserving
-            # every registered model.layers.* activation exactly.
-            model = AutoModel.from_pretrained(
+            # The Windows AutoModel loader crashes while reconciling this
+            # CausalLM-authored checkpoint. Use the checkpoint's native loader
+            # at stored bf16, then detach the base and discard the wrapper/head
+            # before promotion or any forward pass. No logits are materialized.
+            wrapper_model = AutoModelForCausalLM.from_pretrained(
                 model_path,
                 local_files_only=True,
                 dtype=torch.bfloat16,
                 low_cpu_mem_usage=True,
-            ).to(args.device)
+            )
+            _event(events, "runtime_wrapper_loaded", runtime=runtime)
+            model = _extract_base_transformer(wrapper_model).to(args.device)
+            del wrapper_model
+            gc.collect()
+            _event(events, "runtime_base_extracted", runtime=runtime)
             if dtype == torch.float32:
                 _event(events, "runtime_promotion_start", runtime=runtime)
                 _promote_floating_state_to_float32(model, torch)
