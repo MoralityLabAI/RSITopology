@@ -1,0 +1,46 @@
+{
+  "amendment_id": "ultra.transient_amplification.v0.1.1",
+  "amendment_sha256": "bb5e02e295a745b211f4644b894c5a9a35ef5414dd4230124138d219f43bded2",
+  "claim_boundary": "CPU-synthetic instrument validation; not transformer or RSI evidence",
+  "evidence_layers": {
+    "application_hypothesis": "untested",
+    "deterministic_fixture_calibration": "pass",
+    "mathematical_theorem": "proved_in_claim_packet"
+  },
+  "first_certified_failure_coupling": 0.2,
+  "gate_results": {
+    "G0_eigenvalue_match": {
+      "maximum_discrepancy": 0.0,
+      "pass": true
+    },
+    "G1_exact_witness": {
+      "maximum_absolute_error": 4.440892098500626e-16,
+      "pass": true
+    },
+    "G2_probe_consistency": {
+      "maximum_sampled_gain_minus_exact_gain": 0.0,
+      "pass": true,
+      "universal_decision_source": "top_singular_vector"
+    },
+    "G3_spectral_blind_spot": {
+      "certified_fail_count": 3,
+      "certified_pass_count": 7,
+      "numerically_indeterminate_count": 1,
+      "pass": true,
+      "spectral_declared_radius_miss_count": 3
+    },
+    "G4_metric_covariance": {
+      "maximum_relative_error": 9.168293315837951e-15,
+      "pass": true
+    },
+    "G5_metric_relative_only": {
+      "alternative_metric_condition_number": 56.123185410568205,
+      "alternative_metric_decision": "pass",
+      "euclidean_decision": "fail",
+      "pass": true
+    }
+  },
+  "instrument_status": "valid",
+  "protocol_id": "ultra.transient_amplification.v0.1",
+  "protocol_sha256": "df739432c88acfbd0eb9e5db5a91b03f268bdf955e3e80d1235f3337054b37f5"
+}

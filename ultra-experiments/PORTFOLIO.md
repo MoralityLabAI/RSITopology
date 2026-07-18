@@ -8,36 +8,45 @@ instrument and provenance gates pass.
 ## Priority 1: oversight blind cones
 
 For a frozen edit coordinate `u`, let `J_C` map edits to capability or behavior
-probes and let `J_M` map edits to monitor outputs. Define
+probes and let `J_M` map edits to monitor outputs. Freeze a positive-definite
+edit metric `R`; it is part of the estimand, not a numerical convenience. Define
 
 ```text
 A = J_C^T W_C J_C
-B = J_M^T W_M J_M + lambda I
-mu_max = max_(u != 0) (u^T A u) / (u^T B u).
+B_0 = J_M^T W_M J_M
+B_lambda = B_0 + lambda R
+mu_max = max_(u != 0) (u^T A u) / (u^T B_lambda u).
 ```
 
-`mu_max` is the largest generalized eigenvalue of `(A,B)`. It is unchanged by
-an invertible reparameterization of the edit coordinates when both forms are
-transformed together. The deterministic inequality
+`mu_max` is the largest generalized eigenvalue of `(A,B_lambda)`. It is
+unchanged by an invertible reparameterization of the edit coordinates only when
+`A`, `B_0`, and `R` are all transformed by congruence. Replacing the transformed
+ridge with a fresh identity matrix would retain only orthogonal invariance and
+is prohibited. The deterministic inequality
 
 ```text
-u^T A u <= mu_max * u^T B u
+u^T A u <= mu_max * u^T B_lambda u
 ```
 
-turns a monitor-energy budget into a local behavior-change bound. A measured
-Taylor-remainder bound is required before using it as a nonlinear control gate.
+turns a combined monitor-plus-edit-energy budget into a local behavior-change
+bound. A regularized negative result is not pure monitor coverage. Pure monitor
+coverage additionally requires `ker(B_0) subset ker(A)` and a finite quotient
+on the supported subspace. A measured Taylor-remainder bound is required before
+using either form as a nonlinear control gate.
 
 - **Prediction:** high-`mu` directions change held-out behavior while remaining
   monitor-clean, beyond norm, rank, attribution, and separate Jacobian norms.
 - **Matched controls:** Haar-rotate the two quadratic forms relative to one
   another while retaining both spectra; permute capability labels within frozen
   prompt families.
-- **Kill tests:** near-null `B` makes the regularized ratio arbitrary; held-out
+- **Kill tests:** near-null `B_0` makes the unregularized ratio unstable or
+  infinite; ridge domination makes a regularized ratio uninformative; held-out
   nonlinear remainder exceeds the linear term; generalized directions do not
   predict held-out intervention results.
 - **Useful negative:** a robust upper confidence bound below the registered
-  practical ratio is local evidence that the tested monitor covers the tested
-  edit family.
+  practical ratio supports the deployed combined monitor-plus-norm gate. It is
+  monitor-coverage evidence only when the unregularized kernel and lower-bound
+  conditions also pass.
 - **Consumers:** HRMmmm use-specific gate; VPD red-team direction generator.
 
 ## Priority 2: transient amplification

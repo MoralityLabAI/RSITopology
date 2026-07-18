@@ -46,6 +46,13 @@ copying [`CLAIM_PACKET_TEMPLATE.md`](CLAIM_PACKET_TEMPLATE.md), demonstrating
 that the claim is live rather than forced, and naming a kill test before the
 primary outcome is read.
 
-The first executable track is `01_transient_amplification`: an exact
+The first executed track is `01_transient_amplification`: an exact
 finite-horizon control-boundary test that holds the eigenvalues fixed while
-varying non-normal coupling.
+varying non-normal coupling. Its deterministic calibration passed; the
+transformer application remains untested. See
+[`01_transient_amplification/REPORT.md`](01_transient_amplification/REPORT.md).
+
+The first theorem draft for the oversight track is
+[`theory/OVERSIGHT_BLIND_CONES.md`](theory/OVERSIGHT_BLIND_CONES.md). It includes
+the coordinate-covariant edit metric and the nonlinear remainder term that a
+deployable gate would require.
