@@ -8,23 +8,39 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
 
 ## Progress accounting as of 2026-07-19
 
-- **Formally addressed under an exact ASMP problem ID:** 1 of 7 (`ASMP-1`).
+- **Formally addressed under an exact ASMP problem ID and prospectively frozen
+  claim boundary:** 4 of 7 (`ASMP-1`, `ASMP-2`, `ASMP-4`, and `ASMP-5`).
+- **Additional problems beyond ASMP-1 with bounded registered experimentation
+  attempted:** 3 of 7 (`ASMP-2`, `ASMP-4`, and `ASMP-5`).
+- **Additional problems beyond ASMP-1 with completed bounded results:** 2 of 7
+  (`ASMP-2` and `ASMP-4`).
+- **Formally registered execution attempts ending unavailable before a
+  scientific result:** 1 of 7 (`ASMP-5`, frozen resource-cap stop).
 - **Resolved at the full frozen Millennium-problem scope:** 0 of 7.
 - **Closed theorem or exact-enumeration seeds inside an addressed problem:** 2.
 - **Completed real-model falsification experiments inside an addressed problem:** 1.
-- **Remaining problems without a problem-ID-bound seed in this suite:** 6.
+- **Problems remaining at proposal, review, or precursor-tool stage:** 3 of 7
+  (`ASMP-3`, `ASMP-6`, and `ASMP-7`).
 
-“Addressed” means that work was explicitly registered against an exact ASMP problem and its claim boundary. Related portfolio work is not counted merely because it resembles part of a problem. “Resolved” requires the complete two-sided resolution standard in the canonical document; no current experiment or bounded theorem meets that standard.
+“Formally addressed” means that work was prospectively registered against an
+exact ASMP problem and a frozen claim boundary. It does not require a positive
+result: `ASMP-5` counts as addressed because its protocol was frozen before
+execution, even though execution stopped unavailable before producing a
+scientific outcome. “Completed bounded result” requires a valid result rather
+than a registration or run attempt. Related portfolio work is not counted merely
+because it resembles part of a problem. “Resolved” requires the complete
+two-sided resolution standard in the canonical document; no current experiment
+or bounded theorem meets that standard.
 
 ## The seven problems
 
 | ID | Problem | Core question | Current ASMP-bound status |
 |---|---|---|---|
 | ASMP-1 | Mechanistic Identifiability Modulo Functional Symmetry | When do measurements and interventions identify a real causal mechanism, after quotienting permitted symmetries? | **Addressed, unresolved.** Two closed finite theorem seeds and one completed Qwen falsification experiment sharpen the target. |
-| ASMP-2 | Shift-Spanning Safety Certification | When do finitely many evaluations justify a uniform claim over a declared family of deployment shifts? | **Not yet formally addressed.** Context-shift findings elsewhere in the repository are motivating evidence only. |
+| ASMP-2 | Shift-Spanning Safety Certification | When do finitely many evaluations justify a uniform claim over a declared family of deployment shifts? | **Formally addressed, unresolved.** The [registered crossed-shift result](asmp2_crossed_shift/RESULT.md) is an exact, analytically forced finite construction validating one instrument and counterexample shape. It is not a uniform shift-spanning certification theorem. |
 | ASMP-3 | The Weak-Verifier Soundness Frontier | Which superhuman work can a weaker, noisy semantic verifier judge soundly? | **Not yet formally addressed.** Evaluator-sufficiency counterexamples are adjacent but are not an ASMP-3 resolution seed. |
-| ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Not yet formally addressed in this suite.** The Confinement Width theory and CPU validation work are direct precursors but have not been registered as an ASMP-4 seed. |
-| ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Not yet formally addressed.** The recursive-improvement protocol measures a bounded empirical proposal channel and explicitly cannot resolve the reflective frontier. |
+| ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Formally addressed, unresolved.** The [registered two-port result](asmp4_two_port_game/RESULT.md) gives an exact 108-cell phase map for one finite rational architecture and separates read- and write-deficient controls. It does not establish necessary and sufficient confinement conditions in the canonical scope. |
+| ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; first execution unavailable.** The [registered verifier-drift census](asmp5_verifier_drift/RESULT.md) reached its frozen wall-time cap before emitting a scientific result. The resource-cap stop is evidence that the instrument needs a versioned implementation or budget repair, not evidence for or against reflective safety. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Not yet formally addressed.** Steganographic-collusion and covert-channel eval concepts remain candidate instruments. |
 | ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Not yet formally addressed.** Identity attestation, compactification false positives, and loop-closure audits are substantial precursor tools, not an ASMP-7 theorem seed. |
 
