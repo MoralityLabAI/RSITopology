@@ -41,13 +41,22 @@ It replaces raw intervention coverage with a sharper candidate object: intervent
 
 ### 2. Interaction-order tomography
 
-The [interaction-tomography result](asmp1_interaction_tomography/RESULT_v0_1.md) establishes the finite Boolean version of the proposed instrument:
+The [interaction-tomography result](asmp1_interaction_tomography/RESULT_v0_1.md)
+registers an executable consolidation of classical finite Boolean Fourier,
+design-of-experiments, and Mobius-inversion facts:
 
 - designs containing interventions through order `r` identify exactly the interaction coordinates through order `r`;
 - the sharp threshold for uniform recovery of degree-`k` Boolean mechanisms is `r = k`; and
-- minimum-cardinality exact designs can be substantially less well-conditioned than redundant designs.
+- minimum-cardinality exact designs can be substantially less well-conditioned than redundant designs; and
+- labelled and signed-parent-gauge identifiability differ by one intervention order in the registered full Boolean class.
 
-The exact census covers all registered Boolean functions through four variables. It proves an instrument theorem for the finite model, not a transformer theorem.
+The exact census covers all registered Boolean functions through four variables. The
+[prior-art audit](asmp1_interaction_tomography/PRIOR_ART_v0_1.md) identifies the
+Fourier recovery, rank, zeta/Mobius, and conditioning ingredients as classical
+or direct corollaries. The `6/22/402` orbit census is Harrison's classical
+NP-equivalence sequence. The exact labelled-versus-signed-parent-gauge
+threshold remains a candidate-new elementary lemma, not an established novelty
+claim and not a transformer theorem.
 
 ### 3. Qwen-0.8B real-model falsification
 

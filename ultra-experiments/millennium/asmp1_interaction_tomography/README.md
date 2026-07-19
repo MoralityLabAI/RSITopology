@@ -16,6 +16,12 @@ reported as a better-conditioned comparator.
 
 The formal statements are in [`THEOREM_v0_1.md`](THEOREM_v0_1.md).
 
+The additive
+[`PRIOR_ART_v0_1.md`](PRIOR_ART_v0_1.md) audit positions the Fourier, design,
+and Mobius ingredients as classical, cross-checks the `6/22/402` gauge-orbit
+counts against Harrison/OEIS, and limits candidate novelty to the elementary
+labelled-versus-signed-parent-gauge threshold lemma.
+
 ## Intended commands
 
 Before the claim-eligible enumeration:
