@@ -1,0 +1,69 @@
+{
+  "schema_version": "asmp2_active_design_protocol_v0_2",
+  "protocol_id": "asmp2.active_design_census.v0.2",
+  "status": "registered_before_claim_eligible_run",
+  "parent_result": "../asmp2_crossed_shift/RESULT.md",
+  "dimension": 4,
+  "environment_encoding": "integer mask 0..15; coordinate j is +1 iff bit j is one, otherwise -1",
+  "feature_basis": {
+    "intercept": true,
+    "linear": true,
+    "square_free_max_degree": 2,
+    "ordered_as": ["1", "x0", "x1", "x2", "x3", "x0*x1", "x0*x2", "x0*x3", "x1*x2", "x1*x3", "x2*x3"],
+    "coefficient_ball": "Euclidean unit ball"
+  },
+  "deployment_families": {
+    "full_cube": "all masks",
+    "nonnegative_sum": "sum(x)>=0",
+    "even_parity": "product(x)=+1"
+  },
+  "budgets": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "scientific_budgets": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "selectors": {
+    "active": "lexicographically tie-broken candidate minimizing next-step R^2 on the registered deployment family",
+    "space_filling": "lexicographically tie-broken candidate maximizing minimum Hamming distance to already selected environments; mask zero at step one",
+    "random": {"seeds": 256, "seed_sequence_root": 20402026, "sampling": "uniform permutation prefixes"}
+  },
+  "numeric_contract": {
+    "rank_relative_tolerance": "1e-12",
+    "score_round_decimals_for_ties_and_digest": 10,
+    "ordering_scope": "global minimum under rounded numerical contract; no exact ordering claim within a tie bin",
+    "exact_witness_backend": "sympy Rational for deterministic selected minimum and selector designs",
+    "exact_numeric_agreement_absolute": "1e-8"
+  },
+  "scientific_thresholds": {
+    "auc_definition": "arithmetic mean of R^2/11 over scientific_budgets",
+    "minimum_relative_auc_improvement_over_random_median": 0.05,
+    "minimum_relative_auc_improvement_over_space_filling": 0.05,
+    "maximum_normalized_regret_to_global_optimum": 0.05,
+    "first_budget_excluded": true
+  },
+  "instrument_gates": {
+    "complete_subset_count": 65536,
+    "empty_design_radius_squared": 11,
+    "full_design_radius_squared": 0,
+    "minimum_geometry_liveness_range": 0.1,
+    "coordinate_reframings": "all 384 signed coordinate permutations on registered representative designs",
+    "monotonicity": "R^2 must not increase on any one-environment subset-lattice extension"
+  },
+  "resource_ceiling": {
+    "wall_seconds": 180,
+    "python_peak_bytes": 1073741824,
+    "gpu_hours": 0,
+    "on_exceed": "unavailable_resource_cap"
+  },
+  "evidence_labels": [
+    "active_design_supported_in_registered_finite_class",
+    "active_design_mixed",
+    "active_design_not_supported",
+    "not_established_invalid_instrument",
+    "unavailable_resource_cap"
+  ],
+  "prohibited_claims": [
+    "No resolution of ASMP-2.",
+    "No semiparametric necessity or sufficiency theorem.",
+    "No finite-sample or noisy-confidence claim.",
+    "No universal active-design optimality or exact within-tie-bin ordering claim.",
+    "No mathematical novelty claim."
+  ]
+}
