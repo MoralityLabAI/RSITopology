@@ -9,7 +9,8 @@ if ($spec.schema_version -notin @(
   "qwen_holonomy_state_capture_authorization_v0_1",
   "qwen_holonomy_geometry_analysis_authorization_v0_1",
   "qwen_holonomy_jobobject_probe_v0_1",
-  "godel_capture_authorization_v0_1"
+  "godel_capture_authorization_v0_1",
+  "qwen_projector_tomography_authorization_v0_1"
 )) { throw "Unsupported run-spec schema" }
 $isGodelCapture = $spec.schema_version -eq "godel_capture_authorization_v0_1"
 $caps = $spec.resource_caps
