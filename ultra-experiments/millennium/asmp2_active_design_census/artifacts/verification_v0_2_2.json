@@ -1,0 +1,51 @@
+{
+  "G8_independent_verification": {
+    "checks": {
+      "amendment_hash_matches_receipt": true,
+      "claim_hash_matches_receipt": true,
+      "operational_margin_positive": true,
+      "opposite_parent_scientific_replay_passes": true,
+      "performance_parent_hash_matches": true,
+      "registration_commit_agrees": true,
+      "resource_measurement_pass": true,
+      "result_hash_matches_receipt": true,
+      "rss_below_ceiling": true,
+      "runner_valid": true,
+      "schema_exact": true,
+      "scientific_contract_unchanged": true,
+      "scientific_label_matches_replay": true,
+      "scientific_parent_hash_matches": true,
+      "verifier_hash_matches_receipt": true
+    },
+    "pass": true,
+    "scientific_replay": {
+      "checks": {
+        "amendment_hash_matches_receipt": true,
+        "boundary_calibration_recomputed": true,
+        "claim_hash_matches_receipt": true,
+        "coordinate_invariance_recomputed": true,
+        "evidence_label_recomputed": true,
+        "exact_witnesses_recomputed": true,
+        "opposite_parent_census_digest_matches": true,
+        "parent_protocol_hash_matches": true,
+        "random_sequence_digest_recomputed": true,
+        "registration_commit_agrees": true,
+        "resource_ceiling_pass": true,
+        "result_hash_matches_receipt": true,
+        "runner_gate_universe_and_pass": true,
+        "runner_valid": true,
+        "schema_exact": true,
+        "scientific_contract_unchanged": true,
+        "selector_curves_and_classifications_recomputed": true,
+        "subset_monotonicity_recomputed": true,
+        "verifier_hash_matches_receipt": true
+      },
+      "pass": true
+    }
+  },
+  "claim_boundary": "Resource-repaired execution with opposite-parent replay of the unchanged finite scientific contract; no general ASMP-2 inference.",
+  "evidence_label": "active_design_not_supported",
+  "instrument_status": "valid",
+  "schema_version": "asmp2_active_design_verification_v0_2_2",
+  "stage_decision": "pass"
+}
