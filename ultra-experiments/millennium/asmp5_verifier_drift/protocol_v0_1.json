@@ -1,0 +1,61 @@
+{
+  "schema_version": "asmp5_verifier_drift_protocol_v0_1",
+  "protocol_id": "asmp5-verifier-drift-v0.1",
+  "horizon": 8,
+  "behavior_widths": [4, 6],
+  "checker_input_width": 2,
+  "checker_library_size": 16,
+  "root_checker": 3,
+  "proof_tokens": [0, 1, 2, 3],
+  "proof_classes": {"0": 0, "1": 1, "2": 0, "3": 1},
+  "mutation_radii": [0, 1, 2],
+  "certificate_rules": ["self_endorsement", "pairwise_agreement", "root_refinement"],
+  "regimes": ["adaptive", "frozen_root"],
+  "candidate_edge": {
+    "behavior_update": "flip_exactly_one_bit",
+    "checker_update": "hamming_distance_at_most_registered_radius",
+    "progress_update": "exactly_plus_one",
+    "shared_between_regimes": true,
+    "successor_checker_stored_in_both_regimes": true
+  },
+  "semantic_labels": {
+    "construction": "safe_iff_behavior_bit_0_is_zero",
+    "visibility": "analysis_only",
+    "candidate_generation_may_read": false,
+    "reachability_may_read": false
+  },
+  "liveness": {
+    "required_steps": 8,
+    "required_distinct_behavior_vectors": 9,
+    "insufficient_capacity_status": "unavailable_not_failed"
+  },
+  "primary_gate": {
+    "width": 6,
+    "maximum_unsafe_depth": 4,
+    "adaptive_rules_allowed": ["self_endorsement", "pairwise_agreement"],
+    "root_no_unsafe_through_horizon": true,
+    "root_refinement_no_unsafe_through_horizon": true
+  },
+  "controls": {
+    "immutable_radius_zero_equivalence": true,
+    "permissive_checker_unsafe_liveness": true,
+    "proof_token_renaming": {"old_to_new": {"0": 2, "1": 0, "2": 3, "3": 1}},
+    "behavior_coordinate_swap": [1, 2],
+    "label_permutation_reachability_invariance": true
+  },
+  "registered_cell_count": 36,
+  "evidence_label_on_pass": "exact_bounded_verifier_drift_counterexample",
+  "resource_ceiling": {
+    "wall_seconds": 180,
+    "python_peak_bytes": 536870912,
+    "gpu_hours": 0,
+    "on_exceed": "unavailable_resource_cap_stop_sequence"
+  },
+  "stop_rule": "Only a valid runner pass plus independent verifier pass opens ASMP-3.",
+  "prohibited_claims": [
+    "No open-ended RSI inference.",
+    "No infinite progress or reflective-safety theorem.",
+    "No learned-checker robustness claim.",
+    "No novelty claim over trusted-kernel or proof-carrying-code literature."
+  ]
+}
