@@ -1,0 +1,27 @@
+{
+  "schema_version": "asmp2_active_design_termination_v0_2_1",
+  "protocol_id": "asmp2.active_design_census.v0.2.1",
+  "preregistered_commit": "8ac30b8505bc55f489e13e4f3e2e0710bc2345f0",
+  "instrument_status": "invalid_resource_measurement",
+  "stage_decision": "unavailable_resource_cap",
+  "registered_total_wall_ceiling_seconds": 180,
+  "external_wrapper_observed_timeout_seconds": 184.1,
+  "runner_core_elapsed_seconds": 171.67035700000088,
+  "runner_reported_tracemalloc_peak_bytes": 77217806,
+  "process_termination": {
+    "required": true,
+    "remaining_matching_processes_after_termination": 0
+  },
+  "quarantined_outputs": {
+    "quarantined_result_v0_2_1.json_sha256": "a986b91804882714ce5d2a0f7f2d9853fc9101a4c9c1de728111cf6e57a410a1",
+    "quarantined_receipt_v0_2_1.json_sha256": "35e8cdc7336a1e10cce690d33a6638c3212086fc30cd07979a25633b9689aeb8",
+    "scientific_fields_inspected": false,
+    "claim_eligible": false
+  },
+  "sealed_input_sha256": {
+    "protocol_v0_2_1.json": "2414ac724f0b05141d6d82bbb4bbe13f53d19380f003909aba9380e4aa233936",
+    "CLAIM_PACKET_v0_2_1.md": "0e94aa9620b191394a9e682fde312ac5675ca71e55b1611a698be81120c06500",
+    "run_v0_2_1.py": "f6bb806fffd17b0a367353d24cb2ed12a7562efce8d8af0a025fc8b1087d5b6d"
+  },
+  "diagnosis": "Intrusive tracemalloc instrumentation increased the unchanged computation from approximately 15.75 seconds without tracing to 171.67 seconds inside the runner; total process wall time exceeded the frozen ceiling."
+}
