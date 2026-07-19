@@ -1,0 +1,16 @@
+{
+  "claim_packet_sha256": "35321b819975c3318cfdb5bb267e9bfd3dae2cd9dca10c40f0e53d3d2cea692e",
+  "environment": {
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "git_commit_at_run": "a22b1770ce0f645d8aec2f0951a0f118f072b216",
+  "git_tracked_diff_sha256_at_run": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "protocol_sha256": "0dba5b32185e4e4639804f2adb6ca2df1352738205cc7a82dc2458d74b353819",
+  "result_sha256": "f3cc10d87fd2a60b8239cbcbb3ed42af8c423bebc159147652648669244dbbdf",
+  "runner_sha256": "b80f5a4bd18ac1ece3099f2c9fe0f95ab305e469f9ff71b39b1a2f1a73db9743",
+  "schema_version": "asmp2_crossed_shift_receipt_v0_1",
+  "tests_sha256": "7ef8aff4938a17157a98ed81e34e23dbaf846ab5ab39bc0c39e21a3e1d527a17",
+  "verifier_sha256": "5623fe0b5a17058cb3c3c9eccb929911f66e6330edb14bb261320d580d420c5a"
+}

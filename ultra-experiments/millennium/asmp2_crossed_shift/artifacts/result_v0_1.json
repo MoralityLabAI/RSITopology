@@ -1,0 +1,297 @@
+{
+  "claim_boundary": [
+    "general shift-spanning theorem",
+    "active environment-selection evidence",
+    "semiparametric necessity or sufficiency",
+    "minimax sample-complexity result",
+    "ASMP-2 resolution"
+  ],
+  "evidence_label": "instrument_valid_forced_construction",
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true
+    },
+    "G1_source_indistinguishability": {
+      "crossed_axis_equal": true,
+      "pass": true,
+      "unspanned_line_equal": true
+    },
+    "G2_exact_fisher_conditioning": {
+      "eigenpair_checks": [
+        true,
+        true
+      ],
+      "kappa": "1/4",
+      "kappa_squared": "1/16",
+      "matrix": [
+        [
+          "5/64",
+          "1/64"
+        ],
+        [
+          "1/64",
+          "5/64"
+        ]
+      ],
+      "pass": true
+    },
+    "G3_local_global_identities": {
+      "ambiguity_records": [
+        {
+          "crossed_expected": "1/64",
+          "crossed_observed": "1/64",
+          "pass": true,
+          "radius": "1/4",
+          "unspanned_expected": "1/16",
+          "unspanned_observed": "1/16"
+        },
+        {
+          "crossed_expected": "1/16",
+          "crossed_observed": "1/16",
+          "pass": true,
+          "radius": "1/2",
+          "unspanned_expected": "1/8",
+          "unspanned_observed": "1/8"
+        },
+        {
+          "crossed_expected": "1/4",
+          "crossed_observed": "1/4",
+          "pass": true,
+          "radius": "1",
+          "unspanned_expected": "1/4",
+          "unspanned_observed": "1/4"
+        }
+      ],
+      "global_ambiguity": "1/4",
+      "pass": true
+    },
+    "G4_liveness_and_controls": {
+      "affine_ambiguity": "0",
+      "count_matched": {
+        "axis_count": 5,
+        "diagonal_design_count": 5,
+        "diagonal_design_rank": 2,
+        "pass": true,
+        "world_gap_at_diagonal": "1/16"
+      },
+      "pass": true,
+      "risk_null": {
+        "ambient_dimension": 3,
+        "missing_nuisance_maps_to_zero": true,
+        "missing_nuisance_vector": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quotient_design_rank": 2,
+        "quotient_dimension": 2,
+        "raw_design_rank": 2
+      },
+      "safety": {
+        "minus_at_1_1": "1/2",
+        "opposite_sides": true,
+        "plus_at_1_1": "3/4",
+        "threshold": "3/5"
+      },
+      "utility": {
+        "abstain": "0",
+        "abstain_fails": true,
+        "act": "1",
+        "act_passes": true,
+        "floor": "4/5"
+      }
+    },
+    "G5_coordinate_invariance": {
+      "pass": true,
+      "records": [
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 0,
+          "matrix": [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 1,
+          "matrix": [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 2,
+          "matrix": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 3,
+          "matrix": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 4,
+          "matrix": [
+            [
+              "0",
+              "-1"
+            ],
+            [
+              "-1",
+              "0"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 5,
+          "matrix": [
+            [
+              "0",
+              "-1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 6,
+          "matrix": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "-1",
+              "0"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        },
+        {
+          "fisher_determinant": "3/512",
+          "fisher_trace": "5/32",
+          "global_ambiguity": "1/4",
+          "index": 7,
+          "matrix": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "pass": true,
+          "source_rank": 2
+        }
+      ]
+    }
+  },
+  "instrument_status": "valid",
+  "protocol_id": "asmp2.crossed_shift.v0.1",
+  "protocol_sha256": "0dba5b32185e4e4639804f2adb6ca2df1352738205cc7a82dc2458d74b353819",
+  "registration": {
+    "commit": "a22b1770ce0f645d8aec2f0951a0f118f072b216",
+    "sealed_inputs": {
+      "ultra-experiments/millennium/asmp2_crossed_shift/CLAIM_PACKET.md": {
+        "git_blob": "7bc0acbf89ae2e69c9c79ed5455b3b614407d20e",
+        "sha256": "35321b819975c3318cfdb5bb267e9bfd3dae2cd9dca10c40f0e53d3d2cea692e"
+      },
+      "ultra-experiments/millennium/asmp2_crossed_shift/README.md": {
+        "git_blob": "173aab6c4958152d5935ee7682ad06fc895699cd",
+        "sha256": "4f4ed59f3ca7a1875530eb7e78cd78570052ba9829745961e64d0370bbbfeb06"
+      },
+      "ultra-experiments/millennium/asmp2_crossed_shift/protocol_v0_1.json": {
+        "git_blob": "1dac8a583fa127735dfd0d018defafb3b3ac94b3",
+        "sha256": "0dba5b32185e4e4639804f2adb6ca2df1352738205cc7a82dc2458d74b353819"
+      },
+      "ultra-experiments/millennium/asmp2_crossed_shift/run.py": {
+        "git_blob": "14f8d108fb2923ccdd7878cb4d74a19fb7f4ab77",
+        "sha256": "b80f5a4bd18ac1ece3099f2c9fe0f95ab305e469f9ff71b39b1a2f1a73db9743"
+      },
+      "ultra-experiments/millennium/asmp2_crossed_shift/test_crossed_shift.py": {
+        "git_blob": "b04a26b1115e32c69cdaf65fc89d40130d04ef39",
+        "sha256": "7ef8aff4938a17157a98ed81e34e23dbaf846ab5ab39bc0c39e21a3e1d527a17"
+      },
+      "ultra-experiments/millennium/asmp2_crossed_shift/verify_result.py": {
+        "git_blob": "5c3aedb041b7fb00be137b36d728df32af6eb325",
+        "sha256": "5623fe0b5a17058cb3c3c9eccb929911f66e6330edb14bb261320d580d420c5a"
+      }
+    },
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "resource_receipt": {
+    "elapsed_seconds": 0.1320821999997861,
+    "pass": true,
+    "python_peak_ceiling_bytes": 268435456,
+    "python_tracemalloc_peak_bytes": 40244,
+    "wall_ceiling_seconds": 60
+  },
+  "runner_gate_pass": true,
+  "schema_version": "asmp2_crossed_shift_result_v0_1",
+  "stage_decision": "pending_independent_verification"
+}
