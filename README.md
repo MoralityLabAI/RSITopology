@@ -61,6 +61,13 @@ margin inside a paired nested bootstrap, and treats rank-one determinant signs
 as diagnostics only. See
 [`reports/qwen08_l19_precision_context_protocol.md`](reports/qwen08_l19_precision_context_protocol.md).
 
+The task-aligned controller-mesh successor is registered separately in
+[`protocols/qwen08_controller_task_capture_v0_1.json`](protocols/qwen08_controller_task_capture_v0_1.json).
+It binds 576 outcome-blind gym calibration prompts and captures final-token layer-19/layer-23 stalks without
+generation, logits, gradients, or weight mutation. The capture remains `registered_not_run` and requires a clean
+remote commit plus explicit confirmation of the frozen Job Object caps; see
+[`reports/qwen08_controller_task_capture_protocol.md`](reports/qwen08_controller_task_capture_protocol.md).
+
 ## Holonomy-bounded edit sectioning
 
 `section_edits()` converts context-by-checkpoint identity receipts into maximal
