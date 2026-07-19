@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from itertools import combinations
+import math
 from typing import Iterable, Mapping, Sequence
 
 import numpy as np
@@ -93,6 +94,70 @@ def relative_sse_reduction(y_true: np.ndarray, low: np.ndarray, high: np.ndarray
     return (low_sse - high_sse) / low_sse
 
 
+def response_rms(cube: np.ndarray) -> float:
+    """RMS causal response over every non-baseline mask and prompt."""
+
+    values = np.asarray(cube, dtype=np.float64)
+    if values.ndim != 2 or values.shape[1] != 16 or not np.all(np.isfinite(values)):
+        raise ValueError("cube must be a finite prompts-by-16 matrix")
+    deltas = values[:, 1:] - values[:, [0]]
+    return float(np.sqrt(np.mean(deltas**2)))
+
+
+def select_scale_matched_alpha(
+    selected_scale: float,
+    random_scales: Mapping[float, float],
+    *,
+    minimum_ratio: float = 0.8,
+    maximum_ratio: float = 1.25,
+) -> dict[str, float | bool]:
+    """Apply the frozen nearest-log-scale rule with a lower-alpha tie break."""
+
+    if not np.isfinite(selected_scale) or selected_scale <= 0.0:
+        raise ValueError("selected scale must be finite and positive")
+    if not random_scales:
+        raise ValueError("random alpha grid is empty")
+    rows = []
+    for alpha, scale in random_scales.items():
+        if not np.isfinite(alpha) or alpha <= 0.0 or not np.isfinite(scale) or scale <= 0.0:
+            raise ValueError("alpha and scale values must be finite and positive")
+        ratio = float(scale / selected_scale)
+        rows.append((abs(math.log(ratio)), float(alpha), ratio))
+    _, alpha, ratio = min(rows, key=lambda item: (item[0], item[1]))
+    return {
+        "alpha": alpha,
+        "random_over_selected_ratio": ratio,
+        "passed": bool(minimum_ratio <= ratio <= maximum_ratio),
+    }
+
+
+def fold_sign_decision(values: Iterable[float], *, required: int = 8) -> dict[str, int | float | str]:
+    """Frozen success/failure decision for nine paired subcondition effects."""
+
+    items = np.asarray(tuple(values), dtype=np.float64)
+    if items.shape != (9,) or not np.all(np.isfinite(items)):
+        raise ValueError("exactly nine finite fold effects are required")
+    positive = int(np.sum(items > 0.0))
+    negative = int(np.sum(items < 0.0))
+    if positive >= required:
+        decision = "pass"
+        tail_count = positive
+    elif negative >= required:
+        decision = "fail"
+        tail_count = negative
+    else:
+        decision = "inconclusive"
+        tail_count = max(positive, negative)
+    p_value = sum(math.comb(9, k) for k in range(tail_count, 10)) / 2**9
+    return {
+        "decision": decision,
+        "positive": positive,
+        "negative": negative,
+        "ties": 9 - positive - negative,
+        "one_sided_sign_p": float(p_value),
+    }
+
+
 __all__ = [
     "design_matrix",
     "exact_boolean_coefficients",
@@ -101,4 +166,7 @@ __all__ = [
     "orthogonal_random_direction",
     "reconstruct_rank_one",
     "relative_sse_reduction",
+    "response_rms",
+    "select_scale_matched_alpha",
+    "fold_sign_decision",
 ]
