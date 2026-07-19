@@ -64,9 +64,19 @@ B_n = Sym(n) semidirect (Z/2)^n,
 ```
 
 acting by input permutation and input negation. Output complementation is not
-gauge. The bounded proof shows that the only labelled collision at order
-`n-1` is top parity versus negative top parity and that one input flip joins
-that pair, while distinct parity degrees obstruct every lower order.
+gauge. In the sealed result, `signed-parent gauge` is registered shorthand for
+this full hyperoctahedral group, not for the sign-flip subgroup alone. The
+bounded proof shows that the only labelled collision at order `n-1` is top
+parity versus negative top parity and that one input flip joins that pair,
+while distinct parity degrees obstruct every lower order.
+
+The threshold proof in fact establishes a stronger subgroup corollary:
+permutations are unnecessary. Input sign flips preserve Fourier degree, so the
+distinct-degree parity obstruction still applies below `n-1`, while a single
+input flip joins top parity to negative top parity at `n-1`. Thus the same
+`n-1` quotient threshold holds for the sign-flip group `(Z/2)^n` alone.
+Permutations change the orbit census, including the match to A000616, but not
+this threshold.
 
 This audit did not locate a source stating the resulting uniform
 identifiability threshold modulo this gauge. The proof is short enough that an
