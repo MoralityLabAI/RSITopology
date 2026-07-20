@@ -28,3 +28,8 @@ Post-result corrections and successors are additive:
   construction from an automatic bifiltration claim; and
 - `THEY_SING_HYPOTHESIS_AMENDMENT_v0_1.md` replaces the downstream
   threshold-only behavioral hypothesis before any run.
+
+The first successor has now been executed under
+`v0_2_survival/RESULT_v0_2.md`: it crosses program budget with temptation and
+locates the exact cooperative-survival phase boundary in the registered finite
+class.

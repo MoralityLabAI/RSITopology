@@ -1,0 +1,7 @@
+{
+  "registration_sha256": "69dd2d03cf59159e6b7a970f76827664907cf7219037dd4e7c7add790abc96ca",
+  "registration_source_commit": "9416b63f6e3f061bc8fec5b29c54a877fa07934e",
+  "result_sha256": "c1dedfe2b34903c5d3a01e7bfac0abf55ab5d9fa20addbc36de305317e999aae",
+  "schema_version": "asmp12_equilibrium_survival_receipt_v0_2",
+  "verdict": "equilibrium_survival_phase_established_for_registered_finite_class"
+}
