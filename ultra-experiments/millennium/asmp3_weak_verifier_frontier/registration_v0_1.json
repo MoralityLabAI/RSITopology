@@ -1,0 +1,21 @@
+{
+  "experiment_id": "ASMP-3-CORRELATED-NOISE-FRONTIER-v0.1",
+  "asmp_problem": "ASMP-3 Weak-Verifier Soundness Frontier",
+  "claim_boundary": "Exact finite rational evidence for symmetric semantic-bit adjudication after a refuting atom has already been located. No real-judge, refutation-search, superhuman-work, or ASMP-resolution claim.",
+  "error_limit": "1/20",
+  "marginal_error": "1/5",
+  "family_counts": "for each q: sorted unique of {1,min(3,q),q}",
+  "query_grid": [1, 3, 5, 7, 9],
+  "rho_grid": ["0", "1/100", "1/50", "1/20", "1/10", "1/5", "1/3", "1/2"],
+  "prereveal_source_commit": "ef9913dc15c9b630b8956e52625dc64ab1936770",
+  "sealed_files": {
+    "PRIOR_ART_v0_1.md": "88e461f6cc2cd16af4a7783f927c32c6fdde15c68e3de3d8f40dfc539ca6561c",
+    "PROTOCOL_v0_1.md": "93305ef9c0075f22bef4909859a0504daa685ac69783461ec4c7b291519cc48f",
+    "README.md": "28eb5b3f80efcf84f90097541383ffaf5c840ae65df886a219f47a5c87f407a4",
+    "frontier.py": "5c65bf0cc128f02846434e37f30d9b6a998a94a0923d7f48b81ddac1ae92239c",
+    "run_frontier.py": "699229d6930ff69fd2a55b0c72e5bc106cda24476f1ca4ffc210dea48bb62601",
+    "test_frontier.py": "f15515e9a54b5cd0229a1ce18bcc06b7b80a6a8701a8a3432fa40755f9b99a3b"
+  },
+  "stop_rule": "Run once after registration. Any failed implementation/control gate invalidates the instrument; any failed directional gate is reported without amendment.",
+  "version": "0.1"
+}
