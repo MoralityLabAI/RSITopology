@@ -1,0 +1,79 @@
+{
+  "schema_version": "asmp8_goodhart_frontier_census_protocol_v0_1",
+  "protocol_id": "asmp8.goodhart_frontier.finite_census.v0.1",
+  "status": "registered_before_claim_eligible_run",
+  "parent_scope": "../V0_2_SCOPE_EXPANSION_DRAFT.md#asmp-8--the-goodhart-frontier",
+  "claim_boundary": {
+    "primary_question": "Is scalar KL pressure sufficient to determine the sign and magnitude of true-reward change independently of optimizer path on the registered finite class?",
+    "positive_control": "Uniform pointwise proxy error epsilon implies at most 2*epsilon deterministic proxy-optimization regret.",
+    "negative_control": "Small reference-distribution L2 proxy error need not bound optimized true-reward regret when error is concentrated on a rare state.",
+    "not_claimed": [
+      "a universal Goodhart frontier",
+      "a theorem for reinforcement learning trajectories",
+      "a distribution-free best-of-n KL identity",
+      "a characterization of heavy-tail asymptotics",
+      "ASMP-8 resolution"
+    ]
+  },
+  "finite_census": {
+    "outcome_count": 6,
+    "reference_policy": "uniform",
+    "proxy_rank_values": [-5, -3, -1, 1, 3, 5],
+    "true_reward_alphabet": [-2, -1, 0, 1, 2],
+    "normalization": "center each nonconstant true-reward vector and scale to unit RMS under p0; center and unit-RMS-scale the proxy",
+    "labels_are_distinct": true,
+    "constant_true_rewards_excluded": true
+  },
+  "pressure": {
+    "unit": "natural_nats",
+    "definition": "KL(pi || p0)",
+    "fractions_of_log_outcome_count": [0.05, 0.1, 0.2, 0.35, 0.5, 0.7, 0.9],
+    "match_tolerance": 1e-10
+  },
+  "optimizer_paths": {
+    "gibbs": "pi_i proportional to p0_i*exp(beta*proxy_i), beta chosen by bisection to match KL",
+    "top_spike_mixture": "pi=(1-alpha)*p0+alpha*delta_argmax_proxy, alpha chosen by bisection to match KL",
+    "best_of_n_descriptive": [2, 4, 8, 16, 32]
+  },
+  "phase_labels": {
+    "positive_tolerance": 1e-12,
+    "interior_peak_minimum": 0.05,
+    "peak_to_final_drop": 0.15,
+    "negative_final_threshold": -0.25,
+    "labels": ["peak_then_degrade", "nonnegative", "negative_tail", "mixed"]
+  },
+  "alignment": {
+    "definition": "cosine under the p0-centered, unit-RMS geometry",
+    "bin_width": 0.1,
+    "minimum_vectors_for_diversity_gate": 20
+  },
+  "controls": {
+    "supnorm_epsilon": 0.25,
+    "supnorm_true_alphabet": [-1, 0, 1],
+    "supnorm_outcome_count": 4,
+    "rare_state_probability": 1e-6,
+    "rare_l2_ceiling": 0.01,
+    "rare_regret_floor": 0.9
+  },
+  "gates": {
+    "G0_registration_binding": "Protocol, runner, tests, verifier, and README are committed and byte-identical to HEAD; tracked diff is empty at start.",
+    "G1_numerical_calibration": "Every matched optimizer policy is finite, normalized, nonnegative, and within 1e-10 nats of its KL target.",
+    "G2_supnorm_positive_control": "The exhaustive registered pointwise-error census has maximum regret at most 2*epsilon plus 1e-12.",
+    "G3_reference_l2_negative_control": "The rare-state construction has reference L2 error at most 0.01 and optimized true regret at least 0.9.",
+    "G4_optimizer_independence_falsification": "There exists a registered normalized true-reward vector and matched KL pressure where Gibbs and top-spike gains have opposite signs beyond +/-0.05 and differ by at least 0.20.",
+    "G5_alignment_descriptor_stress": "At least one alignment bin containing 20 reward vectors contains more than one registered phase label for a fixed optimizer path.",
+    "G6_complete_census": "Exactly 5^6-5=15620 normalized labelled nonconstant true-reward vectors are analyzed at all seven registered pressures for both paths."
+  },
+  "decision_rule": {
+    "scalar_kl_rejected": "G0-G4 and G6 pass; G5 is reported as a separate descriptor result.",
+    "scalar_kl_not_rejected": "G0-G3 and G6 pass but G4 fails.",
+    "invalid": "Any of G0-G3 or G6 fails.",
+    "alignment_result": "G5 pass means alignment cosine is also insufficient for phase classification on this finite class; failure leaves that claim not established."
+  },
+  "resource_ceiling": {
+    "wall_seconds": 120,
+    "python_peak_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "output_policy": "write_once_non_aliasing"
+}
