@@ -1,0 +1,7 @@
+{
+  "allowance_mb": 3072.0,
+  "latest_used_mb": 3950.0,
+  "peak_used_mb": 3950.0,
+  "schema_version": "asmp10_gpu_guard_summary_v0_2",
+  "triggered": true
+}

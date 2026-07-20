@@ -24,3 +24,11 @@ samples, owned PIDs, and post-run cleanup.
 
 Do not cite pilot transition behavior as held-out prediction evidence. The
 pilot's only job is to choose a viable registered horizon and model family.
+
+## Pilot outcome
+
+The completed 4,000-step pilot did not produce a live transition. The extension
+attempts are resource diagnostics: v0.2 exposed a WDDM GPU-accounting gap and
+v0.3 safely aborted under the fail-closed aggregate GPU guard. See
+`PILOT_REPORT_v0_1.md`. The positive held-out predictor experiment remains
+unregistered; the active successor is the CPU-exact prefix-obstruction branch.
