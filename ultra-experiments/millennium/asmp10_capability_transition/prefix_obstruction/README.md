@@ -8,6 +8,9 @@ The experiment is a consolidation of classical Hermite interpolation into an
 ASMP instrument. It is not a novelty claim and does not address neural-network
 training without the registered polynomial-degree restriction.
 
+See `PRIOR_ART_v0_1.md` for the explicit classical attribution and
+`SUCCESSOR_SCOPE_v0_2.md` for the bounded-analytic and grokking-family gaps.
+
 Run tests with:
 
 ```powershell
@@ -16,4 +19,3 @@ python -m pytest ultra-experiments/millennium/asmp10_capability_transition/prefi
 
 The claim-eligible runner must not execute until `registration_v0_1.json`
 exists and binds the committed runner and protocol hashes.
-

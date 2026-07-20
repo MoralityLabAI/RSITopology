@@ -21,6 +21,12 @@ Start with:
 - [`VALIDATION_RECEIPT_v0_1.json`](VALIDATION_RECEIPT_v0_1.json) for the sealed
   file hashes and validation claim boundary.
 
+Prospective theorem and experiment seeds also follow the
+[`prior-art-before-freeze standard`](PRIOR_ART_BEFORE_FREEZE_STANDARD_v0_1.md).
+The [`structured observation-kernel motif`](STRUCTURED_OBSERVATION_KERNEL_MOTIF_v0_1.md)
+records a recurring instrument pattern without promoting elementary
+rank-nullity into a novelty claim.
+
 Validate the frozen structure with:
 
 ```powershell
