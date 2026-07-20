@@ -1,0 +1,38 @@
+{
+  "schema_version": "asmp12_finite_program_frontier_registration_v0_1",
+  "problem_id": "ASMP-12",
+  "registered_utc": "2026-07-20T15:25:00Z",
+  "status": "frozen_before_execution",
+  "prior_art_commit": "e9e76dae989ecb79fb2b37a30e23b71c4b7525bf",
+  "source_commit": "53c6cb2cb4d5cac0b0ea772a704276a0a18f6c91",
+  "prior_art_disposition": "partial_extension_as_instrument_no_theorem_novelty",
+  "bindings": {
+    "prior_art_sha256": "9fd0606ff82af0da3441efe895ccae22755ebe27295dce8f6c67457c3806bd3f",
+    "protocol_sha256": "d117ca56f20b0da54d7d0b6d8c2971cc747af125e878e3ffe7fa49a43c3e4918",
+    "runner_sha256": "582e1c989b5763f92cebf75798e3bafc2220c71760a25022ad5f25ea30d7de72",
+    "tests_sha256": "4d15145513ded7bf379a009c7bb7ad69ae99538f2341fd6a24c1f86e0103a6c4"
+  },
+  "universe": {
+    "program_count": 3,
+    "response_rows": 8,
+    "catalogs": 512,
+    "games": ["prisoners_dilemma", "stag_hunt", "chicken"],
+    "primary_costs": [1, 2, 3],
+    "padded_costs": [3, 4, 5],
+    "equilibrium_scope": "pure_only"
+  },
+  "gates": [
+    "U0_universe",
+    "W0_witness",
+    "L0_liveness",
+    "E0_extensional_control",
+    "N0_source_blind_null",
+    "P0_padding"
+  ],
+  "decision_rule": {
+    "all_gates_pass": "finite_pure_frontier_nonmonotonicity_demonstrated",
+    "otherwise": "instrument_failed"
+  },
+  "command": "python ultra-experiments/millennium/asmp12_program_equilibrium/run_frontier.py --registration ultra-experiments/millennium/asmp12_program_equilibrium/registration_v0_1.json --output-dir ultra-experiments/millennium/asmp12_program_equilibrium/artifacts_v0_1",
+  "claim_boundary": "This exact finite census can demonstrate nonmonotonicity and syntax-sensitive deaths only for pure equilibria in the registered three-program source-table language. It does not characterize mixed or unrestricted program equilibria, bounded proof systems, simulation-based folk theorems, selection dynamics, or real AI cooperation."
+}
