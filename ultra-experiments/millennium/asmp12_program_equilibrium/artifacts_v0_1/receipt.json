@@ -1,0 +1,7 @@
+{
+  "registration_sha256": "a958cd8647f17d5be4446bb650e79c4fbc3ebc6694f8dc2d0a16ecb354a80914",
+  "registration_source_commit": "53c6cb2cb4d5cac0b0ea772a704276a0a18f6c91",
+  "result_sha256": "7416476c6cfc85a0b538e4c5956b39741f9b1521fd26f7fbfbfd8056a971f887",
+  "schema_version": "asmp12_finite_program_frontier_receipt_v0_1",
+  "verdict": "finite_pure_frontier_nonmonotonicity_demonstrated"
+}

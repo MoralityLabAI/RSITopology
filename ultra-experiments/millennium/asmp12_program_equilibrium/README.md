@@ -16,3 +16,5 @@ python -m pytest ultra-experiments/millennium/asmp12_program_equilibrium/test_fr
 
 The claim-eligible census requires a source-bound `registration_v0_1.json`.
 
+The completed census and its conservative interpretation are in
+`RESULT_v0_1.md`.
