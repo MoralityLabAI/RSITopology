@@ -1,0 +1,43 @@
+{
+  "schema_version": "asmp10_modular_transition_pilot_extension_config_v0_2",
+  "task_id": "asmp10-grokking-pilot-extension-v0-2",
+  "status": "pilot_only_not_claim_eligible",
+  "reason": "No registered transition occurred in any v0.1 chunk by step 4000; extend only the high-weight-decay condition to map the transition horizon.",
+  "device": "cuda",
+  "modulus": 31,
+  "train_fraction": 0.4,
+  "split_seed": 20260720,
+  "model": {
+    "d_model": 64,
+    "n_heads": 4,
+    "d_mlp": 128,
+    "n_layers": 1,
+    "dropout": 0.0
+  },
+  "optimizer": {
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.98]
+  },
+  "steps": 20000,
+  "eval_every_steps": 100,
+  "checkpoint_every_steps": 200,
+  "checkpoint_every_seconds": 60,
+  "early_feature_step": 500,
+  "transition": {
+    "test_accuracy_floor": 0.9,
+    "test_loss_ceiling": 0.5,
+    "consecutive_evaluations": 5
+  },
+  "runs": [
+    {"run_id": "seed00_wd100_h20k", "seed": 0, "weight_decay": 1.0},
+    {"run_id": "seed01_wd100_h20k", "seed": 1, "weight_decay": 1.0}
+  ],
+  "resource_intent": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "gpu_allowance_mb": 3072,
+    "timeout_seconds": 900,
+    "swap_bytes": 0
+  }
+}
