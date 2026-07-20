@@ -18,3 +18,13 @@ The claim-eligible census requires a source-bound `registration_v0_1.json`.
 
 The completed census and its conservative interpretation are in
 `RESULT_v0_1.md`.
+
+Post-result corrections and successors are additive:
+
+- `FRAMEUP_CORRECTION_v0_1.md` identifies the monotone-threshold assumption the
+  census rejected;
+- `PRIOR_ART_ADDENDUM_v0_2.md` adds the classical strategy-expansion context;
+- `PERSISTENCE_SUCCESSOR_SCOPE_v0_2.md` distinguishes a deviation-graph
+  construction from an automatic bifiltration claim; and
+- `THEY_SING_HYPOTHESIS_AMENDMENT_v0_1.md` replaces the downstream
+  threshold-only behavioral hypothesis before any run.
