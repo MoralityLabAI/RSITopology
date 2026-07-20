@@ -29,5 +29,7 @@ def test_twelve_decimal_isolating_interval() -> None:
 
 
 def test_characterization_is_certified() -> None:
-    assert characterization()["certified"] is True
-
+    result = characterization()
+    assert result["certified"] is True
+    assert "pairwise rho alone" in result["claim_boundary"]
+    assert result["configuration"]["parameterization"].startswith("kappa=")

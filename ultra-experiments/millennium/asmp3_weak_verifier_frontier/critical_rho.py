@@ -125,6 +125,9 @@ def characterization() -> dict[str, object]:
             "marginal_error": "1/5",
             "fp_fn_limit": "1/20",
             "model": "single-family beta-binomial exchangeable errors",
+            "parameterization": (
+                "kappa=(1-rho)/rho; alpha=(1/5)kappa; beta=(4/5)kappa"
+            ),
         },
         "threshold_polynomial_coefficients_ascending": [
             str(x) for x in THRESHOLD_POLYNOMIAL
@@ -149,7 +152,8 @@ def characterization() -> dict[str, object]:
         "certified": certified,
         "claim_boundary": (
             "Post-result exact characterization of one frozen beta-binomial cell; "
-            "not a preregistered scientific outcome or a real-verifier estimate."
+            "pairwise rho alone does not identify a nine-judgment joint law. "
+            "Not a preregistered scientific outcome or a real-verifier estimate."
         ),
     }
 
@@ -159,10 +163,10 @@ def main() -> None:
     payload = characterization()
     if not payload["certified"]:
         raise RuntimeError("critical-rho characterization failed")
-    output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    with output.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(payload, indent=2, sort_keys=True) + "\n")
     print(json.dumps(payload, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":
     main()
-

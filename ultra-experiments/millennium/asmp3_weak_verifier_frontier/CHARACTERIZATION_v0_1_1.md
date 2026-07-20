@@ -62,8 +62,12 @@ approximately `0.0591080623971`.
 This number is conditional on the registered beta-binomial exchangeability
 model, 20% marginal error, nine majority-voted calls, one verifier family, and
 a 5% error ceiling. It is not a universal correlation threshold for oversight.
+Concretely, the frozen family uses
+`kappa=(1-rho)/rho`, `alpha=(1/5)kappa`, and `beta=(4/5)kappa`.
+Pairwise `rho` alone does not determine the joint law of nine exchangeable
+Bernoulli judgments; another joint distribution with the same marginal error
+and pairwise correlation can have a different majority-error threshold.
 
 The characterization is post-result mathematics, not a preregistered outcome.
 Its value is to turn the coarse frontier row into a reproducible algebraic
 object with a certified rational isolating interval.
-
