@@ -6,6 +6,7 @@ from pathlib import Path
 import torch
 
 import train_pilot
+import train_pilot_gpu_guard_v0_2 as gpu_guard
 
 
 HERE = Path(__file__).resolve().parent
@@ -55,3 +56,14 @@ def test_two_cpu_steps_are_finite() -> None:
         assert torch.isfinite(loss)
         loss.backward()
         optimizer.step()
+
+
+def test_gpu_guard_argument_parser(tmp_path: Path) -> None:
+    config_path = tmp_path / "config.json"
+    output_path = tmp_path / "output"
+    config_path.write_text(json.dumps({"resource_intent": {"gpu_allowance_mb": 1000}}), encoding="utf-8")
+    config, output = gpu_guard.parse_config_and_output(
+        ["--config", str(config_path), "--output-dir", str(output_path)]
+    )
+    assert config["resource_intent"]["gpu_allowance_mb"] == 1000
+    assert output == output_path.resolve()
