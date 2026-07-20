@@ -1,0 +1,40 @@
+{
+  "schema_version": "asmp12_equilibrium_survival_registration_v0_2",
+  "problem_id": "ASMP-12",
+  "registered_utc": "2026-07-20T16:05:00Z",
+  "status": "frozen_before_execution",
+  "source_commit": "9416b63f6e3f061bc8fec5b29c54a877fa07934e",
+  "prior_art_disposition": "classical_equilibrium_nonmonotonicity_application_specific_exact_surface",
+  "bindings": {
+    "prior_art_addendum_sha256": "306819f0ce91a0564890ba636a5ba5dbc182dadae1dbf79323cc8e2c104fa1bd",
+    "scope_sha256": "f86f428920efb623e906baa2cd7d52eb5fdf7d530747fd8f1d565146e161588e",
+    "v1_runner_sha256": "582e1c989b5763f92cebf75798e3bafc2220c71760a25022ad5f25ea30d7de72",
+    "protocol_sha256": "d5936d0231c3c6669f2b8ee1476d462b34b30b42b4c8942cc9bed710250536ad",
+    "runner_sha256": "50d7c3cc30be5daa126d75c8806b6d6a016c01b9578921726e2d26fff66561f2",
+    "tests_sha256": "ff9dc6c83c8c2420fe26f3f5e93673a88cba5c455b56b3c731fa4e057fb04f9b"
+  },
+  "surface": {
+    "catalogs": 512,
+    "families": ["pd_order", "chicken_order"],
+    "temptations": ["0", "1/2", "1", "2", "3", "4", "5", "6"],
+    "budgets": [1, 2, 3],
+    "cooperation_reward": "3",
+    "arithmetic": "exact_rational",
+    "equilibrium_scope": "pure_only"
+  },
+  "gates": [
+    "U0_universe",
+    "F0_temptation_phase",
+    "B0_boundary_liveness",
+    "E0_decomposition",
+    "M0_margin_certificate",
+    "P0_encoding",
+    "N0_source_blind"
+  ],
+  "decision_rule": {
+    "all_gates_pass": "equilibrium_survival_phase_established_for_registered_finite_class",
+    "otherwise": "instrument_failed"
+  },
+  "command": "python ultra-experiments/millennium/asmp12_program_equilibrium/v0_2_survival/run_survival.py --registration ultra-experiments/millennium/asmp12_program_equilibrium/v0_2_survival/registration_v0_2.json --output-dir ultra-experiments/millennium/asmp12_program_equilibrium/v0_2_survival/artifacts_v0_2",
+  "claim_boundary": "Exact finite pure-equilibrium survival surface only. No ordinary bifiltration, bottleneck-stability, mixed-equilibrium, proof-agent, selection-dynamic, language-model, or deployed-cooperation claim."
+}
