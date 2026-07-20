@@ -4,6 +4,10 @@ This directory contains the preregistered exact CPU experiment crossing nested
 program budget with a temptation-payoff parameter. See `RESULT_v0_2.md` for the
 completed phase surface and claim boundary.
 
+`PUBLIC_SUMMARY_v0_2.md` is the circulation-facing narrative.
+`RESULT_CLARIFICATION_v0_2_1.md` records the exact death partition, margin
+complement, and gate/test distinction without changing the canonical result.
+
 Replay:
 
 ```powershell
