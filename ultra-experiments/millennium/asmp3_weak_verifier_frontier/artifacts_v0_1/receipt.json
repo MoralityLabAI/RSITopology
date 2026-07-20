@@ -1,0 +1,15 @@
+{
+  "executed_utc": "2026-07-20T23:04:01.431835+00:00",
+  "experiment_id": "ASMP-3-CORRELATED-NOISE-FRONTIER-v0.1",
+  "python": "stdlib-only exact Fraction arithmetic",
+  "registration_sha256": "ab25da339ffb0b8e206414e1bf93c7a5e1eb506cdf31bd28d8050b0bef38ec0a",
+  "result_sha256": "de1f4319326e8fc88df4f702a937b58e29c1f35f298345941ca7dbbb37111cdc",
+  "sealed_files": {
+    "PRIOR_ART_v0_1.md": "88e461f6cc2cd16af4a7783f927c32c6fdde15c68e3de3d8f40dfc539ca6561c",
+    "PROTOCOL_v0_1.md": "93305ef9c0075f22bef4909859a0504daa685ac69783461ec4c7b291519cc48f",
+    "README.md": "28eb5b3f80efcf84f90097541383ffaf5c840ae65df886a219f47a5c87f407a4",
+    "frontier.py": "5c65bf0cc128f02846434e37f30d9b6a998a94a0923d7f48b81ddac1ae92239c",
+    "run_frontier.py": "699229d6930ff69fd2a55b0c72e5bc106cda24476f1ca4ffc210dea48bb62601",
+    "test_frontier.py": "f15515e9a54b5cd0229a1ce18bcc06b7b80a6a8701a8a3432fa40755f9b99a3b"
+  }
+}
