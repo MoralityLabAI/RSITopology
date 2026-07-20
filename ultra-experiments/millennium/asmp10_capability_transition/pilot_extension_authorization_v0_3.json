@@ -1,0 +1,57 @@
+{
+  "schema_version": "godel_capture_authorization_v0_1",
+  "authorization_role": "compatibility schema for the validated hard-cap wrapper; ASMP-10 pilot extension with fail-closed in-process GPU guard",
+  "run_id": "asmp10-grokking-pilot-extension-v0-3",
+  "status": "authorized_pilot_only_not_claim_eligible",
+  "source_commit": "cb5a6bab6b6307c0c3762e7aee22664767345df5",
+  "wrapper_output_dir": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_wrapper_v0_3",
+  "checkpoint_strategy": "seed_chunks; every_200_steps_or_60_seconds; in_process_gpu_guard_1s",
+  "resource_caps": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 900,
+    "gpu_allowance_mb": 3072,
+    "checkpoint_every_seconds": 60,
+    "swap_bytes": 0,
+    "host_reserve_mb": 2048,
+    "minimum_free_memory_mb": 4096
+  },
+  "hard_cap_wrapper": {
+    "path": "C:\\projects\\RSITopology\\scripts\\run_qwen_holonomy_jobobject.ps1",
+    "sha256": "6068d6e4d7fa5b85d2f8ddc3021652c8445088c217784243d7371c97cbf4237e"
+  },
+  "hard_cap_validation_receipt": {
+    "path": "C:\\projects\\RSITopology\\artifacts\\hard_cap_validation\\asmp10_grokking_v0_1\\hard_cap_validation_receipt.json",
+    "sha256": "233486f7dfa43badee804118b0667c0edc632ca247b1113dc7e53d5e844905a3"
+  },
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+    "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+  },
+  "sealed_inputs": {
+    "trainer": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\train_pilot_gpu_guard_v0_2.py",
+      "sha256": "e18b96df5604cfa8db381d5a5aa501d6fe2bad9cb6e9be5b95b6615e702baea0"
+    },
+    "base_trainer": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\train_pilot.py",
+      "sha256": "480b06250a20a50c1a36048736eeb408a9da3739d64729017f88b1780d32fe9d"
+    },
+    "config": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_extension_config_v0_2.json",
+      "sha256": "b44f9efdb20a13075303193797a919afc0f1e5a5170627fdb8e6613a88158eed"
+    }
+  },
+  "capture_parameters": {
+    "output_dir": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_artifacts_v0_3"
+  },
+  "exact_inner_command": [
+    "C:\\Python311\\python.exe",
+    "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\train_pilot_gpu_guard_v0_2.py",
+    "--config",
+    "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_extension_config_v0_2.json",
+    "--output-dir",
+    "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_artifacts_v0_3"
+  ]
+}
