@@ -7,6 +7,8 @@ completed phase surface and claim boundary.
 `PUBLIC_SUMMARY_v0_2.md` is the circulation-facing narrative.
 `RESULT_CLARIFICATION_v0_2_1.md` records the exact death partition, margin
 complement, and gate/test distinction without changing the canonical result.
+`SUBSTACK_DRAFT_v0_1.md` is a general-audience treatment of the same finite
+result; the sealed technical artifacts remain authoritative.
 
 Replay:
 

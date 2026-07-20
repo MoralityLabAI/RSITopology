@@ -1,4 +1,4 @@
-# When More Verification Options Destroy Cooperation
+# When More Admissible Programs Destroy Cooperation
 
 ## An exact finite program-equilibrium survival experiment
 
@@ -59,15 +59,17 @@ The total partitions as follows:
 
 | catalog class and mechanism | count |
 |---|---:|
-| Duplicate-extensional catalogs with genuinely new behavioral deviations | 134 |
+| Extensional catalogs with genuinely new behavioral deviations | 134 |
 | Non-extensional catalogs exploiting a behaviorally identical program under a different source label | 16 |
 | Other non-extensional deaths | 24 |
 | **Total** | **174** |
 
-Equivalently, 134 deaths occurred among the 374 catalogs satisfying the
-duplicate-extensionality restriction, while 40 occurred among the 138
-non-extensional catalogs. The syntax-equivalence mechanism accounts for 16 of
-those 40, not for all non-extensional deaths.
+Here an **extensional catalog** satisfies the registered restriction that
+behaviorally identical programs are treated identically, even when their
+public source labels differ. Exactly 134 deaths occurred among the 374
+extensional catalogs, while 40 occurred among the 138 non-extensional
+catalogs. The syntax-equivalence mechanism accounts for 16 of those 40, not
+for all non-extensional deaths.
 
 This matters because it separates two conclusions:
 
@@ -155,4 +157,3 @@ the registered three-program lookup-table language and two payoff families. It
 does not characterize mixed or unrestricted program equilibria, bounded proof
 search, equilibrium-selection dynamics, language-model source conditioning,
 or cooperation among deployed systems.
-
