@@ -1,0 +1,30 @@
+{
+  "schema_version": "asmp10_prefix_obstruction_registration_v0_1",
+  "problem_id": "ASMP-10",
+  "registered_utc": "2026-07-20T14:50:00Z",
+  "source_commit": "a99c17fa8f8ed4fe1fcc5713d934f965744d9914",
+  "status": "frozen_before_execution",
+  "bindings": {
+    "protocol_sha256": "1397c477bb00062af12ff38c98c70f32cee5ad9b14bdead829c6b0efbd51e192",
+    "runner_sha256": "b5bc28663e9d0626030d106fa0615a416b03f1175d581e1252ecf1bc660ed0ee",
+    "tests_sha256": "a2af3527a0643633f65dde737f638fcd54cd53b511a7a15ea3d774d867b51013"
+  },
+  "census": {
+    "n_nodes": [1, 2, 3, 4, 6],
+    "jet_order": [1, 2, 3],
+    "degree_rule": ["max(0,J-2)", "J-1", "J", "J+1"],
+    "arithmetic": "exact_rational"
+  },
+  "gates": {
+    "R0_exact_rank": "all rows equal min(D+1,n(k+1))",
+    "I0_identification": "all D=J-1 rows have nullity zero",
+    "O0_obstruction": "all D=J witnesses match jets and prefix but have future scores exactly -1 and +1",
+    "C0_controls": "both positive-nullity and zero-nullity rows occur"
+  },
+  "decision_rule": {
+    "all_gates_pass": "finite_prefix_obstruction_established_for_registered_class",
+    "otherwise": "instrument_failed"
+  },
+  "command": "python ultra-experiments/millennium/asmp10_capability_transition/prefix_obstruction/run_prefix_obstruction.py --registration ultra-experiments/millennium/asmp10_capability_transition/prefix_obstruction/registration_v0_1.json --output-dir ultra-experiments/millennium/asmp10_capability_transition/prefix_obstruction/artifacts_v0_1",
+  "claim_boundary": "This exact CPU experiment establishes only the Hermite-interpolation identification/obstruction boundary for the registered one-dimensional bounded-degree polynomial loss class and finite jet filtration. It is not a neural-network capability forecast, an impossibility result for narrower training families, or evidence about recursive self-improvement."
+}
