@@ -6,7 +6,7 @@ This is a non-normative review aid for `ASMP-CANDIDATE-SET-v0.1`. The canonical 
 
 The set contains seven proposed long-horizon mathematical problems for AI safety. They are candidate research problems, not Clay Mathematics Institute prizes, and have not yet received the external field review required for public-prize status.
 
-## Progress accounting as of 2026-07-20
+## Progress accounting as of 2026-07-21
 
 - **Formally addressed under an exact ASMP problem ID and prospectively frozen
   claim boundary:** 6 of 7 (`ASMP-1`, `ASMP-2`, `ASMP-3`, `ASMP-4`,
@@ -44,7 +44,7 @@ or bounded theorem meets that standard.
 | ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Formally addressed, unresolved.** The [registered two-port result](asmp4_two_port_game/RESULT.md) gives an exact 108-cell phase map for one finite rational architecture and separates read- and write-deficient controls. It does not establish necessary and sufficient confinement conditions in the canonical scope. |
 | ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; first execution unavailable.** The [registered verifier-drift census](asmp5_verifier_drift/RESULT.md) reached its frozen wall-time cap before emitting a scientific result. The resource-cap stop is evidence that the instrument needs a versioned implementation or budget repair, not evidence for or against reflective safety. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Not yet formally addressed.** Steganographic-collusion and covert-channel eval concepts remain candidate instruments. |
-| ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry and computes an exact charged-audit privacy/cost frontier. It assumes trusted-meter coverage and does not establish real-model or transformation-universal attestability. |
+| ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry. The [excluded-band successor](asmp7_attestability_frontier/RESULT_v0_2_1.md) computes 40 exact nonzero-gap audit minima and calibrates how cost grows as the policy boundary narrows. Both assume trusted-meter coverage and establish neither real-model nor transformation-universal attestability. |
 
 ## ASMP-1 evidence chain
 

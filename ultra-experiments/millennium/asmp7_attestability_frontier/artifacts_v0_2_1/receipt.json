@@ -1,0 +1,27 @@
+{
+  "environment": {
+    "gate_arithmetic": "integer binomial numerators and fractions.Fraction",
+    "gpu": "not used",
+    "implementation": "CPython",
+    "python": "3.11.4",
+    "scipy_role": "candidate_location_only"
+  },
+  "executed_utc": "2026-07-21T16:02:26.669219+00:00",
+  "experiment_id": "ASMP-7-EXCLUDED-BAND-DEGRADATION-v0.2.1",
+  "frontier_csv_sha256": "850b59175876bbc413cbd1fdb0c7abbff9e74069b21ba852147a315014230468",
+  "registration_sha256": "7a56a4a90c7b4d7e48960c417a1a6b5e0e702720d8caba9f9c6818f0dcd91647",
+  "result_sha256": "39e8c12267a4a0e4ec2397960b00e63eed590c4ae30b15e21052b52b37e0af78",
+  "sealed_files": {
+    "PRIOR_ART_v0_2.md": "848d607f2185ed0034a9a19f06171a0009f2da6f5918e79a9e7a65957ba6a8b5",
+    "PROTOCOL_v0_2.md": "8b628b1a439e41a93640a2eed069477362a36fa3725e1a46504800cd6a5c2eeb",
+    "PROTOCOL_v0_2_1.md": "d4e08682f5a4e685c1e4c600508785bb3e5c117a1ae9ad22172baee46a782dd9",
+    "README_v0_2_1.md": "917e9466176321127ba4c6dd80b9c82d7a9eb5be1cc8052b5e0cddb67278be19",
+    "artifacts_v0_2/failure_receipt.json": "3acdb71746288f62ff6888dcf361524824a7a095e273ac75f6a10044625d1bc0",
+    "boundary_frontier.py": "ff2e17872c6f19c28d1a9d4d565855c7c2ee12f60a7d04a3cb00b0393c57736a",
+    "registration_v0_2.json": "ceaea8469a1341a33408f96d75a03b492140adbe9cb3369a419998b34db2ba92",
+    "run_boundary_frontier.py": "f9d3d2f2aaa95447c1f0abbc1a78496c95cabaffd70c149393cf3955de79b602",
+    "run_boundary_frontier_v0_2_1.py": "01e3667284234ce465697b012b5b6863779e81bb557f7771d6c61c4b79d71918",
+    "test_boundary_frontier.py": "f16acff2aa54e349c567529119e44fd92b9f3c7d9dcb89638b7e0dffcc6813e6",
+    "test_boundary_serialization_v0_2_1.py": "6a2a9d9b21c33c594a1b8eda3a9d681be9378869b371dd29e028bba35da6844f"
+  }
+}
