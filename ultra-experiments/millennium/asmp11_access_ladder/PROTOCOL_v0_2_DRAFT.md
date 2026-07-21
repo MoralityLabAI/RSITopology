@@ -6,20 +6,24 @@ Design draft only. This file is not registered and authorizes no
 claim-eligible run. Prior-art review, independent hostile review, numeric pilot
 calibration, and a separate registration commit are required before outcomes.
 
+The construction pilot in `pilot_v0_2/` is complete and non-claim-eligible. It
+found no sample-cost inversion on the matched boundary `r+s=k`; inversion
+appeared only after purchasing larger intervention width. The successor target
+is therefore the exact covering-number frontier described below.
+
 ## Question
 
 Does the exact population boundary `r+s=k` remain a useful predictor of
-finite-sample detectability, and can a frozen adaptive value-injection strategy
-reverse the v0.1 cost ordering against nonadaptive exhaustive access?
+finite-sample detectability, and at what intervention width does a complete
+covering design reverse the sample-cost ordering against pure observation?
 
-The primary quantitative hypothesis is a **cost-ordering inversion**: on at
-least one prospectively frozen scaling sequence, the adaptive intervention arm
-reaches the same held-out power and familywise false-positive target using
-strictly fewer total oracle samples than the nonadaptive exhaustive arm. The
-first dimension at which the simultaneous confidence bound clears the frozen
-practical margin is the crossover point. No crossover yields
-`cost_inversion_not_established`; it is not repaired by changing the strategy
-or grid after reveal.
+The primary quantitative hypothesis is a **covering-mediated sample-cost
+inversion**: on at least one prospectively frozen scaling sequence, an exact
+or solver-certified `(n,s,k)` covering design reaches the same false-positive
+and power targets using fewer total oracle samples than pure order-`k`
+observation. The first intervention width where this occurs is the crossover.
+No crossover yields `cost_inversion_not_established`; it is not repaired by
+changing the grid after reveal.
 
 ## Statistical object
 
@@ -36,29 +40,29 @@ or grid after reveal.
 
 ## Arms
 
-1. **Nonadaptive exhaustive:** query every registered `(I,a,S)` coordinate and
-   threshold the maximum absolute held-out correlation using a familywise null
-   calibration.
-2. **Adaptive value injection:** a source-frozen strategy selects the next
-   `(I,a,S)` from prior prereveal responses. Its stopping and tie-breaking
-   rules, maximum queries, and sample allocation are sealed.
-3. **Matched random-query control:** same query and sample budget as the
-   adaptive arm, with seeded draws from the identical admissible universe.
+1. **Pure-observation baseline:** query every degree-`k` Walsh coordinate and
+   threshold the maximum absolute correlation using the registered exact
+   familywise bound.
+2. **Covering-design intervention:** query a minimum or certified-bounded
+   family of width-`s` fixed sets covering every possible `k`-support.
+3. **Matched random-cover control:** draw the same number of width-`s` blocks;
+   report uncovered support mass and never treat an incomplete random family
+   as a uniform detector.
 4. **Population oracle control:** exact expectations reproduce the v0.1
    boundary and separate implementation failure from sampling failure.
 
-The adaptive algorithm must be selected on disjoint construction supports and
-evaluated on held-out supports/signs/seeds. If no adaptive policy survives the
-pilot without outcome-conditioned tuning, the adaptive claim is unavailable;
-the nonadaptive finite-sample surface may still run.
+Any additional adaptive heuristic must be selected on disjoint construction
+supports and evaluated on held-out supports/signs/seeds. It is secondary to the
+covering optimum and cannot pass uniform detection without covering every
+support along its all-negative transcript.
 
 ## Important access-model qualification
 
 Parity's statistical-query hardness makes the sampled observation arm a live
 hard regime. It does **not** imply that the registered parent-fixing oracle has
-a polynomial adaptive algorithm. Fixing unknown input coordinates may still
-require a combinatorial support search. Before registration, the adaptive
-strategy must therefore provide either:
+a polynomial adaptive algorithm. Fixing unknown input coordinates induces a
+covering problem. Before registration, any adaptive-efficiency claim must
+therefore provide either:
 
 1. a checked query-complexity bound under the exact parent-fixing grammar; or
 2. a separately labelled Angluin-style internal-wire value-injection arm with
@@ -72,53 +76,58 @@ bounds are proved for the registered grammar.
 
 ## Gate semantics under finite sampling
 
-The protocol uses two evidence types and never conflates them:
+The synthetic registry has known Bernoulli laws, so finite sampling does not
+force the primary gates to depend on realized Monte Carlo estimates. The
+protocol uses three evidence types and never conflates them:
 
 - **Exact anchor gates** (`P0`, structural portions of `B0` and `S0`) are
   deterministic population statements. They retain exact arithmetic and
   byte-identical replay requirements.
-- **Sampled decision gates** (`N0`, `L0`, `A0`, and the crossover decision) use
-  a preregistered estimator, independent mechanism/seed replicates, one-sided
-  simultaneous confidence bounds, and frozen practical margins. Their outputs
-  are `pass`, `fail`, or `inconclusive`; equality is inconclusive.
+- **Exact finite-sample design gates** compute the null tail, conservative
+  familywise-error bound, and planted power as rational binomial sums under the
+  frozen synthetic law. These probabilities describe a finite-sample test but
+  are not estimated from one realized sample.
+- **Monte Carlo replay**, if run, is calibration evidence only. It uses frozen
+  independent replicates and simultaneous confidence bounds, but cannot
+  override or replace the analytic gate.
 
-The registration must freeze the estimator, familywise level, multiplicity
-method, replicate unit, stopping rule, and every numerical margin. Byte hashes
-certify which code and samples ran; they do not turn a confidence statement
-into an exact theorem. An invalid exact anchor makes the instrument invalid.
-A statistically inconclusive sampled arm leaves that arm not established but
-does not rewrite the exact population result.
+The registration must freeze the test statistic, familywise level,
+multiplicity bound, power floor, sample cap, and every numerical margin. A
+future real-model successor must additionally freeze its estimator, replicate
+unit, confidence procedure, and stopping rule. Byte hashes certify which code
+and samples ran; they do not turn an empirical confidence statement into an
+exact theorem. An invalid exact anchor makes the instrument invalid.
 
 ## Primary endpoints
 
 - held-out detection power at frozen familywise false-positive rate;
 - queries and total oracle samples needed to reach the target power;
 - power as a function of signed boundary distance `r+s-k`;
-- adaptive-versus-random and adaptive-versus-exhaustive cost ratios within
+- covering-versus-random and covering-versus-pure-observation cost ratios within
   `(k, noise, target-power)` strata.
-- the first prospectively frozen dimension at which adaptive intervention
-  clears the cost-inversion margin for two consecutive scaling cells; this is
-  the primary crossover endpoint.
+- the exact or solver-certified covering number `C(n,s,k)` and its elementary
+  counting lower bound `ceil(binom(n,k)/binom(s,k))`;
+- the first prospectively frozen intervention width at which the covering
+  design clears the pure-observation sample cost for two consecutive scaling
+  cells; this is the primary crossover endpoint.
 
 ## Required gates before the claim-eligible run
 
 - `P0 population replay`: v0.1 `r+s=k` boundary is reproduced exactly.
-- `N0 null calibration`: the simultaneous false-positive upper confidence
-  bound clears the frozen ceiling on disjoint null seeds.
-- `L0 finite-sample liveness`: at least one above-boundary cell reaches the
-  target power within the resource cap.
+- `N0 null calibration`: the exact rational union-bound familywise error does
+  not exceed the frozen ceiling.
+- `L0 finite-sample liveness`: the exact rational planted power reaches the
+  target within the sample cap in every registered primary cell.
 - `B0 blindness control`: below-boundary power remains at the null level for
   every arm; failure means the implementation leaked forbidden statistics.
 - `S0 simulator audit`: every query made by an arm belongs to its declared
   access class, and stronger-class simulation is checked mechanically.
-- `A0 adaptive validity`: adaptive selection beats matched random queries on
-  held-out supports by the frozen practical and simultaneous-confidence
-  margins. Failure makes adaptive efficiency `not_established`; it does not
-  invalidate the nonadaptive surface.
-- `X0 cost-ordering inversion`: at matched held-out power and familywise false-
-  positive control, the adaptive arm's upper confidence bound on total oracle
-  samples lies below the exhaustive arm's lower bound by the frozen practical
-  ratio for two consecutive scaling cells. A single-cell crossing is reported
+- `A0 covering validity`: every selected block family covers every registered
+  `k`-support; solver optimality or gap status is reported exactly as emitted.
+  An incomplete family cannot support a uniform detection claim.
+- `X0 cost-ordering inversion`: at matched false-positive and power control,
+  the covering arm's certified total oracle samples lie below pure observation
+  for two consecutive scaling cells. A single-cell crossing is reported
   descriptively and cannot pass `X0`.
 - `C0 cost accounting`: query count, oracle samples, CPU time, and intervention
   assignments are reported separately. No scalar “access budget” is formed
@@ -128,6 +137,6 @@ does not rewrite the exact population result.
 
 Even a positive v0.2 result would concern a noisy parity SQ/value-injection
 oracle, not arbitrary white-box detectors, LPN hardness, obfuscated networks,
-or language-model backdoors. Failure of the adaptive arm would reject one
-strategy, not prove causal interventions inefficient. The exact v0.1 result
-remains unchanged.
+or language-model backdoors. Failure of the covering crossover would reject a
+sample-cost inversion on the registered grid, not prove causal interventions
+inefficient. The exact v0.1 result remains unchanged.
