@@ -26,8 +26,8 @@ held-out support/sign ensembles.
 
 Causal access substitutes for observation order: fixing one parent of a parity
 reduces its remaining degree by one. But this algebraic trade is not a query
-efficiency theorem. Under the registered exhaustive grammar, the cheapest
-boundary point is always pure observation:
+efficiency theorem. Under the registered **nonadaptive exhaustive** grammar,
+the cheapest boundary point is always pure observation:
 
 | Degree | Cheapest boundary `(r,s)` | Exhaustive queries | Pure causal `(0,k)` queries |
 |---:|---:|---:|---:|
@@ -39,7 +39,8 @@ boundary point is always pure observation:
 
 Thus “causal interventions expose hidden structure” and “causal interventions
 are cheaper” are distinct claims. The first is exact in this seed; the second
-is false under its exhaustive query accounting.
+is false only under its nonadaptive exhaustive query accounting. No adaptive
+query lower bound was proved.
 
 ## Controls
 
@@ -60,6 +61,15 @@ For Silico or the identity-attestation harness, a detector should report both
 its observation order and causal-intervention budget, plus the actual query
 count. Collapsing these into a single “white-box access” label discards the
 measured boundary.
+
+## Prior art
+
+The registered [prior-art boundary](PRIOR_ART_v0_1.md) and the additive
+[access-model addendum](PRIOR_ART_ADDENDUM_v0_1.md) position this seed beneath
+the Boolean-Fourier/SQ parity literature, noisy-parity/LPN work, Angluin et
+al.'s value-injection query model, and existing white-box-undetectability
+constructions. In particular, the intervention coordinate has a direct circuit-
+learning ancestor and is not introduced here as a novel query model.
 
 ## Claim boundary
 

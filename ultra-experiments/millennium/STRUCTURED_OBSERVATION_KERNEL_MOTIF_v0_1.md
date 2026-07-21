@@ -19,7 +19,7 @@ the threshold sharp.
 |---|---|---|---|---|
 | ASMP-1 interaction tomography | maximum intervention order | Boolean Fourier/factorial-design degree | higher-order parity | theorem seed and real-model falsification executed |
 | ASMP-9 reward-gauge census | loop-query/cycle rank | graph cohomology, `beta_1=m-n+c` | unqueried cycle circulation | exact finite census executed |
-| ASMP-11 white-box detectability candidate | observation order × causal-fixing budget | exact Boolean boundary `r+s=k` for the registered parity seed | planted mechanism invisible below the boundary | executed finite instrument; no cryptographic or real-model claim |
+| ASMP-11 white-box detectability candidate | ordered access pair `(r,s)`; boundary uses the sum of observation order and causal-fixing budget | exact Boolean boundary `r+s=k` for the registered parity seed | planted mechanism invisible below the boundary | executed finite instrument; no cryptographic or real-model claim |
 | ASMP-10 prefix obstruction | derivative/jet order | confluent Vandermonde/Hermite rank | multiplicity product `q(x)` | exact theorem seed executed |
 
 ## What would make a family statement nontrivial
