@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "Exact Boolean oracle-access instrument only; not a white-box cryptographic lower bound or real-model backdoor result.",
+  "counts": {
+    "access_cells": 245,
+    "planted_mechanisms": 114
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_complete_census": true,
+    "G2_paired_benign_and_spectrum_match": true,
+    "G3_exact_blindness_below_boundary": true,
+    "G4_exact_detection_at_boundary": true,
+    "G5_access_lattice_simulator": true,
+    "G6_support_holdout": true,
+    "G7_minimum_total_resource": true
+  },
+  "minimum_total_resource": {
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6
+  },
+  "schema_version": "asmp11_access_ladder_result_v0_1",
+  "verdict": "finite_access_ladder_established"
+}

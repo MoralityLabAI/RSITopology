@@ -1,0 +1,16 @@
+{
+  "elapsed_seconds": 3.3266255855560303,
+  "environment": {
+    "cpu_count": 12,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]"
+  },
+  "outputs": {
+    "access_ladder.csv": "14da4587e49ffc85d2049598016498682c93e2eb6291e2a68a5f8520f7c7b61f",
+    "result.json": "325ba3ec636f084e39f6e9b9961bff6f4c71ada66563af2b220cb875e805fe4f"
+  },
+  "protocol_sha256": "366e42c54d0afcde1535a82ed82dda2c3b0629f694816bcdc30b9c2735389bfa",
+  "registration_sha256": "4a16556d0fb23525d078f7f12198a01842122bf9424dbd174e2b39cd86750bff",
+  "schema_version": "asmp11_access_ladder_receipt_v0_1",
+  "source_commit": "d7777cc0b7c44c6cf617d5c22ad869d0241cd637"
+}

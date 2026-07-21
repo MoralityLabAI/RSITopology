@@ -14,6 +14,9 @@ Additive work toward a possible v0.2 is kept separate from the frozen seven in
 - [`V0_2_INPUT_RECEIPT.json`](V0_2_INPUT_RECEIPT.json) records the filename,
   byte count, and SHA-256 of the supplied brainstorm source used during
   reconciliation.
+- [`V0_2_EXPERIMENT_PROGRESS_v0_1.md`](V0_2_EXPERIMENT_PROGRESS_v0_1.md)
+  separates bounded executed seeds from admission to, or resolution of, a
+  future frozen problem set.
 
 Run:
 
