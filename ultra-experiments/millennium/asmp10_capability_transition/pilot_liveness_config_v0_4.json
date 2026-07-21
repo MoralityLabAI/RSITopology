@@ -1,0 +1,51 @@
+{
+  "schema_version": "asmp10_modular_transition_liveness_config_v0_4",
+  "task_id": "asmp10-grokking-liveness-v0-4",
+  "status": "pilot_only_not_claim_eligible",
+  "device": "cuda",
+  "modulus": 31,
+  "split_seed": 20260721,
+  "model": {
+    "d_model": 64,
+    "n_heads": 4,
+    "d_mlp": 128,
+    "n_layers": 1,
+    "dropout": 0.0
+  },
+  "optimizer": {
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.98]
+  },
+  "steps": 15000,
+  "eval_every_steps": 100,
+  "checkpoint_every_steps": 200,
+  "checkpoint_every_seconds": 60,
+  "early_feature_step": 500,
+  "transition": {
+    "test_accuracy_floor": 0.9,
+    "test_loss_ceiling": 0.5,
+    "consecutive_evaluations": 5
+  },
+  "memorization": {
+    "train_accuracy_floor": 0.99,
+    "consecutive_evaluations": 5
+  },
+  "minimum_delay_steps": 500,
+  "runs": [
+    {"run_id": "seed07_tf040_wd100", "seed": 7, "train_fraction": 0.4, "weight_decay": 1.0},
+    {"run_id": "seed07_tf040_wd200", "seed": 7, "train_fraction": 0.4, "weight_decay": 2.0},
+    {"run_id": "seed07_tf055_wd100", "seed": 7, "train_fraction": 0.55, "weight_decay": 1.0},
+    {"run_id": "seed07_tf055_wd200", "seed": 7, "train_fraction": 0.55, "weight_decay": 2.0},
+    {"run_id": "seed07_tf070_wd100", "seed": 7, "train_fraction": 0.7, "weight_decay": 1.0},
+    {"run_id": "seed07_tf070_wd200", "seed": 7, "train_fraction": 0.7, "weight_decay": 2.0}
+  ],
+  "resource_intent": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "gpu_allowance_mb": 3072,
+    "allocator_hard_cap_mb": 2048,
+    "timeout_seconds": 1800,
+    "swap_bytes": 0
+  }
+}
