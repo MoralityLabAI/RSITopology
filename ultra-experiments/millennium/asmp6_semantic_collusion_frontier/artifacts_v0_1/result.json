@@ -1,0 +1,37 @@
+{
+  "claim_boundary": "Exact finite four-symbol registry only; no asymptotic capacity, learned collusion, or linguistic codebook claim.",
+  "counts": {
+    "audit_maps": 256,
+    "chi2_cover_given_stego_finite_codes": 471,
+    "chi2_stego_given_cover_finite_codes": 1225,
+    "encoder_laws": 35,
+    "frontier_cells": 40,
+    "ordered_codes": 1225,
+    "zero_mixture_covertness_codes": 19
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_complete_census": true,
+    "G2_covertness_definition_separation": true,
+    "G3_full_audit_kill": true,
+    "G4_audit_monotonicity": true,
+    "G5_dual_chi_squared_support": true
+  },
+  "headline": {
+    "full_charge_error": {
+      "denominator": 2,
+      "numerator": 1
+    },
+    "mixture_zero_detectability_no_audit_error": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "per_message_zero_detectability_no_audit_error": {
+      "denominator": 2,
+      "numerator": 1
+    }
+  },
+  "precision": "fractions.Fraction exact rational arithmetic",
+  "schema_version": "asmp6_semantic_collusion_frontier_result_v0_1",
+  "verdict": "finite_registry_frontier_established"
+}
