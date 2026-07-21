@@ -1,0 +1,19 @@
+{
+  "elapsed_seconds": 51.263291358947754,
+  "environment": {
+    "cpu_count": 12,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "scipy": "1.16.2"
+  },
+  "outputs": {
+    "covering_witnesses.json": "32566411b42b71271beb1ed478c5e12fb8f1d0dccb89b0cca066d786018ad990",
+    "crossovers.csv": "2d0f0280399d7245db197547b64dda8057b3023ab797801e2fd6486622f50e72",
+    "frontier.csv": "2551f33e8de92f720e25006c843306c65dcf06d78053d052a68a7412812c10f3",
+    "result.json": "7b958c25b181ba4318b014ec770221c50ce6c619686891e67d8ea1bd6bb5df8c"
+  },
+  "protocol_sha256": "91e6c75ed1b5a95211b0579d9978072975359a8edf48a23aae69c88f504e66eb",
+  "registration_sha256": "e96b3651005ccab9b921ba0da11c6f6409f54a30924aaf114678db632b09d713",
+  "schema_version": "asmp11_covering_frontier_receipt_v0_2",
+  "source_commit": "87fe8fbf7e6be8c81c48ad77cd1b81d909725e2b"
+}

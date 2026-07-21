@@ -17,3 +17,7 @@ python ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/
 ```
 
 Outputs are write-once under `artifacts_v0_2/`.
+
+The completed result is in `RESULT_v0_2.md`. Interpret every sample-cost
+crossover jointly with its intervention width; the experiment claims no
+overall resource dominance.

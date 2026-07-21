@@ -13,7 +13,7 @@ it.
 | ASMP-9 reward-gauge access | completed exact finite census | finite access threshold only; generic reward identifiability substantially prior art |
 | ASMP-10 capability transitions | completed exact prefix-obstruction seed; empirical pilot bounded | Hermite-interpolation obstruction for the frozen observable class, not a training-dynamics theorem |
 | ASMP-5A bounded tiling | not yet registered | remaining quantitative subproblem of ASMP-5 |
-| ASMP-11 conditional-defection detectability | completed exact Boolean access-ladder seed | sharp `r+s=k` parity boundary; no cryptographic or real-model claim |
+| ASMP-11 conditional-defection detectability | completed exact Boolean access-ladder seed and covering-mediated finite-sample successor | sharp `r+s=k` parity boundary plus a solver-certified sample-cost crossover for designed high-width interventions; no cryptographic or real-model claim |
 | ASMP-12 program-equilibrium frontier | completed exact finite censuses | non-monotone cooperation birth/death in finite catalog filtrations |
 
 Five proposed top-level additions now have bounded executed seeds. The only
