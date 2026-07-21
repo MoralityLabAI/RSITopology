@@ -19,6 +19,12 @@
     }
   },
   "order_three_counterexample": {
+    "dual": "1{S>=5} <= S/15-(S)_2/15+(S)_3/30",
+    "dual_expectation": {
+      "decimal": 0.0624,
+      "exact": "39/625"
+    },
+    "dual_valid_on_counts_0_to_9": true,
     "law": {
       "0": "136/625",
       "2": "84/125",

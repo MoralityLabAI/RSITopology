@@ -34,6 +34,23 @@ P(S>=5)=39/625=6.24%.
 It is therefore an exact counterexample to certification from the first three
 binomial moments.
 
+The matching dual certificate is
+
+```text
+1{S>=5} <= S/15 - (S)_2/15 + (S)_3/30.
+```
+
+It holds at every `S in {0,...,9}`. Under the frozen first three moments its
+expectation is exactly
+
+```text
+(9/5)/15 - (72/25)/15 + (504/125)/30
+= 39/625.
+```
+
+Thus the displayed order-three law is not merely blocking: it attains the
+certified sharp upper envelope.
+
 ## Sufficiency and sharpness at order four
 
 For every count `S in {0,...,9}`,
@@ -79,4 +96,3 @@ data, which this exact calculation does not price.
 The probability mathematics is a specialization of the classical discrete
 binomial moment problem. The contribution is the executable frozen-tuple
 certificate and its oversight interpretation, not a new moment inequality.
-

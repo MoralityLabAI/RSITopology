@@ -115,6 +115,14 @@ def order_four_dual(count: int) -> Fraction:
     return falling(count, 4) / 120
 
 
+def order_three_dual(count: int) -> Fraction:
+    return (
+        Fraction(count, 15)
+        - falling(count, 2) / 15
+        + falling(count, 3) / 30
+    )
+
+
 def fraction_record(value: Fraction) -> dict[str, object]:
     return {"exact": str(value), "decimal": float(value)}
 
@@ -138,6 +146,15 @@ def build_result() -> dict[str, object]:
 
     validate_law(ORDER_THREE_WITNESS, 3)
     validate_law(ORDER_FOUR_WITNESS, 4)
+    order_three_dual_valid = all(
+        order_three_dual(count) >= (1 if count >= 5 else 0)
+        for count in range(N + 1)
+    )
+    order_three_dual_expectation = (
+        reference_moment(1) / 15
+        - reference_moment(2) / 15
+        + reference_moment(3) / 30
+    )
     dual_valid = all(
         order_four_dual(count) >= (1 if count >= 5 else 0)
         for count in range(N + 1)
@@ -151,6 +168,8 @@ def build_result() -> dict[str, object]:
     certified = (
         order_three_tail == Fraction(39, 625)
         and order_three_tail > LIMIT
+        and order_three_dual_valid
+        and order_three_dual_expectation == order_three_tail
         and dual_valid
         and dual_expectation == Fraction(126, 3125)
         and order_four_tail == dual_expectation
@@ -173,6 +192,9 @@ def build_result() -> dict[str, object]:
         "order_three_counterexample": {
             "law": law_record(ORDER_THREE_WITNESS),
             "tail": fraction_record(order_three_tail),
+            "dual": "1{S>=5} <= S/15-(S)_2/15+(S)_3/30",
+            "dual_valid_on_counts_0_to_9": order_three_dual_valid,
+            "dual_expectation": fraction_record(order_three_dual_expectation),
         },
         "order_four_certificate": {
             "dual": "1{S>=5} <= (S)_4/120",
@@ -201,4 +223,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

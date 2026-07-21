@@ -6,6 +6,7 @@ from moment_order import (
     ORDER_THREE_WITNESS,
     build_result,
     exact_upper_envelope,
+    order_three_dual,
     order_four_dual,
     reference_moment,
     tail,
@@ -16,6 +17,19 @@ from moment_order import (
 def test_order_three_counterexample_matches_reference_moments() -> None:
     validate_law(ORDER_THREE_WITNESS, 3)
     assert tail(ORDER_THREE_WITNESS) == Fraction(39, 625) > LIMIT
+
+
+def test_order_three_dual_is_sharp() -> None:
+    assert all(
+        order_three_dual(count) >= (1 if count >= 5 else 0)
+        for count in range(10)
+    )
+    expectation = (
+        reference_moment(1) / 15
+        - reference_moment(2) / 15
+        + reference_moment(3) / 30
+    )
+    assert expectation == tail(ORDER_THREE_WITNESS) == Fraction(39, 625)
 
 
 def test_order_four_dual_dominates_majority_indicator() -> None:
@@ -47,4 +61,3 @@ def test_minimum_certifying_order_is_four() -> None:
     result = build_result()
     assert result["certified"] is True
     assert result["minimum_certifying_order"] == 4
-
