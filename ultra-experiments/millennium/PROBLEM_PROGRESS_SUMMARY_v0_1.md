@@ -9,19 +9,20 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
 ## Progress accounting as of 2026-07-20
 
 - **Formally addressed under an exact ASMP problem ID and prospectively frozen
-  claim boundary:** 5 of 7 (`ASMP-1`, `ASMP-2`, `ASMP-3`, `ASMP-4`, and
-  `ASMP-5`).
+  claim boundary:** 6 of 7 (`ASMP-1`, `ASMP-2`, `ASMP-3`, `ASMP-4`,
+  `ASMP-5`, and `ASMP-7`).
 - **Additional problems beyond ASMP-1 with bounded registered experimentation
-  attempted:** 4 of 7 (`ASMP-2`, `ASMP-3`, `ASMP-4`, and `ASMP-5`).
-- **Additional problems beyond ASMP-1 with completed bounded results:** 3 of 7
-  (`ASMP-2`, `ASMP-3`, and `ASMP-4`).
+  attempted:** 5 of 7 (`ASMP-2`, `ASMP-3`, `ASMP-4`, `ASMP-5`, and
+  `ASMP-7`).
+- **Additional problems beyond ASMP-1 with completed bounded results:** 4 of 7
+  (`ASMP-2`, `ASMP-3`, `ASMP-4`, and `ASMP-7`).
 - **Formally registered execution attempts ending unavailable before a
   scientific result:** 1 of 7 (`ASMP-5`, frozen resource-cap stop).
 - **Resolved at the full frozen Millennium-problem scope:** 0 of 7.
-- **Closed theorem or exact-enumeration seeds inside an addressed problem:** 3.
+- **Closed theorem or exact-enumeration seeds inside an addressed problem:** 4.
 - **Completed real-model falsification experiments inside an addressed problem:** 1.
-- **Problems remaining at proposal, review, or precursor-tool stage:** 2 of 7
-  (`ASMP-6` and `ASMP-7`).
+- **Problems remaining at proposal, review, or precursor-tool stage:** 1 of 7
+  (`ASMP-6`).
 
 “Formally addressed” means that work was prospectively registered against an
 exact ASMP problem and a frozen claim boundary. It does not require a positive
@@ -43,7 +44,7 @@ or bounded theorem meets that standard.
 | ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Formally addressed, unresolved.** The [registered two-port result](asmp4_two_port_game/RESULT.md) gives an exact 108-cell phase map for one finite rational architecture and separates read- and write-deficient controls. It does not establish necessary and sufficient confinement conditions in the canonical scope. |
 | ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; first execution unavailable.** The [registered verifier-drift census](asmp5_verifier_drift/RESULT.md) reached its frozen wall-time cap before emitting a scientific result. The resource-cap stop is evidence that the instrument needs a versioned implementation or budget repair, not evidence for or against reflective safety. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Not yet formally addressed.** Steganographic-collusion and covert-channel eval concepts remain candidate instruments. |
-| ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Not yet formally addressed.** Identity attestation, compactification false positives, and loop-closure audits are substantial precursor tools, not an ASMP-7 theorem seed. |
+| ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry and computes an exact charged-audit privacy/cost frontier. It assumes trusted-meter coverage and does not establish real-model or transformation-universal attestability. |
 
 ## ASMP-1 evidence chain
 
