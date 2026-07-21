@@ -1,0 +1,61 @@
+{
+  "schema_version": "godel_capture_authorization_v0_1",
+  "authorization_role": "compatibility schema for the validated hard-cap wrapper; ASMP-10 v0.4 construction pilot with attributable PyTorch allocator cap",
+  "run_id": "asmp10-grokking-liveness-v0-4",
+  "status": "authorized_pilot_only_not_claim_eligible",
+  "source_commit": "9df476b9438c1064663f6a4784204625ffba58fa",
+  "wrapper_output_dir": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_wrapper_v0_4",
+  "checkpoint_strategy": "six factorial seed chunks; every_200_steps_or_60_seconds; attributable_allocator_hard_cap_2048mb",
+  "resource_caps": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 1800,
+    "gpu_allowance_mb": 3072,
+    "checkpoint_every_seconds": 60,
+    "swap_bytes": 0,
+    "host_reserve_mb": 2048,
+    "minimum_free_memory_mb": 4096
+  },
+  "hard_cap_wrapper": {
+    "path": "C:\\projects\\RSITopology\\scripts\\run_qwen_holonomy_jobobject.ps1",
+    "sha256": "6068d6e4d7fa5b85d2f8ddc3021652c8445088c217784243d7371c97cbf4237e"
+  },
+  "hard_cap_validation_receipt": {
+    "path": "C:\\projects\\RSITopology\\artifacts\\hard_cap_validation\\asmp10_grokking_v0_1\\hard_cap_validation_receipt.json",
+    "sha256": "233486f7dfa43badee804118b0667c0edc632ca247b1113dc7e53d5e844905a3"
+  },
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+    "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+  },
+  "sealed_inputs": {
+    "trainer": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\train_liveness_pilot_v0_4.py",
+      "sha256": "b2be4ec53e176ceaea6e9a6dce3725ec42503b0f0127b992cbe4bc29fde73b39"
+    },
+    "base_trainer": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\train_pilot.py",
+      "sha256": "480b06250a20a50c1a36048736eeb408a9da3739d64729017f88b1780d32fe9d"
+    },
+    "config": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_liveness_config_v0_4.json",
+      "sha256": "144d9377b2329f65bdfcdaeeee4a30e7eb9940fb43026bf9212d269f61817968"
+    },
+    "plan": {
+      "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\LIVENESS_PILOT_PLAN_v0_4.md",
+      "sha256": "f9f2296ea1c3c65043dde616ac217e55c1269e4755d28b9d7972abb1b2d9c70c"
+    }
+  },
+  "capture_parameters": {
+    "output_dir": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_artifacts_v0_4"
+  },
+  "exact_inner_command": [
+    "C:\\Python311\\python.exe",
+    "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\train_liveness_pilot_v0_4.py",
+    "--config",
+    "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_liveness_config_v0_4.json",
+    "--output-dir",
+    "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp10_capability_transition\\pilot_artifacts_v0_4"
+  ]
+}
