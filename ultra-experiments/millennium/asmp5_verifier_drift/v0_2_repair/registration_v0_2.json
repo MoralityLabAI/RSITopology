@@ -1,0 +1,26 @@
+{
+  "schema_version": "asmp5_verifier_drift_registration_v0_2",
+  "protocol_id": "asmp5-verifier-drift-v0.2-repair",
+  "registered_at_utc": "2026-07-21T21:23:57.4785480Z",
+  "status": "prospective_registration_before_v0_2_claim_run",
+  "source_commit_before_registration": "44c21b41babd9df3b42cd300262c4f82b24c13f1",
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/CLAIM_PACKET_v0_2.md": "01b5ed49b874e921141995bb3fcf66380b4c0d08cfce30a15e8305613f98512a",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/PRIOR_ART_v0_2.md": "f4e6dcb1a17e639561d83bdd6a2c709eb1155f4f59b2a4c96991d34fdb00f6c4",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/README.md": "50b7f3adbd7a23f68951f38fb942b53eaa76b28f51fd13cdd3bdc2f8f2590ea5",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/protocol_v0_2.json": "8379f7e02e105b5c14e493f81dbf502c2e8813718e672379992a52477071a2d0",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/run_v0_2.py": "e4f042922e3c74afbe7d0f019925b92ceab79751b3ec417d39bfd3d66add7a3c",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/test_verifier_drift_v0_2.py": "7fa99cd9a7f8abeb10fdc240e08ec743bac7677015469e9012130c221036a88d",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/verifier_drift.py": "0b601d8931ae2626dc7af899c812e2f34b80a95564a81cd864f6cf79ccf8feb0",
+    "ultra-experiments/millennium/asmp5_verifier_drift/v0_2_repair/verify_v0_2.py": "0154cea68d4ad4ecb48c009c20b17c1e6432ba2dfbbae6ae5a677f29428f858e"
+  },
+  "claim_grid": {
+    "behavior_widths": [4, 6],
+    "mutation_radii": [0, 1, 2],
+    "certificate_rules": ["self_endorsement", "pairwise_agreement", "root_refinement"],
+    "regimes": ["adaptive", "frozen_root"],
+    "horizon": 8,
+    "registered_cells": 36
+  },
+  "claim_boundary": "One exact matched finite-state verifier-drift census; no open-ended reflective-safety or RSI inference."
+}
