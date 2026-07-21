@@ -12,6 +12,15 @@ Does the exact population boundary `r+s=k` remain a useful predictor of
 finite-sample detectability, and can a frozen adaptive value-injection strategy
 reverse the v0.1 cost ordering against nonadaptive exhaustive access?
 
+The primary quantitative hypothesis is a **cost-ordering inversion**: on at
+least one prospectively frozen scaling sequence, the adaptive intervention arm
+reaches the same held-out power and familywise false-positive target using
+strictly fewer total oracle samples than the nonadaptive exhaustive arm. The
+first dimension at which the simultaneous confidence bound clears the frozen
+practical margin is the crossover point. No crossover yields
+`cost_inversion_not_established`; it is not repaired by changing the strategy
+or grid after reveal.
+
 ## Statistical object
 
 - Parent dimension: `n=12`.
@@ -43,6 +52,43 @@ evaluated on held-out supports/signs/seeds. If no adaptive policy survives the
 pilot without outcome-conditioned tuning, the adaptive claim is unavailable;
 the nonadaptive finite-sample surface may still run.
 
+## Important access-model qualification
+
+Parity's statistical-query hardness makes the sampled observation arm a live
+hard regime. It does **not** imply that the registered parent-fixing oracle has
+a polynomial adaptive algorithm. Fixing unknown input coordinates may still
+require a combinatorial support search. Before registration, the adaptive
+strategy must therefore provide either:
+
+1. a checked query-complexity bound under the exact parent-fixing grammar; or
+2. a separately labelled Angluin-style internal-wire value-injection arm with
+   its circuit-topology assumptions frozen.
+
+These access classes may not be pooled. An internal-wire positive control can
+show that value injection helps when the circuit exposes the required
+structure, but cannot establish that parent fixing is efficient. The
+polynomial-versus-exponential interpretation is prohibited unless the relevant
+bounds are proved for the registered grammar.
+
+## Gate semantics under finite sampling
+
+The protocol uses two evidence types and never conflates them:
+
+- **Exact anchor gates** (`P0`, structural portions of `B0` and `S0`) are
+  deterministic population statements. They retain exact arithmetic and
+  byte-identical replay requirements.
+- **Sampled decision gates** (`N0`, `L0`, `A0`, and the crossover decision) use
+  a preregistered estimator, independent mechanism/seed replicates, one-sided
+  simultaneous confidence bounds, and frozen practical margins. Their outputs
+  are `pass`, `fail`, or `inconclusive`; equality is inconclusive.
+
+The registration must freeze the estimator, familywise level, multiplicity
+method, replicate unit, stopping rule, and every numerical margin. Byte hashes
+certify which code and samples ran; they do not turn a confidence statement
+into an exact theorem. An invalid exact anchor makes the instrument invalid.
+A statistically inconclusive sampled arm leaves that arm not established but
+does not rewrite the exact population result.
+
 ## Primary endpoints
 
 - held-out detection power at frozen familywise false-positive rate;
@@ -50,6 +96,9 @@ the nonadaptive finite-sample surface may still run.
 - power as a function of signed boundary distance `r+s-k`;
 - adaptive-versus-random and adaptive-versus-exhaustive cost ratios within
   `(k, noise, target-power)` strata.
+- the first prospectively frozen dimension at which adaptive intervention
+  clears the cost-inversion margin for two consecutive scaling cells; this is
+  the primary crossover endpoint.
 
 ## Required gates before the claim-eligible run
 
@@ -66,6 +115,11 @@ the nonadaptive finite-sample surface may still run.
   held-out supports by the frozen practical and simultaneous-confidence
   margins. Failure makes adaptive efficiency `not_established`; it does not
   invalidate the nonadaptive surface.
+- `X0 cost-ordering inversion`: at matched held-out power and familywise false-
+  positive control, the adaptive arm's upper confidence bound on total oracle
+  samples lies below the exhaustive arm's lower bound by the frozen practical
+  ratio for two consecutive scaling cells. A single-cell crossing is reported
+  descriptively and cannot pass `X0`.
 - `C0 cost accounting`: query count, oracle samples, CPU time, and intervention
   assignments are reported separately. No scalar “access budget” is formed
   post hoc.
