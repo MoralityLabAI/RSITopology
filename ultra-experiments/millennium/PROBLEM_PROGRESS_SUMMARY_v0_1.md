@@ -12,12 +12,13 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
   claim boundary:** 7 of 7.
 - **Additional problems beyond ASMP-1 with bounded registered experimentation
   attempted:** 6 of 7 (`ASMP-2` through `ASMP-7`).
-- **Additional problems beyond ASMP-1 with completed bounded results:** 5 of 7
-  (`ASMP-2`, `ASMP-3`, `ASMP-4`, `ASMP-6`, and `ASMP-7`).
-- **Formally registered execution attempts ending unavailable before a
-  scientific result:** 1 of 7 (`ASMP-5`, frozen resource-cap stop).
+- **Additional problems beyond ASMP-1 with completed bounded results:** 6 of 7
+  (`ASMP-2` through `ASMP-7`).
+- **Historical registered execution attempts ending unavailable before a
+  scientific result:** 1 (`ASMP-5` v0.1); its versioned v0.2 repair now has a
+  completed bounded result.
 - **Resolved at the full frozen Millennium-problem scope:** 0 of 7.
-- **Closed theorem or exact-enumeration seeds inside an addressed problem:** 5.
+- **Closed theorem or exact-enumeration seeds inside an addressed problem:** 6.
 - **Completed real-model falsification experiments inside an addressed problem:** 1.
 - **Problems remaining only at proposal, review, or precursor-tool stage:** 0
   of 7.
@@ -25,8 +26,9 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
 “Formally addressed” means that work was prospectively registered against an
 exact ASMP problem and a frozen claim boundary. It does not require a positive
 result: `ASMP-5` counts as addressed because its protocol was frozen before
-execution, even though execution stopped unavailable before producing a
-scientific outcome. “Completed bounded result” requires a valid result rather
+execution. Its first execution stopped unavailable before producing a
+scientific outcome, while a separately registered optimized implementation
+subsequently completed the same finite grid. “Completed bounded result” requires a valid result rather
 than a registration or run attempt. Related portfolio work is not counted merely
 because it resembles part of a problem. “Resolved” requires the complete
 two-sided resolution standard in the canonical document; no current experiment
@@ -40,7 +42,7 @@ or bounded theorem meets that standard.
 | ASMP-2 | Shift-Spanning Safety Certification | When do finitely many evaluations justify a uniform claim over a declared family of deployment shifts? | **Formally addressed, unresolved.** The [registered crossed-shift result](asmp2_crossed_shift/RESULT.md) validates an exact forced counterexample shape. The [active-design census](asmp2_active_design_census/RESULT_v0_2_2.md) exhaustively rejects the registered myopic minimax selector as an efficient multi-step policy in one finite polynomial class. Neither is a uniform shift-spanning certification theorem. |
 | ASMP-3 | The Weak-Verifier Soundness Frontier | Which superhuman work can a weaker, noisy semantic verifier judge soundly? | **Formally addressed, unresolved.** The [registered correlated-noise result](asmp3_weak_verifier_frontier/RESULT_v0_1.md) gives an exact finite correlation/diversity frontier after a refuting semantic atom has already been located, and proves that atom-averaged accuracy does not imply uniform soundness on challenger-selected refutations. It does not test refutation search or real weak judges. |
 | ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Formally addressed, unresolved.** The [registered two-port result](asmp4_two_port_game/RESULT.md) gives an exact 108-cell phase map for one finite rational architecture and separates read- and write-deficient controls. It does not establish necessary and sufficient confinement conditions in the canonical scope. |
-| ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; first execution unavailable.** The [registered verifier-drift census](asmp5_verifier_drift/RESULT.md) reached its frozen wall-time cap before emitting a scientific result. The resource-cap stop is evidence that the instrument needs a versioned implementation or budget repair, not evidence for or against reflective safety. |
+| ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; repaired bounded result complete.** The [v0.1 verifier-drift census](asmp5_verifier_drift/RESULT.md) correctly stopped at its frozen wall-time cap. The separately registered [v0.2 repair](asmp5_verifier_drift/v0_2_repair/RESULT_v0_2.md) exhaustively finds depth-two unsafe paths when a successor checker becomes active, while a frozen-root refinement blocks them and retains an eight-step, nine-state safe chain. This is one finite counterexample/control pair, not an open-ended composition theorem. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Formally addressed, unresolved.** The [registered finite semantic-collusion frontier](asmp6_semantic_collusion_frontier/RESULT_v0_1.md) exactly separates message-averaged from per-message covertness over a four-symbol registry and measures the effect of a charged active auditor. It is neither an asymptotic capacity theorem nor evidence of language-model collusion. |
 | ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry. The [excluded-band successor](asmp7_attestability_frontier/RESULT_v0_2_1.md) computes 40 exact nonzero-gap audit minima and calibrates how cost grows as the policy boundary narrows. Both assume trusted-meter coverage and establish neither real-model nor transformation-universal attestability. |
 
