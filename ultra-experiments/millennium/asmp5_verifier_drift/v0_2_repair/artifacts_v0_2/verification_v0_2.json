@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "all_cells_independently_recomputed": true,
+    "all_runner_gates_pass": true,
+    "candidate_universe_counts_and_specs_recomputed": true,
+    "cell_universe_exact": true,
+    "primary_separation_recomputed": true,
+    "protocol_hash_matches": true,
+    "registration_hash_matches": true,
+    "registration_sources_still_match": true,
+    "resource_pass": true,
+    "result_hash_matches": true,
+    "runner_valid": true,
+    "safe_chain_replays": true,
+    "schema_exact": true
+  },
+  "claim_boundary": "Independent replay of one finite matched verifier-drift census; no open-ended reflective-safety inference.",
+  "decision": "pass",
+  "instrument_status": "valid",
+  "schema_version": "asmp5_verifier_drift_verification_v0_2"
+}

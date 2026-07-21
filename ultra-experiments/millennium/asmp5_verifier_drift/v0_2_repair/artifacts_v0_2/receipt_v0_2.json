@@ -1,0 +1,13 @@
+{
+  "environment": {
+    "cpu_count": 12,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "psutil": "7.0.0",
+    "python": "3.11.4"
+  },
+  "protocol_sha256": "8379f7e02e105b5c14e493f81dbf502c2e8813718e672379992a52477071a2d0",
+  "registration_sha256": "8352b61be90193ffdefcdde4f557a0e4b6c55d09dc5c780242694d9fb87a0a7a",
+  "result_sha256": "f4679c0100593141a263707a676c3fb3e83535d43d9c82b44826c11561c61941",
+  "schema_version": "asmp5_verifier_drift_receipt_v0_2",
+  "source_commit": "25be3ce1924bd9e0b94a7d838fadc9f33c4c85db"
+}
