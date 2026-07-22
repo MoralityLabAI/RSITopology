@@ -32,3 +32,10 @@ attempts are resource diagnostics: v0.2 exposed a WDDM GPU-accounting gap and
 v0.3 safely aborted under the fail-closed aggregate GPU guard. See
 `PILOT_REPORT_v0_1.md`. The positive held-out predictor experiment remains
 unregistered; the active successor is the CPU-exact prefix-obstruction branch.
+
+## Liveness pilot v0.4
+
+The later v0.4 construction pilot completed a prospective train-fraction ×
+weight-decay factorial and found three delayed first-passage transitions. See
+`LIVENESS_PILOT_RESULT_v0_4.md`. The result opens only the drafting branch:
+`PREDICTOR_PROTOCOL_DRAFT_v0_5.md` is not registered and not authorized to run.

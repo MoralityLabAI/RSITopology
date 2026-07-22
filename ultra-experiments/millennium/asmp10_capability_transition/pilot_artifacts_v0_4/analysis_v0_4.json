@@ -1,0 +1,208 @@
+{
+  "delayed_transition_candidates": 3,
+  "frozen_branch_action": "draft_disjoint_seed_predictor_protocol_do_not_run",
+  "pilot_live": true,
+  "registered_cells": 6,
+  "resource_summary": {
+    "peak_cuda_allocated_mb_from_events": 17.90869140625,
+    "peak_cuda_reserved_mb_from_events": 94.0,
+    "peak_host_ram_mb": 1662.02,
+    "peak_io_mb_s": 10.013
+  },
+  "rows": [
+    {
+      "delay_steps": null,
+      "delayed_transition_candidate": false,
+      "early_geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 14.451124965246336,
+        "parameter_l2": 16.033317147408706,
+        "representation_effective_rank": 23.896460698902615,
+        "token_embedding_stable_rank": 11.021124305526982
+      },
+      "final_test_accuracy": 0.41247832775115967,
+      "final_test_loss": 2.748558759689331,
+      "final_train_accuracy": 1.0,
+      "first_sustained_transition_step": null,
+      "last_post_transition_failure_step": null,
+      "memorization_step": 100,
+      "peak_cuda_allocated_mb_from_events": 16.921875,
+      "peak_cuda_reserved_mb_from_events": 52.0,
+      "post_transition_failure_count": 0,
+      "run_id": "seed07_tf040_wd100",
+      "terminal_stable_step_min_20_evals": null,
+      "train_fraction": 0.4,
+      "weight_decay": 1.0
+    },
+    {
+      "delay_steps": null,
+      "delayed_transition_candidate": false,
+      "early_geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 15.028286973164615,
+        "parameter_l2": 13.502303406025153,
+        "representation_effective_rank": 22.829567583758013,
+        "token_embedding_stable_rank": 9.651003441830504
+      },
+      "final_test_accuracy": 0.3639514744281769,
+      "final_test_loss": 3.1904714107513428,
+      "final_train_accuracy": 1.0,
+      "first_sustained_transition_step": null,
+      "last_post_transition_failure_step": null,
+      "memorization_step": 100,
+      "peak_cuda_allocated_mb_from_events": 16.921875,
+      "peak_cuda_reserved_mb_from_events": 52.0,
+      "post_transition_failure_count": 0,
+      "run_id": "seed07_tf040_wd200",
+      "terminal_stable_step_min_20_evals": null,
+      "train_fraction": 0.4,
+      "weight_decay": 2.0
+    },
+    {
+      "delay_steps": 1800,
+      "delayed_transition_candidate": true,
+      "early_geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.766645977582398,
+        "parameter_l2": 16.19950965520137,
+        "representation_effective_rank": 21.236657735739893,
+        "token_embedding_stable_rank": 11.830857337825543
+      },
+      "final_test_accuracy": 1.0,
+      "final_test_loss": 0.014494681730866432,
+      "final_train_accuracy": 1.0,
+      "first_sustained_transition_step": 1900,
+      "last_post_transition_failure_step": 14800,
+      "memorization_step": 100,
+      "peak_cuda_allocated_mb_from_events": 17.10009765625,
+      "peak_cuda_reserved_mb_from_events": 82.0,
+      "post_transition_failure_count": 4,
+      "run_id": "seed07_tf055_wd100",
+      "terminal_stable_step_min_20_evals": null,
+      "train_fraction": 0.55,
+      "weight_decay": 1.0
+    },
+    {
+      "delay_steps": 1200,
+      "delayed_transition_candidate": true,
+      "early_geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.577292813025693,
+        "parameter_l2": 14.103824222290756,
+        "representation_effective_rank": 19.371120842839648,
+        "token_embedding_stable_rank": 10.665952839557775
+      },
+      "final_test_accuracy": 1.0,
+      "final_test_loss": 0.013479627668857574,
+      "final_train_accuracy": 1.0,
+      "first_sustained_transition_step": 1300,
+      "last_post_transition_failure_step": null,
+      "memorization_step": 100,
+      "peak_cuda_allocated_mb_from_events": 16.939453125,
+      "peak_cuda_reserved_mb_from_events": 82.0,
+      "post_transition_failure_count": 0,
+      "run_id": "seed07_tf055_wd200",
+      "terminal_stable_step_min_20_evals": 1300,
+      "train_fraction": 0.55,
+      "weight_decay": 2.0
+    },
+    {
+      "delay_steps": 800,
+      "delayed_transition_candidate": true,
+      "early_geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.11554725047207,
+        "parameter_l2": 16.581520848421096,
+        "representation_effective_rank": 18.783692690506044,
+        "token_embedding_stable_rank": 10.992871868811502
+      },
+      "final_test_accuracy": 1.0,
+      "final_test_loss": 0.015957079827785492,
+      "final_train_accuracy": 1.0,
+      "first_sustained_transition_step": 900,
+      "last_post_transition_failure_step": 7000,
+      "memorization_step": 100,
+      "peak_cuda_allocated_mb_from_events": 17.90869140625,
+      "peak_cuda_reserved_mb_from_events": 94.0,
+      "post_transition_failure_count": 2,
+      "run_id": "seed07_tf070_wd100",
+      "terminal_stable_step_min_20_evals": 7100,
+      "train_fraction": 0.7,
+      "weight_decay": 1.0
+    },
+    {
+      "delay_steps": 300,
+      "delayed_transition_candidate": false,
+      "early_geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 12.67075167683947,
+        "parameter_l2": 13.86354214510737,
+        "representation_effective_rank": 16.22674806102644,
+        "token_embedding_stable_rank": 9.892999579448464
+      },
+      "final_test_accuracy": 1.0,
+      "final_test_loss": 0.054038576781749725,
+      "final_train_accuracy": 1.0,
+      "first_sustained_transition_step": 400,
+      "last_post_transition_failure_step": 13200,
+      "memorization_step": 100,
+      "peak_cuda_allocated_mb_from_events": 17.748046875,
+      "peak_cuda_reserved_mb_from_events": 92.0,
+      "post_transition_failure_count": 1,
+      "run_id": "seed07_tf070_wd200",
+      "terminal_stable_step_min_20_evals": null,
+      "train_fraction": 0.7,
+      "weight_decay": 2.0
+    }
+  ],
+  "schema_version": "asmp10_liveness_pilot_analysis_v0_4",
+  "status": "validated_complete",
+  "terminal_stability_is_posthoc_diagnostic": true,
+  "wrapper_segments": [
+    {
+      "abort_reason": "timeout",
+      "cleanup_passed": true,
+      "elapsed_seconds": 1812.282,
+      "peak_io_mb_s": 2.466,
+      "peak_ram_mb": 1614.715,
+      "segment": "pilot_wrapper_v0_4",
+      "status": "aborted"
+    },
+    {
+      "abort_reason": "checkpoint_stale",
+      "cleanup_passed": true,
+      "elapsed_seconds": 6.573,
+      "peak_io_mb_s": 8.45,
+      "peak_ram_mb": 748.152,
+      "segment": "pilot_wrapper_v0_4a",
+      "status": "aborted"
+    },
+    {
+      "abort_reason": "exit_code_2",
+      "cleanup_passed": true,
+      "elapsed_seconds": 11.792,
+      "peak_io_mb_s": 10.013,
+      "peak_ram_mb": 1027.891,
+      "segment": "pilot_wrapper_v0_4b",
+      "status": "failed"
+    },
+    {
+      "abort_reason": "timeout",
+      "cleanup_passed": true,
+      "elapsed_seconds": 1815.003,
+      "peak_io_mb_s": 8.449,
+      "peak_ram_mb": 1657.086,
+      "segment": "pilot_wrapper_v0_4c",
+      "status": "aborted"
+    },
+    {
+      "abort_reason": null,
+      "cleanup_passed": true,
+      "elapsed_seconds": 1218.906,
+      "peak_io_mb_s": 2.153,
+      "peak_ram_mb": 1662.02,
+      "segment": "pilot_wrapper_v0_4d",
+      "status": "completed"
+    }
+  ]
+}

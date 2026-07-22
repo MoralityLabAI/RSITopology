@@ -1,0 +1,31 @@
+{
+  "delay_steps": null,
+  "delayed_transition_candidate": false,
+  "device": "cuda",
+  "final_metrics": {
+    "gradient_norm": 0.006851233196673335,
+    "step": 15000,
+    "test_accuracy": 0.3639514744281769,
+    "test_loss": 3.1904714107513428,
+    "train_accuracy": 1.0,
+    "train_loss": 0.0020625998731702566
+  },
+  "geometry": {
+    "feature_step": 500,
+    "output_weight_stable_rank": 15.028286973164615,
+    "parameter_l2": 13.502303406025153,
+    "representation_effective_rank": 22.829567583758013,
+    "token_embedding_stable_rank": 9.651003441830504
+  },
+  "memorization_step": 100,
+  "metric_count": 151,
+  "peak_cuda_allocated_mb": 0.0,
+  "peak_cuda_reserved_mb": 0.0,
+  "run_id": "seed07_tf040_wd200",
+  "seed": 7,
+  "status": "completed",
+  "steps_completed": 15000,
+  "train_fraction": 0.4,
+  "transition_step": null,
+  "weight_decay": 2.0
+}
