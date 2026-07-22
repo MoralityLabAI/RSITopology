@@ -1,0 +1,250 @@
+{
+  "aggregate": {
+    "excursions_crossing_proposed_down_threshold": 4,
+    "gradient_norm_ratio_range": [
+      195.66885148071222,
+      11614.882317916763
+    ],
+    "immediate_next_evaluation_recoveries": 7,
+    "old_detector_excursions": 7,
+    "persistent_reversions_under_five-evaluation_down_dwell": 0,
+    "post_crossing_spikes": 15,
+    "post_crossing_spikes_without_old_detector_excursion": 8,
+    "single_evaluation_excursions": 7,
+    "spike_correlated_excursions": 7,
+    "spike_rule_positive_predictive_value_for_old_excursion": 0.4666666666666667,
+    "train_loss_ratio_range": [
+      12.886273248226361,
+      504.73568757696006
+    ]
+  },
+  "definitions": {
+    "evaluation_spacing_steps": 100,
+    "old_entry_dwell_evaluations": 5,
+    "old_up_threshold": {
+      "test_accuracy_min": 0.9,
+      "test_loss_max": 0.5
+    },
+    "posthoc_spike_rule": {
+      "gradient_norm_ratio_min": 100.0,
+      "preceding_evaluations": 10,
+      "train_loss_ratio_min": 10.0
+    },
+    "proposed_hysteretic_down_threshold_diagnostic_only": {
+      "or_test_loss_above": 0.75,
+      "test_accuracy_below": 0.8
+    }
+  },
+  "interpretation": "Every v0.4 post-crossing failure was an isolated one-grid excursion, all were associated with the frozen post-hoc loss-and-gradient spike rule, and all recovered at the next 100-step evaluation. This is consistent with optimizer-coupled instability but does not identify its cause.",
+  "runs": [
+    {
+      "events": [],
+      "first_sustained_crossing_step": null,
+      "old_detector_excursion_count": 0,
+      "run_id": "seed07_tf040_wd100",
+      "spike_count_after_crossing": 0
+    },
+    {
+      "events": [],
+      "first_sustained_crossing_step": null,
+      "old_detector_excursion_count": 0,
+      "run_id": "seed07_tf040_wd200",
+      "spike_count_after_crossing": 0
+    },
+    {
+      "events": [
+        {
+          "crosses_proposed_down_threshold": true,
+          "duration_evaluations": 1,
+          "end_step": 2400,
+          "gradient_norm": 22.51773367360146,
+          "gradient_norm_ratio": 5816.602665515281,
+          "next_evaluation_step": 2500,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.0038712862075145128,
+          "prior_10_train_loss_median": 0.0011445288255345076,
+          "recovered_at_next_evaluation": true,
+          "start_step": 2400,
+          "test_accuracy": 0.7754629850387573,
+          "test_loss": 0.7300898432731628,
+          "train_accuracy": 0.9810964465141296,
+          "train_loss": 0.10581713914871216,
+          "train_loss_ratio": 92.45476111035856
+        },
+        {
+          "crosses_proposed_down_threshold": true,
+          "duration_evaluations": 1,
+          "end_step": 4400,
+          "gradient_norm": 439.6859840959677,
+          "gradient_norm_ratio": 11614.882317916763,
+          "next_evaluation_step": 4500,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.03785539724476773,
+          "prior_10_train_loss_median": 0.003383468370884657,
+          "recovered_at_next_evaluation": true,
+          "start_step": 4400,
+          "test_accuracy": 0.5300925970077515,
+          "test_loss": 1.9212803840637207,
+          "train_accuracy": 0.5368620157241821,
+          "train_loss": 1.7077572345733643,
+          "train_loss_ratio": 504.73568757696006
+        },
+        {
+          "crosses_proposed_down_threshold": true,
+          "duration_evaluations": 1,
+          "end_step": 7700,
+          "gradient_norm": 421.5225998047986,
+          "gradient_norm_ratio": 6923.402042832591,
+          "next_evaluation_step": 7800,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.060883738543131005,
+          "prior_10_train_loss_median": 0.009045083075761795,
+          "recovered_at_next_evaluation": true,
+          "start_step": 7700,
+          "test_accuracy": 0.7893518805503845,
+          "test_loss": 0.7543911933898926,
+          "train_accuracy": 0.8355387449264526,
+          "train_loss": 0.6034697890281677,
+          "train_loss_ratio": 66.71799296628818
+        },
+        {
+          "crosses_proposed_down_threshold": false,
+          "duration_evaluations": 1,
+          "end_step": 14800,
+          "gradient_norm": 59.481821489944394,
+          "gradient_norm_ratio": 979.0350650341813,
+          "next_evaluation_step": 14900,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.060755557808205456,
+          "prior_10_train_loss_median": 0.01092280587181449,
+          "recovered_at_next_evaluation": true,
+          "start_step": 14800,
+          "test_accuracy": 0.8055555820465088,
+          "test_loss": 0.7379009127616882,
+          "train_accuracy": 0.880907416343689,
+          "train_loss": 0.5817779302597046,
+          "train_loss_ratio": 53.262681502098324
+        }
+      ],
+      "first_sustained_crossing_step": 1900,
+      "old_detector_excursion_count": 4,
+      "run_id": "seed07_tf055_wd100",
+      "spike_count_after_crossing": 7,
+      "spike_steps_after_crossing": [
+        2400,
+        4000,
+        4400,
+        7700,
+        9300,
+        11300,
+        14800
+      ],
+      "spikes_not_starting_old_detector_excursions": 3
+    },
+    {
+      "events": [],
+      "first_sustained_crossing_step": 1300,
+      "old_detector_excursion_count": 0,
+      "run_id": "seed07_tf055_wd200",
+      "spike_count_after_crossing": 1,
+      "spike_steps_after_crossing": [
+        3200
+      ],
+      "spikes_not_starting_old_detector_excursions": 1
+    },
+    {
+      "events": [
+        {
+          "crosses_proposed_down_threshold": false,
+          "duration_evaluations": 1,
+          "end_step": 4700,
+          "gradient_norm": 353.3993556935296,
+          "gradient_norm_ratio": 5530.375954715328,
+          "next_evaluation_step": 4800,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.06390150662220587,
+          "prior_10_train_loss_median": 0.00914596812799573,
+          "recovered_at_next_evaluation": true,
+          "start_step": 4700,
+          "test_accuracy": 0.8784722089767456,
+          "test_loss": 0.45915016531944275,
+          "train_accuracy": 0.9242199063301086,
+          "train_loss": 0.3574409782886505,
+          "train_loss_ratio": 39.081808867726835
+        },
+        {
+          "crosses_proposed_down_threshold": true,
+          "duration_evaluations": 1,
+          "end_step": 7000,
+          "gradient_norm": 240.25003846201827,
+          "gradient_norm_ratio": 2742.477384412582,
+          "next_evaluation_step": 7100,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.08760328884661997,
+          "prior_10_train_loss_median": 0.012162233702838421,
+          "recovered_at_next_evaluation": true,
+          "start_step": 7000,
+          "test_accuracy": 0.5902777910232544,
+          "test_loss": 1.3474626541137695,
+          "train_accuracy": 0.7251114249229431,
+          "train_loss": 1.008423924446106,
+          "train_loss_ratio": 82.91436828834823
+        }
+      ],
+      "first_sustained_crossing_step": 900,
+      "old_detector_excursion_count": 2,
+      "run_id": "seed07_tf070_wd100",
+      "spike_count_after_crossing": 6,
+      "spike_steps_after_crossing": [
+        3100,
+        3400,
+        4700,
+        6700,
+        7000,
+        13200
+      ],
+      "spikes_not_starting_old_detector_excursions": 4
+    },
+    {
+      "events": [
+        {
+          "crosses_proposed_down_threshold": false,
+          "duration_evaluations": 1,
+          "end_step": 13200,
+          "gradient_norm": 189.2260310240844,
+          "gradient_norm_ratio": 195.66885148071222,
+          "next_evaluation_step": 13300,
+          "posthoc_spike_rule_passed": true,
+          "prior_10_gradient_norm_median": 0.9670728355184172,
+          "prior_10_train_loss_median": 0.03876961022615433,
+          "recovered_at_next_evaluation": true,
+          "start_step": 13200,
+          "test_accuracy": 0.90625,
+          "test_loss": 0.6224159002304077,
+          "train_accuracy": 0.9465081691741943,
+          "train_loss": 0.4995957911014557,
+          "train_loss_ratio": 12.886273248226361
+        }
+      ],
+      "first_sustained_crossing_step": 400,
+      "old_detector_excursion_count": 1,
+      "run_id": "seed07_tf070_wd200",
+      "spike_count_after_crossing": 1,
+      "spike_steps_after_crossing": [
+        13200
+      ],
+      "spikes_not_starting_old_detector_excursions": 0
+    }
+  ],
+  "schema_version": "asmp10_reversion_diagnostics_v0_4_1",
+  "source_sha256": {
+    "C:/projects/RSITopology/ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/runs/seed07_tf040_wd100/metrics.json": "e01a8dfc5c58f9a3f2e202a68a6d1148473b52e83693e52f4ddbb969c5dc42a6",
+    "C:/projects/RSITopology/ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/runs/seed07_tf040_wd200/metrics.json": "d3f6314f3af799014ba92ff0e745cb08f93b634c87e43504907418ce2c941ecc",
+    "C:/projects/RSITopology/ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/runs/seed07_tf055_wd100/metrics.json": "d433aa6e6bcd5e42b92d443bf6d3bf3f8461e39bcd190fc27a66a78754b4db4c",
+    "C:/projects/RSITopology/ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/runs/seed07_tf055_wd200/metrics.json": "8b530a5129af922fba79cb7d04b013b1490c0d68ead501503bd75d3965678b1a",
+    "C:/projects/RSITopology/ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/runs/seed07_tf070_wd100/metrics.json": "e094db4b6e6974cc263339a3c94efc5e213aa2520aa8e18a38bbe49de62bed30",
+    "C:/projects/RSITopology/ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/runs/seed07_tf070_wd200/metrics.json": "6c32f1e6f64a128a6bce2caab028eebebb31442aed84bf67e2ebbac0005789d9"
+  },
+  "source_v0_4_decision_unchanged": true,
+  "status": "posthoc_descriptive_not_claim_eligible"
+}
