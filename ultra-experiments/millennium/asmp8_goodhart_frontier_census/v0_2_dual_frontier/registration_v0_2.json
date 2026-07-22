@@ -1,0 +1,19 @@
+{
+  "schema_version": "asmp8_dual_frontier_registration_v0_2",
+  "protocol_id": "asmp8.goodhart.dual_norm_frontier.v0.2",
+  "registered_at_utc": "2026-07-22T05:37:10.1395124Z",
+  "status": "prospective_registration_before_claim_census",
+  "source_commit_before_registration": "9410dbd071692825f0d54d26c1c88426eab65018",
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/CLAIM_PACKET_v0_2.md": "28fd51a06fdc32c6b89c69848054893bb4d096aa49c5496376695db6bec8575a",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/PRIOR_ART_v0_2.md": "6d63b16b8f7f135c31241268ad475b28bcb76bfcb2d3400541b683df8791361b",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/README.md": "0b5299c60fe8c006d81975b3357d575c6c7f112e75f392dcf9b695e2b1e8f298",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/frontier.py": "bc7ceb5328fb239337610592ebb9fc76f84a44754df4944f11c8566a02169289",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/protocol_v0_2.json": "481159bfd00cebb00049ea09db12c157cbb3c186dbba02c7e19ecda9adafb9ce",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/run.py": "c229f56326e5569b6f0b676660efdd037e208c25bb40252d7405ba1af66bf004",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/test_robust_frontier.py": "a272280daf4085f8090d38e6ab540227f71f105b27f0c0e5f8a047b9dfffa578",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/verify_result.py": "e83a9caa0387038c34877ac5417e2632f994042becdc7cfb7ed9673fed5c27e3"
+  },
+  "registered_primary_estimand": "Exact worst-case true-reward gain under q-norm proxy-error balls, jointly parameterized by proxy gain and dual-norm policy movement.",
+  "claim_boundary": "Classical robust-optimization identity tested on a finite rational Goodhart registry; no convex-duality novelty, learned reward model, RL trajectory, or ASMP-8 resolution."
+}
