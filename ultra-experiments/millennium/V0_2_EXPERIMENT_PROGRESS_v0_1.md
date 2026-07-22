@@ -9,7 +9,7 @@ it.
 
 | Candidate | Bounded execution status | Current boundary |
 |---|---|---|
-| ASMP-8 Goodhart frontier | completed exact finite census | scalar KL pressure rejected as optimizer-independent descriptor in the registered class |
+| ASMP-8 Goodhart frontier | two completed exact finite censuses | v0.1 rejects scalar KL pressure as optimizer-independent; v0.2 validates the classical sharp replacement `(proxy gain, error-norm-dual policy movement)` on a 3,876-policy rational registry, conditional on a declared uncertainty norm and radius |
 | ASMP-9 reward-gauge access | completed exact finite census | finite access threshold only; generic reward identifiability substantially prior art |
 | ASMP-10 capability transitions | completed exact prefix-obstruction seed; empirical pilot bounded | Hermite-interpolation obstruction for the frozen observable class, not a training-dynamics theorem |
 | ASMP-5A bounded tiling | completed exact finite proof-tree census | explicit conjunction certificates exhibit a work/depth/memory ranking reversal; classical tree instrument only, not bounded Lob |
