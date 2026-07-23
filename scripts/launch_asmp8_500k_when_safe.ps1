@@ -2,6 +2,7 @@ param(
   [int]$MaximumWaitSeconds = 21600,
   [int]$PollSeconds = 30,
   [double]$MaximumStartTemperatureC = 65.0,
+  [double]$GuardMaximumStartTemperatureC = -1.0,
   [double]$AbortTemperatureC = 78.0,
   [double]$MaximumSmokeTemperatureC = 74.0,
   [double]$MinimumSmokeProbabilityVariance = 0.0,
@@ -38,6 +39,11 @@ $launcherDir = Join-Path $fullRun "launcher"
 $eventsPath = Join-Path $launcherDir "launcher_events.jsonl"
 $summaryPath = Join-Path $launcherDir "launcher_summary.json"
 $deadline = (Get-Date).AddSeconds($MaximumWaitSeconds)
+$effectiveGuardMaximumStartTemperatureC = if ($GuardMaximumStartTemperatureC -ge 0) {
+  $GuardMaximumStartTemperatureC
+} else {
+  $MaximumStartTemperatureC
+}
 
 New-Item -ItemType Directory -Force -Path $launcherDir | Out-Null
 
@@ -109,7 +115,7 @@ function Invoke-GuardedRun([string]$SpecPath, [string]$RunPath, [string]$Phase) 
   Write-LauncherEvent @{event="guarded_run_start";phase=$Phase;spec=$SpecPath;guard_dir=$guardDir}
   & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $guardScript `
     -RunSpecPath $SpecPath -GuardOutputDir $guardDir `
-    -MaximumStartTemperatureC $MaximumStartTemperatureC `
+    -MaximumStartTemperatureC $effectiveGuardMaximumStartTemperatureC `
     -AbortTemperatureC $AbortTemperatureC `
     1>> (Join-Path $launcherDir "$Phase`_guard_stdout.log") `
     2>> (Join-Path $launcherDir "$Phase`_guard_stderr.log")
@@ -144,6 +150,7 @@ Write-LauncherEvent @{
   maximum_wait_seconds = $MaximumWaitSeconds
   poll_seconds = $PollSeconds
   maximum_start_temperature_c = $MaximumStartTemperatureC
+  guard_maximum_start_temperature_c = $effectiveGuardMaximumStartTemperatureC
   abort_temperature_c = $AbortTemperatureC
   maximum_smoke_temperature_c = $MaximumSmokeTemperatureC
   minimum_smoke_probability_variance = $MinimumSmokeProbabilityVariance
