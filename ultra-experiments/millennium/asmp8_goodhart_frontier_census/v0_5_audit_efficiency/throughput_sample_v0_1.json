@@ -1,0 +1,73 @@
+{
+  "schema_version": "asmp8_audit_throughput_sample_v0_1",
+  "status": "completed_fallback_estimate",
+  "scientific_gate": false,
+  "measurement": {
+    "model_type": "qwen35 0.8B Q4_K_M",
+    "parameter_count": 752393024,
+    "backend": "llama.cpp CPU",
+    "threads": 6,
+    "prompt_tokens_per_trial": 128,
+    "manifest_mean_tokens_per_audit": 127.16840277777777,
+    "trials": 10,
+    "mean_trial_seconds": 0.95823318,
+    "trial_sd_seconds": 0.070263795,
+    "mean_seconds_per_audit": 0.9520076796036784,
+    "mean_audits_per_second": 1.0504116945950488,
+    "descriptive_t95_seconds_per_audit": [
+      0.9020705480311207,
+      1.001944811176236
+    ],
+    "descriptive_t95_audits_per_second": [
+      0.9980589637727124,
+      1.108560746365816
+    ]
+  },
+  "steady_state_eta": {
+    "31": {
+      "seconds": 29.51223806771403
+    },
+    "64": {
+      "seconds": 60.928491494635416
+    },
+    "8192": {
+      "hours": 2.1663463642537035,
+      "descriptive_t95_hours": [
+        2.0527116470752613,
+        2.2799810814321457
+      ]
+    },
+    "500000": {
+      "days": 5.509303701410176,
+      "descriptive_t95_days": [
+        5.220315671476394,
+        5.798291731343958
+      ]
+    },
+    "524288": {
+      "days": 5.776923638009876,
+      "descriptive_t95_days": [
+        5.47389772553403,
+        6.079949550485722
+      ]
+    }
+  },
+  "resource_receipt": {
+    "memory_cap_mb": 2048,
+    "cpu_cap_percent": 50,
+    "peak_ram_mb": 609.402,
+    "average_ram_mb": 465.13,
+    "peak_io_mb_s": 10.267,
+    "average_cpu_percent": 24.695,
+    "peak_gpu_mb": 0,
+    "wrapper_elapsed_seconds": 27.638,
+    "cleanup_passed": true
+  },
+  "hashes": {
+    "run_specification_sha256": "80d93c616dc422518711e102c55f25bd23672d23ea2b2e084ef2156c16431451",
+    "raw_benchmark_json_sha256": "27ccc0ef954f04d973ef58a075970ba2cc83860fbe908f82fa9aef707c2b7f88",
+    "wrapper_summary_sha256": "9348f7ead1d39fecb6762bac72b6df346cd681f63e07cec2c67c1a1850e5d605",
+    "cleanup_summary_sha256": "b88a30c494a7a4c3a863d984fb1c377f4a2bdabbc0438b93739a4eb103c54d99"
+  },
+  "claim_boundary": "This estimates CPU Q4_K_M model-forward throughput for a 127-token prompt distribution. It is not an NF4 GPU measurement, a human-label throughput estimate, or an ASMP-8 scientific result. The completed ASMP-8 v0.5 finite-registry audits do not require one model forward pass per audit."
+}

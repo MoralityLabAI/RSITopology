@@ -1,0 +1,33 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-rust-audit-throughput-524k-parallel-v0-1-20260723",
+  "purpose": "Non-claim full-scale throughput benchmark for deterministic ASMP-8 moment reduction.",
+  "resource_caps": {
+    "memory_mb": 256,
+    "cpu_percent": 50,
+    "io_mb_s": 10,
+    "timeout_seconds": 600,
+    "gpu_allowance_mb": 1,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_rust_audit_throughput_524k_parallel_v0_1"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_rust_audit_throughput_524k_parallel_v0_1\\wrapper",
+  "checkpoint_strategy": "single bounded deterministic benchmark unit",
+  "exact_inner_command": [
+    "C:\\projects\\RSITopology\\tools\\asmp8-audit-rs\\target\\release\\asmp8-audit.exe",
+    "--audits-per-stream",
+    "524288",
+    "--streams",
+    "1024",
+    "--workers",
+    "6",
+    "--family",
+    "diffuse_low_error"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  }
+}
