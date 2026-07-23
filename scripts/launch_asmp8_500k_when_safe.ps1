@@ -1,15 +1,36 @@
 param(
   [int]$MaximumWaitSeconds = 21600,
-  [int]$PollSeconds = 30
+  [int]$PollSeconds = 30,
+  [double]$MaximumStartTemperatureC = 65.0,
+  [string]$SmokeSpecPath = "",
+  [string]$FullSpecPath = "",
+  [string]$SmokeRunPath = "",
+  [string]$FullRunPath = ""
 )
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..")).Path
-$smokeSpec = Join-Path $repoRoot "protocols\asmp8_qwen08_completion_audits_smoke_v0_2.json"
-$fullSpec = Join-Path $repoRoot "protocols\asmp8_qwen08_completion_audits_500k_v0_1.json"
+$smokeSpec = if ($SmokeSpecPath) {
+  [System.IO.Path]::GetFullPath($SmokeSpecPath)
+} else {
+  Join-Path $repoRoot "protocols\asmp8_qwen08_completion_audits_smoke_v0_2.json"
+}
+$fullSpec = if ($FullSpecPath) {
+  [System.IO.Path]::GetFullPath($FullSpecPath)
+} else {
+  Join-Path $repoRoot "protocols\asmp8_qwen08_completion_audits_500k_v0_1.json"
+}
 $guardScript = Join-Path $repoRoot "scripts\run_guarded_cuda_benchmark.ps1"
-$smokeRun = "D:\Research_Engine\runs\asmp8_qwen08_completion_audits_smoke_v0_2"
-$fullRun = "D:\Research_Engine\runs\asmp8_qwen08_completion_audits_500k_v0_1"
+$smokeRun = if ($SmokeRunPath) {
+  [System.IO.Path]::GetFullPath($SmokeRunPath)
+} else {
+  "D:\Research_Engine\runs\asmp8_qwen08_completion_audits_smoke_v0_2"
+}
+$fullRun = if ($FullRunPath) {
+  [System.IO.Path]::GetFullPath($FullRunPath)
+} else {
+  "D:\Research_Engine\runs\asmp8_qwen08_completion_audits_500k_v0_1"
+}
 $launcherDir = Join-Path $fullRun "launcher"
 $eventsPath = Join-Path $launcherDir "launcher_events.jsonl"
 $summaryPath = Join-Path $launcherDir "launcher_summary.json"
@@ -55,7 +76,7 @@ function Get-LaunchState {
 
 function Test-LaunchState([object]$State) {
   return (
-    [double]$State.temperature_c -le 65.0 -and
+    [double]$State.temperature_c -le $MaximumStartTemperatureC -and
     [double]$State.memory_used_mb -eq 0.0 -and
     [double]$State.memory_free_mb -ge 2500.0 -and
     [double]$State.free_physical_mb -ge 8192.0 -and
@@ -85,6 +106,7 @@ function Invoke-GuardedRun([string]$SpecPath, [string]$RunPath, [string]$Phase) 
   Write-LauncherEvent @{event="guarded_run_start";phase=$Phase;spec=$SpecPath;guard_dir=$guardDir}
   & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $guardScript `
     -RunSpecPath $SpecPath -GuardOutputDir $guardDir `
+    -MaximumStartTemperatureC $MaximumStartTemperatureC `
     1>> (Join-Path $launcherDir "$Phase`_guard_stdout.log") `
     2>> (Join-Path $launcherDir "$Phase`_guard_stderr.log")
   $exitCode = $LASTEXITCODE
@@ -117,6 +139,9 @@ Write-LauncherEvent @{
   event = "launcher_start"
   maximum_wait_seconds = $MaximumWaitSeconds
   poll_seconds = $PollSeconds
+  maximum_start_temperature_c = $MaximumStartTemperatureC
+  smoke_spec = $smokeSpec
+  full_spec = $fullSpec
   deadline_utc = $deadline.ToUniversalTime().ToString("o")
 }
 
