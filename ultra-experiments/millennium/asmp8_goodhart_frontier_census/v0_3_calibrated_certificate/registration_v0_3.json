@@ -1,0 +1,19 @@
+{
+  "schema_version": "asmp8_calibrated_certificate_registration_v0_3",
+  "protocol_id": "asmp8.goodhart.calibrated_dual_certificate.v0.3a",
+  "registered_at_utc": "2026-07-23T14:43:27.3428351Z",
+  "status": "prospective_registration_before_claim_run",
+  "source_commit_before_registration": "9dd46569b15a298dae2bdfc29cf70ad2d899dce5",
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/CLAIM_PACKET_v0_3.md": "e3b7ea0022700d56553991dd28d53626df1c0e647284c8994a89c09d3783e98d",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/PRIOR_ART_v0_3.md": "92a605ceb1b926f56fa78fb6d04d98c89cca44a60c30d1c7e6ec5d36f21d46cb",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/README.md": "3de68f4906114cf2fddd6cc99eda31f97e2c17e94685a6d5d8ab6f8cfb808b77",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/calibration.py": "1df845085ddc6cbb4799169a4277cce13cd4061ea5262d2216753370cc05844f",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/protocol_v0_3.json": "b556b5e98eeba8a213d2ecd677cea5485a6b649d498ee4d5f42530c57bedc6fe",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/run.py": "9fd626f565033009a5c9ea20bd5320dd29edf5ee57f5ecdc1a94f645d7dd1cd0",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/test_calibration.py": "5afeb6064305dfd05a01584e2527ab28ed7064a0a37bce24f4f6836239ee36e8",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/verify_result.py": "0be07892e5611749ba5406b08f7da2bbf6bd02b50eee72daab7c71c0ea95737c"
+  },
+  "registered_primary_estimand": "Simultaneous target-blind calibration coverage, conditional false-safe rate, and non-vacuity of the maximum dual-norm robust lower bound across four proxy-only optimizer families.",
+  "claim_boundary": "Synthetic finite-population calibration of a classical robust lower bound; no learned reward model, no real human-preference uncertainty set, no RL trajectory, and no ASMP-8 resolution."
+}
