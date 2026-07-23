@@ -2,6 +2,7 @@ param(
   [int]$MaximumWaitSeconds = 21600,
   [int]$PollSeconds = 30,
   [double]$MaximumStartTemperatureC = 65.0,
+  [double]$AbortTemperatureC = 78.0,
   [string]$SmokeSpecPath = "",
   [string]$FullSpecPath = "",
   [string]$SmokeRunPath = "",
@@ -107,6 +108,7 @@ function Invoke-GuardedRun([string]$SpecPath, [string]$RunPath, [string]$Phase) 
   & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $guardScript `
     -RunSpecPath $SpecPath -GuardOutputDir $guardDir `
     -MaximumStartTemperatureC $MaximumStartTemperatureC `
+    -AbortTemperatureC $AbortTemperatureC `
     1>> (Join-Path $launcherDir "$Phase`_guard_stdout.log") `
     2>> (Join-Path $launcherDir "$Phase`_guard_stderr.log")
   $exitCode = $LASTEXITCODE
@@ -140,6 +142,7 @@ Write-LauncherEvent @{
   maximum_wait_seconds = $MaximumWaitSeconds
   poll_seconds = $PollSeconds
   maximum_start_temperature_c = $MaximumStartTemperatureC
+  abort_temperature_c = $AbortTemperatureC
   smoke_spec = $smokeSpec
   full_spec = $fullSpec
   deadline_utc = $deadline.ToUniversalTime().ToString("o")
