@@ -92,6 +92,77 @@ def wait_for_server(base_url: str, process: subprocess.Popen[Any], timeout: floa
     raise TimeoutError(f"llama-server health timeout: {last_error}")
 
 
+def gpu_temperature_c() -> float:
+    output = subprocess.check_output(
+        [
+            "nvidia-smi",
+            "--query-gpu=temperature.gpu",
+            "--format=csv,noheader,nounits",
+        ],
+        text=True,
+        timeout=10.0,
+    )
+    first_line = output.splitlines()[0].strip()
+    temperature = float(first_line)
+    if not math.isfinite(temperature):
+        raise ValueError(f"non-finite GPU temperature: {first_line!r}")
+    return temperature
+
+
+def wait_for_thermal_window(
+    args: argparse.Namespace,
+    events_path: Path,
+    progress_path: Path,
+    progress: dict[str, Any],
+) -> None:
+    if args.thermal_pause_temperature <= 0:
+        return
+
+    temperature = gpu_temperature_c()
+    progress["maximum_runner_observed_temperature_c"] = max(
+        float(progress["maximum_runner_observed_temperature_c"]),
+        temperature,
+    )
+    if temperature < args.thermal_pause_temperature:
+        return
+
+    progress["thermal_pause_count"] += 1
+    pause_started = time.perf_counter()
+    append_jsonl(
+        events_path,
+        {
+            "event": "thermal_pause_start",
+            "ts_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "temperature_c": temperature,
+            "pause_temperature_c": args.thermal_pause_temperature,
+            "resume_temperature_c": args.thermal_resume_temperature,
+        },
+    )
+    atomic_json(progress_path, progress)
+
+    while temperature > args.thermal_resume_temperature:
+        time.sleep(args.thermal_poll_seconds)
+        temperature = gpu_temperature_c()
+        progress["thermal_poll_count"] += 1
+        progress["maximum_runner_observed_temperature_c"] = max(
+            float(progress["maximum_runner_observed_temperature_c"]),
+            temperature,
+        )
+        progress["thermal_pause_seconds"] += time.perf_counter() - pause_started
+        pause_started = time.perf_counter()
+        atomic_json(progress_path, progress)
+
+    append_jsonl(
+        events_path,
+        {
+            "event": "thermal_pause_end",
+            "ts_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "temperature_c": temperature,
+            "cumulative_thermal_pause_seconds": progress["thermal_pause_seconds"],
+        },
+    )
+
+
 def extract_probability(payload: dict[str, Any]) -> float | None:
     probabilities = payload.get("probs")
     if not isinstance(probabilities, list):
@@ -159,7 +230,7 @@ def audit_one(
 
 def initial_progress(args: argparse.Namespace, manifest_hash: str) -> dict[str, Any]:
     return {
-        "schema_version": "qwen08_completion_audit_progress_v0_1",
+        "schema_version": "qwen08_completion_audit_progress_v0_2",
         "run_id": args.run_id,
         "audit_target": args.audit_count,
         "completed_audits": 0,
@@ -174,6 +245,10 @@ def initial_progress(args: argparse.Namespace, manifest_hash: str) -> dict[str, 
         "latency_min_seconds": None,
         "latency_max_seconds": None,
         "content_bytes": 0,
+        "thermal_pause_count": 0,
+        "thermal_pause_seconds": 0.0,
+        "thermal_poll_count": 0,
+        "maximum_runner_observed_temperature_c": 0.0,
         "prompt_manifest_sha256": manifest_hash,
     }
 
@@ -201,6 +276,10 @@ def run(args: argparse.Namespace) -> None:
     else:
         progress = initial_progress(args, manifest_hash)
         atomic_json(progress_path, progress)
+    progress.setdefault("thermal_pause_count", 0)
+    progress.setdefault("thermal_pause_seconds", 0.0)
+    progress.setdefault("thermal_poll_count", 0)
+    progress.setdefault("maximum_runner_observed_temperature_c", 0.0)
 
     if port_is_open(args.host, args.port):
         raise RuntimeError(f"registered server port {args.port} is already occupied")
@@ -263,8 +342,10 @@ def run(args: argparse.Namespace) -> None:
             },
         )
 
-        warmup_records = [prompts[index % len(prompts)] for index in range(args.warmup_count)]
         with ThreadPoolExecutor(max_workers=args.parallel) as executor:
+            warmup_records = [
+                prompts[index % len(prompts)] for index in range(args.warmup_count)
+            ]
             list(
                 executor.map(
                     lambda item: audit_one(base_url, item[1], item[0], args.request_timeout),
@@ -272,67 +353,81 @@ def run(args: argparse.Namespace) -> None:
                 )
             )
 
-        completed = int(progress["completed_audits"])
-        run_started = time.perf_counter()
-        while completed < args.audit_count:
-            chunk_end = min(args.audit_count, completed + args.checkpoint_every)
-            work = [
-                (index, prompts[index % len(prompts)])
-                for index in range(completed, chunk_end)
-            ]
-            with ThreadPoolExecutor(max_workers=args.parallel) as executor:
-                results = list(
-                    executor.map(
-                        lambda item: audit_one(
-                            base_url, item[1], item[0], args.request_timeout
-                        ),
-                        work,
-                    )
-                )
-            digest_sum = int(progress["digest_sum_mod_128"])
-            digest_xor = int(progress["digest_xor_128"])
-            for result in results:
-                digest_sum = (digest_sum + int(result["digest128"])) % MODULUS
-                digest_xor ^= int(result["digest128"])
-                probability = result["probability"]
-                if probability is not None:
-                    progress["probability_count"] += 1
-                    progress["probability_sum"] += probability
-                    progress["probability_sum_squares"] += probability * probability
-                latency = float(result["latency_seconds"])
-                progress["latency_sum_seconds"] += latency
-                progress["latency_min_seconds"] = (
-                    latency
-                    if progress["latency_min_seconds"] is None
-                    else min(float(progress["latency_min_seconds"]), latency)
-                )
-                progress["latency_max_seconds"] = (
-                    latency
-                    if progress["latency_max_seconds"] is None
-                    else max(float(progress["latency_max_seconds"]), latency)
-                )
-                progress["content_bytes"] += int(result["content_length"])
-            progress["digest_sum_mod_128"] = str(digest_sum)
-            progress["digest_xor_128"] = str(digest_xor)
-            completed = chunk_end
-            progress["completed_audits"] = completed
-            progress["completed_chunks"] += 1
-            progress["cumulative_seconds"] += time.perf_counter() - run_started
+            completed = int(progress["completed_audits"])
             run_started = time.perf_counter()
-            progress["audits_per_second"] = (
-                completed / progress["cumulative_seconds"]
-                if progress["cumulative_seconds"] > 0
-                else None
-            )
-            atomic_json(progress_path, progress)
-            append_jsonl(
-                events_path,
-                {
-                    "event": "checkpoint",
-                    "ts_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                    **progress,
-                },
-            )
+            while completed < args.audit_count:
+                chunk_end = min(args.audit_count, completed + args.checkpoint_every)
+                results: list[dict[str, Any]] = []
+                mini_start = completed
+                while mini_start < chunk_end:
+                    wait_for_thermal_window(
+                        args,
+                        events_path,
+                        progress_path,
+                        progress,
+                    )
+                    mini_end = min(
+                        chunk_end,
+                        mini_start + args.thermal_check_every,
+                    )
+                    work = [
+                        (index, prompts[index % len(prompts)])
+                        for index in range(mini_start, mini_end)
+                    ]
+                    results.extend(
+                        executor.map(
+                            lambda item: audit_one(
+                                base_url, item[1], item[0], args.request_timeout
+                            ),
+                            work,
+                        )
+                    )
+                    mini_start = mini_end
+
+                digest_sum = int(progress["digest_sum_mod_128"])
+                digest_xor = int(progress["digest_xor_128"])
+                for result in results:
+                    digest_sum = (digest_sum + int(result["digest128"])) % MODULUS
+                    digest_xor ^= int(result["digest128"])
+                    probability = result["probability"]
+                    if probability is not None:
+                        progress["probability_count"] += 1
+                        progress["probability_sum"] += probability
+                        progress["probability_sum_squares"] += probability * probability
+                    latency = float(result["latency_seconds"])
+                    progress["latency_sum_seconds"] += latency
+                    progress["latency_min_seconds"] = (
+                        latency
+                        if progress["latency_min_seconds"] is None
+                        else min(float(progress["latency_min_seconds"]), latency)
+                    )
+                    progress["latency_max_seconds"] = (
+                        latency
+                        if progress["latency_max_seconds"] is None
+                        else max(float(progress["latency_max_seconds"]), latency)
+                    )
+                    progress["content_bytes"] += int(result["content_length"])
+                progress["digest_sum_mod_128"] = str(digest_sum)
+                progress["digest_xor_128"] = str(digest_xor)
+                completed = chunk_end
+                progress["completed_audits"] = completed
+                progress["completed_chunks"] += 1
+                progress["cumulative_seconds"] += time.perf_counter() - run_started
+                run_started = time.perf_counter()
+                progress["audits_per_second"] = (
+                    completed / progress["cumulative_seconds"]
+                    if progress["cumulative_seconds"] > 0
+                    else None
+                )
+                atomic_json(progress_path, progress)
+                append_jsonl(
+                    events_path,
+                    {
+                        "event": "checkpoint",
+                        "ts_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                        **progress,
+                    },
+                )
 
         probability_count = int(progress["probability_count"])
         probability_mean = (
@@ -375,6 +470,12 @@ def run(args: argparse.Namespace) -> None:
                 ),
                 "minimum_request_latency_seconds": progress["latency_min_seconds"],
                 "maximum_request_latency_seconds": progress["latency_max_seconds"],
+                "thermal_pause_count": progress["thermal_pause_count"],
+                "thermal_pause_seconds": progress["thermal_pause_seconds"],
+                "thermal_poll_count": progress["thermal_poll_count"],
+                "maximum_runner_observed_temperature_c": progress[
+                    "maximum_runner_observed_temperature_c"
+                ],
             },
             "audit_statistics": {
                 "returned_token_probability_mean": probability_mean,
@@ -431,11 +532,24 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--port", type=int, default=8818)
     parser.add_argument("--startup-timeout", type=float, default=180.0)
     parser.add_argument("--request-timeout", type=float, default=120.0)
+    parser.add_argument("--thermal-pause-temperature", type=float, default=0.0)
+    parser.add_argument("--thermal-resume-temperature", type=float, default=0.0)
+    parser.add_argument("--thermal-check-every", type=int, default=20)
+    parser.add_argument("--thermal-poll-seconds", type=float, default=5.0)
     args = parser.parse_args()
     if args.audit_count <= 0 or args.checkpoint_every <= 0:
         parser.error("audit-count and checkpoint-every must be positive")
     if args.parallel <= 0 or args.warmup_count < 0:
         parser.error("parallel must be positive and warmup-count non-negative")
+    if args.thermal_check_every <= 0 or args.thermal_poll_seconds <= 0:
+        parser.error("thermal-check-every and thermal-poll-seconds must be positive")
+    if args.thermal_pause_temperature > 0 and not (
+        0 <= args.thermal_resume_temperature < args.thermal_pause_temperature
+    ):
+        parser.error(
+            "thermal-resume-temperature must be non-negative and below "
+            "thermal-pause-temperature"
+        )
     if args.audit_count % args.checkpoint_every:
         parser.error("audit-count must be divisible by checkpoint-every")
     return args
