@@ -353,12 +353,30 @@ def run(args: argparse.Namespace) -> None:
             warmup_records = [
                 prompts[index % len(prompts)] for index in range(args.warmup_count)
             ]
-            list(
-                executor.map(
-                    lambda item: audit_one(base_url, item[1], item[0], args.request_timeout),
-                    enumerate(warmup_records),
+            warmup_start = 0
+            while warmup_start < len(warmup_records):
+                wait_for_thermal_window(
+                    args,
+                    events_path,
+                    progress_path,
+                    progress,
                 )
-            )
+                warmup_end = min(
+                    len(warmup_records),
+                    warmup_start + min(args.thermal_check_every, args.parallel),
+                )
+                list(
+                    executor.map(
+                        lambda item: audit_one(
+                            base_url, item[1], item[0], args.request_timeout
+                        ),
+                        enumerate(
+                            warmup_records[warmup_start:warmup_end],
+                            start=warmup_start,
+                        ),
+                    )
+                )
+                warmup_start = warmup_end
 
             completed = int(progress["completed_audits"])
             run_started = time.perf_counter()

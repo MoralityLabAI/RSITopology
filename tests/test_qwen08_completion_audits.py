@@ -112,3 +112,9 @@ def test_atomic_json_retries_transient_windows_file_lock(
     assert json.loads(output_path.read_text(encoding="utf-8")) == {
         "completed_audits": 100
     }
+
+
+def test_default_thermal_check_size_is_positive() -> None:
+    source = SCRIPT.read_text(encoding="utf-8")
+    assert 'parser.add_argument("--thermal-check-every", type=int, default=20)' in source
+    assert "min(args.thermal_check_every, args.parallel)" in source
