@@ -131,7 +131,6 @@ def audit_one(
             "temperature": 0.0,
             "top_k": 1,
             "n_probs": 1,
-            "post_sampling_probs": True,
             "cache_prompt": False,
             "return_tokens": True,
             "seed": audit_index,

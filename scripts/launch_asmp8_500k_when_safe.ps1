@@ -3,6 +3,8 @@ param(
   [int]$PollSeconds = 30,
   [double]$MaximumStartTemperatureC = 65.0,
   [double]$AbortTemperatureC = 78.0,
+  [double]$MaximumSmokeTemperatureC = 74.0,
+  [double]$MinimumSmokeProbabilityVariance = 0.0,
   [string]$SmokeSpecPath = "",
   [string]$FullSpecPath = "",
   [string]$SmokeRunPath = "",
@@ -143,6 +145,8 @@ Write-LauncherEvent @{
   poll_seconds = $PollSeconds
   maximum_start_temperature_c = $MaximumStartTemperatureC
   abort_temperature_c = $AbortTemperatureC
+  maximum_smoke_temperature_c = $MaximumSmokeTemperatureC
+  minimum_smoke_probability_variance = $MinimumSmokeProbabilityVariance
   smoke_spec = $smokeSpec
   full_spec = $fullSpec
   deadline_utc = $deadline.ToUniversalTime().ToString("o")
@@ -181,9 +185,11 @@ $probabilityCoverage = (
 $smokePass = (
   [string]$smokeSummary.status -eq "completed" -and
   [string]$smokeGuard.status -eq "completed" -and
-  [double]$smokeGuard.max_temperature_c -le 74.0 -and
+  [double]$smokeGuard.max_temperature_c -le $MaximumSmokeTemperatureC -and
   [bool]$smokeWrapper.cleanup_passed -and
-  $probabilityCoverage -eq 1.0
+  $probabilityCoverage -eq 1.0 -and
+  [double]$smokeSummary.audit_statistics.returned_token_probability_variance -gt
+    $MinimumSmokeProbabilityVariance
 )
 if (-not $smokePass) {
   Stop-Launcher "smoke_failed" "smoke_scientific_or_resource_gate_failed" @{
@@ -192,11 +198,13 @@ if (-not $smokePass) {
     guard_status = $smokeGuard.status
     max_temperature_c = $smokeGuard.max_temperature_c
     cleanup_passed = $smokeWrapper.cleanup_passed
+    probability_variance = $smokeSummary.audit_statistics.returned_token_probability_variance
   }
 }
 Write-LauncherEvent @{
   event = "smoke_pass"
   probability_coverage = $probabilityCoverage
+  probability_variance = $smokeSummary.audit_statistics.returned_token_probability_variance
   max_temperature_c = $smokeGuard.max_temperature_c
 }
 
