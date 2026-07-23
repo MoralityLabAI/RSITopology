@@ -1,0 +1,88 @@
+{
+  "schema_version": "asmp8_gpu_batch_scaling_v0_2",
+  "date": "2026-07-23",
+  "status": "bounded_scaling_completed_to_four_prompts",
+  "device": {
+    "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "driver": "555.99",
+    "runtime": "llama.cpp b10064 CUDA 12.4 build"
+  },
+  "work_unit": {
+    "model": "Qwen3.5 0.8B Q4_K_M",
+    "prompt_tokens_per_audit_proxy": 128,
+    "generation_tokens": 0,
+    "persistent_model_server": false
+  },
+  "measurements": [
+    {
+      "run_id": "asmp8-qwen08-cuda-throughput-npl2-guarded-v0-1-20260723",
+      "parallel_prompts": 2,
+      "prompt_processing_seconds": 0.392871,
+      "audit_proxies_per_second": 5.090729527,
+      "guard_status": "failed_instrumentation",
+      "model_wrapper_status": "completed",
+      "model_exit_code": 0,
+      "cleanup_passed": true,
+      "interpretation": "Cold or unboosted timing retained descriptively; outer guard could not recover a nullable child exit-code field."
+    },
+    {
+      "run_id": "asmp8-qwen08-cuda-throughput-npl2-guarded-v0-2-20260723",
+      "parallel_prompts": 2,
+      "prompt_processing_seconds": 0.060489,
+      "audit_proxies_per_second": 33.0638628511,
+      "guard_status": "completed",
+      "completion_gate": "pass",
+      "maximum_temperature_c": 67,
+      "maximum_power_w": 22.5,
+      "maximum_sampled_gpu_memory_mb": 67,
+      "peak_host_ram_mb": 885.555,
+      "cleanup_passed": true,
+      "new_system_or_display_error_events": 0
+    },
+    {
+      "run_id": "asmp8-qwen08-cuda-throughput-npl4-guarded-v0-1-20260723",
+      "parallel_prompts": 4,
+      "prompt_processing_seconds": 0.12228,
+      "audit_proxies_per_second": 32.711808963,
+      "guard_status": "completed",
+      "completion_gate": "pass",
+      "maximum_temperature_c": 67,
+      "maximum_power_w": 23.11,
+      "maximum_sampled_gpu_memory_mb": 565,
+      "peak_host_ram_mb": 322.793,
+      "cleanup_passed": true,
+      "new_system_or_display_error_events": 0
+    }
+  ],
+  "planning_estimate_from_four_prompt_run": {
+    "8192_audits_minutes": 4.173824,
+    "500000_audits_hours": 4.2458333333,
+    "524288_audits_hours": 4.4520789333
+  },
+  "steady_warm_measurement_range": {
+    "audit_proxies_per_second_low": 32.711808963,
+    "audit_proxies_per_second_high": 33.0638628511,
+    "relative_spread_percent": 1.0704
+  },
+  "deferred_measurement": {
+    "run_id": "asmp8-qwen08-cuda-throughput-npl4-repeated-guarded-v0-2-20260723",
+    "status": "not_run_shared_gpu_occupied",
+    "reason": "A separately owned llama-server process occupied CUDA after the spec was frozen.",
+    "highest_observed_shared_gpu_temperature_c": 81,
+    "observed_shared_gpu_memory_mb": 519,
+    "action": "No launch and no termination of the separately owned process."
+  },
+  "hashes": {
+    "guard_script_for_npl2_v0_2_and_npl4_v0_1_sha256": "a41158e48a45f412af1fcce472ec32808636deb1f103a61d765f0602d525d8e6",
+    "npl2_v0_1_spec_sha256": "bc06bfbd74a557fc771589d8e4cd2432b85ab58129bcf2090631cfca29e0675b",
+    "npl2_v0_2_spec_sha256": "42f10e77ba9f4d349bfc93cce436d1318de71900d235fa1f0a1142babde49d00",
+    "npl4_v0_1_spec_sha256": "81da4d1c282b9d9858efd2381e526c03d59438af77183ab51b898b50b3b804cf",
+    "npl4_repeated_v0_2_spec_sha256": "afc2002295f46fe1267e1e498a553fe76810b4f33754bfc4bc29f632b35dd724",
+    "npl2_v0_2_guard_summary_sha256": "e6b82a61d8a13dba77c6905e7105a67bcc2f306a720ebdad9c04e446a57d46a3",
+    "npl2_v0_2_raw_stdout_sha256": "f1d9fc1cabbe3b00d5fc68939c76158820ebddb4dc2a947a0a0896e9a08018ef",
+    "npl4_v0_1_guard_summary_sha256": "b765853ca62a6734234c43539c84dc705d13e4adc03316dc0a7747bd1e5ba617",
+    "npl4_v0_1_raw_stdout_sha256": "68c9fcd415a415f86a78104c16ec71d17f834ed0a7835271c60a5cabf4d64002"
+  },
+  "provenance_limitation": "The pre-amendment guard source used for npl2 v0.1 was not hashed before its nullable exit-code defect was repaired. The model, wrapper, cleanup, and guard output artifacts from that run remain hashed externally; the v0.1 timing is descriptive only.",
+  "claim_boundary": "Descriptive CUDA prompt-processing throughput only. This is not a persistent-server benchmark, a generation benchmark, an NF4 comparison, a human-audit rate, or evidence about ASMP-8."
+}
