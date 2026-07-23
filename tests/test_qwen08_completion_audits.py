@@ -88,3 +88,27 @@ def test_thermal_window_does_not_pause_below_threshold(
     assert progress["thermal_pause_count"] == 0
     assert progress["maximum_runner_observed_temperature_c"] == 84.0
     assert not (tmp_path / "events.jsonl").exists()
+
+
+def test_atomic_json_retries_transient_windows_file_lock(
+    monkeypatch, tmp_path: Path
+) -> None:
+    output_path = tmp_path / "progress.json"
+    original_replace = Path.replace
+    attempts = {"count": 0}
+
+    def intermittently_locked(source: Path, target: Path) -> Path:
+        attempts["count"] += 1
+        if attempts["count"] <= 2:
+            raise PermissionError("simulated Windows reader lock")
+        return original_replace(source, target)
+
+    monkeypatch.setattr(Path, "replace", intermittently_locked)
+    monkeypatch.setattr(MODULE.time, "sleep", lambda _: None)
+
+    MODULE.atomic_json(output_path, {"completed_audits": 100})
+
+    assert attempts["count"] == 3
+    assert json.loads(output_path.read_text(encoding="utf-8")) == {
+        "completed_audits": 100
+    }

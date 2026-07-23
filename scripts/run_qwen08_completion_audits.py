@@ -27,7 +27,14 @@ def atomic_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_bytes(canonical_bytes(value))
-    temporary.replace(path)
+    for attempt in range(50):
+        try:
+            temporary.replace(path)
+            return
+        except PermissionError:
+            if attempt == 49:
+                raise
+            time.sleep(min(0.01 * (2 ** min(attempt, 4)), 0.1))
 
 
 def append_jsonl(path: Path, value: Any) -> None:
