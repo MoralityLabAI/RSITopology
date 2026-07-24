@@ -6,6 +6,8 @@ param(
   [double]$AbortTemperatureC = 78.0,
   [double]$MaximumSmokeTemperatureC = 74.0,
   [double]$MinimumSmokeProbabilityVariance = 0.0,
+  [double]$MaximumIdleGpuMemoryMb = 128.0,
+  [string]$AllowedComputeProcessPattern = "(?i)ChatGPT\.exe$",
   [string]$SmokeSpecPath = "",
   [string]$FullSpecPath = "",
   [string]$SmokeRunPath = "",
@@ -69,6 +71,12 @@ function Get-LaunchState {
     & nvidia-smi --query-compute-apps=pid,process_name --format=csv,noheader,nounits 2>$null |
       Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
   )
+  $foreignComputeLines = @(
+    $computeLines | Where-Object {
+      -not $AllowedComputeProcessPattern -or
+      $_ -notmatch $AllowedComputeProcessPattern
+    }
+  )
   $os = Get-CimInstance Win32_OperatingSystem
   return [ordered]@{
     temperature_c = [double]$parts[0]
@@ -79,6 +87,8 @@ function Get-LaunchState {
     utilization_percent = [double]$parts[5]
     compute_process_count = $computeLines.Count
     compute_processes = $computeLines
+    foreign_compute_process_count = $foreignComputeLines.Count
+    foreign_compute_processes = $foreignComputeLines
     free_physical_mb = [math]::Round(([double]$os.FreePhysicalMemory / 1024.0), 3)
   }
 }
@@ -86,10 +96,10 @@ function Get-LaunchState {
 function Test-LaunchState([object]$State) {
   return (
     [double]$State.temperature_c -le $MaximumStartTemperatureC -and
-    [double]$State.memory_used_mb -eq 0.0 -and
+    [double]$State.memory_used_mb -le $MaximumIdleGpuMemoryMb -and
     [double]$State.memory_free_mb -ge 2500.0 -and
     [double]$State.free_physical_mb -ge 8192.0 -and
-    [int]$State.compute_process_count -eq 0
+    [int]$State.foreign_compute_process_count -eq 0
   )
 }
 
@@ -141,8 +151,16 @@ function Stop-Launcher([string]$Status, [string]$Reason, [object]$Details) {
 }
 
 if (Test-Path -LiteralPath $summaryPath) {
-  Get-Content -LiteralPath $summaryPath -Raw
-  exit 0
+  $priorSummary = Get-Content -LiteralPath $summaryPath -Raw | ConvertFrom-Json
+  if ([string]$priorSummary.status -eq "completed") {
+    $priorSummary | ConvertTo-Json -Depth 10
+    exit 0
+  }
+  Write-LauncherEvent @{
+    event = "launcher_resume_after_nonterminal_summary"
+    prior_status = [string]$priorSummary.status
+    prior_reason = [string]$priorSummary.reason
+  }
 }
 
 Write-LauncherEvent @{
@@ -154,6 +172,8 @@ Write-LauncherEvent @{
   abort_temperature_c = $AbortTemperatureC
   maximum_smoke_temperature_c = $MaximumSmokeTemperatureC
   minimum_smoke_probability_variance = $MinimumSmokeProbabilityVariance
+  maximum_idle_gpu_memory_mb = $MaximumIdleGpuMemoryMb
+  allowed_compute_process_pattern = $AllowedComputeProcessPattern
   smoke_spec = $smokeSpec
   full_spec = $fullSpec
   deadline_utc = $deadline.ToUniversalTime().ToString("o")
