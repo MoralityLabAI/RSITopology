@@ -29,6 +29,47 @@ def test_extract_probability_from_legacy_nested_schema() -> None:
     assert MODULE.extract_probability(payload) == 0.75
 
 
+def test_grouped_prompt_order_is_contiguous_and_complete() -> None:
+    prompts = [{"row_id": str(index)} for index in range(3)]
+    observed = [
+        MODULE.prompt_for_audit(prompts, index, 8, "grouped")["row_id"]
+        for index in range(8)
+    ]
+    assert observed == ["0", "0", "0", "1", "1", "1", "2", "2"]
+
+
+def test_cyclic_prompt_order_preserves_legacy_mapping() -> None:
+    prompts = [{"row_id": str(index)} for index in range(3)]
+    observed = [
+        MODULE.prompt_for_audit(prompts, index, 8, "cyclic")["row_id"]
+        for index in range(8)
+    ]
+    assert observed == ["0", "1", "2", "0", "1", "2", "0", "1"]
+
+
+def test_audit_one_forwards_cache_prompt_flag(monkeypatch) -> None:
+    captured: dict[str, object] = {}
+
+    def fake_http_json(url: str, payload: dict[str, object], timeout: float) -> dict:
+        captured.update(payload)
+        return {
+            "content": "x",
+            "tokens": [1],
+            "probs": [{"prob": 0.5}],
+            "stop": True,
+        }
+
+    monkeypatch.setattr(MODULE, "http_json", fake_http_json)
+    MODULE.audit_one(
+        "http://127.0.0.1:8818",
+        {"row_id": "r", "prompt": "p", "prompt_sha256": "h"},
+        0,
+        1.0,
+        True,
+    )
+    assert captured["cache_prompt"] is True
+
+
 def test_thermal_window_pauses_until_resume_threshold(monkeypatch, tmp_path: Path) -> None:
     temperatures = iter([85.0, 84.0, 80.0])
     monkeypatch.setattr(MODULE, "gpu_temperature_c", lambda: next(temperatures))

@@ -71,6 +71,23 @@ def load_prompts(path: Path) -> list[dict[str, str]]:
     return prompts
 
 
+def prompt_for_audit(
+    prompts: list[dict[str, str]],
+    audit_index: int,
+    audit_count: int,
+    prompt_order: str,
+) -> dict[str, str]:
+    if prompt_order == "cyclic":
+        return prompts[audit_index % len(prompts)]
+    if prompt_order == "grouped":
+        prompt_index = min(
+            len(prompts) - 1,
+            (audit_index * len(prompts)) // audit_count,
+        )
+        return prompts[prompt_index]
+    raise ValueError(f"unsupported prompt order: {prompt_order!r}")
+
+
 def port_is_open(host: str, port: int) -> bool:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:
         probe.settimeout(0.25)
@@ -199,6 +216,7 @@ def audit_one(
     prompt_record: dict[str, str],
     audit_index: int,
     request_timeout: float,
+    cache_prompt: bool = False,
 ) -> dict[str, Any]:
     started = time.perf_counter()
     response = http_json(
@@ -209,7 +227,7 @@ def audit_one(
             "temperature": 0.0,
             "top_k": 1,
             "n_probs": 1,
-            "cache_prompt": False,
+            "cache_prompt": cache_prompt,
             "return_tokens": True,
             "seed": audit_index,
         },
@@ -235,7 +253,11 @@ def audit_one(
     }
 
 
-def initial_progress(args: argparse.Namespace, manifest_hash: str) -> dict[str, Any]:
+def initial_progress(
+    args: argparse.Namespace,
+    manifest_hash: str,
+    prompt_count: int,
+) -> dict[str, Any]:
     return {
         "schema_version": "qwen08_completion_audit_progress_v0_2",
         "run_id": args.run_id,
@@ -257,6 +279,9 @@ def initial_progress(args: argparse.Namespace, manifest_hash: str) -> dict[str, 
         "thermal_poll_count": 0,
         "maximum_runner_observed_temperature_c": 0.0,
         "prompt_manifest_sha256": manifest_hash,
+        "prompt_count": prompt_count,
+        "prompt_order": args.prompt_order,
+        "cache_prompt": args.cache_prompt,
     }
 
 
@@ -273,6 +298,8 @@ def run(args: argparse.Namespace) -> None:
         return
 
     prompts = load_prompts(args.prompt_manifest)
+    if args.prompt_limit is not None:
+        prompts = prompts[: args.prompt_limit]
     manifest_hash = sha256(args.prompt_manifest)
     if progress_path.exists():
         progress = json.loads(progress_path.read_text(encoding="utf-8-sig"))
@@ -281,12 +308,21 @@ def run(args: argparse.Namespace) -> None:
         if progress["prompt_manifest_sha256"] != manifest_hash:
             raise ValueError("prompt manifest hash changed since the checkpoint")
     else:
-        progress = initial_progress(args, manifest_hash)
+        progress = initial_progress(args, manifest_hash, len(prompts))
         atomic_json(progress_path, progress)
     progress.setdefault("thermal_pause_count", 0)
     progress.setdefault("thermal_pause_seconds", 0.0)
     progress.setdefault("thermal_poll_count", 0)
     progress.setdefault("maximum_runner_observed_temperature_c", 0.0)
+    progress.setdefault("prompt_order", "cyclic")
+    progress.setdefault("cache_prompt", False)
+    progress.setdefault("prompt_count", len(prompts))
+    if int(progress["prompt_count"]) != len(prompts):
+        raise ValueError("prompt selection changed since the checkpoint")
+    if progress["prompt_order"] != args.prompt_order:
+        raise ValueError("prompt order changed since the checkpoint")
+    if bool(progress["cache_prompt"]) != bool(args.cache_prompt):
+        raise ValueError("prompt-cache mode changed since the checkpoint")
 
     if port_is_open(args.host, args.port):
         raise RuntimeError(f"registered server port {args.port} is already occupied")
@@ -351,7 +387,12 @@ def run(args: argparse.Namespace) -> None:
 
         with ThreadPoolExecutor(max_workers=args.parallel) as executor:
             warmup_records = [
-                prompts[index % len(prompts)] for index in range(args.warmup_count)
+                (
+                    prompts[0]
+                    if args.prompt_order == "grouped"
+                    else prompts[index % len(prompts)]
+                )
+                for index in range(args.warmup_count)
             ]
             warmup_start = 0
             while warmup_start < len(warmup_records):
@@ -368,7 +409,11 @@ def run(args: argparse.Namespace) -> None:
                 list(
                     executor.map(
                         lambda item: audit_one(
-                            base_url, item[1], item[0], args.request_timeout
+                            base_url,
+                            item[1],
+                            item[0],
+                            args.request_timeout,
+                            args.cache_prompt,
                         ),
                         enumerate(
                             warmup_records[warmup_start:warmup_end],
@@ -396,13 +441,25 @@ def run(args: argparse.Namespace) -> None:
                         mini_start + args.thermal_check_every,
                     )
                     work = [
-                        (index, prompts[index % len(prompts)])
+                        (
+                            index,
+                            prompt_for_audit(
+                                prompts,
+                                index,
+                                args.audit_count,
+                                args.prompt_order,
+                            ),
+                        )
                         for index in range(mini_start, mini_end)
                     ]
                     results.extend(
                         executor.map(
                             lambda item: audit_one(
-                                base_url, item[1], item[0], args.request_timeout
+                                base_url,
+                                item[1],
+                                item[0],
+                                args.request_timeout,
+                                args.cache_prompt,
                             ),
                             work,
                         )
@@ -479,6 +536,8 @@ def run(args: argparse.Namespace) -> None:
                 "gradients": False,
                 "weights_modified": False,
                 "scientific_gate": False,
+                "prompt_order": args.prompt_order,
+                "cache_prompt": args.cache_prompt,
             },
             "counts": {
                 "audits_completed": progress["completed_audits"],
@@ -543,11 +602,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--server-path", type=Path, required=True)
     parser.add_argument("--model-path", type=Path, required=True)
     parser.add_argument("--prompt-manifest", type=Path, required=True)
+    parser.add_argument("--prompt-limit", type=int)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--audit-count", type=int, required=True)
     parser.add_argument("--checkpoint-every", type=int, default=1000)
     parser.add_argument("--warmup-count", type=int, default=8)
     parser.add_argument("--parallel", type=int, default=4)
+    parser.add_argument(
+        "--prompt-order",
+        choices=("cyclic", "grouped"),
+        default="cyclic",
+    )
+    parser.add_argument("--cache-prompt", action="store_true")
     parser.add_argument("--context-size", type=int, default=768)
     parser.add_argument("--batch-size", type=int, default=512)
     parser.add_argument("--ubatch-size", type=int, default=256)
@@ -566,6 +632,8 @@ def parse_args() -> argparse.Namespace:
         parser.error("audit-count and checkpoint-every must be positive")
     if args.parallel <= 0 or args.warmup_count < 0:
         parser.error("parallel must be positive and warmup-count non-negative")
+    if args.prompt_limit is not None and args.prompt_limit <= 0:
+        parser.error("prompt-limit must be positive")
     if args.thermal_check_every <= 0 or args.thermal_poll_seconds <= 0:
         parser.error("thermal-check-every and thermal-poll-seconds must be positive")
     if args.thermal_pause_temperature > 0 and not (
