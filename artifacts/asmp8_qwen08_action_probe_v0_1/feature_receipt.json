@@ -1,0 +1,27 @@
+{
+  "feature_table_sha256": "22c78ffda464c1202bced0583f6dd5936768a24f7166a3da427e7ebc91d17307",
+  "liveness": {
+    "observed_maximum_variance": 0.22448881172839505,
+    "population_variances": {
+      "probe_normalized_entropy": 0.006390725337053205,
+      "probe_probability_A": 0.00812951511421214,
+      "probe_probability_B": 0.0036509166533819277,
+      "probe_probability_C": 0.007073858980709304,
+      "probe_probability_D": 0.018352427047527237,
+      "probe_probability_margin": 0.018003214142055267,
+      "probe_probability_maximum": 0.00991640044770766,
+      "probe_proxy_action_probability": 0.01819595459232541,
+      "probe_proxy_disagreement": 0.22448881172839505
+    },
+    "required_maximum_variance_floor": 1e-06,
+    "status": "pass"
+  },
+  "manifest_sha256": "2244ed883986267aaaf036bab91ff3c2f6dc4072f8fc5a06640111c35b62e6f4",
+  "outcomes_consumed": false,
+  "probability_tolerance": 1e-07,
+  "records_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_action_probe_prime_spot_v0_1\\extracted\\asmp8_action_probe_v0_1\\output\\records",
+  "row_count": 576,
+  "schema_version": "asmp8_qwen08_action_probe_feature_receipt_v0_1",
+  "status": "outcome_blind_action_probe_features_sealed",
+  "sum_tolerance": 1e-07
+}
