@@ -1,0 +1,57 @@
+{
+  "schema_version": "prime_pod_launch_intent_v1",
+  "status": "prospective_prelaunch",
+  "prepared_utc": "2026-07-25T19:49:40.3368126Z",
+  "task": {
+    "id": "asmp8-qwen08-stratified-completion-measurement-prime-spot-v0-1",
+    "description": "Execute the frozen 3,456-request target-blind Qwen0.8B completion-probability reliability study on a separate Prime GPU surface.",
+    "protocol": "protocols/asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1.json",
+    "pod_name": "jinn-paper-20260725-asmp8-stratified"
+  },
+  "account": {
+    "username": "moralitylab",
+    "user_id": "cmbqxo1kc0020eppjy9mnws3d",
+    "identity_check": "PASS"
+  },
+  "selected_availability": {
+    "id": "724407",
+    "cloud_id": "1A100.40S.22V_SPOT",
+    "provider": "datacrunch",
+    "region": "FI",
+    "listed_hourly_usd": 0.4515,
+    "gpu_type": "A100 40GB (Spot)",
+    "gpu_count": 1,
+    "vcpus": 22,
+    "ram_gb": 120,
+    "image": "ubuntu_22_cuda_12",
+    "disk_gb": 256,
+    "spot": true,
+    "stock_status_at_preflight": "Available"
+  },
+  "limits": {
+    "maximum_planned_lifetime_seconds": 3600,
+    "maximum_estimated_cost_usd": 0.4515,
+    "workload_ram_mb": 4096,
+    "workload_cpu_percent": 50,
+    "workload_io_mb_s": 50,
+    "workload_timeout_seconds": 7200,
+    "workload_gpu_allowance_mb": 1600,
+    "hard_abort_temperature_c": 88
+  },
+  "expected_output_path": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1",
+  "spot_consequence": "An unplanned interruption invalidates the registered P0 full-pass state. Completed prefix receipts remain engineering evidence only.",
+  "protected_jinn_run": {
+    "run_id": "e2s64hw5ywag1d8hgwfef6jd",
+    "status_at_preflight": "COMPLETED",
+    "action": "NONE"
+  },
+  "active_pods_at_preflight": 0,
+  "pod_id": null,
+  "creation_utc": null,
+  "ready_utc": null,
+  "workload_started_utc": null,
+  "workload_ended_utc": null,
+  "termination_utc": null,
+  "artifact_index": null,
+  "estimated_total_cost_usd": null
+}
