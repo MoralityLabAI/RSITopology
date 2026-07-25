@@ -52,11 +52,26 @@
   "runtime": {
     "llama_cpp_tag": "b10064",
     "llama_cpp_commit": "86d86ed4396b4130922f7b9af26e3d9fc11a591b",
-    "llama_server_sha256": "d6e833688c7fc0ef78d3f6d48523bbf8b1e8f18469ba6545b97f55ffdacf52cb",
+    "llama_server_sha256": "ea573b00c3510d2316c52f001b63f13b98a295c5e273c2a06323e02bb1c27a0f",
+    "llama_cuda_library_sha256": "fb219ab718254becd5074b3f1077686803ffc0411c41bf31b6fa634a5bd438b3",
     "llama_server_version": "1 (86d86ed)",
     "cuda_toolkit": "12.8.93",
+    "cuda_architectures": "80-real",
     "compiler": "GNU 11.4.0",
-    "guard_script": "scripts/run_prime_asmp8_guarded.sh"
+    "guard_script": "scripts/run_prime_asmp8_guarded.sh",
+    "superseded_virtual_arch_binary_sha256": "d6e833688c7fc0ef78d3f6d48523bbf8b1e8f18469ba6545b97f55ffdacf52cb",
+    "preoutcome_operational_attempts": [
+      {
+        "attempt": 0,
+        "completed_records": 0,
+        "failure": "first_request_timeout_during_virtual_compute_80_runtime_preparation"
+      },
+      {
+        "attempt": 1,
+        "completed_records": 0,
+        "failure": "same_failure_reproduced_before_native_sm80_rebuild"
+      }
+    ]
   },
   "workload_started_utc": null,
   "workload_ended_utc": null,

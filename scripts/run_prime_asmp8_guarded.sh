@@ -22,7 +22,7 @@ printf 'timestamp_utc,temperature_c,memory_used_mb,power_w\n' > "${OUTPUT_DIR}/g
 RUNNER=(
     /usr/bin/python3 "${RUN_ROOT}/scripts/run_qwen08_stratified_audits.py"
     --run-id asmp8-qwen08-stratified-completion-measurement-prime-spot-v0-1-20260725
-    --server-path /workspace/llama.cpp/build/bin/llama-server
+    --server-path /workspace/llama.cpp/build-sm80/bin/llama-server
     --model-path "${RUN_ROOT}/model/Qwen3.5-0.8B-Q4_K_M.gguf"
     --prompt-manifest "${RUN_ROOT}/input/qwen08_controller_task_prompt_manifest_v0_1.json"
     --output-dir "${OUTPUT_DIR}"
@@ -51,7 +51,7 @@ systemd-run \
     -p "IOReadBandwidthMax=${BLOCK_DEVICE} 50M" \
     -p "IOWriteBandwidthMax=${BLOCK_DEVICE} 50M" \
     -p RuntimeMaxSec=7200 \
-    -E "LD_LIBRARY_PATH=/workspace/llama.cpp/build/bin" \
+    -E "LD_LIBRARY_PATH=/workspace/llama.cpp/build-sm80/bin" \
     "${RUNNER[@]}" \
     > "${OUTPUT_DIR}/guarded_runner_stdout.log" \
     2> "${OUTPUT_DIR}/guarded_runner_stderr.log" &
