@@ -58,5 +58,12 @@ then replaces population-oracle signs with a known independent noisy
 sign-and-tie channel. It proves that the same exact coefficient width is a
 liveness boundary, gives constructive and information-theoretic sample bounds,
 and isolates a quadratic nonadaptive Farey-coverage penalty that adaptive
-search avoids. Discounted shaping, policy access, unknown response parameters,
-and inconsistent demonstrators remain open.
+search avoids.
+
+The [discounted-shaping theorem v0.6](discounted_shaping_v0_6/PUBLIC_SUMMARY_v0_6.md)
+then replaces ordinary incidence by the discounted gain-incidence operator.
+It proves the balanced-component rank formula, identifies the exact
+discounted boundary signature for shaping-invariant trajectory comparisons,
+and shows why ordinary loop returns can lose all invariant content under
+discounting. Policy access, unknown response parameters, larger invariance
+classes, and inconsistent demonstrators remain open.

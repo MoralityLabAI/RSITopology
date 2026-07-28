@@ -99,6 +99,12 @@ as transformer evidence.
   adaptive access separation. Discounted and behavioral identification remain
   open.
 
+- [ASMP-9: discounted-shaping quotient theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/PUBLIC_SUMMARY_v0_6.md)
+  Discounted potential shaping changes ordinary cycle cohomology into a
+  gain-graph quotient. The result gives its exact balanced-component rank and
+  the boundary signatures required for finite trajectory comparisons to
+  remain shaping-invariant; behavioral identification remains open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
