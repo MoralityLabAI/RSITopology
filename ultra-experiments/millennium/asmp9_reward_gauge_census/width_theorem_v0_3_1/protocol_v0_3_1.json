@@ -1,0 +1,37 @@
+{
+  "protocol_id": "ASMP-9-SHARP-WIDTH-v0.3.1",
+  "status": "prospective_repair",
+  "supersedes_scientific_claim": "ASMP-9-SHARP-WIDTH-v0.3",
+  "delta_domain": "0 < delta < 1",
+  "full_pair_cells": [
+    [2, 25],
+    [2, 26],
+    [2, 27],
+    [2, 28],
+    [2, 29],
+    [2, 30],
+    [2, 31],
+    [2, 32],
+    [3, 6],
+    [5, 2]
+  ],
+  "lower_witness_bounds": {
+    "dimension": 2,
+    "minimum_bound": 65,
+    "maximum_bound": 96
+  },
+  "random_cells": [
+    [6, 3, 90310],
+    [10, 5, 90311],
+    [20, 9, 90312]
+  ],
+  "random_pairs_per_cell": 4096,
+  "endpoint_control_bounds": [1, 2, 8, 32],
+  "resource_limits": {
+    "wall_seconds": 600,
+    "ram_bytes": 4294967296,
+    "gpu_allowed": false
+  },
+  "claim_boundary": "corrected implementation verification for 0<delta<1 only"
+}
+
