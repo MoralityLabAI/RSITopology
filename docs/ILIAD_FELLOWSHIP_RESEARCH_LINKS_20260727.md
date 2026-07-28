@@ -131,6 +131,13 @@ as transformer evidence.
   on whether full stochastic probabilities or only action identities are
   observed.
 
+- [ASMP-9: contextual scalar-gluing theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/PUBLIC_SUMMARY_v0_11.md)
+  Context-local scalar preferences glue to one context-independent value
+  function exactly when the independent mixed-context cycle circulations
+  vanish. The exact obstruction dimension is verified over 262,144 graph
+  triples plus 4,096 fresh cells, with a minimal two-item/two-context
+  incompatibility witness.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
