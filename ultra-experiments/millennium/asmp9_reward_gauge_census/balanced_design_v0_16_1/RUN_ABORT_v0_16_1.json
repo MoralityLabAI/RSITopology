@@ -1,0 +1,19 @@
+{
+  "claim_status": "not_evaluated_resource_abort",
+  "completed_stages": [
+    "registration_binding",
+    "pair_registry",
+    "global_allocation_registry",
+    "compact_value_registry"
+  ],
+  "execution_head": "7c6b9d109efdf7729782dd47cb566fc1c6f34a06",
+  "last_persisted_elapsed_seconds": 67.50612320000073,
+  "last_persisted_peak_resident_bytes": 22126592,
+  "outer_timeout_seconds": 154.029,
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.1",
+  "registered_wall_cap_seconds": 120,
+  "registration_sha256": "9174911e1a68a78c93163516400c91333ab4184fa732b322887f1d8a780e4ef6",
+  "scientific_gates": "not_evaluated",
+  "stop_reason": "threshold_stage_exceeded_wall_cap_before_completion",
+  "worker_terminated_after_cap_breach": true
+}
