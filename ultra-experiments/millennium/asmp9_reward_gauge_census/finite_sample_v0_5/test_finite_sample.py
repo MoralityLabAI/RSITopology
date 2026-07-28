@@ -12,6 +12,7 @@ from finite_sample import (
     channel_capacity,
     farey_sequence,
     fano_fixed_budget_lower_bound,
+    farey_adjacency_audit,
     full_signature,
     identify_ray,
     logical_query_bound,
@@ -132,6 +133,16 @@ def test_nonadaptive_lower_bound_has_quadratic_farey_growth() -> None:
     small = nonadaptive_farey_lower_bound(16, 0.1, 0.05)
     large = nonadaptive_farey_lower_bound(128, 0.1, 0.05)
     assert large / small > 40
+
+
+@pytest.mark.parametrize("bound", range(3, 33))
+def test_farey_adjacency_incidence_certificate(bound: int) -> None:
+    audit = farey_adjacency_audit(bound)
+    assert audit["valid"]
+    assert audit["maximum_edge_separators"] <= 2
+    assert audit["incidence_total"] <= 2 * audit[
+        "admissible_threshold_count"
+    ]
 
 
 @pytest.mark.parametrize(

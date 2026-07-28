@@ -195,6 +195,49 @@ def nonadaptive_farey_lower_bound(
     )
 
 
+def farey_adjacency_audit(bound: int) -> dict[str, int | bool]:
+    """Verify the critical-width endpoint-incidence argument exactly."""
+    if bound < 3:
+        raise ValueError("bound must be at least three")
+    candidates = farey_sequence(bound)
+    admissible = farey_sequence(bound - 1)
+    admissible_set = set(admissible)
+    maximum_separators = 0
+    incidence_total = 0
+    for left, right in itertools.pairwise(candidates):
+        separators = [
+            threshold
+            for threshold in admissible
+            if sign(left - threshold) != sign(right - threshold)
+        ]
+        expected = [
+            endpoint
+            for endpoint in (left, right)
+            if endpoint in admissible_set
+        ]
+        if separators != expected:
+            return {
+                "bound": bound,
+                "edge_count": len(candidates) - 1,
+                "admissible_threshold_count": len(admissible),
+                "maximum_edge_separators": max(
+                    maximum_separators, len(separators)
+                ),
+                "incidence_total": incidence_total + len(separators),
+                "valid": False,
+            }
+        maximum_separators = max(maximum_separators, len(separators))
+        incidence_total += len(separators)
+    return {
+        "bound": bound,
+        "edge_count": len(candidates) - 1,
+        "admissible_threshold_count": len(admissible),
+        "maximum_edge_separators": maximum_separators,
+        "incidence_total": incidence_total,
+        "valid": incidence_total <= 2 * len(admissible),
+    }
+
+
 def latent_sign(vector: Sequence[int], query: Sequence[int]) -> int:
     if len(vector) != len(query):
         raise ValueError("dimension mismatch")
