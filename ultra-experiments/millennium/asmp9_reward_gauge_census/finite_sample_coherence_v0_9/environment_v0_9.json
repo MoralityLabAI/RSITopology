@@ -1,0 +1,8 @@
+{
+  "operating_system": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.4",
+  "python_implementation": "CPython",
+  "numpy": "2.4.4",
+  "scipy": "1.16.2",
+  "execution_mode": "CPU-only"
+}

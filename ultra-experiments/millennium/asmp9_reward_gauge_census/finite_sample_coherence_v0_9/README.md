@@ -21,3 +21,14 @@ The admissible output levels are:
 - `unavailable_no_edges`.
 
 No finite sample is allowed to certify exact zero circulation.
+
+The prospective confirmatory files are:
+
+- `PROTOCOL_v0_9.md`;
+- `protocol_v0_9.json`;
+- `environment_v0_9.json`;
+- `run_verification.py`; and
+- `verify_result.py`.
+
+They must be hash-sealed in a registration commit before the fresh seeds are
+executed.
