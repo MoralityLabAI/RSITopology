@@ -29,3 +29,13 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
+
+## Successor
+
+The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
+replaces exact real-valued loop returns with signs of trajectory-bundle
+comparisons. It separately sweeps comparison count, coefficient width, and a
+frozen half-unit threshold perturbation. The exact 32-cell census finds that
+robust identification requires wider questions and more comparisons in every
+registered nontrivial stratum. It remains a finite population-oracle result,
+not a human-preference or behavioral-IRL theorem.

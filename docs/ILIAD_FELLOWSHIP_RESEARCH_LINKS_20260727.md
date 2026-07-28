@@ -81,6 +81,12 @@ as transformer evidence.
   A successor checker admits an unsafe depth-two path that a frozen-root
   refinement blocks while preserving a nontrivial safe progress chain.
 
+- [ASMP-9: ordinal reward-ray access frontier](../ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
+  An exact finite comparison census distinguishes query count from query
+  expressivity: bounded response-threshold ambiguity requires both wider
+  trajectory-bundle comparisons and more queries to identify the registered
+  reward quotient modulo positive scale.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
