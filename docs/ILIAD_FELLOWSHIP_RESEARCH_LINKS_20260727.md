@@ -150,6 +150,13 @@ as transformer evidence.
   which cycle-space directions are identifiable, preventing sparse
   conditional data from being misreported as scalar-coherence evidence.
 
+- [ASMP-9: conditional/unconditional availability separation](../ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/PUBLIC_SUMMARY_v0_14.md)
+  Exact conditional nuisance cancellation does not imply useful
+  unconditional power: an unbounded scalar-gradient nuisance can make
+  informative fibers vanish. A fixed probability interior restores a
+  positive finite guarantee, while the broader behavioral problem remains
+  open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design

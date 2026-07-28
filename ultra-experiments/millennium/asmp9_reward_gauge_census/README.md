@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_13.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_14.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -125,3 +125,11 @@ the scalar nuisance exactly. Its fiber-rank rule states which cycle-quotient
 directions the realized conditional experiment can actually identify; a
 singleton or rank-deficient fiber cannot be promoted into scalar-coherence
 evidence.
+
+The [unconditional-availability theorem v0.14](unconditional_availability_v0_14/PUBLIC_SUMMARY_v0_14.md)
+then proves that conditional exactness alone gives no nuisance-uniform
+unconditional power guarantee. An explicit unbounded scalar-gradient family
+drives informative-fiber probability and excess power to zero, while a
+declared probability interior restores a positive finite lower bound. The
+result is exact for one independent Bradley-Terry cycle experiment and does
+not resolve the broader behavioral problem.

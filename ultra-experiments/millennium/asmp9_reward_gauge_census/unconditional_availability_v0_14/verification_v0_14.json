@@ -1,0 +1,74 @@
+{
+  "verification_id": "ASMP-9-UNCONDITIONAL-AVAILABILITY-v0.14-verification",
+  "date": "2026-07-28",
+  "protocol_id": "ASMP-9-UNCONDITIONAL-AVAILABILITY-v0.14",
+  "implementation_commit": "e59072fcab115a3d38b9b4b887d5e7024b89741c",
+  "registration_commit": "581226c7855b13ce156296a284a473b2b7b0cb93",
+  "registration_sha256": "f9d9a2581e9337ab1034bb73fe1a620e040da161c7e3c9247f7da26f7d577af1",
+  "registered_run": {
+    "verdict": "conditional_exactness_and_unconditional_nuisance_frontier_verified_v0_14",
+    "gates_passed": 10,
+    "gates_total": 10,
+    "cell_count": 120,
+    "null_cell_count": 30,
+    "positive_cell_count": 90,
+    "fixed_interior_control_count": 18,
+    "maximum_extreme_to_balanced_excess_ratio": 5.0910006966308135e-14,
+    "elapsed_seconds": 91.75060190001386,
+    "peak_resident_bytes": 41639936,
+    "gpu_used": false
+  },
+  "artifact_verifier": {
+    "verdict": "verified",
+    "registration_hash": true,
+    "sealed_inputs": true,
+    "output_hashes": true,
+    "output_hash_universe": true,
+    "protocol_identity": true,
+    "registration_commit": true,
+    "implementation_commit": true,
+    "binding_checks": true,
+    "exact_registry_replay": true,
+    "exact_summary_replay": true,
+    "scientific_gate_replay": true,
+    "rendered_report_replay": true,
+    "resource_record": true,
+    "claim_boundary": true,
+    "all_gates_pass": true,
+    "success_verdict": true
+  },
+  "registered_artifact_hashes": {
+    "RESULT_v0_14.md": "aee7b1cd97a155db75e874b62a1f01a04bc12c6be8eb11e1178e77c15ac0b227",
+    "result_v0_14.json": "1cd1d25eb2bd86c3b8748a29def4ebbdbd6f622c1bc0f0f4a0613d567b5b2b23",
+    "receipt_v0_14.json": "8cc42fdb9ec7f2f4899aefdcb281dc10e19ab9ad12b87720757efbfdc7e1578a"
+  },
+  "clean_replay": {
+    "protocol_id_identical": true,
+    "registration_commit_identical": true,
+    "registration_sha256_identical": true,
+    "binding_checks_identical": true,
+    "registry_identical": true,
+    "summary_identical": true,
+    "gates_identical": true,
+    "verdict_identical": true,
+    "claim_boundary_identical": true,
+    "registered_elapsed_seconds": 91.75060190001386,
+    "replay_elapsed_seconds": 89.93252499998198,
+    "registered_peak_resident_bytes": 41639936,
+    "replay_peak_resident_bytes": 42528768
+  },
+  "tests": {
+    "dedicated": {
+      "passed": 9,
+      "failed": 0
+    },
+    "repository_isolated_fresh_processes": {
+      "test_files": 120,
+      "passed": 1159,
+      "failed": 0,
+      "skipped": 0
+    },
+    "note": "An initial mixed-directory batching attempt passed 184 tests before two older same-directory imports failed during collection. Running every test file in an isolated process with its own module path eliminated the namespace collision; all 1,159 collected tests then passed."
+  },
+  "claim_boundary": "Exact finite conditional/unconditional Bradley-Terry access theorem on oriented cycles; not behavioral model validation, positive scalarity certification, unknown-link or dependent-response inference, general IRL, or ASMP-9 resolution."
+}
