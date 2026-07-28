@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_14.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_16.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -140,3 +140,12 @@ low and high endpoint probabilities split across the cycle as evenly as
 possible. This gives an exact equal-count trial threshold for any declared
 availability target. A fresh unequal-count census failed to falsify balanced
 allocation in 32 cells, but the general allocation theorem remains open.
+
+The [balanced maximin allocation theorem v0.16.2](balanced_design_v0_16_2/PUBLIC_SUMMARY_v0_16_2.md)
+closes that fixed-total single-cycle conjecture: positive integer edge counts
+differing by at most one uniquely maximize worst-endpoint informative-fiber
+availability, up to edge permutation. The prospectively registered run
+preserved the original 120-second cap after two recorded resource aborts and
+passed all ten gates plus 46 independent replay checks. General multi-cycle
+design, adaptive allocation, response-model misspecification, and the full
+ASMP-9 problem remain open.
