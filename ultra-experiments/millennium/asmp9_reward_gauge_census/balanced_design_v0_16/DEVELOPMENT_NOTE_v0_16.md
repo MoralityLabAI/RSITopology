@@ -5,7 +5,7 @@
 This is unregistered CPU-only theorem development. Every parameter used by
 `DEVELOPMENT_CENSUS_v0_16.json` is burned. The census verifies algebra and
 implementation; the theorem rests on the pairwise proof in
-`THEOREM_DRAFT_v0_16.md`.
+`THEOREM_v0_16.md`.
 
 ## Problem closed inside the frozen model
 

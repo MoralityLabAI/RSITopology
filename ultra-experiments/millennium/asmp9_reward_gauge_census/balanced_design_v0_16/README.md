@@ -15,7 +15,7 @@ a prospective v0.16 protocol and registration are committed.
 
 Development artifacts:
 
-- `THEOREM_DRAFT_v0_16.md`
+- `THEOREM_v0_16.md`
 - `PRIOR_ART_GATE_v0_16.md`
 - `DEVELOPMENT_CENSUS_v0_16.json`
 - `DEVELOPMENT_RECEIPT_v0_16.json`
