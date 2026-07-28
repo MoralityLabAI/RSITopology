@@ -56,13 +56,11 @@ def test_population_constructor_recovers_every_small_ray(
             vector,
             bound,
             eta=0.0,
-            force_repetitions=4096,
+            exact_oracle=True,
             seed=100_000 * dimension + 1000 * bound + index,
         )
         assert estimate == vector
-        assert samples <= logical_query_bound(
-            dimension, bound
-        ) * 4096
+        assert samples <= logical_query_bound(dimension, bound)
         assert width <= theorem_width(bound)
 
 

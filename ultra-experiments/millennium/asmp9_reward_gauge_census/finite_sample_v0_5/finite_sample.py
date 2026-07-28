@@ -285,11 +285,14 @@ def identify_ray(
     alpha: float = 0.01,
     seed: int = 0,
     force_repetitions: int | None = None,
+    exact_oracle: bool = False,
 ) -> tuple[Vector | None, int, int]:
-    """Identify one ray and return (estimate, binary samples, max width).
+    """Identify one ray and return (estimate, response count, max width).
 
-    The algorithm uses repeated ternary-sign classification. Setting eta=0
-    still requires sampling because a latent tie emits a fair binary response.
+    The default uses repeated ternary-sign classification. Setting eta=0 still
+    requires sampling because a latent tie emits a fair binary response.
+    `exact_oracle=True` is a deterministic constructor check; its response
+    count is the number of logical queries, not binary channel samples.
     """
     dimension = len(vector)
     if dimension < 2:
@@ -300,7 +303,7 @@ def identify_ray(
         raise ValueError("vector must be primitive")
     rng = random.Random(seed)
     k_bound = logical_query_bound(dimension, bound)
-    repetitions = (
+    repetitions = 1 if exact_oracle else (
         force_repetitions
         if force_repetitions is not None
         else repetitions_required(eta, alpha, k_bound)
@@ -315,6 +318,8 @@ def identify_ray(
         nonlocal sample_count, max_width
         max_width = max(max_width, max(abs(value) for value in query))
         sample_count += repetitions
+        if exact_oracle:
+            return latent_sign(vector, query)
         return classify_repeated(vector, query, eta, repetitions, rng)
 
     coordinate_signs: list[int] = []
