@@ -1,0 +1,1529 @@
+{
+  "claim_boundary": "Burned exact development evidence for a prospective general-graph theorem; not registered, claim-eligible, behavioral evidence, or ASMP-9 resolution.",
+  "elapsed_seconds": 35.928713200002676,
+  "finite_theta_census": {
+    "epsilon_quarter_budget_sweep": [
+      {
+        "allocation_count": 1,
+        "balanced_optimizer_count": 1,
+        "optimizers": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.10546875,
+          "fraction": "27/256"
+        },
+        "total_trials": 5
+      },
+      {
+        "allocation_count": 5,
+        "balanced_optimizer_count": 4,
+        "optimizers": [
+          [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            1
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.15380859375,
+          "fraction": "315/2048"
+        },
+        "total_trials": 6
+      },
+      {
+        "allocation_count": 15,
+        "balanced_optimizer_count": 4,
+        "optimizers": [
+          [
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            1
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.221923828125,
+          "fraction": "909/4096"
+        },
+        "total_trials": 7
+      },
+      {
+        "allocation_count": 35,
+        "balanced_optimizer_count": 4,
+        "optimizers": [
+          [
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2,
+            2,
+            1
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.300201416015625,
+          "fraction": "9837/32768"
+        },
+        "total_trials": 8
+      },
+      {
+        "allocation_count": 70,
+        "balanced_optimizer_count": 1,
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.3893280029296875,
+          "fraction": "25515/65536"
+        },
+        "total_trials": 9
+      },
+      {
+        "allocation_count": 126,
+        "balanced_optimizer_count": 0,
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.4360027313232422,
+          "fraction": "228591/524288"
+        },
+        "total_trials": 10
+      },
+      {
+        "allocation_count": 210,
+        "balanced_optimizer_count": 0,
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.4904451370239258,
+          "fraction": "514269/1048576"
+        },
+        "total_trials": 11
+      },
+      {
+        "allocation_count": 330,
+        "balanced_optimizer_count": 0,
+        "optimizers": [
+          [
+            1,
+            2,
+            3,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            2,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            3,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.5493432283401489,
+          "fraction": "4608225/8388608"
+        },
+        "total_trials": 12
+      }
+    ],
+    "path_lengths": [
+      1,
+      2,
+      2
+    ],
+    "total_ten_interior_sweep": [
+      {
+        "epsilon": {
+          "decimal": 0.125,
+          "fraction": "1/8"
+        },
+        "gap": {
+          "decimal": 0.012305699288845062,
+          "fraction": "1651643/134217728"
+        },
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.157225688919425,
+          "fraction": "84409899/536870912"
+        },
+        "uniform": {
+          "decimal": 0.14491998963057995,
+          "fraction": "77803327/536870912"
+        }
+      },
+      {
+        "epsilon": {
+          "decimal": 0.25,
+          "fraction": "1/4"
+        },
+        "gap": {
+          "decimal": 0.01943206787109375,
+          "fraction": "2547/131072"
+        },
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.4360027313232422,
+          "fraction": "228591/524288"
+        },
+        "uniform": {
+          "decimal": 0.41657066345214844,
+          "fraction": "218403/524288"
+        }
+      },
+      {
+        "epsilon": {
+          "decimal": 0.375,
+          "fraction": "3/8"
+        },
+        "gap": {
+          "decimal": 0.017653964459896088,
+          "fraction": "2369475/134217728"
+        },
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.6535550113767385,
+          "fraction": "350874675/536870912"
+        },
+        "uniform": {
+          "decimal": 0.6359010469168425,
+          "fraction": "341396775/536870912"
+        }
+      },
+      {
+        "epsilon": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "gap": {
+          "decimal": 0.015625,
+          "fraction": "1/64"
+        },
+        "optimizers": [
+          [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2,
+            2,
+            2
+          ]
+        ],
+        "optimum": {
+          "decimal": 0.732421875,
+          "fraction": "375/512"
+        },
+        "uniform": {
+          "decimal": 0.716796875,
+          "fraction": "367/512"
+        }
+      }
+    ]
+  },
+  "residual_rank_checks": {
+    "checked_fiber_count": 629,
+    "checked_state_count": 1165,
+    "mismatch_count": 0,
+    "records": [
+      {
+        "fiber_count": 15,
+        "graph": "cycle4",
+        "mismatch_count": 0,
+        "trials_per_edge": 1
+      },
+      {
+        "fiber_count": 65,
+        "graph": "cycle4",
+        "mismatch_count": 0,
+        "trials_per_edge": 2
+      },
+      {
+        "fiber_count": 24,
+        "graph": "theta122",
+        "mismatch_count": 0,
+        "trials_per_edge": 1
+      },
+      {
+        "fiber_count": 115,
+        "graph": "theta122",
+        "mismatch_count": 0,
+        "trials_per_edge": 2
+      },
+      {
+        "fiber_count": 49,
+        "graph": "bowtie",
+        "mismatch_count": 0,
+        "trials_per_edge": 1
+      },
+      {
+        "fiber_count": 361,
+        "graph": "bowtie",
+        "mismatch_count": 0,
+        "trials_per_edge": 2
+      }
+    ]
+  },
+  "selected_graphs": [
+    {
+      "cycle_rank": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "graph": "bowtie",
+      "minimal_bad_supports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "node_count": 5,
+      "optimal_exponent": {
+        "decimal": 0.3333333333333333,
+        "fraction": "1/3"
+      },
+      "optimal_vertices": [
+        [
+          {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          }
+        ]
+      ],
+      "uniform_exponent": {
+        "decimal": 0.3333333333333333,
+        "fraction": "1/3"
+      }
+    },
+    {
+      "cycle_rank": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "graph": "theta123",
+      "minimal_bad_supports": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ]
+      ],
+      "node_count": 5,
+      "optimal_exponent": {
+        "decimal": 0.4,
+        "fraction": "2/5"
+      },
+      "optimal_vertices": [
+        [
+          {
+            "decimal": 0.0,
+            "fraction": "0/1"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          }
+        ]
+      ],
+      "uniform_exponent": {
+        "decimal": 0.3333333333333333,
+        "fraction": "1/3"
+      }
+    },
+    {
+      "cycle_rank": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "graph": "cycle5_plus_chord",
+      "minimal_bad_supports": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          4,
+          5
+        ]
+      ],
+      "node_count": 5,
+      "optimal_exponent": {
+        "decimal": 0.4,
+        "fraction": "2/5"
+      },
+      "optimal_vertices": [
+        [
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.2,
+            "fraction": "1/5"
+          },
+          {
+            "decimal": 0.0,
+            "fraction": "0/1"
+          }
+        ]
+      ],
+      "uniform_exponent": {
+        "decimal": 0.3333333333333333,
+        "fraction": "1/3"
+      }
+    }
+  ],
+  "small_graph_census": {
+    "graph_count": 11,
+    "records": [
+      {
+        "cycle_rank": 1,
+        "edge_count": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "node_count": 3,
+        "optimal_exponent": {
+          "decimal": 0.6666666666666666,
+          "fraction": "2/3"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.3333333333333333,
+              "fraction": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "fraction": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "fraction": "1/3"
+            }
+          ]
+        ],
+        "support_count": 3,
+        "uniform_exponent": {
+          "decimal": 0.6666666666666666,
+          "fraction": "2/3"
+        },
+        "uniform_is_suboptimal": false
+      },
+      {
+        "cycle_rank": 1,
+        "edge_count": 4,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "uniform_is_suboptimal": false
+      },
+      {
+        "cycle_rank": 2,
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        "uniform_is_suboptimal": true
+      },
+      {
+        "cycle_rank": 1,
+        "edge_count": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "uniform_is_suboptimal": false
+      },
+      {
+        "cycle_rank": 2,
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        "uniform_is_suboptimal": true
+      },
+      {
+        "cycle_rank": 1,
+        "edge_count": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "uniform_is_suboptimal": false
+      },
+      {
+        "cycle_rank": 2,
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        "uniform_is_suboptimal": true
+      },
+      {
+        "cycle_rank": 2,
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        "uniform_is_suboptimal": true
+      },
+      {
+        "cycle_rank": 2,
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        "uniform_is_suboptimal": true
+      },
+      {
+        "cycle_rank": 2,
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            }
+          ]
+        ],
+        "support_count": 6,
+        "uniform_exponent": {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        "uniform_is_suboptimal": true
+      },
+      {
+        "cycle_rank": 3,
+        "edge_count": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "node_count": 4,
+        "optimal_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "optimal_vertices": [
+          [
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            }
+          ],
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ],
+          [
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "fraction": "0/1"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "fraction": "1/4"
+            }
+          ]
+        ],
+        "support_count": 7,
+        "uniform_exponent": {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        "uniform_is_suboptimal": false
+      }
+    ],
+    "uniform_suboptimal_count": 6
+  },
+  "status": "development_only"
+}
