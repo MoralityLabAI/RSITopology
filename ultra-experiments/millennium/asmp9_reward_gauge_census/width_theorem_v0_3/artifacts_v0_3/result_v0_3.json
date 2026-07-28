@@ -1,0 +1,596 @@
+{
+  "elapsed_seconds": 79.17703110000002,
+  "full_pair_cells": [
+    {
+      "bound": 17,
+      "dimension": 2,
+      "elapsed_seconds": 2.490334999980405,
+      "failure_count": 0,
+      "maximum_constructed_width": 33,
+      "pair_count": 294528,
+      "ray_count": 768,
+      "sharp_width": 33
+    },
+    {
+      "bound": 18,
+      "dimension": 2,
+      "elapsed_seconds": 2.896741899981862,
+      "failure_count": 0,
+      "maximum_constructed_width": 35,
+      "pair_count": 332520,
+      "ray_count": 816,
+      "sharp_width": 35
+    },
+    {
+      "bound": 19,
+      "dimension": 2,
+      "elapsed_seconds": 4.010549999977229,
+      "failure_count": 0,
+      "maximum_constructed_width": 37,
+      "pair_count": 460320,
+      "ray_count": 960,
+      "sharp_width": 37
+    },
+    {
+      "bound": 20,
+      "dimension": 2,
+      "elapsed_seconds": 4.404234200017527,
+      "failure_count": 0,
+      "maximum_constructed_width": 39,
+      "pair_count": 523776,
+      "ray_count": 1024,
+      "sharp_width": 39
+    },
+    {
+      "bound": 21,
+      "dimension": 2,
+      "elapsed_seconds": 5.326315199985402,
+      "failure_count": 0,
+      "maximum_constructed_width": 41,
+      "pair_count": 626640,
+      "ray_count": 1120,
+      "sharp_width": 41
+    },
+    {
+      "bound": 22,
+      "dimension": 2,
+      "elapsed_seconds": 5.981655500014313,
+      "failure_count": 0,
+      "maximum_constructed_width": 43,
+      "pair_count": 719400,
+      "ray_count": 1200,
+      "sharp_width": 43
+    },
+    {
+      "bound": 23,
+      "dimension": 2,
+      "elapsed_seconds": 8.355589199985843,
+      "failure_count": 0,
+      "maximum_constructed_width": 45,
+      "pair_count": 946000,
+      "ray_count": 1376,
+      "sharp_width": 45
+    },
+    {
+      "bound": 24,
+      "dimension": 2,
+      "elapsed_seconds": 8.873927000007825,
+      "failure_count": 0,
+      "maximum_constructed_width": 47,
+      "pair_count": 1036080,
+      "ray_count": 1440,
+      "sharp_width": 47
+    },
+    {
+      "bound": 5,
+      "dimension": 3,
+      "elapsed_seconds": 6.384823600004893,
+      "failure_count": 0,
+      "maximum_constructed_width": 9,
+      "pair_count": 665281,
+      "ray_count": 1154,
+      "sharp_width": 9
+    },
+    {
+      "bound": 3,
+      "dimension": 4,
+      "elapsed_seconds": 27.79649929999141,
+      "failure_count": 0,
+      "maximum_constructed_width": 5,
+      "pair_count": 2507680,
+      "ray_count": 2240,
+      "sharp_width": 5
+    }
+  ],
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_strict_opposite_scores": true,
+    "G2_constructed_width_bound": true,
+    "G3_lower_witness_validity": true,
+    "G4_lower_witness_sharpness": true,
+    "G5_disjoint_grid_complete": true
+  },
+  "lower_witness_cells": [
+    {
+      "bound": 33,
+      "first": [
+        33,
+        32
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        32,
+        31
+      ],
+      "sharp_width": 65
+    },
+    {
+      "bound": 34,
+      "first": [
+        34,
+        33
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        33,
+        32
+      ],
+      "sharp_width": 67
+    },
+    {
+      "bound": 35,
+      "first": [
+        35,
+        34
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        34,
+        33
+      ],
+      "sharp_width": 69
+    },
+    {
+      "bound": 36,
+      "first": [
+        36,
+        35
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        35,
+        34
+      ],
+      "sharp_width": 71
+    },
+    {
+      "bound": 37,
+      "first": [
+        37,
+        36
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        36,
+        35
+      ],
+      "sharp_width": 73
+    },
+    {
+      "bound": 38,
+      "first": [
+        38,
+        37
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        37,
+        36
+      ],
+      "sharp_width": 75
+    },
+    {
+      "bound": 39,
+      "first": [
+        39,
+        38
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        38,
+        37
+      ],
+      "sharp_width": 77
+    },
+    {
+      "bound": 40,
+      "first": [
+        40,
+        39
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        39,
+        38
+      ],
+      "sharp_width": 79
+    },
+    {
+      "bound": 41,
+      "first": [
+        41,
+        40
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        40,
+        39
+      ],
+      "sharp_width": 81
+    },
+    {
+      "bound": 42,
+      "first": [
+        42,
+        41
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        41,
+        40
+      ],
+      "sharp_width": 83
+    },
+    {
+      "bound": 43,
+      "first": [
+        43,
+        42
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        42,
+        41
+      ],
+      "sharp_width": 85
+    },
+    {
+      "bound": 44,
+      "first": [
+        44,
+        43
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        43,
+        42
+      ],
+      "sharp_width": 87
+    },
+    {
+      "bound": 45,
+      "first": [
+        45,
+        44
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        44,
+        43
+      ],
+      "sharp_width": 89
+    },
+    {
+      "bound": 46,
+      "first": [
+        46,
+        45
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        45,
+        44
+      ],
+      "sharp_width": 91
+    },
+    {
+      "bound": 47,
+      "first": [
+        47,
+        46
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        46,
+        45
+      ],
+      "sharp_width": 93
+    },
+    {
+      "bound": 48,
+      "first": [
+        48,
+        47
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        47,
+        46
+      ],
+      "sharp_width": 95
+    },
+    {
+      "bound": 49,
+      "first": [
+        49,
+        48
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        48,
+        47
+      ],
+      "sharp_width": 97
+    },
+    {
+      "bound": 50,
+      "first": [
+        50,
+        49
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        49,
+        48
+      ],
+      "sharp_width": 99
+    },
+    {
+      "bound": 51,
+      "first": [
+        51,
+        50
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        50,
+        49
+      ],
+      "sharp_width": 101
+    },
+    {
+      "bound": 52,
+      "first": [
+        52,
+        51
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        51,
+        50
+      ],
+      "sharp_width": 103
+    },
+    {
+      "bound": 53,
+      "first": [
+        53,
+        52
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        52,
+        51
+      ],
+      "sharp_width": 105
+    },
+    {
+      "bound": 54,
+      "first": [
+        54,
+        53
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        53,
+        52
+      ],
+      "sharp_width": 107
+    },
+    {
+      "bound": 55,
+      "first": [
+        55,
+        54
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        54,
+        53
+      ],
+      "sharp_width": 109
+    },
+    {
+      "bound": 56,
+      "first": [
+        56,
+        55
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        55,
+        54
+      ],
+      "sharp_width": 111
+    },
+    {
+      "bound": 57,
+      "first": [
+        57,
+        56
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        56,
+        55
+      ],
+      "sharp_width": 113
+    },
+    {
+      "bound": 58,
+      "first": [
+        58,
+        57
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        57,
+        56
+      ],
+      "sharp_width": 115
+    },
+    {
+      "bound": 59,
+      "first": [
+        59,
+        58
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        58,
+        57
+      ],
+      "sharp_width": 117
+    },
+    {
+      "bound": 60,
+      "first": [
+        60,
+        59
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        59,
+        58
+      ],
+      "sharp_width": 119
+    },
+    {
+      "bound": 61,
+      "first": [
+        61,
+        60
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        60,
+        59
+      ],
+      "sharp_width": 121
+    },
+    {
+      "bound": 62,
+      "first": [
+        62,
+        61
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        61,
+        60
+      ],
+      "sharp_width": 123
+    },
+    {
+      "bound": 63,
+      "first": [
+        63,
+        62
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        62,
+        61
+      ],
+      "sharp_width": 125
+    },
+    {
+      "bound": 64,
+      "first": [
+        64,
+        63
+      ],
+      "narrower_separator_exists": false,
+      "primitive": true,
+      "second": [
+        63,
+        62
+      ],
+      "sharp_width": 127
+    }
+  ],
+  "protocol_id": "ASMP-9-SHARP-WIDTH-v0.3",
+  "random_cells": [
+    {
+      "bound": 2,
+      "dimension": 5,
+      "failure_count": 0,
+      "maximum_constructed_width": 3,
+      "pair_count": 4096,
+      "seed": 90210,
+      "sharp_width": 3
+    },
+    {
+      "bound": 4,
+      "dimension": 8,
+      "failure_count": 0,
+      "maximum_constructed_width": 7,
+      "pair_count": 4096,
+      "seed": 90211,
+      "sharp_width": 7
+    },
+    {
+      "bound": 8,
+      "dimension": 16,
+      "failure_count": 0,
+      "maximum_constructed_width": 15,
+      "pair_count": 4096,
+      "seed": 90212,
+      "sharp_width": 15
+    }
+  ],
+  "registration_commit": "cacdcd246942362c81cc8c039e34aec659e182d9",
+  "registration_sha256": "dfc953b0d233d40375413d6274d0cfbae5304b0b867a76d7abfe0e28bdfaa48a",
+  "verdict": "sharp_query_width_theorem_implementation_verified"
+}
