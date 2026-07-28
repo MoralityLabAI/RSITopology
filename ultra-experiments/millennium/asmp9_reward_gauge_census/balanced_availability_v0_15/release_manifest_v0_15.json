@@ -1,0 +1,23 @@
+{
+  "artifact_hashes": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_15.md": "04898ae074d4db7f90298a6a482429f4a900b23c49b14cd56aef8c6ce1b41b55",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/PROTOCOL_v0_15.md": "53ee81a36f35e1707b022ff10f9e2eda5de0781882fe0e673dfa698d0e0576f0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/PUBLIC_SUMMARY_v0_15.md": "e4d877014eeacc10ce872eda5d69e1bbf0e835ee98116ae16222d08dcb965716",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/RESULT_v0_15.md": "01e1040202d7ab397644b894d7b5a9069b9452b7ddf05cbc049aba400190571c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/THEOREM_v0_15.md": "af266ad2cd5618ec885b5a74609f1449846df4e2bb3e7f3257b982e06f39ea0a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/protocol_v0_15.json": "222417e80b6f43fb0b794ed95ba47d1c556bf0693b8ecfb41226009c5e997536",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/receipt_v0_15.json": "0ac031d40ec90a84ff727975cc8c45456671251a3ce433c612e76a6a460b8b47",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/registration_v0_15.json": "6ae71920008977079385d0cacd71133f38311412034a277194517525a0b08e21",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/result_v0_15.json": "bfe51cd189753d3577c8d0a65df57fbd6672c8da43cdd213e3b83f434ab32f71",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/verification_v0_15.json": "436c099b35df048e812a6e7261056bd441c4f6f67dc6a821348702248882a182"
+  },
+  "clean_replay": {
+    "all_scientific_fields_equal": true,
+    "registration_commit": "9d6ee8799695f6dda4395aee039a9eb977866f18",
+    "replay_elapsed_seconds": 3.030382400000235,
+    "replay_peak_resident_bytes": 21622784
+  },
+  "implementation_commit": "018d95a675e7a9bb32505d656ebd4d3ced489afd",
+  "protocol_id": "ASMP-9-SHARP-INTERIOR-AVAILABILITY-v0.15",
+  "registration_commit": "9d6ee8799695f6dda4395aee039a9eb977866f18"
+}

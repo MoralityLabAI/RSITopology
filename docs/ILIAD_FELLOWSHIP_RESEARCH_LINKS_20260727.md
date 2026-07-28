@@ -157,6 +157,12 @@ as transformer evidence.
   positive finite guarantee, while the broader behavioral problem remains
   open.
 
+- [ASMP-9: sharp availability and exact trial threshold](../ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/PUBLIC_SUMMARY_v0_15.md)
+  The bounded-interior nuisance minimum occurs at the most even low/high
+  endpoint split, yielding an exact per-edge trial threshold. All nine fresh
+  gates and 29 independent replay checks pass; unequal-count balancing
+  remains a finite conjecture, not a theorem.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design

@@ -133,3 +133,10 @@ drives informative-fiber probability and excess power to zero, while a
 declared probability interior restores a positive finite lower bound. The
 result is exact for one independent Bradley-Terry cycle experiment and does
 not resolve the broader behavioral problem.
+
+The [sharp interior-availability theorem v0.15](balanced_availability_v0_15/PUBLIC_SUMMARY_v0_15.md)
+then identifies the exact worst nuisance inside that probability interior:
+low and high endpoint probabilities split across the cycle as evenly as
+possible. This gives an exact equal-count trial threshold for any declared
+availability target. A fresh unequal-count census failed to falsify balanced
+allocation in 32 cells, but the general allocation theorem remains open.
