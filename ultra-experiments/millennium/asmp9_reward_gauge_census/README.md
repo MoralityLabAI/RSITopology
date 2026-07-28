@@ -39,3 +39,9 @@ frozen half-unit threshold perturbation. The exact 32-cell census finds that
 robust identification requires wider questions and more comparisons in every
 registered nontrivial stratum. It remains a finite population-oracle result,
 not a human-preference or behavioral-IRL theorem.
+
+The [corrected sharp-width theorem v0.3.1](width_theorem_v0_3_1/PUBLIC_SUMMARY_v0_3_1.md)
+then proves the dimension-uniform coefficient threshold for the strictly
+positive ambiguity regime: width `2` at reward bound one and `2B-1`
+thereafter. The immutable v0.3 record documents the endpoint error that led to
+the corrected open interval `0<delta<1`.

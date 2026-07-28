@@ -81,11 +81,11 @@ as transformer evidence.
   A successor checker admits an unsafe depth-two path that a frozen-root
   refinement blocks while preserving a nontrivial safe progress chain.
 
-- [ASMP-9: ordinal reward-ray access frontier](../ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
-  An exact finite comparison census distinguishes query count from query
-  expressivity: bounded response-threshold ambiguity requires both wider
-  trajectory-bundle comparisons and more queries to identify the registered
-  reward quotient modulo positive scale.
+- [ASMP-9: sharp robust comparison-width theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/PUBLIC_SUMMARY_v0_3_1.md)
+  A constructive theorem gives the exact coefficient width needed to separate
+  bounded integer reward rays under strictly positive threshold ambiguity. The
+  record also preserves the failed first statement whose inclusion of the
+  zero-noise endpoint was false.
 
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
