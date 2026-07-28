@@ -138,6 +138,12 @@ as transformer evidence.
   triples plus 4,096 fresh cells, with a minimal two-item/two-context
   incompatibility witness.
 
+- [ASMP-9: robust context-gluing and audit conditioning](../ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/PUBLIC_SUMMARY_v0_12.md)
+  The exact repair radius splits within-context non-scalarity from
+  cross-context non-gluing. A registered counterexample and 512-cell census
+  show that the minimum number or support of mixed-cycle checks does not
+  guarantee noise-robust conditioning.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
