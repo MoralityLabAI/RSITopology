@@ -1,0 +1,22 @@
+{
+  "registration_id": "ASMP-9-FINITE-SAMPLE-COHERENCE-v0.9-registration",
+  "registered_at_utc": "2026-07-28T19:19:44Z",
+  "implementation_commit": "15fa5ccd3cf44e808034803199b9f3e807ce6e9f",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/protocol_v0_9.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/THEOREM_DRAFT_v0_9.md": "82670eee388b158c4fcd1cd7387b39672cd2cab9f36de77758fd86877e8654d0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/PRIOR_ART_v0_9.md": "467f514b6657d37d1f5126c667252c04e4670ba083468f4119377d48a2cc5b66",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/DEVELOPMENT_NOTE_v0_9.md": "d82f89aed4b3ce6e110d13f78f2b7cb1d8274251370507b08ff6bb804f0e9c47",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/finite_sample_coherence.py": "c5a7034a772b9a14a094ace68324c5bae15e2736930bcc32231deb65c9a46609",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/experiment.py": "41229e9e445a22168cd08d63ebe50153b17094bd536187d10202b7a890357bda",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/test_finite_sample_coherence.py": "2c50d665d55cd267d35fed7fb5ef4670d19c1f6c01eb3f87f30c859e7a3297dc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/test_experiment.py": "692ba94a9072179033e7b3ca3bed7b05450507b955163421df5f31ff3ad8be49",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/test_run_verification.py": "9b051c70b43e3d67b2c58a455b7165b637a35f9ad259a4068cd9df6cb4323f49",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/PROTOCOL_v0_9.md": "285bf6b3421510bfe3d11a70c28a9803578914fdf9c9e803eff896ed018779d9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/protocol_v0_9.json": "40e1c6ea1c42aa8fdc1e6b331607363b005acc3832e3a299889884c12ac7e56a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/environment_v0_9.json": "6798ba58ba83d0c7559c1c006592b6906dd4f00798f0925a6ad02e4d82879af9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/run_verification.py": "472e2b16db5b9728c6f7eceb8480dad8c020c4bf8d12fcd1962e6e4b4e1dcfa3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/verify_result.py": "abfd679dd293249964a050dfe327b711e0fe771b7d35e70dea14c6f000185423",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/README.md": "92dc099e893909393a601e82dc8524ccc61cf8a9e44760b0af06bf5eb25456ea"
+  }
+}
