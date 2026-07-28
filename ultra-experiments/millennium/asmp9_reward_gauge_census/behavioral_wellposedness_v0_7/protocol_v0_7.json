@@ -1,0 +1,39 @@
+{
+  "protocol_id": "ASMP-9-BEHAVIORAL-WELLPOSEDNESS-v0.7",
+  "simple_graphs": {
+    "seed": 97071,
+    "score_seed": 97073,
+    "vertex_count": 6,
+    "count": 32768
+  },
+  "multigraphs": {
+    "seed": 97072,
+    "score_seed": 97073,
+    "vertex_count": 7,
+    "count": 8192
+  },
+  "hodge": {
+    "seed": 97074,
+    "vertex_count": 7,
+    "count": 4096
+  },
+  "cycles": {
+    "seed": 97075,
+    "minimum_length": 3,
+    "maximum_length": 12,
+    "count": 1024
+  },
+  "policy": {
+    "adaptive_max_k": 24,
+    "nonadaptive_max_k": 1024,
+    "random_seed": 97076,
+    "random_design_count": 4096,
+    "random_max_k": 64
+  },
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_ram_gib": 4,
+    "maximum_wall_seconds": 600
+  },
+  "success_verdict": "behavioral_reconstruction_model_checking_split_verified"
+}
