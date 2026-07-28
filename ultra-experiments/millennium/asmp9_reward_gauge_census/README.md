@@ -52,3 +52,11 @@ thereafter. Together the results expose a discontinuity at zero model error:
 the availability of an exact tie nearly halves the sharp worst-case width.
 Neither theorem supplies the finite-sample, discounted, behavioral, or
 inconsistent-demonstrator results still required for ASMP-9.
+
+The [finite-sample theorem v0.5.1](finite_sample_v0_5/PUBLIC_SUMMARY_v0_5_1.md)
+then replaces population-oracle signs with a known independent noisy
+sign-and-tie channel. It proves that the same exact coefficient width is a
+liveness boundary, gives constructive and information-theoretic sample bounds,
+and isolates a quadratic nonadaptive Farey-coverage penalty that adaptive
+search avoids. Discounted shaping, policy access, unknown response parameters,
+and inconsistent demonstrators remain open.

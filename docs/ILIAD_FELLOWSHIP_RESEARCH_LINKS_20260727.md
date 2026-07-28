@@ -93,6 +93,12 @@ as transformer evidence.
   width. The remaining finite-sample and behavioral identification questions
   stay explicitly open.
 
+- [ASMP-9: finite-sample preference-access theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/PUBLIC_SUMMARY_v0_5_1.md)
+  A known noisy sign-and-tie channel preserves the sharp width as a liveness
+  boundary and exposes a quadratic nonadaptive versus logarithmic-depth
+  adaptive access separation. Discounted and behavioral identification remain
+  open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
