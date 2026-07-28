@@ -1,0 +1,38 @@
+{
+  "protocol_id": "ASMP-9-SHARP-WIDTH-v0.3",
+  "status": "prospective",
+  "full_pair_cells": [
+    [2, 17],
+    [2, 18],
+    [2, 19],
+    [2, 20],
+    [2, 21],
+    [2, 22],
+    [2, 23],
+    [2, 24],
+    [3, 5],
+    [4, 3]
+  ],
+  "lower_witness_bounds": {
+    "dimension": 2,
+    "minimum_bound": 33,
+    "maximum_bound": 64
+  },
+  "random_cells": [
+    [5, 2, 90210],
+    [8, 4, 90211],
+    [16, 8, 90212]
+  ],
+  "random_pairs_per_cell": 4096,
+  "delta_domain": "0 <= delta < 1",
+  "sharp_width": {
+    "B=1": 2,
+    "B>=2": "2B-1"
+  },
+  "resource_limits": {
+    "wall_seconds": 600,
+    "ram_bytes": 4294967296,
+    "gpu_allowed": false
+  },
+  "claim_boundary": "implementation verification for the written finite-lattice theorem; no novelty or behavioral reward-learning claim"
+}
