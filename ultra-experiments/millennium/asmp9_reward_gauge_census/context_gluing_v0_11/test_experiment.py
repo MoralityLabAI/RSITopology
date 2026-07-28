@@ -7,6 +7,7 @@ from experiment import (
     graph_from_mask,
     random_contexts,
     run_random_cells,
+    run_minimality_controls,
     run_tuple_census,
 )
 
@@ -53,13 +54,26 @@ def test_random_cells_exercise_total_decision() -> None:
     assert result["actual_count"] == 64
     assert result["rank_formula_mismatch_count"] == 0
     assert result["basis_dimension_mismatch_count"] == 0
+    assert result["sharpness_mismatch_count"] == 0
     assert result["witness_existence_mismatch_count"] == 0
     assert result["shared_control_mismatch_count"] == 0
     assert result["exact_decision_mismatch_count"] == 0
     assert result["local_failure_control_count"] > 0
     assert result["local_failure_mismatch_count"] == 0
     assert set(result["status_counts"]) == {
+        "local_scalar_failed",
         "shared_scalar_forced_by_design",
         "shared_scalar_refuted",
         "shared_scalar_verified",
+    }
+
+
+def test_minimality_controls() -> None:
+    result = run_minimality_controls({"maximum_items": 6, "maximum_contexts": 5})
+    assert result["one_item_mismatch_count"] == 0
+    assert result["one_context_mismatch_count"] == 0
+    assert result["minimal_two_item_two_context_witness_passed"]
+    assert set(result["status_counts"]) == {
+        "shared_scalar_forced_by_design",
+        "shared_scalar_refuted",
     }

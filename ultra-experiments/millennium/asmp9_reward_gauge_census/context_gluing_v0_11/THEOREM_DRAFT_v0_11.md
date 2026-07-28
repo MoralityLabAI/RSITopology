@@ -69,6 +69,13 @@ q = beta_1(M)-sum_c beta_1(G_c)
 
 mixed-context cycles.
 
+Under the standard edge-coordinate inner product, the cycle space is the
+annihilator of global gradients, while the direct sum of local cycle spaces is
+the annihilator of locally scalar flows. The quotient of those cycle spaces
+is therefore dual to `im D_local / im D_M`; the `q` mixed cycles are not only
+independent as graph cycles but independent compatibility functionals on the
+declared ambiguity quotient.
+
 Conditional on local scalarity:
 
 - all `q` independent mixed-cycle circulations vanish if and only if a shared

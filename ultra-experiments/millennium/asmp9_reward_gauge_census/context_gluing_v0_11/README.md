@@ -19,4 +19,12 @@ python -m pytest `
   -q
 ```
 
-No fresh protocol has been registered or executed.
+The prospective files are:
+
+- `PROTOCOL_v0_11.md`;
+- `protocol_v0_11.json`;
+- `environment_v0_11.json`;
+- `run_verification.py`; and
+- `verify_result.py`.
+
+They must be hash-sealed in a registration commit before fresh execution.

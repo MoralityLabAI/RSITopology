@@ -8,16 +8,19 @@ import pytest
 from context_gluing import (
     ContextGraph,
     cycle_circulations,
+    fundamental_cycle_basis,
     global_flow,
     has_shared_scalar,
     is_locally_scalar,
     local_flow,
     minimal_parallel_edge_witness,
     minimum_mixed_checks,
+    matrix_rank,
     mixed_cycle_basis,
     non_gluing_witness,
     obstruction_dimensions,
     shared_scalar_status,
+    incidence_matrix,
 )
 
 
@@ -134,3 +137,28 @@ def test_invalid_duplicate_context_name_rejected() -> None:
     )
     with pytest.raises(ValueError, match="names"):
         obstruction_dimensions(2, contexts)
+
+
+@pytest.mark.parametrize("item_count", (2, 3, 4))
+def test_fundamental_cycles_are_independent_incidence_null_vectors(
+    item_count: int,
+) -> None:
+    universe = tuple(combinations(range(item_count), 2))
+    for mask in range(1 << len(universe)):
+        edges = tuple(
+            edge for index, edge in enumerate(universe) if mask & (1 << index)
+        )
+        cycles = fundamental_cycle_basis(item_count, edges)
+        assert matrix_rank(cycles) == len(cycles)
+        incidence = incidence_matrix(item_count, edges)
+        for cycle in cycles:
+            boundary = tuple(
+                sum(cycle[edge] * incidence[edge][item] for edge in range(len(edges)))
+                for item in range(item_count)
+            )
+            assert all(value == 0 for value in boundary)
+
+
+def test_cycle_flow_dimension_mismatch_is_rejected() -> None:
+    with pytest.raises(ValueError, match="dimensions"):
+        cycle_circulations((1, 2), ((1,),))

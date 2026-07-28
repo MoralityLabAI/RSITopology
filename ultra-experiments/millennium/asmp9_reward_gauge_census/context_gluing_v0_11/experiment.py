@@ -14,6 +14,8 @@ from context_gluing import (
     has_shared_scalar,
     is_locally_scalar,
     fundamental_cycle_basis,
+    matrix_rank,
+    minimal_parallel_edge_witness,
     mixed_cycle_basis,
     non_gluing_witness,
     obstruction_dimensions,
@@ -96,6 +98,7 @@ def run_random_cells(spec: dict[str, Any]) -> dict[str, Any]:
     context_distribution: Counter[int] = Counter()
     rank_mismatch_count = 0
     basis_mismatch_count = 0
+    sharpness_mismatch_count = 0
     witness_mismatch_count = 0
     shared_control_mismatch_count = 0
     exact_decision_mismatch_count = 0
@@ -112,6 +115,11 @@ def run_random_cells(spec: dict[str, Any]) -> dict[str, Any]:
         rank_mismatch_count += int(dimensions["rank_difference"] != mixed_rank)
         cycles = mixed_cycle_basis(item_count, contexts)
         basis_mismatch_count += int(len(cycles) != mixed_rank)
+        for retained in range(mixed_rank + 1):
+            sharpness_mismatch_count += int(
+                matrix_rank(cycles[:retained]) != retained
+                or mixed_rank - retained != len(cycles) - retained
+            )
 
         utility = tuple(Fraction(rng.randint(-11, 11)) for _ in range(item_count))
         shared = global_flow(item_count, contexts, utility)
@@ -150,10 +158,11 @@ def run_random_cells(spec: dict[str, Any]) -> dict[str, Any]:
             )
             inconsistent[offset + changed_edge] += Fraction(1)
             local_failure_control_count += 1
-            local_failure_mismatch_count += int(
-                shared_scalar_status(item_count, contexts, inconsistent)["status"]
-                != "local_scalar_failed"
-            )
+            local_status = shared_scalar_status(item_count, contexts, inconsistent)[
+                "status"
+            ]
+            local_failure_mismatch_count += int(local_status != "local_scalar_failed")
+            status_counts[local_status] += 1
             break
 
         item_distribution[item_count] += 1
@@ -166,9 +175,69 @@ def run_random_cells(spec: dict[str, Any]) -> dict[str, Any]:
         "status_counts": dict(sorted(status_counts.items())),
         "rank_formula_mismatch_count": rank_mismatch_count,
         "basis_dimension_mismatch_count": basis_mismatch_count,
+        "sharpness_mismatch_count": sharpness_mismatch_count,
         "witness_existence_mismatch_count": witness_mismatch_count,
         "shared_control_mismatch_count": shared_control_mismatch_count,
         "exact_decision_mismatch_count": exact_decision_mismatch_count,
         "local_failure_control_count": local_failure_control_count,
         "local_failure_mismatch_count": local_failure_mismatch_count,
+    }
+
+
+def run_minimality_controls(spec: dict[str, Any]) -> dict[str, Any]:
+    maximum_items = int(spec["maximum_items"])
+    status_counts: Counter[str] = Counter()
+    one_item_mismatches = 0
+    for context_count in range(1, int(spec["maximum_contexts"]) + 1):
+        contexts = tuple(
+            ContextGraph(f"context_{index}", ()) for index in range(context_count)
+        )
+        dimensions = obstruction_dimensions(1, contexts)
+        status = shared_scalar_status(1, contexts, ())["status"]
+        status_counts[status] += 1
+        one_item_mismatches += int(
+            dimensions["mixed_cycle_rank"] != 0
+            or non_gluing_witness(1, contexts) is not None
+            or status != "shared_scalar_forced_by_design"
+        )
+
+    one_context_mismatches = 0
+    for item_count in range(1, maximum_items + 1):
+        complete = edge_universe(item_count)
+        contexts = (ContextGraph("only_context", complete),)
+        dimensions = obstruction_dimensions(item_count, contexts)
+        zero_flow = tuple(Fraction(0) for _ in complete)
+        status = shared_scalar_status(item_count, contexts, zero_flow)["status"]
+        status_counts[status] += 1
+        one_context_mismatches += int(
+            dimensions["mixed_cycle_rank"] != 0
+            or non_gluing_witness(item_count, contexts) is not None
+            or status != "shared_scalar_forced_by_design"
+        )
+
+    minimal = minimal_parallel_edge_witness()
+    minimal_passed = bool(
+        minimal["item_count"] == 2
+        and len(minimal["contexts"]) == 2
+        and minimal["locally_scalar"]
+        and not minimal["shared_scalar"]
+        and minimal["dimensions"]["mixed_cycle_rank"] == 1
+        and shared_scalar_status(
+            minimal["item_count"], minimal["contexts"], minimal["flow"]
+        )["status"]
+        == "shared_scalar_refuted"
+    )
+    status_counts[
+        shared_scalar_status(
+            minimal["item_count"], minimal["contexts"], minimal["flow"]
+        )["status"]
+    ] += 1
+    return {
+        **spec,
+        "one_item_control_count": int(spec["maximum_contexts"]),
+        "one_item_mismatch_count": one_item_mismatches,
+        "one_context_control_count": maximum_items,
+        "one_context_mismatch_count": one_context_mismatches,
+        "minimal_two_item_two_context_witness_passed": minimal_passed,
+        "status_counts": dict(sorted(status_counts.items())),
     }

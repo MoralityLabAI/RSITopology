@@ -325,6 +325,8 @@ def cycle_circulations(
     flow: Sequence[object], cycles: Sequence[Sequence[object]]
 ) -> Vector:
     values = tuple(map(Fraction, flow))
+    if any(len(cycle) != len(values) for cycle in cycles):
+        raise ValueError("cycle and flow dimensions differ")
     return tuple(
         sum(Fraction(coefficient) * value for coefficient, value in zip(cycle, values))
         for cycle in cycles
