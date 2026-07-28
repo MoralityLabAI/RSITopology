@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 59.39487969997572,
+  "implementation_commit": "15fa5ccd3cf44e808034803199b9f3e807ce6e9f",
+  "output_hashes": {
+    "RESULT_v0_9.md": "86484c676ebaa88f1eaf087830d918cb66d44b3ed5315d20151e97d2dde65d71",
+    "result_v0_9.json": "28665d339e3e7d873c165432d22cdcc820dd76b00a5722ec3435a3638fb50051"
+  },
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-COHERENCE-v0.9",
+  "registration_commit": "0ba56240ccfee7d33b2c3c0135abdeffd370700b",
+  "registration_sha256": "da02bfbf8838062cfc251c994c7eb1c6e23df4c438cdca6c4d3ff304eb94e3a5"
+}

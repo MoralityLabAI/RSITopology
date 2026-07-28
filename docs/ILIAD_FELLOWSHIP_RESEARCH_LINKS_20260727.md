@@ -118,6 +118,12 @@ as transformer evidence.
   admits exact non-affine three-item observational equivalences. The result is
   a finite-design population obstruction, not a general IRL theorem.
 
+- [ASMP-9: finite-sample coherence certificate](../ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/PUBLIC_SUMMARY_v0_9.md)
+  A simultaneous cycle test with coherent, incoherent, inconclusive, and
+  unavailable outcomes, plus a conservative graph-dependent sample bound.
+  It prevents finite-sample non-rejection from being reported as proof that a
+  scalar value model exists.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design

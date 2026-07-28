@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_8.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_9.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -89,3 +89,11 @@ non-affine utility rays can induce identical complete population laws under
 separate links; three items are minimal. This is an exact finite-design
 obstruction, not finite-sample semiparametric estimation or a characterization
 of the interventions sufficient to calibrate an unknown link.
+
+The [finite-sample coherence theorem v0.9](finite_sample_coherence_v0_9/PUBLIC_SUMMARY_v0_9.md)
+then turns the v0.7 population cycle test into a simultaneous statistical
+certificate. It preserves coherent, incoherent, inconclusive, and unavailable
+outcomes, derives a conservative graph-dependent sample bound, and refuses to
+certify forests or unsupported probability interiors. It assumes independent
+fixed-count comparisons and a known logit link; minimax lower bounds, adaptive
+allocation, and general finite-MDP access remain open.
