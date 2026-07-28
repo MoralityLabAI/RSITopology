@@ -37,6 +37,8 @@ def test_exact_size_excess_decomposition_and_bound() -> None:
             4, 3, Fraction(2), nuisance, Fraction(1, 20)
         )
         assert record["all_conditional_sizes_exact"]
+        assert record["null_mass_normalized"]
+        assert record["alternative_mass_normalized"]
         assert record["unconditional_size_all"]["fraction"] == "1/20"
         assert record["excess_decomposition_matches"]
         assert record["upper_bound_holds"]

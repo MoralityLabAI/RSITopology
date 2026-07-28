@@ -1,6 +1,8 @@
 # ASMP-9 unconditional availability and conditional power v0.14
 
-This is an unregistered CPU-only theorem-development directory.
+This directory contains a burned CPU-only theorem-development census and a
+prospective exact verification protocol. The fresh v0.14 registry has not
+been executed at the implementation-freeze stage.
 
 Version v0.13 showed that conditioning Bradley-Terry comparison counts on
 vertex win balance removes scalar-value nuisance exactly, but it reported
@@ -13,5 +15,11 @@ the experiment on singleton fibers. The conditional test remains exact, but
 its unconditional power gain above size vanishes because the informative
 fiber is almost never realized.
 
-No file in this directory is claim-eligible until a later protocol and
-registration explicitly freeze it.
+The development artifacts are never claim-eligible. The theorem,
+implementation, tests, environment receipt, and fresh registry become
+claim-eligible only if a later registration seals their exact bytes before
+the fresh run, every registered gate passes, and an independent verifier
+accepts the resulting artifact.
+
+The protocol does not claim a general conditional-inference theorem or an
+ASMP-9 resolution.

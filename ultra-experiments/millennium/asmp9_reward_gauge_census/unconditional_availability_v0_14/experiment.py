@@ -317,6 +317,12 @@ def run_cell(
         ),
         "fiber_count": len(fibers),
         "informative_fiber_count": len(informative_keys),
+        "null_mass_normalized": (
+            sum(null_mass.values(), Fraction(0)) == 1
+        ),
+        "alternative_mass_normalized": (
+            sum(alternative_mass.values(), Fraction(0)) == 1
+        ),
         "availability_null": fraction_record(availability_null),
         "availability_alternative": fraction_record(
             availability_alternative
@@ -393,6 +399,11 @@ def run_registry(spec: dict[str, Any]) -> dict[str, Any]:
         ),
         "conditional_size_mismatch_count": sum(
             not record["all_conditional_sizes_exact"]
+            for record in records
+        ),
+        "mass_normalization_mismatch_count": sum(
+            not record["null_mass_normalized"]
+            or not record["alternative_mass_normalized"]
             for record in records
         ),
         "excess_decomposition_mismatch_count": sum(
