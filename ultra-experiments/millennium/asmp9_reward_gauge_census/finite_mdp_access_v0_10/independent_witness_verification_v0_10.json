@@ -1,0 +1,592 @@
+{
+  "cell_count": 64,
+  "checks": {
+    "base_minimum_gap_is_one": true,
+    "every_policy_gap_strictly_positive": true,
+    "expected_cell_count": true,
+    "perturbed_minimum_gap_is_one_half": true,
+    "policy_values_are_constant": true
+  },
+  "discount": "2/3",
+  "method": "separate exact Bellman solve over reconstructed kernels",
+  "post_run_status": "diagnostic verification, not preregistered gate",
+  "rows": [
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 17,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 17,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 17,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 17,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 18,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 18,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 18,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 18,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 19,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 19,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 19,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 19,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 20,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 20,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 20,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 20,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 21,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 21,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 21,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 21,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 22,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 22,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 22,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 22,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 23,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 23,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 23,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 23,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 24,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 24,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 24,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 24,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 25,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 25,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 25,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 25,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 26,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 26,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 26,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 26,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 27,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 27,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 27,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 27,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 28,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 28,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 28,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 28,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 29,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 29,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 29,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 29,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 30,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 30,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 30,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 30,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 31,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 31,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 31,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 31,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 32,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "self_loop",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 32,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1",
+      "reward": "base",
+      "state_count": 32,
+      "value_is_constant": true
+    },
+    {
+      "all_gaps_strictly_positive": true,
+      "environment": "cyclic",
+      "maximum_gap": "1",
+      "minimum_gap": "1/2",
+      "reward": "perturbed",
+      "state_count": 32,
+      "value_is_constant": true
+    }
+  ],
+  "status": "independently_verified"
+}

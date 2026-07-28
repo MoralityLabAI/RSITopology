@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_9.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_10.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -97,3 +97,14 @@ outcomes, derives a conservative graph-dependent sample bound, and refuses to
 certify forests or unsupported probability interiors. It assumes independent
 fixed-count comparisons and a known logit link; minimax lower bounds, adaptive
 allocation, and general finite-MDP access remain open.
+
+The [finite-MDP access theorem v0.10](finite_mdp_access_v0_10/PUBLIC_SUMMARY_v0_10.md)
+then computes the exact common potential-shaping ambiguity for a registered
+family of transition and discount interventions. Against a self-loop
+reference, the residual dimension is `S-rank(A_P)` and becomes the component
+count of a successor-difference graph for deterministic kernels. Connected
+transition or distinct-discount interventions reduce exact soft-policy
+ambiguity to a global constant, while a matched deterministic-policy witness
+remains nonidentifying. This is a finite known-model specialization beneath
+established entropy-regularized IRL theory, not a general environment-design
+theorem or ASMP-9 resolution.

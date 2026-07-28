@@ -124,6 +124,13 @@ as transformer evidence.
   It prevents finite-sample non-rejection from being reported as proof that a
   scalar value model exists.
 
+- [ASMP-9: exact finite-MDP policy-access geometry](../ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/PUBLIC_SUMMARY_v0_10.md)
+  Exact shaping-subspace intersections give a sharp two-environment criterion
+  in a structured finite family. A matched deterministic-policy obstruction
+  shows that environment count alone is insufficient: identifiability depends
+  on whether full stochastic probabilities or only action identities are
+  observed.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
