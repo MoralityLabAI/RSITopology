@@ -144,6 +144,12 @@ as transformer evidence.
   show that the minimum number or support of mixed-cycle checks does not
   guarantee noise-robust conditioning.
 
+- [ASMP-9: conditional finite-sample quotient](../ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PUBLIC_SUMMARY_v0_13_2.md)
+  Conditioning Bradley-Terry counts on vertex win balance eliminates the
+  scalar nuisance exactly. The realized fiber-difference rank then determines
+  which cycle-space directions are identifiable, preventing sparse
+  conditional data from being misreported as scalar-coherence evidence.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design

@@ -1,0 +1,55 @@
+{
+  "verification_id": "ASMP-9-CONDITIONAL-FIBER-v0.13.2-verification",
+  "date": "2026-07-28",
+  "protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13.2",
+  "implementation_commit": "f458e81d0745bc981929150d1d2464fa4fff845c",
+  "registration_commit": "b11ddca5743378165879ae7ebefd5b01e9d78954",
+  "registration_sha256": "67f6bcc4bafca09d9f3e799d5b125d88daaccd1dfea2618326925d11b7eb603e",
+  "registered_run": {
+    "verdict": "conditional_fiber_cycle_quotient_verified_v0_13_2",
+    "gates_passed": 10,
+    "gates_total": 10,
+    "elapsed_seconds": 11.137200100027258,
+    "peak_resident_bytes": 28110848,
+    "gpu_used": false
+  },
+  "artifact_verifier": {
+    "verdict": "verified",
+    "registration_hash": true,
+    "sealed_inputs": true,
+    "output_hashes": true,
+    "output_hash_universe": true,
+    "protocol_identity": true,
+    "registration_commit": true,
+    "implementation_commit": true,
+    "scientific_specification_unchanged": true,
+    "binding_checks": true,
+    "all_gates_pass": true
+  },
+  "registered_artifact_hashes": {
+    "RESULT_v0_13_2.md": "ab8ce6129c75e9b4d4b42750a96a6da0f33145b4b6ce003ae0e9928b9759a892",
+    "result_v0_13_2.json": "2861ac2e2eb7c065c6ea43f77f24407b20e637e5f7c20fd5cbab6f0c11fa9b9c",
+    "receipt_v0_13_2.json": "077ae5e39598fd6f27087643ef987b3bbd509b67e2d21ffb1857e571ab276b44"
+  },
+  "clean_replay": {
+    "liveness_identical": true,
+    "power_calibration_identical": true,
+    "gates_identical": true,
+    "verdict_identical": true,
+    "claim_boundary_identical": true,
+    "registration_sha256_identical": true
+  },
+  "tests": {
+    "dedicated": {
+      "passed": 16,
+      "failed": 0
+    },
+    "repository_fresh_process_batches": {
+      "passed": 225,
+      "failed": 0,
+      "batch_pass_counts": [44, 63, 50, 68]
+    },
+    "note": "A monolithic repository process exited without a pytest assertion after the first 41 tests; every file then passed in isolated fresh-process batches."
+  },
+  "claim_boundary": "Exact conditional finite-graph Bradley-Terry quotient and fresh one-cycle calibration; not unconditional goodness-of-fit, positive scalarity certification, dependent or unknown-link behavior, general IRL, or ASMP-9 resolution."
+}

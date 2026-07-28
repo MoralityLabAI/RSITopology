@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_10.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_13.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -108,3 +108,20 @@ ambiguity to a global constant, while a matched deterministic-policy witness
 remains nonidentifying. This is a finite known-model specialization beneath
 established entropy-regularized IRL theory, not a general environment-design
 theorem or ASMP-9 resolution.
+
+The [contextual scalar-gluing theorem v0.11](context_gluing_v0_11/PUBLIC_SUMMARY_v0_11.md)
+then proves that context-local scalar preferences share one global value
+function exactly when the independent mixed-context cycle circulations
+vanish.
+
+The [robust gluing theorem v0.12](robust_context_gluing_v0_12/PUBLIC_SUMMARY_v0_12.md)
+separates within-context non-scalarity from cross-context non-gluing, gives
+the exact Euclidean repair radius, and proves that query count and support
+size do not certify noise-robust conditioning.
+
+The [conditional-fiber theorem v0.13.2](conditional_fiber_v0_13/PUBLIC_SUMMARY_v0_13_2.md)
+conditions finite Bradley-Terry counts on vertex win balance to eliminate
+the scalar nuisance exactly. Its fiber-rank rule states which cycle-quotient
+directions the realized conditional experiment can actually identify; a
+singleton or rank-deficient fiber cannot be promoted into scalar-coherence
+evidence.
