@@ -67,3 +67,12 @@ discounted boundary signature for shaping-invariant trajectory comparisons,
 and shows why ordinary loop returns can lose all invariant content under
 discounting. Policy access, unknown response parameters, larger invariance
 classes, and inconsistent demonstrators remain open.
+
+The [behavioral well-posedness theorem v0.7](behavioral_wellposedness_v0_7/PUBLIC_SUMMARY_v0_7.md)
+then separates scalar reconstruction from testing whether a scalar response
+model exists. It gives the exact forest/non-bridge/full-edge access ledger,
+uses graph-Hodge residuals as inconsistency certificates, and proves the sharp
+adaptive and nonadaptive ambiguity radii for a deterministic
+policy-intervention channel. Finite-sample behavioral estimation, unknown
+response parameters, general finite-MDP policy access, and broader
+non-expected-utility demonstrators remain open.

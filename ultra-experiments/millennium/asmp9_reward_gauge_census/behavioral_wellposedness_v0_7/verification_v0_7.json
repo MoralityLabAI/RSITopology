@@ -1,0 +1,31 @@
+{
+  "protocol_id": "ASMP-9-BEHAVIORAL-WELLPOSEDNESS-v0.7",
+  "registration_commit": "02a84307c884d70a40b80c626a7d3c5c637b0faf",
+  "registration_sha256": "198a60f8857898642e257cb600b0d91b13dc2687658ab799b944e78bd3ffb07a",
+  "implementation_commit": "d67e4e87e579129ce246ade63b7af4da59ca7415",
+  "sealed_run_verdict": "behavioral_reconstruction_model_checking_split_verified",
+  "artifact_verifier_verdict": "verified",
+  "runtime_gate_count": 9,
+  "runtime_gates_passed": 9,
+  "unit_test_count": 60,
+  "unit_tests_passed": 60,
+  "fresh_simple_graph_count": 32768,
+  "fresh_multigraph_count": 8192,
+  "fresh_graph_count_total": 40960,
+  "simple_nonbridge_corruption_count": 32635,
+  "multigraph_nonbridge_corruption_count": 6750,
+  "simple_bridge_change_count": 6763,
+  "multigraph_bridge_change_count": 5156,
+  "hodge_projection_count": 4096,
+  "nonzero_hodge_residual_count": 3391,
+  "cycle_field_count": 1024,
+  "nonzero_cycle_circulation_count": 1022,
+  "random_nonadaptive_design_count": 4096,
+  "total_mismatch_count": 0,
+  "elapsed_seconds": 49.03765310000745,
+  "output_hashes": {
+    "RESULT_v0_7.md": "c06d418c569727e6e13ac7f1007d55df4e0f2943d31334a4a568f33d836db636",
+    "result_v0_7.json": "be682e0b8ba11d54da34288085867a609a5bcfbbb8c396bf3aae9e15938a7f13"
+  },
+  "claim_boundary": "Exact population-law graph and deterministic threshold-policy specialization; not finite-sample Bradley-Terry estimation, general IRL, a human model, or a complete ASMP-9 resolution."
+}

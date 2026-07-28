@@ -105,6 +105,13 @@ as transformer evidence.
   the boundary signatures required for finite trajectory comparisons to
   remain shaping-invariant; behavioral identification remains open.
 
+- [ASMP-9: behavioral reconstruction and model-checking split](../ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/PUBLIC_SUMMARY_v0_7.md)
+  A spanning forest reconstructs scalar preferences only under a coherence
+  promise; cycle access is the additional test that the scalar exists. A
+  matched deterministic-policy arm gives sharp adaptive and nonadaptive
+  ambiguity radii and proves finite exact identification impossible for a
+  continuous reward coordinate.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
