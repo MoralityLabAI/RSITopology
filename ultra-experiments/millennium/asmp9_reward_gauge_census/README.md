@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_7.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_8.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -80,3 +80,12 @@ adaptive and nonadaptive ambiguity radii for a deterministic
 policy-intervention channel. Finite-sample behavioral estimation, unknown
 response parameters, general finite-MDP policy access, and broader
 non-expected-utility demonstrators remain open.
+
+The [unknown response-link theorem v0.8](unknown_link_v0_8/PUBLIC_SUMMARY_v0_8.md)
+then separates two response-parameter regimes. With a known injective link,
+unknown positive inverse temperature is exactly positive utility scale. With
+an unrestricted unknown monotone symmetric link on a finite item design,
+non-affine utility rays can induce identical complete population laws under
+separate links; three items are minimal. This is an exact finite-design
+obstruction, not finite-sample semiparametric estimation or a characterization
+of the interventions sufficient to calibrate an unknown link.

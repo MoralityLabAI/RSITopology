@@ -1,7 +1,7 @@
 # Iliad Fellowship research links
 
 Patrick Dugan / Morality Lab AI  
-RSITopology research program, 2026-07-27
+RSITopology research program, updated 2026-07-28
 
 ## Short research description
 
@@ -111,6 +111,12 @@ as transformer evidence.
   matched deterministic-policy arm gives sharp adaptive and nonadaptive
   ambiguity radii and proves finite exact identification impossible for a
   continuous reward coordinate.
+
+- [ASMP-9: unknown response-link obstruction](../ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/PUBLIC_SUMMARY_v0_8.md)
+  A known injective response link with unknown inverse temperature identifies
+  utility up to positive scale, while an unrestricted unknown monotone link
+  admits exact non-affine three-item observational equivalences. The result is
+  a finite-design population obstruction, not a general IRL theorem.
 
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
