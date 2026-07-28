@@ -12,4 +12,12 @@ python -m pytest `
   -q
 ```
 
-The current files are development artifacts, not a preregistered result.
+The prospective files are:
+
+- `PROTOCOL_v0_10.md`;
+- `protocol_v0_10.json`;
+- `environment_v0_10.json`;
+- `run_verification.py`; and
+- `verify_result.py`.
+
+They must be hash-sealed in a registration commit before fresh execution.
