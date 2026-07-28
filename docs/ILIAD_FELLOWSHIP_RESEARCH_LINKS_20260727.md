@@ -87,6 +87,12 @@ as transformer evidence.
   record also preserves the failed first statement whose inclusion of the
   zero-noise endpoint was false.
 
+- [ASMP-9: exact-tie comparison-width theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/PUBLIC_SUMMARY_v0_4.md)
+  A separate Farey-sequence theorem closes the zero-ambiguity endpoint and
+  shows that losing exact ties nearly doubles the sharp worst-case query
+  width. The remaining finite-sample and behavioral identification questions
+  stay explicitly open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design

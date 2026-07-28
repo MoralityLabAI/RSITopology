@@ -45,3 +45,10 @@ then proves the dimension-uniform coefficient threshold for the strictly
 positive ambiguity regime: width `2` at reward bound one and `2B-1`
 thereafter. The immutable v0.3 record documents the endpoint error that led to
 the corrected open interval `0<delta<1`.
+
+The [exact-tie theorem v0.4](zero_radius_theorem_v0_4/PUBLIC_SUMMARY_v0_4.md)
+separately closes the `delta=0` endpoint: width `1` for `B<=2` and `B-1`
+thereafter. Together the results expose a discontinuity at zero model error:
+the availability of an exact tie nearly halves the sharp worst-case width.
+Neither theorem supplies the finite-sample, discounted, behavioral, or
+inconsistent-demonstrator results still required for ASMP-9.

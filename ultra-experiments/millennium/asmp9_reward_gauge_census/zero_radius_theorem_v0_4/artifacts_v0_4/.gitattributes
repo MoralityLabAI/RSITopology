@@ -1,0 +1,3 @@
+# Preserve the generated receipt-bound bytes exactly. The Windows runner emits
+# CRLF here and the receipt hashes those bytes.
+* -text
