@@ -30,6 +30,10 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
+The current [resolution audit](RESOLUTION_AUDIT_v0_7.md) maps every clause of
+the broader candidate problem to proved, partial, or missing evidence and
+freezes the next load-bearing sequence.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
