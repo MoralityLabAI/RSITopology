@@ -1,0 +1,19 @@
+{
+  "registration_id": "ASMP-9-SHARP-WIDTH-v0.3.1-registration",
+  "registered_at_utc": "2026-07-28T00:00:00Z",
+  "implementation_commit": "ecc7481e9b2b787783932b5eb745317166338fc4",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/protocol_v0_3_1.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/PRIOR_ART_v0_3.md": "61a0c73eb9739022f957d94306735de708de3366dc9e77e15c7f3ca7e811cd1d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/SCOPE_CORRECTION_v0_3.md": "50b72fd976a598db46db319bc7ec331a45f180dbd93eadcbb0f32074efb29062",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/width_theorem.py": "9a644b40086ea80e1898eb30ff337d233f34619758f00cf3c02c82b61383b27c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/run_verification.py": "e3fc4efca7485703b2a822cdea1bfecc46bb83576586949141723e4a96a7d8f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/THEOREM_v0_3_1.md": "542705a255a75c3b559589ac440761e1f9f56ad223e0bcdfa032a95e9610572d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/PROTOCOL_v0_3_1.md": "7e8d4481303f66b6ce5d9b275f970bd044924158b1b4fd4c4fd429df194883e3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/protocol_v0_3_1.json": "e6d2e9baeb96be05ebdf065d5477f21b3e21223d0fcc40ac5e4f69b426137eb5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/test_scope_v0_3_1.py": "7de8bec1a2c88002ac8476810318dd110854472b3393f76e5cbee2d56134bf1d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/run_verification_v0_3_1.py": "f3a8959a3167e121800f1a07c35961bd09862c17eb593c7a98651eefd1229364",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/verify_result_v0_3_1.py": "e3179212f5c7d8574fad1519cab853d0e54c7721adf6a77b7e1f35038b18c887",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3_1/README.md": "aaccd5ffb0a941bff29073c8c1dce4215fbf0889cb54bbfcb8be63ad1356ea35"
+  }
+}
