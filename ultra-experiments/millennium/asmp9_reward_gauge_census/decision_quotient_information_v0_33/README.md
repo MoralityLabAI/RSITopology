@@ -86,3 +86,8 @@ an invisible-but-policy-changing coupling witness. The preferred exact basis
 keeps 18 probes while reducing worst-case infinity-norm amplification from
 12 to 8. Physical availability remains untested; the v0.34 protocol is still
 a draft.
+
+The [capture-availability audit](PHYSICAL_CAPTURE_AVAILABILITY_v0_34.md)
+records that none of the existing ASMP-9 or Qwen run directories contains the
+required joint behavioral object. Existing harness infrastructure can be
+reused, but its outcomes cannot be relabeled or pooled into v0.34.
