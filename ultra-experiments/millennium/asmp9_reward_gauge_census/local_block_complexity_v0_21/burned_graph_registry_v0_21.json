@@ -1,0 +1,1446 @@
+{
+  "graph_record_count": 29,
+  "method": "recursive extraction of dictionaries containing integer node_count and simple edge-pair lists from every earlier ASMP-9 protocol*.json",
+  "protocol_file_count": 30,
+  "records": [
+    {
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "edge_count": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "node_count": 8,
+      "pointer": "$.graphs.bridge_separated_cycles",
+      "protocol_path": "block_factorization_v0_20/protocol_v0_20.json",
+      "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+      "weisfeiler_lehman_hash": "c076b876e9522c9a2b62400b6c7b2346"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 8,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "node_count": 7,
+      "pointer": "$.graphs.chorded_cycle_one_block",
+      "protocol_path": "block_factorization_v0_20/protocol_v0_20.json",
+      "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+      "weisfeiler_lehman_hash": "0c733482b31918778705ff0dc463d97a"
+    },
+    {
+      "degree_sequence": [
+        5,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 11,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "node_count": 9,
+      "pointer": "$.graphs.chorded_cycle_plus_triangle",
+      "protocol_path": "block_factorization_v0_20/protocol_v0_20.json",
+      "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+      "weisfeiler_lehman_hash": "ed59cb4ce8288ff9fb2741b0dc999557"
+    },
+    {
+      "degree_sequence": [
+        5,
+        5,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 11,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "node_count": 8,
+      "pointer": "$.graphs.multiport_diamond",
+      "protocol_path": "block_factorization_v0_20/protocol_v0_20.json",
+      "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+      "weisfeiler_lehman_hash": "de1a2f0f0e003566a2e834cc29007331"
+    },
+    {
+      "degree_sequence": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 10,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "node_count": 8,
+      "pointer": "$.graphs.theta_bridge_triangle",
+      "protocol_path": "block_factorization_v0_20/protocol_v0_20.json",
+      "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+      "weisfeiler_lehman_hash": "2117809d8a18abe63a223db330906fa6"
+    },
+    {
+      "degree_sequence": [
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 8,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "node_count": 7,
+      "pointer": "$.graphs.triangle_plus_pentagon",
+      "protocol_path": "block_factorization_v0_20/protocol_v0_20.json",
+      "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+      "weisfeiler_lehman_hash": "a4b41f2cf2041e57ec3666edd16395b1"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 8,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "node_count": 7,
+      "pointer": "$.development_registry.extra_cactus",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "0c733482b31918778705ff0dc463d97a"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "node_count": 8,
+      "pointer": "$.development_registry.premature_v0_18_cells.cactus_triangle_pentagon_bridge",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "69dce460aaa8e604c6bcf055fcd26ae8"
+    },
+    {
+      "degree_sequence": [
+        4,
+        4,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 8,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "node_count": 6,
+      "pointer": "$.development_registry.premature_v0_18_cells.complete_bipartite_2_4",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "b26010f475982923e543980804cc717a"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edge_count": 9,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "node_count": 6,
+      "pointer": "$.development_registry.premature_v0_18_cells.complete_bipartite_3_3",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "f2d0eff2c262a6c043d27a5ab6bf0a69"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edge_count": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "node_count": 6,
+      "pointer": "$.development_registry.premature_v0_18_cells.triangular_prism",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "f2d0eff2c262a6c043d27a5ab6bf0a69"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 11,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "node_count": 10,
+      "pointer": "$.graphs.cactus_square_hexagon_bridge",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "08777ff124d5ae02c073ffbd6ed005ed"
+    },
+    {
+      "degree_sequence": [
+        5,
+        5,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 10,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "node_count": 7,
+      "pointer": "$.graphs.complete_bipartite_2_5",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "6c20a1c8cc1e4e688dcd98455c0aeab7"
+    },
+    {
+      "degree_sequence": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edge_count": 12,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "node_count": 7,
+      "pointer": "$.graphs.complete_bipartite_3_4",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "9a3232dddea30de9a7656fcf9b09f480"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edge_count": 12,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "node_count": 8,
+      "pointer": "$.graphs.cube",
+      "protocol_path": "bond_design_v0_18/protocol_v0_18.json",
+      "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+      "weisfeiler_lehman_hash": "e3b44c747bd477c24b931b521b5abe0c"
+    },
+    {
+      "degree_sequence": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.fresh_liveness_graphs[0]",
+      "protocol_path": "conditional_fiber_v0_13/protocol_v0_13.json",
+      "protocol_sha256": "a20ece040c9c4621788dc5a0efeee0806c62655e145b227b09157f91cf0322c9",
+      "weisfeiler_lehman_hash": "96fefeacfe67485332ec4a52aa7caf39"
+    },
+    {
+      "degree_sequence": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 7,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "node_count": 7,
+      "pointer": "$.fresh_liveness_graphs[1]",
+      "protocol_path": "conditional_fiber_v0_13/protocol_v0_13.json",
+      "protocol_sha256": "a20ece040c9c4621788dc5a0efeee0806c62655e145b227b09157f91cf0322c9",
+      "weisfeiler_lehman_hash": "f9189a3860a67863563b7ba7463191d3"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 6,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.fresh_liveness_graphs[2]",
+      "protocol_path": "conditional_fiber_v0_13/protocol_v0_13.json",
+      "protocol_sha256": "a20ece040c9c4621788dc5a0efeee0806c62655e145b227b09157f91cf0322c9",
+      "weisfeiler_lehman_hash": "78202536197adecee7f6401df9569d1c"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "edge_count": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "node_count": 4,
+      "pointer": "$.fresh_liveness_graphs[3]",
+      "protocol_path": "conditional_fiber_v0_13/protocol_v0_13.json",
+      "protocol_sha256": "a20ece040c9c4621788dc5a0efeee0806c62655e145b227b09157f91cf0322c9",
+      "weisfeiler_lehman_hash": "e61fd79a2b966e7634e920aa963e23da"
+    },
+    {
+      "degree_sequence": [
+        4,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.fresh_liveness_graphs[4]",
+      "protocol_path": "conditional_fiber_v0_13/protocol_v0_13.json",
+      "protocol_sha256": "a20ece040c9c4621788dc5a0efeee0806c62655e145b227b09157f91cf0322c9",
+      "weisfeiler_lehman_hash": "1a087f2fb0a0f0ae7a60773d952e99b2"
+    },
+    {
+      "degree_sequence": [
+        4,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.burned_graph_registry.bowtie",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "1a087f2fb0a0f0ae7a60773d952e99b2"
+    },
+    {
+      "degree_sequence": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "node_count": 4,
+      "pointer": "$.burned_graph_registry.cycle4",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "9fbb015dbd0ddaca944b57bee0661546"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.burned_graph_registry.cycle5_plus_chord",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "c10fc9d1ce8a28c4eebdf20dc4071986"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "edge_count": 5,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "node_count": 4,
+      "pointer": "$.burned_graph_registry.theta122",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "e61fd79a2b966e7634e920aa963e23da"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.burned_graph_registry.theta123",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "c10fc9d1ce8a28c4eebdf20dc4071986"
+    },
+    {
+      "degree_sequence": [
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "edge_count": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.graphs.cycle4_tail",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "769fd4f1800a349cda83dc9e5d7e1be3"
+    },
+    {
+      "degree_sequence": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "node_count": 6,
+      "pointer": "$.graphs.cycle6",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "6de89950f00660d47a6a47b68a218b4c"
+    },
+    {
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_count": 7,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "node_count": 6,
+      "pointer": "$.graphs.theta133",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "9d32aa9024b32b96b6af0648567355dc"
+    },
+    {
+      "degree_sequence": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edge_count": 8,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "node_count": 5,
+      "pointer": "$.graphs.wheel5",
+      "protocol_path": "general_graph_design_v0_17/protocol_v0_17.json",
+      "protocol_sha256": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+      "weisfeiler_lehman_hash": "2f0f6bade76ee733032feddd78f75ddd"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "claim_boundary": "At the frozen epsilon=1/2, positive-count floor N=|E| of the independent-binomial conditional-access model inherited from ASMP-9 v0.17-v0.20, establish the exact identity F_G=T_G(0,2)/2^|E| for one finite simple biconnected comparison block. Use the classical Las Vergnas orientation interpretation and Jaeger-Vertigan-Welsh Tutte dichotomy to classify the availability numerator as #P-complete and exact rational value computation as #P-hard under polynomial-time Turing reductions, including Turing-hardness when the input is restricted to biconnected blocks. This is an access-model translation and complexity classification at one boundary, not a novelty claim for the Tutte polynomial or totally cyclic orientations. It does not classify optimizer search, budgets above |E|, arbitrary epsilon, weighted partial orientations, approximation, the full fixed-parameter landscape, adaptive allocation, dependent or misspecified responses, behavioral reward identification, general IRL, or resolve ASMP-9.",
+  "complexity_statement": {
+    "allowed": [
+      "The count-floor availability numerator on a biconnected block is #P-complete under polynomial-time Turing reductions.",
+      "Exact rational count-floor value computation is #P-hard.",
+      "The restriction to biconnected blocks is #P-hard under a polynomial-time block-decomposition Turing reduction."
+    ],
+    "forbidden": [
+      "The optimization problem is #P-complete.",
+      "Optimizer search is hard at the count floor.",
+      "The arbitrary-epsilon or above-floor local design problem is classified.",
+      "The classical Tutte or orientation results are new."
+    ],
+    "membership_witness": "A total orientation is encoded by |E| bits and total cyclicity is checkable in polynomial time by directed reachability.",
+    "normalization_recovery": "Multiplying the exact rational availability by 2^|E| recovers the integer orientation count."
+  },
+  "controls": {
+    "block_product": {
+      "edges": [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [4, 5],
+        [5, 0],
+        [6, 0],
+        [6, 1],
+        [6, 2],
+        [6, 3],
+        [6, 4],
+        [6, 5],
+        [6, 7],
+        [7, 8],
+        [8, 9],
+        [9, 10],
+        [10, 6]
+      ],
+      "expected_nontrivial_block_count": 2,
+      "name": "wheel_7_plus_pentagon",
+      "node_count": 11
+    },
+    "bridge_scope": {
+      "edges": [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [4, 5],
+        [5, 0],
+        [6, 0],
+        [6, 1],
+        [6, 2],
+        [6, 3],
+        [6, 4],
+        [6, 5],
+        [6, 7]
+      ],
+      "expected_bridge_count": 1,
+      "name": "wheel_7_with_leaf",
+      "node_count": 8,
+      "required_distinction": "T_G(0,2)=0 while the ASMP quotient ignores the bridge and preserves the wheel availability"
+    }
+  },
+  "freshness_rule": {
+    "burned_registry_path": "burned_graph_registry_v0_21.json",
+    "candidate_pair_rule": "All primary full graphs are pairwise nonisomorphic. Control full graphs are distinct from the prior registry and from each other; their deliberate wheel_7 sub-block reuse is reported.",
+    "exact_check": "NetworkX graph isomorphism after matching node and edge counts",
+    "prior_universe": "Every dictionary carrying integer node_count and a simple edge-pair list in every earlier ASMP-9 protocol*.json file"
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_freshness_and_structure",
+    "G2_tutte_exhaustive_equality",
+    "G3_asmp_boundary_identity",
+    "G4_normalization_and_label_invariance",
+    "G5_unique_count_floor_design_value",
+    "G6_bridge_scope_control",
+    "G7_block_product_and_localization",
+    "G8_complexity_attribution",
+    "G9_resource_and_scope"
+  ],
+  "inherited_object": {
+    "edge_counts": "positive integers",
+    "endpoint_adversary": "one independent binary endpoint label per edge",
+    "liveness_event": "every original nonbridge edge has mutually reachable endpoints in the residual digraph",
+    "response_model": "independent Bernoulli comparisons",
+    "source_protocols": [
+      "../general_graph_design_v0_17/protocol_v0_17.json",
+      "../block_factorization_v0_20/protocol_v0_20.json"
+    ]
+  },
+  "primary_graphs": {
+    "pentagonal_prism": {
+      "edges": [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [4, 0],
+        [5, 6],
+        [6, 7],
+        [7, 8],
+        [8, 9],
+        [9, 5],
+        [0, 5],
+        [1, 6],
+        [2, 7],
+        [3, 8],
+        [4, 9]
+      ],
+      "node_count": 10
+    },
+    "petersen": {
+      "edges": [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [4, 0],
+        [0, 5],
+        [1, 6],
+        [2, 7],
+        [3, 8],
+        [4, 9],
+        [5, 7],
+        [7, 9],
+        [9, 6],
+        [6, 8],
+        [8, 5]
+      ],
+      "node_count": 10
+    },
+    "subdivided_k4_star": {
+      "edges": [
+        [0, 4],
+        [4, 1],
+        [0, 5],
+        [5, 2],
+        [0, 6],
+        [6, 3],
+        [1, 2],
+        [1, 3],
+        [2, 3]
+      ],
+      "node_count": 7
+    },
+    "wheel_7": {
+      "edges": [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [4, 5],
+        [5, 0],
+        [6, 0],
+        [6, 1],
+        [6, 2],
+        [6, 3],
+        [6, 4],
+        [6, 5]
+      ],
+      "node_count": 7
+    }
+  },
+  "primary_identity": {
+    "allocation": "n_e=1 for every edge",
+    "denominator": "2^|E|",
+    "epsilon": "1/2",
+    "event": "totally cyclic orientation",
+    "numerator": "T_G(0,2)",
+    "total_budget": "|E|"
+  },
+  "prior_art": [
+    {
+      "doi": "10.1016/0012-365X(77)90042-5",
+      "role": "classical orientation interpretation"
+    },
+    {
+      "doi": "10.1017/S0305004100068936",
+      "role": "Tutte-plane #P-hardness dichotomy"
+    },
+    {
+      "doi": "10.1016/j.entcs.2019.08.057",
+      "role": "known hardness and classical branchwidth/pathwidth FPT algorithms"
+    }
+  ],
+  "protocol_id": "ASMP-9-LOCAL-BLOCK-COMPLEXITY-v0.21",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "statistical_policy": "No statistical inference. Every registered quantity is an exact integer, rational, graph predicate, hash, or resource measurement.",
+  "version": "0.21",
+  "verdict_map": {
+    "all_gates_pass": "count_floor_local_value_complexity_classified_v0_21",
+    "any_substantive_identity_gate_fails": "count_floor_translation_not_established_v0_21",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_21"
+  }
+}
+
