@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_30.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_31.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -245,3 +245,14 @@ context-interacting tables share the same MDP. The approximate semantic error
 propagates with a sharp factor two. Scalar table access is assumed, so the
 result does not derive cardinal utility from ordinal behavior or resolve
 ASMP-9.
+
+The [v0.31 joint approximate result](joint_approximate_v0_31/PUBLIC_SUMMARY_v0_31.md)
+then composes the v0.27-v0.30 deterministic uncertainty sources in one
+quotient certificate. Exact context nuisance is projected out, shared
+semantic cells remain correlated, mechanical row drift is admitted only below
+a live small-gain boundary, and the resulting zonotope is propagated exactly
+through a finite policy family. The original registered invocation produced
+no artifacts because its Windows resource meter failed; a separately
+registered repair changed only that meter and passed all 12 scientific gates,
+29 independent checks, and 10 repair-integrity checks. Source widths remain
+assumed rather than behaviorally estimated, so ASMP-9 remains unresolved.
