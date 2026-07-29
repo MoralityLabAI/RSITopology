@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "cells_sha256": "fbddc7646d4603243f56914778c89c5b56407462c7efc542171a96cf62bc62f5",
+    "manifest_sha256": "44ce1e2feddd14b6fb66f265e2946408d0a1e620ce701e1b8b257b8d6376dc19",
+    "registration_sha256": "e6138bb101b094110c2011a91bf71ccaaa808857ad8c0eeec1fb38ac35ae69df",
+    "result_sha256": "a6deb25c85ee2a2f2c21c6b16206d3d1348af2ee13dd89882a457069fbee7bd7"
+  },
+  "chronology": {
+    "registration_commit": "ef1f92edab1f6de5ba4a82f22632e7d808a1ad03",
+    "result_commit": "b23db3b0f8a9d03c7657e25017e4031c55b37be2",
+    "source_commit": "b74486bfb875368ed23d6fe8a827a7c6dcbb1e83"
+  },
+  "claim_boundary": "Conditional finite stochastic-choice access ledger only; no empirical premise validation, general efficient modulus computation, hidden-menu or latent-confounding theorem, strategic/nonstationary result, welfare semantics, novelty, or full ASMP-9 resolution claim.",
+  "command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/verify_stack_v0_61.py",
+  "fact_digest": "b6a183bac5f264bc410c2c25e07bd4030b7d0b2286efcaa3cb9ae302060ac9ae",
+  "gates": {
+    "B57": true,
+    "C59": true,
+    "H0": true,
+    "I0": true,
+    "M58": true,
+    "RESOURCE": true,
+    "S60": true,
+    "T0": true,
+    "X0": true
+  },
+  "protocol_id": "asmp9-structured-choice-stack-v0.61",
+  "resource": {
+    "elapsed_seconds": 12.210197599983076,
+    "resident_bytes": 25206784,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.61-run-receipt-v1",
+  "status": "conditional_structured_choice_stack_verified",
+  "tests": {
+    "count": 6,
+    "status": "passed"
+  }
+}
