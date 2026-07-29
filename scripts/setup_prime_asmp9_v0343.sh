@@ -33,6 +33,7 @@ cmake \
   -S /workspace/llama.cpp \
   -B /workspace/llama.cpp/build-sm89 \
   -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.8/bin/nvcc \
   -DCUDAToolkit_ROOT=/usr/local/cuda-12.8 \
   -DCMAKE_CUDA_ARCHITECTURES=89-real \
   -DGGML_CUDA=ON \
