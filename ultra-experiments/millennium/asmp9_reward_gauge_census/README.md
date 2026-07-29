@@ -99,6 +99,22 @@ projection comparisons, and an import-independent replay all passed.  The
 [v0.63 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_63.md) moves the
 load-bearing target to hidden choice sets and latent selection confounding.
 
+The unregistered
+[hidden-consideration boundary v0.64](hidden_consideration_boundary_v0_64/DEVELOPMENT_RESULT_v0_64.md)
+then narrows that target without rebranding established limited-consideration
+theory.  For any finite hidden-compliance correspondence, each ranking induces
+an attainable-choice support; an intervention suite identifies deterministic
+rankings exactly when these supports separate every ranking pair.  Allowing
+all singletons collapses every preference, while verified exact-pair forcing
+has the sharp worst-case nonadaptive count `C(n,2)`.  Eight tests and an
+import-independent census pass, but the
+[registration decision](hidden_consideration_boundary_v0_64/REGISTRATION_DECISION_v0_64.md)
+keeps the result development-only because another prospective finite replay
+would not resolve a scientifically uncertain obligation.  The
+[v0.64 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_64.md) moves the
+load-bearing target to structured hidden compliance or strategic/dynamic
+response.
+
 ## Prereveal tests
 
 ```powershell
