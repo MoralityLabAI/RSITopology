@@ -48,8 +48,30 @@ artifacts_v0_20/development_census.json
 SHA-256 ba0a768ff6179257196c91e161af2b17f6185965553ea725172af974fdba17ac
 ```
 
+That receipt binds the development implementation committed at
+`d7a235ed6dcd8f141dada5d7432c3603758199f3`. Later implementation hardening
+does not retroactively rewrite it.
+
 Every graph, allocation, label vector, and probability cell used by these
 checks is burned and must be excluded from any registered run.
+
+## Burned resource proxy
+
+The prospective exact design gate uses blocks with 8 and 3 edges and one
+trial above the positive-count floor. Before freezing the new cell, the same
+algorithm was timed on an already-burned `K2,4` block joined to a triangle,
+with the same block sizes and total budget:
+
+```text
+elapsed_seconds      2.607701
+peak_resident_bytes  20,672,512
+allocation_count     11
+exact_match           true
+```
+
+The exact machine values and source hashes are in
+`artifacts_v0_20/resource_pilot_v0_20.json`. The pilot is descriptive; the
+registered 180-second/1-GiB gate remains binding and may still fail.
 
 ## Freeze blockers
 

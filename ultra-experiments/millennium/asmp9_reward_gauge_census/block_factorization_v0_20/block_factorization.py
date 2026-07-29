@@ -6,6 +6,7 @@ Development-only until a versioned protocol is frozen.
 from __future__ import annotations
 
 import itertools
+from dataclasses import dataclass
 from fractions import Fraction
 from typing import Iterable, Sequence
 
@@ -95,6 +96,18 @@ def cyclic_blocks(
     )
 
 
+def _validate_statuses(
+    edge_count: int, statuses: Sequence[Status]
+) -> None:
+    if len(statuses) != edge_count:
+        raise ValueError("edge/status dimensions differ")
+    if any(
+        status not in (ZERO, INTERIOR, FULL)
+        for status in statuses
+    ):
+        raise ValueError("status must be ZERO, INTERIOR, or FULL")
+
+
 def _strongly_connected(adjacency: Sequence[Sequence[int]]) -> bool:
     if not adjacency:
         return True
@@ -119,6 +132,89 @@ def _strongly_connected(adjacency: Sequence[Sequence[int]]) -> bool:
     return len(reachable(reverse)) == len(adjacency)
 
 
+@dataclass(frozen=True)
+class PreparedGraph:
+    """Immutable structural cache for repeated status evaluations."""
+
+    node_count: int
+    edges: tuple[Edge, ...]
+    blocks: tuple[tuple[int, ...], ...]
+    cyclic: tuple[tuple[int, ...], ...]
+    bridges: frozenset[int]
+
+    @classmethod
+    def build(
+        cls, node_count: int, edges: Sequence[Edge]
+    ) -> "PreparedGraph":
+        frozen_edges = tuple(edges)
+        blocks = biconnected_edge_blocks(
+            node_count, frozen_edges
+        )
+        base_components = _component_count(
+            node_count, frozen_edges
+        )
+        return cls(
+            node_count=node_count,
+            edges=frozen_edges,
+            blocks=blocks,
+            cyclic=tuple(
+                block for block in blocks if len(block) > 1
+            ),
+            bridges=frozenset(
+                edge_id
+                for edge_id in range(len(frozen_edges))
+                if _component_count(
+                    node_count, frozen_edges, edge_id
+                )
+                > base_components
+            ),
+        )
+
+    def blockwise_available(
+        self, statuses: Sequence[Status]
+    ) -> bool:
+        _validate_statuses(len(self.edges), statuses)
+        return all(
+            block_available(self.edges, statuses, block)
+            for block in self.cyclic
+        )
+
+    def direct_available(
+        self, statuses: Sequence[Status]
+    ) -> bool:
+        _validate_statuses(len(self.edges), statuses)
+        adjacency: list[list[int]] = [
+            [] for _ in range(self.node_count)
+        ]
+        for (source, target), status in zip(
+            self.edges, statuses, strict=True
+        ):
+            if status in (ZERO, INTERIOR):
+                adjacency[source].append(target)
+            if status in (INTERIOR, FULL):
+                adjacency[target].append(source)
+
+        reach: list[set[int]] = []
+        for root in range(self.node_count):
+            seen = {root}
+            stack = [root]
+            while stack:
+                node = stack.pop()
+                for neighbor in adjacency[node]:
+                    if neighbor not in seen:
+                        seen.add(neighbor)
+                        stack.append(neighbor)
+            reach.append(seen)
+        return all(
+            edge_id in self.bridges
+            or (
+                target in reach[source]
+                and source in reach[target]
+            )
+            for edge_id, (source, target) in enumerate(self.edges)
+        )
+
+
 def block_available(
     edges: Sequence[Edge],
     statuses: Sequence[Status],
@@ -136,8 +232,6 @@ def block_available(
             adjacency[local[source]].append(local[target])
         if status in (INTERIOR, FULL):
             adjacency[local[target]].append(local[source])
-        if status not in (ZERO, INTERIOR, FULL):
-            raise ValueError("status must be ZERO, INTERIOR, or FULL")
     return _strongly_connected(adjacency)
 
 
@@ -146,12 +240,9 @@ def blockwise_available(
     edges: Sequence[Edge],
     statuses: Sequence[Status],
 ) -> bool:
-    if len(edges) != len(statuses):
-        raise ValueError("edge/status dimensions differ")
-    return all(
-        block_available(edges, statuses, block)
-        for block in cyclic_blocks(node_count, edges)
-    )
+    return PreparedGraph.build(
+        node_count, edges
+    ).blockwise_available(statuses)
 
 
 def _component_count(
@@ -189,44 +280,9 @@ def direct_available(
 ) -> bool:
     """Independent full-graph edge-on-directed-cycle definition."""
 
-    validate_graph(node_count, edges)
-    if len(edges) != len(statuses):
-        raise ValueError("edge/status dimensions differ")
-    base_components = _component_count(node_count, edges)
-    bridges = {
-        edge_id
-        for edge_id in range(len(edges))
-        if _component_count(node_count, edges, edge_id)
-        > base_components
-    }
-    adjacency: list[list[int]] = [[] for _ in range(node_count)]
-    for edge_id, ((source, target), status) in enumerate(
-        zip(edges, statuses, strict=True)
-    ):
-        if status in (ZERO, INTERIOR):
-            adjacency[source].append(target)
-        if status in (INTERIOR, FULL):
-            adjacency[target].append(source)
-        if status not in (ZERO, INTERIOR, FULL):
-            raise ValueError("status must be ZERO, INTERIOR, or FULL")
-
-    # Compute SCC labels by mutual reachability; development graphs are small.
-    reach: list[set[int]] = []
-    for root in range(node_count):
-        seen = {root}
-        stack = [root]
-        while stack:
-            node = stack.pop()
-            for neighbor in adjacency[node]:
-                if neighbor not in seen:
-                    seen.add(neighbor)
-                    stack.append(neighbor)
-        reach.append(seen)
-    return all(
-        edge_id in bridges
-        or (target in reach[source] and source in reach[target])
-        for edge_id, (source, target) in enumerate(edges)
-    )
+    return PreparedGraph.build(
+        node_count, edges
+    ).direct_available(statuses)
 
 
 def status_probabilities(
@@ -257,12 +313,17 @@ def availability(
             counts, probabilities, strict=True
         )
     ]
-    predicate = blockwise_available if blockwise else direct_available
+    prepared = PreparedGraph.build(node_count, edges)
+    predicate = (
+        prepared.blockwise_available
+        if blockwise
+        else prepared.direct_available
+    )
     result = Fraction(0)
     for statuses in itertools.product(
         (ZERO, INTERIOR, FULL), repeat=len(edges)
     ):
-        if not predicate(node_count, edges, statuses):
+        if not predicate(statuses):
             continue
         mass = Fraction(1)
         for law, status in zip(laws, statuses, strict=True):

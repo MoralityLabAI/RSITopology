@@ -1,6 +1,7 @@
 from fractions import Fraction
 
 from block_factorization import (
+    PreparedGraph,
     all_statuses,
     availability,
     biconnected_edge_blocks,
@@ -64,10 +65,11 @@ def test_two_diamond_blocks_are_exact() -> None:
 
 
 def test_exhaustive_status_equivalence_on_two_diamonds() -> None:
+    prepared = PreparedGraph.build(7, TWO_DIAMONDS)
     for statuses in all_statuses(len(TWO_DIAMONDS)):
-        assert direct_available(
-            7, TWO_DIAMONDS, statuses
-        ) == blockwise_available(7, TWO_DIAMONDS, statuses)
+        assert prepared.direct_available(
+            statuses
+        ) == prepared.blockwise_available(statuses)
 
 
 def test_exact_probability_factorization() -> None:
@@ -110,14 +112,15 @@ def test_multiple_articulation_vertices_cannot_supply_a_shortcut() -> None:
         (4, 5, 6),
         (7, 8, 9),
     )
+    prepared = PreparedGraph.build(
+        8, CENTRAL_CYCLE_WITH_TWO_ATTACHMENTS
+    )
     for statuses in all_statuses(
         len(CENTRAL_CYCLE_WITH_TWO_ATTACHMENTS)
     ):
-        assert direct_available(
-            8, CENTRAL_CYCLE_WITH_TWO_ATTACHMENTS, statuses
-        ) == blockwise_available(
-            8, CENTRAL_CYCLE_WITH_TWO_ATTACHMENTS, statuses
-        )
+        assert prepared.direct_available(
+            statuses
+        ) == prepared.blockwise_available(statuses)
 
 
 def test_bridge_between_cyclic_components_never_changes_liveness() -> None:
@@ -126,14 +129,11 @@ def test_bridge_between_cyclic_components_never_changes_liveness() -> None:
         (3,),
         (4, 5, 6),
     )
+    prepared = PreparedGraph.build(6, TWO_CYCLES_WITH_BRIDGE)
     by_nonbridge_status: dict[tuple[int, ...], bool] = {}
     for statuses in all_statuses(len(TWO_CYCLES_WITH_BRIDGE)):
-        direct = direct_available(
-            6, TWO_CYCLES_WITH_BRIDGE, statuses
-        )
-        assert direct == blockwise_available(
-            6, TWO_CYCLES_WITH_BRIDGE, statuses
-        )
+        direct = prepared.direct_available(statuses)
+        assert direct == prepared.blockwise_available(statuses)
         nonbridge_status = statuses[:3] + statuses[4:]
         previous = by_nonbridge_status.setdefault(
             nonbridge_status, direct
