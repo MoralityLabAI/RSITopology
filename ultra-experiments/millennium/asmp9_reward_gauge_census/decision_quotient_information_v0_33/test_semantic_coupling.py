@@ -8,6 +8,7 @@ from .semantic_coupling import (
     coupling_quotient,
     decision_effect,
     decision_equivalent_couplings,
+    factorized_probe_design,
     independent_row_indices,
     matmul,
     matvec,
@@ -127,3 +128,47 @@ def test_policy_restriction_coarsens_coupling_quotient() -> None:
     assert quotient.policy_analysis_rank == 1
     assert quotient.decision_rank == 6
     assert quotient.gauge_dimension == 42
+
+
+def test_factorized_probe_basis_spans_with_18_composite_queries() -> None:
+    sources = load_native_sources()
+    design = factorized_probe_design(
+        sources.v031_analysis_map,
+        sources.v031_policies,
+        sources.v032_semantic_operator,
+    )
+    assert design.policy_contrast_basis_indices == (0, 1, 2)
+    assert design.cell_basis_indices == (0, 1, 2, 4, 5, 6)
+    assert design.canonical_row_indices == (
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        20,
+        21,
+        22,
+        25,
+        26,
+        27,
+        30,
+        31,
+        32,
+    )
+    assert design.scalar_composite_query_count == 18
+    assert rational_rank(design.probe_operator) == 18
+
+
+def test_entrywise_tomography_requires_all_48_active_coordinates() -> None:
+    sources = load_native_sources()
+    design = factorized_probe_design(
+        sources.v031_analysis_map,
+        sources.v031_policies,
+        sources.v032_semantic_operator,
+    )
+    assert design.active_entrywise_coordinates == tuple(range(48))
+    assert design.raw_entrywise_query_count == 48

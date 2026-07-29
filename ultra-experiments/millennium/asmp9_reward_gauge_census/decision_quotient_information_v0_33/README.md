@@ -21,7 +21,9 @@ Read:
   for the unregistered result generated from v0.29-v0.32 objects; and
 - [`COUPLING_QUOTIENT_THEOREM_v0_33.md`](COUPLING_QUOTIENT_THEOREM_v0_33.md)
   for the exact decision-equivalence quotient connecting the v0.31 and v0.32
-  matrix shapes.
+  matrix shapes; and
+- [`COMPOSITE_PROBE_DESIGN_v0_33_1.md`](COMPOSITE_PROBE_DESIGN_v0_33_1.md)
+  for the 18-probe factorized basis and 48-query entrywise comparator.
 
 Run the planted channel-necessity control with:
 
@@ -38,6 +40,8 @@ Run the ASMP-9-native development fixture with:
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_native_development.py
 
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_coupling_development.py
+
+python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_composite_probe_development.py
 ```
 
 The fixture is intentionally small. Its role is to verify that:
@@ -54,3 +58,8 @@ coupling theorem shows that the v0.31-v0.32 composition has 18
 decision-relevant coordinates and a 30-dimensional decision-null gauge. The
 remaining pre-freeze seam is empirical: no registered acquisition grammar
 yet says which linear functionals of that quotient can be measured.
+
+The factorized design supplies a candidate grammar—six behavioral-cell
+perturbations crossed with three policy-contrast readouts—but no model
+intervention or linearity validation has yet established that those composite
+queries are physically available.

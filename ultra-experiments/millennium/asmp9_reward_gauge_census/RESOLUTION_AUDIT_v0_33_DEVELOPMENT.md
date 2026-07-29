@@ -10,7 +10,7 @@ shape a successor protocol but are not claim-eligible evidence.
 ## Progress since v0.32
 
 The v0.32 audit named sharp joint stochastic policy complexity as the next
-load-bearing obligation. Development work now supplies three pieces.
+load-bearing obligation. Development work now supplies four pieces.
 
 ### 1. Decision quotient
 
@@ -56,6 +56,18 @@ identify the 18-dimensional quotient relevant to the full registered policy
 family. A two-policy control reduces that target to six dimensions, showing
 that the quotient depends on the declared answer family.
 
+### 4. Factorized candidate acquisition
+
+The exact row space admits a structured basis: three independent policy
+contrasts crossed with six independent behavioral-cell columns. These 18
+composite scalar probes span the full decision quotient.
+
+An entrywise coupling grammar does not inherit that reduction. Every raw
+coupling coordinate is decision-active on the actual matrices, so exact
+entrywise tomography requires all 48 coordinates. The `48` versus `18`
+comparison is an access-grammar separation, not a finite-sample efficiency
+claim.
+
 ## What remains load-bearing
 
 ### A. Coupling acquisition
@@ -64,6 +76,11 @@ Freeze a physically meaningful query grammar for estimating the coupling.
 Compute its exact row space before outcomes. The grammar is adequate only if
 its induced rows span the 18-dimensional decision quotient; otherwise provide
 an explicit decision-changing indistinguishability witness.
+
+The factorized 18-probe basis is now the candidate primary grammar. A
+prospective run must establish that its behavioral-cell perturbations and
+policy-contrast readouts are implementable and remain linear at the admitted
+norms.
 
 ### B. Finite-sample upper bound
 

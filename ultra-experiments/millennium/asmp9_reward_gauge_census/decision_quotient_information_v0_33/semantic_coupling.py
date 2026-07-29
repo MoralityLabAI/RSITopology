@@ -21,6 +21,17 @@ class CouplingQuotient:
     semantic_rank: int
 
 
+@dataclass(frozen=True)
+class FactorizedProbeDesign:
+    active_entrywise_coordinates: tuple[int, ...]
+    cell_basis_indices: tuple[int, ...]
+    canonical_row_indices: tuple[int, ...]
+    policy_contrast_basis_indices: tuple[int, ...]
+    probe_operator: Matrix
+    raw_entrywise_query_count: int
+    scalar_composite_query_count: int
+
+
 def q(value: int | str | Fraction) -> Fraction:
     return value if isinstance(value, Fraction) else Fraction(value)
 
@@ -310,3 +321,103 @@ def independent_row_indices(values: Sequence[Sequence]) -> tuple[int, ...]:
             selected.append(index)
             current_rank = rank
     return tuple(selected)
+
+
+def independent_column_indices(
+    values: Sequence[Sequence],
+) -> tuple[int, ...]:
+    return independent_row_indices(transpose(values))
+
+
+def select_rows(
+    values: Sequence[Sequence],
+    indices: Sequence[int],
+) -> Matrix:
+    source = matrix(values)
+    selected = tuple(indices)
+    if not selected:
+        raise ValueError("at least one row must be selected")
+    if len(set(selected)) != len(selected):
+        raise ValueError("row indices must be unique")
+    if any(index < 0 or index >= len(source) for index in selected):
+        raise IndexError("row index is out of range")
+    return tuple(source[index] for index in selected)
+
+
+def select_columns(
+    values: Sequence[Sequence],
+    indices: Sequence[int],
+) -> Matrix:
+    source = matrix(values)
+    selected = tuple(indices)
+    if not selected:
+        raise ValueError("at least one column must be selected")
+    if len(set(selected)) != len(selected):
+        raise ValueError("column indices must be unique")
+    if any(index < 0 or index >= len(source[0]) for index in selected):
+        raise IndexError("column index is out of range")
+    return tuple(
+        tuple(row[index] for index in selected)
+        for row in source
+    )
+
+
+def stack_rows(*blocks: Sequence[Sequence]) -> Matrix:
+    converted = tuple(matrix(block) for block in blocks)
+    if not converted:
+        raise ValueError("at least one matrix is required")
+    width = len(converted[0][0])
+    if any(len(block[0]) != width for block in converted):
+        raise ValueError("stacked matrices must have equal column counts")
+    return tuple(row for block in converted for row in block)
+
+
+def factorized_probe_design(
+    analysis_map: Sequence[Sequence],
+    policies: Sequence[Sequence],
+    semantic_operator: Sequence[Sequence],
+) -> FactorizedProbeDesign:
+    analysis = matrix(analysis_map)
+    semantic = matrix(semantic_operator)
+    policy_analysis = matmul(
+        policy_difference_matrix(policies),
+        analysis,
+    )
+    quotient = coupling_quotient(analysis, policies, semantic)
+    policy_indices = independent_row_indices(policy_analysis)
+    cell_indices = independent_column_indices(semantic)
+    policy_basis = select_rows(policy_analysis, policy_indices)
+    semantic_basis = select_columns(semantic, cell_indices)
+    probe_operator = kronecker(transpose(semantic_basis), policy_basis)
+    policy_count = len(policy_analysis)
+    canonical_rows = tuple(
+        cell * policy_count + policy
+        for cell in cell_indices
+        for policy in policy_indices
+    )
+    extracted = select_rows(quotient.canonical_operator, canonical_rows)
+    if extracted != probe_operator:
+        raise RuntimeError("factorized probes do not match canonical rows")
+    if rational_rank(probe_operator) != quotient.decision_rank:
+        raise RuntimeError("factorized probes do not attain decision rank")
+    if rational_rank(
+        stack_rows(probe_operator, quotient.canonical_operator)
+    ) != quotient.decision_rank:
+        raise RuntimeError("factorized probes do not span decision row space")
+    active_coordinates = tuple(
+        column
+        for column in range(len(quotient.canonical_operator[0]))
+        if any(
+            row[column]
+            for row in quotient.canonical_operator
+        )
+    )
+    return FactorizedProbeDesign(
+        active_entrywise_coordinates=active_coordinates,
+        cell_basis_indices=cell_indices,
+        canonical_row_indices=canonical_rows,
+        policy_contrast_basis_indices=policy_indices,
+        probe_operator=probe_operator,
+        raw_entrywise_query_count=len(active_coordinates),
+        scalar_composite_query_count=len(probe_operator),
+    )
