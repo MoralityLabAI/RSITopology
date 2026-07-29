@@ -466,4 +466,3 @@ def k4_m_concavity_deficit(t: int) -> int:
     if t % 2 or t < 4:
         raise ValueError("t must be an even integer at least 4")
     return t**2 * (4 * t - 5) // 2
-

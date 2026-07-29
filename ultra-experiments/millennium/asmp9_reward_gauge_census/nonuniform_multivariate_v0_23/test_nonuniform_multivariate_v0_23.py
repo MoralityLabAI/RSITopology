@@ -170,4 +170,3 @@ def test_known_small_values_are_exact_fractions() -> None:
     assert multivariate_tutte_availability(
         *triangle, (2, 4, 2)
     ) == Fraction(107, 128)
-
