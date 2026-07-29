@@ -293,4 +293,3 @@ def decimal_text(value: Fraction, digits: int = 18) -> str:
         context.prec = digits + 8
         decimal = Decimal(value.numerator) / Decimal(value.denominator)
         return format(decimal, f".{digits}f")
-
