@@ -89,6 +89,7 @@ Let
 
 ```text
 d = sum_{A in M(X)} (|A|-1)
+  = n*2^(n-1) - 2^n + 1
 d_D = sum_{A in D} (|A|-1)
 k = d-d_D.
 ```
@@ -164,6 +165,13 @@ positive component-scale parameters under a rational map, so they form a
 semialgebraic set of dimension at most `c-1`.  Since `k>c-1`, this set has
 empty relative interior in the RUM fiber.  The `k`-ball therefore contains a
 positive RUM kernel outside Luce.  This proves clause 2.
+
+## Sharpness of `n >= 3`
+
+For `n=2`, there is one nontrivial menu.  On the proper empty observed domain,
+the RUM fiber and Luce family both have dimension one, and every positive
+choice vector on that binary menu has a Luce representation.  Clause 2 is
+therefore false.  The lower bound `n>=3` is necessary.
 
 ## Machine-checkable support
 
