@@ -26,10 +26,9 @@ def _artifact(path: Path) -> dict:
     return {"path": str(resolved), "sha256": core.sha256_file(resolved)}
 
 
-def validate(model_path: Path) -> dict:
+def validate(model_path: Path, protocol_path: Path) -> dict:
     from transformers import AutoTokenizer
 
-    protocol_path = HERE / "protocol_v0_67.json"
     manifest_path = HERE / "scenario_manifest_v0_67.json"
     protocol = json.loads(protocol_path.read_text(encoding="utf-8"))
     if protocol["status"] != "registered_prereveal":
@@ -152,10 +151,13 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=Path, default=DEFAULT_MODEL)
     parser.add_argument(
+        "--protocol", type=Path, default=HERE / "protocol_v0_67.json"
+    )
+    parser.add_argument(
         "--output", type=Path, default=HERE / "PREREVEAL_VALIDATION_v0_67.json"
     )
     args = parser.parse_args()
-    value = validate(args.model.resolve())
+    value = validate(args.model.resolve(), args.protocol.resolve())
     payload = core.canonical_json_bytes(value)
     if args.output.exists() and args.output.read_bytes() != payload:
         raise FileExistsError(f"write-once validation differs: {args.output}")
