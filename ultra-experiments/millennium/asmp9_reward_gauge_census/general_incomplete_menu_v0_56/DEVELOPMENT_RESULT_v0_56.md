@@ -73,4 +73,3 @@ grid resolution.
 This is an unregistered development result.  It is not an arbitrary-`n`
 machine proof, a finite-sample result, evidence about human or model values,
 or a resolution of ASMP-9.
-

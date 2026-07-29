@@ -69,4 +69,3 @@ The candidate theorem concerns full-kernel tier identification under
 unrestricted completion.  It does not address samples, approximation,
 endogenous menus, hidden alternatives, ties, strategic response, dynamics,
 human or model behavior, welfare, or a physical preference-access channel.
-

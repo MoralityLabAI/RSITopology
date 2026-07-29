@@ -156,4 +156,3 @@ Even if verified, this is a finite exact access theorem under unrestricted
 completion.  It is not a finite-sample result, a theorem about endogenous or
 strategic demonstrators, evidence about human or model values, a welfare
 representation, or a full ASMP-9 resolution.
-

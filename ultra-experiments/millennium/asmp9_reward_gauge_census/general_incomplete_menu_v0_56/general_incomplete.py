@@ -206,4 +206,3 @@ def proper_domains(n: int):
         yield tuple(
             menu for index, menu in enumerate(universe) if mask & (1 << index)
         )
-
