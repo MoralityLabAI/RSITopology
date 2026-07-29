@@ -79,6 +79,15 @@ pre-response selection, and outcome-dependent recording. The conditional
 stack is now claim-eligible, but its premises remain unvalidated and ASMP-9 is
 unresolved.
 
+The unregistered
+[exact modulus slice v0.62 development](exact_modulus_slice_v0_62/DEVELOPMENT_RESULT_v0_62.md)
+then evaluates both robustness moduli on one continuous compact
+three-alternative slice. Event and coordinate-ratio duals match explicit
+primal witnesses, giving `Delta=gamma` and
+`Lambda=1+(5/2)gamma`. This is a deliberately solvable calibration class,
+not a general modulus algorithm, and remains development-only pending proof
+and subsumption review.
+
 ## Prereveal tests
 
 ```powershell
