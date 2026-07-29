@@ -25,6 +25,15 @@ proves the same sharp tier-ambiguity boundary for every finite universe with
 at least three alternatives. These close exact finite well-posedness cells
 while leaving ASMP-9 unresolved.
 
+The unregistered
+[bounded context-degree v0.57 development lane](bounded_context_degree_v0_57/DEVELOPMENT_RESULT_v0_57.md)
+now studies the next positive cell. A classical Batsell-Polking-style bound on
+pairwise log-odds interaction degree yields a candidate sharp `r+2`
+maximum-menu-size reconstruction threshold, a fixed-universe
+Luce-versus-non-RUM lower witness, and an exact deterministic interpolation
+condition number. The lane remains development-only pending prior-art and
+proof review.
+
 ## Prereveal tests
 
 ```powershell
