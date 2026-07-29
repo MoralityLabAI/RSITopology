@@ -1,0 +1,55 @@
+{
+  "artifact_sha256": {
+    "artifacts_v0_46/coupled_rows_v0_46.json": "6d7db9e610b73ab576ca8a215c60c8712f1d8fc89898c97a915fda9a70b3242a",
+    "artifacts_v0_46/rectangle_audit_v0_46.json": "7529808e7bd4fe4ff98657dd8858db295dbd9faa3767bce85f99d7778479ebff",
+    "artifacts_v0_46/result_v0_46.json": "18a6a7b85093a1013dcb4d93ccbf449bbc8203843f2d5c368c4d48639fe5e915",
+    "VERIFY_RESULT_v0_46.json": "ffbd6864b445caa576b0d87c047da5d217f3af3dd343bf228dcfb9c11da02334"
+  },
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/run_confirmation_v0_46.py",
+    "test": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/test_coupled_uncertainty.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/verify_result_v0_46.py"
+  },
+  "gates": {
+    "B0": true,
+    "C0": true,
+    "E0": true,
+    "G0": true,
+    "K0": true,
+    "O0": true,
+    "P0": true,
+    "PC0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "U0": true,
+    "X0": true
+  },
+  "implementation_commit": "b54283e4d82c591b86aa8ca8d2096318474f6b94",
+  "operational_incidents": [
+    {
+      "artifact_effect": "none",
+      "disposition": "The orphan process and its children were terminated before any outcome artifact existed. The tracked registered process was the sole writer of the sealed result artifacts.",
+      "incident": "The first foreground launcher timed out at the tool boundary while its Python process remained alive, creating a duplicate when the registered background launcher was started."
+    }
+  ],
+  "protocol_id": "asmp9-coupled-shared-channel-v0.46",
+  "registration_commit": "1f010f6ff972c9162ad51511d87e8f1efb20970c",
+  "registration_sha256": "2242ffe6e287f112cd1ed99652252fcf8f30171c11aa5c465c5fdcaf96923598",
+  "resource": {
+    "elapsed_seconds": 574.1562157000008,
+    "peak_aggregate_working_set_bytes": 428048384,
+    "worker_processes": 4
+  },
+  "status": "coupled_image_conservatism_established_allocation_unchanged",
+  "verification": {
+    "all_recorded_gates_pass": true,
+    "coupled_rows_match": true,
+    "ok": true,
+    "rectangle_payload_match": true,
+    "registration_hash_match": true,
+    "scientific_payload_match": true,
+    "source_hashes_match": true
+  },
+  "version": "0.46"
+}

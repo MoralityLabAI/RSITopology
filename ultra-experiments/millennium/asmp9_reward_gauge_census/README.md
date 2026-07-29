@@ -183,6 +183,19 @@ constructive rather than minimax, and the
 the gap between independent generator rectangles and the exact shared-parameter
 uncertainty image.
 
+The prospectively registered
+[coupled shared-channel result v0.46](coupled_uncertainty_v0_46/RESULT_v0_46.md)
+computes that exact image at a disjoint 66-sample budget.  Blackwell ordering
+moves the shared-channel supremum to one joint corner, and a complete symbolic
+compiler propagates it through 3,748 horizon-two policy-risk polynomials.
+The independent-generator rectangle overstates the robust endpoint by about
+`0.0930` for four-class loss and `0.1330` for root-group loss at their optima,
+while both integer allocation choices remain unchanged.  A 16-vertex product
+control matches the rectangle exactly.  The
+[v0.46 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_46.md) moves next to
+a matching decision-deficiency lower construction or sharp finite modulus;
+ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
