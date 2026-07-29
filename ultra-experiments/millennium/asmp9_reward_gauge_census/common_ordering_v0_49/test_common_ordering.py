@@ -5,6 +5,7 @@ from pathlib import Path
 
 from common_ordering import (
     common_chain_certificate,
+    finite_buehler_subset_bounds,
     ordering_gauge_certificate,
     ordering_gauge_scale_compatibility,
     square_curls,
@@ -57,6 +58,32 @@ def test_disjoint_tight_dags_certify_no_common_order():
     assert certificate.common_optimizer_count == 0
     assert not certificate.common_optimizer_exists
     assert certificate.boundary
+
+
+def test_minimal_two_by_two_statistical_witness():
+    rows = (
+        (Q(9, 10), Q(1, 10)),
+        (Q(1, 10), Q(9, 10)),
+    )
+    first = finite_buehler_subset_bounds(
+        risks=(Q(0), Q(1)),
+        probability_rows=rows,
+        alpha=Q(1, 5),
+    )
+    second = finite_buehler_subset_bounds(
+        risks=(Q(1), Q(0)),
+        probability_rows=rows,
+        alpha=Q(1, 5),
+    )
+    assert first == (Q(0), Q(0), Q(1), Q(1))
+    assert second == (Q(0), Q(1), Q(0), Q(1))
+    weights = (Q(1, 2), Q(1, 2))
+    certificate = common_chain_certificate(first, second, weights)
+    assert certificate.common_optimizer_count == 0
+    assert ordering_cost((0, 1), first, weights) == Q(1, 2)
+    assert ordering_cost((1, 0), first, weights) == Q(1)
+    assert ordering_cost((1, 0), second, weights) == Q(1, 2)
+    assert ordering_cost((0, 1), second, weights) == Q(1)
 
 
 def test_common_chain_count_matches_exhaustive_intersection():

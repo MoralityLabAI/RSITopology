@@ -61,7 +61,54 @@ registered cross-regrets are strictly positive.
 This theorem is an exact instance characterization. It is not yet a
 structural classification that avoids solving the two subset programs.
 
-## 3. Ordering gauge
+## 3. Sharp universal no-go
+
+**Theorem 2 (minimal decision-independent-ordering obstruction).** Over the
+unrestricted class of finite experiments and finite decision risks, no rule
+can select one evidence ordering that is optimal for every declared decision
+risk. Two outcomes and two parameters suffice, and both counts are minimal.
+
+*Witness.* Let `X={x,y}`, `Theta={a,b}`, `alpha=1/5`, and
+
+```text
+P_a = (9/10, 1/10),
+P_b = (1/10, 9/10).
+```
+
+For the first decision risk, set
+
+```text
+d_1(a)=0, d_1(b)=1;
+```
+
+for the second, reverse the labels:
+
+```text
+d_2(a)=1, d_2(b)=0.
+```
+
+The exact subset tables are
+
+```text
+B_1(empty,x,y,X) = (0,0,1,1),
+B_2(empty,x,y,X) = (0,1,0,1).
+```
+
+With reference weights `(1/2,1/2)`, ordering `(x,y)` has first cost `1/2`
+and second cost `1`; ordering `(y,x)` has first cost `1` and second cost
+`1/2`. Each decision has a unique optimum and the optimizer sets are
+disjoint. The cross-regret is `1/2` in both directions.
+
+With one outcome there is only one ordering. With one parameter, every
+nonzero nonnegative scalar decision risk induces a positive rescaling of the
+same eligibility table; zero risk makes every ordering optimal. Hence neither
+cardinality can be reduced. QED.
+
+This is a no-go only for a decision-independent optimum over unrestricted
+finite loss declarations. It does not rule out shared orderings inside
+structured decision classes.
+
+## 4. Ordering gauge
 
 The v0.48 confirmation suggests a stronger positive question: when must two
 apparently different set-bound objectives have identical optimizers?
@@ -86,7 +133,7 @@ curl_h(A;x,y)
     - w_y h(A+y) - w_x h(A+x+y).
 ```
 
-**Theorem 2 (ordering-gauge equivalence).** The following are equivalent:
+**Theorem 3 (ordering-gauge equivalence).** The following are equivalent:
 
 1. `curl_h(A;x,y)=0` on every square of the Boolean lattice;
 2. there is a subset potential `Phi` such that
@@ -124,7 +171,7 @@ The zero-curl condition is sufficient for common optimality and necessary for
 full affine equality of ordering costs. It is not necessary merely for the
 existence of one shared optimum.
 
-## 4. Relation to the v0.48 null
+## 5. Relation to the v0.48 null
 
 The v0.48 confirmation has 1,451,520 paths in the tight-DAG intersection.
 The burned development fixture has none. An exact square audit also finds no

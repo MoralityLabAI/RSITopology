@@ -10,9 +10,11 @@ tight-predecessor DAG on the Boolean subset lattice. Two decision risks admit
 a common optimal ordering exactly when the two tight DAGs have a common
 root-to-top path.
 
-This is an instance-wise characterization, not yet a structural
-classification that predicts compatibility without solving the two dynamic
-programs.
+This supplies an instance-wise characterization and a sharp universal
+no-go. A minimal two-outcome/two-parameter statistical experiment proves that
+no evidence ordering can be optimal for every unrestricted finite decision
+risk. What remains is a structural positive classification that predicts
+compatibility without solving the two dynamic programs.
 
 ## Exact results
 
@@ -70,6 +72,28 @@ This condition is sufficient for shared optimality and characterizes affine
 equality of all ordering costs. It is not necessary merely for one shared
 optimum.
 
+### Minimal universal obstruction
+
+For two outcomes, two parameters, `alpha=1/5`, and experiment rows
+
+```text
+(9/10,1/10) and (1/10,9/10),
+```
+
+opposite binary decision risks induce subset tables
+
+```text
+(0,0,1,1) and (0,1,0,1).
+```
+
+Under equal outcome weights, the two possible orderings have costs
+`(1/2,1)` and `(1,1/2)`. Each decision has a unique optimizer, the optimizer
+sets are disjoint, and both cross-regrets equal `1/2`.
+
+The witness is cardinality-minimal: one outcome has no ordering choice, while
+one parameter makes all nonzero scalar risks positive rescalings of the same
+eligibility table.
+
 ## Recovery of v0.48
 
 The new independent implementation exactly recovers the confirmation counts:
@@ -91,12 +115,13 @@ per objective, no common path, and a nonempty labelled obstruction boundary.
 ## Verification
 
 ```text
-6 tests passed
+7 tests passed
 ```
 
 The tests cover:
 
 - dynamic-program optimizer counts against exhaustive permutations;
+- the minimal two-outcome/two-parameter statistical obstruction;
 - a planted disjoint tight-DAG pair;
 - common-path counts against exhaustive set intersection;
 - zero-curl affine cost identity on every ordering;

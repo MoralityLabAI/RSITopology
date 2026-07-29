@@ -33,6 +33,50 @@ def _validated(
     return bounds, weights
 
 
+def finite_buehler_subset_bounds(
+    risks: Sequence[object],
+    probability_rows: Sequence[Sequence[object]],
+    alpha: object,
+) -> tuple[Q, ...]:
+    """Construct an exact finite Buehler subset table."""
+
+    risks = tuple(q(value) for value in risks)
+    rows = tuple(
+        tuple(q(value) for value in row)
+        for row in probability_rows
+    )
+    alpha = q(alpha)
+    if not risks or len(risks) != len(rows):
+        raise ValueError("risk and parameter rows differ")
+    widths = {len(row) for row in rows}
+    if len(widths) != 1:
+        raise ValueError("probability rows have different widths")
+    width = next(iter(widths))
+    if not 0 < alpha < 1 or not 1 <= width <= 20:
+        raise ValueError("invalid alpha or outcome width")
+    if any(
+        any(value < 0 for value in row) or sum(row, Q(0)) != 1
+        for row in rows
+    ):
+        raise ValueError("invalid probability row")
+    result = []
+    for mask in range(1 << width):
+        eligible = []
+        for risk, row in zip(risks, rows):
+            probability = sum(
+                (
+                    row[index]
+                    for index in range(width)
+                    if mask & (1 << index)
+                ),
+                Q(0),
+            )
+            if probability > alpha:
+                eligible.append(risk)
+        result.append(max(eligible, default=Q(0)))
+    return tuple(result)
+
+
 @dataclass(frozen=True)
 class TightDAG:
     values: tuple[Q, ...]
