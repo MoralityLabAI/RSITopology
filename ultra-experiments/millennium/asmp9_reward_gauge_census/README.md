@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_29.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_30.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -234,3 +234,14 @@ with policy-occupancy diameter. Positive reward scale preserves argmax while
 changing fixed-unit regret thresholds. This is a classical finite decision
 ledger, not evidence that the reward is correct, the policy family is safe, or
 ASMP-9 is resolved.
+
+The [v0.30 conservative-numeraire result](conservative_numeraire_v0_30/PUBLIC_SUMMARY_v0_30.md)
+then separates mechanical noninterference from semantic calibration. Exact
+identity of the finite MDP preserves every registered policy occupancy, while
+a complete scalar value rectangle is calibrated additive exactly when all
+anchored consequence increments equal the declared increments. Mechanics
+alone cannot certify that coefficient: calibrated, unknown-scale, and
+context-interacting tables share the same MDP. The approximate semantic error
+propagates with a sharp factor two. Scalar table access is assumed, so the
+result does not derive cardinal utility from ordinal behavior or resolve
+ASMP-9.

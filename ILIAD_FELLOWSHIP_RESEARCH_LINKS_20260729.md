@@ -1,6 +1,6 @@
 # Iliad Fellowship research links
 
-This page is a compact guide to Patrick Deegan's mathematical AI-alignment
+This page is a compact guide to Patrick Dugan's mathematical AI-alignment
 work in `MoralityLabAI/RSITopology`. The repository combines exact finite
 mathematics, preregistered synthetic controls, real-model falsification, and
 tools for carrying geometric measurements into monitoring and model-edit
@@ -72,10 +72,10 @@ phenomena. Real-model null and boundary results are reported as such.
 ### Value and reward identifiability
 
 - **[ASMP-9 resolution audit after
-  v0.29](ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_29.md)**:
+  v0.30](ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_30.md)**:
   a clause-by-clause audit of a long exact-mathematics program on reward gauge,
   ordinal access, finite-sample coherence, finite-MDP interventions, context
-  gluing, graph design, offset calibration, calibrated occupancy access,
+  gluing, graph design, offset calibration, conservative consequence access,
   decision-relevant regret, and response-link misspecification. It
   distinguishes proved special cases from the remaining general obligations.
 
