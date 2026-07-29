@@ -24,6 +24,7 @@ from general_graph import (  # noqa: E402
     full_quotient_availability,
     full_quotient_available,
     fractional_bad_support_design,
+    fractional_bad_support_dual,
     graph_cycle_rank,
     minimal_bad_boundary_supports,
     theta_availability,
@@ -156,13 +157,19 @@ def test_bad_supports_recover_cycle_and_theta_exponents() -> None:
     cycle_design = fractional_bad_support_design(
         4, minimal_bad_boundary_supports(4, cycle_edges)
     )
+    cycle_dual = fractional_bad_support_dual(
+        4, minimal_bad_boundary_supports(4, cycle_edges)
+    )
     assert cycle_design["threshold"] == Fraction(1, 2)
+    assert cycle_dual["threshold"] == cycle_design["threshold"]
     assert cycle_design["optimal_vertices"] == [
         (Fraction(1, 4),) * 4
     ]
 
     theta_design = fractional_bad_support_design(5, supports)
+    theta_dual = fractional_bad_support_dual(5, supports)
     assert theta_design["threshold"] == Fraction(1, 2)
+    assert theta_dual["threshold"] == theta_design["threshold"]
     assert theta_design["optimal_vertices"] == [
         (
             Fraction(0),

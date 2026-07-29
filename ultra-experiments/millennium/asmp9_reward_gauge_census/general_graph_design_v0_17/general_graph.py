@@ -345,6 +345,99 @@ def fractional_bad_support_design(
             candidate[0] == optimum for candidate in candidates
         ),
     }
+
+
+def fractional_bad_support_dual(
+    edge_count: int,
+    supports: Sequence[Sequence[int]],
+) -> dict[str, object]:
+    normalized = tuple(
+        tuple(sorted(set(int(edge) for edge in support)))
+        for support in supports
+    )
+    support_count = len(normalized)
+    if edge_count < 1 or support_count < 1:
+        raise ValueError("edge universe and supports must be nonempty")
+
+    active_constraints: list[
+        tuple[str, int, tuple[Fraction, ...], Fraction]
+    ] = []
+    for edge in range(edge_count):
+        active_constraints.append(
+            (
+                "edge",
+                edge,
+                tuple(
+                    Fraction(-int(edge in support))
+                    for support in normalized
+                )
+                + (Fraction(1),),
+                Fraction(0),
+            )
+        )
+    for support in range(support_count):
+        active_constraints.append(
+            (
+                "zero",
+                support,
+                tuple(
+                    Fraction(int(index == support))
+                    for index in range(support_count)
+                )
+                + (Fraction(0),),
+                Fraction(0),
+            )
+        )
+
+    equality = (Fraction(1),) * support_count + (Fraction(0),)
+    candidates: list[
+        tuple[Fraction, tuple[Fraction, ...]]
+    ] = []
+    for selected in itertools.combinations(
+        active_constraints, support_count
+    ):
+        solution = _solve_square(
+            [equality] + [constraint[2] for constraint in selected],
+            [Fraction(1)]
+            + [constraint[3] for constraint in selected],
+        )
+        if solution is None:
+            continue
+        distribution = solution[:support_count]
+        bound = solution[-1]
+        if any(weight < 0 for weight in distribution):
+            continue
+        if any(
+            sum(
+                distribution[index]
+                for index, support in enumerate(normalized)
+                if edge in support
+            )
+            > bound
+            for edge in range(edge_count)
+        ):
+            continue
+        candidates.append((bound, distribution))
+    if not candidates:
+        raise AssertionError("fractional dual LP has no vertex")
+    optimum = min(candidate[0] for candidate in candidates)
+    optimal_vertices = sorted(
+        {
+            candidate[1]
+            for candidate in candidates
+            if candidate[0] == optimum
+        }
+    )
+    return {
+        "threshold": optimum,
+        "optimal_vertices": optimal_vertices,
+        "support_count": support_count,
+        "vertex_certificate_count": sum(
+            candidate[0] == optimum for candidate in candidates
+        ),
+    }
+
+
 @lru_cache(maxsize=None)
 def live_status_vectors(
     node_count: int, edges: tuple[Edge, ...]
