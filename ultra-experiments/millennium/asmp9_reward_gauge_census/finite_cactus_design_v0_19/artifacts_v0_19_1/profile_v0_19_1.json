@@ -1,0 +1,67 @@
+{
+  "diagnostic_only": true,
+  "dominant_stage": "dp:fresh_19_1_quad_4_6_8_11",
+  "protocol_id": "ASMP-9-FINITE-CACTUS-DESIGN-v0.19.1",
+  "rows": [
+    {
+      "cpu_seconds": 0.375,
+      "name": "burned_cache_regression",
+      "stage_pass": true,
+      "wall_seconds": 0.3692680000094697
+    },
+    {
+      "cpu_seconds": 0.328125,
+      "mismatch_count": 0,
+      "name": "fresh_factorization_4_4",
+      "wall_seconds": 0.3312432000238914
+    },
+    {
+      "cpu_seconds": 0.953125,
+      "name": "fresh_bridge_3_6",
+      "stage_pass": true,
+      "wall_seconds": 0.9551559000101406
+    },
+    {
+      "cpu_seconds": 382.59375,
+      "name": "dp:fresh_19_1_quad_4_6_8_11",
+      "wall_seconds": 387.56533729998046
+    },
+    {
+      "cpu_seconds": 10.0,
+      "name": "dp:fresh_19_1_triple_5_7_9",
+      "wall_seconds": 10.133252600004198
+    },
+    {
+      "cpu_seconds": 26.265625,
+      "name": "dp:fresh_19_1_triple_7_8_10",
+      "wall_seconds": 26.666280999983428
+    },
+    {
+      "allocation_count": 495,
+      "cpu_seconds": 1.96875,
+      "name": "all_edge_census",
+      "wall_seconds": 1.9982209000154398
+    },
+    {
+      "cpu_seconds": 0.015625,
+      "name": "regressions",
+      "wall_seconds": 0.013813199999276549
+    },
+    {
+      "cpu_seconds": 1.1875,
+      "name": "comparator:fresh_19_1_equal_six_cycles",
+      "wall_seconds": 1.1893132999830414
+    },
+    {
+      "cpu_seconds": 0.046875,
+      "name": "comparator:fresh_19_1_pair_4_5",
+      "wall_seconds": 0.04484710001270287
+    },
+    {
+      "cpu_seconds": 0.921875,
+      "name": "comparator:fresh_19_1_pair_6_9",
+      "wall_seconds": 0.9422303000173997
+    }
+  ],
+  "total_profiled_wall_seconds": 430.20896280003944
+}
