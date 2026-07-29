@@ -48,9 +48,21 @@ failure, and freezes a 2,412-prompt factorial successor plus hash-bound
 registration, capture, hard-cap, and analysis tooling. It is ready to bind to
 an execution environment but is not yet registered there. No v0.35 model
 query or confirmation row has been run. The
-[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_35.md) keeps this
+[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_36.md) keeps this
 physical bridge separate from the five requirements for a full ASMP-9
 resolution.
+
+The prospectively registered
+[nuisance-confusability theorem seed](nuisance_confusability_v0_36/RESULT_v0_36.md)
+then corrects the first resolution object. In the smallest registered binary
+channel class, 12 of 64 nuisance-confusability relations are nontransitive and
+therefore cannot be the orbit relation of any invariance group. The exact
+graph criterion agrees with direct zero-error decision decoding across
+222,912 checks. Connected components still give the quotient governing fixed
+decision feasibility, so the result separates raw confusability, decision
+quotient, and scientifically grounded symmetry rather than discarding
+quotients. It does not provide the broader stochastic classification ASMP-9
+still requires.
 
 ## Successor
 
