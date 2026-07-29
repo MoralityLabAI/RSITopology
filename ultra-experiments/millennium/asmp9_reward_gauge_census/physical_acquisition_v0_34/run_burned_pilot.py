@@ -27,12 +27,12 @@ from pilot_design import CHOICE_LABELS, canonical_bytes, sha256_bytes  # noqa: E
 
 
 REGISTRATION_SCHEMA = (
-    "asmp9_physical_acquisition_burned_pilot_registration_v0_34"
+    "asmp9_physical_acquisition_burned_pilot_registration_v0_34_1"
 )
-MANIFEST_SCHEMA = "asmp9_physical_acquisition_prompt_manifest_v0_34"
-RECORD_SCHEMA = "asmp9_physical_acquisition_record_v0_34"
-PLAN_SCHEMA = "asmp9_physical_acquisition_plan_v0_34"
-SUMMARY_SCHEMA = "asmp9_physical_acquisition_summary_v0_34"
+MANIFEST_SCHEMA = "asmp9_physical_acquisition_prompt_manifest_v0_34_1"
+RECORD_SCHEMA = "asmp9_physical_acquisition_record_v0_34_1"
+PLAN_SCHEMA = "asmp9_physical_acquisition_plan_v0_34_1"
+SUMMARY_SCHEMA = "asmp9_physical_acquisition_summary_v0_34_1"
 GRAMMAR = "root ::= [AB]"
 
 
@@ -595,7 +595,7 @@ def run(args: argparse.Namespace) -> None:
             raise ValueError("existing progress differs from registered run")
     else:
         progress = {
-            "schema_version": "asmp9_physical_acquisition_progress_v0_34",
+            "schema_version": "asmp9_physical_acquisition_progress_v0_34_1",
             "plan_sha256": plan["plan_sha256"],
             "registration_content_sha256": registration[
                 "registration_content_sha256"

@@ -55,6 +55,10 @@ def test_manifest_is_disjoint_complete_and_hash_bound() -> None:
         "policy_probe": 432,
     }
     for row in rows:
+        assert row["prompt"].startswith("<|im_start|>system\n")
+        assert row["prompt"].endswith(
+            "<|im_start|>assistant\n<think>\n\n</think>\n\n"
+        )
         assert row["target_label"] in {"A", "B"}
         assert row["comparator_label"] in {"A", "B"}
         assert row["target_label"] != row["comparator_label"]
@@ -196,4 +200,3 @@ def test_live_runner_requires_registered_job_wrapper() -> None:
     assert "hard_temperature_abort" in wrapper
     assert "post_run_memory_cleanup.ps1" not in wrapper
     assert "cleanup_script" in wrapper
-

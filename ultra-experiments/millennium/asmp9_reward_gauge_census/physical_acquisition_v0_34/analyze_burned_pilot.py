@@ -32,7 +32,9 @@ from run_burned_pilot import (  # noqa: E402
 )
 
 
-ANALYSIS_SCHEMA = "asmp9_physical_acquisition_burned_pilot_analysis_v0_34"
+ANALYSIS_SCHEMA = (
+    "asmp9_physical_acquisition_burned_pilot_analysis_v0_34_1"
+)
 
 
 def sha256_file(path: Path) -> str:

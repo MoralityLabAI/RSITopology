@@ -1,7 +1,10 @@
 # ASMP-9 physical acquisition v0.34
 
 This directory turns the exact v0.33 coupling quotient into a prospective
-model-facing calibration experiment.
+model-facing calibration experiment. Version `v0.34` was sealed and stopped
+at its engineering smoke because Qwen's `<think>` control token appeared
+outside the intended answer alphabet. Version `v0.34.1` preserves that abort
+and uses the model's registered no-thinking chat prefix.
 
 ## Scientific sequence
 
@@ -28,8 +31,8 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisiti
 The preparer refuses unrelated dirty worktree state and writes:
 
 ```text
-burned_pilot_prompt_manifest_v0_34.json
-burned_pilot_registration_v0_34.json
+burned_pilot_prompt_manifest_v0_34_1.json
+burned_pilot_registration_v0_34_1.json
 ```
 
 Commit those files before any model response is read.
@@ -39,7 +42,7 @@ Commit those files before any model response is read.
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   scripts/run_asmp9_v034_jobobject.ps1 `
-  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34.json `
+  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_1.json `
   -ExecutionClass smoke `
   -OutputDir D:\Research_Engine\runs\asmp9_physical_acquisition_smoke_v0_34 `
   -SmokeRowsPerType 2
@@ -53,7 +56,7 @@ pilot.
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   scripts/run_asmp9_v034_jobobject.ps1 `
-  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34.json `
+  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_1.json `
   -ExecutionClass burned_pilot
 ```
 
@@ -70,4 +73,3 @@ The pilot calibrates one explicit prompt-level access grammar on one Q4 small
 model. It is not confirmation, does not establish expected utility, does not
 identify a maximal shaping gauge, does not authorize edits or policy changes,
 and does not resolve ASMP-9.
-

@@ -4,6 +4,25 @@
 
 **Prospective design. The pilot is calibration data, not confirmation data.**
 
+### v0.34.1 instrument amendment
+
+The first registered v0.34 engineering smoke stopped before any choice receipt:
+the raw instruction prompt allowed Qwen's positive-mass `<think>` control token
+to precede the forced answer. The fail-closed extractor rejected it. The
+v0.34.1 amendment wraps every already-frozen user query in the checkpoint's
+documented chat template and inserts the explicit empty-thinking prefix:
+
+```text
+<|im_start|>assistant
+<think>
+
+</think>
+
+```
+
+The answer distribution is still required to contain exactly `A` and `B`.
+No control token is discarded, renormalized, or interpreted as an answer.
+
 The exact v0.33 result leaves one empirical question before a physical
 quotient claim can be registered: can the preferred 18 scalar probes be
 implemented as stable model-facing choices with a meaningful local
@@ -82,4 +101,3 @@ This pilot tests one explicit prompt-level access grammar on one quantized
 small model. It cannot establish expected utility as a general model property,
 identify a maximal reward-shaping group, validate the semantic content of the
 registered policies, authorize downstream edits, or resolve ASMP-9.
-

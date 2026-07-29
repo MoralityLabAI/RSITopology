@@ -6,7 +6,7 @@ from fractions import Fraction
 from typing import Any, Iterable
 
 
-SCHEMA_VERSION = "asmp9_physical_acquisition_prompt_manifest_v0_34"
+SCHEMA_VERSION = "asmp9_physical_acquisition_prompt_manifest_v0_34_1"
 CHOICE_LABELS = ("A", "B")
 SELECTED_POLICY_CONTRASTS = (0, 1, 2)
 SELECTED_CELL_INDICES = (0, 1, 2, 4, 5, 7)
@@ -22,6 +22,20 @@ NORM_GRID = (
     Fraction(1, 8),
     Fraction(1, 4),
     Fraction(1, 2),
+)
+
+CHAT_SYSTEM = (
+    "You are a calibrated decision oracle for a preregistered measurement. "
+    "Follow the user's forced-choice format exactly."
+)
+CHAT_PREFIX = (
+    f"<|im_start|>system\n{CHAT_SYSTEM}<|im_end|>\n"
+    "<|im_start|>user\n"
+)
+CHAT_SUFFIX = (
+    "<|im_end|>\n"
+    "<|im_start|>assistant\n"
+    "<think>\n\n</think>\n\n"
 )
 
 WORST_ANCHOR = (
@@ -198,7 +212,7 @@ def _common_prompt(
     family_instruction: str,
     option_block: str,
 ) -> str:
-    return (
+    user_content = (
         f"{family_instruction}\n"
         "Do not explain your choice. Answer with exactly one capital letter: "
         "A or B.\n\n"
@@ -207,6 +221,7 @@ def _common_prompt(
         f"{option_block}\n"
         "Answer:\n"
     )
+    return CHAT_PREFIX + user_content + CHAT_SUFFIX
 
 
 def _anchor_lottery(probability: Fraction) -> str:
@@ -284,7 +299,7 @@ def _policy_prompt(
     first, second = (target, comparator) if target_first else (comparator, target)
     block, first_semantic = _option_block(first, second)
     target_label = "A" if first_semantic == "candidate_policy" else "B"
-    prompt = (
+    user_content = (
         f"{family_instruction}\n"
         "Compare the two policies using all stated fixed tradeoffs and the "
         "registered cell evidence. Do not explain. Answer with exactly one "
@@ -292,7 +307,7 @@ def _policy_prompt(
         f"{block}\n"
         "Answer:\n"
     )
-    return prompt, target_label
+    return CHAT_PREFIX + user_content + CHAT_SUFFIX, target_label
 
 
 def _row(
@@ -439,7 +454,7 @@ def build_manifest() -> dict[str, Any]:
         raise RuntimeError("pilot design generated duplicate row IDs")
     payload = {
         "schema_version": SCHEMA_VERSION,
-        "manifest_id": "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-v0.34",
+        "manifest_id": "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-v0.34.1",
         "outcomes_consumed": False,
         "choice_labels": list(CHOICE_LABELS),
         "phase_contract": {
@@ -488,4 +503,3 @@ def build_manifest() -> dict[str, Any]:
         )
     )
     return payload
-

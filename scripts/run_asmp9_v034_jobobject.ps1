@@ -8,7 +8,7 @@ param(
 $ErrorActionPreference = "Stop"
 $registrationPath = (Resolve-Path -LiteralPath $RegistrationPath).Path
 $spec = Get-Content -LiteralPath $registrationPath -Raw | ConvertFrom-Json
-if ($spec.schema_version -ne "asmp9_physical_acquisition_burned_pilot_registration_v0_34") {
+if ($spec.schema_version -ne "asmp9_physical_acquisition_burned_pilot_registration_v0_34_1") {
   throw "Unsupported ASMP-9 run-spec schema"
 }
 $caps = $spec.resource_caps

@@ -26,7 +26,9 @@ from asmp9_native_fixture import load_native_sources  # noqa: E402
 from robust_probe_design import minimum_linf_factorized_probe_design  # noqa: E402
 
 
-SCHEMA_VERSION = "asmp9_physical_acquisition_burned_pilot_registration_v0_34"
+SCHEMA_VERSION = (
+    "asmp9_physical_acquisition_burned_pilot_registration_v0_34_1"
+)
 DEFAULT_MODEL = Path(
     r"D:\Research_Engine\models\Qwen3.5\Qwen3.5-0.8B"
     r"\Qwen3.5-0.8B-Q4_K_M.gguf"
@@ -36,7 +38,7 @@ DEFAULT_SERVER = Path(
     r"\payload\llama-server.exe"
 )
 DEFAULT_OUTPUT = Path(
-    r"D:\Research_Engine\runs\asmp9_physical_acquisition_burned_pilot_v0_34"
+    r"D:\Research_Engine\runs\asmp9_physical_acquisition_burned_pilot_v0_34_1"
 )
 DEFAULT_CLEANUP = Path(
     r"C:\Users\patri\.codex\skills\hrm-trainer\scripts"
@@ -190,7 +192,7 @@ def build_registration(args: argparse.Namespace) -> dict[str, Any]:
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "registration_id": (
-            "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-v0.34"
+            "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-v0.34.1"
         ),
         "status": "burned_pilot_registered_not_run",
         "prepared_utc": time.strftime(
@@ -352,12 +354,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=HERE / "burned_pilot_prompt_manifest_v0_34.json",
+        default=HERE / "burned_pilot_prompt_manifest_v0_34_1.json",
     )
     parser.add_argument(
         "--registration",
         type=Path,
-        default=HERE / "burned_pilot_registration_v0_34.json",
+        default=HERE / "burned_pilot_registration_v0_34_1.json",
     )
     parser.add_argument("--model", type=Path, default=DEFAULT_MODEL)
     parser.add_argument("--server", type=Path, default=DEFAULT_SERVER)
