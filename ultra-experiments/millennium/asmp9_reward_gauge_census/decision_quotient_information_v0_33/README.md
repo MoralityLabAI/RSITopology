@@ -18,7 +18,10 @@ Read:
   controlled-sensing and pure-exploration results that subsume the generic
   information formula; and
 - [`NATIVE_DEVELOPMENT_RESULT_v0_33.md`](NATIVE_DEVELOPMENT_RESULT_v0_33.md)
-  for the unregistered result generated from v0.29-v0.32 objects.
+  for the unregistered result generated from v0.29-v0.32 objects; and
+- [`COUPLING_QUOTIENT_THEOREM_v0_33.md`](COUPLING_QUOTIENT_THEOREM_v0_33.md)
+  for the exact decision-equivalence quotient connecting the v0.31 and v0.32
+  matrix shapes.
 
 Run the planted channel-necessity control with:
 
@@ -33,19 +36,21 @@ Run the ASMP-9-native development fixture with:
 
 ```powershell
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_native_development.py
+
+python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_coupling_development.py
 ```
 
 The fixture is intentionally small. Its role is to verify that:
 
-- the optimal design allocates positive mass to both access channels;
-- deleting either channel makes a policy-changing alternative
+- the optimal design allocates positive mass to all three access channels;
+- deleting any one channel makes a policy-changing alternative
   indistinguishable; and
 - an observationally identical same-policy gauge alias blocks parameter
   identification without blocking decision identification.
 
-The next version must instantiate the hypothesis family from the actual
-v0.28-v0.32 reward, mechanics, behavior, and policy objects before any
-registration. The native development fixture now does that for the complete
-v0.29 measurement-to-policy cell and v0.32 mixture audit. The remaining
-pre-freeze seam is the absent map from v0.32's six semantic residuals into
-v0.31's eight localized observation rows.
+The native development fixture instantiates the hypothesis family from the
+actual v0.28-v0.32 reward, mechanics, behavior, and policy objects. The
+coupling theorem shows that the v0.31-v0.32 composition has 18
+decision-relevant coordinates and a 30-dimensional decision-null gauge. The
+remaining pre-freeze seam is empirical: no registered acquisition grammar
+yet says which linear functionals of that quotient can be measured.

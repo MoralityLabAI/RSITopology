@@ -65,3 +65,25 @@ access ledger that:
 Any v0.33 theorem must be labelled a finite specialization and composition of
 the cited theory unless a genuinely new restriction or sharp bound survives a
 separate novelty review.
+
+## Coupling-quotient attribution
+
+The new observation-to-semantic coupling result uses only the classical
+vectorization identity:
+
+```text
+vec(A K B) = (transpose(B) kron A) vec(K)
+```
+
+and the classical rank identity:
+
+```text
+rank(A kron B) = rank(A) rank(B).
+```
+
+The arbitrary-linear-query threshold is the corresponding row-space
+dimension argument. These are standard matrix-analysis facts, not novelty
+claims. The ASMP-9 contribution is their exact specialization to the sealed
+v0.31 analysis/policy matrices and v0.32 semantic operator, plus the resulting
+decision-access ledger: 18 relevant coupling coordinates versus 30
+decision-null coordinates.

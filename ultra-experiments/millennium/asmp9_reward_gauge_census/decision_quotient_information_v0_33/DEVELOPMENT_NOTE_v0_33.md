@@ -126,9 +126,22 @@ This source inspection also identified a missing composition object. The
 v0.31 primary certificate has eight localized observation rows. The v0.32
 cross-difference operator produces six semantic residuals from twelve cells.
 No registered `8 x 6` map says how those semantic residuals enter the v0.31
-observations. The current fixture therefore uses v0.29's complete
-measurement-to-policy cell and reports the v0.31-v0.32 coupling as
-unavailable rather than inventing it.
+observations.
+
+The additive coupling theorem now characterizes exactly what a prospective
+map must identify. If `K` is any `8 x 6` coupling, `L` the v0.31 analysis
+map, `C` the v0.32 cross-difference operator, and `Q` the registered
+policy-difference matrix, then:
+
+```text
+vec(Q L K C) = (transpose(C) kron (Q L)) vec(K).
+```
+
+The actual sealed matrices have `rank(C)=6` and `rank(Q L)=3`. Thus only 18
+of the 48 raw coupling coordinates are decision-relevant; the remaining 30
+form a decision-null gauge. This closes the algebraic shape mismatch without
+inventing a physical `K`. It does not supply the empirical acquisition
+grammar needed to estimate that quotient.
 
 Under the temporary equal-cost convention, the native fixture has three
 separate policy-changing alternatives. Their live information values are:
@@ -156,8 +169,8 @@ report a sensitivity surface.
 
 A prospective v0.33 must now:
 
-1. register an observation-to-semantic coupling, or prove a result quantified
-   over a declared coupling class;
+1. register an observation-to-semantic coupling-acquisition grammar and prove
+   whether its induced query rows span the 18-dimensional decision quotient;
 2. State whether the result is a nonasymptotic lower bound, an asymptotically
    matching characterization, or only a computable design criterion.
 3. Include at least one policy-changing alternative for each access channel,

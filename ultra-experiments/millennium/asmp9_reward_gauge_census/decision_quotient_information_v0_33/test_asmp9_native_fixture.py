@@ -33,7 +33,7 @@ def test_sources_are_actual_v029_v031_v032_objects() -> None:
     assert sources.invalid_mixture_residual == Fraction(1, 16)
     assert sources.v031_measurement_rows == 8
     assert sources.v032_semantic_residual_rows == 6
-    assert len(sources.source_hashes) == 3
+    assert len(sources.source_hashes) == 5
 
 
 def test_native_answers_exercise_reward_mechanics_and_validity() -> None:

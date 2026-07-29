@@ -13,6 +13,7 @@ try:
         fixed_confidence_lower_bound,
         restrict_queries,
     )
+    from .semantic_coupling import coupling_quotient
 except ImportError:
     from asmp9_native_fixture import (  # type: ignore[no-redef]
         native_laws_and_answers,
@@ -24,10 +25,18 @@ except ImportError:
         fixed_confidence_lower_bound,
         restrict_queries,
     )
+    from semantic_coupling import (  # type: ignore[no-redef]
+        coupling_quotient,
+    )
 
 
 def main() -> None:
     laws, answers, sources = native_laws_and_answers()
+    coupling = coupling_quotient(
+        sources.v031_analysis_map,
+        sources.v031_policies,
+        sources.v032_semantic_operator,
+    )
     design = characteristic_design(laws, answers, "base")
     full = characteristic_design(
         laws,
@@ -71,12 +80,17 @@ def main() -> None:
             0.05,
         ),
         "source_hashes": sources.source_hashes,
-        "unresolved_semantic_coupling": {
+        "semantic_coupling": {
             "v031_measurement_rows": sources.v031_measurement_rows,
             "v032_semantic_residual_rows": (
                 sources.v032_semantic_residual_rows
             ),
-            "registered_coupling_present": False,
+            "raw_coupling_dimension": coupling.coupling_dimension,
+            "decision_relevant_dimension": coupling.decision_rank,
+            "decision_null_gauge_dimension": coupling.gauge_dimension,
+            "physical_coupling_estimated": False,
+            "quotient_characterized": True,
+            "registered_coupling_acquisition_grammar_present": False,
         },
     }
     print(json.dumps(report, indent=2, sort_keys=True))

@@ -31,6 +31,15 @@ V031_PROTOCOL = (
     / "joint_approximate_v0_31"
     / "protocol_v0_31.json"
 )
+V031_RESULT = (
+    REPO
+    / "ultra-experiments"
+    / "millennium"
+    / "asmp9_reward_gauge_census"
+    / "joint_approximate_v0_31"
+    / "artifacts_v0_31_1"
+    / "result_v0_31.json"
+)
 V032_PROTOCOL = (
     REPO
     / "ultra-experiments"
@@ -38,6 +47,15 @@ V032_PROTOCOL = (
     / "asmp9_reward_gauge_census"
     / "behavioral_rectangle_v0_32"
     / "protocol_v0_32.json"
+)
+V032_RESULT = (
+    REPO
+    / "ultra-experiments"
+    / "millennium"
+    / "asmp9_reward_gauge_census"
+    / "behavioral_rectangle_v0_32"
+    / "artifacts_v0_32"
+    / "result_v0_32.json"
 )
 
 
@@ -57,7 +75,10 @@ class NativeSources:
     true_reward: tuple[Fraction, ...]
     valid_mixture_residual: Fraction
     invalid_mixture_residual: Fraction
+    v031_analysis_map: tuple[tuple[Fraction, ...], ...]
     v031_measurement_rows: int
+    v031_policies: tuple[tuple[Fraction, ...], ...]
+    v032_semantic_operator: tuple[tuple[Fraction, ...], ...]
     v032_semantic_residual_rows: int
     source_hashes: dict[str, str]
 
@@ -92,7 +113,9 @@ def mixture_residual(specification: dict) -> Fraction:
 def load_native_sources() -> NativeSources:
     v029 = json.loads(V029_PROTOCOL.read_text(encoding="utf-8"))
     v031 = json.loads(V031_PROTOCOL.read_text(encoding="utf-8"))
+    v031_result = json.loads(V031_RESULT.read_text(encoding="utf-8"))
     v032 = json.loads(V032_PROTOCOL.read_text(encoding="utf-8"))
+    v032_result = json.loads(V032_RESULT.read_text(encoding="utf-8"))
     cell = v029["fresh_validation"]["composition_cell"]
     valid = mixture_residual(v032["mixture_controls"]["consistent"])
     invalid = mixture_residual(v032["mixture_controls"]["distorted"])
@@ -109,6 +132,18 @@ def load_native_sources() -> NativeSources:
         for row in cell["measurement_matrix"]
     )
     reward = tuple(q(value) for value in cell["true_reward"])
+    analysis_map = tuple(
+        tuple(q(value) for value in row)
+        for row in v031_result["primary"]["certificate"]["analysis_map"]
+    )
+    v031_policies = tuple(
+        tuple(q(value) for value in row)
+        for row in v031["primary_fixture"]["policies"]
+    )
+    semantic_operator = tuple(
+        tuple(q(value) for value in row)
+        for row in v032_result["primary"]["operator"]
+    )
 
     if any(dot(g, tuple(a - b for a, b in zip(policy, policies[0])))
            for g in gauge for policy in policies[1:]):
@@ -126,12 +161,17 @@ def load_native_sources() -> NativeSources:
         true_reward=reward,
         valid_mixture_residual=valid,
         invalid_mixture_residual=invalid,
+        v031_analysis_map=analysis_map,
         v031_measurement_rows=v031_rows,
+        v031_policies=v031_policies,
+        v032_semantic_operator=semantic_operator,
         v032_semantic_residual_rows=v032_rows,
         source_hashes={
             V029_PROTOCOL.relative_to(REPO).as_posix(): sha256(V029_PROTOCOL),
             V031_PROTOCOL.relative_to(REPO).as_posix(): sha256(V031_PROTOCOL),
+            V031_RESULT.relative_to(REPO).as_posix(): sha256(V031_RESULT),
             V032_PROTOCOL.relative_to(REPO).as_posix(): sha256(V032_PROTOCOL),
+            V032_RESULT.relative_to(REPO).as_posix(): sha256(V032_RESULT),
         },
     )
 
