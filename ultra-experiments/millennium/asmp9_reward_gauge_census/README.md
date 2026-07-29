@@ -178,3 +178,10 @@ reconstruct the complete uniform availability polynomial through telescoping
 and rational interpolation.  Its tests pass, but the branch remains
 development-only pending a complete prior-art audit and does not establish
 optimizer-output hardness.
+
+The unregistered [v0.25 generalized-theta development](theta_optimizer_v0_25/README.md)
+isolates a positive optimizer boundary.  A closed path-state formula and
+strict smoothing theorem force every optimum to balance counts within each
+individual path, reducing exact global optimization to path-total
+enumeration.  The current implementation and proof are development-only, and
+the algorithm is pseudopolynomial when the trial budget is binary encoded.
