@@ -1,0 +1,33 @@
+{
+  "implementation_commit": "e19311ee639a0b10241d1bf62c62d47074857e19",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/protocol_v0_19_1.json",
+  "registered_at_utc": "2026-07-29T01:07:24Z",
+  "registration_id": "ASMP-9-FINITE-CACTUS-DESIGN-v0.19.1-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": "892e4754540673c56ee0b4d7ee5ba2b249b21080a8aadae80440b6256ee51c8f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/THEOREM_v0_16.md": "d387a0ae9009b06a4080698d92beb97dbdcb9b4a0c4e0a40d83e8b4e5c8580d0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/PUBLIC_SUMMARY_v0_18.md": "05975ec604746610e3a451f8f76092d8a35173d296ffe9a2560182911e45d8ac",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/DEVELOPMENT_NOTE_v0_19.md": "76a9180727b5f0edc2af86a1eb17fd6d59606eb87fb9aec5217eb4787cd234c5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/POSTRUN_NOTE_v0_19.md": "2abfde250fd7f3c1245604ad9645fe15c8a1000f7478836f272d276948c1dd84",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/PRIOR_ART_GATE_v0_19.md": "c7bc78edf8f2d7eba6b5b71b8006395f473c3823d39ad852c9e9a6c405b63231",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/PROTOCOL_v0_19_1.md": "d95dea09d859fa65cf2917099a51a4e1ceaf6e0a903498bfec55740db720f910",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/THEORY_DRAFT_v0_19.md": "d22b8497c34ee83840cd51ef823c8f70cbc9d66dd3b1806f285a2c71ec468481",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19/result_v0_19.json": "362e67da4f1e1ba7f838b1010f1ba6f28f6bbef670d2a18b93cb34a0a3136195",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19/run_receipt_v0_19.json": "4bfba6c8d23c5174ef66bce5fc613d1e1351551f2a160cae0498c886e5ee2ac6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19/verification_v0_19.json": "58e8bffdeccc1a0fe6064b2173693b0042e3d4504fcb80004fc2b2a1f76acb1d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/finite_cactus_design.py": "830f9838d89e55fab7d68b2afdf1cdee0b355bc27dcb7a4b190d9adc2e069fe2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/protocol_v0_19.json": "bed0a4670ab8171a3a6d93e359582066010e9508ccee29f87aebf23f01990d00",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/protocol_v0_19_1.json": "950ece8a2d71f73b4b8aa6771b252cadf4b05dd7efb6ba7d9539c3da7407e3dd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/register_v0_19_1.py": "d824f4a02059d52e91eed6d9212ad17afe600705cbbfa0be7568224662784cdc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/registration_v0_19.json": "172340cee97c0cea02623cc323d7542ca937b753f30471953c46d57ddeff6ce8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/residual_cache_v0_19_1.py": "9a00598ad680bd874bd35b9f6b37f705c1bce028ccafca5a714f63d775200ac5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/run_verification.py": "84c34a8196a8f57367add4bf3c0d163b705139c4083903aa2d1ffd031efcab02",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/run_verification_v0_19_1.py": "6502c78f70ec5058e168ed8d7a936063e5dc3a8f848fd34fc34e8d94026aec47",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/test_finite_cactus_design.py": "10dd489dad4fbf5454104f845028e5b723bbfedce434714fb392df4f8f803aa1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/test_protocol_v0_19_1.py": "55b7d1d5f745ccaeb6f8dbeea2bfe63e5dbff3c842110bd16b028101c5fa6bd9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/test_residual_cache_v0_19_1.py": "5b88c380f6deae36750b672be9b8faa828ab8b0190be21c64b3e6d7c3f717ced",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/verify_result.py": "72ceb45c32d0f727d73b61884897ce854f196d36e6ef7c4df3ca7ea67d00ecf6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/verify_result_v0_19_1.py": "3f767e3da0dea6983f52e2061b5f0fbafbe8e71994d1bc9aba4cec4a0b8d6f32"
+  }
+}
