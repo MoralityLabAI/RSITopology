@@ -1,0 +1,86 @@
+{
+  "burned_replay": {
+    "allocation": [
+      1,
+      1,
+      1
+    ],
+    "alpha": "1/10",
+    "claim_eligible": false,
+    "classification_cross_regret": "4/3125",
+    "classification_optimizer_count": 5040,
+    "classification_optimum": "1984/3125",
+    "common_optimizer_count": 0,
+    "development_sha256": "cd57bfc889d8bdcdc46a33dbe11b1af7faf1ff4503091d8f9a6bd83efd19efa2",
+    "levels": [
+      "0",
+      "1/5",
+      "2/5"
+    ],
+    "root_cross_regret": "2/625",
+    "root_optimizer_count": 5040,
+    "root_optimum": "246/625"
+  },
+  "claim_boundary": "One finite shared-BSC calibration experiment, uniform parameter-mixture objective, deterministic nondecreasing Buehler bounds, and two exact finite decision risks. Not a universal no-statistic theorem, reference-law optimization, randomized-confidence result, real preference-channel validation, or ASMP-9 resolution.",
+  "expected_status": "decision_dependent_evidence_ordering_established",
+  "expected_test_count": 13,
+  "frozen_predictions": {
+    "all_zero_singleton_matches_atom_modulus": true,
+    "bound_tables_nonconstant": true,
+    "classification_cross_regret_strictly_positive": true,
+    "common_optimizer_count": 0,
+    "minimum_coverage": "9/10",
+    "root_cross_regret_strictly_positive": true
+  },
+  "frozen_universe": {
+    "allocation": [
+      2,
+      1,
+      1
+    ],
+    "alpha": "1/10",
+    "confidence_class": "deterministic nondecreasing Buehler direct bounds",
+    "horizon": 2,
+    "implicit_order_count": 479001600,
+    "levels": [
+      "0",
+      "3/20",
+      "7/20"
+    ],
+    "outcome_count": 12,
+    "parameter_count": 27,
+    "queries": [
+      "root",
+      "left",
+      "right"
+    ],
+    "reference_law": "uniform mixture over registered parameter laws",
+    "symbolic_policy_count": 3748,
+    "targets": 4
+  },
+  "implementation_commit": "145a74f5bf311167cb34eefc5da11a0502792373",
+  "protocol_id": "asmp9-decision-dependent-ordering-v0.48",
+  "registered_at": "2026-07-29T10:33:17-04:00",
+  "resource_ceiling": {
+    "peak_aggregate_working_set_bytes": 1073741824,
+    "seconds": 180,
+    "worker_processes": 4
+  },
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/coupled_uncertainty.py": "0c905affc807dd1add73ff82532f9e4a1ebe92a2bd0802f4fa8298af9f2c7ecc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/PRIOR_ART_GATE_v0_48.md": "88349d86f74ba4a3137852e7f542704a0e7128556a68393140853fbfb9574354",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/PROTOCOL_v0_48.md": "c7b5276f9af59b81d96e8a3f3be2ee7411e6bcf694bb6fd73ace4cf825d9b3ec",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/README.md": "28f9934522f682bcfeb963a152bc5c9a48146fcfaf0592f35856166b192233a0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/THEOREM_DRAFT_v0_48.md": "60f41ee4767610d24412424cd686103392057a7f32cce6b4cd4588d87ab3d5de",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/build_release_v0_48.py": "9f6db299a767ebc5a244391b14e6654fe5228062e0c5b8100dcb68d16c5aaaed",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/environment_lock_v0_48.json": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/ordering_modulus.py": "c5967bc5ba7dbf6461b99843009a95f6a898badfb7533730ab3f51ad01ab3b37",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/run_confirmation_v0_48.py": "cd0a1abd418662883cffac03b192e58766562b4a67b5a049ee5fb8641fe22803",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/test_ordering_modulus.py": "718dd4cdbd8f3aa35130cc4af32cc7be2c6ce0046e6da30c7b127387b20c2ca3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/verify_result_v0_48.py": "f8a5f81cc28234128f04517ba2d38b2a235ce6be104f574545b96abb469cc1f3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/sharp_atom_modulus.py": "131045efb885523b3b746f0e8598cb00e42c995f2db6a80a327f0ccbbc03bfbd"
+  },
+  "status": "registered_before_confirmation",
+  "test_command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/test_ordering_modulus.py",
+  "version": "0.48"
+}
