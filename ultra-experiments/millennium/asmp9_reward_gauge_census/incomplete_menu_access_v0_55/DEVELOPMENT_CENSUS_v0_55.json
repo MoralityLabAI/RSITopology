@@ -1,0 +1,208 @@
+{
+  "claim_eligible": false,
+  "construction_failures": 0,
+  "domain_count": 15,
+  "domains": [
+    {
+      "complete": false,
+      "domain": "ab",
+      "menu_count": 1,
+      "observed_dimension": 1,
+      "rum_compatible_count": 5,
+      "scalar_compatible_count": 5,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 5
+      },
+      "unique_projection_count": 5
+    },
+    {
+      "complete": false,
+      "domain": "ac",
+      "menu_count": 1,
+      "observed_dimension": 1,
+      "rum_compatible_count": 5,
+      "scalar_compatible_count": 5,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 5
+      },
+      "unique_projection_count": 5
+    },
+    {
+      "complete": false,
+      "domain": "bc",
+      "menu_count": 1,
+      "observed_dimension": 1,
+      "rum_compatible_count": 5,
+      "scalar_compatible_count": 5,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 5
+      },
+      "unique_projection_count": 5
+    },
+    {
+      "complete": false,
+      "domain": "abc",
+      "menu_count": 1,
+      "observed_dimension": 2,
+      "rum_compatible_count": 10,
+      "scalar_compatible_count": 10,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 10
+      },
+      "unique_projection_count": 10
+    },
+    {
+      "complete": false,
+      "domain": "ab+ac",
+      "menu_count": 2,
+      "observed_dimension": 2,
+      "rum_compatible_count": 25,
+      "scalar_compatible_count": 25,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 25
+      },
+      "unique_projection_count": 25
+    },
+    {
+      "complete": false,
+      "domain": "ab+bc",
+      "menu_count": 2,
+      "observed_dimension": 2,
+      "rum_compatible_count": 25,
+      "scalar_compatible_count": 25,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 25
+      },
+      "unique_projection_count": 25
+    },
+    {
+      "complete": false,
+      "domain": "ab+abc",
+      "menu_count": 2,
+      "observed_dimension": 3,
+      "rum_compatible_count": 30,
+      "scalar_compatible_count": 4,
+      "tier_set_counts": {
+        "no_random_utility_representation": 20,
+        "random_utility_non_luce|no_random_utility_representation": 26,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 4
+      },
+      "unique_projection_count": 50
+    },
+    {
+      "complete": false,
+      "domain": "ac+bc",
+      "menu_count": 2,
+      "observed_dimension": 2,
+      "rum_compatible_count": 25,
+      "scalar_compatible_count": 25,
+      "tier_set_counts": {
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 25
+      },
+      "unique_projection_count": 25
+    },
+    {
+      "complete": false,
+      "domain": "ac+abc",
+      "menu_count": 2,
+      "observed_dimension": 3,
+      "rum_compatible_count": 30,
+      "scalar_compatible_count": 4,
+      "tier_set_counts": {
+        "no_random_utility_representation": 20,
+        "random_utility_non_luce|no_random_utility_representation": 26,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 4
+      },
+      "unique_projection_count": 50
+    },
+    {
+      "complete": false,
+      "domain": "bc+abc",
+      "menu_count": 2,
+      "observed_dimension": 3,
+      "rum_compatible_count": 30,
+      "scalar_compatible_count": 4,
+      "tier_set_counts": {
+        "no_random_utility_representation": 20,
+        "random_utility_non_luce|no_random_utility_representation": 26,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 4
+      },
+      "unique_projection_count": 50
+    },
+    {
+      "complete": false,
+      "domain": "ab+ac+bc",
+      "menu_count": 3,
+      "observed_dimension": 3,
+      "rum_compatible_count": 105,
+      "scalar_compatible_count": 13,
+      "tier_set_counts": {
+        "no_random_utility_representation": 20,
+        "random_utility_non_luce|no_random_utility_representation": 92,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 13
+      },
+      "unique_projection_count": 125
+    },
+    {
+      "complete": false,
+      "domain": "ab+ac+abc",
+      "menu_count": 3,
+      "observed_dimension": 4,
+      "rum_compatible_count": 85,
+      "scalar_compatible_count": 1,
+      "tier_set_counts": {
+        "no_random_utility_representation": 165,
+        "random_utility_non_luce|no_random_utility_representation": 84,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 1
+      },
+      "unique_projection_count": 250
+    },
+    {
+      "complete": false,
+      "domain": "ab+bc+abc",
+      "menu_count": 3,
+      "observed_dimension": 4,
+      "rum_compatible_count": 85,
+      "scalar_compatible_count": 1,
+      "tier_set_counts": {
+        "no_random_utility_representation": 165,
+        "random_utility_non_luce|no_random_utility_representation": 84,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 1
+      },
+      "unique_projection_count": 250
+    },
+    {
+      "complete": false,
+      "domain": "ac+bc+abc",
+      "menu_count": 3,
+      "observed_dimension": 4,
+      "rum_compatible_count": 85,
+      "scalar_compatible_count": 1,
+      "tier_set_counts": {
+        "no_random_utility_representation": 165,
+        "random_utility_non_luce|no_random_utility_representation": 84,
+        "scalar_luce|random_utility_non_luce|no_random_utility_representation": 1
+      },
+      "unique_projection_count": 250
+    },
+    {
+      "complete": true,
+      "domain": "ab+ac+bc+abc",
+      "menu_count": 4,
+      "observed_dimension": 5,
+      "rum_compatible_count": 231,
+      "scalar_compatible_count": 1,
+      "tier_set_counts": {
+        "no_random_utility_representation": 1019,
+        "random_utility_non_luce": 230,
+        "scalar_luce": 1
+      },
+      "unique_projection_count": 1250
+    }
+  ],
+  "elapsed_seconds": 11.032145,
+  "full_grid_kernel_count": 1250,
+  "proper_domain_count": 14,
+  "resident_bytes": 27160576,
+  "status": "development_only"
+}
