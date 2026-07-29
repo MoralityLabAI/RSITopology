@@ -168,6 +168,13 @@ as transformer evidence.
   permutation. The theorem closes v0.15's unequal-count conjecture inside
   that model; multi-cycle and behaviorally misspecified designs remain open.
 
+- [ASMP-9: residual-cycle liveness and graph-aware allocation](../ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/PUBLIC_SUMMARY_v0_17.md)
+  General comparison graphs replace the one-cycle balance rule with a
+  residual-network rank theorem and a primal/dual game over minimal bad
+  supports. A prospectively registered theta-graph census gives an exact
+  finite counterexample to uniform allocation; adaptive and behaviorally
+  misspecified designs remain open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
