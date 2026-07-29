@@ -1,0 +1,78 @@
+{
+  "claim_boundary": "Exact finite integer allocation under one iid shared-flip calibration grammar, with inherited adaptive risk polytopes, policy-specific KL/Pinsker boxes, exact deficiency LPs, a matched serial control, and a registered-grid two-point lower benchmark. Not a target-dependent cell-allocation theorem, general optimal design, minimax deficiency rate, efficient policy search result, real preference-channel validation, or ASMP-9 resolution.",
+  "development_disclosure": {
+    "burned_classification_formula_mismatches": 92,
+    "burned_constructive_underbounds": 0,
+    "burned_outputs_claim_eligible": false,
+    "burned_total_budget": 54,
+    "confirmation_total_budget": 60
+  },
+  "expected_status": "decision_directed_sample_allocation_established",
+  "expected_test_count": 21,
+  "frozen_predictions": {
+    "classification_minimum_relative_improvement": 0.01,
+    "classification_optimum": [
+      26,
+      17,
+      17
+    ],
+    "constructive_underbound_count": 0,
+    "root_group_minimum_relative_improvement": 0.35,
+    "root_group_optimum": [
+      58,
+      1,
+      1
+    ],
+    "serial_control_optimum": [
+      20,
+      20,
+      20
+    ]
+  },
+  "frozen_universe": {
+    "alpha": "1/20",
+    "decimal_digits": 12,
+    "decision_problems": [
+      "4_class_identification",
+      "root_group",
+      "all_query_serial_control"
+    ],
+    "horizon": 2,
+    "method_of_types_formula": "log(3*(n+1)/0.05)/n",
+    "positive_allocations_per_problem": 1711,
+    "queries": [
+      "root",
+      "left",
+      "right"
+    ],
+    "shared_flip_parameters": 3,
+    "targets": 4,
+    "total_budget": 60,
+    "two_point_grid_denominator": 200
+  },
+  "implementation_commit": "4c28948641cb7f41849b14204cb509fe6ddf5b3a",
+  "protocol_id": "asmp9-decision-directed-sample-allocation-v0.45",
+  "registered_at": "2026-07-29T08:33:38-04:00",
+  "resource_ceiling": {
+    "peak_aggregate_working_set_bytes": 1342177280,
+    "seconds": 420,
+    "worker_processes": 4
+  },
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PRIOR_ART_GATE_v0_45.md": "33da538babe7903b4e04e752f37bd23b0abcd734db673e1b365fa46891eea9c0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PROTOCOL_v0_45.md": "684b998a2240a20ecb25d187936bbd9ecfae02092bf562a2c3eab2ac213d068a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/THEOREM_DRAFT_v0_45.md": "7f7e76092ede29ad363a4b430cb661eecd11c23995c48a6c5c8e25a3db520559",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/allocation_design.py": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/audit_formula_universe.py": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/environment_lock_v0_45.json": "09148d5ad2909cdbc36122c838ce2711268c8e34c30adecba8789be95e8b105a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/run_confirmation_v0_45.py": "67aec056b492249c0c43fd1926ff34ee8685aa67a23d9c53d477a328b0f7c875",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/test_allocation_design.py": "bbc59ae9fc1f05c5933cd8f365ca7c1b8919f6f0eccb5f30ab0f62947934ad4f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/verify_result_v0_45.py": "ad61d4d3c897376cc23914a990c6fb615122a66aac3ad89feae7216b2dad15fc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d"
+  },
+  "status": "registered_before_confirmation",
+  "test_command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/test_allocation_design.py",
+  "version": "0.45"
+}
