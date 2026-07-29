@@ -1,0 +1,38 @@
+{
+  "schema_version": "asmp9_prime_block_device_amendment_v0_34_3_1",
+  "status": "prospective_before_first_model_query",
+  "prepared_utc": "2026-07-29T07:32:34.615Z",
+  "amends": {
+    "registration_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_3.json",
+    "registration_file_sha256": "ea64a6cd8d088f45993cd843ebc5f393e08fb5dcce41989d334a7444e7b4841b",
+    "registration_content_sha256": "2d651df880d46539d0789983594682f392b0fe41ebab0ac0b5e57ed92230d791",
+    "git_commit": "d50e9c25663486eb49230cda7f4780cdea4a749a"
+  },
+  "zero_query_abort": {
+    "reason": "The sealed wrapper called findmnt without target mode on a non-mount-point RUN_ROOT and exited before systemd-run.",
+    "model_server_started": false,
+    "model_loaded": false,
+    "query_count": 0,
+    "output_directory_file_count": 0
+  },
+  "unchanged_wrapper": {
+    "path": "scripts/run_prime_asmp9_v0343_guarded.sh",
+    "sha256": "06e302e079dd9ed1af2c7647c2a6cea7612b7ff99425659e1199d7b10d1e84f7",
+    "edited": false
+  },
+  "registered_invocation_environment": {
+    "RUN_ROOT": "/",
+    "REPO_ROOT": "/workspace/asmp9_physical_v0343/repo",
+    "OUTPUT_DIR": "/workspace/asmp9_physical_v0343/output",
+    "REGISTRATION": "/workspace/asmp9_physical_v0343/repo/ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_3.json"
+  },
+  "mechanical_effect": {
+    "findmnt_source": "/dev/sda2",
+    "resolved_parent_block_device": "/dev/sda",
+    "scientific_input_changed": false,
+    "sampling_contract_changed": false,
+    "analysis_contract_changed": false,
+    "resource_cap_changed": false
+  },
+  "claim_boundary": "This amendment only resolves cgroup block-device discovery before the first model query. It creates no scientific evidence and cannot change any gate or threshold."
+}
