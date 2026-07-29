@@ -1,0 +1,357 @@
+{
+  "claim_boundary": "For cell-specific strictly increasing response links, shared known midpoint zero is sufficient for the v0.26 offset query to identify each utility threshold independently of link shape. Arbitrary cell-specific midpoint drift is exactly confounded with utility. If midpoint drift is context-only, localized thresholds form a bipartite incidence model: parameters are identified modulo one shift per connected component, cycle rank is the exact liveness dimension for testing the factorization, and the positive Laplacian spectral floor controls Euclidean quotient stability. These are classical Rasch/fixed-effects, incidence, Hodge, pseudoinverse, and threshold-search ingredients specialized into an ASMP-9 access ledger; no novelty is claimed. The result does not establish that real demonstrators share a midpoint, that cardinal offsets are practically available, that a tree validates the context-only model, that finite bisection certifies exact factorization, or that ASMP-9 is resolved.",
+  "fresh_validation": {
+    "arbitrary_midpoint_witness": {
+      "alternative_items": [
+        "9",
+        "2",
+        "-3"
+      ],
+      "biases": [
+        "2/3",
+        "-5/4",
+        "7/9",
+        "11/8",
+        "-13/10",
+        "17/12"
+      ],
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "original_items": [
+        "1",
+        "-4",
+        "7"
+      ]
+    },
+    "graph_cells": [
+      {
+        "context_values": [
+          "7/4",
+          "-9/5",
+          "2/7",
+          "-11/6"
+        ],
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": {
+          "components": 1,
+          "cycle_rank": 1,
+          "edges": 7,
+          "incidence_rank": 6,
+          "vertices": 7
+        },
+        "item_values": [
+          "11/3",
+          "-5/2",
+          "13/7"
+        ],
+        "name": "fresh_hexagon_with_leaf",
+        "num_contexts": 4,
+        "num_items": 3
+      },
+      {
+        "context_values": [
+          "-8/3",
+          "5/6",
+          "19/11"
+        ],
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": {
+          "components": 1,
+          "cycle_rank": 2,
+          "edges": 6,
+          "incidence_rank": 4,
+          "vertices": 5
+        },
+        "item_values": [
+          "23/10",
+          "-17/9"
+        ],
+        "name": "fresh_complete_2_by_3",
+        "num_contexts": 3,
+        "num_items": 2
+      },
+      {
+        "context_values": [
+          "1/5",
+          "-7/8",
+          "4/3"
+        ],
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "expected": {
+          "components": 2,
+          "cycle_rank": 1,
+          "edges": 6,
+          "incidence_rank": 5,
+          "vertices": 7
+        },
+        "item_values": [
+          "3/2",
+          "-5/7",
+          "9/4",
+          "-2"
+        ],
+        "name": "fresh_disconnected_square_and_path",
+        "num_contexts": 3,
+        "num_items": 4
+      },
+      {
+        "context_values": [
+          "-3/7",
+          "5/9",
+          "11/13"
+        ],
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "expected": {
+          "components": 1,
+          "cycle_rank": 0,
+          "edges": 6,
+          "incidence_rank": 6,
+          "vertices": 7
+        },
+        "item_values": [
+          "2/5",
+          "-7/6",
+          "13/8",
+          "-17/10"
+        ],
+        "name": "fresh_bipartite_chain",
+        "num_contexts": 3,
+        "num_items": 4
+      }
+    ],
+    "link_shape_cells": [
+      {
+        "scale": 0.37,
+        "shape": "logistic"
+      },
+      {
+        "scale": 1.91,
+        "shape": "atan"
+      },
+      {
+        "scale": 2.73,
+        "shape": "rational"
+      }
+    ],
+    "localization_cell": {
+      "denominator": 137,
+      "radius": "19",
+      "tolerance": "7/1024"
+    },
+    "robust_cells": [
+      {
+        "edge_error": [
+          0.031,
+          -0.047,
+          0.019,
+          0.053,
+          -0.029,
+          0.041,
+          -0.017
+        ],
+        "graph_name": "fresh_hexagon_with_leaf"
+      },
+      {
+        "edge_error": [
+          -0.061,
+          0.023,
+          0.037,
+          -0.011,
+          0.049,
+          -0.033
+        ],
+        "graph_name": "fresh_complete_2_by_3"
+      }
+    ]
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_shared_midpoint_link_shape",
+    "G2_arbitrary_midpoint_obstruction",
+    "G3_context_factorization_and_gauge",
+    "G4_cycle_liveness",
+    "G5_forest_chord_ledger",
+    "G6_robust_spectral_bound",
+    "G7_prior_art_and_claim_boundary",
+    "G8_resource_and_scope"
+  ],
+  "prior_art": [
+    {
+      "identifier": "doi:10.1007/BF02293919",
+      "role": "Rasch parameter uniqueness and incomplete-design connectedness"
+    },
+    {
+      "identifier": "doi:10.1007/s10107-010-0419-x",
+      "role": "Hodge projection and cyclic inconsistency in incomplete rankings"
+    },
+    {
+      "identifier": "doi:10.1093/biomet/asm029",
+      "role": "unknown-link single-index identification assumptions"
+    },
+    {
+      "identifier": "ASMP-9-v0.11-v0.12",
+      "role": "exact and robust context-gluing quotient"
+    },
+    {
+      "identifier": "ASMP-9-v0.26.2",
+      "role": "registered offset-access threshold and finite-sample boundary"
+    }
+  ],
+  "protocol_id": "ASMP-9-HETEROGENEOUS-MIDPOINT-v0.27",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "structured_claims": {
+    "allowed": [
+      "Cell-specific strictly increasing link shapes are harmless to population offset-threshold localization when every link has the same known midpoint.",
+      "Arbitrary cell-specific midpoint drift is exactly confounded with the item utility coordinates.",
+      "Context-only midpoint drift is identifiable modulo one shift per connected component of the item-context graph.",
+      "Cycle rank is the exact liveness dimension for refuting context-only midpoint factorization from exact localized thresholds.",
+      "The positive Laplacian spectral floor controls Euclidean quotient reconstruction stability."
+    ],
+    "forbidden": [
+      "The result validates a shared or context-only midpoint model for human or model demonstrators.",
+      "A tree design provides empirical evidence for context-only midpoint factorization.",
+      "Finite bisection certifies exact factorization.",
+      "Every environment intervention implements a known cardinal reward offset.",
+      "Classical Rasch, fixed-effects, incidence, Hodge, pseudoinverse, or threshold-search mathematics is new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.27",
+  "verdict_map": {
+    "all_gates_pass": "heterogeneous_midpoint_boundary_established_v0_27",
+    "any_substantive_gate_fails": "heterogeneous_midpoint_boundary_not_established_v0_27",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_27"
+  }
+}
