@@ -175,9 +175,11 @@ the theorem stops at within-path balance and retains the path-total search.
 
 ## 6. Claim boundary
 
-The candidate contribution is an exact access-model formula, a strict
-path-internal balancing theorem, and a reduced exact optimizer for one
-declared generalized-theta class at `epsilon=1/2`.
+The registered mathematical result is an exact access-model formula, a
+strict path-internal balancing theorem, and a reduced exact optimizer for one
+declared generalized-theta class at `epsilon=1/2`.  Majorization and
+Schur-convex reliability allocation are classical; no novelty claim is made
+for the specialized lemma.
 
 It is not:
 
@@ -190,4 +192,3 @@ It is not:
 - behavioral reward identification or general inverse reinforcement
   learning; or
 - a resolution of ASMP-9.
-

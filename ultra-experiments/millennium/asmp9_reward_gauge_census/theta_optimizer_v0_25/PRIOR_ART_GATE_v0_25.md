@@ -1,6 +1,7 @@
 # ASMP-9 v0.25 prior-art gate
 
-Status: development-only.  This gate must close before registration.
+Status: primary-source audit completed 2026-07-28.  The result may be
+registered only with the conservative attribution boundary below.
 
 ## Classical neighborhood
 
@@ -39,6 +40,24 @@ Status: development-only.  This gate must close before registration.
 7. The v0.23 multivariate `q=-1` representation and the earlier single-cycle
    balancing theorem are predecessor results inside this repository.
 
+## Primary-source dispositions
+
+The closest sources were compared at the level of their optimized objects,
+not merely their titles.
+
+| Source | Object actually optimized | Disposition for v0.25 |
+|---|---|---|
+| El-Neweihi, Proschan, and Sethuraman (1986), journal paper and 1984 FSU report M690 | Assignment of a fixed list of heterogeneous binary components to disjoint minimum path or cut sets in ordinary parallel-series/series-parallel reliability. Theorem 2.1 assigns the most reliable components to the shortest paths; Theorem 3.1 gives a majorization partial order for cut-set assignments. | Supplies the classical majorization template. It does not allocate repeated microtrials to edges, use four directional edge states, optimize strong connectivity, or reduce a theta objective to path totals. |
+| El-Neweihi, Proschan, and Sethuraman (1985), FSU report M699; later *Handbook of Statistics* chapter | Extension of the component-assignment result to stochastically ordered multistate component values in disjoint parallel-series path sets. | Multistate in the reliability sense, but still an assignment theorem for component state quality. It is not the ASMP partial-orientation law. |
+| Boland, El-Neweihi, and Proschan (1988), FSU report M780 / PEIS paper | Placement of one or several active spare components in coherent systems, including `k`-out-of-`n`, parallel-series, and series-parallel modules, using redundancy importance and arrangement order. | Direct prior art for spare-placement and local redundancy decisions. It neither states the frozen fixed-total integer count problem nor the theta path-internal smoothing inequality. |
+| Prasad, Nair, and Aneja (1991) | Assignment of heterogeneous components with position-dependent reliabilities; a complete rule for parallel-series and a special two-position series-parallel rule. | Same assignment neighborhood, different decision variables and success event. |
+| Yalaoui, Châtelet, and Chu (2005), two papers | Cost-minimizing selection of component reliabilities from finite technology sets under an ordinary series-parallel reliability constraint; one paper gives a pseudopolynomial dynamic program. | Establishes that pseudopolynomial reliability-allocation algorithms are classical. It does not contain the frozen orientation formula or smoothing statement. |
+| Castro et al. (2012) | Multiple-component-choice cost minimization under a reliability constraint. | Algorithmic neighbor only; different objective, variables, and system law. |
+
+The archived M690, M699, and M780 scans were inspected directly.  The public
+catalogue records and final journal metadata are linked above; the archive
+copies were used only to read the primary text.
+
 ## Important distinction
 
 Ordinary two-terminal reliability declares a path successful when every
@@ -56,11 +75,17 @@ presented as a new formula for standard binary component reliability.
 
 ## Proposed narrow contribution
 
-Subject to further searching, the candidate-new lemma is the strict
-within-path smoothing statement for this exact partial-orientation law.
-The reduced path-total enumeration is then immediate.  Even if the lemma has
-an exact prior-art match, the ASMP access translation remains useful but must
-be attributed as a corollary.
+The registered contribution is a specialized exact theorem for the frozen
+ASMP access model: the four-state path formula, strict path-internal
+smoothing, and the resulting path-total optimizer.  Majorization,
+Schur-convex allocation, spare placement, and pseudopolynomial
+series-parallel optimization are classical and must be cited as the
+methodological neighborhood.
+
+No novelty claim is registered.  The search found no exact statement of the
+four-state directional smoothing lemma, but absence from this bounded search
+does not establish novelty.  If an exact prior-art match is later found, the
+result remains an attributed specialization/corollary.
 
 ## Allowed language
 
@@ -81,14 +106,12 @@ be attributed as a corollary.
 - the reliability-allocation literature has no equivalent theorem; or
 - ASMP-9 is resolved.
 
-## Searches required before freeze
+## Freeze decision
 
-Search primary reliability and operations-research sources for:
+The gate is closed for a conservative prospective registration:
 
-- optimal replication counts on parallel collections of series paths;
-- Schur-concavity under identical active redundancies;
-- generalized-theta or bridge-network allocation;
-- pseudopolynomial series-parallel reliability allocation; and
-- exact resource allocation for multi-state oriented networks.
-
-Record an explicit disposition for every close match.
+- the closest primary sources have explicit dispositions;
+- the protocol must cite the classical allocation lineage;
+- the structured claims must make no novelty assertion; and
+- the result must remain restricted to the independent fair-microtrial
+  generalized-theta class at `epsilon=1/2`.
