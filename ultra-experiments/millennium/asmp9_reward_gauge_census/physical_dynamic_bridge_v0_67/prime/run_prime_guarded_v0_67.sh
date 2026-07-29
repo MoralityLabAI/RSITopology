@@ -92,7 +92,7 @@ if ! command -v systemd-run >/dev/null \
   exit 4
 fi
 
-MOUNT_SOURCE="$(findmnt -no SOURCE "$(dirname "${RESULT_DIR}")" | head -n 1)"
+MOUNT_SOURCE="$(findmnt -T "$(dirname "${RESULT_DIR}")" -no SOURCE | head -n 1)"
 PARENT_NAME="$(lsblk -no PKNAME "${MOUNT_SOURCE}" 2>/dev/null | head -n 1 || true)"
 if [[ -n "${PARENT_NAME}" ]]; then
   BLOCK_DEVICE="/dev/${PARENT_NAME}"
