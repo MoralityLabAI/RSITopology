@@ -18,6 +18,7 @@ PATHS = (
     "PRIOR_ART_GATE_v0_18.md",
     "PROTOCOL_v0_18.md",
     "PUBLIC_SUMMARY_v0_18.md",
+    "REPLAY_AUDIT_v0_18.json",
     "README.md",
     "artifacts_v0_18/RESULT_v0_18.md",
     "artifacts_v0_18/result_v0_18.json",

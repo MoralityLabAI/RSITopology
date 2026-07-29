@@ -122,6 +122,11 @@ Across 1,299,078 directly enumerated residual states:
 The run took approximately `110.21` seconds, used `23,105,536` bytes peak
 resident memory, and used no GPU.
 
+A clean detached replay from the result commit passed the same eight replay
+checks, produced a byte-identical Markdown report, and reproduced the complete
+scientific JSON payload. Only the execution commit, emission timestamp,
+elapsed time, and peak-memory telemetry differed.
+
 ## Evidence chain
 
 - implementation freeze:

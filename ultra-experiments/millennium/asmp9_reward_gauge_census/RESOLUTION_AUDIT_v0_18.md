@@ -140,6 +140,11 @@ certificate arithmetic.
 The run used no GPU, finished in approximately 110.21 seconds, and remained
 well below the one-GiB memory cap.
 
+A clean detached replay from the result commit passed the same verifier,
+reproduced the full scientific payload, and emitted a byte-identical report.
+The only JSON differences were the expected execution-commit and resource/time
+telemetry fields.
+
 ## What is analytic versus finite evidence
 
 Analytic:
