@@ -115,6 +115,21 @@ This closes arbitrary finite nonadaptive access by exact compilation, not the
 adaptive, finite-sample, misspecified, or real-model obligations recorded in
 [the v0.40 matrix](RESOLUTION_OBLIGATION_MATRIX_v0_40.md).
 
+The prospectively registered
+[sequential risk-access theorem v0.41](sequential_risk_access_v0_41/RESULT_v0_41.md)
+then replaces a static query subset with a finite-horizon policy tree. The
+exact Bellman recursion generates the upper risk polytope of every adaptive
+policy. On a disjoint rational noisy-channel fixture, two-query adaptive
+four-way identification has deficiency `61/135`, versus `13/25` for
+randomized open-loop designs, an exact gap of `46/675`. The same channels
+show no adaptive gain for the registered asymmetric root-group loss
+(`4/45` in both modes), confirming that adaptivity is decision-type
+dependent rather than a property of the channel alone. This closes the
+known-channel finite-horizon adaptive characterization by exact enumeration,
+not efficient optimization, finite-sample inference, channel uncertainty, or
+the remaining obligations in
+[the v0.41 matrix](RESOLUTION_OBLIGATION_MATRIX_v0_41.md).
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)

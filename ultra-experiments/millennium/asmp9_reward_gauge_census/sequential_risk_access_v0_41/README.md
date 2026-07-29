@@ -21,8 +21,15 @@ The failed `1/2` development prediction remains in
 `DEVELOPMENT_PROTOCOL_v0_41.json`; it is not rewritten as a preregistered
 success.
 
-This directory is currently `burned_development_not_registered`. Its output
-may shape a disjoint confirmation protocol but is not claim-eligible evidence.
+The directory now contains two explicitly separated records:
+
+- the burned development fixture, whose frozen `1/2` open-loop prediction was
+  corrected to `1/4`; and
+- a prospectively registered, disjoint rational-channel confirmation.
+
+Current confirmation state:
+`finite_sequential_risk_access_characterization_established`.
+The canonical scientific account is [RESULT_v0_41.md](RESULT_v0_41.md).
 
 Run:
 
