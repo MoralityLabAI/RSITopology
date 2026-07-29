@@ -11,8 +11,8 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.59 development](RESOLUTION_OBLIGATION_MATRIX_v0_59.md)
-records the full program boundary while keeping the unregistered v0.57-v0.59
+[resolution-obligation matrix after v0.60 development](RESOLUTION_OBLIGATION_MATRIX_v0_60.md)
+records the full program boundary while keeping the unregistered v0.57-v0.60
 lane distinct from verified evidence. The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
 classifies complete three-alternative kernels into a Luce scalar, a weaker
@@ -57,6 +57,17 @@ sampling corollary keeps contamination bias and statistical error in separate
 terms. This is classical robust-testing geometry specialized to the ASMP-9
 object, remains development-only, and does not cover adaptive replacement,
 menu endogeneity, or strategic responses.
+
+The unregistered
+[selection-channel boundary v0.60 development](selection_channel_v0_60/DEVELOPMENT_RESULT_v0_60.md)
+then separates recorded pre-response menu selection from outcome-dependent
+recording. In the first model, the joint law recovers every supported menu
+conditional exactly, while a positive menu-frequency floor has a matching
+`1/pi` effect on total sample complexity. In the second model, unrestricted
+unknown recording weights confound all positive kernels, but weights bounded
+in `[ell,u]` yield an exact multiplicative cross-tier radius. Known recording
+weights or forced recording restore the clean law. The ingredients are
+classical; the ASMP-9 contribution is only their explicit tier-access ledger.
 
 ## Prereveal tests
 
