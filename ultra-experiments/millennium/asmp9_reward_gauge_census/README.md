@@ -48,7 +48,7 @@ failure, and freezes a 2,412-prompt factorial successor plus hash-bound
 registration, capture, hard-cap, and analysis tooling. It is ready to bind to
 an execution environment but is not yet registered there. No v0.35 model
 query or confirmation row has been run. The
-[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_37.md) keeps this
+[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_38.md) keeps this
 physical bridge separate from the five requirements for a full ASMP-9
 resolution.
 
@@ -76,6 +76,17 @@ zero-error quotient is too coarse for approximate risk, while full
 nuisance-sensitive deficiency can be conservative. The result is a classical
 finite instrument consolidation, not a new Blackwell/Le Cam theorem or an
 ASMP-9 resolution.
+
+The prospectively registered
+[decision-relative access theorem v0.38](decision_relative_access_v0_38/RESULT_v0_38.md)
+then supplies the missing finite middle object. Relative to a frozen
+three-policy regret type, deleting either symmetric target query costs exactly
+half its response-probability gap. The target-query pair is exactly
+decision-sufficient while omitting a constant-shift representative bit that
+full expanded reconstruction prices at `1/2`. A target-independent gauge
+observation is ancillary under both registered nuisance biases. This is an
+exact necessary-and-sufficient access threshold in one finite grammar, not a
+general nuisance theorem or an ASMP-9 resolution.
 
 ## Successor
 
