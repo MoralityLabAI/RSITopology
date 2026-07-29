@@ -1,0 +1,82 @@
+{
+  "schema_version": "asmp9_measurement_channel_pilot_protocol_draft_v0_35",
+  "status": "draft_not_registered_not_run",
+  "phase": "burned_measurement_pilot",
+  "scientific_question": "Can an independently calibrated semantic-choice channel provide a robust monotone ruler on fresh prompt families?",
+  "data_separation": {
+    "v0_34_rows": "burned_design_only",
+    "v0_34_future_holdout": "remains_unexecuted_and_ineligible",
+    "v0_35_prompt_families": "must_be_new_and_disjoint",
+    "confirmation": "not_authorized"
+  },
+  "factorial_code_design": {
+    "presentation_order": [
+      "target_first",
+      "target_second"
+    ],
+    "response_code_mapping": [
+      "target_is_X",
+      "target_is_Y"
+    ],
+    "purpose": "Separate semantic contrast, position bias, response-token bias, and their interaction."
+  },
+  "probability_grid": [
+    "0",
+    "1/12",
+    "1/6",
+    "1/3",
+    "1/2",
+    "2/3",
+    "5/6",
+    "11/12",
+    "1"
+  ],
+  "mandatory_controls": {
+    "code_mapping": "Literal code-key questions must prefer the registered correct response in every factorial cell.",
+    "semantic_equality": "Factorial-averaged target-oriented log odds for semantically identical descriptions define the independent null radius.",
+    "probability_order": "Higher-probability copies of the same anchor lottery must dominate lower-probability copies.",
+    "anchor_dominance": "BEST must dominate every cell and every cell must dominate WORST.",
+    "cold_start_replay": "Every row is repeated after a process restart."
+  },
+  "derived_instrument_radius": {
+    "definition": "The maximum absolute factorial-averaged semantic contrast on semantic-equality controls plus the maximum cold-start delta. Code-mapping and dominance rows are separate validity controls, not noise estimates.",
+    "post_hoc_override": false
+  },
+  "planned_scale": {
+    "fresh_prompt_families": 3,
+    "main_objects": 18,
+    "probability_points": 9,
+    "factorial_cells_per_content": 4,
+    "unique_prompt_rows": 2412,
+    "cold_start_epochs": 2,
+    "planned_receipts": 4824
+  },
+  "fixed_sequence_gates": [
+    {
+      "gate": "C0",
+      "condition": "All code-mapping controls pass.",
+      "failure": "code_channel_invalid"
+    },
+    {
+      "gate": "D0",
+      "condition": "All registered stochastic-dominance and anchor-dominance controls pass outside the derived instrument radius.",
+      "failure": "semantic_order_invalid"
+    },
+    {
+      "gate": "M0",
+      "condition": "For every required ruler curve, d_inf is no larger than the derived instrument radius and both p=0 and p=1 endpoints force a zero crossing at that radius.",
+      "failure": "monotone_ruler_not_established"
+    },
+    {
+      "gate": "J0",
+      "condition": "Every registered component/mixture tuple is jointly admitted by M0.",
+      "failure": "mixture_analysis_unavailable"
+    }
+  ],
+  "total_mapping": {
+    "pass_all": "measurement_channel_admitted_for_successor_design_only",
+    "fail_any": "stop_without_mixture_or_decision_quotient_claim",
+    "invalid_instrument": "not_evaluated"
+  },
+  "claim_boundary": "This pilot can validate or reject one measurement channel. It cannot confirm mixture affinity, validate the v0.33 decision quotient on held-out behavior, authorize edits, or resolve ASMP-9."
+}

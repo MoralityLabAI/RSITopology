@@ -40,6 +40,13 @@ evidence and freezes the next load-bearing sequence. The additive
 unregistered decision-information and semantic-coupling quotient work without
 promoting it into claim-eligible evidence.
 
+The additive
+[v0.35 measurement-channel development](measurement_channel_v0_35/README.md)
+then proves the exact monotone repair radius for the burned score curves,
+shows that endpoint support—not merely local monotonicity—is the binding
+failure, and supplies an unregistered 2,412-prompt Latin-square successor
+design. No v0.35 model query or confirmation row has been run.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)

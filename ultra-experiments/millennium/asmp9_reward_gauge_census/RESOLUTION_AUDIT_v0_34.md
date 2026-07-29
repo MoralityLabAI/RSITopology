@@ -51,12 +51,28 @@ The next sequence is now:
 More samples through the rejected v0.34.4 channel do not address its failure.
 The untouched holdout remains sealed.
 
+## Additive v0.35 development
+
+The [v0.35 repair-radius replay](measurement_channel_v0_35/REPAIR_RADIUS_REPORT_v0_35.md)
+replaces the brittle violation count with the exact `L-infinity` distance to
+the cone of nonincreasing curves. Repair radii are modest, but robust endpoint
+support remains absent: 4/36 standard curves, 2/18 preferred-basis curves, and
+10/18 compound curves force a crossing at their exact repair radius.
+
+The accompanying [v0.35 pilot draft](measurement_channel_v0_35/PILOT_PROTOCOL_DRAFT_v0_35.json)
+therefore adds independent presentation/code factors, semantic-equality nulls,
+probability-order controls, and the missing `p=0,1` dominance endpoints. Its
+2,412-row generator is complete but unregistered and unexecuted. It does not
+reopen confirmation.
+
 ## Canonical record
 
 - [Prime result](physical_acquisition_v0_34/PRIME_RESULT_v0_34_4.md)
 - [Machine-readable analysis](physical_acquisition_v0_34/BURNED_PILOT_ANALYSIS_v0_34_4.json)
 - [Closeout receipt](physical_acquisition_v0_34/PRIME_CLOSEOUT_v0_34_4.json)
 - [Analysis registration](physical_acquisition_v0_34/PRIME_ANALYSIS_EXECUTION_v0_34_4.json)
+- [v0.35 repair-radius result](measurement_channel_v0_35/REPAIR_RADIUS_RESULT_v0_35.json)
+- [v0.35 design receipt](measurement_channel_v0_35/DESIGN_RECEIPT_v0_35.json)
 
 ## Claim boundary
 

@@ -1,0 +1,55 @@
+{
+  "schema_version": "asmp9_measurement_channel_design_receipt_v0_35",
+  "status": "draft_generated_not_registered_not_run",
+  "manifest_content_sha256": "d036055a9f5ba6a6c81555641f2fa430a75d87bc8a9de9702a56f7a69ae0e1fc",
+  "counts": {
+    "unique_prompt_rows": 2412,
+    "planned_cold_start_epochs": 2,
+    "planned_receipts": 4824,
+    "query_types": {
+      "standard_gamble": 1296,
+      "compound_gamble": 648,
+      "anchor_dominance_control": 288,
+      "probability_order_control": 96,
+      "semantic_equality_control": 72,
+      "code_mapping_control": 12
+    }
+  },
+  "files": {
+    "pilot_design_v035.py": {
+      "bytes": 12931,
+      "sha256": "9fa28a53a8eaf037d92fea1e4fe2ef1a8df6e357f0ce6cdee35df0eae553b3a6"
+    },
+    "PILOT_PROTOCOL_DRAFT_v0_35.json": {
+      "bytes": 3294,
+      "sha256": "29728b919086685b6cfd585752787a8759e678f664cf21239b81cd1f9cab17bb"
+    },
+    "pilot_analyzer_v035.py": {
+      "bytes": 11827,
+      "sha256": "e4180996dbe217597dc442c77f67448c1c5f07491509627a5364b5701eb85408"
+    },
+    "test_asmp9_measurement_channel_v035.py": {
+      "bytes": 8385,
+      "sha256": "8e5f5781789ab27ab607051dc0471724f89e14be3fbb54d31a984cd3ab09198a"
+    },
+    "source_v0_34_prompt_manifest": {
+      "bytes": 3594416,
+      "sha256": "4bea162cfea512ae3ff4e513e896f37b2267ee51715da9228260f80e9c3a2c0b"
+    }
+  },
+  "separation": {
+    "v0_34_outcomes_used_to_shape_design": true,
+    "v0_34_future_holdout_consumed": false,
+    "v0_35_model_queries_executed": false,
+    "v0_35_execution_authorized": false
+  },
+  "next_registration_requirements": [
+    "exact model and runtime hashes",
+    "materialized prompt-manifest file and file hash",
+    "sealed analyzer and hard-cap wrapper hashes",
+    "resource envelope",
+    "fresh prompt-family declaration",
+    "fixed total gate evaluator"
+  ],
+  "claim_boundary": "This receipt establishes deterministic design completeness only. It is not a preregistration, model result, confirmation, or ASMP-9 resolution."
+}
