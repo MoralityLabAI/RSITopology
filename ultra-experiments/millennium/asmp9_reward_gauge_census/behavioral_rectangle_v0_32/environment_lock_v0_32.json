@@ -1,0 +1,9 @@
+{
+  "arithmetic": "fractions.Fraction exact rational",
+  "gpu": "forbidden",
+  "numpy": "not used",
+  "os": "Windows",
+  "protocol_id": "ASMP-9-BEHAVIORAL-RECTANGLE-v0.32",
+  "pytest": "8.3.3",
+  "python": "3.11.4"
+}
