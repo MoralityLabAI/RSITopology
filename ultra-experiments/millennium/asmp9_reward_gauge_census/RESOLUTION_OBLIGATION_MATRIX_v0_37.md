@@ -79,21 +79,32 @@ reward-like internal object.
 6. Re-enter real-model measurement only through a prospectively registered
    channel that passes its own availability and calibration gates.
 
-## Near-term theorem target
+## Near-term comparison target
 
-The immediate target is a finite decision-relative deficiency:
+The immediate operational scalar is a finite decision-value gap:
 
 ```text
-Delta_D(A,B)
+G_D(A,B)
   = sup over registered target-only decision problems
       [R_A^* - R_B^*]_+.
 ```
 
-The next protocol should not merely define this operationally. It should seek
-an exact primal-dual characterization, prove the reduction to ordinary
-deficiency when nuisance is decision-relevant, identify conditions for a
-single target-respecting garbling kernel, and exhibit sharp counterexamples
-when no such kernel exists.
+This quantity is **not** a Le Cam or Torgersen relative deficiency: it compares
+optimized worst-case values for a frozen loss registry, rather than every
+decision rule and risk vector in a declared problem type. Relative
+deficiencies for restricted decision-problem types are classical.
+
+The next protocol should therefore compare, rather than conflate:
+
+1. `G_D`, the registered optimal-value gap;
+2. classical deficiency relative to target-only policy-regret losses; and
+3. ordinary deficiency on the expanded target-by-nuisance parameter.
+
+It should then specialize the classical relative object to reward-gauge
+quotients and ask for the minimum query/intervention family that makes its
+deficiency to full access zero or at most a declared epsilon. The prospective
+mathematical contribution is the access threshold in that reward/MDP grammar,
+not a reinvention of relative deficiency.
 
 This is the smallest next step that advances obligation 1 rather than adding
 another example to the same finite ledger.
