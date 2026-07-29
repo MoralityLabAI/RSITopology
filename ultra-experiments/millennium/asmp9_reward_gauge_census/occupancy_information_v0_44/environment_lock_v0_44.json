@@ -1,0 +1,9 @@
+{
+  "implementation": "CPython",
+  "numpy": "2.4.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "psutil": "7.0.0",
+  "pytest": "8.3.3",
+  "python": "3.11.4",
+  "scipy": "1.16.2"
+}
