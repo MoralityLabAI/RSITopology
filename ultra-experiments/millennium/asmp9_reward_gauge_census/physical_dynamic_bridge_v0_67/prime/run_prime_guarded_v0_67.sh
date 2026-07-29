@@ -85,7 +85,9 @@ if (( BASELINE_GPU_MB > GPU_CLEAN_START_CEILING_MB )); then
   echo "unclean GPU start: ${BASELINE_GPU_MB} MB" >&2
   exit 3
 fi
-if ! command -v systemd-run >/dev/null || ! systemctl is-system-running >/dev/null 2>&1; then
+SYSTEMD_STATE="$(systemctl is-system-running 2>/dev/null || true)"
+if ! command -v systemd-run >/dev/null \
+  || [[ "${SYSTEMD_STATE}" != "running" && "${SYSTEMD_STATE}" != "degraded" ]]; then
   echo "systemd resource controller unavailable" >&2
   exit 4
 fi
