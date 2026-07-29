@@ -1,0 +1,28 @@
+{
+  "implementation_commit": "23507d1b16a43b4462b4a6aa6ebcef54c32bc497",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/protocol_v0_22_1.json",
+  "registered_at_utc": "2026-07-29T02:45:12Z",
+  "registration_id": "ASMP-9-UNIFORM-ABOVE-FLOOR-v0.22.1-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/block_factorization_v0_20/block_factorization.py": "c5cb870558cec9d148167cf8190578e8e16a6164a3d018561c0c35128313076e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/POSTRUN_NOTE_v0_22.md": "6b4cc3a7dde3a20e1c7b8a7499e30450e3406af4bbfef398146efd486843a30f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/PRIOR_ART_GATE_v0_22.md": "1a588fc98253160bd6492846f214870f99c046faa27ab45ba5786ce646605e3b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/THEORY_DRAFT_v0_22.md": "bc3bdda70bc7f2fd8a26976f4fd5908e689721b1bcf621ef964099dd6d057bf4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/artifacts_v0_22/independent_verification_v0_22.json": "92d8ba625dd4900fcd77da913f7bdc7d8bd2354f1650b9a4ac35b691be02eb4b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/artifacts_v0_22/result_v0_22.json": "15dd7308e561853bcf655f7a3cd9b97344342d1af347fa5c0efdab2464b6cb48",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/artifacts_v0_22/run_receipt_v0_22.json": "72af311f69f05f9f7f67d5001698cbc6dcff67fb27177eb1531031bb3d679bdd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/registration_v0_22.json": "d62cf556ad469ff8c20bb6f004c04c3ccaac0c58157fd77f4bf978a53bc840db",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/uniform_above_floor.py": "9edb17f47f9e20d6bbfe589a204f251aa1b71df8b9d0220d79b25e1164f851c3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22/verify_result_v0_22.py": "8d94db0239d94d143ee17b7df6f4ee096c53cc07717e97d22111199faf9c55da",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/AMENDMENT_v0_22_1.md": "58e025ed21c46b67db059370b6ca8c4668801687e48c6a1374b327d6c27d05f7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/README.md": "80da85ce3f88edaaafb0f2c6eecdc68493c7d1a39e12ff269a5c7c4e4d852733",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/burned_graph_registry_v0_22_1.json": "c4352bebc224ba657e3464abda6b293d2ad6ccbac8f2644400a93c6d59d5187f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/environment_lock_v0_22_1.json": "f0ec168c7dd89792b310363af0ccfb731efa2b5d3096901662f935d007c08de9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/make_burned_graph_registry_v0_22_1.py": "09faf460f1b0060f5c9c214659dc55f660ef5fa9287c49f09f59750f58aa7559",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/protocol_v0_22_1.json": "844f32158142e256ebbb03c7fcc70db7bd584e0385da93f5e075141044a142dc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/register_v0_22_1.py": "c632e9570912438a346ef8ae5dfa6c89788afe5eff6b4cab42d3b38a7d88c3aa",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/run_verification_v0_22_1.py": "bd034957e331013424207885a5e780ababd9bc5f656fd49d48a8a1b9e4de5a38",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/test_protocol_v0_22_1.py": "8490d9ad0ce53219724ff1db57392e6a279b681b0182cbfabb5f1c97f50e6c2c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/verify_result_v0_22_1.py": "70cd7176cc490a5054030a37fcf6a9f6ac69883efa33dd7ab38a7d598f28cbd4"
+  }
+}
