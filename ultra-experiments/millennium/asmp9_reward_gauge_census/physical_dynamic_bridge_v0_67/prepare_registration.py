@@ -72,6 +72,7 @@ def prepare(args: argparse.Namespace) -> None:
     ]
     model_paths = [
         model_path / "model.safetensors-00001-of-00001.safetensors",
+        model_path / "model.safetensors",
         model_path / "config.json",
         model_path / "tokenizer.json",
         model_path / "tokenizer_config.json",
