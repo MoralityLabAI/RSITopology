@@ -81,7 +81,7 @@ The minimax risk is the infimum over decoders. Access designs should be
 compared by attainable risk or by statistical-experiment simulation, not by a
 binary invariance partition alone.
 
-## Candidate robust-deficiency lemma
+## Classical deficiency specialization
 
 For two finite access designs `A` and `B`, define the directional robust
 deficiency
@@ -100,10 +100,12 @@ For every decoder on `B` and every loss in `[0,1]`, composing that decoder with
 the displayed total-variation error. Taking the infimum yields the
 corresponding minimax-risk transfer bound.
 
-This is the finite robust analogue to the classical Blackwell/Le Cam
-simulation idea. The inequality is elementary; whether the exact formulation
-and its converses are already standard for compound experiments must be
-settled before registration.
+This is ordinary finite Le Cam deficiency after treating `(theta,xi)` as the
+parameter. The risk-transfer inequality is classical. It is sufficient for
+losses that ignore `xi`, but it may be conservative because it demands
+pointwise simulation of nuisance distinctions that those losses do not use.
+Version 0.37 is therefore an exact instrument calibration, not a new
+deficiency theorem.
 
 ## Proposed exact finite experiment
 
@@ -126,10 +128,13 @@ population-law and sampled-transcript oracles in separate strata.
    registered deficiency upper bound.
 3. **S0 — quotient insufficiency:** exhibit two channels with the same
    zero-error component quotient but different exact bounded-risk frontiers.
-4. **Q0 — access monotonicity:** appending a query with compatible shared
+4. **C0 — conservatism:** exhibit and certify whether full
+   expanded-parameter deficiency is strictly larger than the worst
+   target-only decision-risk gap in the registered decision class.
+5. **Q0 — access monotonicity:** appending a query with compatible shared
    nuisance cannot worsen the optimal risk or deficiency to the full
    experiment.
-5. **H0 — deterministic embedding:** point-mass kernels reproduce every v0.36
+6. **H0 — deterministic embedding:** point-mass kernels reproduce every v0.36
    headline count.
 
 S0 is the load-bearing liveness gate. If it fails on the registered universe,
@@ -150,4 +155,3 @@ This branch can sharpen obligation 1 and provide the language for obligation
 
 It still would not supply the adaptive query theorem or matching complexity
 bounds required by obligations 2 and 3.
-
