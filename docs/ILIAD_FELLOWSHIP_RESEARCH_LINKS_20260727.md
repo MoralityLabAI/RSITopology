@@ -201,8 +201,14 @@ as transformer evidence.
   At the maximally noisy positive-count floor, exact availability inside one
   biconnected block is `T_G(0,2)/2^|E|`. Classical Tutte complexity therefore
   makes exact value computation #P-hard even though the allocation itself is
-  forced. All ten registered gates and eleven independent checks passed; the
-  above-floor weighted design problem remains open.
+  forced. All ten registered gates and eleven independent checks passed.
+
+- [ASMP-9: fixed-uniform above-floor value complexity](../ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/PUBLIC_SUMMARY_v0_22_1.md)
+  Every fixed uniform count `r>=2` evaluates a nonexceptional Tutte point on
+  `H_-1`, so exact value computation remains #P-hard inside one biconnected
+  block. The first registered attempt's mechanical gate failure remains
+  visible; its narrowly repaired successor passed ten gates and seventeen
+  independent checks. Nonuniform maximin design remains open.
 
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width

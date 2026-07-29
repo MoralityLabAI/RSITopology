@@ -149,3 +149,17 @@ preserved the original 120-second cap after two recorded resource aborts and
 passed all ten gates plus 46 independent replay checks. General multi-cycle
 design, adaptive allocation, response-model misspecification, and the full
 ASMP-9 problem remain open.
+
+Versions [v0.17](general_graph_design_v0_17/PUBLIC_SUMMARY_v0_17.md) through
+[v0.20](block_factorization_v0_20/PUBLIC_SUMMARY_v0_20.md) then identify
+cyclic-core bonds as the minimal bad supports, solve exact cactus allocation,
+and factor the finite objective over arbitrary vertex-biconnected blocks.
+
+The [count-floor complexity result v0.21](local_block_complexity_v0_21/PUBLIC_SUMMARY_v0_21.md)
+identifies the irreducible local numerator with `T_G(0,2)`.  The
+[fixed-uniform successor v0.22.1](uniform_above_floor_v0_22_1/PUBLIC_SUMMARY_v0_22_1.md)
+extends the value-computation barrier to every fixed uniform `r>=2`: each
+declared allocation evaluates a nonexceptional point on the
+Jaeger-Vertigan-Welsh `H_-1` curve.  Exact value computation is therefore
+#P-hard even inside one biconnected block.  This does not prove uniform
+allocation optimal or classify nonuniform maximin design.
