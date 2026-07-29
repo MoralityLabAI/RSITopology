@@ -100,3 +100,16 @@ No novelty attaches to the threshold rule or its tail sums. The residual
 contribution is the exact finite specialization to the native ASMP-9 answer
 registry, its explicit comparison with the controlled-sensing lower bound,
 and the conservative record of the remaining factor-2.160 gap.
+
+## Query-span attribution
+
+The span condition, nullspace witness, reconstruction operator, and induced
+infinity norm are standard finite-dimensional linear algebra. Searching
+candidate bases for a smaller reconstruction norm is classical numerical
+conditioning/optimal-design practice. No novelty claim attaches to those
+ingredients.
+
+The residual contribution is again the ASMP-9 specialization: a total
+fail-closed access certificate over the sealed decision quotient, coupled to
+explicit leave-one-out adversaries and a concrete prospective physical probe
+grammar.

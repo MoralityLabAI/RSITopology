@@ -10,7 +10,7 @@ shape a successor protocol but are not claim-eligible evidence.
 ## Progress since v0.32
 
 The v0.32 audit named sharp joint stochastic policy complexity as the next
-load-bearing obligation. Development work now supplies five pieces.
+load-bearing obligation. Development work now supplies six pieces.
 
 ### 1. Decision quotient
 
@@ -79,6 +79,19 @@ The upper construction is minimal only on its frozen midpoint-aligned count
 grid. It assumes known independent Bernoulli laws and does not provide
 adaptive stopping.
 
+### 6. Total query-span gate
+
+Any proposed probe operator now receives a total exact verdict. It passes
+only when its row space contains the complete decision row space. Failure
+returns a coupling perturbation invisible to every admitted query but visible
+to the policy effect.
+
+The preferred factorized basis retains 18 probes and lowers worst-case
+infinity-norm reconstruction amplification from 12 to 8. All 18
+factorized leave-one-out controls and all 48 entrywise leave-one-out controls
+fail with one missing dimension. A six-probe diagonal shortcut misses twelve
+dimensions.
+
 ## What remains load-bearing
 
 ### A. Coupling acquisition
@@ -88,7 +101,8 @@ Compute its exact row space before outcomes. The grammar is adequate only if
 its induced rows span the 18-dimensional decision quotient; otherwise provide
 an explicit decision-changing indistinguishability witness.
 
-The factorized 18-probe basis is now the candidate primary grammar. A
+The noise-optimized factorized 18-probe basis is now the candidate primary
+grammar. A
 prospective run must establish that its behavioral-cell perturbations and
 policy-contrast readouts are implementable and remain linear at the admitted
 norms.

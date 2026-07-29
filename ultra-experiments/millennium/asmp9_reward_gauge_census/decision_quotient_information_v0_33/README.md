@@ -25,7 +25,11 @@ Read:
 - [`COMPOSITE_PROBE_DESIGN_v0_33_1.md`](COMPOSITE_PROBE_DESIGN_v0_33_1.md)
   for the 18-probe factorized basis and 48-query entrywise comparator; and
 - [`FINITE_UPPER_BOUND_DEVELOPMENT_v0_33_2.md`](FINITE_UPPER_BOUND_DEVELOPMENT_v0_33_2.md)
-  for an exact uniformly error-controlled fixed rule on the native registry.
+  for an exact uniformly error-controlled fixed rule on the native registry;
+  and
+- [`QUERY_SPAN_CERTIFICATE_v0_33_3.md`](QUERY_SPAN_CERTIFICATE_v0_33_3.md)
+  for the fail-closed access gate, exact witnesses, and the noise-optimized
+  factorized basis.
 
 Run the planted channel-necessity control with:
 
@@ -46,6 +50,8 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_composite_probe_development.py
 
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_finite_upper_bound_development.py
+
+python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_query_span_development.py
 ```
 
 The fixture is intentionally small. Its role is to verify that:
@@ -73,3 +79,10 @@ On the finite stochastic side, an exact midpoint-grid search now supplies a
 hypothesis. This brackets the base-instance change-of-measure lower bound
 within a factor of about `2.16`, but assumes known independent Bernoulli laws
 and is neither adaptive nor globally optimized.
+
+The query-span successor turns any proposed physical grammar into a total
+decision: full span with a reconstruction error multiplier, or failure with
+an invisible-but-policy-changing coupling witness. The preferred exact basis
+keeps 18 probes while reducing worst-case infinity-norm amplification from
+12 to 8. Physical availability remains untested; the v0.34 protocol is still
+a draft.

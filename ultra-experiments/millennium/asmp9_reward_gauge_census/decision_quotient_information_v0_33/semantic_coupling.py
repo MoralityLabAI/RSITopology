@@ -157,6 +157,53 @@ def rational_rank(values: Sequence[Sequence]) -> int:
     return row
 
 
+def inverse(values: Sequence[Sequence]) -> Matrix:
+    source = matrix(values)
+    dimension = len(source)
+    if len(source[0]) != dimension:
+        raise ValueError("inverse requires a square matrix")
+    work = [
+        [
+            *source[row],
+            *(
+                Fraction(int(row == column))
+                for column in range(dimension)
+            ),
+        ]
+        for row in range(dimension)
+    ]
+    for column in range(dimension):
+        pivot = next(
+            (
+                candidate
+                for candidate in range(column, dimension)
+                if work[candidate][column]
+            ),
+            None,
+        )
+        if pivot is None:
+            raise ValueError("matrix is singular")
+        work[column], work[pivot] = work[pivot], work[column]
+        scale = work[column][column]
+        work[column] = [value / scale for value in work[column]]
+        for row in range(dimension):
+            if row == column or not work[row][column]:
+                continue
+            factor = work[row][column]
+            work[row] = [
+                value - factor * pivot_value
+                for value, pivot_value in zip(
+                    work[row],
+                    work[column],
+                    strict=True,
+                )
+            ]
+    return tuple(
+        tuple(row[dimension:])
+        for row in work
+    )
+
+
 def policy_difference_matrix(
     policies: Sequence[Sequence],
     reference: int = 0,
