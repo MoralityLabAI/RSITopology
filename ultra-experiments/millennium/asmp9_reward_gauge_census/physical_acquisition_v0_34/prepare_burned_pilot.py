@@ -27,7 +27,7 @@ from robust_probe_design import minimum_linf_factorized_probe_design  # noqa: E4
 
 
 SCHEMA_VERSION = (
-    "asmp9_physical_acquisition_burned_pilot_registration_v0_34_1"
+    "asmp9_physical_acquisition_burned_pilot_registration_v0_34_2"
 )
 DEFAULT_MODEL = Path(
     r"D:\Research_Engine\models\Qwen3.5\Qwen3.5-0.8B"
@@ -38,7 +38,7 @@ DEFAULT_SERVER = Path(
     r"\payload\llama-server.exe"
 )
 DEFAULT_OUTPUT = Path(
-    r"D:\Research_Engine\runs\asmp9_physical_acquisition_burned_pilot_v0_34_1"
+    r"D:\Research_Engine\runs\asmp9_physical_acquisition_burned_pilot_v0_34_2"
 )
 DEFAULT_CLEANUP = Path(
     r"C:\Users\patri\.codex\skills\hrm-trainer\scripts"
@@ -192,7 +192,7 @@ def build_registration(args: argparse.Namespace) -> dict[str, Any]:
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "registration_id": (
-            "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-v0.34.1"
+            "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-v0.34.2"
         ),
         "status": "burned_pilot_registered_not_run",
         "prepared_utc": time.strftime(
@@ -272,6 +272,7 @@ def build_registration(args: argparse.Namespace) -> dict[str, Any]:
             "io_sustained_samples": 3,
             "timeout_seconds": 7200,
             "gpu_allowance_mb": 1600,
+            "gpu_clean_start_ceiling_mb": 64,
             "checkpoint_every_seconds": 60,
             "swap_bytes": 0,
             "thermal_pause_temperature_c": 84,
@@ -359,7 +360,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--registration",
         type=Path,
-        default=HERE / "burned_pilot_registration_v0_34_1.json",
+        default=HERE / "burned_pilot_registration_v0_34_2.json",
     )
     parser.add_argument("--model", type=Path, default=DEFAULT_MODEL)
     parser.add_argument("--server", type=Path, default=DEFAULT_SERVER)

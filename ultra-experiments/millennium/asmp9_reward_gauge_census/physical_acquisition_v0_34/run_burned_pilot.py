@@ -27,7 +27,7 @@ from pilot_design import CHOICE_LABELS, canonical_bytes, sha256_bytes  # noqa: E
 
 
 REGISTRATION_SCHEMA = (
-    "asmp9_physical_acquisition_burned_pilot_registration_v0_34_1"
+    "asmp9_physical_acquisition_burned_pilot_registration_v0_34_2"
 )
 MANIFEST_SCHEMA = "asmp9_physical_acquisition_prompt_manifest_v0_34_1"
 RECORD_SCHEMA = "asmp9_physical_acquisition_record_v0_34_1"

@@ -8,14 +8,14 @@ param(
 $ErrorActionPreference = "Stop"
 $registrationPath = (Resolve-Path -LiteralPath $RegistrationPath).Path
 $spec = Get-Content -LiteralPath $registrationPath -Raw | ConvertFrom-Json
-if ($spec.schema_version -ne "asmp9_physical_acquisition_burned_pilot_registration_v0_34_1") {
+if ($spec.schema_version -ne "asmp9_physical_acquisition_burned_pilot_registration_v0_34_2") {
   throw "Unsupported ASMP-9 run-spec schema"
 }
 $caps = $spec.resource_caps
 foreach ($field in @(
   "memory_mb","cpu_percent","io_mb_s","io_sustained_samples",
   "timeout_seconds","gpu_allowance_mb","checkpoint_every_seconds",
-  "hard_abort_temperature_c"
+  "hard_abort_temperature_c","gpu_clean_start_ceiling_mb"
 )) {
   if ([double]$caps.$field -le 0) { throw "Missing positive cap: $field" }
 }
@@ -108,26 +108,18 @@ function Get-TreeMetrics([int]$RootId) {
   return [ordered]@{ ids=$ids; private_mb=$privateBytes/1MB; io_bytes=$ioBytes }
 }
 
-function Get-GpuSnapshot([int[]]$OwnedIds) {
+function Get-GpuSnapshot {
   $used = 0.0
   $temperature = 0.0
   if (Get-Command nvidia-smi -ErrorAction SilentlyContinue) {
-    $tempLine = @(& nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits 2>$null)[0]
-    [void][double]::TryParse(([string]$tempLine).Trim(), [ref]$temperature)
-    foreach ($line in @(& nvidia-smi --query-compute-apps=pid,used_memory --format=csv,noheader,nounits 2>$null)) {
-      $parts = $line -split ","
-      if ($parts.Count -ge 2) {
-        $processId = 0
-        $memory = 0.0
-        if ([int]::TryParse($parts[0].Trim(), [ref]$processId) -and
-            [double]::TryParse($parts[1].Trim(), [ref]$memory) -and
-            $OwnedIds -contains $processId) {
-          $used += $memory
-        }
-      }
+    $line = @(& nvidia-smi --query-gpu=memory.used,temperature.gpu --format=csv,noheader,nounits 2>$null)[0]
+    $parts = $line -split ","
+    if ($parts.Count -ge 2) {
+      [void][double]::TryParse($parts[0].Trim(), [ref]$used)
+      [void][double]::TryParse($parts[1].Trim(), [ref]$temperature)
     }
   }
-  return [ordered]@{ used_mb=$used; temperature_c=$temperature }
+  return [ordered]@{ total_used_mb=$used; temperature_c=$temperature }
 }
 
 Add-Type -TypeDefinition @'
@@ -175,13 +167,19 @@ $exitCode = $null
 $peakRam = 0.0
 $peakIo = 0.0
 $peakGpu = 0.0
+$peakGpuTotal = 0.0
 $peakTemperature = 0.0
 $ramSamples = New-Object System.Collections.Generic.List[double]
 $cpuSamples = New-Object System.Collections.Generic.List[double]
+$gpuBaseline = [ordered]@{ total_used_mb=0.0; temperature_c=0.0 }
 $started = Get-Date
 try {
   if (-not [Asmp9V034Job]::ConfigureMemory($job, $memoryBytes)) { throw "Failed to set memory cap" }
   if (-not [Asmp9V034Job]::ConfigureCpu($job, $cpuRate)) { throw "Failed to set CPU cap" }
+  $gpuBaseline = Get-GpuSnapshot
+  if ([double]$gpuBaseline.total_used_mb -gt [double]$caps.gpu_clean_start_ceiling_mb) {
+    throw "GPU is not clean at start: $($gpuBaseline.total_used_mb) MB used"
+  }
   Write-WrapperEvent @{event="start";execution_class=$ExecutionClass;caps=$caps;command=$command}
   $env:ASMP9_V034_HARD_CAP_ACTIVE = $currentWrapperHash
   $proc = Start-Process -FilePath $python -ArgumentList $arguments -PassThru -WindowStyle Hidden -RedirectStandardOutput $stdoutPath -RedirectStandardError $stderrPath
@@ -203,16 +201,21 @@ try {
     $ioRate = [math]::Max(0.0, ($tree.io_bytes - $previousTree.io_bytes) / 1MB / $elapsed)
     $cpuNow = $proc.TotalProcessorTime.TotalSeconds
     $cpuPct = 100.0 * [math]::Max(0.0, $cpuNow - $previousCpu) / $elapsed / [Environment]::ProcessorCount
-    $gpu = Get-GpuSnapshot $tree.ids
+    $gpu = Get-GpuSnapshot
+    $gpuDelta = [math]::Max(
+      0.0,
+      [double]$gpu.total_used_mb - [double]$gpuBaseline.total_used_mb
+    )
     $peakRam = [math]::Max($peakRam, [double]$tree.private_mb)
     $peakIo = [math]::Max($peakIo, $ioRate)
-    $peakGpu = [math]::Max($peakGpu, [double]$gpu.used_mb)
+    $peakGpu = [math]::Max($peakGpu, $gpuDelta)
+    $peakGpuTotal = [math]::Max($peakGpuTotal, [double]$gpu.total_used_mb)
     $peakTemperature = [math]::Max($peakTemperature, [double]$gpu.temperature_c)
     $ramSamples.Add([double]$tree.private_mb)
     $cpuSamples.Add($cpuPct)
     if ($ioRate -gt [double]$caps.io_mb_s) { $ioBreaches++ } else { $ioBreaches = 0 }
     if ($ioBreaches -ge [int]$caps.io_sustained_samples) { $abortReason = "sustained_io_cap_exceeded" }
-    if ([double]$gpu.used_mb -gt [double]$caps.gpu_allowance_mb) { $abortReason = "gpu_allowance_exceeded" }
+    if ($gpuDelta -gt [double]$caps.gpu_allowance_mb) { $abortReason = "gpu_allowance_exceeded" }
     if ([double]$gpu.temperature_c -ge [double]$caps.hard_abort_temperature_c) { $abortReason = "hard_temperature_abort" }
     if (($now - $started).TotalSeconds -gt [double]$caps.timeout_seconds) { $abortReason = "timeout" }
     if ($abortReason) {
@@ -255,6 +258,9 @@ try {
     peak_io_mb_s = [math]::Round($peakIo,3)
     cpu_pct = $(if ($cpuSamples.Count) {[math]::Round(($cpuSamples | Measure-Object -Average).Average,3)} else {0})
     peak_gpu_mb = [math]::Round($peakGpu,3)
+    gpu_memory_accounting = "whole-device delta from registered clean-start ceiling"
+    gpu_baseline_used_mb = [math]::Round([double]$gpuBaseline.total_used_mb,3)
+    peak_gpu_total_used_mb = [math]::Round($peakGpuTotal,3)
     peak_gpu_temperature_c = [math]::Round($peakTemperature,1)
     elapsed_seconds = [math]::Round(((Get-Date)-$started).TotalSeconds,3)
     cleanup_summary = $cleanupPath

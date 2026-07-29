@@ -198,5 +198,7 @@ def test_live_runner_requires_registered_job_wrapper() -> None:
     assert "ConfigureCpu" in wrapper
     assert "sustained_io_cap_exceeded" in wrapper
     assert "hard_temperature_abort" in wrapper
+    assert "whole-device delta" in wrapper
+    assert "gpu_clean_start_ceiling_mb" in wrapper
     assert "post_run_memory_cleanup.ps1" not in wrapper
     assert "cleanup_script" in wrapper

@@ -4,7 +4,9 @@ This directory turns the exact v0.33 coupling quotient into a prospective
 model-facing calibration experiment. Version `v0.34` was sealed and stopped
 at its engineering smoke because Qwen's `<think>` control token appeared
 outside the intended answer alphabet. Version `v0.34.1` preserves that abort
-and uses the model's registered no-thinking chat prefix.
+and uses the model's registered no-thinking chat prefix. Its functional smoke
+passed, but PID-scoped CUDA memory reporting returned a false zero; v0.34.2
+therefore gates a clean-start whole-device memory delta before the full pilot.
 
 ## Scientific sequence
 
@@ -32,7 +34,7 @@ The preparer refuses unrelated dirty worktree state and writes:
 
 ```text
 burned_pilot_prompt_manifest_v0_34_1.json
-burned_pilot_registration_v0_34_1.json
+burned_pilot_registration_v0_34_2.json
 ```
 
 Commit those files before any model response is read.
@@ -42,7 +44,7 @@ Commit those files before any model response is read.
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   scripts/run_asmp9_v034_jobobject.ps1 `
-  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_1.json `
+  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_2.json `
   -ExecutionClass smoke `
   -OutputDir D:\Research_Engine\runs\asmp9_physical_acquisition_smoke_v0_34 `
   -SmokeRowsPerType 2
@@ -56,7 +58,7 @@ pilot.
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File `
   scripts/run_asmp9_v034_jobobject.ps1 `
-  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_1.json `
+  -RegistrationPath ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_2.json `
   -ExecutionClass burned_pilot
 ```
 

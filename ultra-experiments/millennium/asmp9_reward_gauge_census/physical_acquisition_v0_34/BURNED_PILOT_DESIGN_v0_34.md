@@ -23,6 +23,16 @@ documented chat template and inserts the explicit empty-thinking prefix:
 The answer distribution is still required to contain exactly `A` and `B`.
 No control token is discarded, renormalized, or interpreted as an answer.
 
+### v0.34.2 resource-receipt amendment
+
+The v0.34.1 functional smoke passed all 12 A/B receipts with zero cold-start
+delta, but this llama.cpp/CUDA build did not expose reliable PID-scoped VRAM
+in `nvidia-smi --query-compute-apps`. The wrapper reported a false zero.
+Version v0.34.2 requires whole-device use at or below 64 MB before launch and
+enforces the 1,600 MB allowance on the increase from that baseline. This is
+conservative under unrelated GPU activity and cannot turn excess use into a
+pass.
+
 The exact v0.33 result leaves one empirical question before a physical
 quotient claim can be registered: can the preferred 18 scalar probes be
 implemented as stable model-facing choices with a meaningful local
