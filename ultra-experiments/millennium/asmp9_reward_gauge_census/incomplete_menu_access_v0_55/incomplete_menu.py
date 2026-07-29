@@ -231,7 +231,7 @@ def rum_completion(
     partial: Mapping[Event, Q],
     domain: Sequence[Menu],
 ) -> Dict[Ranking, Q] | None:
-    """Exact convex-hull feasibility by exhaustive basic solutions."""
+    """Return the average of all exact basic feasible ranking mixtures."""
 
     domain = tuple(domain)
     if not normalized(partial, domain):
@@ -242,6 +242,7 @@ def rum_completion(
     reduced_matrix = [matrix[i] for i in row_indices]
     reduced_rhs = [rhs[i] for i in row_indices]
 
+    feasible: list[Tuple[Q, ...]] = []
     for columns in combinations(range(len(RANKINGS)), rank):
         square = [
             [reduced_matrix[row][column] for column in columns]
@@ -261,8 +262,17 @@ def rum_completion(
             == target
             for row, target in zip(matrix, rhs)
         ):
-            return dict(zip(RANKINGS, candidate))
-    return None
+            candidate_tuple = tuple(candidate)
+            if candidate_tuple not in feasible:
+                feasible.append(candidate_tuple)
+    if not feasible:
+        return None
+    averaged = tuple(
+        sum((candidate[index] for candidate in feasible), Q(0))
+        / len(feasible)
+        for index in range(len(RANKINGS))
+    )
+    return dict(zip(RANKINGS, averaged))
 
 
 def full_kernel_from_mixture(mixture: Mapping[Ranking, Q]) -> Kernel:

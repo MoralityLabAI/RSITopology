@@ -14,6 +14,7 @@ from incomplete_menu import (
     compatible_tiers,
     domain_name,
     full_grid,
+    full_kernel_from_mixture,
     full_status,
     menu_domains,
     nonluce_rum_completion,
@@ -34,6 +35,7 @@ def main() -> None:
     full_kernels = tuple(full_grid())
     rows = []
     construction_failures = 0
+    positive_rum_witness_failures = 0
 
     for domain in menu_domains():
         unique = {}
@@ -51,6 +53,15 @@ def main() -> None:
             rum = rum_completion(partial, domain)
             scalar_compatible += weights is not None
             rum_compatible += rum is not None
+            if rum is not None:
+                completed_kernel = full_kernel_from_mixture(rum)
+                completed_rum = full_status(completed_kernel)
+                completed_values = completed_kernel.values()
+                positive_rum_witness_failures += (
+                    any(value <= 0 for value in completed_values)
+                    or completed_rum
+                    == "no_random_utility_representation"
+                )
 
             if set(domain) != set(ALL_MENUS):
                 try:
@@ -89,6 +100,7 @@ def main() -> None:
         "domain_count": len(rows),
         "proper_domain_count": sum(not row["complete"] for row in rows),
         "construction_failures": construction_failures,
+        "positive_rum_witness_failures": positive_rum_witness_failures,
         "domains": rows,
         "elapsed_seconds": round(elapsed, 6),
         "resident_bytes": process.memory_info().rss,

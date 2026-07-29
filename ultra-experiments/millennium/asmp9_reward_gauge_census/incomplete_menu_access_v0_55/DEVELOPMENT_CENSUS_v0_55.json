@@ -200,9 +200,10 @@
       "unique_projection_count": 1250
     }
   ],
-  "elapsed_seconds": 11.032145,
+  "elapsed_seconds": 13.966077,
   "full_grid_kernel_count": 1250,
+  "positive_rum_witness_failures": 0,
   "proper_domain_count": 14,
-  "resident_bytes": 27160576,
+  "resident_bytes": 26841088,
   "status": "development_only"
 }
