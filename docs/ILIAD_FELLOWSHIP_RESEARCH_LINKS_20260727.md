@@ -182,6 +182,14 @@ as transformer evidence.
   direct SCC-versus-bond checks; exact finite-budget and behavioral problems
   remain open.
 
+- [ASMP-9: exact finite-budget cactus design](../ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/PUBLIC_SUMMARY_v0_19_2.md)
+  Cactus-core liveness factorizes over cycle blocks, reducing exact integer
+  trial allocation to a Bellman recursion. Two resource-gated attempts remain
+  visible; a proof-equivalent memoized successor passed all ten registered
+  gates on larger fresh cells in 50.57 seconds. Arbitrary cyclic cores,
+  adaptive allocation, response misspecification, and behavioral value
+  identification remain open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
