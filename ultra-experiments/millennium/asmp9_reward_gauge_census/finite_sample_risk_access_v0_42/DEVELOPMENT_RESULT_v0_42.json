@@ -1,0 +1,99 @@
+{
+  "alpha": 0.05,
+  "analytic_sample_floors_per_target_query": {
+    "adaptive_pass": 1033,
+    "open_loop_fail": 5985
+  },
+  "horizon": 2,
+  "phase": "burned_centered_calibration",
+  "query_count": 3,
+  "rows": [
+    {
+      "arms": {
+        "adaptive": {
+          "decision": "inconclusive",
+          "interval": {
+            "confidence": 0.95,
+            "half_width": 0.07061848600329781,
+            "lower": 0.381233365848554,
+            "point": 0.45185185185185184,
+            "upper": 0.5224703378551497
+          }
+        },
+        "open_loop": {
+          "decision": "inconclusive",
+          "interval": {
+            "confidence": 0.95,
+            "half_width": 0.07061848600329781,
+            "lower": 0.4493815139967022,
+            "point": 0.52,
+            "upper": 0.5906184860032979
+          }
+        }
+      },
+      "pooled_samples_per_query": 1920,
+      "samples_per_target_query": 480,
+      "simultaneous_query_tv_radius": 0.03530924300164889
+    },
+    {
+      "arms": {
+        "adaptive": {
+          "decision": "pass",
+          "interval": {
+            "confidence": 0.95,
+            "half_width": 0.022331526068314202,
+            "lower": 0.4295203257835376,
+            "point": 0.45185185185185184,
+            "upper": 0.47418337792016607
+          }
+        },
+        "open_loop": {
+          "decision": "inconclusive",
+          "interval": {
+            "confidence": 0.95,
+            "half_width": 0.022331526068314202,
+            "lower": 0.4976684739316858,
+            "point": 0.52,
+            "upper": 0.5423315260683144
+          }
+        }
+      },
+      "pooled_samples_per_query": 19200,
+      "samples_per_target_query": 4800,
+      "simultaneous_query_tv_radius": 0.011165763034157098
+    },
+    {
+      "arms": {
+        "adaptive": {
+          "decision": "pass",
+          "interval": {
+            "confidence": 0.95,
+            "half_width": 0.007061848600329781,
+            "lower": 0.444790003251522,
+            "point": 0.45185185185185184,
+            "upper": 0.45891370045218166
+          }
+        },
+        "open_loop": {
+          "decision": "fail",
+          "interval": {
+            "confidence": 0.95,
+            "half_width": 0.007061848600329781,
+            "lower": 0.5129381513996701,
+            "point": 0.52,
+            "upper": 0.5270618486003299
+          }
+        }
+      },
+      "pooled_samples_per_query": 192000,
+      "samples_per_target_query": 48000,
+      "simultaneous_query_tv_radius": 0.0035309243001648894
+    }
+  ],
+  "targets": 4,
+  "tolerance": "1/2",
+  "true_deficiencies": {
+    "adaptive": "61/135",
+    "open_loop": "13/25"
+  }
+}
