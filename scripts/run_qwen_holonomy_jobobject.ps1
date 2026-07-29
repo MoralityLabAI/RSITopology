@@ -10,9 +10,11 @@ if ($spec.schema_version -notin @(
   "qwen_holonomy_geometry_analysis_authorization_v0_1",
   "qwen_holonomy_jobobject_probe_v0_1",
   "godel_capture_authorization_v0_1",
-  "qwen_projector_tomography_authorization_v0_1"
+  "qwen_projector_tomography_authorization_v0_1",
+  "asmp9_physical_dynamic_bridge_authorization_v0_67"
 )) { throw "Unsupported run-spec schema" }
 $isGodelCapture = $spec.schema_version -eq "godel_capture_authorization_v0_1"
+$isAsmp9DynamicBridge = $spec.schema_version -eq "asmp9_physical_dynamic_bridge_authorization_v0_67"
 $caps = $spec.resource_caps
 foreach ($field in @("memory_mb", "cpu_percent", "io_mb_s", "timeout_seconds", "gpu_allowance_mb", "checkpoint_every_seconds")) {
   if ([double]$caps.$field -le 0) { throw "Missing positive cap: $field" }
@@ -20,7 +22,7 @@ foreach ($field in @("memory_mb", "cpu_percent", "io_mb_s", "timeout_seconds", "
 if ([int]$caps.swap_bytes -ne 0) { throw "Only zero registered swap is accepted" }
 $freePhysicalMbAtStart = 0.0
 $minimumFreeMemoryMb = 0.0
-if ($isGodelCapture) {
+if ($isGodelCapture -or $isAsmp9DynamicBridge) {
   foreach ($field in @("host_reserve_mb", "minimum_free_memory_mb")) {
     if ([double]$caps.$field -le 0) { throw "Missing positive cap: $field" }
   }
@@ -45,18 +47,30 @@ if ($isGodelCapture) {
     throw "Authorized wrapper hash differs from executing wrapper"
   }
 
-  $validationArtifact = $spec.hard_cap_validation_receipt
-  if ($null -eq $validationArtifact) { throw "Godel authorization lacks hard-cap validation receipt" }
-  $validationPath = [System.IO.Path]::GetFullPath([string]$validationArtifact.path)
-  if (-not (Test-Path -LiteralPath $validationPath)) { throw "Hard-cap validation receipt missing" }
-  $validationHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $validationPath).Hash.ToLowerInvariant()
-  if ([string]$validationArtifact.sha256 -ne $validationHash) { throw "Hard-cap validation receipt hash mismatch" }
-  $validation = Get-Content -LiteralPath $validationPath -Raw | ConvertFrom-Json
-  if ($validation.schema_version -ne "qwen_holonomy_hard_cap_validation_v0_1" -or $validation.hard_cap_validation_status -ne "passed") {
-    throw "Hard-cap validation receipt is not a registered pass"
+  if ($isGodelCapture) {
+    $validationArtifact = $spec.hard_cap_validation_receipt
+    if ($null -eq $validationArtifact) { throw "Godel authorization lacks hard-cap validation receipt" }
+    $validationPath = [System.IO.Path]::GetFullPath([string]$validationArtifact.path)
+    if (-not (Test-Path -LiteralPath $validationPath)) { throw "Hard-cap validation receipt missing" }
+    $validationHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $validationPath).Hash.ToLowerInvariant()
+    if ([string]$validationArtifact.sha256 -ne $validationHash) { throw "Hard-cap validation receipt hash mismatch" }
+    $validation = Get-Content -LiteralPath $validationPath -Raw | ConvertFrom-Json
+    if ($validation.schema_version -ne "qwen_holonomy_hard_cap_validation_v0_1" -or $validation.hard_cap_validation_status -ne "passed") {
+      throw "Hard-cap validation receipt is not a registered pass"
+    }
+    if ([string]$validation.wrapper.sha256 -ne $currentWrapperHash) {
+      throw "Hard-cap validation receipt does not bind the executing wrapper"
+    }
   }
-  if ([string]$validation.wrapper.sha256 -ne $currentWrapperHash) {
-    throw "Hard-cap validation receipt does not bind the executing wrapper"
+  if ($isAsmp9DynamicBridge) {
+    $registeredReceipt = $spec.registration
+    if ($null -eq $registeredReceipt) { throw "ASMP-9 authorization lacks registration" }
+    $registeredPath = [System.IO.Path]::GetFullPath([string]$registeredReceipt.path)
+    if (-not (Test-Path -LiteralPath $registeredPath)) { throw "ASMP-9 registration missing" }
+    $registeredHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $registeredPath).Hash.ToLowerInvariant()
+    if ([string]$registeredReceipt.sha256 -ne $registeredHash) {
+      throw "ASMP-9 registration hash mismatch"
+    }
   }
 }
 $command = @($spec.exact_inner_command)
@@ -73,12 +87,12 @@ $pidPath = Join-Path $runDir "owned_pids.json"
 $cleanupPath = Join-Path $runDir "cleanup_summary.json"
 $cleanupScript = [string]$spec.cleanup_script.path
 if (-not (Test-Path -LiteralPath $cleanupScript)) { throw "Cleanup script missing" }
-if ($isGodelCapture) {
+if ($isGodelCapture -or $isAsmp9DynamicBridge) {
   $cleanupHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $cleanupScript).Hash.ToLowerInvariant()
   if ([string]$spec.cleanup_script.sha256 -ne $cleanupHash) {
     throw "Authorized cleanup script hash mismatch"
   }
-  if ([string]$validation.cleanup.sha256 -ne $cleanupHash) {
+  if ($isGodelCapture -and [string]$validation.cleanup.sha256 -ne $cleanupHash) {
     throw "Hard-cap validation receipt does not bind the cleanup script"
   }
 }
