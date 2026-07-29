@@ -1,0 +1,169 @@
+{
+  "elapsed_seconds": 38.308140599983744,
+  "phase": "burned_development",
+  "row_count": 20,
+  "rows": [
+    {
+      "gauge_assignment": "q0",
+      "high": "2/3",
+      "leakage_radius": "1/6",
+      "low": "1/3",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q0_complement",
+      "high": "2/3",
+      "leakage_radius": "1/6",
+      "low": "1/3",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q1",
+      "high": "2/3",
+      "leakage_radius": "1/6",
+      "low": "1/3",
+      "ordinary_substitution_deficiency": "1/6",
+      "relative_substitution_deficiency": "1/6"
+    },
+    {
+      "gauge_assignment": "q2",
+      "high": "2/3",
+      "leakage_radius": "1/6",
+      "low": "1/3",
+      "ordinary_substitution_deficiency": "2/27",
+      "relative_substitution_deficiency": "2/27"
+    },
+    {
+      "gauge_assignment": "constant",
+      "high": "2/3",
+      "leakage_radius": "0",
+      "low": "1/3",
+      "ordinary_substitution_deficiency": "1/6",
+      "relative_substitution_deficiency": "1/6"
+    },
+    {
+      "gauge_assignment": "q0",
+      "high": "3/4",
+      "leakage_radius": "1/4",
+      "low": "1/4",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q0_complement",
+      "high": "3/4",
+      "leakage_radius": "1/4",
+      "low": "1/4",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q1",
+      "high": "3/4",
+      "leakage_radius": "1/4",
+      "low": "1/4",
+      "ordinary_substitution_deficiency": "1/4",
+      "relative_substitution_deficiency": "1/4"
+    },
+    {
+      "gauge_assignment": "q2",
+      "high": "3/4",
+      "leakage_radius": "1/4",
+      "low": "1/4",
+      "ordinary_substitution_deficiency": "3/32",
+      "relative_substitution_deficiency": "3/32"
+    },
+    {
+      "gauge_assignment": "constant",
+      "high": "3/4",
+      "leakage_radius": "0",
+      "low": "1/4",
+      "ordinary_substitution_deficiency": "1/4",
+      "relative_substitution_deficiency": "1/4"
+    },
+    {
+      "gauge_assignment": "q0",
+      "high": "4/5",
+      "leakage_radius": "3/10",
+      "low": "1/5",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q0_complement",
+      "high": "4/5",
+      "leakage_radius": "3/10",
+      "low": "1/5",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q1",
+      "high": "4/5",
+      "leakage_radius": "3/10",
+      "low": "1/5",
+      "ordinary_substitution_deficiency": "3/10",
+      "relative_substitution_deficiency": "3/10"
+    },
+    {
+      "gauge_assignment": "q2",
+      "high": "4/5",
+      "leakage_radius": "3/10",
+      "low": "1/5",
+      "ordinary_substitution_deficiency": "12/125",
+      "relative_substitution_deficiency": "12/125"
+    },
+    {
+      "gauge_assignment": "constant",
+      "high": "4/5",
+      "leakage_radius": "0",
+      "low": "1/5",
+      "ordinary_substitution_deficiency": "3/10",
+      "relative_substitution_deficiency": "3/10"
+    },
+    {
+      "gauge_assignment": "q0",
+      "high": "3/5",
+      "leakage_radius": "1/10",
+      "low": "2/5",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q0_complement",
+      "high": "3/5",
+      "leakage_radius": "1/10",
+      "low": "2/5",
+      "ordinary_substitution_deficiency": "0",
+      "relative_substitution_deficiency": "0"
+    },
+    {
+      "gauge_assignment": "q1",
+      "high": "3/5",
+      "leakage_radius": "1/10",
+      "low": "2/5",
+      "ordinary_substitution_deficiency": "1/10",
+      "relative_substitution_deficiency": "1/10"
+    },
+    {
+      "gauge_assignment": "q2",
+      "high": "3/5",
+      "leakage_radius": "1/10",
+      "low": "2/5",
+      "ordinary_substitution_deficiency": "6/125",
+      "relative_substitution_deficiency": "6/125"
+    },
+    {
+      "gauge_assignment": "constant",
+      "high": "3/5",
+      "leakage_radius": "0",
+      "low": "2/5",
+      "ordinary_substitution_deficiency": "1/10",
+      "relative_substitution_deficiency": "1/10"
+    }
+  ],
+  "scientific_content_sha256": "4444d986e8948596a4ec236ab08503f063e95532c8f9988a69eb671de07bf1f4",
+  "working_set_bytes_at_completion": 73715712
+}
