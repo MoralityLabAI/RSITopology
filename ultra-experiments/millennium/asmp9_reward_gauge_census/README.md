@@ -11,8 +11,8 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.58 development](RESOLUTION_OBLIGATION_MATRIX_v0_58.md)
-records the full program boundary while keeping the unregistered v0.57-v0.58
+[resolution-obligation matrix after v0.59 development](RESOLUTION_OBLIGATION_MATRIX_v0_59.md)
+records the full program boundary while keeping the unregistered v0.57-v0.59
 lane distinct from verified evidence. The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
 classifies complete three-alternative kernels into a Luce scalar, a weaker
@@ -45,6 +45,18 @@ explicit three-alternative RUM/non-RUM pair gives a matching
 `Omega(gamma^-2)` margin exponent, while leaving dimension, conditioning, and
 constant optimality open. The result is development-only and the conservative
 counts are not minimax rates.
+
+The unregistered
+[adversarial-contamination radius v0.59 development](contamination_radius_v0_59/DEVELOPMENT_RESULT_v0_59.md)
+then replaces the clean response law by a fixed per-menu Huber mixture. The
+minimum maximum-menu TV distance between different compact tier fibers gives
+the exact population robustness radius. A bounded-context inverse modulus
+supplies a certified positive region, while an explicit margin-promised
+RUM/non-RUM pair supplies a constructive equality witness. The conservative
+sampling corollary keeps contamination bias and statistical error in separate
+terms. This is classical robust-testing geometry specialized to the ASMP-9
+object, remains development-only, and does not cover adaptive replacement,
+menu endogeneity, or strategic responses.
 
 ## Prereveal tests
 
