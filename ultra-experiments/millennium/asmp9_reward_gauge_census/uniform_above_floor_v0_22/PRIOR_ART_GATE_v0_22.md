@@ -16,7 +16,11 @@ Status: development-only.
    *Mathematical Proceedings of the Cambridge Philosophical Society* 108(1)
    (1990), 35-53.  Their dichotomy supplies #P-hardness at every registered
    point on `H_-1`.
-3. Fourientation and partial-orientation Tutte expansions are an established
+3. Tutte multiplicativity over graph blocks supplies the localization step:
+   an oracle for finite simple biconnected blocks, together with the explicit
+   bridge factor, evaluates a general simple graph by a polynomial-time
+   block-decomposition Turing reduction.
+4. Fourientation and partial-orientation Tutte expansions are an established
    literature.  No new weighted graph polynomial is claimed.
 
 ## Residual ASMP contribution
@@ -39,7 +43,8 @@ uniform count, including the minimal above-floor cell `r=2`.
 
 Allowed:
 
-- exact evaluation of a fixed uniform allocation is #P-hard;
+- exact evaluation of a fixed uniform allocation on finite simple
+  biconnected blocks is #P-hard;
 - the fixed-`r` microtrial numerator is #P-complete under polynomial-time
   Turing reductions; and
 - the ASMP objective is a classical weighted partial-orientation
@@ -52,4 +57,3 @@ Forbidden:
 - uniform allocation is optimal on general biconnected blocks;
 - arbitrary nonuniform counts or endpoint probabilities are classified; or
 - ASMP-9 is resolved.
-

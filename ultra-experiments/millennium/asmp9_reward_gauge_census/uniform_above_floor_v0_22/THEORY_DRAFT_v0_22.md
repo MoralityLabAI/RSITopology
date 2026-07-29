@@ -78,6 +78,14 @@ exact Tutte evaluation at `(x_r,y_r)` #P-hard for every fixed `r`.
 The multiplicative prefactor in `F_G(r)` is nonzero and polynomial-time
 computable, so exact ASMP availability evaluation is #P-hard as well.
 
+This statement remains hard when the oracle domain is restricted to finite
+simple biconnected blocks.  Tutte evaluation factors over connected
+components and vertex-biconnected blocks, and a bridge contributes the
+explicit factor `x_r`.  Decomposing an arbitrary simple input graph into its
+blocks therefore gives a polynomial-time Turing reduction to
+biconnected-block evaluation.  This is a localization of the classical
+dichotomy, not a new complexity theorem.
+
 For fixed `r`, the numerator under common denominator `2^(r|E|)` counts fair
 binary trial matrices whose residual graph is live.  A trial matrix has
 polynomial length and liveness is polynomial-time checkable.  Hence the
@@ -103,4 +111,3 @@ It also does not classify arbitrary endpoint probabilities, nonuniform edge
 counts, approximation, adaptive allocation, dependence, misspecification,
 behavioral reward identification, general inverse reinforcement learning, or
 ASMP-9.
-
