@@ -22,6 +22,14 @@ state. The v0.68 development separates them.
 - `protocol_v0_68.json` and `SCIENTIFIC_PROTOCOL_v0_68.md` freeze the
   scientific object, scenario-level decision unit, exact `10/12` boundary,
   and separable local/global decisions.
+- `run_qwen_v068.py`, `analyze_v068.py`, and
+  `prepare_execution_registration.py` implement singleton resumable scoring,
+  write-once analysis, and construction-gated confirmation.
+- `validate_prereveal_v068.py` checks tokenizer/rendering contracts, exact job
+  lists, source/model hashes, and both synthetic quotient controls without
+  loading model weights.
+- `prime/` contains the cgroup/systemd hard-cap wrapper and PID-scoped cleanup;
+  `EXECUTION_RESOURCE_PLAN_v0_68.md` records the caps and abort semantics.
 - `SUCCESSOR_PROTOCOL_DRAFT_v0_68.md` preserves the design-stage rationale.
 - `PRIOR_ART_GATE_v0_68.md` places the mathematics under classical fixed
   effects and paired-comparison theory.
