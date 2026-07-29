@@ -130,6 +130,21 @@ not efficient optimization, finite-sample inference, channel uncertainty, or
 the remaining obligations in
 [the v0.41 matrix](RESOLUTION_OBLIGATION_MATRIX_v0_41.md).
 
+The prospectively registered
+[finite-sample risk-access result v0.42.1](finite_sample_risk_access_v0_42_1/RESULT_v0_42_1.md)
+then replaces known rational channel parameters with iid samples. A
+simultaneous channel-TV event propagates uniformly through every horizon-two
+policy tree and into strict pass/fail/inconclusive deficiency certificates.
+On 48,000 samples per target/query, adaptive four-class access passed while
+randomized open-loop access failed; both asymmetric group-loss modes passed,
+and all population deficiencies lay inside their intervals. The original
+v0.42 executor failed before sampling on rational-string parsing; the
+additive v0.42.1 repair preserved every scientific setting and passed all nine
+gates plus exact independent replay. This closes the finite iid confidence
+certificate, not matching minimax rates, strategic misspecification, efficient
+policy search, or the remaining obligations in
+[the v0.42 matrix](RESOLUTION_OBLIGATION_MATRIX_v0_42.md).
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
