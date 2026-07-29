@@ -72,12 +72,12 @@ phenomena. Real-model null and boundary results are reported as such.
 ### Value and reward identifiability
 
 - **[ASMP-9 resolution audit after
-  v0.28](ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_28.md)**:
+  v0.29](ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_29.md)**:
   a clause-by-clause audit of a long exact-mathematics program on reward gauge,
   ordinal access, finite-sample coherence, finite-MDP interventions, context
-  gluing, graph design, offset calibration, calibrated occupancy access, and
-  response-link misspecification. It distinguishes proved special cases from
-  the remaining general obligations.
+  gluing, graph design, offset calibration, calibrated occupancy access,
+  decision-relevant regret, and response-link misspecification. It
+  distinguishes proved special cases from the remaining general obligations.
 
 - **[Extended ASMP experiment
   progress](ultra-experiments/millennium/V0_2_EXPERIMENT_PROGRESS_v0_1.md)**:

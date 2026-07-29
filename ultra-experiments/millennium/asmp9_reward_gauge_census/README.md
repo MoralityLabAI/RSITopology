@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_28.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_29.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -223,3 +223,14 @@ consequence localizes each occupancy functional, after which
 is realized by one explicit deterministic finite MDP, but that existence
 construction does not show that a natural environment contains a stable
 cardinal numeraire.
+
+The [v0.29 decision-relevance result](decision_relevance_v0_29/PUBLIC_SUMMARY_v0_29.md)
+then checks whether an identified quotient is sufficient for its declared
+downstream use. A reward gauge is valid for the registered policy family
+exactly when every policy-occupancy difference annihilates it. Under that
+precondition, quotient reward error bounds policy regret, a strict directional
+margin certifies policy identity, and the v0.28 spectral error bound composes
+with policy-occupancy diameter. Positive reward scale preserves argmax while
+changing fixed-unit regret thresholds. This is a classical finite decision
+ledger, not evidence that the reward is correct, the policy family is safe, or
+ASMP-9 is resolved.
