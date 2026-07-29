@@ -94,8 +94,8 @@ def build_registration() -> dict[str, Any]:
             name: file_record(path)
             for name, path in DOCUMENT_PATHS.items()
         },
-        "frozen_universe": protocol["frozen_universe"],
-        "gates": protocol["gates"],
+        "frozen_universe": protocol["enumeration"],
+        "gates": protocol["fixed_gates"],
         "execution": {
             "command": (
                 "python ultra-experiments/millennium/"
