@@ -1,0 +1,31 @@
+{
+  "implementation_commit": "f6bb525ff62aea1c9d2c3c1674090063c819a65b",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/protocol_v0_17.json",
+  "registered_at_utc": "2026-07-29T00:03:32Z",
+  "registration_id": "ASMP-9-GENERAL-GRAPH-ALLOCATION-v0.17-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": "892e4754540673c56ee0b4d7ee5ba2b249b21080a8aadae80440b6256ee51c8f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/THEOREM_v0_16.md": "d387a0ae9009b06a4080698d92beb97dbdcb9b4a0c4e0a40d83e8b4e5c8580d0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/PUBLIC_SUMMARY_v0_16_2.md": "3da3c7714f41cc63c951ff6c8b070cd391d07afa58510b14899b34a86bd50d51",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/release_manifest_v0_16_2.json": "406e91ba1917a76afb1b3640d6670af3a9217a286a8e03dd406697af8282cefd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/conditional_fiber.py": "2399501b0cf87c90cae330b961e76b6261ebca0bf7ac901e5820291c51ac3899",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/DEVELOPMENT_CENSUS_v0_17.json": "fcb18d41a81e50e3c9494d2583420fa661be3821811183e8327341774bb2d0c9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/DEVELOPMENT_NOTE_v0_17.md": "4a2bf4ad9d55b650d479ff819ee0aedd63a7ebb6edde118dfd89161389f7d6d4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/DEVELOPMENT_RECEIPT_v0_17.json": "9ee84500ae016ef9f3684fcbb4daf9a0809367fdb54a19ef86ca6b5eeeb10963",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/FORMULATION_DRAFT_v0_17.md": "1cc13cf83c68c4e0291bbdd4a0fbe59c1decce14cfc5898b1c1bc6e005d986df",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/PRIOR_ART_GATE_v0_17.md": "0678770ab6a8fac0c28d9eaa147491f41197b0d47d71dfadfab42278dceb98cd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/PROTOCOL_v0_17.md": "b5cc6ebd37474978044df9d2e8628fb88b817c01f434c81c16c9c64f4f32b424",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/README.md": "f4f3200c0dba82dbe23287add4fae023b49a082fc36c7289d42ebcd110c0d69a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/THEOREM_DRAFT_v0_17.md": "574c26b9507aabf25c6632f9d91821d2bb63b2d904b5981823a0ef30d97fb951",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/development_census.py": "cf182b1093787c7d882a4f8800dba9d0c19b5f2ac0ad4f56584aa7ebd95f0f3d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/environment_v0_17.json": "4be9ec8d63a5be06d8faf30ea19717af3897a4973aceeddeecc9a7ed55ade942",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/general_graph.py": "a2f6bce1c3dc148250fd740095d7cef9c8e10fff1529afd6db94a51c7b6401bc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/protocol_v0_17.json": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/register.py": "9af8ca6a04dcbb0524a3a399e225be7bf7bd2a6db5287764292717bcb900437a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/run_verification.py": "a70dd698f90d0a0fdf05b73f065279aabe37bfce777d37e137387d852d0ea709",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/test_general_graph.py": "eccffe713618a174a76c2c400c2f2c6bf530544d4b0ed7ed81dfc4fa531af471",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/test_protocol.py": "e64865ebe6ec6ce1562b1a0014a2787d2edb0c2eaa496f7c3a2fcc0c68ce5a92",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/verify_result.py": "9408c65ad07a6574777fa8761f7385a41c302d093d0db5da50c058536be2a4be"
+  }
+}
