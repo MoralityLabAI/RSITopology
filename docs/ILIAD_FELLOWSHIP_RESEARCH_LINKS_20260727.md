@@ -190,6 +190,13 @@ as transformer evidence.
   adaptive allocation, response misspecification, and behavioral value
   identification remain open.
 
+- [ASMP-9: arbitrary-block factorization theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/block_factorization_v0_20/PUBLIC_SUMMARY_v0_20.md)
+  Full residual liveness and exact availability factor over arbitrary
+  vertex-biconnected blocks, and Bellman recursion solves allocation between
+  them once local tables are known. The preregistered run passed all ten gates
+  and an independent 14-check replay. The exact finite-design problem inside
+  one overlapping-cycle block remains explicitly open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
