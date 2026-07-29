@@ -1,0 +1,134 @@
+{
+  "burned_cache_regression": {
+    "protocol_path": "protocol_v0_19_1.json",
+    "result_path": "artifacts_v0_19_1/result_v0_19_1.json"
+  },
+  "claim_boundary": "Exact finite-budget maximin allocation on cactus cyclic cores inside the frozen independent-binomial, known symmetric-interior, positive-count conditional-access model inherited from ASMP-9 v0.16-v0.18. Version 0.19.2 is a computation-only successor to the v0.19 and v0.19.1 wall-time failures. It preserves complete independent endpoint-label and cycle-total enumeration but memoizes the repeated one-cycle minima diagnosed after v0.19.1. All scientific cells are new and the 180-second cap is unchanged. The ASMP-9-specific result is the reduction to a classical series-product integer resource-allocation problem. Dynamic programming, redundancy allocation, and greedy criteria are not claimed as new. This is not an arbitrary-graph every-budget theorem, adaptive allocation theorem, dependent-response theorem, unknown-link theorem, downstream policy-estimation theorem, behavioral reward-identification theorem, general IRL theorem, or ASMP-9 resolution.",
+  "comparator_cells": {
+    "fresh_19_2_equal_seven_cycles": {
+      "bridge_count": 0,
+      "cycle_lengths": [7, 7, 7],
+      "epsilon": "6/23",
+      "total_budget": 31
+    },
+    "fresh_19_2_pair_5_7": {
+      "bridge_count": 0,
+      "cycle_lengths": [5, 7],
+      "epsilon": "8/27",
+      "total_budget": 18
+    },
+    "fresh_19_2_pair_8_11": {
+      "bridge_count": 0,
+      "cycle_lengths": [8, 11],
+      "epsilon": "7/26",
+      "total_budget": 30
+    }
+  },
+  "development_registry": {
+    "burned_epsilon_values": [
+      "1/100",
+      "1/50",
+      "1/20",
+      "1/10",
+      "1/5",
+      "1/4",
+      "1/3",
+      "2/5",
+      "49/100",
+      "1/2",
+      "3/11",
+      "5/17",
+      "4/15",
+      "5/18",
+      "3/14",
+      "7/20",
+      "7/24",
+      "4/17",
+      "5/19"
+    ],
+    "v0_19_1_profile": {
+      "dominant_stage": "dp:fresh_19_1_quad_4_6_8_11",
+      "dominant_wall_seconds": 387.56533729998046,
+      "profile_path": "artifacts_v0_19_1/profile_v0_19_1.json",
+      "total_profiled_wall_seconds": 430.20896280003944
+    }
+  },
+  "dp_cells": {
+    "fresh_19_2_quad_5_8_10_12": {
+      "bridge_count": 2,
+      "cycle_lengths": [5, 8, 10, 12],
+      "epsilon": "8/27",
+      "total_budget": 50
+    },
+    "fresh_19_2_triple_4_7_10": {
+      "bridge_count": 2,
+      "cycle_lengths": [4, 7, 10],
+      "epsilon": "7/26",
+      "total_budget": 36
+    },
+    "fresh_19_2_triple_6_9_11": {
+      "bridge_count": 1,
+      "cycle_lengths": [6, 9, 11],
+      "epsilon": "6/23",
+      "total_budget": 40
+    }
+  },
+  "factorization_cells": {
+    "fresh_19_2_figure_4_5": {
+      "bridge_count": 0,
+      "counts": [1, 3, 2, 2, 2, 1, 3, 2, 1],
+      "cycle_lengths": [4, 5],
+      "epsilon": "8/27",
+      "label_mode": "all"
+    },
+    "fresh_19_2_figure_3_7_bridge": {
+      "bridge_count": 1,
+      "counts_a": [2, 1, 3, 1, 2, 1, 3, 2, 1, 2, 1],
+      "counts_b": [2, 1, 3, 1, 2, 1, 3, 2, 1, 2, 9],
+      "cycle_lengths": [3, 7],
+      "epsilon": "6/23",
+      "label_vectors": [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0],
+        [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1],
+        [1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0],
+        [0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1],
+        [1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0]
+      ]
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_fresh_registry",
+    "G2_cached_cycle_engine_reproduces_burned_v0_19_1",
+    "G3_exact_cactus_factorization",
+    "G4_bridge_irrelevance_and_floor",
+    "G5_dp_equals_cached_independent_exhaustive_totals",
+    "G6_dp_equals_all_edge_census",
+    "G7_nonconcavity_and_comparator_certificates",
+    "G8_fresh_comparator_classification",
+    "G9_resource_and_scope"
+  ],
+  "global_edge_census": {
+    "bridge_count": 1,
+    "cycle_lengths": [3, 4],
+    "epsilon": "7/26",
+    "total_budget": 12
+  },
+  "inherited_object": {
+    "availability_event": "full conditional-fiber reward-gauge quotient rank",
+    "finite_algorithm": "v0.19 Bellman recursion over balanced cycle totals",
+    "independent_checker": "complete cycle-total enumeration with memoized complete endpoint-label minima",
+    "response_model": "independent Bernoulli comparisons with known symmetric endpoint-bounded response probabilities",
+    "structural_source": "v0.18 cyclic-core bond characterization"
+  },
+  "protocol_id": "ASMP-9-FINITE-CACTUS-DESIGN-v0.19.2",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "version": "0.19.2"
+}
