@@ -238,6 +238,20 @@ verifier repair. The
 [v0.49 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_49.md) moves next to
 reference-law-family robustness. ASMP-9 remains unresolved.
 
+The prospectively verified
+[reference-law robustness theorem v0.50](reference_weight_v0_50/RESULT_v0_50.md)
+now closes that finite sensitivity seam. Each ordering has an exact rational
+joint-optimality region in reference-weight space, and robustness over a
+declared polytope is equivalent to tight-path intersection at its vertices.
+Across all 361 ordered pairs of three-outcome Buehler-admissible monotone
+tables, 79 retained a common ordering across both frozen reference vertices
+and 282 did not; all path, regret, region, and held-out interpolation checks
+matched exactly. A smallest one-objective, two-outcome witness has no robust
+ordering and minimax regret `1/2`. The
+[v0.50 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_50.md) moves next to
+randomized evidence-ordering procedures and their dual scenario game.
+ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
