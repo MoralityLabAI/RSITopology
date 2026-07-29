@@ -197,6 +197,13 @@ as transformer evidence.
   and an independent 14-check replay. The exact finite-design problem inside
   one overlapping-cycle block remains explicitly open.
 
+- [ASMP-9: local-block count-floor complexity](../ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/PUBLIC_SUMMARY_v0_21.md)
+  At the maximally noisy positive-count floor, exact availability inside one
+  biconnected block is `T_G(0,2)/2^|E|`. Classical Tutte complexity therefore
+  makes exact value computation #P-hard even though the allocation itself is
+  forced. All ten registered gates and eleven independent checks passed; the
+  above-floor weighted design problem remains open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
