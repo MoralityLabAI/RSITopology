@@ -196,6 +196,19 @@ control matches the rectangle exactly.  The
 a matching decision-deficiency lower construction or sharp finite modulus;
 ASMP-9 remains unresolved.
 
+The prospectively registered
+[sharp atom-modulus result v0.47](sharp_atom_modulus_v0_47/RESULT_v0_47.md)
+then supplies that matching finite construction at the all-zero calibration
+atom. Uniform coverage forces an exact coupled parameter set, and both a
+pointwise confidence set and the minimum endpoint of a nondecreasing Buehler
+bound attain the same decision-risk maximum. At a disjoint `N=72` budget, the
+sharp four-class modulus ranks uniform `(24,24,24)` ahead of the inherited
+directed `(30,21,21)` design, reversing the v0.46 method-of-types comparison;
+root-directed `(70,1,1)` remains better than uniform. The
+[v0.47 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_47.md) moves next to
+full-statistic or statistic-independent finite moduli. ASMP-9 remains
+unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
