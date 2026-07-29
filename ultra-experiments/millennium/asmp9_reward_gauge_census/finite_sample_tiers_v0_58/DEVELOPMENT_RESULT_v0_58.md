@@ -140,10 +140,15 @@ Representative sufficient per-menu counts are:
 | `n` | `r` | floor `a` | margin `gamma` | `K_star` | `Q` | samples/menu |
 |---:|---:|---:|---:|---:|---:|---:|
 | 3 | 1 | 0.20 | 0.20 | 1 | 9 | 68,407 |
-| 5 | 1 | 0.05 | 0.10 | 5 | 50 | 137,247,553 |
+| 5 | 1 | 0.05 | 0.10 | 5 | 50 | 166,308,762 |
 | 6 | 2 | 0.02 | 0.05 | 17 | 150 | 45,274,968,354 |
-| 8 | 4 | 0.01 | 0.02 | 129 | 952 | 78,985,466,560,742 |
-| 8 | 6 | 0.01 | 0.02 | 1 | 1,016 | 4,791,534,090 |
+| 8 | 4 | 0.01 | 0.02 | 129 | 952 | 91,037,884,048,966 |
+| 8 | 6 | 0.01 | 0.02 | 1 | 1,016 | 5,518,193,289 |
+
+The table was corrected during the v0.59 development audit by directly
+replaying `sample_count_per_menu`; the previous three cells did not match the
+already-published executable source. No theorem statement, function, or gate
+changed.
 
 These are conservative sufficient counts, not lower bounds. Their value is
 diagnostic: interior truncation orders can make extrapolation so ill
