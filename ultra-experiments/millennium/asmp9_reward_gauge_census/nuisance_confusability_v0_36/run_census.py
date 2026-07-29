@@ -411,13 +411,37 @@ def main() -> None:
     args = parse_args()
     registration_path = args.registration.resolve()
     registration = load_registration(registration_path)
+    if subprocess.check_output(
+        ["git", "status", "--porcelain"],
+        cwd=REPO,
+        text=True,
+    ).strip():
+        raise RuntimeError("runner requires a clean registered worktree")
     current_commit = subprocess.check_output(
         ["git", "rev-parse", "HEAD"],
         cwd=REPO,
         text=True,
     ).strip()
-    if current_commit != registration["registration_commit"]:
-        raise RuntimeError("runner requires the exact registration commit")
+    before = str(registration["git_commit_before_registration"])
+    ancestor = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", before, current_commit],
+        cwd=REPO,
+        check=False,
+    )
+    if ancestor.returncode != 0:
+        raise RuntimeError("implementation commit is not an ancestor of HEAD")
+    try:
+        relative_registration = registration_path.relative_to(REPO).as_posix()
+    except ValueError as error:
+        raise RuntimeError("registration must be committed in the repo") from error
+    committed_registration = subprocess.check_output(
+        ["git", "show", f"HEAD:{relative_registration}"],
+        cwd=REPO,
+    )
+    if hashlib.sha256(committed_registration).hexdigest() != sha256_file(
+        registration_path
+    ):
+        raise RuntimeError("working registration differs from committed bytes")
     result = compute_result(registration)
     result["registration"]["file_sha256"] = sha256_file(registration_path)
     result["result_content_sha256"] = hashlib.sha256(

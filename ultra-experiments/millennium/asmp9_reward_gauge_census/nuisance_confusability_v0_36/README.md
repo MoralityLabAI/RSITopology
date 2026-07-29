@@ -26,6 +26,8 @@ target values only when the unknown threshold is stable across interventions.
 - `PROTOCOL_v0_36.json`: prospective census and five frozen gates;
 - `confusability.py`: reusable exact definitions;
 - `run_census.py`: registration-bound exhaustive runner;
+- `prepare_registration.py`: deterministic compare-or-fail registration
+  builder;
 - `verify_result.py`: import-independent result verifier; and
 - `test_confusability.py`: prereveal unit and planted-control tests.
 
