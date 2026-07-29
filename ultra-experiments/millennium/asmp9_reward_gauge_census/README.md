@@ -170,6 +170,19 @@ used an uncertain query. The
 [v0.44 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_44.md) moves next to
 decision-directed sample allocation.
 
+The prospectively registered
+[decision-directed sample-allocation result v0.45](sample_allocation_v0_45/RESULT_v0_45.md)
+then exhausts every positive allocation of a fixed 60-sample budget over the
+same three-query adaptive experiment. Four-class identification uniquely
+selects `(26,17,17)`, root-group loss selects `(58,1,1)`, and a matched policy
+that uses every query selects uniform `(20,20,20)`. The exact robust endpoint
+improves over uniform by 1.324% and 37.173% for the two losses. A
+registered-grid two-point test shows that the confidence radius remains
+constructive rather than minimax, and the
+[v0.45 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_45.md) moves next to
+the gap between independent generator rectangles and the exact shared-parameter
+uncertainty image.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)

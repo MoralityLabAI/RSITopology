@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "protocol_id": true,
+    "registration_sha256": true,
+    "scientific_gates": true,
+    "scientific_payload": true,
+    "source_hashes": true,
+    "version": true
+  },
+  "gate_matches": {
+    "A0": true,
+    "B0": true,
+    "C0": true,
+    "D0": true,
+    "E0": true,
+    "K0": true,
+    "L0": true,
+    "R0": true,
+    "U0": true
+  },
+  "source_checks": [
+    {
+      "actual": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "expected": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+    },
+    {
+      "actual": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "expected": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py"
+    },
+    {
+      "actual": "33da538babe7903b4e04e752f37bd23b0abcd734db673e1b365fa46891eea9c0",
+      "expected": "33da538babe7903b4e04e752f37bd23b0abcd734db673e1b365fa46891eea9c0",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PRIOR_ART_GATE_v0_45.md"
+    },
+    {
+      "actual": "684b998a2240a20ecb25d187936bbd9ecfae02092bf562a2c3eab2ac213d068a",
+      "expected": "684b998a2240a20ecb25d187936bbd9ecfae02092bf562a2c3eab2ac213d068a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PROTOCOL_v0_45.md"
+    },
+    {
+      "actual": "7f7e76092ede29ad363a4b430cb661eecd11c23995c48a6c5c8e25a3db520559",
+      "expected": "7f7e76092ede29ad363a4b430cb661eecd11c23995c48a6c5c8e25a3db520559",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/THEOREM_DRAFT_v0_45.md"
+    },
+    {
+      "actual": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "expected": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/allocation_design.py"
+    },
+    {
+      "actual": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "expected": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/audit_formula_universe.py"
+    },
+    {
+      "actual": "09148d5ad2909cdbc36122c838ce2711268c8e34c30adecba8789be95e8b105a",
+      "expected": "09148d5ad2909cdbc36122c838ce2711268c8e34c30adecba8789be95e8b105a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/environment_lock_v0_45.json"
+    },
+    {
+      "actual": "67aec056b492249c0c43fd1926ff34ee8685aa67a23d9c53d477a328b0f7c875",
+      "expected": "67aec056b492249c0c43fd1926ff34ee8685aa67a23d9c53d477a328b0f7c875",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/run_confirmation_v0_45.py"
+    },
+    {
+      "actual": "bbc59ae9fc1f05c5933cd8f365ca7c1b8919f6f0eccb5f30ab0f62947934ad4f",
+      "expected": "bbc59ae9fc1f05c5933cd8f365ca7c1b8919f6f0eccb5f30ab0f62947934ad4f",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/test_allocation_design.py"
+    },
+    {
+      "actual": "ad61d4d3c897376cc23914a990c6fb615122a66aac3ad89feae7216b2dad15fc",
+      "expected": "ad61d4d3c897376cc23914a990c6fb615122a66aac3ad89feae7216b2dad15fc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/verify_result_v0_45.py"
+    },
+    {
+      "actual": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "expected": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+    }
+  ],
+  "status": "independent_replay_passed",
+  "status_mapping": true,
+  "workers": 4
+}

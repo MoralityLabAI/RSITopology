@@ -1,0 +1,78 @@
+{
+  "files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": {
+      "bytes": 25676,
+      "sha256": "db36e1de0c594ad462af16a66bdf549b77c8706a134fcef8ede149d84c3f41e6"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_45.md": {
+      "bytes": 6111,
+      "sha256": "9f30f88d60e8351d492c13b37335773740aa632668786e81b27a283a5686a629"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PRIOR_ART_GATE_v0_45.md": {
+      "bytes": 4061,
+      "sha256": "33da538babe7903b4e04e752f37bd23b0abcd734db673e1b365fa46891eea9c0"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PROTOCOL_v0_45.md": {
+      "bytes": 4437,
+      "sha256": "684b998a2240a20ecb25d187936bbd9ecfae02092bf562a2c3eab2ac213d068a"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/RESULT_v0_45.md": {
+      "bytes": 5987,
+      "sha256": "84c73b154aad20ec37476ee10bacc0768bd8540e29beb6665e5b601daf7d11d9"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/RUN_RECEIPT_v0_45.json": {
+      "bytes": 1148,
+      "sha256": "39907e0b03aadcacac834345e5283a1258c4746ac3afbeac60497a08f4eb8515"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/THEOREM_DRAFT_v0_45.md": {
+      "bytes": 5568,
+      "sha256": "7f7e76092ede29ad363a4b430cb661eecd11c23995c48a6c5c8e25a3db520559"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/VERIFY_RESULT_v0_45.json": {
+      "bytes": 4353,
+      "sha256": "7d8c051e0da3f2c5b306fb7a58940cb8cb21ed9d9da85fde4e315748cf7c221e"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/allocation_design.py": {
+      "bytes": 24221,
+      "sha256": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/artifacts_v0_45/RESULT_v0_45.json": {
+      "bytes": 14371,
+      "sha256": "2a5318b1f6c2135d4771c5a263ead9acf7ed4292b20c1e11b2c41ed0c9a51b81"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/audit_formula_universe.py": {
+      "bytes": 6045,
+      "sha256": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/build_release_v0_45.py": {
+      "bytes": 4514,
+      "sha256": "0a8c708f3961ebde0fd7db232440abbf2e398580eb832b32412b1f6af20612e1"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/environment_lock_v0_45.json": {
+      "bytes": 153,
+      "sha256": "09148d5ad2909cdbc36122c838ce2711268c8e34c30adecba8789be95e8b105a"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/register_v0_45.py": {
+      "bytes": 6243,
+      "sha256": "f8f7c6f05b83f14ec1891c7dc87b65633ed6b1a8d41f0f545a26c015510c67e7"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/registration_v0_45.json": {
+      "bytes": 4373,
+      "sha256": "74cb1dcc643f1a3a2b44b440bd11bb9ae50658fdede061a2226fb0fcfe6ff8a4"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/run_confirmation_v0_45.py": {
+      "bytes": 12623,
+      "sha256": "67aec056b492249c0c43fd1926ff34ee8685aa67a23d9c53d477a328b0f7c875"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/test_allocation_design.py": {
+      "bytes": 6563,
+      "sha256": "bbc59ae9fc1f05c5933cd8f365ca7c1b8919f6f0eccb5f30ab0f62947934ad4f"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/verify_result_v0_45.py": {
+      "bytes": 2848,
+      "sha256": "ad61d4d3c897376cc23914a990c6fb615122a66aac3ad89feae7216b2dad15fc"
+    }
+  },
+  "protocol_id": "asmp9-decision-directed-sample-allocation-v0.45",
+  "version": "0.45"
+}

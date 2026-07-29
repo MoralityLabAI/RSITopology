@@ -1,0 +1,30 @@
+{
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/run_confirmation_v0_45.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/verify_result_v0_45.py"
+  },
+  "elapsed_seconds": 265.7014468999987,
+  "gates": {
+    "A0": true,
+    "B0": true,
+    "C0": true,
+    "D0": true,
+    "E0": true,
+    "K0": true,
+    "L0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "U0": true
+  },
+  "implementation_commit": "4c28948641cb7f41849b14204cb509fe6ddf5b3a",
+  "peak_aggregate_working_set_bytes": 395005952,
+  "protocol_id": "asmp9-decision-directed-sample-allocation-v0.45",
+  "registration_commit": "e75a6d8b1401a58b8cf0eee07248ac14c4381be1",
+  "registration_sha256": "74cb1dcc643f1a3a2b44b440bd11bb9ae50658fdede061a2226fb0fcfe6ff8a4",
+  "result_sha256": "2a5318b1f6c2135d4771c5a263ead9acf7ed4292b20c1e11b2c41ed0c9a51b81",
+  "status": "decision_directed_sample_allocation_established",
+  "verification_sha256": "7d8c051e0da3f2c5b306fb7a58940cb8cb21ed9d9da85fde4e315748cf7c221e",
+  "version": "0.45"
+}
