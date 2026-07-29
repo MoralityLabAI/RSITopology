@@ -1,6 +1,6 @@
 {
   "schema_version": "asmp9_measurement_channel_design_receipt_v0_35",
-  "status": "draft_generated_not_registered_not_run",
+  "status": "scientific_protocol_frozen_environment_registration_pending_not_run",
   "manifest_content_sha256": "d036055a9f5ba6a6c81555641f2fa430a75d87bc8a9de9702a56f7a69ae0e1fc",
   "counts": {
     "unique_prompt_rows": 2412,
@@ -24,13 +24,29 @@
       "bytes": 3294,
       "sha256": "29728b919086685b6cfd585752787a8759e678f664cf21239b81cd1f9cab17bb"
     },
+    "PILOT_PROTOCOL_v0_35.json": {
+      "bytes": 4514,
+      "sha256": "c2e97b345b390bde0dd119e250740dd3d4617bd8f2e27e82712243b77c672e43"
+    },
     "pilot_analyzer_v035.py": {
-      "bytes": 11827,
-      "sha256": "e4180996dbe217597dc442c77f67448c1c5f07491509627a5364b5701eb85408"
+      "bytes": 22993,
+      "sha256": "19fd5b2e654a03d3fb9355066a1e41e75259f04c6c343a357e471048411f662d"
+    },
+    "run_measurement_pilot_v035.py": {
+      "bytes": 8235,
+      "sha256": "32621a67ab40aa1aa340d29e5855da730ff9b8dbbe41d0dbd04b6fc2c7e2eade"
+    },
+    "prepare_registration_v035.py": {
+      "bytes": 13006,
+      "sha256": "38c55a641d7714f7fe86dff423d3b32dd00597ba73c5306bcce18f3fe27ef73e"
+    },
+    "run_prime_asmp9_measurement_v035_guarded.sh": {
+      "bytes": 5621,
+      "sha256": "5a09cae5be1a896e837b51b7d4be407d05971f60c46609d3aa222dfa13e7642f"
     },
     "test_asmp9_measurement_channel_v035.py": {
-      "bytes": 8385,
-      "sha256": "8e5f5781789ab27ab607051dc0471724f89e14be3fbb54d31a984cd3ab09198a"
+      "bytes": 21248,
+      "sha256": "cd4568127b589abf23ffbe66510252d98e21fabeadec780c50eb1463dba4e764"
     },
     "source_v0_34_prompt_manifest": {
       "bytes": 3594416,
@@ -41,15 +57,16 @@
     "v0_34_outcomes_used_to_shape_design": true,
     "v0_34_future_holdout_consumed": false,
     "v0_35_model_queries_executed": false,
+    "v0_35_scientific_protocol_frozen": true,
+    "v0_35_environment_registration_materialized": false,
     "v0_35_execution_authorized": false
   },
   "next_registration_requirements": [
-    "exact model and runtime hashes",
-    "materialized prompt-manifest file and file hash",
-    "sealed analyzer and hard-cap wrapper hashes",
-    "resource envelope",
-    "fresh prompt-family declaration",
-    "fixed total gate evaluator"
+    "clean checked-out scientific-protocol commit",
+    "exact model, server, and CUDA-library hashes",
+    "environment and provider identity",
+    "materialized registered prompt-manifest file and content hashes",
+    "compare-or-fail environment registration"
   ],
-  "claim_boundary": "This receipt establishes deterministic design completeness only. It is not a preregistration, model result, confirmation, or ASMP-9 resolution."
+  "claim_boundary": "This receipt establishes a frozen scientific protocol and deterministic execution scaffolding. It is not an environment-bound registration, model result, confirmation, or ASMP-9 resolution."
 }

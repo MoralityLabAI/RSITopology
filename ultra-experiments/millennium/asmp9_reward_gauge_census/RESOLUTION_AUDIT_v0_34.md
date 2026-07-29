@@ -59,11 +59,14 @@ the cone of nonincreasing curves. Repair radii are modest, but robust endpoint
 support remains absent: 4/36 standard curves, 2/18 preferred-basis curves, and
 10/18 compound curves force a crossing at their exact repair radius.
 
-The accompanying [v0.35 pilot draft](measurement_channel_v0_35/PILOT_PROTOCOL_DRAFT_v0_35.json)
-therefore adds independent presentation/code factors, semantic-equality nulls,
+The preserved [v0.35 pilot draft](measurement_channel_v0_35/PILOT_PROTOCOL_DRAFT_v0_35.json)
+records the design stage. The additive
+[frozen scientific protocol](measurement_channel_v0_35/PILOT_PROTOCOL_v0_35.json)
+adds independent presentation/code factors, semantic-equality nulls,
 probability-order controls, and the missing `p=0,1` dominance endpoints. Its
-2,412-row generator is complete but unregistered and unexecuted. It does not
-reopen confirmation.
+2,412-row generator and registration/capture tooling are complete, but no
+execution environment has been registered and no v0.35 prompt has been run.
+It does not reopen confirmation.
 
 ## Canonical record
 
@@ -73,6 +76,7 @@ reopen confirmation.
 - [Analysis registration](physical_acquisition_v0_34/PRIME_ANALYSIS_EXECUTION_v0_34_4.json)
 - [v0.35 repair-radius result](measurement_channel_v0_35/REPAIR_RADIUS_RESULT_v0_35.json)
 - [v0.35 design receipt](measurement_channel_v0_35/DESIGN_RECEIPT_v0_35.json)
+- [v0.35 resolution-obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_35.md)
 
 ## Claim boundary
 

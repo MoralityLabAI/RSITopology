@@ -44,8 +44,13 @@ The additive
 [v0.35 measurement-channel development](measurement_channel_v0_35/README.md)
 then proves the exact monotone repair radius for the burned score curves,
 shows that endpoint support—not merely local monotonicity—is the binding
-failure, and supplies an unregistered 2,412-prompt Latin-square successor
-design. No v0.35 model query or confirmation row has been run.
+failure, and freezes a 2,412-prompt factorial successor plus hash-bound
+registration, capture, hard-cap, and analysis tooling. It is ready to bind to
+an execution environment but is not yet registered there. No v0.35 model
+query or confirmation row has been run. The
+[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_35.md) keeps this
+physical bridge separate from the five requirements for a full ASMP-9
+resolution.
 
 ## Successor
 
