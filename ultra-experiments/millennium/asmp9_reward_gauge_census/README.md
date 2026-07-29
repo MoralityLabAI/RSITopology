@@ -34,6 +34,17 @@ Luce-versus-non-RUM lower witness, and an exact deterministic interpolation
 condition number. The lane remains development-only pending prior-art and
 proof review.
 
+The unregistered
+[finite-sample tier v0.58 development](finite_sample_tiers_v0_58/DEVELOPMENT_RESULT_v0_58.md)
+then proves why an additional separation promise is unavoidable: exact Luce,
+non-Luce RUM, and non-RUM kernels meet at statistically indistinguishable
+boundaries. Under a declared margin it gives a total classifier and an
+explicit sufficient sample count containing the v0.57 condition number. An
+explicit three-alternative RUM/non-RUM pair gives a matching
+`Omega(gamma^-2)` margin exponent, while leaving dimension, conditioning, and
+constant optimality open. The result is development-only and the conservative
+counts are not minimax rates.
+
 ## Prereveal tests
 
 ```powershell
