@@ -171,3 +171,10 @@ constructs an infinite K4 family of strict suboptimal one-exchange local
 maxima and an explicit M-concavity exchange violation.  This rules out a
 general global guarantee for one-unit exchange ascent but does not classify
 the global optimizer or its computational complexity.
+
+The unregistered [v0.24 marginal-oracle development](marginal_oracle_v0_24/README.md)
+next isolates a narrower access boundary: exact one-edge marginal ratios
+reconstruct the complete uniform availability polynomial through telescoping
+and rational interpolation.  Its tests pass, but the branch remains
+development-only pending a complete prior-art audit and does not establish
+optimizer-output hardness.
