@@ -26,9 +26,8 @@ PRIME_REGISTRATION_SCHEMA = (
 
 def main() -> None:
     sealed_runner.REGISTRATION_SCHEMA = PRIME_REGISTRATION_SCHEMA
-    sealed_runner.main()
+    sealed_runner.run(sealed_runner.parse_args())
 
 
 if __name__ == "__main__":
     main()
-

@@ -26,7 +26,8 @@ def test_prime_shim_changes_only_registration_schema_and_entrypoint() -> None:
         in source
     )
     assert "sealed_runner.REGISTRATION_SCHEMA = PRIME_REGISTRATION_SCHEMA" in source
-    assert "sealed_runner.main()" in source
+    assert "sealed_runner.run(sealed_runner.parse_args())" in source
+    assert "sealed_runner.main()" not in source
 
 
 def test_prime_wrapper_enforces_registered_cgroup_caps() -> None:

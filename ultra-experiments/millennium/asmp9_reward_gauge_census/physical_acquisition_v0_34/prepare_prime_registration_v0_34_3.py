@@ -74,7 +74,7 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
                 "asmp9_physical_acquisition_burned_pilot_registration_v0_34_3"
             ),
             "registration_id": (
-                "ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-PRIME-v0.34.3"
+                args.registration_id
             ),
             "status": "burned_pilot_registered_not_run",
             "prepared_utc": args.prepared_utc,
@@ -91,7 +91,7 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
                 (
                     f"{REMOTE_REPO}/ultra-experiments/millennium/"
                     "asmp9_reward_gauge_census/physical_acquisition_v0_34/"
-                    "burned_pilot_registration_v0_34_3.json"
+                    f"{args.output.name}"
                 ),
                 "--output-dir",
                 f"{REMOTE_ROOT}/output",
@@ -125,6 +125,9 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
                     "missing_cuda_toolkit_zero_query",
                     "unresolved_nvcc_path_zero_query",
                     "missing_cuda_host_compiler_zero_query",
+                    "non_target_findmnt_zero_query",
+                    "unprivileged_systemd_run_zero_query",
+                    "missing_shim_entrypoint_zero_query",
                 ],
             },
         }
@@ -236,6 +239,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--server-bytes", type=int, required=True)
     parser.add_argument("--cuda-library-sha256", required=True)
     parser.add_argument("--prepared-utc", required=True)
+    parser.add_argument(
+        "--registration-id",
+        default="ASMP-9-PHYSICAL-ACQUISITION-BURNED-PILOT-PRIME-v0.34.3",
+    )
     parser.add_argument("--output", type=Path, default=OUTPUT)
     return parser.parse_args()
 
@@ -249,4 +256,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
