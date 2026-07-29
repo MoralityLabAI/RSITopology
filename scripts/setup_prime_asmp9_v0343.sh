@@ -9,6 +9,7 @@ sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
   build-essential \
   ca-certificates \
+  cuda-toolkit-12-8 \
   cmake \
   git
 
@@ -32,6 +33,7 @@ cmake \
   -S /workspace/llama.cpp \
   -B /workspace/llama.cpp/build-sm89 \
   -DCMAKE_BUILD_TYPE=Release \
+  -DCUDAToolkit_ROOT=/usr/local/cuda-12.8 \
   -DCMAKE_CUDA_ARCHITECTURES=89-real \
   -DGGML_CUDA=ON \
   -DGGML_CUDA_FA=ON \
@@ -55,4 +57,3 @@ cmake --build /workspace/llama.cpp/build-sm89 \
   sha256sum /workspace/llama.cpp/build-sm89/bin/llama-server
   sha256sum /workspace/llama.cpp/build-sm89/bin/libggml-cuda.so.0.17.0
 } > "${RUN_ROOT}/setup_facts.txt"
-
