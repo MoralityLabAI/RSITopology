@@ -12,9 +12,10 @@ The remaining optimization enumerates path totals using a closed exact
 availability formula.  For a fixed number of paths it is polynomial in the
 numerical trial budget and pseudopolynomial when the budget is binary encoded.
 
-Status: prospective protocol prepared after a primary-source audit.  No fresh
-outcome may be computed until the implementation commit and
-`registration_v0_25.json` are committed.
+Status: completed registered result.  The prereveal implementation was pushed
+at `0f1795360faf5b250316d97b1e5a4032f8dd263f`; the registration was pushed
+at `f1c4bf3a9ca100512ea61dbad629ee008d6cb8b6`; only then were the fresh
+cells evaluated.
 
 Read:
 
@@ -23,7 +24,7 @@ Read:
 3. `DEVELOPMENT_NOTE_v0_25.md`; and
 4. `protocol_v0_25.json`.
 
-The registration/execution sequence is deliberately two-stage:
+The registration/execution sequence was deliberately two-stage:
 
 ```text
 python register_v0_25.py --output registration_v0_25.json
@@ -32,6 +33,7 @@ python run_verification_v0_25.py \
   --output-dir artifacts_v0_25
 ```
 
-The first command is run and committed before the second.  The fresh cells in
-the protocol were selected without reading their formula values or
-optimizers.
+The first command was run, committed, and pushed before the second.  The
+fresh cells in the protocol were selected without reading their formula
+values or optimizers.  See `PUBLIC_SUMMARY_v0_25.md` and
+`artifacts_v0_25/`.

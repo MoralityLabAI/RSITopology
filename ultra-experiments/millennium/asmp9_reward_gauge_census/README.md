@@ -179,9 +179,11 @@ and rational interpolation.  Its tests pass, but the branch remains
 development-only pending a complete prior-art audit and does not establish
 optimizer-output hardness.
 
-The unregistered [v0.25 generalized-theta development](theta_optimizer_v0_25/README.md)
+The prospectively registered
+[v0.25 generalized-theta result](theta_optimizer_v0_25/PUBLIC_SUMMARY_v0_25.md)
 isolates a positive optimizer boundary.  A closed path-state formula and
 strict smoothing theorem force every optimum to balance counts within each
 individual path, reducing exact global optimization to path-total
-enumeration.  The current implementation and proof are development-only, and
-the algorithm is pseudopolynomial when the trial budget is binary encoded.
+enumeration.  All nine gates and eleven independent replay checks passed on
+fresh cells.  The algorithm is pseudopolynomial when the trial budget is
+binary encoded, and arbitrary biconnected-block optimization remains open.

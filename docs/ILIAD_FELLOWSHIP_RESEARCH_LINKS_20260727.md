@@ -217,6 +217,12 @@ as transformer evidence.
   M-concavity, ruling out a general greedy-exchange guarantee without
   overclaiming optimizer hardness.
 
+- [ASMP-9: exact generalized-theta optimizer](../ultra-experiments/millennium/asmp9_reward_gauge_census/theta_optimizer_v0_25/PUBLIC_SUMMARY_v0_25.md)
+  A four-state path formula and strict smoothing theorem reduce exact
+  allocation on generalized-theta blocks to path totals. This supplies a
+  tractable overlapping-cycle boundary complementary to the K4 exchange
+  trap; arbitrary biconnected-block optimization remains open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
