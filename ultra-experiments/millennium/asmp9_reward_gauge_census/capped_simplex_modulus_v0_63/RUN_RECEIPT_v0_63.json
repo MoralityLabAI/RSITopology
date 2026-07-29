@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "cells_sha256": "c11dda56e5bbd18d9cbe3c9b61b7975a403c8d5824c7f4cb33da89e4574673d0",
+    "manifest_sha256": "6406803dc1324d1a3e38045033e0a679711e5f41381e05999b80421e4c11a1c0",
+    "registration_sha256": "5fcc7001ec7292181a5dce5252e47ed9bba48d30b3a2fee5570c52dbc434e84c",
+    "result_sha256": "1dca1c0d128ec5d8611ebf5ed3c73cb4d8463d6672399fedac3b8e02abe1470c"
+  },
+  "chronology": {
+    "registration_commit": "4acfb85273f6d21b30b143b200755fba87704925",
+    "result_commit": "02d310e2ac4f2d2535627274f51fc2778c7057a1",
+    "source_commit": "6e28b6cd07c073cb5004c57bd2c56f999a408f56"
+  },
+  "claim_boundary": "Exact full-dimensional three-alternative fixed-binary capped-simplex calibration only; classical convex geometry; no general efficient RUM-modulus, hidden-menu, latent-confounding, strategic/dynamic, physical-access, welfare, novelty, or full ASMP-9 resolution claim.",
+  "command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/verify_v0_63.py",
+  "fact_digest": "2e59da53ab82e96c7e904916e8e78047dd62dcb6f967f61c841102ea4e672376",
+  "gates": {
+    "C0": true,
+    "H0": true,
+    "I0": true,
+    "M0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "X0": true
+  },
+  "protocol_id": "asmp9-capped-simplex-modulus-v0.63",
+  "resource": {
+    "elapsed_seconds": 26.559970999980578,
+    "resident_bytes": 22978560,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.63-run-receipt-v1",
+  "status": "capped_simplex_moduli_verified",
+  "tests": {
+    "count": 8,
+    "status": "passed"
+  }
+}
