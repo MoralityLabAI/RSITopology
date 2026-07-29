@@ -130,6 +130,21 @@ keeps the package development-only.  The
 load-bearing strategic target to dynamic response and physical validation of
 commitment, consequence sensitivity, and expected-utility assumptions.
 
+The unregistered
+[dynamic response v0.66 development](dynamic_strategic_response_v0_66/DEVELOPMENT_RESULT_v0_66.md)
+then separates initial-state discovery from terminal-state construction.  A
+known deterministic response/update transducer has an exact adaptive
+least-fixed-point test for `unidentifiable`, `identify_only_altering`, and
+`identify_and_restore`.  The complete two-state/two-query binary census splits
+`64/40/152`, and a three-state fixture shows pairwise distinguishability does
+not imply one globally valid experiment.  Because adaptive state
+identification is classical automata theory, the
+[registration decision](dynamic_strategic_response_v0_66/REGISTRATION_DECISION_v0_66.md)
+keeps this package development-only.  The
+[v0.66 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_66.md) makes a
+physical dynamic-response bridge and unknown/stochastic update laws the next
+load-bearing targets.
+
 ## Prereveal tests
 
 ```powershell
