@@ -209,6 +209,20 @@ root-directed `(70,1,1)` remains better than uniform. The
 full-statistic or statistic-independent finite moduli. ASMP-9 remains
 unresolved.
 
+The prospectively registered
+[evidence-ordering result v0.48](ordering_modulus_v0_48/RESULT_v0_48.md)
+then constructs the complete direct Buehler table and optimizes its reference
+cost over all outcome orderings by exact subset dynamic programming. Burned
+development data contained disjoint four-class and root-group optimizer sets,
+but the disjoint `(2,1,1)` confirmation did not reproduce that pattern: all
+1,451,520 four-class optima were also root-group optima and both cross-regrets
+were zero. A post-outcome v0.48.1 verifier-only repair preserves this valid
+registered null while leaving the original failed verifier immutable. The
+[v0.48 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_48.md) replaces
+another witness search with a theorem-first target: characterize when two
+finite decision risks admit a common optimal evidence ordering and when
+positive cross-regret is forced. ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
