@@ -22,6 +22,11 @@ inside that grammar.
 - Goel and DeGroot study comparison and marginal information in the presence
   of nuisance parameters:
   <https://doi.org/10.1214/aos/1176344790>.
+  Their technical-report scan makes the relevant construction explicit:
+  equation (5.1) integrates a fixed conditional nuisance law into the
+  target-indexed experiment, followed by decision problems whose loss
+  depends only on the target:
+  <https://www.stat.purdue.edu/docs/research/tech-reports/1-527/tr-484.pdf>.
 - Rosenthal's prior-free Blackwell order gives a more recent robust
   value-comparison formalism and a null-space characterization for its
   declared setup:
@@ -49,6 +54,10 @@ A relative deficiency quantifies uniform transfer over the entire registered
 type of decision problems and rules. Ordinary expanded-parameter deficiency
 does the same while charging distinctions in nuisance as well as target. The
 three quantities must be named separately.
+
+The finite rule-by-rule equation, loss normalization, direction convention,
+and nuisance marginalization used here are fixed in
+[`DEFINITION_AUDIT_v0_38.md`](DEFINITION_AUDIT_v0_38.md).
 
 ## What survives for ASMP-9
 

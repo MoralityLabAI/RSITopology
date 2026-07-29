@@ -32,9 +32,11 @@ policy-regret decision problems. This is the primary v0.38 instrument. Its
 zero set means that every full-access rule in the registered decision type has
 an access-`A` counterpart with no greater registered risk.
 
-The exact formal definition and normalization will be copied from the cited
-comparison-of-experiments reference before registration; it will not be
-reconstructed from memory or replaced by `G_D`.
+The exact finite definition and normalization are now pinned in
+[`DEFINITION_AUDIT_v0_38.md`](DEFINITION_AUDIT_v0_38.md). For losses in
+`[0,1]`, `delta_D(E_A,E_full)` is the least additive `epsilon` such that every
+full-access rule in every registered problem has an access-`A` rule whose
+target-risk vector is at most `epsilon` worse componentwise.
 
 ### Level 3: expanded-parameter deficiency
 
@@ -56,6 +58,11 @@ in v0.28-v0.31:
 - a full-access experiment using every registered query;
 - shared response nuisance fixed across the query batch; and
 - exact rational response probabilities.
+
+Version v0.38 uses a frozen conditional nuisance law and compares the
+resulting marginal target experiments. It reports ordinary deficiency on the
+expanded `(target,nuisance)` experiment separately. It does not silently
+switch between marginal, revealed, or adversarial nuisance semantics.
 
 The access estimand is the smallest query family `A` satisfying
 
@@ -80,6 +87,13 @@ both have exact minimax error `1/3`, while ordinary directional deficiency is
 `1/6` in both directions. This is a control showing that Level 1 cannot stand
 in for Level 2. It is burned development evidence and will not be used as an
 unseen confirmation result.
+
+The burned reward fixture in
+[`DEVELOPMENT_RESULT_v0_38.md`](DEVELOPMENT_RESULT_v0_38.md) also separates
+all three comparison levels inside an explicit policy-regret grammar. Two
+target queries attain zero target-relative deficiency while omitting a
+gauge-only query; expanded deficiency charges the omitted gauge bit by `1/2`.
+Each target-query deletion has exact target-relative deficiency `1/4`.
 
 ## Gates to define before registration
 
