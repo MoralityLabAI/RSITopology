@@ -102,6 +102,19 @@ identifiability theorem or an ASMP-9 resolution. The
 [current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_39.md) records
 what remains.
 
+The prospectively registered
+[finite risk-polytope access theorem v0.40](risk_polytope_access_v0_40/RESULT_v0_40.md)
+then supplies the general finite replacement object. For any registered
+finite loss type, access is sufficient at tolerance `epsilon` exactly when
+its epsilon-shifted upper risk polytope contains the full-access risk
+polytope. In deterministic zero-one identification this reduces to Test
+Cover, making minimum exact access NP-hard; under asymmetric group losses,
+the same query channels produce different minimal access antichains and
+critical tolerances. All ten gates passed on a disjoint four-target fixture.
+This closes arbitrary finite nonadaptive access by exact compilation, not the
+adaptive, finite-sample, misspecified, or real-model obligations recorded in
+[the v0.40 matrix](RESOLUTION_OBLIGATION_MATRIX_v0_40.md).
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
