@@ -69,3 +69,11 @@ then records:
 No local GPU and no Prime pod are authorized by this plan alone. Registration
 must be created on the final execution environment after the source commit and
 prereveal tokenizer validation.
+
+## Availability hold
+
+The 2026-07-29 Prime check found zero active pods and two available one-GPU
+A100-80GB offers, priced at USD 1.23/hour and USD 1.79/hour. Both exceed the
+delegated USD 0.70/GPU-hour ceiling. No pod was created and no substitute GPU
+was selected. `PRIME_AVAILABILITY_HOLD_v0_68.json` records the exact offers and
+the no-launch decision.
