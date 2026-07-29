@@ -54,7 +54,7 @@ cmake --build /workspace/llama.cpp/build-sm89 \
   nvidia-smi \
     --query-gpu=name,uuid,driver_version,memory.total \
     --format=csv,noheader
-  nvcc --version
+  /usr/local/cuda-12.8/bin/nvcc --version
   python3 --version
   git -C "${RUN_ROOT}/repo" rev-parse HEAD
   git -C /workspace/llama.cpp rev-parse HEAD
