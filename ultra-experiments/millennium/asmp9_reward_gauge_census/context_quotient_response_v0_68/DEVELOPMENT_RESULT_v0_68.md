@@ -30,7 +30,7 @@ offset vectors                        25
 quotient-invariance checks        18,225
 maximality checks                     729
 linear-estimand checks                729
-pytest tests                           10
+full v0.68 pytest tests                23
 ```
 
 The planted falsification control is arm-by-order interaction. A valid quotient
@@ -84,8 +84,19 @@ A successor should:
 6. permit a global response claim only through a separate held-out
    compatibility gate.
 
-The draft protocol implements this architecture but deliberately does not yet
-freeze sample sizes or statistical margins.
+The scientific protocol now freezes:
+
+- 12 fresh construction and 12 fresh confirmation scenarios;
+- the scenario, rather than target or display order, as the experimental unit;
+- 528 exact-repeat singleton score records per split;
+- a `10/12` practical four-way coverage floor;
+- an exact `2^12` scenario-level content/label sign-flip test; and
+- separable local-family and shared-magnitude decisions.
+
+The statistical randomization flips the complete four-measurement vector
+inside each scenario. It therefore does not pseudoreplicate the two targets or
+display orders. The scientific design validation binds both deterministic job
+lists and authorizes no execution.
 
 ## ASMP-9 claim boundary
 
@@ -93,4 +104,6 @@ This development identifies a maximal invariant for one declared measurement
 nuisance action. It does not prove that the nuisance action is complete, that
 next-token choice is a value, that model responses reveal a reward-shaping
 orbit, or that context-local effects correspond to coherent preferences. It
-does not resolve ASMP-9 and authorizes no model run.
+does not resolve ASMP-9. The scientific protocol is frozen, but no model run is
+authorized until a runner, environment, model, tokenizer, resource envelope,
+and prereveal validator are sealed in a separate execution registration.
