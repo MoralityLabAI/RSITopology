@@ -1,0 +1,11 @@
+{
+  "alignment_rows_replayed": 20,
+  "all_registered_gates_pass": true,
+  "intervention_rows_replayed": 2,
+  "leakage_rows_replayed": 3,
+  "registration_file_sha256": "2aee1094df09a140e1eae28b52c9bf6fd25b3bbecc99682e5f2b049ce8220a90",
+  "result_content_sha256": "ee9d5d4185c17ef118437892f7659b2abaf2dadb2129f5b6365ac6a3284d95e7",
+  "result_file_sha256": "6647db080bd772220290b7d46319185004d53c2d4695d4739cced50254e42cbc",
+  "sealed_files_revalidated": 15,
+  "status": "independent_exact_replay_passed"
+}

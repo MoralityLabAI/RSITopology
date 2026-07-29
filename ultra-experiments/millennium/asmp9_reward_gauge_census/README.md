@@ -88,6 +88,20 @@ observation is ancillary under both registered nuisance biases. This is an
 exact necessary-and-sufficient access threshold in one finite grammar, not a
 general nuisance theorem or an ASMP-9 resolution.
 
+The prospectively registered
+[correlated gauge access theorem v0.39](correlated_gauge_access_v0_39/RESULT_v0_39.md)
+then removes v0.38's target-independence assumption. Observing a
+decision-equivalent representative choice has exact leakage radius equal to
+half the range of its target-dependent assignment probabilities; stochastic
+intervention restores ancillarity by making that assignment target
+independent. More importantly, three channels with identical leakage radius
+have zero, partial, or no value as substitutes for the missing target query,
+depending on their target alignment. This is an exact finite
+observational-versus-interventional access separation, not a general reward
+identifiability theorem or an ASMP-9 resolution. The
+[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_39.md) records
+what remains.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)

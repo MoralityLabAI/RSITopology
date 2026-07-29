@@ -15,4 +15,8 @@ intervention as an information-erasing control, and compares equal-radius
 gauge channels as substitutes for a missing target query. It imports the
 sealed v0.38 exact primal-dual solver without modifying any v0.38 artifact.
 
-Current state: `burned_development_only_not_registered`.
+Current state: `registered_confirmation_passed`.
+
+The canonical outcome is [RESULT_v0_39.md](RESULT_v0_39.md). All ten gates
+passed on 25 disjoint rows, and the independent verifier reproduced every
+mathematical row while revalidating all fifteen sealed inputs.
