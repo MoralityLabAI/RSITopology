@@ -11,6 +11,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
   ca-certificates \
   cuda-toolkit-12-8 \
   cmake \
+  g++-12 \
   git
 
 mkdir -p "${RUN_ROOT}/model" "${RUN_ROOT}/input"
@@ -33,7 +34,9 @@ cmake \
   -S /workspace/llama.cpp \
   -B /workspace/llama.cpp/build-sm89 \
   -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CXX_COMPILER=/usr/bin/g++-12 \
   -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.8/bin/nvcc \
+  -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-12 \
   -DCUDAToolkit_ROOT=/usr/local/cuda-12.8 \
   -DCMAKE_CUDA_ARCHITECTURES=89-real \
   -DGGML_CUDA=ON \
