@@ -210,6 +210,13 @@ as transformer evidence.
   visible; its narrowly repaired successor passed ten gates and seventeen
   independent checks. Nonuniform maximin design remains open.
 
+- [ASMP-9: nonuniform multivariate value and K4 exchange trap](../ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/PUBLIC_SUMMARY_v0_23.md)
+  Arbitrary positive edge counts at `epsilon=1/2` admit an exact
+  edge-multivariate `q=-1` representation. An infinite K4 family is a strict
+  suboptimal one-exchange local maximum and explicitly violates
+  M-concavity, ruling out a general greedy-exchange guarantee without
+  overclaiming optimizer hardness.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design

@@ -163,3 +163,11 @@ declared allocation evaluates a nonexceptional point on the
 Jaeger-Vertigan-Welsh `H_-1` curve.  Exact value computation is therefore
 #P-hard even inside one biconnected block.  This does not prove uniform
 allocation optimal or classify nonuniform maximin design.
+
+The [nonuniform multivariate result v0.23](nonuniform_multivariate_v0_23/PUBLIC_SUMMARY_v0_23.md)
+then gives the exact edge-dependent representation
+`F_G(n)=-2^(-sum n_e) Z_G(-1,{2^(n_e)-1})` at `epsilon=1/2`.  It also
+constructs an infinite K4 family of strict suboptimal one-exchange local
+maxima and an explicit M-concavity exchange violation.  This rules out a
+general global guarantee for one-unit exchange ascent but does not classify
+the global optimizer or its computational complexity.

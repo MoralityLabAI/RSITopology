@@ -1,0 +1,11 @@
+{
+  "command": "python run_verification_v0_23.py --registration registration_v0_23.json --output-dir artifacts_v0_23",
+  "completed_at_utc": "2026-07-29T03:04:30Z",
+  "execution_commit": "e45d94bdc0a64a712132a2b67d93dfba4cff3a8a",
+  "peak_resident_bytes": 39989248,
+  "protocol_sha256": "e68062bfb327279b64a482e125cdb47dc0992cce5f8c658b9d34f065a41fa451",
+  "registration_sha256": "7ed6486f26193cfc8870badacde54184f9567b5fe348ad88a76166544a6f8f9e",
+  "result_sha256": "3733e73324905fbb7b1d44817a46607539409126c39a0120c73e372d8a4eae92",
+  "started_at_utc": "2026-07-29T03:04:20Z",
+  "wall_seconds": 9.633018699998502
+}
