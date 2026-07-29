@@ -14,6 +14,7 @@ EXPERIMENT = (
 )
 WRAPPER = ROOT / "scripts" / "run_prime_asmp9_v0343_guarded.sh"
 CLEANUP = ROOT / "scripts" / "post_run_prime_asmp9_v0343.sh"
+PREPARER = EXPERIMENT / "prepare_prime_registration_v0_34_3.py"
 
 
 def test_prime_shim_changes_only_registration_schema_and_entrypoint() -> None:
@@ -65,3 +66,10 @@ def test_cleanup_is_owned_unit_scoped_and_checks_gpu_apps() -> None:
     assert "--query-compute-apps=pid,process_name,used_memory" in source
     assert not re.search(r"\bpkill\b|\bkillall\b", source)
 
+
+def test_prime_registration_preparer_is_prereveal_and_compare_or_fail() -> None:
+    source = PREPARER.read_text(encoding="utf-8")
+    assert '"outcomes_consumed": False' in source
+    assert '"query_count_before_registration": 0' in source
+    assert "refusing to replace unequal registration" in source
+    assert "registration_content_sha256" in source
