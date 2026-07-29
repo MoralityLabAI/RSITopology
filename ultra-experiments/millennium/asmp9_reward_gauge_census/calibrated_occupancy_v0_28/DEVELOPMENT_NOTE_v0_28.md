@@ -28,4 +28,3 @@ registration.
 The finite run checks the translation of the theorem into an instrument. The
 scale obstruction and `ker(X)=G` criterion are analytic linear-algebra facts.
 The run is not evidence that real reward learning has a calibrated numeraire.
-
