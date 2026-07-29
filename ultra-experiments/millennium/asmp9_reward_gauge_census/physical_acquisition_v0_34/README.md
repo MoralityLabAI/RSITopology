@@ -24,6 +24,25 @@ therefore gates a clean-start whole-device memory delta before the full pilot.
 The untouched `future_holdout` families may be used only by a later,
 versioned confirmation registration.
 
+## Prime v0.34.4 result
+
+The local v0.34.2 full pilot was preserved as a resource abort. A registered
+Prime execution then completed all 1,944 receipts on one RTX 6000 Ada and ran
+the unchanged analyzer under CPU cgroup caps.
+
+The result is a clean measurement failure, not a model or theorem failure:
+
+- cold-start probability and log-odds deltas were exactly zero;
+- only 10/36 standard-gamble and 10/18 compound curves bracketed;
+- 44/54 curves had at least one monotonicity violation;
+- option-order bias had 95th percentile `0.814139`;
+- mixture affinity was unavailable; and
+- the untouched confirmation holdout stayed closed.
+
+See [the Prime result](PRIME_RESULT_v0_34_4.md), the
+[machine-readable analysis](BURNED_PILOT_ANALYSIS_v0_34_4.json), and the
+[closeout receipt](PRIME_CLOSEOUT_v0_34_4.json).
+
 ## Prepare after the implementation commit
 
 ```powershell
@@ -66,6 +85,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File `
 
 ```powershell
 python -m pytest tests/test_asmp9_physical_acquisition_v034.py -q
+python -m pytest tests/test_asmp9_physical_acquisition_prime_v0343.py -q
+python -m pytest tests/test_asmp9_physical_acquisition_prime_analysis_v0344.py -q
+python -m pytest tests/test_asmp9_physical_acquisition_prime_result_v0344.py -q
 python -m pytest ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33 -q
 ```
 

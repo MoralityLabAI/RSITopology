@@ -30,7 +30,10 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current registered [resolution audit](RESOLUTION_AUDIT_v0_32.md) maps
+The current [physical-acquisition audit](RESOLUTION_AUDIT_v0_34.md) records
+that the first registered real-model bridge completed its capture but rejected
+its single-token prompt-level common ruler before confirmation. The earlier
+registered [resolution audit](RESOLUTION_AUDIT_v0_32.md) maps
 every clause of the broader candidate problem to proved, partial, or missing
 evidence and freezes the next load-bearing sequence. The additive
 [v0.33 development audit](RESOLUTION_AUDIT_v0_33_DEVELOPMENT.md) records the
