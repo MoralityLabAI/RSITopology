@@ -256,3 +256,16 @@ no artifacts because its Windows resource meter failed; a separately
 registered repair changed only that meter and passed all 12 scientific gates,
 29 independent checks, and 10 repair-integrity checks. Source widths remain
 assumed rather than behaviorally estimated, so ASMP-9 remains unresolved.
+
+The [v0.32 behavioral-rectangle result](behavioral_rectangle_v0_32/PUBLIC_SUMMARY_v0_32.md)
+then supplies one explicit behavioral source for the semantic rectangle
+assumed by v0.30-v0.31. Under common global worst and best lottery anchors,
+mixture-affine preferences, a common response midpoint, and an admitted
+correct-sign floor, binary standard-gamble queries acquire every normalized
+cell value. Cross-differences give the exact additive-conjoint criterion, and
+the shared cell intervals propagate as one correlated residual zonotope into
+the v0.31 handoff. Deterministic rankings and row-local rulers each admit
+exact additive-versus-interacting indistinguishability witnesses. All 12
+registered gates and 20 import-independent checks passed. The behavioral
+assumptions are not validated for humans or models, and ASMP-9 remains
+unresolved; see the [current resolution audit](RESOLUTION_AUDIT_v0_32.md).
