@@ -266,6 +266,18 @@ and unchanged identifiability. The
 completeness of all-order Buehlerization among deterministic direct
 confidence maps. ASMP-9 remains unresolved.
 
+The prospectively verified
+[deterministic direct-map completeness result v0.52](direct_map_completeness_v0_52/RESULT_v0_52.md)
+then closes that deterministic seam. Sorting any valid direct upper map by
+its own reports yields a Buehler map that is pointwise no larger, for every
+tie refinement. The independent census checked 148 multilevel tables, 1,494
+valid direct maps, 3,342 tie-refined dominance comparisons, and 1,480 global
+optimum identities with zero mismatches. This is a classical Buehler
+self-ordering corollary, not a novelty claim. The
+[v0.52 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_52.md) moves next to
+aggregate randomized coverage, where deterministic components may
+individually under-cover. ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
