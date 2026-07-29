@@ -115,6 +115,21 @@ would not resolve a scientifically uncertain obligation.  The
 load-bearing target to structured hidden compliance or strategic/dynamic
 response.
 
+The unregistered
+[strategic elicitation capacity v0.65 development](strategic_elicitation_capacity_v0_65/DEVELOPMENT_RESULT_v0_65.md)
+then maps the static strategic branch.  An arbitrary interactive deterministic
+outcome-only protocol has exact capacity `n` on the full `n!` ranking domain.
+Commitment followed by random pair selection restores full-ranking
+elicitation exactly at full `C(n,2)` pair support, with sharp normalized
+maximin margin `delta/C(n,2)`; revealing the pair before the report leaves
+`n!/2` rankings equivalent.  The positive mechanism is explicit prior art in
+Azrieli, Chambers, and Healy (2021), so the
+[registration decision](strategic_elicitation_capacity_v0_65/REGISTRATION_DECISION_v0_65.md)
+keeps the package development-only.  The
+[v0.65 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_65.md) moves the
+load-bearing strategic target to dynamic response and physical validation of
+commitment, consequence sensitivity, and expected-utility assumptions.
+
 ## Prereveal tests
 
 ```powershell
