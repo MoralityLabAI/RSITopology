@@ -1,0 +1,81 @@
+{
+  "checks": {
+    "protocol_id": true,
+    "registration_sha256": true,
+    "scientific_gates": true,
+    "scientific_payload": true,
+    "source_hashes": true,
+    "version": true
+  },
+  "gate_matches": {
+    "E0": true,
+    "K0": true,
+    "L0": true,
+    "R0": true,
+    "U0": true
+  },
+  "source_checks": [
+    {
+      "actual_sha256": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "expected_sha256": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+    },
+    {
+      "actual_sha256": "79ba84236210ff82a133dc1a2e67567bc698f383bd45749cdce5a7f8d5b9f559",
+      "expected_sha256": "79ba84236210ff82a133dc1a2e67567bc698f383bd45749cdce5a7f8d5b9f559",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/PRIOR_ART_GATE_v0_43.md"
+    },
+    {
+      "actual_sha256": "017f18598e00052e544491c2ab2d4230b50c48040c2a2f0004ff0effbd193af2",
+      "expected_sha256": "017f18598e00052e544491c2ab2d4230b50c48040c2a2f0004ff0effbd193af2",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/PROTOCOL_v0_43.md"
+    },
+    {
+      "actual_sha256": "e42bfedb1b065ec0a7aadd8c1112e4db4269114885c1e5b518b97635b53d96ee",
+      "expected_sha256": "e42bfedb1b065ec0a7aadd8c1112e4db4269114885c1e5b518b97635b53d96ee",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/THEOREM_DRAFT_v0_43.md"
+    },
+    {
+      "actual_sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+      "expected_sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/environment_lock_v0_43.json"
+    },
+    {
+      "actual_sha256": "c85c54779412ac99365fa40ee1e3d5621586b84bd4ed44d0603b902bfd437700",
+      "expected_sha256": "c85c54779412ac99365fa40ee1e3d5621586b84bd4ed44d0603b902bfd437700",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/rate_theorem.py"
+    },
+    {
+      "actual_sha256": "8e64446e840a4b8fc1ac697e72d2aba775a05384ee76dad45bd338debee0787a",
+      "expected_sha256": "8e64446e840a4b8fc1ac697e72d2aba775a05384ee76dad45bd338debee0787a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/run_confirmation_v0_43.py"
+    },
+    {
+      "actual_sha256": "75eb3482966f772d1e02e6b246efbe2b07d1189bcdbf10486c0b1c02d5095ff2",
+      "expected_sha256": "75eb3482966f772d1e02e6b246efbe2b07d1189bcdbf10486c0b1c02d5095ff2",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/test_rate_theorem.py"
+    },
+    {
+      "actual_sha256": "f417de4eeb407d7731a3fb8dab9eb2007a81ee4df3b84173a2d925030b8d3550",
+      "expected_sha256": "f417de4eeb407d7731a3fb8dab9eb2007a81ee4df3b84173a2d925030b8d3550",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/verify_result_v0_43.py"
+    },
+    {
+      "actual_sha256": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "expected_sha256": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+    }
+  ],
+  "status": "independent_replay_passed",
+  "status_mapping": true
+}

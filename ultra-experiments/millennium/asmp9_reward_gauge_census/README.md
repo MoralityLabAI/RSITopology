@@ -145,6 +145,18 @@ certificate, not matching minimax rates, strategic misspecification, efficient
 policy search, or the remaining obligations in
 [the v0.42 matrix](RESOLUTION_OBLIGATION_MATRIX_v0_42.md).
 
+The prospectively registered
+[finite-horizon rate result v0.43](finite_horizon_rate_v0_43/RESULT_v0_43.md)
+then audits the sample-rate exponent in that confidence certificate. The KL
+chain rule and Pinsker rule out a uniform `Theta(h delta)` risk witness with
+`Theta(delta^2)` one-step KL. On an exact repeated binary sentinel, a rational
+two-point lower certificate and an all-zero block estimator instead give
+matching `Theta(h/g^2)` horizon/gap exponents at fixed confidence, improving
+the v0.42.1 sufficient horizon exponent by one power. This is sharp on the
+sentinel family, not a minimax theorem over all adaptive experiments; the
+[v0.43 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_43.md) freezes the
+next policy-occupancy-weighted information-radius target.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
