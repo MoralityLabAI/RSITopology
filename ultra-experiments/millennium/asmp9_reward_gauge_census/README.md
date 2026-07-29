@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_16.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_26_2.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -187,3 +187,16 @@ individual path, reducing exact global optimization to path-total
 enumeration.  All nine gates and eleven independent replay checks passed on
 fresh cells.  The algorithm is pseudopolynomial when the trial budget is
 binary encoded, and arbitrary biconnected-block optimization remains open.
+
+The [v0.26.2 offset-access result](offset_access_v0_26/PUBLIC_SUMMARY_v0_26_2.md)
+then returns to the broader behavioral quantifier.  For any strictly
+increasing symmetric response link, a known cardinal offset spanning all
+admissible indifference points turns comparison into a link-free threshold
+query.  Coordinate bisection has a matching metric-entropy lower bound on
+dyadic cells; restricted offset range leaves an explicit minimax error; and a
+finite-sample theorem requires a declared link-margin floor.  Arbitrarily
+flat links rule out a uniform finite-sample rate.  The result was established
+through a prospectively registered additive repair after the original run's
+mathematics passed but a prose gate failed and the first repair crashed before
+adjudication.  It does not show that ordinary comparisons supply cardinal
+offsets or resolve ASMP-9.
