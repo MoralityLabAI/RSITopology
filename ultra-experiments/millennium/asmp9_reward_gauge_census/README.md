@@ -48,7 +48,7 @@ failure, and freezes a 2,412-prompt factorial successor plus hash-bound
 registration, capture, hard-cap, and analysis tooling. It is ready to bind to
 an execution environment but is not yet registered there. No v0.35 model
 query or confirmation row has been run. The
-[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_36.md) keeps this
+[current obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_37.md) keeps this
 physical bridge separate from the five requirements for a full ASMP-9
 resolution.
 
@@ -63,6 +63,19 @@ decision feasibility, so the result separates raw confusability, decision
 quotient, and scientifically grounded symmetry rather than discarding
 quotients. It does not provide the broader stochastic classification ASMP-9
 still requires.
+
+The prospectively registered
+[stochastic-experiment ledger v0.37](stochastic_experiment_v0_37/RESULT_v0_37.md)
+then tests whether that component quotient is enough for quantitative
+decision comparison. Across all 4,096 tables in a disjoint probability grid,
+the one-sample oracle has one zero-error quotient but exact minimax risks
+within it differ by as much as `1/4`; the population-law oracle has a
+within-quotient spread of `1/6`. A separate nuisance-only witness has full
+expanded-state deficiency `1/2` but zero target-only risk gap. Thus the
+zero-error quotient is too coarse for approximate risk, while full
+nuisance-sensitive deficiency can be conservative. The result is a classical
+finite instrument consolidation, not a new Blackwell/Le Cam theorem or an
+ASMP-9 resolution.
 
 ## Successor
 
