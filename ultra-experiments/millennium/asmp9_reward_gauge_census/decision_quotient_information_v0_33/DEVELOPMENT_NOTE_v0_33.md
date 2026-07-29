@@ -171,8 +171,9 @@ A prospective v0.33 must now:
 
 1. register an observation-to-semantic coupling-acquisition grammar and prove
    whether its induced query rows span the 18-dimensional decision quotient;
-2. State whether the result is a nonasymptotic lower bound, an asymptotically
-   matching characterization, or only a computable design criterion.
+2. register the exact fixed-sample upper construction, or replace it with a
+   sharper adaptive rule, while keeping its nonasymptotic scope distinct from
+   imported asymptotic achievability;
 3. Include at least one policy-changing alternative for each access channel,
    plus same-policy gauge aliases.
 4. Compare joint optimal allocation with uniform, channel-ablated, and

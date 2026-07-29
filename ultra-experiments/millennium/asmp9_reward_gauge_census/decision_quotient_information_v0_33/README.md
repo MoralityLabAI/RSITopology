@@ -23,7 +23,9 @@ Read:
   for the exact decision-equivalence quotient connecting the v0.31 and v0.32
   matrix shapes; and
 - [`COMPOSITE_PROBE_DESIGN_v0_33_1.md`](COMPOSITE_PROBE_DESIGN_v0_33_1.md)
-  for the 18-probe factorized basis and 48-query entrywise comparator.
+  for the 18-probe factorized basis and 48-query entrywise comparator; and
+- [`FINITE_UPPER_BOUND_DEVELOPMENT_v0_33_2.md`](FINITE_UPPER_BOUND_DEVELOPMENT_v0_33_2.md)
+  for an exact uniformly error-controlled fixed rule on the native registry.
 
 Run the planted channel-necessity control with:
 
@@ -42,6 +44,8 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_coupling_development.py
 
 python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_composite_probe_development.py
+
+python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_finite_upper_bound_development.py
 ```
 
 The fixture is intentionally small. Its role is to verify that:
@@ -63,3 +67,9 @@ The factorized design supplies a candidate grammar—six behavioral-cell
 perturbations crossed with three policy-contrast readouts—but no model
 intervention or linearity validation has yet established that those composite
 queries are physically available.
+
+On the finite stochastic side, an exact midpoint-grid search now supplies a
+3,324-query fixed rule with error strictly below `0.05` on every native
+hypothesis. This brackets the base-instance change-of-measure lower bound
+within a factor of about `2.16`, but assumes known independent Bernoulli laws
+and is neither adaptive nor globally optimized.

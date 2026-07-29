@@ -10,7 +10,7 @@ shape a successor protocol but are not claim-eligible evidence.
 ## Progress since v0.32
 
 The v0.32 audit named sharp joint stochastic policy complexity as the next
-load-bearing obligation. Development work now supplies four pieces.
+load-bearing obligation. Development work now supplies five pieces.
 
 ### 1. Decision quotient
 
@@ -68,6 +68,17 @@ entrywise tomography requires all 48 coordinates. The `48` versus `18`
 comparison is an access-grammar separation, not a finite-sample efficiency
 claim.
 
+### 5. Finite-sample upper construction
+
+The five-hypothesis native registry now has an explicit fixed decision rule.
+Exact binomial arithmetic gives uniform error below `0.05` at 3,324 queries.
+At the base truth, the classical change-of-measure lower bound is
+1,538.694 expected queries, leaving a factor-2.160 bracket.
+
+The upper construction is minimal only on its frozen midpoint-aligned count
+grid. It assumes known independent Bernoulli laws and does not provide
+adaptive stopping.
+
 ## What remains load-bearing
 
 ### A. Coupling acquisition
@@ -82,11 +93,12 @@ prospective run must establish that its behavioral-cell perturbations and
 policy-contrast readouts are implementable and remain linear at the admitted
 norms.
 
-### B. Finite-sample upper bound
+### B. Sharp or robust finite-sample procedure
 
-The current characteristic-time expression is a classical lower bound.
-Supply a registered stopping rule and a nonasymptotic error/sample guarantee,
-or label the result only as a design criterion.
+The native registry is no longer lower-bound-only, but the construction is
+deliberately narrow. Optimize thresholds and adaptive stopping, or replace
+known laws with confidence sequences and prove a guarantee robust to unknown
+probabilities and the declared dependence class.
 
 ### C. Cost and dependence model
 

@@ -87,3 +87,16 @@ claims. The ASMP-9 contribution is their exact specialization to the sealed
 v0.31 analysis/policy matrices and v0.32 semantic operator, plus the resulting
 decision-access ledger: 18 relevant coupling coordinates versus 30
 decision-null coordinates.
+
+## Finite-upper attribution
+
+The v0.33.2 upper construction is a composition of elementary
+simple-hypothesis testing and exact binomial-tail arithmetic. Monotone
+likelihood-ratio threshold tests for two Bernoulli laws are classical
+Neyman-Pearson/Karlin-Rubin material. The union and independence calculations
+used to combine the three tests are also standard.
+
+No novelty attaches to the threshold rule or its tail sums. The residual
+contribution is the exact finite specialization to the native ASMP-9 answer
+registry, its explicit comparison with the controlled-sensing lower bound,
+and the conservative record of the remaining factor-2.160 gap.
