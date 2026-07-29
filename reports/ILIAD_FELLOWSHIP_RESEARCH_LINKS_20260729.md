@@ -1,5 +1,26 @@
 # Iliad Fellowship research links
 
+## Copy-paste links for the application
+
+If the form permits only two research links, use:
+
+1. **AI Safety Millennium Problems — canonical problem set and resolution
+   rules:** <https://github.com/MoralityLabAI/RSITopology/blob/feat/spectral-bundle-v0.3-bifiltration/ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md>
+2. **Real-model holonomy study — Qwen0.8B precision geometry:**
+   <https://github.com/MoralityLabAI/RSITopology/blob/feat/spectral-bundle-v0.3-bifiltration/reports/QWEN08_PRECISION_GEOMETRY_PAPER_V0_1.md>
+
+If the form permits four, add:
+
+3. **Synthetic holonomy construction and identity-loss result:**
+   <https://github.com/MoralityLabAI/RSITopology/blob/feat/spectral-bundle-v0.3-bifiltration/reports/monitor_holonomy_insight.md>
+4. **Implemented identity-attestation and control-harness integration:**
+   <https://github.com/MoralityLabAI/RSITopology/blob/feat/spectral-bundle-v0.3-bifiltration/docs/IDENTITY_ATTESTATION_INTEGRATION.md>
+
+The repository and full curated index are:
+
+- https://github.com/MoralityLabAI/RSITopology/tree/feat/spectral-bundle-v0.3-bifiltration
+- https://github.com/MoralityLabAI/RSITopology/blob/feat/spectral-bundle-v0.3-bifiltration/reports/ILIAD_FELLOWSHIP_RESEARCH_LINKS_20260729.md
+
 ## Recommended primary link
 
 Start with the
@@ -26,7 +47,7 @@ sectioning, and real-model validation work.
   an exact finite certificate showing that, for the frozen nine-judge panel,
   fourth-order dependence information is the first moment order sufficient to
   certify a 5% majority-error target.
-- [ASMP-9 resolution-obligation matrix](../ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_36.md):
+- [ASMP-9 resolution-obligation matrix](../ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_37.md):
   a candid ledger separating established finite access and quotient results
   from the work still required to resolve value identifiability modulo
   decision-preserving transformations.
