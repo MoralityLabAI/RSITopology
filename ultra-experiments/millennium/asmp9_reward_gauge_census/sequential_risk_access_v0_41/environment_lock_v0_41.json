@@ -1,0 +1,8 @@
+{
+  "implementation": "CPython fractions plus SciPy HiGHS proposal and exact rational primal-dual replay",
+  "network": false,
+  "numpy": "2.4.2",
+  "platform": "Windows",
+  "python": "3.13.11",
+  "scipy": "1.17.0"
+}
