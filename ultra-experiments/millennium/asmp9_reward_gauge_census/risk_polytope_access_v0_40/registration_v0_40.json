@@ -1,0 +1,58 @@
+{
+  "confirmation_fixture": {
+    "decision_types": {
+      "classification": "four-target zero-one",
+      "combined_groups": ["s0_asymmetric", "s1_asymmetric"],
+      "s0_asymmetric": {
+        "false_negative": "1",
+        "false_positive": "1/4",
+        "labels": [0, 0, 1, 1]
+      },
+      "s1_asymmetric": {
+        "false_negative": "4/5",
+        "false_positive": "3/5",
+        "labels": [0, 1, 0, 1]
+      }
+    },
+    "queries": {
+      "s0": [0, 0, 1, 1],
+      "s1": [0, 1, 0, 1],
+      "s_const": [1, 1, 1, 1],
+      "sx": [0, 1, 1, 0]
+    },
+    "targets": 4
+  },
+  "implementation_commit": "4abbe74a50eb327d53a05d238317902425a80fc9",
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/risk_polytope_access_v0_40",
+    "elapsed_seconds": 13.84,
+    "status": "pass",
+    "tests_passed": 8
+  },
+  "protocol_id": "asmp9-risk-polytope-access-v0.40",
+  "registered_at_utc": "2026-07-29T10:30:02Z",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "sealed_files": {
+    "../decision_relative_access_v0_38/relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "DEVELOPMENT_RESULTS_v0_40.json": "91f6a315a22084e792bbd92fe38c333d2e3b93ed7ea276c5fb7cda486c3f15a8",
+    "PRIOR_ART_GATE_v0_40.md": "271e33c876556cecd9164cac67295f0c3a738597b7549172972e62297d584b23",
+    "PROTOCOL_v0_40.md": "209611059239a8b6800139045581596e161356ef50f71817a23771eac57b3ac8",
+    "THEOREM_DRAFT_v0_40.md": "e0589625409777fb733f4a4d1e1be8085f16fc5cd769818787c9f58d2e975ce6",
+    "confirmation.py": "cf666f1e30c69f50f0c29af463e3134c816b1f01c784ff0b80b5c3f840983ca7",
+    "environment_lock_v0_40.json": "d8b31031109c92a221611fd96b807846380dedb8b67796e2848a3af8e735809d",
+    "execute_confirmation.py": "501a509271bbabfd4b22d64cfacb6c1b3959c6932e83ce82f953e8e00d6ef0b4",
+    "protocol_v0_40.json": "24f8fe29b2b8ec65bddb5b267b2a52373d3375e74af8fe239b744acaeb6676a3",
+    "risk_polytope_access.py": "dc9b3788d60560fd2e6372adf13e0cc424f7be003a3d7fe34711675547819e30",
+    "run_burned_development.py": "3998b347c8a663eca453874530439dee64fae102148cade213c188c6400745aa",
+    "test_confirmation_structure.py": "6134dd4f35fdcd29dea7562a7c7639607edee3020f66d5e11c18a1f216e82fc8",
+    "test_execute_confirmation.py": "d580a671f26b87849d7f921897924ac41aa5c526cdaeb10ea00c809df0968bfd",
+    "test_risk_polytope_access.py": "3934cc9f412335667152385fab6b58bb6cc76fed01759a587214926efdcf9965"
+  },
+  "status": "registered_prereveal",
+  "version": "0.40"
+}
