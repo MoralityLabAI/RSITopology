@@ -91,3 +91,9 @@ The [capture-availability audit](PHYSICAL_CAPTURE_AVAILABILITY_v0_34.md)
 records that none of the existing ASMP-9 or Qwen run directories contains the
 required joint behavioral object. Existing harness infrastructure can be
 reused, but its outcomes cannot be relabeled or pooled into v0.34.
+
+The additive successor implementation is
+[`../physical_acquisition_v0_34/README.md`](../physical_acquisition_v0_34/README.md).
+It freezes a burned calibration pilot with common-anchor standard gambles,
+compound-lottery controls, the preferred 18 physical probes, and a hard-capped
+receipt-preserving runner.
