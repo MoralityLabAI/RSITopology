@@ -157,6 +157,19 @@ sentinel family, not a minimax theorem over all adaptive experiments; the
 [v0.43 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_43.md) freezes the
 next policy-occupancy-weighted information-radius target.
 
+The prospectively registered
+[policy-specific information result v0.44](occupancy_information_v0_44/RESULT_v0_44.md)
+then corrects that target: with unrestricted repeatable queries, the maximum
+occupancy toll is exactly `h max kappa` and gives no improvement. The useful
+object keeps information on each policy risk generator and propagates its own
+outward Pinsker box through the exact deficiency LP. On the same query
+library, the four-class interval was strictly narrower than the uniform
+certificate at four perturbation levels, while the root-group decision
+received an exact zero-width certificate because its optimal policy never
+used an uncertain query. The
+[v0.44 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_44.md) moves next to
+decision-directed sample allocation.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
