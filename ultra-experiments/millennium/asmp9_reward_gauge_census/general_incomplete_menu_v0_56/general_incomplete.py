@@ -77,6 +77,17 @@ def random_utility_affine_rank(n: int) -> int:
     return exact_rank(rows) - 1
 
 
+def subset_zeta_matrix(width: int) -> Tuple[Tuple[int, ...], ...]:
+    """Zeta system used by the adjacent-swap/Möbius proof."""
+
+    if width < 0:
+        raise ValueError("width must be nonnegative")
+    return tuple(
+        tuple(int(subset & ~lower_set == 0) for subset in range(1 << width))
+        for lower_set in range(1 << width)
+    )
+
+
 def graph_components(n: int, observed: Iterable[Menu]) -> int:
     adjacency = {node: set() for node in range(n)}
     for menu in observed:

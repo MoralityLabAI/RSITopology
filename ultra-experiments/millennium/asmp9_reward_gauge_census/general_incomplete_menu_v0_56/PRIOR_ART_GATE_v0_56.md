@@ -23,6 +23,23 @@ Falmagne supplies the complete-domain finite random-scale representation.
   Systems", *Journal of Mathematical Psychology* 18(1), 1978, pp. 52-72,
   <https://doi.org/10.1016/0022-2496(78)90048-2>.
 
+Turansick explicitly formulates limited-domain RUM testing by introducing
+choice probabilities on unobserved menus as extension variables.  His
+Theorem 3.3 makes the existence-of-a-RUM-completion problem explicit.  The
+present draft starts one quantifier later: it compares that existential
+extension with the class of *all* unrestricted positive extensions.
+
+- Christopher Turansick, "An Alternative Approach for Nonparametric Analysis
+  of Random Utility Models", *Journal of Economic Theory* 226, 2025, 105998,
+  <https://doi.org/10.1016/j.jet.2025.105998>.
+
+Clark's de Finetti-coherency approach is another classical extension
+framework, including non-universal choice domains.
+
+- Stephen A. Clark, "The Random Utility Model with an Infinite Choice Space",
+  *Economic Theory* 7(1), 1995, pp. 179-189,
+  <https://ideas.repec.org/a/spr/joecth/v7y1995i1p179-189.html>.
+
 Alos-Ferrer and Mihm directly characterize Luce choice for an arbitrary
 collection of menus and separate falsification, identification, and
 out-of-sample prediction.  Their graph-connectivity result is the direct
@@ -56,10 +73,10 @@ does not imply:
 all unrestricted positive completions belong to that object tier.
 ```
 
-The proof packages classical full-dimensionality and arbitrary-menu
-identification facts into a sharp full-kernel certification threshold.
-Novelty is not established; an exact match in the incomplete-choice
-literature would subsume the theorem.
+The proof packages classical limited-domain extension, arbitrary-menu
+identification, and finite convex geometry into a sharp full-kernel
+certification threshold. Novelty is not established; an exact match in the
+incomplete-choice literature would subsume the theorem.
 
 ## Claim boundary
 

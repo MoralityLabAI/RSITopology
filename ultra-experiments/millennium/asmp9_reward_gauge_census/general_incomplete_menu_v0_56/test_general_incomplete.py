@@ -8,6 +8,12 @@ def test_random_utility_polytope_has_full_checked_affine_rank():
         assert gi.random_utility_affine_rank(n) == gi.ambient_dimension(n)
 
 
+def test_adjacent_swap_zeta_system_is_exactly_invertible():
+    for width in range(6):
+        matrix = gi.subset_zeta_matrix(width)
+        assert gi.exact_rank(matrix) == 1 << width
+
+
 def test_dimension_gap_is_strict_on_all_small_proper_domains():
     for n in (3, 4):
         for observed in gi.proper_domains(n):

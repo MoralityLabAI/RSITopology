@@ -61,9 +61,8 @@ grid resolution.
 
 ## Remaining proof debt
 
-- establish the full-dimensionality lemma for arbitrary finite `n` by a
-  precise classical citation or self-contained proof;
-- formalize the semialgebraic-dimension exclusion step;
+- obtain hostile review of the adjacent-swap/Möbius full-dimensionality proof
+  and the semialgebraic-dimension exclusion step;
 - search for exact subsumption by incomplete stochastic-choice results; and
 - review positivity, singleton-menu, and exceptional-domain conventions
   before registration.

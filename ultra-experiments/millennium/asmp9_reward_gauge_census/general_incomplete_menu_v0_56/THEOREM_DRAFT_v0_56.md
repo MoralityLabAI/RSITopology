@@ -93,10 +93,44 @@ d_D = sum_{A in D} (|A|-1)
 k = d-d_D.
 ```
 
-The classical random-utility polytope is full-dimensional in the `d`
-dimensional product of menu simplices.  A positive Plackett-Luce distribution
-assigns positive mass to every strict ranking, so its choice kernel lies in
-the relative interior of that polytope.
+The random-utility polytope is full-dimensional in the `d` dimensional
+product of menu simplices.  Here is a self-contained proof of that ingredient.
+
+Suppose an affine functional is constant on every deterministic-ranking choice
+kernel.  Write its menu coefficients as `a(A,x)`, so its value on ranking
+`pi` is
+
+```text
+sum_A a(A, top_pi(A)).
+```
+
+Fix distinct alternatives `x,y` and swap them when they are adjacent in a
+ranking.  Let `L` be the set of alternatives ranked below both.  Constancy of
+the functional gives
+
+```text
+sum_{S subseteq L}
+  [a({x,y} union S,x) - a({x,y} union S,y)] = 0
+```
+
+for every `L subseteq X \ {x,y}`.  Boolean Möbius inversion therefore implies
+
+```text
+a(A,x) = a(A,y)
+```
+
+for every menu `A` containing `x,y`.  As this holds for every pair in every
+menu, the coefficient is constant within each menu.  Such functionals are
+exactly the menu-normalization equalities.  There is no other affine equality,
+so the deterministic-ranking kernels affinely span the full `d` dimensional
+ambient space.
+
+A positive Plackett-Luce distribution assigns positive mass to every strict
+ranking.  A positive combination of all deterministic generators lies in the
+relative interior of their convex hull: if it lay on a proper supporting
+hyperplane, positivity would force every generator onto that hyperplane.
+Thus its choice kernel is an interior point of the full-dimensional RUM
+polytope.
 
 Projecting onto the observed menus has rank `d_D`.  Therefore the RUM
 completion fiber through a positive Luce kernel contains a relatively open
@@ -122,10 +156,14 @@ k >= sum_{i<j} n_i n_j.
   For `c=2`, this is at least `n-1 >= 2 > 1`.  For `c>=3`, it is at least
   `choose(c,2) > c-1`.
 
-Hence the RUM fiber has strictly larger dimension than its Luce subset.  The
-Luce subset cannot contain a relatively open neighborhood of the RUM fiber.
-There is therefore a positive RUM completion arbitrarily close to the
-Plackett-Luce point that is not Luce.  This proves clause 2.
+Hence the RUM fiber has strictly larger dimension than its Luce subset.  More
+precisely, a small ambient ball around the Plackett-Luce point is contained in
+the RUM polytope.  Intersecting that ball with the coordinate fiber gives a
+relatively open `k`-ball.  The matching Luce kernels are the image of the
+positive component-scale parameters under a rational map, so they form a
+semialgebraic set of dimension at most `c-1`.  Since `k>c-1`, this set has
+empty relative interior in the RUM fiber.  The `k`-ball therefore contains a
+positive RUM kernel outside Luce.  This proves clause 2.
 
 ## Machine-checkable support
 
@@ -141,13 +179,11 @@ arbitrary-`n` claim.
 
 ## Proof debt before registration
 
-1. Cite or supply a self-contained proof that the deterministic-ranking
-   choice polytope is full-dimensional for every finite `n`.
-2. State the semialgebraic-dimension step excluding a Luce-open subset of the
-   larger RUM fiber with full precision.
-3. Search specifically for an existing incomplete-menu tier-identification
+1. Obtain hostile review of the adjacent-swap/Möbius full-dimensionality
+   proof and the semialgebraic-dimension step.
+2. Search specifically for an existing incomplete-menu tier-identification
    theorem that subsumes the result.
-4. Obtain a hostile review of whether strict positivity and the treatment of
+3. Review whether strict positivity and the treatment of
    singleton menus leave any exceptional domains.
 
 ## Claim boundary
