@@ -10,6 +10,15 @@ an ordinal-feedback counterexample. It deliberately does not transfer an exact
 linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
+The current
+[resolution-obligation matrix after v0.54](RESOLUTION_OBLIGATION_MATRIX_v0_54.md)
+records the full program boundary. The latest prospectively verified
+[finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
+classifies complete three-alternative kernels into a Luce scalar, a weaker
+random-ordering representation, or no representation in the declared class.
+This closes one finite behavioral well-posedness cell while leaving ASMP-9
+unresolved.
+
 ## Prereveal tests
 
 ```powershell
