@@ -32,15 +32,18 @@ def test_all_endpoint_coefficients_annihilate_common_mode() -> None:
     )
 
 
-def test_scenario_boundary_uses_clustered_exact_randomization() -> None:
-    protocol = json.loads(
-        (HERE / "protocol_v0_68.json").read_text(encoding="utf-8")
+def test_amendment_retires_randomization_p_without_changing_registry() -> None:
+    amendment = json.loads(
+        (HERE / "protocol_amendment_v0_68_1.json").read_text(encoding="utf-8")
     )
-    thresholds = protocol["thresholds"]
-    assert thresholds["required_scenario_successes"] == 10
-    assert thresholds["scenario_trials"] == 12
-    assert thresholds["randomization_universe"] == 4096
-    assert thresholds["maximum_exact_randomization_p"] == 0.05
+    assert amendment["base_protocol"]["sha256"] == _sha256(
+        HERE / "protocol_v0_68.json"
+    )
+    assert amendment["correction"]["probability_interpretation"] is False
+    assert amendment["correction"]["consumed_by_gate"] is False
+    gate = amendment["replacement_L0"]
+    assert gate["required_scenario_successes"] == 10
+    assert gate["scenario_trials"] == 12
 
 
 def test_decision_mapping_keeps_local_and_global_separate() -> None:

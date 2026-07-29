@@ -2,6 +2,10 @@
 
 Status: **runner implemented; construction execution not registered**.
 
+Current scientific authority is the additive v0.68.1 amendment. Resource
+limits and the score-job universe are unchanged; target registration must hash
+the amended analyzer, validator, and both protocol files.
+
 ## Workload
 
 Each split contains 528 next-token score records:

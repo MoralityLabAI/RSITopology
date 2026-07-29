@@ -1,4 +1,4 @@
-"""Assemble, analyze, and authorize one completed ASMP-9 v0.68 split."""
+"""Assemble and authorize one ASMP-9 v0.68.1 amended split."""
 
 from __future__ import annotations
 
@@ -110,7 +110,7 @@ def main() -> None:
         analysis["instrument"]["mechanical_repeat_status"] == "passed"
         and analysis["instrument"]["quotient_admission_status"] == "passed"
         and analysis["local_specificity"]["status"]
-        == "local_response_family_established"
+        == "local_response_family_established_on_frozen_registry"
     )
     global_compatible = (
         local_established
@@ -118,7 +118,7 @@ def main() -> None:
         == "shared_effect_compatible"
     )
     decision = {
-        "schema_version": "asmp9_context_quotient_decision_v0_68",
+        "schema_version": "asmp9_context_quotient_decision_v0_68_1",
         "phase": registration["phase"],
         "registration_sha256": runner.sha256(registration_path),
         "records_sha256": runner.sha256(records_path),
@@ -197,7 +197,7 @@ def main() -> None:
         decision_path, design.canonical_json_bytes(decision)
     )
     receipt = {
-        "schema_version": "asmp9_context_quotient_analysis_receipt_v0_68",
+        "schema_version": "asmp9_context_quotient_analysis_receipt_v0_68_1",
         "phase": registration["phase"],
         "registration": {
             "path": str(registration_path),

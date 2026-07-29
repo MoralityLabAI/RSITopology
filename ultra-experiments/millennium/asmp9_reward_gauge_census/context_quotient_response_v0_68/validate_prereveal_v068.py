@@ -1,4 +1,4 @@
-"""Validate v0.68 sources, tokenizer, rendering, and job universe without weights."""
+"""Validate v0.68.1 sources, tokenizer, rendering, and jobs without weights."""
 
 from __future__ import annotations
 
@@ -45,18 +45,28 @@ def validate(model_path: Path) -> dict:
     from transformers import AutoTokenizer
 
     protocol_path = HERE / "protocol_v0_68.json"
+    amendment_path = HERE / "protocol_amendment_v0_68_1.json"
     manifest_path = HERE / "scenario_manifest_v0_68.json"
-    validation_path = HERE / "SCIENTIFIC_DESIGN_VALIDATION_v0_68.json"
+    validation_path = HERE / "SCIENTIFIC_DESIGN_VALIDATION_v0_68_1.json"
     protocol = json.loads(protocol_path.read_text(encoding="utf-8"))
+    amendment = json.loads(amendment_path.read_text(encoding="utf-8"))
     design_validation = json.loads(
         validation_path.read_text(encoding="utf-8")
     )
     if (
         protocol["status"]
         != "scientific_protocol_frozen_execution_unregistered"
+        or amendment["status"]
+        != "frozen_prereveal_amendment_execution_unregistered"
         or design_validation["execution_authorized"] is not False
     ):
         raise ValueError("scientific design is not in the prereveal state")
+    if amendment["base_protocol"]["sha256"] != sha256(protocol_path):
+        raise ValueError("amendment/base protocol binding mismatch")
+    if design_validation["protocol_amendment_sha256"] != sha256(
+        amendment_path
+    ):
+        raise ValueError("design validation/amendment binding mismatch")
     manifest = design.load_manifest(manifest_path)
     if protocol["fresh_universe"]["scenario_manifest_sha256"] != sha256(
         manifest_path
@@ -149,8 +159,11 @@ def validate(model_path: Path) -> dict:
         HERE / "prepare_execution_registration.py",
         HERE / "validate_prereveal_v068.py",
         HERE / "protocol_v0_68.json",
+        HERE / "protocol_amendment_v0_68_1.json",
+        HERE / "SCIENTIFIC_PROTOCOL_AMENDMENT_v0_68_1.md",
         HERE / "scenario_manifest_v0_68.json",
-        HERE / "SCIENTIFIC_DESIGN_VALIDATION_v0_68.json",
+        HERE / "SCIENTIFIC_DESIGN_VALIDATION_v0_68_1.json",
+        HERE / "validate_scientific_design.py",
         HERE / "test_response_quotient.py",
         HERE / "test_successor_design.py",
         HERE / "test_execution_contract.py",
@@ -177,10 +190,11 @@ def validate(model_path: Path) -> dict:
     if any(path.exists() for path in forbidden):
         raise ValueError("an outcome/registration file exists in source tree")
     return {
-        "schema_version": "asmp9_context_quotient_prereveal_validation_v0_68",
+        "schema_version": "asmp9_context_quotient_prereveal_validation_v0_68_1",
         "status": "passed",
         "outcomes_read": False,
         "protocol": _artifact(protocol_path),
+        "protocol_amendment": _artifact(amendment_path),
         "scenario_manifest": _artifact(manifest_path),
         "scientific_design_validation": _artifact(validation_path),
         "source_files": [_artifact(path) for path in source_files],

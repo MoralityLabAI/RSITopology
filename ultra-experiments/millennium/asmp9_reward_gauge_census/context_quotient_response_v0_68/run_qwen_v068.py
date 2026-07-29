@@ -117,7 +117,7 @@ def _validate_registration(path: Path) -> tuple[dict, dict, dict]:
     registration = _load(path)
     if (
         registration.get("schema_version")
-        != "asmp9_context_quotient_execution_registration_v0_68"
+        != "asmp9_context_quotient_execution_registration_v0_68_1"
     ):
         raise ValueError("unexpected registration schema")
     if registration.get("status") != "registered_prereveal":
@@ -126,7 +126,12 @@ def _validate_registration(path: Path) -> tuple[dict, dict, dict]:
         raise ValueError("registration records prior outcome access")
     if registration.get("phase") not in {"construction", "confirmation"}:
         raise ValueError("invalid phase")
-    for name in ("protocol", "scenario_manifest", "prereveal_validation"):
+    for name in (
+        "protocol",
+        "protocol_amendment",
+        "scenario_manifest",
+        "prereveal_validation",
+    ):
         item = registration[name]
         if sha256(Path(item["path"])) != item["sha256"]:
             raise ValueError(f"registered {name} hash mismatch")
@@ -334,7 +339,7 @@ def run(args: argparse.Namespace) -> None:
                     design.canonical_json_bytes(
                         {
                             "schema_version": (
-                                "asmp9_context_quotient_work_unit_v0_68"
+                                "asmp9_context_quotient_work_unit_v0_68_1"
                             ),
                             "record": record,
                         }
@@ -370,7 +375,7 @@ def run(args: argparse.Namespace) -> None:
             if hasattr(torch.cuda, "ipc_collect"):
                 torch.cuda.ipc_collect()
         summary = {
-            "schema_version": "asmp9_context_quotient_completion_v0_68",
+            "schema_version": "asmp9_context_quotient_completion_v0_68_1",
             "phase": phase,
             "status": status,
             "abort_reason": abort_reason,

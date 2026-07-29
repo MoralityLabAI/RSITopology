@@ -70,17 +70,13 @@ def test_positive_fixture_passes_local_and_restores() -> None:
     assert result["instrument"]["mechanical_repeat_status"] == "passed"
     assert result["instrument"]["quotient_admission_status"] == "passed"
     assert result["local_specificity"]["scenario_successes"] == 12
-    assert (
-        result["local_specificity"]["status"]
-        == "local_response_family_established"
+    assert result["local_specificity"]["status"] == (
+        "local_response_family_established_on_frozen_registry"
     )
-    assert result["local_specificity"]["exact_scenario_sign_flip"][
-        "randomizations"
-    ] == 4096
-    assert (
-        result["local_specificity"]["exact_scenario_sign_flip"]["exact_p"]
-        <= 0.05
-    )
+    orbit = result["local_specificity"]["descriptive_sign_orbit"]
+    assert orbit["sign_orbit_size"] == 4096
+    assert orbit["probability_interpretation"] is False
+    assert orbit["consumed_by_gate"] is False
     assert result["terminal"]["counts"]["restored"] == 24
 
 
@@ -106,7 +102,7 @@ def test_context_heterogeneity_can_fail_globality_without_killing_local() -> Non
     result = module.analyze_records(records, _manifest(), "construction")
     assert (
         result["local_specificity"]["status"]
-        == "local_response_family_established"
+        == "local_response_family_established_on_frozen_registry"
     )
     assert (
         result["global_specificity"]["status"]
@@ -141,6 +137,38 @@ def test_order_interaction_is_not_averaged_away() -> None:
             record["raw_log_odds_a_over_b"] += 4.0
     result = module.analyze_records(records, _manifest(), "construction")
     assert not result["local_specificity"]["scenario_success_by_id"][scenario]
+
+
+def test_adverse_scenarios_cannot_hide_behind_coverage_count() -> None:
+    records = _records()
+    scenarios = sorted(
+        row["scenario_id"]
+        for row in _manifest()["rows"]
+        if row["split"] == "construction"
+    )[:2]
+    for record in records:
+        if (
+            record["scenario_id"] in scenarios
+            and record["target"] is not None
+            and record["arm"] == "content"
+        ):
+            direction = 1.0 if int(record["target"]) == 0 else -1.0
+            canonical_addition = -20.0 * direction
+            raw_addition = (
+                canonical_addition
+                if int(record["display_order"]) == 0
+                else -canonical_addition
+            )
+            record["logp_a"] += raw_addition / 2.0
+            record["logp_b"] -= raw_addition / 2.0
+            record["raw_log_odds_a_over_b"] += raw_addition
+    result = module.analyze_records(records, _manifest(), "construction")
+    assert result["local_specificity"]["scenario_successes"] == 10
+    assert result["local_specificity"]["mean_scenario_mean_specificity"] < 0
+    assert (
+        result["local_specificity"]["status"]
+        == "local_response_family_not_established"
+    )
 
 
 def test_missing_or_duplicate_records_fail_closed() -> None:

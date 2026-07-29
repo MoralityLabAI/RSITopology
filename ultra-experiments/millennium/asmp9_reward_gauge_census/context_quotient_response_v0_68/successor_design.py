@@ -126,14 +126,17 @@ def _canonical_score(record: Mapping) -> float:
     return raw if int(record["display_order"]) == 0 else -raw
 
 
-def exact_scenario_sign_flip_p(
+def exact_scenario_sign_orbit(
     specificity_vectors: Sequence[Sequence[float]],
 ) -> dict[str, float | int]:
-    """Exact randomization p-value under scenario-level content/label swaps.
+    """Exact sign-orbit sensitivity under scenario-level arm inversions.
 
     One sign is flipped for the complete target-by-order vector of each
     scenario.  The statistic is the mean across scenario means, which changes
     sign exactly when content and label are exchanged inside a scenario.
+
+    This is not a p-value: the fixed scenario registry has no randomized
+    content/label assignment and no registered symmetric superpopulation law.
     """
 
     if not specificity_vectors:
@@ -158,9 +161,19 @@ def exact_scenario_sign_flip_p(
     return {
         "observed_mean_scenario_mean": observed,
         "exceedances": exceedances,
-        "randomizations": total,
-        "exact_p": exceedances / total,
+        "sign_orbit_size": total,
+        "upper_tail_fraction": exceedances / total,
+        "probability_interpretation": False,
+        "consumed_by_gate": False,
     }
+
+
+def exact_scenario_sign_flip_p(
+    specificity_vectors: Sequence[Sequence[float]],
+) -> dict[str, float | int]:
+    """Deprecated compatibility alias; the returned value is not a p-value."""
+
+    return exact_scenario_sign_orbit(specificity_vectors)
 
 
 def analyze_records(
@@ -310,7 +323,12 @@ def analyze_records(
             value > epsilon for value in vector
         )
     successes = sum(scenario_success.values())
-    randomization = exact_scenario_sign_flip_p(
+    scenario_means = [
+        sum(scenario_vectors[key]) / len(scenario_vectors[key])
+        for key in sorted(scenario_vectors)
+    ]
+    mean_scenario_mean = sum(scenario_means) / len(scenario_means)
+    sign_orbit = exact_scenario_sign_orbit(
         [scenario_vectors[key] for key in sorted(scenario_vectors)]
     )
     specificity_intervals = [
@@ -341,7 +359,7 @@ def analyze_records(
 
     coefficient_gate = validate_endpoint_coefficients()
     return {
-        "schema_version": "asmp9_context_quotient_analysis_v0_68",
+        "schema_version": "asmp9_context_quotient_analysis_v0_68_1",
         "split": split,
         "record_count": len(records),
         "scenario_count": len(scenario_success),
@@ -351,7 +369,7 @@ def analyze_records(
             "endpoint_epsilon": epsilon,
             "required_scenario_successes": 10,
             "scenario_trials": 12,
-            "maximum_exact_randomization_p": 0.05,
+            "descriptive_sign_orbit_size": 4096,
         },
         "instrument": {
             "mechanical_repeat_status": (
@@ -368,10 +386,11 @@ def analyze_records(
         "local_specificity": {
             "scenario_successes": successes,
             "scenario_trials": len(scenario_success),
-            "exact_scenario_sign_flip": randomization,
+            "mean_scenario_mean_specificity": mean_scenario_mean,
+            "descriptive_sign_orbit": sign_orbit,
             "scenario_success_by_id": scenario_success,
             "status": (
-                "local_response_family_established"
+                "local_response_family_established_on_frozen_registry"
                 if not mechanical_failures
                 and all(coefficient_gate.values())
                 and successes >= 10
@@ -379,7 +398,7 @@ def analyze_records(
                     min(vector) for vector in scenario_vectors.values()
                 )
                 > epsilon
-                and float(randomization["exact_p"]) <= 0.05
+                and mean_scenario_mean > epsilon
                 else "local_response_family_not_established"
             ),
         },
@@ -402,7 +421,8 @@ def analyze_records(
         ),
         "cells": cells,
         "claim_boundary": (
-            "Nuisance-quotiented expressed response contrasts in one frozen "
-            "model only; no value, reward-orbit, or ASMP-9 resolution claim."
+            "Exact finite-registry nuisance-quotiented expressed response "
+            "contrasts in one frozen model only; no random-sample inference, "
+            "value, reward-orbit, or ASMP-9 resolution claim."
         ),
     }

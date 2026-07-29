@@ -1,4 +1,4 @@
-"""Create a write-once v0.68 execution registration and authorization."""
+"""Create a write-once v0.68.1 execution registration and authorization."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ DEFAULT_MODEL = Path(
     r"D:\Research_Engine\models\Qwen3.5\Qwen3.5-0.8B-Instruct"
 )
 DEFAULT_OUTPUT = Path(
-    r"D:\Research_Engine\runs\asmp9_context_quotient_response_v0_68"
+    r"D:\Research_Engine\runs\asmp9_context_quotient_response_v0_68_1"
 )
 DEFAULT_WRAPPER = HERE / "prime" / "run_prime_guarded_v0_68.sh"
 DEFAULT_CLEANUP = HERE / "prime" / "post_run_prime_v0_68.sh"
@@ -68,6 +68,7 @@ def prepare(args: argparse.Namespace) -> None:
     if args.phase != "construction" and args.construction_decision is None:
         raise ValueError("confirmation requires a construction decision")
     protocol_path = (HERE / "protocol_v0_68.json").resolve()
+    amendment_path = (HERE / "protocol_amendment_v0_68_1.json").resolve()
     manifest_path = (HERE / "scenario_manifest_v0_68.json").resolve()
     validation_path = args.prereveal_validation.resolve()
     validation = _load(validation_path)
@@ -78,6 +79,7 @@ def prepare(args: argparse.Namespace) -> None:
         raise ValueError("invalid prereveal validation")
     for name, path in (
         ("protocol", protocol_path),
+        ("protocol_amendment", amendment_path),
         ("scenario_manifest", manifest_path),
     ):
         if validation[name]["sha256"] != sha256(path):
@@ -94,6 +96,8 @@ def prepare(args: argparse.Namespace) -> None:
         HERE / "analyze_v068.py",
         HERE / "prepare_execution_registration.py",
         HERE / "validate_prereveal_v068.py",
+        HERE / "protocol_amendment_v0_68_1.json",
+        HERE / "SCIENTIFIC_PROTOCOL_AMENDMENT_v0_68_1.md",
         HERE.parent / "physical_dynamic_bridge_v0_67" / "bridge_core.py",
     ]
     model_paths = [
@@ -106,13 +110,14 @@ def prepare(args: argparse.Namespace) -> None:
     ]
     registration = {
         "schema_version": (
-            "asmp9_context_quotient_execution_registration_v0_68"
+            "asmp9_context_quotient_execution_registration_v0_68_1"
         ),
         "status": "registered_prereveal",
         "phase": args.phase,
-        "run_id": f"asmp9-context-quotient-v068-{args.phase}",
+        "run_id": f"asmp9-context-quotient-v0681-{args.phase}",
         "git_commit_before_registration": _git_commit(),
         "protocol": _artifact(protocol_path),
+        "protocol_amendment": _artifact(amendment_path),
         "scenario_manifest": _artifact(manifest_path),
         "prereveal_validation": _artifact(validation_path),
         "source_files": [_artifact(path) for path in source_paths],
@@ -171,7 +176,7 @@ def prepare(args: argparse.Namespace) -> None:
         str(result_dir.resolve()),
     ]
     authorization = {
-        "schema_version": "asmp9_context_quotient_authorization_v0_68",
+        "schema_version": "asmp9_context_quotient_authorization_v0_68_1",
         "run_id": registration["run_id"],
         "phase": args.phase,
         "exact_inner_command": command,

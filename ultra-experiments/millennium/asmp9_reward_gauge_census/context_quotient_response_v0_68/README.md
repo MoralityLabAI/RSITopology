@@ -1,5 +1,16 @@
 # ASMP-9 context-quotient response development v0.68
 
+## Current prereveal amendment
+
+The executable design is now governed by the additive
+[`SCIENTIFIC_PROTOCOL_AMENDMENT_v0_68_1.md`](SCIENTIFIC_PROTOCOL_AMENDMENT_v0_68_1.md).
+It leaves the immutable v0.68 protocol and scenario registry in place but
+corrects one inferential label before any model outcome: the `2^12` sign
+enumeration is a descriptive sign-orbit sensitivity statistic, not a
+randomization p-value. The replacement `L0` is an exact finite-registry
+practical-margin gate. Any future execution registration must bind both
+protocol versions and the v0.68.1 analyzer.
+
 Version 0.68 is the bounded successor analysis prompted by the registered
 v0.67.1 construction stop.
 

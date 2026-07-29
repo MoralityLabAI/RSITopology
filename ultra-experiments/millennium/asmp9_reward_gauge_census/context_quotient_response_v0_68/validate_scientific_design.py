@@ -1,4 +1,4 @@
-"""Outcome-free validation receipt for the frozen v0.68 scientific design."""
+"""Outcome-free validation receipt for the v0.68.1 amended design."""
 
 from __future__ import annotations
 
@@ -37,9 +37,13 @@ def main() -> None:
     args = parser.parse_args()
 
     protocol_path = HERE / "protocol_v0_68.json"
+    amendment_path = HERE / "protocol_amendment_v0_68_1.json"
     manifest_path = HERE / "scenario_manifest_v0_68.json"
     protocol = json.loads(protocol_path.read_text(encoding="utf-8"))
+    amendment = json.loads(amendment_path.read_text(encoding="utf-8"))
     manifest = design.load_manifest(manifest_path)
+    if amendment["base_protocol"]["sha256"] != sha256(protocol_path):
+        raise ValueError("amendment does not bind the immutable base protocol")
     if protocol["fresh_universe"]["scenario_manifest_sha256"] != sha256(
         manifest_path
     ):
@@ -61,13 +65,15 @@ def main() -> None:
         }
 
     result = {
-        "schema_version": "asmp9_context_quotient_design_validation_v0_68",
+        "schema_version": "asmp9_context_quotient_design_validation_v0_68_1",
         "status": "passed_scientific_design_only",
         "protocol_sha256": sha256(protocol_path),
+        "protocol_amendment_sha256": sha256(amendment_path),
         "scenario_manifest_sha256": sha256(manifest_path),
         "scenario_generator_sha256": sha256(
             HERE / "prepare_fresh_scenarios.py"
         ),
+        "validator_source_sha256": sha256(HERE / "validate_scientific_design.py"),
         "successor_design_sha256": sha256(HERE / "successor_design.py"),
         "quotient_source_sha256": sha256(HERE / "response_quotient.py"),
         "v067_prompt_dependency_sha256": sha256(

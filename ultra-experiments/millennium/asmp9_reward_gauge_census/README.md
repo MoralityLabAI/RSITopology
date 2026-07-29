@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.61 verification](RESOLUTION_OBLIGATION_MATRIX_v0_61.md)
+[resolution-obligation matrix after the v0.68.1 prereveal amendment](RESOLUTION_OBLIGATION_MATRIX_v0_68_1.md)
 records the full program boundary. The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
 classifies complete three-alternative kernels into a Luce scalar, a weaker
