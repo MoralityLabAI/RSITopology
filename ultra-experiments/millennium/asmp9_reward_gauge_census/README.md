@@ -88,6 +88,17 @@ primal witnesses, giving `Delta=gamma` and
 not a general modulus algorithm, and remains development-only pending proof
 and subsumption review.
 
+The prospectively verified
+[capped-simplex modulus v0.63](capped_simplex_modulus_v0_63/RESULT_v0_63.md)
+supersedes that line-segment calibration with a full-dimensional result.  On
+the complete floor-truncated fixed-binary RUM polygon, total cap-violation
+mass is exact TV distance to rationalizability, while the cross-tier moduli
+are `Delta=gamma` and `Lambda=1+(5/2)gamma`.  Matching primal and dual
+certificates, every feasible violated-facet support, 153,853 fresh exact
+projection comparisons, and an import-independent replay all passed.  The
+[v0.63 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_63.md) moves the
+load-bearing target to hidden choice sets and latent selection confounding.
+
 ## Prereveal tests
 
 ```powershell

@@ -1,0 +1,140 @@
+{
+  "cells_sha256": "c11dda56e5bbd18d9cbe3c9b61b7975a403c8d5824c7f4cb33da89e4574673d0",
+  "claim_boundary": "Exact full-dimensional three-alternative fixed-binary capped-simplex calibration only; classical convex geometry; no general efficient RUM-modulus, hidden-menu, latent-confounding, strategic/dynamic, physical-access, welfare, novelty, or full ASMP-9 resolution claim.",
+  "gates": {
+    "C0": true,
+    "H0": true,
+    "I0": true,
+    "M0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "X0": true
+  },
+  "primary": {
+    "counts": {
+      "corruption_checks": 16,
+      "gamma_cells": 4,
+      "grid_points": 919,
+      "modulus_checks": 12,
+      "projection_comparisons": 153853,
+      "reconstruction_checks": 919,
+      "support_checks": 16
+    },
+    "fact_digest": "2e59da53ab82e96c7e904916e8e78047dd62dcb6f967f61c841102ea4e672376",
+    "gates": {
+      "C0": true,
+      "M0": true,
+      "P0": true,
+      "R0": true,
+      "X0": true
+    },
+    "rows": [
+      {
+        "denominator": 30,
+        "grid_points": 253,
+        "kind": "grid",
+        "projection_comparisons": 19987,
+        "rum_points": 79
+      },
+      {
+        "denominator": 50,
+        "grid_points": 666,
+        "kind": "grid",
+        "projection_comparisons": 133866,
+        "rum_points": 201
+      },
+      {
+        "delta": "1/3072",
+        "epsilon": "1/3073",
+        "gamma": "1/3072",
+        "kind": "modulus",
+        "lambda": "6149/6144",
+        "support_bounds": {
+          "0": "6149/6144",
+          "0,2": "3072/3067",
+          "1": "6144/6139",
+          "2": "6149/6144"
+        }
+      },
+      {
+        "delta": "7/5000",
+        "epsilon": "7/5007",
+        "gamma": "7/5000",
+        "kind": "modulus",
+        "lambda": "2007/2000",
+        "support_bounds": {
+          "0": "2007/2000",
+          "0,2": "1000/993",
+          "1": "2000/1993",
+          "2": "2007/2000"
+        }
+      },
+      {
+        "delta": "1/256",
+        "epsilon": "1/257",
+        "gamma": "1/256",
+        "kind": "modulus",
+        "lambda": "517/512",
+        "support_bounds": {
+          "0": "517/512",
+          "0,2": "256/251",
+          "1": "512/507",
+          "2": "517/512"
+        }
+      },
+      {
+        "delta": "3/200",
+        "epsilon": "3/203",
+        "gamma": "3/200",
+        "kind": "modulus",
+        "lambda": "83/80",
+        "support_bounds": {
+          "0": "83/80",
+          "0,2": "40/37",
+          "1": "80/77",
+          "2": "83/80"
+        }
+      }
+    ]
+  },
+  "registration_sha256": "5fcc7001ec7292181a5dce5252e47ed9bba48d30b3a2fee5570c52dbc434e84c",
+  "replay": {
+    "counts": {
+      "corruption_checks": 16,
+      "gamma_cells": 4,
+      "grid_points": 919,
+      "modulus_checks": 12,
+      "projection_comparisons": 153853,
+      "reconstruction_checks": 919,
+      "support_checks": 16
+    },
+    "fact_digest": "2e59da53ab82e96c7e904916e8e78047dd62dcb6f967f61c841102ea4e672376",
+    "gates": {
+      "C0": true,
+      "M0": true,
+      "P0": true,
+      "R0": true,
+      "X0": true
+    },
+    "import_independent": true,
+    "returncode": 0,
+    "stderr": ""
+  },
+  "resource": {
+    "elapsed_seconds": 26.559970999980578,
+    "resident_bytes": 22978560,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.63-verification-result-v1",
+  "source_commit": "6e28b6cd07c073cb5004c57bd2c56f999a408f56",
+  "source_mismatches": {},
+  "source_was_ancestor": true,
+  "status": "capped_simplex_moduli_verified",
+  "tests": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "........                                                                 [100%]\n8 passed in 10.44s\n"
+  }
+}
