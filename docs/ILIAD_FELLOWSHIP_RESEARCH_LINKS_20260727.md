@@ -175,6 +175,13 @@ as transformer evidence.
   finite counterexample to uniform allocation; adaptive and behaviorally
   misspecified designs remain open.
 
+- [ASMP-9: cyclic-core bond characterization](../ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/PUBLIC_SUMMARY_v0_18.md)
+  The previously enumerated minimal bad supports are exactly the bonds of the
+  cyclic core, reducing the asymptotic access-allocation problem to classical
+  max-min cut design. Four prospectively registered fresh graph cells pass
+  direct SCC-versus-bond checks; exact finite-budget and behavioral problems
+  remain open.
+
 - [ASMP-11: covering-mediated access frontier](../ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2/RESULT_v0_2.md)  
   A solver-certified finite-sample crossover showing how high-width
   interventions purchase detection efficiency through a covering-design
