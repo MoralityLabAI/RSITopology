@@ -252,6 +252,20 @@ ordering and minimax regret `1/2`. The
 randomized evidence-ordering procedures and their dual scenario game.
 ASMP-9 remains unresolved.
 
+The prospectively verified
+[randomized evidence-ordering result v0.51](randomized_ordering_v0_51/RESULT_v0_51.md)
+then closes that mixed-order regret game. Randomization strictly reduced
+worst-case regret for 234 of 361 table pairs, with maximum gain `1/4`, but it
+created no new exact certificates: randomized value was zero for exactly the
+same 79 pairs possessing a deterministic common optimum. All primal/dual,
+feasibility, complementary-slackness, and zero-support checks passed exactly.
+The central randomized-minmax construction is directly subsumed by prior
+work; the durable ASMP-9 result is the separation between improved compromise
+and unchanged identifiability. The
+[v0.51 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_51.md) moves next to
+completeness of all-order Buehlerization among deterministic direct
+confidence maps. ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
