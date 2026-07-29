@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_27.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_28.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -211,3 +211,15 @@ positive Laplacian spectral floor controls Euclidean stability.  The
 registered tree control correctly returns unavailable by design.  These are
 classical finite ingredients assembled as an access ledger, not behavioral
 validation or an ASMP-9 resolution.
+
+The [v0.28 calibrated-occupancy result](calibrated_occupancy_v0_28/PUBLIC_SUMMARY_v0_28.md)
+then connects the offset primitive to finite-MDP occupancy design.  Homogeneous
+reward-independent interventions cannot identify positive reward scale over a
+rescalable unknown-link class, even under deterministic adaptive querying; an
+unknown-valued side feature does not help.  An externally calibrated
+consequence localizes each occupancy functional, after which
+`ker(X)=declared gauge` is the exact quotient criterion and
+`sigma_min(XU)` is the stability boundary.  Every registered integer matrix
+is realized by one explicit deterministic finite MDP, but that existence
+construction does not show that a natural environment contains a stable
+cardinal numeraire.

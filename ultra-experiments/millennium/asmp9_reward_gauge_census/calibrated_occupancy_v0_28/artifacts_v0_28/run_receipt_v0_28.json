@@ -1,0 +1,11 @@
+{
+  "finished_at_utc": "2026-07-29T04:39:04Z",
+  "implementation_commit": "fcab52dd08ff88f382d3a33d585bd439bfa3c99d",
+  "peak_resident_bytes": 31997952,
+  "protocol_sha256": "17e73352b9b04fdc7f96652ada56166c68da88ba1b4e11ef522fbe33c969299e",
+  "registration_sha256": "a8cd1d8633c2e4017889dbd06ddb90db1c9d1799432deb09a8e593da38d466af",
+  "result_sha256": "0f7b5bb876f8b7b6d58f7b891ed6e54b69f0c7168db5eb379ea8c21d675fad14",
+  "run_commit": "9fdeaca64da1e59c13ca24e00f54bf2fe0022eeb",
+  "started_at_utc": "2026-07-29T04:39:04Z",
+  "wall_seconds": 0.09808850000263192
+}
