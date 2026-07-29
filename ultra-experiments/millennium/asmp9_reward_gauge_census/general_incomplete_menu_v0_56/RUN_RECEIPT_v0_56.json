@@ -1,0 +1,48 @@
+{
+  "claim_boundary": "Finite exact full-kernel tier-identification theorem under unrestricted positive completion; no representation-theorem novelty, sampling, endogenous/strategic/dynamic, human/model-value, welfare, physical-channel, or full ASMP-9 resolution claim.",
+  "commands": {
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/test_general_incomplete.py ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/test_verifier_v0_56.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/verify_theorems_v0_56.py"
+  },
+  "commits": {
+    "proof_audit": "ba8a3cd7d5398d2e22ff1ce3532231a70544478f",
+    "registration": "84b4a035f8ee70f54b0711803a03c6b67e2ecd5f",
+    "verification_result": "f133f7fe1812cfed7b99fcbd5a038351146ebb7a",
+    "verification_source": "bea9b7e6340f0759da57dd9158f8afb8ffc49589"
+  },
+  "gates": {
+    "A6": true,
+    "F0": true,
+    "G0": true,
+    "H0": true,
+    "N0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "T0": true,
+    "Z0": true
+  },
+  "protocol_id": "asmp9-general-incomplete-menu-theorem-v0.56",
+  "registration_sha256": "16046963b9e7fa6db585ec63f68e09b685927ebcf0bea65ea1bcf4d3a001ad65",
+  "resource": {
+    "elapsed_seconds": 7.283694100013236,
+    "resident_bytes": 24109056,
+    "workers": 1
+  },
+  "result": {
+    "affine_columns": 130,
+    "affine_rank_mod_1000003": 130,
+    "n6_rankings": 720,
+    "partition_checks": 2692,
+    "partition_failures": 0,
+    "witness_cases": 312,
+    "witness_failures": 0
+  },
+  "schema": "asmp9-v0.56-run-receipt-v1",
+  "status": "general_incomplete_menu_theorem_verified",
+  "tests": {
+    "expected": 11,
+    "passed": 11
+  },
+  "verification_sha256": "08cc4ff81ff66bd2c58ae48376cfb1e6ca6ca8da54ae09b53623d02ff11a88c9",
+  "version": "0.56"
+}
