@@ -1,0 +1,104 @@
+{
+  "file_count": 19,
+  "files": [
+    {
+      "bytes": 12856,
+      "path": "common_ordering.py",
+      "sha256": "576c4911626977d237a0d9e1ee1cff0c9560ec3f0defa75c6a6aa1973ad57d00"
+    },
+    {
+      "bytes": 4880,
+      "path": "DEVELOPMENT_RESULT_v0_49.md",
+      "sha256": "7cc678bc22e9647493cd5132e169f59c13cd2036eabdb3a84ac0dbb1b73126aa"
+    },
+    {
+      "bytes": 4281,
+      "path": "PRIOR_ART_GATE_v0_49.md",
+      "sha256": "7383c892c4600e6de89d2286b0dcb5072f1f9fd975890ba769a48d92de648b0d"
+    },
+    {
+      "bytes": 1139,
+      "path": "README.md",
+      "sha256": "ddcea530bd56bbf45974f84fcc780cd4d0adef749c97c79f0a5947747e58dcb7"
+    },
+    {
+      "bytes": 3403,
+      "path": "register_verification_repair_v0_49_1.py",
+      "sha256": "fefaef1df719ae6baa874abb265b9192b0beb829fffc689c6b7e54355cd450ff"
+    },
+    {
+      "bytes": 3433,
+      "path": "register_verification_v0_49.py",
+      "sha256": "057fae76551a18a08510a5ad1d69ef50baf3d9a9cd1178437720246db9bd9343"
+    },
+    {
+      "bytes": 7669,
+      "path": "RESULT_v0_49.md",
+      "sha256": "a01177fa2757e754697e85f2e1993432bb1ce5d0415ba9db942f1f7af2fd7c69"
+    },
+    {
+      "bytes": 2117,
+      "path": "RUN_RECEIPT_v0_49_1.json",
+      "sha256": "e0b7a9283a9b6c0f7bba5b66409655623c6d61f5298cb415cf983685aecc74b9"
+    },
+    {
+      "bytes": 5637,
+      "path": "test_common_ordering.py",
+      "sha256": "8562b9c5ed3f80e91d1f1f64aad8c13db4ac578679643c63fc103bf1f3f6cf15"
+    },
+    {
+      "bytes": 1461,
+      "path": "test_universe_repair_v0_49_1.py",
+      "sha256": "cd4ea177d9128eca09427028d1811c14aa8b9080af4a86198e660b6196b294e3"
+    },
+    {
+      "bytes": 6788,
+      "path": "THEOREM_DRAFT_v0_49.md",
+      "sha256": "0c6fcf4d743e065ad57fa0235d309c8ba86e557fc8c209ea2457e3a0b9823e79"
+    },
+    {
+      "bytes": 1726,
+      "path": "UNIVERSE_REPAIR_PROTOCOL_v0_49_1.md",
+      "sha256": "8867960b753fe77b0cd793ecfc9114b7cb1245f244a4bdfe9e506bbccc1bd938"
+    },
+    {
+      "bytes": 2690,
+      "path": "VERIFICATION_PROTOCOL_v0_49.md",
+      "sha256": "bb856aadf2e84e23c8bf6888294cd008aab48e400347c3c24d193a974927290a"
+    },
+    {
+      "bytes": 2100,
+      "path": "verification_registration_v0_49.json",
+      "sha256": "d81ab79bb4544c5163c44f092607b19e04de2544ca1e81b7b97086b8adee3847"
+    },
+    {
+      "bytes": 1633,
+      "path": "verification_repair_registration_v0_49_1.json",
+      "sha256": "aea8a36bc9761cd16dfef64674ca7914c0052b416ab70b4d1742a63ea0ae0447"
+    },
+    {
+      "bytes": 4270,
+      "path": "VERIFY_RESULT_v0_49.json",
+      "sha256": "c31af79810f3cb29e85a19335a47cf4277b5de87ad2d25a87ffd210c8893803e"
+    },
+    {
+      "bytes": 786,
+      "path": "VERIFY_RESULT_v0_49_1.json",
+      "sha256": "e8fb791cdbbfb7e1a2b992a11535147c4242d1f696bf97abe62a296156cd3b08"
+    },
+    {
+      "bytes": 12551,
+      "path": "verify_theorems_v0_49.py",
+      "sha256": "eec835144f2a571ca4dce58ce51af6dd02bee0f04cee4f0f3370a9c6473978c4"
+    },
+    {
+      "bytes": 4303,
+      "path": "verify_theorems_v0_49_1.py",
+      "sha256": "e87ce785c326485c1516f735983f825241eaba21fd9068fe64dff69d85b2a0cc"
+    }
+  ],
+  "manifest_excludes": [
+    "RELEASE_MANIFEST_v0_49_1.json"
+  ],
+  "schema": "asmp9-v0.49.1-release-manifest-v1"
+}

@@ -223,6 +223,21 @@ another witness search with a theorem-first target: characterize when two
 finite decision risks admit a common optimal evidence ordering and when
 positive cross-regret is forced. ASMP-9 remains unresolved.
 
+The additive
+[common evidence-ordering theorem v0.49](common_ordering_v0_49/RESULT_v0_49.md)
+now supplies that finite characterization. Two decision risks have a shared
+optimal ordering exactly when their tight-predecessor DAGs share a maximal
+chain; a reachable-set cut certifies disjointness. A two-outcome,
+two-parameter experiment is the smallest unrestricted no-go, while a
+zero-curl ordering gauge gives a sufficient class with identical optimizer
+sets. Exhaustive verification covered all `167` Buehler-admissible monotone
+tables on four outcomes and all `27,889` ordered pairs without a theorem
+mismatch. The original protocol's use of the full Dedekind count `168` is
+preserved as an immutable failed count gate and corrected only by an additive
+verifier repair. The
+[v0.49 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_49.md) moves next to
+reference-law-family robustness. ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)

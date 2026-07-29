@@ -1,0 +1,43 @@
+{
+  "commits": {
+    "development": "f87c90fd57c2b0c267d13dd41be12429b13929c0",
+    "original_failed_verification": "15627556f38b781dc3a7521a69494e630d174c07",
+    "prior_art_and_minimality": "156c82f5a140071f6c577ab327e747d74b6432b8",
+    "repair_registration": "e5c92f927161d06017b540411e921d9f8e56987e",
+    "repair_source": "2399cd04da172a326334c9691c391638746a3b6c",
+    "verification_registration": "a3fafffa2abb7fff3cc7c408bd85ac4f414af44d",
+    "verification_source": "1bd553ebf65feb5671d0e4ca16853c14b7abf91d"
+  },
+  "commands": {
+    "repair_verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/verify_theorems_v0_49_1.py",
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/test_common_ordering.py ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/test_universe_repair_v0_49_1.py"
+  },
+  "original_verification": {
+    "admissible_table_count": 167,
+    "common_chain_mismatches": 0,
+    "elapsed_seconds": 57.352090600004885,
+    "expected_dedekind_table_count": 168,
+    "expected_ordered_pair_count": 28224,
+    "observed_ordered_pair_count": 27889,
+    "peak_working_set_bytes": 30326784,
+    "receipt_sha256": "c31af79810f3cb29e85a19335a47cf4277b5de87ad2d25a87ffd210c8893803e",
+    "status": "finite_common_ordering_theorem_not_verified",
+    "tight_dag_mismatches": 0
+  },
+  "protocol_id": "asmp9-common-ordering-verification-v0.49",
+  "repair": {
+    "claim_boundary": "Post-outcome universe-count repair only; no scientific value or theorem comparison changed.",
+    "corrected_admissible_table_count": 167,
+    "corrected_ordered_pair_count": 27889,
+    "registration_sha256": "aea8a36bc9761cd16dfef64674ca7914c0052b416ab70b4d1742a63ea0ae0447",
+    "verification_sha256": "e8fb791cdbbfb7e1a2b992a11535147c4242d1f696bf97abe62a296156cd3b08"
+  },
+  "schema": "asmp9-v0.49.1-run-receipt-v1",
+  "status": "finite_common_ordering_theorem_verified",
+  "tests": {
+    "repair_integrity": 3,
+    "scientific": 7,
+    "total": 10
+  },
+  "version": "0.49.1"
+}
