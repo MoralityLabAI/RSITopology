@@ -1,0 +1,17 @@
+{
+  "artifact_count": 10,
+  "artifacts": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_27.md": "0955e9a8c15c29f1d64495078879e0af271c6bbe3bb8853fccf95bece0080ab5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/PRIOR_ART_GATE_v0_27.md": "f77d54268b8ef365b97a90d01f57f625defbd7d28fc5129b0c15deb622d9fae1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/PUBLIC_SUMMARY_v0_27.md": "654b3499a1d9440b263fee21f232aae84787d40d8be2db81595665865a46d3dd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/THEOREM_DRAFT_v0_27.md": "24e7bc5ad3e717eeef457475429d09c0217aa7a17a758fc9a4884c25eddce904",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/artifacts_v0_27/RESULT_v0_27.md": "15da1d4df0052ebff5b6bfe8c98eea94c2f3fd6fc926b3437e7e3d531013682c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/artifacts_v0_27/independent_verification_v0_27.json": "77c9ff5b7a9b25917c4ba2980e23d9d25ca04523daf06478ec94fa4cd5953318",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/artifacts_v0_27/result_v0_27.json": "64ed8a0d390d1ffa5a0f47a55571447267fd9c819efee5d62e4c4b2193f6c1df",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/artifacts_v0_27/run_receipt_v0_27.json": "0a6217e6f7effc08b66532927d093f4d3b6c1cf8fe9849aa543325f9c8dd423c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/protocol_v0_27.json": "14cf12e7079d2d6e92bed10fe2413dfab456fead81d0ab2084776c02281e0f13",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/registration_v0_27.json": "706764883d5b65398850f61982a10e8d7a7d4b14d1c60afd2ca6e2864aaa22a5"
+  },
+  "manifest_id": "ASMP-9-HETEROGENEOUS-MIDPOINT-v0.27-release",
+  "verdict": "heterogeneous_midpoint_boundary_established_v0_27"
+}

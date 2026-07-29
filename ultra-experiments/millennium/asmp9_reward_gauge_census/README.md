@@ -30,7 +30,7 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py `
 The output is an exact finite census and instrument validation, not a novelty
 claim for graph cohomology and not an ASMP-9 resolution.
 
-The current [resolution audit](RESOLUTION_AUDIT_v0_26_2.md) maps every clause of
+The current [resolution audit](RESOLUTION_AUDIT_v0_27.md) maps every clause of
 the broader candidate problem to proved, partial, or missing evidence and
 freezes the next load-bearing sequence.
 
@@ -200,3 +200,14 @@ through a prospectively registered additive repair after the original run's
 mathematics passed but a prose gate failed and the first repair crashed before
 adjudication.  It does not show that ordinary comparisons supply cardinal
 offsets or resolve ASMP-9.
+
+The [v0.27 heterogeneous-midpoint result](heterogeneous_midpoint_v0_27/PUBLIC_SUMMARY_v0_27.md)
+then identifies the common midpoint, rather than common link shape, as the
+operative population robustness condition.  Arbitrary cell-specific midpoint
+drift absorbs any utility change and destroys identification.  Context-only
+drift reduces to a bipartite incidence quotient: connectivity controls shared
+coordinates, cycle rank controls whether the model is falsifiable, and the
+positive Laplacian spectral floor controls Euclidean stability.  The
+registered tree control correctly returns unavailable by design.  These are
+classical finite ingredients assembled as an access ledger, not behavioral
+validation or an ASMP-9 resolution.
