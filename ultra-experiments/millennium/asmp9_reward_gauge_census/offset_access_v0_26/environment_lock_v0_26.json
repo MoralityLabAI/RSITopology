@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "pytest": "8.3.3",
+    "runtime": "Python standard library only"
+  },
+  "git": "2.45.2.windows.1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.4",
+  "resource_policy": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  }
+}
