@@ -47,10 +47,12 @@ capabilities are topological.
   diversity, and a worst-case blind spot hidden by high average accuracy.
 - [ASMP-7: capability-attestation boundary surface](../ultra-experiments/millennium/asmp7_attestability_frontier/RESULT_v0_2_1.md)
   — exact challenge-cost degradation as a registered policy boundary narrows.
-- [ASMP-9: general incomplete-menu theorem](../ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/RESULT_v0_56.md)
-  — complete menu access is the sharp exact threshold for identifying a
-  singleton Luce/random-utility/non-random-utility tier under unrestricted
-  positive completion.
+- [ASMP-9: exact capped-simplex robustness moduli](../ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/RESULT_v0_63.md)
+  — prospectively verified exact additive and multiplicative corruption
+  boundaries over a full-dimensional stochastic-choice fiber, with matching
+  primal/dual certificates and independent replay. The
+  [resolution-obligation matrix](../ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_63.md)
+  states precisely why the broader value-identifiability problem remains open.
 - [ASMP-12: program-equilibrium survival result](../ultra-experiments/millennium/asmp12_program_equilibrium/v0_2_survival/PUBLIC_SUMMARY_v0_2.md)
   — an exact finite census showing when expanding the admissible program set
   destroys source-conditioned cooperation.
