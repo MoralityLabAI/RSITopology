@@ -1,0 +1,63 @@
+{
+  "confidence": {
+    "alpha": 0.05,
+    "channel_event": "Bonferroni-simultaneous shared-binary Hoeffding event over three query parameters",
+    "deficiency_bound": "max_theta(source_policy_bound + reference_policy_bound)",
+    "numerics": "80-digit Decimal log and square root, converted outward to binary float",
+    "policy_bound": "loss_span(theta) * min(1, horizon * max_query_tv)"
+  },
+  "expected_decisions_on_simultaneous_event": {
+    "4_class_identification/adaptive": "pass",
+    "4_class_identification/open_loop": "fail",
+    "root_group_asymmetric/adaptive": "pass",
+    "root_group_asymmetric/open_loop": "pass"
+  },
+  "implementation_commit": "2ff9009a5755a8b0992bcf7564bd56bafdebe5d6",
+  "parent": "asmp9-sequential-risk-access-v0.41",
+  "practical_margins": {
+    "4_class_identification": "1/1000",
+    "root_group_asymmetric": "1/1000"
+  },
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_risk_access_v0_42",
+    "elapsed_seconds": 27.077355,
+    "status": "pass",
+    "tests_passed": 22
+  },
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42",
+  "registered_at_utc": "2026-07-29T11:25:05Z",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1342177280,
+    "max_wall_seconds": 900,
+    "network": false,
+    "processes": 1
+  },
+  "sampling": {
+    "generator": "keyed BLAKE2b 64-bit streams with exact-modulus rejection sampling",
+    "samples_per_target_query": 48000,
+    "seed_rule": "SHA256(exact registration bytes || NUL || asmp9-v0.42-sampled-confirmation)",
+    "shared_parameter_estimator": "pool four target-specific flip counts within each query",
+    "targets": 4
+  },
+  "sealed_files": {
+    "../decision_relative_access_v0_38/relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "../sequential_risk_access_v0_41/confirmation.py": "bc960a89d9a94a1e1a02d29c185d105685e165c7096fc30db9bc2f781c861ed8",
+    "../sequential_risk_access_v0_41/sequential_access.py": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+    "PRIOR_ART_GATE_v0_42.md": "d2a1aefc4ee80213598101c2cf415041ebbf8d006acef785d3d9e7e7409f9a33",
+    "PROTOCOL_v0_42.md": "29b83f3bdc46c794b3d83eef93d121c3be21ad2b04dbcec1c77e2dc9b7f974b6",
+    "THEOREM_DRAFT_v0_42.md": "4e7c91bc50b4360a6946cd9022b8b00ff275443d95fe49d820a9059d093842f7",
+    "environment_lock_v0_42.json": "b71c8aae91d806f6e87a886ce2e3d131d6b92164aa2cec59770da00707a57b6b",
+    "execute_confirmation_v0_42.py": "2294869e15d4b88e9ec9a7ef37a60f5996c8fdd1d11795d4a8cdf6010a24057f",
+    "finite_sample_access.py": "34a905293a5b87b07b7e7d216f035ecdd2d1a1abdfc3521f5a7bd7707e178834",
+    "protocol_v0_42.json": "642cd29283e54ecabba859a945e480b4b701feb7ca98c3d9494d42f9b992f0df",
+    "sampled_confirmation.py": "88ce962a5381d2b21fe1b41ac7d8a34045f2fbdd2be5fe8fcaabe827cb127882",
+    "test_execute_confirmation_v0_42.py": "3d00437626cb64989f12a5fa6243e4349275d3633fee6a76291548e343d0a495",
+    "test_finite_sample_access.py": "4c487ad8c7cfab8a48e1c38fafa2b3b5b67967656011eb52353d1bea08367ce1",
+    "test_sampled_confirmation.py": "590e53caca9719218701671bd99011997e43e3a1483f692f1fa099833c3f649a",
+    "test_small_exact_perturbations.py": "155e499ead3940666cf56ba4acb88bd1203d00eb2033cfe4e8367ee6222c60a4",
+    "verify_result_v0_42.py": "529227c91f146c3f03fc5a277506de89f7a8b73bd489b9b2b2ccf1243fbd3475",
+    "write_environment_lock_v0_42.py": "78dfe0f86c00f5366cb692ab0abe65eb061f8558f07f6debe49539d205bd588a"
+  },
+  "status": "registered_prereveal",
+  "version": "0.42"
+}
