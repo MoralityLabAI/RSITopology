@@ -11,9 +11,8 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.60 development](RESOLUTION_OBLIGATION_MATRIX_v0_60.md)
-records the full program boundary while keeping the unregistered v0.57-v0.60
-lane distinct from verified evidence. The prospectively verified
+[resolution-obligation matrix after v0.61 verification](RESOLUTION_OBLIGATION_MATRIX_v0_61.md)
+records the full program boundary. The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
 classifies complete three-alternative kernels into a Luce scalar, a weaker
 random-ordering representation, or no representation in the declared class.
@@ -68,6 +67,17 @@ unknown recording weights confound all positive kernels, but weights bounded
 in `[ell,u]` yield an exact multiplicative cross-tier radius. Known recording
 weights or forced recording restore the clean law. The ingredients are
 classical; the ASMP-9 contribution is only their explicit tier-access ledger.
+
+The prospectively registered
+[conditional structured-choice stack v0.61](structured_choice_stack_v0_61/RESULT_v0_61.md)
+then verifies the v0.57-v0.60 proof handoffs on fresh cells without promoting
+their burned development tables. It fixes the shared probability-coordinate
+count, proves compactness and threshold attainment under the observed
+probability floor, and obtains import-independent agreement on bounded-degree
+reconstruction, separation-promised sampling, fixed Huber contamination,
+pre-response selection, and outcome-dependent recording. The conditional
+stack is now claim-eligible, but its premises remain unvalidated and ASMP-9 is
+unresolved.
 
 ## Prereveal tests
 
