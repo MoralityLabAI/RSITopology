@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "Exact finite subset-table insufficiency inside classical randomized confidence theory; no novelty, operational desirability, continuous or strategic robustness, physical preference-channel validation, or ASMP-9 resolution.",
+  "commands": {
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_aggregate_randomized.py ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_verifier_v0_53.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/verify_theorems_v0_53.py"
+  },
+  "commits": {
+    "development": "056e2109f5fcd37bec43b25e212a3281409fa4db",
+    "registration": "ae833f6779ea9b11b85ff32db73587c9528edcdf",
+    "verification_result": "e95f563f10fa7a881e57feb6c661bff38ab70f8e",
+    "verification_source": "029622fbe6e4dc00bd06b7c542a464d2ff81d836"
+  },
+  "gates": {
+    "C0": true,
+    "D0": true,
+    "F0": true,
+    "H0": true,
+    "I0": true,
+    "M0": true,
+    "P0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "T0": true
+  },
+  "protocol_id": "asmp9-aggregate-randomized-subset-insufficiency-v0.53",
+  "registration_sha256": "5cce4cfeb73b0debe3c7a7d7691c26cde602eacf21708e492dd38ee17a890ca1",
+  "resource": {
+    "elapsed_seconds": 5.511451099999249,
+    "peak_working_set_bytes": 21520384,
+    "worker_processes": 1
+  },
+  "result": {
+    "distinct_randomized_value_count": 10,
+    "dual_mismatch_count": 0,
+    "family_size": 10,
+    "first_randomized_value": "5/12",
+    "primal_mismatch_count": 0,
+    "second_randomized_value": "5/18",
+    "support_bound_failure_count": 0,
+    "table_mismatch_count": 0
+  },
+  "schema": "asmp9-v0.53-run-receipt-v1",
+  "status": "subset_table_insufficient_for_aggregate_randomization",
+  "tests": {
+    "expected": 9,
+    "passed": 9
+  },
+  "verification_sha256": "e337544214ff94861cccb15929318be77c07a6db3cfe81e0cde76794f5db0349",
+  "version": "0.53"
+}

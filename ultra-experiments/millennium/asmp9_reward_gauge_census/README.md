@@ -278,6 +278,19 @@ self-ordering corollary, not a novelty claim. The
 aggregate randomized coverage, where deterministic components may
 individually under-cover. ASMP-9 remains unresolved.
 
+The prospectively verified
+[aggregate randomized result v0.53](aggregate_randomized_v0_53/RESULT_v0_53.md)
+then shows why that successor requires a richer input. Ten experiments shared
+one deterministic subset table and one deterministic optimum but had ten
+distinct aggregate-randomized optima. The full probability experiment, not
+its thresholded subset table, is required for fractional failure allocation.
+Exact primal and dual formulas, an invalid-component mixture control, and the
+`n+k` support bound all passed. Randomized confidence procedures are
+classical; the ASMP-9 contribution is the information boundary. The
+[v0.53 obligation matrix](RESOLUTION_OBLIGATION_MATRIX_v0_53.md) moves next to
+the canonical demonstrator well-posedness trichotomy rather than another
+confidence-table census. ASMP-9 remains unresolved.
+
 ## Successor
 
 The [ordinal access frontier v0.2](ordinal_frontier_v0_2/PUBLIC_SUMMARY_v0_2.md)
