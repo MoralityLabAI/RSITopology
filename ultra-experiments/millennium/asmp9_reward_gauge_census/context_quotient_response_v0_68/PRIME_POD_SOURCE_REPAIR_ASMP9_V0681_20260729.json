@@ -1,0 +1,25 @@
+{
+  "schema_version": "asmp9_context_quotient_prime_source_repair_v0_68_1",
+  "recorded_utc": "2026-07-29T22:26:00.2868823Z",
+  "pod_id": "c7fd619a1ab64811a49b0827bc8d6829",
+  "status": "prereveal_source_repair",
+  "original_launch_source_commit": "be61301e712985c82a2a86f576bba92655e8ee00",
+  "repaired_source_commit": "e0734ef0f5090be1c09ab9db59ed780949ed033d",
+  "defect": "The amended Python registration emitted authorization schema v0.68.1 while the hard-cap shell wrapper still admitted only v0.68.",
+  "repair": [
+    "Require authorization schema v0.68.1 in the hard-cap wrapper.",
+    "Version the owned systemd unit prefix and wrapper/cleanup receipt schemas as v0.68.1.",
+    "Add an execution-contract regression test."
+  ],
+  "scientific_protocol_changed": false,
+  "scenario_universe_changed": false,
+  "threshold_changed": false,
+  "model_forward_passes_before_repair": 0,
+  "outcomes_read_before_repair": false,
+  "verification": {
+    "tests_passed": 29,
+    "bash_syntax_passed": true,
+    "local_prereveal_validation": "PREREVEAL_VALIDATION_LOCAL_v0_68_1_REPAIR1.json"
+  },
+  "claim_boundary": "This is an outcome-free hard-cap schema repair. Target-side prereveal validation and registration are still required before inference."
+}
