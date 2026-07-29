@@ -46,7 +46,9 @@ def main() -> None:
         "delta": 0.05,
         "full_parameter_rate_with_gauge_alias": full.rate,
         "joint_allocation": joint.allocation,
+        "joint_allocation_unit": joint.allocation_unit,
         "joint_rate": joint.rate,
+        "joint_sample_fraction": joint.sample_fraction,
         "lower_bound_expected_queries": fixed_confidence_lower_bound(
             joint,
             0.05,

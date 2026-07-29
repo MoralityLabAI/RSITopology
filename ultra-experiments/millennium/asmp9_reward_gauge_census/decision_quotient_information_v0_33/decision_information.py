@@ -13,10 +13,13 @@ Distribution = tuple[float, ...]
 
 @dataclass(frozen=True)
 class InformationDesign:
+    allocation_unit: str
     allocation: dict[str, float]
     alternatives: tuple[str, ...]
     divergences: dict[str, dict[str, float]]
+    query_costs: dict[str, float]
     rate: float
+    sample_fraction: dict[str, float]
 
 
 def validate_distribution(values: Sequence[float]) -> Distribution:
@@ -77,8 +80,10 @@ def characteristic_design(
     truth: str,
     *,
     distinguish_full_hypothesis: bool = False,
+    query_costs: Mapping[str, float] | None = None,
 ) -> InformationDesign:
     queries = _validate_model(laws, answers)
+    costs = _validate_costs(queries, query_costs)
     if truth not in laws:
         raise KeyError(truth)
     alternatives = tuple(
@@ -92,10 +97,15 @@ def characteristic_design(
     )
     if not alternatives:
         return InformationDesign(
+            allocation_unit="cost_fraction",
             allocation={query: 1.0 / len(queries) for query in queries},
             alternatives=(),
             divergences={},
+            query_costs=costs,
             rate=inf,
+            sample_fraction={
+                query: 1.0 / len(queries) for query in queries
+            },
         )
 
     divergences = {
@@ -113,10 +123,13 @@ def characteristic_design(
         for row in divergences.values()
     ):
         return InformationDesign(
+            allocation_unit="cost_fraction",
             allocation={query: 0.0 for query in queries},
             alternatives=alternatives,
             divergences=divergences,
+            query_costs=costs,
             rate=0.0,
+            sample_fraction={query: 0.0 for query in queries},
         )
     if any(
         any(not np.isfinite(value) for value in row.values())
@@ -132,7 +145,7 @@ def characteristic_design(
     upper = []
     for alternative in alternatives:
         row = [
-            -divergences[alternative][query]
+            -divergences[alternative][query] / costs[query]
             for query in queries
         ]
         row.append(1.0)
@@ -153,11 +166,26 @@ def characteristic_design(
         query: float(result.x[index])
         for index, query in enumerate(queries)
     }
+    unnormalized_samples = {
+        query: allocation[query] / costs[query] for query in queries
+    }
+    total_samples = sum(unnormalized_samples.values())
+    sample_fraction = {
+        query: (
+            unnormalized_samples[query] / total_samples
+            if total_samples
+            else 0.0
+        )
+        for query in queries
+    }
     return InformationDesign(
+        allocation_unit="cost_fraction",
         allocation=allocation,
         alternatives=alternatives,
         divergences=divergences,
+        query_costs=costs,
         rate=float(result.x[-1]),
+        sample_fraction=sample_fraction,
     )
 
 
@@ -238,3 +266,17 @@ def _validate_model(
         for distribution in query_laws.values():
             validate_distribution(distribution)
     return first_queries
+
+
+def _validate_costs(
+    queries: Sequence[str],
+    query_costs: Mapping[str, float] | None,
+) -> dict[str, float]:
+    if query_costs is None:
+        return {query: 1.0 for query in queries}
+    if set(query_costs) != set(queries):
+        raise ValueError("query_costs must specify every query exactly once")
+    costs = {query: float(query_costs[query]) for query in queries}
+    if any(not np.isfinite(cost) or cost <= 0 for cost in costs.values()):
+        raise ValueError("query costs must be finite and strictly positive")
+    return costs

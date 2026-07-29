@@ -75,6 +75,39 @@ def test_fixed_confidence_lower_bound_is_finite_only_when_identifiable() -> None
     assert fixed_confidence_lower_bound(behavior_only, 0.05) == inf
 
 
+def test_cost_weighting_distinguishes_budget_and_sample_allocations() -> None:
+    laws = {
+        "truth": {
+            "cheap": (0.25, 0.75),
+            "expensive": (0.25, 0.75),
+        },
+        "cheap_alternative": {
+            "cheap": (0.75, 0.25),
+            "expensive": (0.25, 0.75),
+        },
+        "expensive_alternative": {
+            "cheap": (0.25, 0.75),
+            "expensive": (0.75, 0.25),
+        },
+    }
+    answers = {
+        "truth": 0,
+        "cheap_alternative": 1,
+        "expensive_alternative": 1,
+    }
+    design = characteristic_design(
+        laws,
+        answers,
+        "truth",
+        query_costs={"cheap": 1, "expensive": 4},
+    )
+    assert design.allocation_unit == "cost_fraction"
+    assert design.allocation["cheap"] == pytest.approx(0.2)
+    assert design.allocation["expensive"] == pytest.approx(0.8)
+    assert design.sample_fraction["cheap"] == pytest.approx(0.5)
+    assert design.sample_fraction["expensive"] == pytest.approx(0.5)
+
+
 def test_kl_and_model_validation() -> None:
     assert kl_divergence((0.5, 0.5), (0.5, 0.5)) == pytest.approx(0)
     with pytest.raises(ValueError):
@@ -84,6 +117,13 @@ def test_kl_and_model_validation() -> None:
     broken.pop("h11")
     with pytest.raises(ValueError):
         decision_identifiable(laws, broken)
+    with pytest.raises(ValueError):
+        characteristic_design(
+            laws,
+            answers,
+            "h00",
+            query_costs={"behavior": 1},
+        )
 
 
 def test_development_runner_reports_scope_and_ablations() -> None:

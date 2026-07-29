@@ -16,7 +16,9 @@ Read:
   finite theorem and successor requirements; and
 - [`PRIOR_ART_GATE_v0_33.md`](PRIOR_ART_GATE_v0_33.md) for the established
   controlled-sensing and pure-exploration results that subsume the generic
-  information formula.
+  information formula; and
+- [`NATIVE_DEVELOPMENT_RESULT_v0_33.md`](NATIVE_DEVELOPMENT_RESULT_v0_33.md)
+  for the unregistered result generated from v0.29-v0.32 objects.
 
 Run the planted channel-necessity control with:
 
@@ -25,6 +27,12 @@ python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_
 
 python -m pytest -q `
   ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33
+```
+
+Run the ASMP-9-native development fixture with:
+
+```powershell
+python ultra-experiments/millennium/asmp9_reward_gauge_census/decision_quotient_information_v0_33/run_native_development.py
 ```
 
 The fixture is intentionally small. Its role is to verify that:
@@ -37,4 +45,7 @@ The fixture is intentionally small. Its role is to verify that:
 
 The next version must instantiate the hypothesis family from the actual
 v0.28-v0.32 reward, mechanics, behavior, and policy objects before any
-registration.
+registration. The native development fixture now does that for the complete
+v0.29 measurement-to-policy cell and v0.32 mixture audit. The remaining
+pre-freeze seam is the absent map from v0.32's six semantic residuals into
+v0.31's eight localized observation rows.

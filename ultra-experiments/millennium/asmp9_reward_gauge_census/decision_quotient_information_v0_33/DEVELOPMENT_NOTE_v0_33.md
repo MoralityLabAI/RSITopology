@@ -109,8 +109,55 @@ finite reward-gauge control.
 
 ## What a prospective v0.33 must add
 
-1. Replace the illustrative hypothesis table with a finite model generated
-   mechanically from v0.28-v0.32 objects.
+The first development successor now replaces the XOR table with a finite
+model generated from:
+
+- v0.29's registered composition cell: quotient measurement rows, two policy
+  occupancies, true reward, and the decision-null third-coordinate gauge;
+- v0.28's rational calibrated-occupancy response law;
+- v0.32's consistent and distorted compound-lottery residuals; and
+- v0.31's and v0.32's registered matrix dimensions.
+
+It includes reward-changing, mechanics-changing, validity-changing, and
+same-policy gauge-alias hypotheses. Return, mechanics, and mixture-audit
+query families are each individually necessary.
+
+This source inspection also identified a missing composition object. The
+v0.31 primary certificate has eight localized observation rows. The v0.32
+cross-difference operator produces six semantic residuals from twelve cells.
+No registered `8 x 6` map says how those semantic residuals enter the v0.31
+observations. The current fixture therefore uses v0.29's complete
+measurement-to-policy cell and reports the v0.31-v0.32 coupling as
+unavailable rather than inventing it.
+
+Under the temporary equal-cost convention, the native fixture has three
+separate policy-changing alternatives. Their live information values are:
+
+```text
+reward flip      d_R = (1/2) log(3)
+mechanics flip   d_M = (1/2) log(3)
+mixture failure  d_A = (1/2) log(289/288)
+```
+
+The max-min game is therefore solved analytically by:
+
+```text
+C* = 1 / (1/d_R + 1/d_M + 1/d_A),
+w_i = C*/d_i.
+```
+
+This sends approximately `99.37%` of the equal-cost budget to the
+mixture-affinity audit. The number is not an operational recommendation: it
+is a consequence of the registered `1/16` violation, the imported rational
+link, and the one-unit-per-observation convention. The implementation now
+accepts a positive cost for every query and interprets its allocation as
+fractions of total cost. A prospective protocol must freeze those costs or
+report a sensitivity surface.
+
+A prospective v0.33 must now:
+
+1. register an observation-to-semantic coupling, or prove a result quantified
+   over a declared coupling class;
 2. State whether the result is a nonasymptotic lower bound, an asymptotically
    matching characterization, or only a computable design criterion.
 3. Include at least one policy-changing alternative for each access channel,
@@ -123,6 +170,8 @@ finite reward-gauge control.
    passed to the numerical LP.
 7. Separate outcome-independent design computation from any simulated
    sequential run.
+8. Freeze query costs or a cost-sensitivity family before interpreting the
+   optimal allocation.
 
 ## Claim boundary
 
