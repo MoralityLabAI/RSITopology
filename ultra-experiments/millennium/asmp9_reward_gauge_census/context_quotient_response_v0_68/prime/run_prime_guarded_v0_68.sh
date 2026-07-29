@@ -18,7 +18,7 @@ import sys
 authorization_path = Path(sys.argv[1]).resolve()
 self_path = Path(sys.argv[2]).resolve()
 authorization = json.loads(authorization_path.read_text(encoding="utf-8"))
-if authorization["schema_version"] != "asmp9_context_quotient_authorization_v0_68":
+if authorization["schema_version"] != "asmp9_context_quotient_authorization_v0_68_1":
     raise SystemExit("unexpected authorization schema")
 
 def digest(path):
@@ -71,7 +71,7 @@ PY
 mkdir -p "${WRAPPER_OUTPUT}" "${RESULT_DIR}" "${ANALYSIS_DIR}"
 ATTEMPT_ID="$(date -u +%Y%m%dT%H%M%SZ)-$$"
 ATTEMPT_DIR="${WRAPPER_OUTPUT}/attempts/${ATTEMPT_ID}"
-UNIT_PREFIX="asmp9-v068-${ATTEMPT_ID}"
+UNIT_PREFIX="asmp9-v0681-${ATTEMPT_ID}"
 mkdir -p "${ATTEMPT_DIR}"
 
 FREE_MEMORY_MB="$(awk '/MemAvailable:/ {printf "%d", $2 / 1024}' /proc/meminfo)"
@@ -213,7 +213,7 @@ import sys
 
 baseline = int(os.environ["BASELINE_GPU_MB"])
 payload = {
-    "schema_version": "asmp9_context_quotient_wrapper_summary_v0_68",
+    "schema_version": "asmp9_context_quotient_wrapper_summary_v0_68_1",
     "attempt_id": os.environ["ATTEMPT_ID"],
     "status": (
         "completed"

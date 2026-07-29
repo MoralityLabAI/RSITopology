@@ -158,6 +158,10 @@ def test_runner_requires_amended_registration_and_protocol_hash() -> None:
     source = (HERE / "run_qwen_v068.py").read_text(encoding="utf-8")
     assert "execution_registration_v0_68_1" in source
     assert '"protocol_amendment"' in source
+    wrapper = (
+        HERE / "prime" / "run_prime_guarded_v0_68.sh"
+    ).read_text(encoding="utf-8")
+    assert "authorization_v0_68_1" in wrapper
 
 
 def test_prereveal_binds_prompt_dependency_and_synthetic_controls() -> None:

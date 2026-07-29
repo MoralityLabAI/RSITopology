@@ -34,7 +34,7 @@ import sys
 
 apps = [line.strip() for line in os.environ["GPU_APPS"].splitlines() if line.strip()]
 payload = {
-    "schema_version": "asmp9_context_quotient_cleanup_v0_68",
+    "schema_version": "asmp9_context_quotient_cleanup_v0_68_1",
     "cleanup_passed": (
         not apps
         and os.environ["RUNNER_ACTIVE"] == "false"
