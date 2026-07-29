@@ -11,8 +11,9 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.56](RESOLUTION_OBLIGATION_MATRIX_v0_56.md)
-records the full program boundary. The prospectively verified
+[resolution-obligation matrix after v0.58 development](RESOLUTION_OBLIGATION_MATRIX_v0_58.md)
+records the full program boundary while keeping the unregistered v0.57-v0.58
+lane distinct from verified evidence. The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
 classifies complete three-alternative kernels into a Luce scalar, a weaker
 random-ordering representation, or no representation in the declared class.
