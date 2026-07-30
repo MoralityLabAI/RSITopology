@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.74 development](RESOLUTION_OBLIGATION_MATRIX_v0_74.md)
+[resolution-obligation matrix after v0.75 development](RESOLUTION_OBLIGATION_MATRIX_v0_75.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -85,6 +85,17 @@ orbit partition of transformations independently licensed by the declared
 decision problem. In a finite deterministic registry, minimum exact access is
 the corresponding non-gauge-pair set-cover problem. This is a formulation
 correction, not behavioral reward identification.
+
+The unregistered
+[decision-licensed quotient v0.75](decision_licensed_quotient_v0_75/THEOREM_DRAFT_v0_75.md)
+then closes that licensing loop for one finite linear class. For a registered
+finite policy family, the kernel of its occupancy-difference matrix is exactly
+the maximal additive gauge preserving every cardinal policy margin. Composing
+that derived gauge with the v0.69 physical nuisance theorem yields a necessary
+and sufficient access test and a constructive non-gauge decision witness.
+This resolves the algebraic question inside the declared finite class, while
+leaving policy adequacy, nonlinear/argmax targets, behavioral acquisition,
+misspecification, and the full ASMP-9 problem open.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
