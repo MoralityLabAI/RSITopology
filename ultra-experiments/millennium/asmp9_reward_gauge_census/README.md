@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.75 development](RESOLUTION_OBLIGATION_MATRIX_v0_75.md)
+[resolution-obligation matrix after v0.76 development](RESOLUTION_OBLIGATION_MATRIX_v0_76.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -96,6 +96,16 @@ and sufficient access test and a constructive non-gauge decision witness.
 This resolves the algebraic question inside the declared finite class, while
 leaving policy adequacy, nonlinear/argmax targets, behavioral acquisition,
 misspecification, and the full ASMP-9 problem open.
+
+The additive
+[target-interface correction v0.76](target_interface_v0_76/THEOREM_DRAFT_v0_76.md)
+then separates two implications previously compressed into “identification.”
+A target is recoverable when it factors through the observation; an
+observation is representative-insensitive when it factors through the target.
+A finer observation can recover the target while leaking its representative,
+whereas an invariant observation can still be too coarse. Exact partition
+equality requires both. This clarifies the stricter v0.69/v0.74 interfaces
+without changing their algebra.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
