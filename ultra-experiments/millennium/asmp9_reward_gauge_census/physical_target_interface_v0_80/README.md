@@ -1,6 +1,6 @@
 # ASMP-9 controlled physical target interface v0.80
 
-Status: **prereveal registration; outcomes have not been executed**.
+Status: **prospectively registered and executed; R0 failed**.
 
 This package implements the v0.79 next-evidence gate using a controlled
 finite-MDP softmax demonstrator.
@@ -23,6 +23,10 @@ python execute_registered.py `
 The executor validates every prereveal source hash, produces a primary run and
 byte-identical replay, then applies the frozen gate sequence.
 
-No outcome directory is included in the prereveal commit. A future pass would
-validate only this controlled softmax-planner channel, not human/model values
-or ASMP-9.
+The prereveal commit contains no outcomes. The later
+[result](RESULT_v0_80.md) and [independent audit](AUDIT_v0_80.md) import the
+hash-matched execution artifacts. W0 and I0 passed; R0 failed; L0 and M0 are
+`not_evaluated`.
+
+This controlled negative result does not identify human/model values or
+resolve ASMP-9.

@@ -1,0 +1,215 @@
+{
+  "claim_boundary": "Controlled finite-MDP softmax demonstrator only; not human/model value identification or ASMP-9 resolution.",
+  "estimates": [
+    {
+      "absolute_error": 0.06793061998718858,
+      "arm": "base",
+      "context": "construction_low",
+      "estimated_margin": 0.3179306199871886,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 0.25
+    },
+    {
+      "absolute_error": 0.054017891103086524,
+      "arm": "shape_plus",
+      "context": "construction_low",
+      "estimated_margin": 0.19598210889691348,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 0.25
+    },
+    {
+      "absolute_error": 0.09052243301528262,
+      "arm": "shape_minus",
+      "context": "construction_low",
+      "estimated_margin": 0.15947756698471738,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 0.25
+    },
+    {
+      "absolute_error": 0.10745881101750365,
+      "arm": "nongauge_plus",
+      "context": "construction_low",
+      "estimated_margin": 2.3574588110175037,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 2.25
+    },
+    {
+      "absolute_error": 0.13854912128279406,
+      "arm": "nongauge_minus",
+      "context": "construction_low",
+      "estimated_margin": -1.611450878717206,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": -1.75
+    },
+    {
+      "absolute_error": 0.0078490977151362,
+      "arm": "base",
+      "context": "construction_high",
+      "estimated_margin": 0.7578490977151362,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 0.75
+    },
+    {
+      "absolute_error": 0.055645883372249294,
+      "arm": "shape_plus",
+      "context": "construction_high",
+      "estimated_margin": 0.6943541166277507,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 0.75
+    },
+    {
+      "absolute_error": 0.05885775961446704,
+      "arm": "shape_minus",
+      "context": "construction_high",
+      "estimated_margin": 0.691142240385533,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 0.75
+    },
+    {
+      "absolute_error": 0.2362155837437081,
+      "arm": "nongauge_plus",
+      "context": "construction_high",
+      "estimated_margin": 2.513784416256292,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": 2.75
+    },
+    {
+      "absolute_error": 0.0200394658325993,
+      "arm": "nongauge_minus",
+      "context": "construction_high",
+      "estimated_margin": -1.2700394658325993,
+      "sign_correct": true,
+      "split": "construction",
+      "target_margin": -1.25
+    },
+    {
+      "absolute_error": 0.24483317010653805,
+      "arm": "base",
+      "context": "holdout_low",
+      "estimated_margin": -0.49483317010653805,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -0.25
+    },
+    {
+      "absolute_error": 0.023647423499169595,
+      "arm": "shape_plus",
+      "context": "holdout_low",
+      "estimated_margin": -0.2736474234991696,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -0.25
+    },
+    {
+      "absolute_error": 0.06996524923631853,
+      "arm": "shape_minus",
+      "context": "holdout_low",
+      "estimated_margin": -0.3199652492363185,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -0.25
+    },
+    {
+      "absolute_error": 0.031741657500501175,
+      "arm": "nongauge_plus",
+      "context": "holdout_low",
+      "estimated_margin": 1.7182583424994988,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": 1.75
+    },
+    {
+      "absolute_error": 0.1837675813621078,
+      "arm": "nongauge_minus",
+      "context": "holdout_low",
+      "estimated_margin": -2.433767581362108,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -2.25
+    },
+    {
+      "absolute_error": 0.11705701142527325,
+      "arm": "base",
+      "context": "holdout_high",
+      "estimated_margin": -0.6329429885747268,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -0.75
+    },
+    {
+      "absolute_error": 0.004016274775921036,
+      "arm": "shape_plus",
+      "context": "holdout_high",
+      "estimated_margin": -0.754016274775921,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -0.75
+    },
+    {
+      "absolute_error": 0.06343384514207473,
+      "arm": "shape_minus",
+      "context": "holdout_high",
+      "estimated_margin": -0.8134338451420747,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -0.75
+    },
+    {
+      "absolute_error": 0.044434997482427185,
+      "arm": "nongauge_plus",
+      "context": "holdout_high",
+      "estimated_margin": 1.2944349974824272,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": 1.25
+    },
+    {
+      "absolute_error": 0.06473431617682301,
+      "arm": "nongauge_minus",
+      "context": "holdout_high",
+      "estimated_margin": -2.685265683823177,
+      "sign_correct": true,
+      "split": "holdout",
+      "target_margin": -2.75
+    }
+  ],
+  "gates": {
+    "L0": {
+      "maximum_empirical_gauge_probability_difference": 0.072265625,
+      "pass": true,
+      "threshold": 0.12
+    },
+    "M0": {
+      "accumulated_tv_penalty": 0.01524271249739828,
+      "pass": false,
+      "per_sample_tv_radius": 1e-05,
+      "registered_hellinger_union_bound": 0.13200188923003764,
+      "robustified_bound": 0.14724460172743592,
+      "threshold": 0.05
+    },
+    "R0": {
+      "all_signs_correct": true,
+      "maximum_absolute_margin_error": 0.24483317010653805,
+      "pass": false,
+      "threshold": 0.15
+    },
+    "W0": {
+      "delta_norms_match": true,
+      "gauge_targets_match": true,
+      "matched_delta_squared_norm": "2",
+      "nongauge_targets_change": true,
+      "pass": true
+    }
+  },
+  "overall_pass": false,
+  "status": "executed_registered_configuration"
+}

@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.78 development](RESOLUTION_OBLIGATION_MATRIX_v0_78.md)
+[resolution-obligation matrix after v0.80](RESOLUTION_OBLIGATION_MATRIX_v0_80.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -28,8 +28,11 @@ now instantiates that gate with an exact finite-MDP softmax demonstrator,
 matched-norm shaping/non-gauge arms, construction/holdout contexts, deterministic
 seed derivation, and byte-identical replay. Its
 [registration](physical_target_interface_v0_80/registration_v0_80.json)
-is sealed before outcomes; the registered configuration has not yet been
-executed.
+was sealed before outcomes. The
+[registered result](physical_target_interface_v0_80/RESULT_v0_80.md)
+is a valid negative: W0 and byte-identical replay passed, but R0 failed because
+the maximum cardinal-margin error `0.2448` exceeded the frozen `0.15`
+threshold. L0 and M0 are formally `not_evaluated`.
 
 The unregistered
 [joint linear quotient v0.69](joint_linear_quotient_v0_69/THEOREM_DRAFT_v0_69.md)
