@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.71 development](RESOLUTION_OBLIGATION_MATRIX_v0_71.md)
+[resolution-obligation matrix after v0.72 development](RESOLUTION_OBLIGATION_MATRIX_v0_72.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -53,6 +53,16 @@ when it lies in the path-incidence column space. Failure emits an exact
 left-kernel witness and constructs the minimal future-increment history
 quotient that replays the valuation. This is classical weighted-automata and
 reward-machine machinery specialized as an ASMP-9 object-selection rule.
+
+The unregistered
+[path factorization test v0.72](path_factorization_test_v0_72/THEOREM_DRAFT_v0_72.md)
+adds a known-variance Gaussian liveness and power theorem to that object. Edge
+rank and residual rank are separated: the frozen full design both identifies
+three edge coordinates and has one falsification degree of freedom, while
+deleting one path preserves identification but makes factorization
+untestable. The planted interaction needs exactly 32 equal repeats per path
+for the frozen 5%-size, 80%-power gate. This is classical lack-of-fit theory,
+not physical value validation.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
