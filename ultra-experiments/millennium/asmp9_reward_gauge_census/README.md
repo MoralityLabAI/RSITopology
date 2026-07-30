@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.72 development](RESOLUTION_OBLIGATION_MATRIX_v0_72.md)
+[resolution-obligation matrix after v0.73 development](RESOLUTION_OBLIGATION_MATRIX_v0_73.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -63,6 +63,17 @@ deleting one path preserves identification but makes factorization
 untestable. The planted interaction needs exactly 32 equal repeats per path
 for the frozen 5%-size, 80%-power gate. This is classical lack-of-fit theory,
 not physical value validation.
+
+The unregistered
+[history stabilization boundary v0.73](history_stabilization_v0_73/THEOREM_DRAFT_v0_73.md)
+then identifies the infinite future-increment quotient underlying v0.71.
+Inside a declared `K`-state deterministic reward-machine class, partition
+refinement stabilizes within `K-1` suffix symbols and two registered machines
+have a product-state distinguishing bound. Without an independently registered
+state or regularity bound, every finite prefix admits a delayed nonstationary
+continuation requiring more memory. The exhaustive finite census validates the
+implementation, not a human/model finite-memory assumption or ASMP-9
+resolution.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
