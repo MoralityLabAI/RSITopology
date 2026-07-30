@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.73 development](RESOLUTION_OBLIGATION_MATRIX_v0_73.md)
+[resolution-obligation matrix after v0.74 development](RESOLUTION_OBLIGATION_MATRIX_v0_74.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -74,6 +74,17 @@ state or regularity bound, every finite prefix admits a delayed nonstationary
 continuation requiring more memory. The exhaustive finite census validates the
 implementation, not a human/model finite-memory assumption or ASMP-9
 resolution.
+
+The unregistered
+[fiber-group correction v0.74](fiber_group_correction_v0_74/THEOREM_DRAFT_v0_74.md)
+then repairs the canonical “maximal invariance group” target. Every finite
+observation map has a tautological maximal group that arbitrarily permutes
+points within its fibers; that group need not be a licensed reward symmetry.
+The exact target is equality between the observation-fiber partition and the
+orbit partition of transformations independently licensed by the declared
+decision problem. In a finite deterministic registry, minimum exact access is
+the corresponding non-gauge-pair set-cover problem. This is a formulation
+correction, not behavioral reward identification.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)

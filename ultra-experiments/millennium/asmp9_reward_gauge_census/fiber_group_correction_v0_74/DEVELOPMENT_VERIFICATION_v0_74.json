@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "cyclic_group_order": 3,
+    "full_fiber_group_order": 6,
+    "gauge_split_detected": true,
+    "minimum_exact_query_family": [
+      0,
+      1
+    ],
+    "minimum_family_has_two_queries": true,
+    "same_orbits_despite_different_group_orders": true,
+    "underidentification_detected": true
+  },
+  "claim_boundary": "Finite set-theoretic orbit/fiber and set-cover correction only; no behavioral reward identification or ASMP-9 resolution.",
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_74.md": "13e39c23817eae2b777bc2f23da393ca7d40f4a685a7abce82f99ff2f6961e17",
+    "THEOREM_DRAFT_v0_74.md": "b1ef4b8513ae3b088f815eb24379936e4990a6df65ea571434f4c111f84d65ef",
+    "fiber_group.py": "afb10be78f42481cb191ba68bfdf95b256f5ee74b4a581b1b4d3832bff789777",
+    "test_fiber_group.py": "f7662261340da06c36788d7c03e5b136b3c497466c500818ff7eacaddfb1eb92"
+  },
+  "status": "development_only_not_preregistered"
+}
