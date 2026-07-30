@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.69 development](RESOLUTION_OBLIGATION_MATRIX_v0_69.md)
+[resolution-obligation matrix after v0.70 development](RESOLUTION_OBLIGATION_MATRIX_v0_70.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -25,6 +25,16 @@ quotient is identified exactly when `K=G`. The package also separates visible
 gauge leakage from substantive information and records the sharp deterministic
 condition number. These are classical linear-algebra ingredients assembled as
 an ASMP-9 admission theorem, not a physical validation or resolution.
+
+The unregistered
+[Gaussian quotient v0.70](gaussian_quotient_v0_70/THEOREM_DRAFT_v0_70.md)
+then supplies one matching stochastic-complexity cell. For known-variance
+independent Gaussian query rows, information positive-definiteness is the
+exact access condition, `trace(M^-1)` is the exact minimax quotient MSE, and
+`c^T M^-1 c` is the exact MSE for a declared policy margin. The exact integer
+fixture separates parameter-optimal from decision-directed allocation and
+audits fixed mean bias. This remains classical Gaussian linear-model and
+optimal-design theory, not behavioral validation or resolution.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
