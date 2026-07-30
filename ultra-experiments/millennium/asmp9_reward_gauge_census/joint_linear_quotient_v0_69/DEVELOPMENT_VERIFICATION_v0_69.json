@@ -1,0 +1,315 @@
+{
+  "checks": {
+    "forced_quotient_can_still_identify": true,
+    "full_common_mode_identifies": true,
+    "non_gauge_confounder_is_exhibited": true,
+    "partial_common_mode_fails": true,
+    "visible_gauge_is_detected": true
+  },
+  "claim_boundary": "Exact finite linear-algebra consolidation. No behavioral model, physical reward gauge, nonlinear channel, finite-sample minimax rate, human-value claim, or ASMP-9 resolution is established.",
+  "fixture_count": 4,
+  "fixtures": {
+    "full_common_mode": {
+      "exact": {
+        "effective_map": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "2"
+          ]
+        ],
+        "effective_output_dimension": 2,
+        "effective_rank": 2,
+        "exactly_identifies_reward_quotient": true,
+        "gauge_rank": 1,
+        "gauge_respecting_before_forced_quotient": true,
+        "identified_estimand_basis": [
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "joint_kernel_basis": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "joint_kernel_dimension": 1,
+        "joint_output_nuisance_rank": 1,
+        "measurement_dimension": 3,
+        "non_gauge_witness": null,
+        "physical_nuisance_rank": 1,
+        "reward_dimension": 3,
+        "target_quotient_dimension": 2,
+        "visible_gauge_rank": 0
+      },
+      "stability": {
+        "exactly_identifies_reward_quotient": true,
+        "sharp_inverse_lipschitz_constant": 1.0000000000000004,
+        "sigma_min": 0.9999999999999996,
+        "singular_values": [
+          1.0000000000000002,
+          0.9999999999999996
+        ]
+      }
+    },
+    "gauge_leaking_but_complete": {
+      "exact": {
+        "effective_map": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "effective_output_dimension": 3,
+        "effective_rank": 3,
+        "exactly_identifies_reward_quotient": true,
+        "gauge_rank": 1,
+        "gauge_respecting_before_forced_quotient": false,
+        "identified_estimand_basis": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "joint_kernel_basis": [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "1"
+          ]
+        ],
+        "joint_kernel_dimension": 1,
+        "joint_output_nuisance_rank": 2,
+        "measurement_dimension": 5,
+        "non_gauge_witness": null,
+        "physical_nuisance_rank": 1,
+        "reward_dimension": 4,
+        "target_quotient_dimension": 3,
+        "visible_gauge_rank": 1
+      },
+      "stability": {
+        "exactly_identifies_reward_quotient": true,
+        "sharp_inverse_lipschitz_constant": 1.0,
+        "sigma_min": 1.0,
+        "singular_values": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "non_gauge_confounded": {
+      "exact": {
+        "effective_map": [
+          [
+            "1",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "1",
+            "1"
+          ]
+        ],
+        "effective_output_dimension": 2,
+        "effective_rank": 2,
+        "exactly_identifies_reward_quotient": false,
+        "gauge_rank": 1,
+        "gauge_respecting_before_forced_quotient": true,
+        "identified_estimand_basis": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "joint_kernel_basis": [
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "joint_kernel_dimension": 2,
+        "joint_output_nuisance_rank": 1,
+        "measurement_dimension": 3,
+        "non_gauge_witness": [
+          [
+            "-1"
+          ],
+          [
+            "-1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "physical_nuisance_rank": 1,
+        "reward_dimension": 4,
+        "target_quotient_dimension": 3,
+        "visible_gauge_rank": 0
+      },
+      "stability": {
+        "exactly_identifies_reward_quotient": false,
+        "sharp_inverse_lipschitz_constant": null,
+        "sigma_min": null,
+        "singular_values": [
+          1.732050807568877,
+          1.0
+        ]
+      }
+    },
+    "partial_common_mode": {
+      "exact": {
+        "effective_map": [
+          [
+            "2",
+            "1"
+          ]
+        ],
+        "effective_output_dimension": 1,
+        "effective_rank": 1,
+        "exactly_identifies_reward_quotient": false,
+        "gauge_rank": 1,
+        "gauge_respecting_before_forced_quotient": true,
+        "identified_estimand_basis": [
+          [
+            "-1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "joint_kernel_basis": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "joint_kernel_dimension": 2,
+        "joint_output_nuisance_rank": 1,
+        "measurement_dimension": 2,
+        "non_gauge_witness": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "physical_nuisance_rank": 1,
+        "reward_dimension": 3,
+        "target_quotient_dimension": 2,
+        "visible_gauge_rank": 0
+      },
+      "stability": {
+        "exactly_identifies_reward_quotient": false,
+        "sharp_inverse_lipschitz_constant": null,
+        "sigma_min": null,
+        "singular_values": [
+          0.9999999999999999
+        ]
+      }
+    }
+  },
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_69.md": "e7e5d5910e1f84c5732b58a2527ba58089b11655656f45007b99a4d99e36c425",
+    "THEOREM_DRAFT_v0_69.md": "4434fb6bb702570bb90f71bb37e7054fa7e69dedd437de837a1b50d154cb2722",
+    "joint_linear_quotient.py": "7196847b430fac2843467fb9f4c8193d1e7e07a1df2ded6296c1997d84130687",
+    "test_joint_linear_quotient.py": "d05eec2903e8953c3fdf1f539f335c0e7de8f230603b7331607f3c04f9b000a8"
+  },
+  "status": "development_only_not_preregistered",
+  "theorem_object": "finite-dimensional representative-insensitive linear quotient"
+}
