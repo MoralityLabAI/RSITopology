@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.76 development](RESOLUTION_OBLIGATION_MATRIX_v0_76.md)
+[resolution-obligation matrix after v0.77 development](RESOLUTION_OBLIGATION_MATRIX_v0_77.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -106,6 +106,16 @@ A finer observation can recover the target while leaking its representative,
 whereas an invariant observation can still be too coarse. Exact partition
 equality requires both. This clarifies the stricter v0.69/v0.74 interfaces
 without changing their algebra.
+
+The unregistered
+[finite stochastic target interface v0.77](stochastic_target_interface_v0_77/THEOREM_DRAFT_v0_77.md)
+then replaces deterministic observation labels with known finite iid laws. A
+positive cross-target Hellinger gap activates an explicit maximum-likelihood
+error bound, while an exact rational binary control distinguishes that
+sufficient bound from sharp Bayes complexity. A per-sample TV
+misspecification stress shows that nominal discrimination can improve while
+the worst-case accumulated model-error allowance grows. This remains a finite
+known-law theorem, not behavioral validation.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)

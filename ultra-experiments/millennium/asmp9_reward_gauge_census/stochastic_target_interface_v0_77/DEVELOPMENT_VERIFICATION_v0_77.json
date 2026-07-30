@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "exact_bayes_threshold_is_three": true,
+    "h2_is_two_fifths": true,
+    "hellinger_bound_threshold_is_six": true,
+    "population_recoverable": true,
+    "registered_bound_passes": true,
+    "tv_stress_breaks_bound": true
+  },
+  "claim_boundary": "Finite known iid laws, a conservative Hellinger union bound, one exact binary Bayes control, and a worst-case TV stress only; no behavioral law validation or ASMP-9 resolution.",
+  "fixture": {
+    "alpha": "1/20",
+    "exact_bayes_error_at_minimum": "7/250",
+    "exact_bayes_minimum_samples": 3,
+    "hellinger_bound_at_minimum": "729/15625",
+    "hellinger_bound_minimum_samples": 6,
+    "iid_tv_penalty": "5985019985005999/1000000000000000000",
+    "left": [
+      "9/10",
+      "1/10"
+    ],
+    "minimum_cross_target_h2": "2/5",
+    "per_sample_tv_stress": "1/1000",
+    "population_status": "exact_stochastic_target_interface",
+    "right": [
+      "1/10",
+      "9/10"
+    ],
+    "robustified_bound": "52641019985005999/1000000000000000000"
+  },
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_77.md": "4fa58bff8d2ab4e7d46ea51abb6c4b46c497c518c26550eb360e4ab140ff15d4",
+    "THEOREM_DRAFT_v0_77.md": "748e2a9de47ffbfe19ae7ee9dfdd130ae4a01d0c7aed51ecaec800f1dd48e5e5",
+    "stochastic_target.py": "6029fc051244ed9b4c17b6e7b1088882b383bd68d76db1bed0adc270d26fae8c",
+    "test_stochastic_target.py": "3321615e4e0c711b39ecb245860436dcb6f25368420703ed92b113fba3d1d377"
+  },
+  "status": "development_only_not_preregistered"
+}
