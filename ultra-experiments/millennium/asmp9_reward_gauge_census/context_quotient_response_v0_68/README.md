@@ -1,5 +1,25 @@
 # ASMP-9 context-quotient response development v0.68
 
+## Construction status
+
+The amended v0.68.1 construction split has now run to completion. All 528
+registered records were recovered, the release reproduces from the imported
+record table, and the frozen decision is:
+
+> `local_and_global_confirmation_authorized`
+
+See:
+
+- [`CONSTRUCTION_RESULT_v0_68_1.md`](CONSTRUCTION_RESULT_v0_68_1.md);
+- [`RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md`](RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md);
+- [`CONSTRUCTION_RELEASE_VERIFICATION_v0_68_1.json`](CONSTRUCTION_RELEASE_VERIFICATION_v0_68_1.json);
+- [`release_manifest_v0_68_1_construction.json`](release_manifest_v0_68_1_construction.json); and
+- [`PRIME_POD_CLOSEOUT_ASMP9_V0681_20260729.json`](PRIME_POD_CLOSEOUT_ASMP9_V0681_20260729.json).
+
+The untouched confirmation split has not been run. Construction authorization
+is not confirmation and is not evidence of value or reward-orbit
+identification.
+
 ## Current prereveal amendment
 
 The executable design is now governed by the additive
@@ -60,9 +80,12 @@ python `
   ultra-experiments/millennium/asmp9_reward_gauge_census/context_quotient_response_v0_68/validate_scientific_design.py `
   --output `
   ultra-experiments/millennium/asmp9_reward_gauge_census/context_quotient_response_v0_68/SCIENTIFIC_DESIGN_VALIDATION_v0_68.json
+
+python `
+  ultra-experiments/millennium/asmp9_reward_gauge_census/context_quotient_response_v0_68/verify_construction_release_v0681.py
 ```
 
-This is development, not a preregistration. It authorizes no GPU run and does
-not reopen the v0.67 confirmation split. The scientific design is frozen, but
-execution remains unregistered until the runner, environment, exact job list,
-and prereveal validator are bound.
+The initial files in this directory record development and prereveal freezing.
+The construction execution is now registered and complete under v0.68.1. Only
+a separately registered execution of the untouched confirmation split can
+advance the empirical claim.
