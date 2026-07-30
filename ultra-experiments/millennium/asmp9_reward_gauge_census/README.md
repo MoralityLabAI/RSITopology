@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.77 development](RESOLUTION_OBLIGATION_MATRIX_v0_77.md)
+[resolution-obligation matrix after v0.78 development](RESOLUTION_OBLIGATION_MATRIX_v0_78.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -116,6 +116,16 @@ sufficient bound from sharp Bayes complexity. A per-sample TV
 misspecification stress shows that nominal discrimination can improve while
 the worst-case accumulated model-error allowance grows. This remains a finite
 known-law theorem, not behavioral validation.
+
+The unregistered
+[finite access Set Cover reduction v0.78](access_set_cover_v0_78/THEOREM_DRAFT_v0_78.md)
+then establishes a general computational obstruction. One mandatory anchor
+query plus one binary split query per candidate set gives
+`minimum access = minimum cover + 1`. Consequently arbitrary finite
+deterministic exact access design is NP-hard, and any efficient successor must
+register structural restrictions, approximation, or parameterized width. This
+is worst-case lookup-registry hardness, not evidence about a natural
+behavioral channel.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
