@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.70 development](RESOLUTION_OBLIGATION_MATRIX_v0_70.md)
+[resolution-obligation matrix after the v0.70.1 coordinate correction](RESOLUTION_OBLIGATION_MATRIX_v0_70_1.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -35,6 +35,15 @@ exact access condition, `trace(M^-1)` is the exact minimax quotient MSE, and
 fixture separates parameter-optimal from decision-directed allocation and
 audits fixed mean bias. This remains classical Gaussian linear-model and
 optimal-design theory, not behavioral validation or resolution.
+
+The additive
+[v0.70.1 coordinate-fidelity amendment](gaussian_quotient_v0_70_1/AMENDMENT_v0_70_1.md)
+then records that `trace(M^-1)` is meaningful only for the Euclidean metric in
+the registered quotient coordinates. The coordinate-free formula transports
+the scientific loss as `W'=T^-T W T^-1`, preserving
+`trace(W M^-1)`; policy covectors transform similarly. Exact controls show
+that silently changing the metric changes the integer-optimal allocation.
+The v0.70 files remain unchanged.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
