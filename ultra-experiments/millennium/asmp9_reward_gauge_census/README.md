@@ -15,6 +15,13 @@ The current
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
+The
+[v0.79 resolution synthesis](RESOLUTION_SYNTHESIS_v0_79.md)
+consolidates the v0.69-v0.78 theorem stack and freezes a program stop rule:
+the next admissible branch must consume physical response evidence or close a
+named broad replacement-object gap. Its
+[next physical gate](NEXT_PHYSICAL_GATE_v0_79.md)
+is a protocol design only and has not been registered or run.
 
 The unregistered
 [joint linear quotient v0.69](joint_linear_quotient_v0_69/THEOREM_DRAFT_v0_69.md)
