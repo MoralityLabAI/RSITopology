@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "Controlled finite-MDP softmax demonstrator only; registration precedes outcomes and does not constitute ASMP-9 evidence.",
+  "environment": {
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]"
+  },
+  "experiment_id": "ASMP9-PHYSICAL-TARGET-INTERFACE-v0.80",
+  "source_hashes": {
+    "PROTOCOL_v0_80.md": "86d2e38c2b0cdefe99804b4c490e22834efec97e9a590d35897b15562dd3e582",
+    "config_v0_80.json": "0cf09689c960278c8689b5d6c275e8f606a7e2095d2e316d52f6f9cbbba6b6ec",
+    "execute_registered.py": "b68da37ee80db089fa79e211a9895b433217aa53667e39981060fd45ee9258c2",
+    "physical_target.py": "b72b185b37af523c7eb3a626b1334266eeff928d02343246871c92edb5d49dae",
+    "run_experiment.py": "2af73ef1054283c11acf27f9dd6168a0523eca90ca9855654befe9b826f3a27c",
+    "test_physical_target.py": "dce8b2d3e248919e9253352b8121c9740f67d7e924fcfc9a1cee59747b145bfa"
+  },
+  "status": "registered_prereveal_no_outcomes"
+}

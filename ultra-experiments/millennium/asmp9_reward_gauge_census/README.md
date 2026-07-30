@@ -22,6 +22,14 @@ the next admissible branch must consume physical response evidence or close a
 named broad replacement-object gap. Its
 [next physical gate](NEXT_PHYSICAL_GATE_v0_79.md)
 is a protocol design only and has not been registered or run.
+The controlled
+[v0.80 prereveal package](physical_target_interface_v0_80/PROTOCOL_v0_80.md)
+now instantiates that gate with an exact finite-MDP softmax demonstrator,
+matched-norm shaping/non-gauge arms, construction/holdout contexts, deterministic
+seed derivation, and byte-identical replay. Its
+[registration](physical_target_interface_v0_80/registration_v0_80.json)
+is sealed before outcomes; the registered configuration has not yet been
+executed.
 
 The unregistered
 [joint linear quotient v0.69](joint_linear_quotient_v0_69/THEOREM_DRAFT_v0_69.md)
