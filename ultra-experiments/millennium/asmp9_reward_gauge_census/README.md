@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after the v0.70.1 coordinate correction](RESOLUTION_OBLIGATION_MATRIX_v0_70_1.md)
+[resolution-obligation matrix after v0.71 development](RESOLUTION_OBLIGATION_MATRIX_v0_71.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -44,6 +44,15 @@ the scientific loss as `W'=T^-T W T^-1`, preserving
 `trace(W M^-1)`; policy covectors transform similarly. Exact controls show
 that silently changing the metric changes the integer-optimal allocation.
 The v0.70 files remain unchanged.
+
+The unregistered
+[history replacement v0.71](history_replacement_v0_71/THEOREM_DRAFT_v0_71.md)
+then addresses one branch of the no-coherent-scalar obligation. A complete
+bounded path valuation factors through a stationary Markov edge reward exactly
+when it lies in the path-incidence column space. Failure emits an exact
+left-kernel witness and constructs the minimal future-increment history
+quotient that replays the valuation. This is classical weighted-automata and
+reward-machine machinery specialized as an ASMP-9 object-selection rule.
 
 The prospectively verified
 [finite stochastic-choice trichotomy](stochastic_choice_trichotomy_v0_54/RESULT_v0_54.md)
