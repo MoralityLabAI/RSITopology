@@ -20,6 +20,16 @@ The untouched confirmation split has not been run. Construction authorization
 is not confirmation and is not evidence of value or reward-orbit
 identification.
 
+## Local confirmation execution amendment
+
+The additive
+[`LOCAL_EXECUTION_RESOURCE_AMENDMENT_v0_68_2.md`](LOCAL_EXECUTION_RESOURCE_AMENDMENT_v0_68_2.md)
+binds a Windows Job Object and RTX 3050 resource envelope for the untouched
+confirmation split. It changes no model bytes, score jobs, endpoints,
+thresholds, gates, or decisions. The associated wrapper has passed a
+no-outcome two-phase smoke test; confirmation remains unread until an exact
+registration and authorization hash are committed separately.
+
 ## Current prereveal amendment
 
 The executable design is now governed by the additive
