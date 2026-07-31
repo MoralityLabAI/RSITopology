@@ -1,0 +1,60 @@
+{
+  "check_count": 9,
+  "checks": {
+    "canonical_quantifier_markers": true,
+    "claim_boundary_preserves_scope": true,
+    "independent_parity_tv": true,
+    "independent_refutation_dimension": true,
+    "producer_gates": true,
+    "resource_scaling": true,
+    "rich_protocol_constant_gap": true,
+    "rich_protocol_pair_counts": true,
+    "schema_and_experiment": true
+  },
+  "direct_tv_rows": [
+    {
+      "depth": 2,
+      "direct_tv": "9/25",
+      "matches_artifact": true
+    },
+    {
+      "depth": 3,
+      "direct_tv": "27/125",
+      "matches_artifact": true
+    },
+    {
+      "depth": 4,
+      "direct_tv": "81/625",
+      "matches_artifact": true
+    },
+    {
+      "depth": 5,
+      "direct_tv": "243/3125",
+      "matches_artifact": true
+    },
+    {
+      "depth": 6,
+      "direct_tv": "729/15625",
+      "matches_artifact": true
+    },
+    {
+      "depth": 7,
+      "direct_tv": "2187/78125",
+      "matches_artifact": true
+    },
+    {
+      "depth": 8,
+      "direct_tv": "6561/390625",
+      "matches_artifact": true
+    },
+    {
+      "depth": 9,
+      "direct_tv": "19683/1953125",
+      "matches_artifact": true
+    }
+  ],
+  "method": "Independent JSON consumer with separate channel enumeration, subset-completion refutation search, protocol pair counting, and canonical-text checks; does not import the producer.",
+  "passed": true,
+  "schema_version": "asmp3_protocol_quantifier_verification_v0_7",
+  "verified_experiment_id": "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7"
+}
