@@ -8,3 +8,6 @@
 *.npz binary
 *.npy binary
 *.safetensors binary
+
+# Preserve the registered Windows telemetry receipt byte-for-byte.
+ultra-experiments/millennium/asmp9_reward_gauge_census/context_quotient_response_v0_68/artifacts_v0_68_2_1_confirmation/telemetry_v0_68_2_1.csv binary
