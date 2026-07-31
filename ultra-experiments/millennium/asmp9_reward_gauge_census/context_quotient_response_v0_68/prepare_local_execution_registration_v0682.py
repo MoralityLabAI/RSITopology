@@ -86,6 +86,12 @@ def prepare(args: argparse.Namespace) -> dict:
         "execution_amendment_text": (
             HERE / "LOCAL_EXECUTION_RESOURCE_AMENDMENT_v0_68_2.md"
         ),
+        "registration_repair": (
+            HERE / "local_execution_registration_repair_v0_68_2_1.json"
+        ),
+        "registration_repair_text": (
+            HERE / "LOCAL_EXECUTION_REGISTRATION_REPAIR_v0_68_2_1.md"
+        ),
     }
     validation_path = args.prereveal_validation.resolve()
     validation = load(validation_path)
@@ -108,6 +114,15 @@ def prepare(args: argparse.Namespace) -> dict:
         target = HERE / filename
         if amendment[key]["sha256"] != sha256(target):
             raise ValueError(f"execution amendment does not bind {filename}")
+    repair = load(paths["registration_repair"])
+    if repair["status"] != "frozen_prereveal_registration_only":
+        raise ValueError("local registration repair is not frozen")
+    if repair["base_execution_amendment"]["sha256"] != sha256(
+        paths["execution_amendment"]
+    ):
+        raise ValueError("registration repair does not bind the amendment")
+    if repair.get("outcomes_read") is not False:
+        raise ValueError("registration repair records outcome access")
 
     decision_path = args.construction_decision.resolve()
     decision = load(decision_path)
@@ -136,6 +151,9 @@ def prepare(args: argparse.Namespace) -> dict:
         HERE / "test_local_execution_contract_v0682.py",
         paths["execution_amendment"],
         paths["execution_amendment_text"],
+        paths["registration_repair"],
+        paths["registration_repair_text"],
+        HERE / "LOCAL_EXECUTION_ABORT_v0_68_2.md",
         HERE.parent / "physical_dynamic_bridge_v0_67" / "bridge_core.py",
     ]
     model_paths = [
@@ -159,7 +177,7 @@ def prepare(args: argparse.Namespace) -> dict:
         "schema_version": (
             "asmp9_context_quotient_execution_registration_v0_68_1"
         ),
-        "execution_contract_version": "local_windows_v0_68_2",
+        "execution_contract_version": "local_windows_v0_68_2_1",
         "status": "registered_prereveal",
         "phase": "confirmation",
         "run_id": "asmp9-context-quotient-v0682-confirmation-local3050",
@@ -173,12 +191,18 @@ def prepare(args: argparse.Namespace) -> dict:
         "execution_resource_amendment_text": artifact(
             paths["execution_amendment_text"]
         ),
+        "execution_registration_repair": artifact(
+            paths["registration_repair"]
+        ),
+        "execution_registration_repair_text": artifact(
+            paths["registration_repair_text"]
+        ),
         "prereveal_validation": artifact(validation_path),
         "source_files": [artifact(path) for path in source_paths],
         "model_path": str(model_path),
         "model_files": [artifact(path) for path in model_paths],
-        "environment": {
-            **validation["environment"],
+        "environment": validation["environment"],
+        "host_environment": {
             "os": platform.platform(),
             "gpu": gpu,
         },
@@ -192,7 +216,10 @@ def prepare(args: argparse.Namespace) -> dict:
             "records": 528,
             "exact_repeats": 2,
         },
-        "resource_contract": amendment["resource_contract"],
+        "resource_contract": {
+            **amendment["resource_contract"],
+            **repair["repair"]["resource_contract_patch"],
+        },
         "construction_decision": artifact(decision_path),
         "global_lane_authorized": bool(
             decision.get("global_confirmation_authorized", False)

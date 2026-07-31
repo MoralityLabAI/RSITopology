@@ -37,6 +37,19 @@ def test_local_amendment_is_execution_only() -> None:
     assert value["scientific_amendment"]["modified"] is False
 
 
+def test_registration_repair_is_schema_only() -> None:
+    value = json.loads(
+        (
+            HERE / "local_execution_registration_repair_v0_68_2_1.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert value["status"] == "frozen_prereveal_registration_only"
+    assert value["aborted_attempt"]["records_completed"] == 0
+    assert value["aborted_attempt"]["peak_gpu_delta_mb"] == 0
+    assert value["repair"]["resource_contract_patch"] == {"swap_bytes": 0}
+    assert value["outcomes_read"] is False
+
+
 def test_registration_builder_binds_local_sources_and_holdout() -> None:
     source = (
         HERE / "prepare_local_execution_registration_v0682.py"
@@ -44,11 +57,14 @@ def test_registration_builder_binds_local_sources_and_holdout() -> None:
     assert 'design.score_jobs(manifest, "confirmation")' in source
     assert "if len(jobs) != 528" in source
     assert "execution_resource_amendment" in source
+    assert "execution_registration_repair" in source
     assert "construction_decision" in source
     assert "global_lane_authorized" in source
     assert "outcomes_read" in source
     assert "run_windows_guarded_v0_68_2.ps1" in source
     assert "post_run_windows_v0_68_2.ps1" in source
+    assert '"environment": validation["environment"]' in source
+    assert '"host_environment"' in source
 
 
 def test_hash_helper_streams_large_model_files(tmp_path: Path) -> None:

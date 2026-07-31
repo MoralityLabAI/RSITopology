@@ -439,7 +439,10 @@ if (
   $registration.status -ne "registered_prereveal" -or
   $registration.outcomes_read -ne $false -or
   $registration.phase -ne "confirmation" -or
-  $registration.execution_contract_version -ne "local_windows_v0_68_2"
+  $registration.execution_contract_version -notin @(
+    "local_windows_v0_68_2",
+    "local_windows_v0_68_2_1"
+  )
 ) {
   throw "registration is not the local prereveal confirmation"
 }
