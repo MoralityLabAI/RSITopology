@@ -1,5 +1,24 @@
 # ASMP-9 context-quotient response development v0.68
 
+## Local confirmation v0.68.2.1
+
+The untouched confirmation split has now been scored on the registered
+Qwen3.5-0.8B-Instruct bytes using the bounded local RTX 3050 contract. The
+frozen analyzer and an independent implementation both return
+`confirmation_local_and_global_established` on all 528 records. The Windows
+wrapper separately returns `cleanup_invalid` because system page-file usage
+rose by 3 MB against the registered zero-increase rule.
+
+See:
+
+- [`CONFIRMATION_RESULT_v0_68_2_1.md`](CONFIRMATION_RESULT_v0_68_2_1.md);
+- [`release_manifest_v0_68_2_1_confirmation.json`](release_manifest_v0_68_2_1_confirmation.json);
+  and
+- [`artifacts_v0_68_2_1_confirmation/`](artifacts_v0_68_2_1_confirmation/).
+
+The scientific and execution-envelope readouts are intentionally reported
+separately. This was inference only; no larger Qwen was trained.
+
 ## Construction status
 
 The amended v0.68.1 construction split has now run to completion. All 528
