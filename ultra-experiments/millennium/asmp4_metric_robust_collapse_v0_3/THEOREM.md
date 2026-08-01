@@ -84,13 +84,16 @@ C_T(L) <= P_T(L).
 ~~~
 
 This is the usual Kraft lower bound on worst-case length. There is no universal
-ordering between B_T and P_T: a three-leaf star has B_T=log2(3)<2=P_T, while
-the skew tree in Section 4 has P_T<B_T.
+ordering between B_T and P_T: the sequential-rounding tree and skew tree in
+Section 4 give strict opposite three-way orderings.
 
 More generally, let J_T be any port cost on realized prefix trees satisfying:
 
-1. symbol-relabel invariance;
-2. deterministic fixed prefixes have zero information cost;
+1. nonnegativity and symbol-relabel invariance;
+2. deterministic-prefix invariance: inserting or deleting a fixed
+   plant-independent prefix `p_d` obeys
+   `J_(T+d)(p_d L)=J_T(L)`, or the absolute difference is `o(T)` uniformly
+   over admitted trees for the asymptotic version;
 3. the read and write ports use the same cost convention; and
 4. a tree admitted on one port may be copied onto the other port.
 
@@ -176,8 +179,12 @@ closure(R_K^J) =
   [h_J(K_0,K), infinity) x [h_J(K_0,K), infinity).
 ~~~
 
+If `h_J=infinity`, the displayed right-hand side means the empty region in the
+finite-rate plane.
+
 **Proof.** Apply upstream normal form to codes approaching h_w^J. The
-transcript-tree isomorphisms and relabel invariance give
+transcript-tree isomorphisms, deterministic-prefix invariance, and relabel
+invariance give
 h_r^J <= h_w^J. Apply downstream normal form to codes approaching h_r^J to
 obtain h_w^J <= h_r^J. Hence the two coordinate infima coincide.
 
@@ -187,9 +194,11 @@ coordinate infimum and apply the normal form that copies that cheaper tree onto
 both ports. The resulting diagonal code has both rates below h_J+epsilon.
 Upward closure and epsilon closure prove the region formula. QED.
 
-At finite horizon, replace limsup rates by J_T costs. If the finite minima are
-attained, the same argument gives an exact diagonal quadrant. If only infima
-exist, it gives the closure.
+At finite horizon, replace limsup rates by J_T costs. Under exact
+deterministic-prefix invariance, if the finite minima are attained, the same
+argument gives an exact diagonal quadrant. If only infima exist, it gives the
+closure. The uniform `o(T)` alternative is sufficient only for the asymptotic
+rate statement.
 
 The entropy is coordinate invariant. A bijective state-coordinate conjugacy
 that transports the plant, safe set, observation relation, and uncertainty
@@ -281,11 +290,31 @@ The metric harness checks this exact identity through d=12. The bilateral
 normal forms preserve the complete tree, so Theorem 3 applies to each metric
 without asserting that their scalar entropy values coincide.
 
+The opposite strict ordering already occurs at depth two. Let the root have a
+`heavy` child with three leaf symbols and a `light` child with one deterministic
+leaf. There are four leaves, the worst branch product is `2*3=6`, and the
+minimax prefix recurrence rounds first in the three-leaf child and then again
+at the root:
+
+~~~text
+C_T = 2,
+B_T = log2(6),
+P_T = ceil(log2(2^2+2^0)) = 3,
+
+C_T < B_T < P_T.
+~~~
+
+Together the skew and sequential-rounding trees prove that neither `B_T` nor
+`P_T` universally dominates the other. The harness and independent verifier
+recompute both strict orderings.
+
 ## 5. Boundaries
 
-The collapse can fail when a normal-form copy is not admissible. Examples are:
+The collapse can fail when a normal-form copy is not admissible or when the
+ports rank the same admitted trees by genuinely different cost functionals.
+Examples are:
 
-- different cost functions or units on the two ports;
+- different cost or risk functionals on the two ports;
 - fixed port-specific peak alphabets or symbol syntax;
 - computational restrictions that prevent upstream or downstream simulation;
 - actuator-local or controller-local plant information;
@@ -316,6 +345,15 @@ Both witnesses keep the plant controls fixed. The strict gaps come from
 registered computation/syntax restrictions, exactly the conditions absent
 from the canonical arbitrary-computation architecture.
 
+A positive conversion of units by itself is not a structural exception. If
+the charges are `a_r J_T+o(T)` and `a_w J_T+o(T)` for positive constants and
+one shared base cost, the region remains the rectangle with thresholds
+`a_r h_J` and `a_w h_J`. The v0.4 heterogeneous-cost successor proves this and
+gives an exact synchronous prefix game where expected read length versus
+worst-case write length instead produces a nonrectangular frontier. Thus the
+load-bearing distinction is a change in how candidate trees are ordered, not
+the numerical units printed on the axes.
+
 ## 6. Prior-art boundary
 
 Tomar, Rungger, and Zamani define a history-dependent successor-symbol rate and
@@ -331,7 +369,10 @@ owners and cannot be reduced by moving one deterministic serial computation:
 
 - https://arxiv.org/abs/1409.6037
 
-The new contribution here is the bilateral normal-form argument for a single
-serial sensor-controller-actuator chain. It explains exactly why the ASMP-4
-region collapses under symmetric port costs while true networked or
-side-informed architectures can retain nonrectangular rate tradeoffs.
+The repository-specific contribution here is the bilateral normal-form
+diagnosis of the frozen ASMP-4 single serial chain. The individual ingredients
+are classical data-processing, functional relay, and component-simulation
+ideas; no claim of literature-level novelty is made without external review.
+The diagnosis explains why this particular symmetric achieved-transcript
+region collapses while true networked or side-informed architectures can
+retain nonrectangular rate tradeoffs.

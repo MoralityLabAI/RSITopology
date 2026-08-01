@@ -10,6 +10,8 @@ from metric_harness import (
     exhaustive_binary_language_census,
     one_sided_normal_form_gap_report,
     plan_index_language,
+    prefix_rounding_language,
+    prefix_rounding_separation_report,
     skew_language,
     skew_metric_separation_report,
     transcript_tree_metrics,
@@ -78,6 +80,17 @@ def test_skew_tree_separates_terminal_prefix_and_uniform_branch_costs():
             < metrics["branch_bits"]
         )
     assert skew_metric_separation_report()["pass"] is True
+
+
+def test_sequential_prefix_rounding_gives_the_opposite_three_metric_order():
+    metrics = transcript_tree_metrics(prefix_rounding_language())
+    assert metrics["language_bits"] == 2
+    assert metrics["branch_bits"] == math.log2(6)
+    assert metrics["prefix_worst_bits"] == 3
+    assert (
+        metrics["language_bits"] < metrics["branch_bits"] < metrics["prefix_worst_bits"]
+    )
+    assert prefix_rounding_separation_report()["pass"] is True
 
 
 def test_comb_asymptotics_and_verification_gates():

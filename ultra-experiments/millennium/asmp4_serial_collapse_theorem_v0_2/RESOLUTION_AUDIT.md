@@ -84,3 +84,8 @@ a future noisy-channel, reliability-constrained, computationally bounded,
 private-channel-state, deadline-incompatible, or fixed peak-alphabet variant.
 Such a variant needs new rates and a new registry entry rather than being read
 into the current formulas.
+
+The v0.4 heterogeneous-port-cost boundary package further distinguishes a
+harmless positive change of units, which only rescales the rectangular
+thresholds, from genuinely different expected/worst cost semantics, which can
+rank safe transcript trees differently and yield a nonrectangular frontier.

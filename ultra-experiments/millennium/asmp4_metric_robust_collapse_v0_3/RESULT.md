@@ -5,8 +5,9 @@
 The ASMP-4 serial collapse is robust to the rate-definition ambiguity found in
 v0.2.
 
-For every shared port cost J that depends only on the realized transcript tree
-and is invariant under symbol relabeling:
+For every shared nonnegative port cost J that depends only on the realized
+transcript tree and is invariant under symbol relabeling and deterministic
+fixed-prefix insertion/deletion:
 
 ~~~text
 h_read^J(K_0,K) = h_write^J(K_0,K) = h_J(K_0,K),
@@ -65,6 +66,14 @@ invariance feedback entropy without a branching-equivalence assumption.
 - A skew tree verifies the strict three-way separation
   log2(2^d+2) < d+1 < d+log2(3) between terminal, prefix-free, and uniform
   branching costs through depth 12.
+- A four-leaf sequential-rounding tree verifies the opposite strict order
+  `2 < log2(6) < 3` between terminal, branching, and minimax-prefix costs.
 
 The proof remains nonempirical. The census guards definitions and boundary
 examples.
+
+The v0.4 successor sharpens one phrase in this boundary: positive
+port-specific unit conversions do not break collapse. They only rescale the
+two thresholds. A genuinely different tree ordering can break rectangularity;
+the successor gives an exact no-lag prefix-code frontier for expected read
+length versus worst-case write length.

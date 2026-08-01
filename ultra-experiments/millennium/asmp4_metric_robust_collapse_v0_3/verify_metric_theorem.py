@@ -152,6 +152,27 @@ def independent_skew_check(max_binary_depth: int = 10) -> dict[str, object]:
     }
 
 
+def independent_prefix_rounding_check() -> dict[str, object]:
+    language = (
+        ("heavy", "0"),
+        ("heavy", "1"),
+        ("heavy", "2"),
+        ("light", "fixed"),
+    )
+    language_bits = math.log2(len(language))
+    branch_bits = math.log2(independent_branch_product(language))
+    prefix_bits = independent_prefix_cost(language)
+    return {
+        "language_bits": language_bits,
+        "branch_bits": branch_bits,
+        "prefix_worst_bits": prefix_bits,
+        "pass": language_bits == 2
+        and branch_bits == math.log2(6)
+        and prefix_bits == 3
+        and language_bits < branch_bits < prefix_bits,
+    }
+
+
 def theorem_sentinels() -> dict[str, bool]:
     theorem = (HERE / "THEOREM.md").read_text(encoding="utf-8")
     result = (HERE / "RESULT.md").read_text(encoding="utf-8")
@@ -164,6 +185,11 @@ def theorem_sentinels() -> dict[str, bool]:
         ),
         "tree_domination": "C_T(L) <= B_T(L)" in theorem,
         "prefix_lower_bound": "C_T(L) <= P_T(L)" in theorem,
+        "fixed_prefix_invariance": (
+            "deterministic-prefix invariance" in theorem
+            and "J_(T+d)(p_d L)=J_T(L)" in theorem
+            and "difference is `o(T)` uniformly" in theorem
+        ),
         "upstream_normal_form": "**Theorem 1 (upstream normal form).**" in theorem,
         "downstream_normal_form": "**Theorem 2 (downstream normal form).**" in theorem,
         "full_region": ("[h_J(K_0,K), infinity) x [h_J(K_0,K), infinity)" in theorem),
@@ -180,8 +206,11 @@ def theorem_sentinels() -> dict[str, bool]:
             "T+1 terminal words but branch product 2^T" in theorem
             and "must not be identified" in result
         ),
-        "boundary_scope": "different cost functions or units on the two ports"
-        in theorem,
+        "boundary_scope": (
+            "different cost or risk functionals on the two ports" in theorem
+            and "positive conversion of units by itself is not a structural exception"
+            in theorem
+        ),
         "strict_gap_witnesses": (
             "Forced raw sensor, read above write." in theorem
             and "Fixed direct-action decoder, write above read." in theorem
@@ -189,6 +218,11 @@ def theorem_sentinels() -> dict[str, bool]:
         "fixed_delay_evidence": "all 96 combinations" in result,
         "three_metric_separation": (
             "C_T < P_T < B_T" in theorem and "pairwise numerically distinct" in theorem
+        ),
+        "reverse_three_metric_separation": (
+            "C_T < B_T < P_T" in theorem
+            and "ceil(log2(2^2+2^0)) = 3" in theorem
+            and "neither `B_T` nor" in theorem
         ),
     }
 
@@ -221,6 +255,7 @@ def verify() -> dict[str, object]:
     comb = independent_comb_check()
     delays = independent_delay_check()
     skew = independent_skew_check()
+    prefix_rounding = independent_prefix_rounding_check()
     sentinels = theorem_sentinels()
     registry = registry_check()
     checks = {
@@ -229,8 +264,9 @@ def verify() -> dict[str, object]:
         "I2_independent_fixed_delay_replay": delays["pass"]
         and len(delays["rows"]) == 45,
         "I3_independent_prefix_metric_separation": skew["pass"],
-        "I4_theorem_structure": all(sentinels.values()),
-        "I5_registry_obligations": all(registry.values()),
+        "I4_independent_prefix_rounding_separation": prefix_rounding["pass"],
+        "I5_theorem_structure": all(sentinels.values()),
+        "I6_registry_obligations": all(registry.values()),
     }
     return {
         "schema_version": "asmp4_metric_robust_independent_verification_v0_3",
@@ -238,6 +274,7 @@ def verify() -> dict[str, object]:
         "comb": comb,
         "delays": delays,
         "skew": skew,
+        "prefix_rounding": prefix_rounding,
         "theorem_sentinels": sentinels,
         "registry": registry,
         "checks": checks,

@@ -94,6 +94,19 @@ def skew_language(binary_depth: int) -> Language:
     return normalize_language(words)
 
 
+def prefix_rounding_language() -> Language:
+    """Four leaves whose sequential prefix coding incurs one rounding bit."""
+
+    return normalize_language(
+        (
+            ("heavy", "0"),
+            ("heavy", "1"),
+            ("heavy", "2"),
+            ("light", "fixed"),
+        )
+    )
+
+
 def relabel(language: Language, mapping: dict[str, str]) -> Language:
     return normalize_language(
         tuple(mapping[symbol] for symbol in word) for word in language
@@ -317,6 +330,26 @@ def skew_metric_separation_report(max_binary_depth: int = 12) -> dict[str, Any]:
     }
 
 
+def prefix_rounding_separation_report() -> dict[str, Any]:
+    """Witness the opposite strict ordering C < B < P."""
+
+    metrics = transcript_tree_metrics(prefix_rounding_language())
+    return {
+        **metrics,
+        "expected_language_bits": 2,
+        "expected_branch_bits": math.log2(6),
+        "expected_prefix_worst_bits": 3,
+        "strict_reverse_order": metrics["language_bits"]
+        < metrics["branch_bits"]
+        < metrics["prefix_worst_bits"],
+        "pass": metrics["language_count"] == 4
+        and metrics["branch_product"] == 6
+        and metrics["prefix_worst_bits"] == 3
+        and metrics["language_bits"] == 2
+        and metrics["branch_bits"] == math.log2(6),
+    }
+
+
 def verification_payload() -> dict[str, Any]:
     census = exhaustive_binary_language_census()
     comb = comb_metric_gap()
@@ -324,6 +357,7 @@ def verification_payload() -> dict[str, Any]:
     delays = bilateral_fixed_fifo_delay_report()
     one_sided = one_sided_normal_form_gap_report()
     skew = skew_metric_separation_report()
+    prefix_rounding = prefix_rounding_separation_report()
     gates = {
         "M0_all_binary_languages_through_horizon_four": census["pass"]
         and census["checked_languages"] == 65809,
@@ -342,6 +376,8 @@ def verification_payload() -> dict[str, Any]:
         "M6_bilateral_fixed_fifo_delay_replay": delays["pass"]
         and len(delays["rows"]) == 96,
         "M7_terminal_prefix_and_branch_metrics_are_distinct": skew["pass"],
+        "M8_prefix_rounding_reverses_branch_prefix_order": prefix_rounding["pass"]
+        and prefix_rounding["strict_reverse_order"],
     }
     return {
         "schema_version": "asmp4_metric_robust_collapse_verification_v0_3",
@@ -351,6 +387,7 @@ def verification_payload() -> dict[str, Any]:
         "delays": delays,
         "one_sided": one_sided,
         "skew": skew,
+        "prefix_rounding": prefix_rounding,
         "gates": gates,
         "pass": all(gates.values()),
     }

@@ -277,6 +277,9 @@ closure(R_K) =
     [h_perp(K_0,K),infinity) x [h_perp(K_0,K),infinity).
 ```
 
+If `h_perp=+infinity`, the displayed right-hand side is interpreted as the
+empty region in the finite-rate plane.
+
 **Converse.** Every infinite safe serial code induces an infinite safe policy,
 and its deterministic actuator maps each write word to one control word.
 Thus `h_perp(K_0,K)<=r_w(C)`. Lemma 1 gives `r_w(C)<=r_r(C)`, so both
