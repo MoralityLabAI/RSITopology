@@ -1,5 +1,13 @@
 # ASMP-4 serial-collapse theorem v0.2
 
+## Successor
+
+The
+[asmp4 metric-robust v0.3 successor](../asmp4_metric_robust_collapse_v0_3/RESULT.md)
+distinguishes whole-language growth from causal prefix branching and
+strengthens the proof with upstream and downstream normal forms. Use it for the
+current metric-robust claim.
+
 This package develops a negative resolution of the canonical two-independent-
 entropy conjecture and a positive characterization of the architecture that is
 actually written down.

@@ -3,11 +3,14 @@
 ## Successor
 
 The stop condition in this audit has been acted on. The
-[`asmp4_serial_collapse_theorem_v0_2`](../asmp4_serial_collapse_theorem_v0_2/RESULT.md)
-successor replaces the incompatible nominal-grid interpretation with a
-relay-normal-form theorem, a complete diagonal-quadrant region, exact
-finite-horizon formulas, and assumption-boundary counterexamples. This file is
-retained as the diagnostic that motivated that repair.
+[metric-robust v0.3 theorem](../asmp4_metric_robust_collapse_v0_3/RESULT.md)
+is the current successor. It strengthens the
+[v0.2 serial theorem](../asmp4_serial_collapse_theorem_v0_2/RESULT.md) with
+bilateral normal forms and distinguishes whole-language growth from causal
+prefix branching. Together they replace the incompatible nominal-grid
+interpretation with a complete diagonal-quadrant region, exact finite-horizon
+formulas, and assumption-boundary counterexamples. This file is retained as
+the diagnostic that motivated that repair.
 
 ## Decision
 

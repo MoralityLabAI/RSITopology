@@ -1,5 +1,13 @@
 # ASMP-4 serial-collapse result v0.2
 
+## Successor
+
+The
+[asmp4 metric-robust v0.3 successor](../asmp4_metric_robust_collapse_v0_3/RESULT.md)
+corrects the distinction between terminal transcript growth and
+history-dependent causal branching while proving the same diagonal region for
+either shared port metric.
+
 ## Result
 
 The canonical deterministic no-side-channel architecture does not have two
@@ -64,7 +72,7 @@ coordinate covering counts and recovers the sum of positive log-eigenvalues.
 
 ## Verification
 
-The independent finite harness passes all eleven gates:
+The independent finite harness passes all twelve gates:
 
 - 162 finite plant/observation pairs;
 - 648 exact read/write budget cells;
@@ -73,7 +81,9 @@ The independent finite harness passes all eleven gates:
 - partial-observation and unseen-disturbance kill cases;
 - actuator-side-information collapse;
 - a full-versus-restricted actuator-authority control;
-- exact fixed-FIFO-delay relay replay through three ticks of delay; and
+- exact fixed-FIFO-delay relay replay through three ticks of delay;
+- an exact comb game with T+1 terminal words but 2^T worst-path branch
+  product; and
 - stable, unstable-margin, nonhyperbolic, and diagonal-box formulas.
 
 The proof and boundaries are in `THEOREM.md`; the requirement-by-requirement

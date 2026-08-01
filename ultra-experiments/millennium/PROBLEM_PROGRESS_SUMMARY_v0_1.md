@@ -17,8 +17,11 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
 - **Historical registered execution attempts ending unavailable before a
   scientific result:** 1 (`ASMP-5` v0.1); its versioned v0.2 repair now has a
   completed bounded result.
-- **Resolved at the full frozen Millennium-problem scope:** 0 of 7.
-- **Closed theorem or exact-enumeration seeds inside an addressed problem:** 6.
+- **Self-contained candidate mathematical resolutions at the full frozen
+  Millennium-problem scope:** 1 of 7 (`ASMP-4`); independent external review
+  remains pending.
+- **Externally peer-reviewed resolutions:** 0 of 7.
+- **Closed theorem or exact-enumeration seeds inside an addressed problem:** 7.
 - **Completed real-model falsification experiments inside an addressed problem:** 1.
 - **Problems remaining only at proposal, review, or precursor-tool stage:** 0
   of 7.
@@ -32,7 +35,10 @@ subsequently completed the same finite grid. “Completed bounded result” requ
 than a registration or run attempt. Related portfolio work is not counted merely
 because it resembles part of a problem. “Resolved” requires the complete
 two-sided resolution standard in the canonical document; no current experiment
-or bounded theorem meets that standard.
+or bounded theorem meets that standard. The ASMP-4 serial-collapse theorem is
+the first package to claim every frozen mathematical obligation; this summary
+labels it a candidate resolution until independent review challenges or
+confirms the proof.
 
 ## The seven problems
 
@@ -41,7 +47,7 @@ or bounded theorem meets that standard.
 | ASMP-1 | Mechanistic Identifiability Modulo Functional Symmetry | When do measurements and interventions identify a real causal mechanism, after quotienting permitted symmetries? | **Candidate negative resolution of the uniform representation-independent program; external scope review pending.** The representation-boundary theorem proves uniform undecidability for arbitrary computable-real analytic encodings without a certified gap, decidability for rational semialgebraic encodings, and a complete constructive linear-gauge lane. |
 | ASMP-2 | Shift-Spanning Safety Certification | When do finitely many evaluations justify a uniform claim over a declared family of deployment shifts? | **Formally addressed, unresolved.** The [registered crossed-shift result](asmp2_crossed_shift/RESULT.md) validates an exact forced counterexample shape. The [active-design census](asmp2_active_design_census/RESULT_v0_2_2.md) exhaustively rejects the registered myopic minimax selector as an efficient multi-step policy in one finite polynomial class. Neither is a uniform shift-spanning certification theorem. |
 | ASMP-3 | The Weak-Verifier Soundness Frontier | Which superhuman work can a weaker, noisy semantic verifier judge soundly? | **Exact protocol-quantifier fork; authoritative scope review pending.** The [v0.3 `Refute`-interface result](asmp3_resolution_boundary_v0_3/NEGATIVE_RESOLUTION_CANDIDATE_v0_3.md) proves the parity-channel obstruction conditionally. The [v0.7 complete-game successor](asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md) closes the game-specification gap and certifies both readings: frozen semantic encodings give optimal gap `(3/5)^floor(log2 n) -> 0`, while existential protocol encodings admit an `O(log n)` vector-disagreement protocol with one semantic query and constant gap `3/5`. The remaining question is which encoding quantifier v0.1 intended; another parity grid cannot decide that normative scope issue. |
-| ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Formally addressed, unresolved.** The [registered two-port result](asmp4_two_port_game/RESULT.md) gives an exact 108-cell phase map for one finite rational architecture and separates read- and write-deficient controls. It does not establish necessary and sufficient confinement conditions in the canonical scope. |
+| ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Candidate negative resolution with positive replacement characterization; external review pending.** The [metric-robust bilateral theorem](asmp4_metric_robust_collapse_v0_3/RESULT.md) proves a diagonal-quadrant region for every shared relabel-invariant transcript-tree cost. It corrects the distinction between terminal-language growth and causal branching while preserving the serial two-port collapse. The [v0.2 theorem](asmp4_serial_collapse_theorem_v0_2/RESULT.md) supplies exact finite corrections; the earlier [108-cell game](asmp4_two_port_game/RESULT.md) remains a frozen memoryless-grammar result. |
 | ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; repaired bounded result complete.** The [v0.1 verifier-drift census](asmp5_verifier_drift/RESULT.md) correctly stopped at its frozen wall-time cap. The separately registered [v0.2 repair](asmp5_verifier_drift/v0_2_repair/RESULT_v0_2.md) exhaustively finds depth-two unsafe paths when a successor checker becomes active, while a frozen-root refinement blocks them and retains an eight-step, nine-state safe chain. This is one finite counterexample/control pair, not an open-ended composition theorem. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Formally addressed, unresolved.** The [registered finite semantic-collusion frontier](asmp6_semantic_collusion_frontier/RESULT_v0_1.md) exactly separates message-averaged from per-message covertness over a four-symbol registry and measures the effect of a charged active auditor. It is neither an asymptotic capacity theorem nor evidence of language-model collusion. |
 | ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry. The [excluded-band successor](asmp7_attestability_frontier/RESULT_v0_2_1.md) computes 40 exact nonzero-gap audit minima and calibrates how cost grows as the policy boundary narrows. Both assume trusted-meter coverage and establish neither real-model nor transformation-universal attestability. |

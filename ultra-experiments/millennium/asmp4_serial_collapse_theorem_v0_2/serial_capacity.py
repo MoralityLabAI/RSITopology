@@ -335,6 +335,113 @@ def restricted_authority_plant() -> FinitePlant:
     )
 
 
+def one_shot_event_plant() -> FinitePlant:
+    """Full-observation game whose safe control language is a binary comb."""
+
+    states = ("WAIT", "EVENT", "DONE", "BAD")
+    actions = ("0", "1")
+    disturbances = ("WAIT", "EVENT")
+    transitions: dict[tuple[str, str, str], str] = {}
+    for state, action, disturbance in itertools.product(states, actions, disturbances):
+        if state == "WAIT" and action == "0":
+            target = disturbance
+        elif state == "EVENT" and action == "1":
+            target = "DONE"
+        elif state == "DONE" and action == "0":
+            target = "DONE"
+        else:
+            target = "BAD"
+        transitions[(state, action, disturbance)] = target
+    return FinitePlant(
+        states=states,
+        initial_states=frozenset(("WAIT", "EVENT")),
+        safe_states=frozenset(("WAIT", "EVENT", "DONE")),
+        actions=actions,
+        disturbances=disturbances,
+        observations={state: state for state in states},
+        transitions=transitions,
+    )
+
+
+def comb_transcript_language(horizon: int) -> tuple[tuple[str, ...], ...]:
+    """Words with at most one event symbol, followed by deterministic zeros."""
+
+    if horizon < 0:
+        raise ValueError("horizon must be nonnegative")
+    words = [("0",) * horizon]
+    words.extend(
+        ("0",) * event_time + ("1",) + ("0",) * (horizon - event_time - 1)
+        for event_time in range(horizon)
+    )
+    return tuple(sorted(words))
+
+
+def transcript_tree_metrics(
+    words: Sequence[Sequence[str]],
+) -> dict[str, int | float | bool]:
+    """Compare terminal-language and worst-path causal-branching costs."""
+
+    normalized = tuple(tuple(word) for word in words)
+    if not normalized:
+        raise ValueError("the transcript language must be nonempty")
+    if len(set(normalized)) != len(normalized):
+        raise ValueError("the transcript language must not contain duplicates")
+    horizons = {len(word) for word in normalized}
+    if len(horizons) != 1:
+        raise ValueError("all transcript words must have one common horizon")
+    horizon = horizons.pop()
+    worst_product = 1
+    for word in normalized:
+        product = 1
+        for event in range(horizon):
+            prefix = word[:event]
+            successors = {
+                candidate[event]
+                for candidate in normalized
+                if candidate[:event] == prefix
+            }
+            product *= len(successors)
+        worst_product = max(worst_product, product)
+    language_count = len(normalized)
+    return {
+        "horizon": horizon,
+        "language_count": language_count,
+        "branching_product": worst_product,
+        "language_bits": math.log2(language_count),
+        "branching_bits": math.log2(worst_product),
+        "branching_dominates_language": worst_product >= language_count,
+    }
+
+
+def causal_metric_gap_report(max_horizon: int = 8) -> dict[str, Any]:
+    """Exact comb-game separation of language growth and causal branching."""
+
+    if max_horizon < 1:
+        raise ValueError("max_horizon must be positive")
+    plant = one_shot_event_plant()
+    rows = []
+    for horizon in range(1, max_horizon + 1):
+        minimum = minimum_action_transcripts(plant, horizon)
+        metrics = transcript_tree_metrics(comb_transcript_language(horizon))
+        rows.append(
+            {
+                "horizon": horizon,
+                "solver_minimum": minimum["minimum_action_transcript_count"],
+                **metrics,
+            }
+        )
+    return {
+        "rows": rows,
+        "pass": all(
+            row["solver_minimum"] == row["horizon"] + 1
+            and row["language_count"] == row["horizon"] + 1
+            and row["branching_product"] == 2 ** row["horizon"]
+            and row["branching_dominates_language"]
+            for row in rows
+        ),
+    }
+
+
 def scalar_exact_transcript_count(
     expansion: Fraction | str | int,
     initial_half_width: Fraction | str | int,
@@ -512,6 +619,7 @@ def verification_payload() -> dict[str, Any]:
     census = exhaustive_one_step_census()
     boundaries = boundary_fixture_report()
     delay_relay = fixed_fifo_delay_relay_report()
+    causal_metric_gap = causal_metric_gap_report()
     diagonal_counts = [
         {
             "horizon": horizon,
@@ -562,6 +670,7 @@ def verification_payload() -> dict[str, Any]:
         "G9_authority_control": boundaries["full_authority_one_step_feasible"]
         and not boundaries["restricted_authority_one_step_feasible"],
         "G10_fixed_fifo_delay_relay": delay_relay["pass"],
+        "G11_causal_metric_gap": causal_metric_gap["pass"],
     }
     return {
         "schema_version": "asmp4_serial_collapse_verification_v0_2",
@@ -574,6 +683,7 @@ def verification_payload() -> dict[str, Any]:
         "census": census,
         "boundary_fixtures": boundaries,
         "fixed_fifo_delay_relay": delay_relay,
+        "causal_metric_gap": causal_metric_gap,
         "diagonal_box_counts": diagonal_counts,
         "gates": gates,
         "pass": all(gates.values()),

@@ -8,15 +8,19 @@ from pathlib import Path
 from serial_capacity import (
     actuator_mode_side_information_replay,
     boundary_fixture_report,
+    causal_metric_gap_report,
+    comb_transcript_language,
     diagonal_box_exact_transcript_count,
     exhaustive_one_step_census,
     fixed_fifo_delay_relay_report,
     minimum_action_transcripts,
     mode_switching_plant,
+    one_shot_event_plant,
     restricted_authority_plant,
     scalar_exact_rate,
     scalar_exact_transcript_count,
     shear_exact_transcript_count,
+    transcript_tree_metrics,
     uncertainty_timing_plant,
     verification_payload,
 )
@@ -116,6 +120,18 @@ def test_fixed_fifo_delay_preserves_relay_languages_after_fixed_warmup():
     assert report["pass"] is True
     assert len(report["rows"]) == 24
     assert all(row["languages_match"] for row in report["rows"])
+
+
+def test_comb_game_separates_terminal_language_and_causal_branching_rates():
+    plant = one_shot_event_plant()
+    for horizon in range(1, 7):
+        result = minimum_action_transcripts(plant, horizon)
+        metrics = transcript_tree_metrics(comb_transcript_language(horizon))
+        assert result["minimum_action_transcript_count"] == horizon + 1
+        assert metrics["language_count"] == horizon + 1
+        assert metrics["branching_product"] == 2**horizon
+        assert metrics["branching_dominates_language"] is True
+    assert causal_metric_gap_report()["pass"] is True
 
 
 def test_boundary_report_and_all_verification_gates_pass():

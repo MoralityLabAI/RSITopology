@@ -54,7 +54,8 @@ The exhaustive finite harness does not establish the theorem. It checks:
 - partial-observation and uncertainty-timing kill cases;
 - side-information collapse;
 - full-versus-restricted actuator authority;
-- deadline-shifted relay equivalence for fixed FIFO delays; and
+- deadline-shifted relay equivalence for fixed FIFO delays;
+- terminal-language versus causal-branching separation in the exact comb game; and
 - scalar coasting, stable zero-rate, diagonal positive-exponent, and
   nonhyperbolic polynomial-growth formulas.
 

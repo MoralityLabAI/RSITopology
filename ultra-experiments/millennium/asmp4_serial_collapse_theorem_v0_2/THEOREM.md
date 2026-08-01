@@ -9,6 +9,12 @@ deterministic noiseless serial architecture stated in ASMP-4.
 The proof, not the finite harness, carries the claim. The harness checks finite
 instances, exact corrections, and assumption boundaries.
 
+**Metric clarification.** The
+[asmp4 metric-robust v0.3 successor](../asmp4_metric_robust_collapse_v0_3/RESULT.md)
+proves the same diagonal collapse for both this document's literal
+whole-language cardinality rate and the history-dependent causal branching
+rate. Those scalar rates need not agree for uncertain systems.
+
 ## 1. Registered architecture
 
 Let the uncertain plant be
@@ -185,10 +191,12 @@ nu_T(K_0,K) =
 ```
 
 with `nu_T=+infinity` if no such finite-language safe code exists.
-Equivalently, it is the minimum number of realized causal control words needed
-by an observation-based safe policy. For full-state uncertain systems this is
-the operational control-word quantity represented by invariant-cover/control-
-tree formulations of invariance feedback entropy.
+Equivalently, it is the minimum number of realized complete control words
+needed by an observation-based safe policy. This terminal-language quantity is
+not, in general, the history-dependent worst-path branching quantity used by
+invariance feedback entropy for uncertain systems. The v0.3 successor gives an
+exact comb safety game where their asymptotic rates are zero and one,
+respectively, and proves that the two-port collapse holds for either metric.
 
 More explicitly, let `Pi_T^safe` be the set of safe causal policies respecting
 the registered observation-to-control timing. In the zero-delay notation,
@@ -506,10 +514,13 @@ covering growth and is charged automatically.
 
 Invariance entropy and invariance feedback entropy already characterize a
 single coder-controller channel and supply invariant-cover/control-tree
-variational quantities. This result does not rename that theory. Its ASMP-4
-contribution is the serial relay theorem: under the problem's own
-achieved-transcript and no-side-channel conventions, inserting a deterministic
-controller-to-actuator link creates no second independent entropy.
+variational quantities. Their uncertain-system transmission rate charges
+history-dependent successor branching, not merely growth in the number of
+complete realized words. This result therefore does not rename that theory.
+Its ASMP-4 contribution is the serial relay theorem under the problem's own
+achieved-transcript formula. The v0.3 bilateral extension shows that inserting
+a deterministic controller-to-actuator link creates no second independent
+entropy under either shared metric.
 
 Relevant primary sources:
 
