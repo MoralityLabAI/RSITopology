@@ -1,0 +1,93 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-BOUNDED-SOUNDNESS-FRONTIER-v2.16",
+  "file_count": 21,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_correlated_path_risk_v2_13/CORRELATED_PATH_RISK_THEOREM_v2_13.md": {
+      "bytes": 5140,
+      "sha256": "1A1B4D127658E2B219C4E87B28B61769492AD9DB9883CCA8A8A498E69543D623"
+    },
+    "../asmp3_correlated_path_risk_v2_13/RELEASE_MANIFEST_v2_13.json": {
+      "bytes": 4320,
+      "sha256": "0B3B3F33F2E91F6D0045094D74BF1672AE546F74BC02337165847BEB6FEA4914"
+    },
+    "../asmp3_correlated_path_risk_v2_13/artifacts/correlated_path_risk_v2_13.json": {
+      "bytes": 43783,
+      "sha256": "158B18B549F725D150012593C264F7C3DE9B346C6BB06877A75EEEA09FE05887"
+    },
+    "../asmp3_correlated_path_risk_v2_13/artifacts/correlated_path_risk_verification_v2_13.json": {
+      "bytes": 1053,
+      "sha256": "F89E9C90EE46565157B64753BCCC9F13D9DCAD9EA7A850F95E161D635D4E0BD9"
+    },
+    "../asmp3_interactive_covering_frontier_v2_15/INTERACTIVE_COVERING_THEOREM_v2_15.md": {
+      "bytes": 5982,
+      "sha256": "A959ECD9C0C986287598724E67EFAC56BBD575009E6846EB603A0E206D867C36"
+    },
+    "../asmp3_interactive_covering_frontier_v2_15/RELEASE_MANIFEST_v2_15.json": {
+      "bytes": 4618,
+      "sha256": "1766784413D1D6A3A6D17952CC10175F2B89CCADF39CAF2E8644B53635DC84E6"
+    },
+    "../asmp3_interactive_covering_frontier_v2_15/artifacts/interactive_covering_frontier_v2_15.json": {
+      "bytes": 10190137,
+      "sha256": "265677150E2D17EB8ADA19A31D3EA54C0BB1FF426EA78D117576AB4939D345E6"
+    },
+    "../asmp3_interactive_covering_frontier_v2_15/artifacts/interactive_covering_frontier_verification_v2_15.json": {
+      "bytes": 934,
+      "sha256": "DC17B23BD5E75C331A901D074470EBCD528EDBAECD28056C94CE62A65C5884F6"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "BOUNDED_SOUNDNESS_THEOREM_v2_16.md": {
+      "bytes": 5429,
+      "sha256": "808617F6D6651D978C6F74D3E5FADF92F0598B1CE03C3E451A9EAFF8D3C80670"
+    },
+    "COMPLETION_AUDIT_v2_16.md": {
+      "bytes": 1260,
+      "sha256": "AEE6915510439613AE6830E00B0E5394E973546F20080840367074E82941B78B"
+    },
+    "README.md": {
+      "bytes": 533,
+      "sha256": "4CC279BD735F557568842CD79E7C9C03078EAF2B7907908A3D0332F1820D27FC"
+    },
+    "artifacts/bounded_soundness_frontier_v2_16.json": {
+      "bytes": 21104488,
+      "sha256": "9BC95D8E1B7113DEEB6F01AFA37F86B05CE17AD4AB5D44463C889BF5FA77D20D"
+    },
+    "artifacts/bounded_soundness_frontier_verification_v2_16.json": {
+      "bytes": 911,
+      "sha256": "BA078EE47A5998038C7618A73D846269C0FB1ECF9DBEA5876BCF911AEA7B21CB"
+    },
+    "bounded_soundness_frontier.py": {
+      "bytes": 15713,
+      "sha256": "D5D99C35099A7B1F101002AA5EA062BC819EEB0F7D2005AE94EB29CFAA1287DF"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2931,
+      "sha256": "9943662A934A2663BC134D8C07E7D5E3934817364FE39062CFA115BD2B6E0AC7"
+    },
+    "run_bounded_soundness_frontier.py": {
+      "bytes": 478,
+      "sha256": "AE79C7092825247CCB5731C15C7950AFF744825B5209E2716114D02DBF908064"
+    },
+    "test_bounded_soundness_frontier.py": {
+      "bytes": 3094,
+      "sha256": "F6051E63B60464EA313B64FA651D9BF6D7D25B0FDF5DA2AE3F9D87D1AA934A04"
+    },
+    "verify_bounded_soundness_frontier.py": {
+      "bytes": 12614,
+      "sha256": "DD740E5E41864A29F21FB0B9A669038EE686DB0BF657E60AFFB44D1C45856300"
+    }
+  },
+  "release_status": "exact_public_coin_interactive_marker_frontier_with_bounded_soundness",
+  "schema_version": "asmp3_bounded_soundness_frontier_release_v2_16"
+}
