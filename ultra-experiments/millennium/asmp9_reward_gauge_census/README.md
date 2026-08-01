@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.81](RESOLUTION_OBLIGATION_MATRIX_v0_81.md)
+[resolution-obligation matrix after v0.82](RESOLUTION_OBLIGATION_MATRIX_v0_82.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -45,6 +45,18 @@ missed R0 (`0.1854`), while the structured decoder reached `0.0665`; the M0
 bound passed narrowly at `0.04503`. This is a controlled constructive
 sufficiency example, not evidence that natural systems expose calibrated
 intervention offsets or that ASMP-9 is resolved.
+
+The preregistered
+[v0.82 out-of-family transport test](out_of_family_transport_v0_82/RESULT_v0_82.md)
+then carried the sealed v0.68 construction calibration into twelve behavior
+families absent from that registry. All twelve families retained a live
+content-over-label response and 11/12 scenario means remained inside the
+frozen max-residual envelope, but the exact global gate failed: only 21/24
+target cells intersected the narrow construction coefficient band. The
+[independent audit](out_of_family_transport_v0_82/AUDIT_v0_82.md) reproduced
+the negative decision. The result supports local response structure while
+rejecting one global context-independent amplitude; it is not value or reward
+identification and does not resolve ASMP-9.
 
 The unregistered
 [joint linear quotient v0.69](joint_linear_quotient_v0_69/THEOREM_DRAFT_v0_69.md)

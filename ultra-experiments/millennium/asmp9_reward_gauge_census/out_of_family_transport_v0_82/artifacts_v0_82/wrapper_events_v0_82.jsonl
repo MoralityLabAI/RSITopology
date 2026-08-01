@@ -1,0 +1,6 @@
+{"ts_utc":"2026-08-01T16:01:45.3380314Z","event":"wrapper_start","attempt_id":"20260801T160142Z-22576","baseline_temperature_c":77,"authorization_sha256":"adb131f0016a49330fe77a38d3b63d32a9a8acd23a766b7770735ad65d370f58","baseline_gpu_mb":0,"registration_sha256":"9d77e777f020f0e4c696afb1cb15569fd6613dbb256107c988a6ae8aac06417a","baseline_page_file_mb":92}
+{"ts_utc":"2026-08-01T16:01:48.2027078Z","event":"phase_start","phase":"runner","pid":22932}
+{"ts_utc":"2026-08-01T16:08:27.5715298Z","event":"phase_finish","phase":"runner","status":"completed","abort_reason":null,"exit_code":0}
+{"ts_utc":"2026-08-01T16:08:27.6446913Z","event":"phase_start","phase":"analysis","pid":4880}
+{"ts_utc":"2026-08-01T16:08:42.9045198Z","event":"phase_finish","phase":"analysis","status":"completed","abort_reason":null,"exit_code":0}
+{"ts_utc":"2026-08-01T16:08:47.8211451Z","event":"wrapper_finish","status":"cleanup_invalid","cleanup_valid":false}
