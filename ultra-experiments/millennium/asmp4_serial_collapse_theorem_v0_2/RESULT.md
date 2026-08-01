@@ -1,5 +1,10 @@
 # ASMP-4 serial-collapse result v0.2
 
+**Successor scope correction.** The v0.6 registration fork preserves this
+theorem for arbitrary-computation serial classes but proves a different exact
+region when the sensor is registered as a forced raw transducer. Computation
+closure must therefore be an explicit premise of the canonical claim.
+
 ## Successor
 
 The

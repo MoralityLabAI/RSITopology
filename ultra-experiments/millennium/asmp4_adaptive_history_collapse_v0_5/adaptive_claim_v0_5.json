@@ -1,0 +1,87 @@
+{
+  "schema_version": "asmp4_adaptive_history_claim_v0_5",
+  "problem_id": "ASMP-4",
+  "claim": "For the v0.4 four-plan three-tick prefix fixture, public deterministic codebook adaptation to common decoded history has the exact finite Bellman frontier V_n(b)=min_a[r(a)+sum_i p_i V_{n-1}(b-w_i(a))]. It strictly beats fixed scheduling at two blocks with (57/16,5), and a guarded Huffman policy with ceil(log2 n) write slack attains the closed asymptotic rectangle [7/12,infinity) x [2/3,infinity) per tick. More generally, every finite positive i.i.d. plan alphabet has adaptive per-block lower corner (mu,ceil(log2 m)), and bounded causal fast-code processes with negative almost-sure surplus admit the same corner without a uniform one-step MGF.",
+  "common_history_adaptation": true,
+  "private_schedule_information": false,
+  "current_plan_lookahead": false,
+  "iid_plan_law": ["1/2", "1/4", "1/8", "1/8"],
+  "deadline_ticks_per_block": 3,
+  "fixed_public_block_clock": true,
+  "read_cost": "expected binary prefix length",
+  "write_cost": "worst-history binary prefix length",
+  "finite_zero_slack_value": "V_n(2n)=2n",
+  "finite_optimal_policy": "canonical Huffman at positive residual slack; balanced at zero residual slack",
+  "finite_stopping_time_value": "V_n(2n+k)=(7/4)n+(1/4)E[(n-tau_k)_+]",
+  "two_block_witness": ["57/16", 5],
+  "fixed_schedule_value_at_write_five": ["15/4", 5],
+  "slack_sequence": "ceil(log2 n)",
+  "asymptotic_region_per_block": "[7/4,infinity) x [2,infinity)",
+  "asymptotic_region_per_tick": "[7/12,infinity) x [2/3,infinity)",
+  "general_probability_phase": {
+    "strict_skew_condition": "2p_1+p_2>1",
+    "strict_skew_martingale_multiplier": "p_1/(p_3+p_4)",
+    "read_threshold": "min(3-2p_1-p_2,2)",
+    "write_threshold": "2"
+  },
+  "finite_iid_alphabet_theorem": {
+    "plans": "any finite m>=2 with a positive i.i.d. law",
+    "read_threshold": "mu = minimum expected binary prefix length",
+    "write_threshold": "ceil(log2 m)",
+    "adaptive_region_per_block": "[mu,infinity) x [ceil(log2 m),infinity)",
+    "guard_slack": "O(log n)",
+    "normalization": "per source block on an externally registered fixed clock"
+  },
+  "conditional_mgf_guard": {
+    "criterion": "E[lambda^(ell_t-q) | common history] <= 1 uniformly for some lambda>1",
+    "source_scope": "correlated exogenous finite-plan processes",
+    "read_penalty_with_threshold_a": "at most q*n*lambda^(-a)",
+    "write_slack_with_threshold_a": "at most a+L-q-1 when L>q; no guard is needed when L<=q"
+  },
+  "vanishing_maximum_guard": {
+    "criterion": "S_t/t -> h-q < 0 almost surely with bounded code lengths",
+    "threshold": "a_n -> infinity and a_n=o(n)",
+    "read_penalty_rate": "at most q*P(sup_t S_t >= a_n), which tends to zero",
+    "write_slack": "a_n+L-q-1 when L>q",
+    "time_varying_fixture_region_per_block": "[15/8,infinity) x [2,infinity)"
+  },
+  "stationary_ergodic_separator": {
+    "source": "observable renewal-age four-plan Markov source",
+    "conditional_code": "Huffman lengths (1,2,3,3) are optimal at every state",
+    "read_threshold_interval": "(1.8161864422,1.8161864463)",
+    "write_threshold": "2",
+    "uniform_conditional_mgf": false,
+    "adaptive_region_per_block": "[h_*,infinity) x [2,infinity)"
+  },
+  "stationary_predictor_theorem": {
+    "plans": "any finite m>=2",
+    "source": "stationary ergodic full-support plans with a common sufficient predictive state",
+    "read_threshold": "h_H = E[minimum conditional expected binary prefix length]",
+    "write_threshold": "ceil(log2 m)",
+    "adaptive_region_per_block": "[h_H,infinity) x [ceil(log2 m),infinity)",
+    "guard_condition": "ergodic Huffman length mean below the fixed-length threshold; equality uses the fixed code"
+  },
+  "variable_support_theorem": {
+    "source": "finite strongly connected public unifilar predictor with positive enabled-plan laws",
+    "read_threshold": "h = stationary conditional Huffman mean",
+    "write_threshold": "rho = positional prefix-code mean-payoff game value",
+    "adaptive_region_per_block": "[h,infinity) x [rho,infinity)",
+    "exact_fixture_region_per_block": "[11/8,infinity) x [3/2,infinity)",
+    "competing_cycle_fixture_region_per_block": "[13/10,infinity) x [5/3,infinity)",
+    "competing_cycle_bellman_certificate": "rho=5/3, v=(0,-4/3,-2/3), span=4/3"
+  },
+  "supersedes_fixed_schedule_as_architecture_complete": true,
+  "changes_v0_4_finite_frontier": false,
+  "changes_canonical_v0_1_metric": false,
+  "evidence": {
+    "theorem": "THEOREM.md",
+    "result": "RESULT.md",
+    "central_harness": "adaptive_frontier.py",
+    "independent_verifier": "verify_adaptive_theorem.py",
+    "tests": "test_adaptive_frontier.py",
+    "completion_audit": "COMPLETION_AUDIT_v0_5.md",
+    "canonical_scope_audit": "CANONICAL_SCOPE_AUDIT_v0_5.md",
+    "stopping_argument": "STOPPING_ARGUMENT_v0_5.md",
+    "prior_art_audit": "PRIOR_ART_AUDIT_v0_5.md"
+  }
+}

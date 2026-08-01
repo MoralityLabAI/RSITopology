@@ -5,7 +5,12 @@ theorem.
 
 It proves that positive unit changes merely rescale the rectangular thresholds,
 then gives an exact no-side-channel synchronous prefix game where expected read
-length and worst-case write length produce a genuinely nonrectangular frontier.
+length and worst-case write length produce a genuinely nonrectangular one-block
+and fixed-public-schedule frontier.
+
+The v0.5 adaptive-history successor retains these finite claims and shows that
+public deterministic adaptation to common decoded history restores the lower
+corner in the closed asymptotic rate region.
 
 Run the central harness and independent verifier with:
 

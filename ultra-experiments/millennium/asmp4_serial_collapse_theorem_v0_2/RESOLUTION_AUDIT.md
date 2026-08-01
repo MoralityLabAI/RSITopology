@@ -1,11 +1,17 @@
 # ASMP-4 resolution-obligation audit
 
-## Candidate verdict
+**Successor scope correction.** The v0.6 registration fork shows that the
+normal-form computation closure used here is not automatic across the canonical
+phrase “registered causal code.” This audit remains valid inside the arbitrary-
+computation serial class but no longer supports an unconditional full-scope
+candidate verdict.
+
+## Historical candidate verdict
 
 **Mathematical obligations satisfied for the canonical deterministic
 noiseless, achieved-transcript, no-side-channel architecture.**
 
-This is a candidate negative resolution of the premise that two independent
+This was a candidate negative resolution of the premise that two independent
 transversal entropies or a nonrectangular rate tradeoff can arise in that
 architecture. It is simultaneously a positive characterization of the region
 that remains:

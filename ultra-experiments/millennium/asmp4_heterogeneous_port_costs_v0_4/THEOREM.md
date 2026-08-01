@@ -300,7 +300,7 @@ denominator 16. It finds 27 strict-skew laws, two boundary laws, and five
 balanced laws, with no discrepancy. A separate enumeration confirms frontier
 sizes `1,1,1,2` for one through four plans under representative ordered laws.
 
-## 4. Complete repeated-block frontier
+## 4. Complete fixed-schedule repeated-block frontier
 
 Freeze a public plant-independent codebook schedule. Theorem 3 shows that each
 block using any finite binary prefix pair is dominated by either the Huffman
@@ -318,9 +318,10 @@ Consequently every scheduled point satisfies
 4 E[length_r] + max length_w = 10n.
 ~~~
 
-Conversely, identity relays attain both endpoints. Taking all public schedules
-and closure therefore yields the upward closure of the line segment joining
-the two Pareto points. Per physical tick, the full registered frontier is
+Conversely, identity relays attain both endpoints. Taking all fixed public
+schedules and closure therefore yields the upward closure of the line segment
+joining the two Pareto points. Per physical tick, the full registered
+fixed-schedule frontier is
 
 ~~~text
 upward-closure conv{(7/12,1), (2/3,2/3)},
@@ -333,6 +334,13 @@ This region is unequal and nonrectangular. Its coordinatewise lower corner
 `(7/12,2/3)` is excluded. The obstruction is not a missing communication path;
 it is the synchronous factorization deadline combined with two genuinely
 different port-cost orderings.
+
+**Successor scope note.** The v0.5 adaptive-history successor keeps this
+one-block theorem unchanged but allows the next public code pair to depend on
+common decoded history. It gives a strict two-block improvement and restores
+the coordinatewise corner with logarithmic write slack. Thus this section is
+complete for the fixed-schedule quantifier stated at its start, not for every
+history-adaptive repeated-block strategy.
 
 ## 5. Consequence for the canonical ASMP-4 claim
 

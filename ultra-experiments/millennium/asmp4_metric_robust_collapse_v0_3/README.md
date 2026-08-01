@@ -31,4 +31,16 @@ Exact skew and sequential-rounding fixtures give the opposite strict orders
 The [v0.4 heterogeneous-cost successor](../asmp4_heterogeneous_port_costs_v0_4/RESULT.md)
 proves that positive unit conversions only rescale the rectangular thresholds,
 then locates the sharper boundary with an exact expected-read/worst-write
-nonrectangular prefix frontier.
+nonrectangular finite and fixed-schedule prefix frontier. The
+[v0.5 adaptive-history successor](../asmp4_adaptive_history_collapse_v0_5/RESULT.md)
+computes the exact adaptive Bellman frontier and proves that logarithmic
+write slack restores the closed asymptotic rectangle for every finite positive
+i.i.d. plan alphabet.
+
+The [v0.6 registration-fork successor](../asmp4_registration_fork_v0_6/RESULT.md)
+shows that bilateral normal-form closure is not automatic across sensor
+grammars: with all plant-side data fixed, a computed sensor gives corner
+`(1,1)` and a forced raw sensor gives `(2,1)` under the canonical terminal-
+language metric. The theorem here remains exact conditionally; it is not an
+unconditional classification of registration classes that forbid upstream
+computation.

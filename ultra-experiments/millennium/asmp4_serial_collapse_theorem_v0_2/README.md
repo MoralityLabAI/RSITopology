@@ -1,5 +1,10 @@
 # ASMP-4 serial-collapse theorem v0.2
 
+**Successor scope correction.** The v0.6 registration fork preserves the
+serial-collapse theorem conditionally but shows that a forced raw sensor is not
+closed under its upstream computation move. The current canonical status is a
+registration-parameterized partial classification.
+
 ## Successor
 
 The

@@ -1,5 +1,11 @@
 # ASMP-4 completion audit after v0.4
 
+**Post-audit successor note.** v0.5 opened the common-history scheduling
+successor anticipated below. It proves that v0.4's fixed public schedule is
+load-bearing: adaptation beats the line after two blocks and restores the
+lower corner asymptotically. This audit remains the record for the frozen v0.4
+quantifier, not the last word on adaptive repeated blocks.
+
 ## Audit conclusion
 
 The repository now contains a self-contained candidate mathematical resolution

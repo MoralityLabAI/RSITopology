@@ -39,8 +39,8 @@ cost is `E_H(p)=3-2p_1-p_2`. The frontier has two minima exactly when
 minimal because every full three-leaf binary tree has the single length profile
 `(1,2,2)`.
 
-For repeated public three-tick blocks, the complete registered asymptotic
-frontier is
+For repeated three-tick blocks on a fixed plant-independent public codebook
+schedule, the complete registered fixed-schedule asymptotic frontier is
 
 ~~~text
 upward-closure conv{(7/12,1),(2/3,2/3)}.
@@ -50,6 +50,13 @@ The coordinatewise lower corner `(7/12,2/3)` is excluded. This is an exact
 nonrectangular two-port frontier with fixed control authority and no side
 channel, caused by heterogeneous expected/worst cost semantics plus a frozen
 synchronous deadline.
+
+The later v0.5 adaptive-history successor shows that the scheduling qualifier
+is load-bearing. A codebook schedule chosen deterministically from common
+decoded history strictly improves the two-block frontier and attains the
+coordinatewise corner asymptotically with `O(log n)` write slack. The v0.4
+one-block and fixed-schedule claims remain exact; they are not the full
+history-adaptive asymptotic region.
 
 ## Verification
 

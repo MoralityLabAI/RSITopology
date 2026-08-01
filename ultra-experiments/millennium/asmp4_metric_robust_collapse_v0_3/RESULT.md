@@ -74,6 +74,17 @@ examples.
 
 The v0.4 successor sharpens one phrase in this boundary: positive
 port-specific unit conversions do not break collapse. They only rescale the
-two thresholds. A genuinely different tree ordering can break rectangularity;
-the successor gives an exact no-lag prefix-code frontier for expected read
-length versus worst-case write length.
+two thresholds. A genuinely different tree ordering can break the one-block
+and fixed-schedule rectangle; that successor gives an exact no-lag prefix-code
+frontier for expected read length versus worst-case write length. The v0.5
+adaptive-history successor then proves that public common-history block coding
+restores the rectangular asymptotic corner for every finite positive i.i.d.
+plan alphabet under expected-read/worst-write prefix costs.
+
+The v0.6 registration-fork successor makes the normal-form closure qualifier
+decisive for canonical status. On one fixed plant and the canonical terminal-
+language metric, a computed sensor has region `[1,infinity) x [1,infinity)`,
+while a forced injective raw sensor has `[2,infinity) x [1,infinity)`. The
+second class is not upstream-normal-form closed. This preserves the theorem in
+its written scope but prevents treating that scope as automatic for every
+“registered causal code.”

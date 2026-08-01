@@ -6,7 +6,7 @@ This is a non-normative review aid for `ASMP-CANDIDATE-SET-v0.1`. The canonical 
 
 The set contains seven proposed long-horizon mathematical problems for AI safety. They are candidate research problems, not Clay Mathematics Institute prizes, and have not yet received the external field review required for public-prize status.
 
-## Progress accounting as of 2026-07-21
+## Progress accounting as of 2026-08-01
 
 - **Formally addressed under an exact ASMP problem ID and prospectively frozen
   claim boundary:** 7 of 7.
@@ -18,8 +18,9 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
   scientific result:** 1 (`ASMP-5` v0.1); its versioned v0.2 repair now has a
   completed bounded result.
 - **Self-contained candidate mathematical resolutions at the full frozen
-  Millennium-problem scope:** 1 of 7 (`ASMP-4`); independent external review
-  remains pending.
+  Millennium-problem scope:** 0 of 7. The ASMP-4 v0.3 theorem remains exact
+  conditionally, but its v0.6 registration fork shows that its normal-form
+  closure premise is not automatic across the canonical wording.
 - **Externally peer-reviewed resolutions:** 0 of 7.
 - **Closed theorem or exact-enumeration seeds inside an addressed problem:** 7.
 - **Completed real-model falsification experiments inside an addressed problem:** 1.
@@ -35,10 +36,11 @@ subsequently completed the same finite grid. “Completed bounded result” requ
 than a registration or run attempt. Related portfolio work is not counted merely
 because it resembles part of a problem. “Resolved” requires the complete
 two-sided resolution standard in the canonical document; no current experiment
-or bounded theorem meets that standard. The ASMP-4 serial-collapse theorem is
-the first package to claim every frozen mathematical obligation; this summary
-labels it a candidate resolution until independent review challenges or
-confirms the proof.
+or bounded theorem meets that standard. The ASMP-4 serial-collapse package was
+the first to claim every frozen mathematical obligation. Its v0.6 successor
+now gives an exact same-plant registration fork, so this summary classifies the
+package as a conditional structural theorem rather than a full candidate
+resolution.
 
 ## The seven problems
 
@@ -47,10 +49,28 @@ confirms the proof.
 | ASMP-1 | Mechanistic Identifiability Modulo Functional Symmetry | When do measurements and interventions identify a real causal mechanism, after quotienting permitted symmetries? | **Candidate negative resolution of the uniform representation-independent program; external scope review pending.** The representation-boundary theorem proves uniform undecidability for arbitrary computable-real analytic encodings without a certified gap, decidability for rational semialgebraic encodings, and a complete constructive linear-gauge lane. |
 | ASMP-2 | Shift-Spanning Safety Certification | When do finitely many evaluations justify a uniform claim over a declared family of deployment shifts? | **Formally addressed, unresolved.** The [registered crossed-shift result](asmp2_crossed_shift/RESULT.md) validates an exact forced counterexample shape. The [active-design census](asmp2_active_design_census/RESULT_v0_2_2.md) exhaustively rejects the registered myopic minimax selector as an efficient multi-step policy in one finite polynomial class. Neither is a uniform shift-spanning certification theorem. |
 | ASMP-3 | The Weak-Verifier Soundness Frontier | Which superhuman work can a weaker, noisy semantic verifier judge soundly? | **Exact protocol-quantifier fork; authoritative scope review pending.** The [v0.3 `Refute`-interface result](asmp3_resolution_boundary_v0_3/NEGATIVE_RESOLUTION_CANDIDATE_v0_3.md) proves the parity-channel obstruction conditionally. The [v0.7 complete-game successor](asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md) closes the game-specification gap and certifies both readings: frozen semantic encodings give optimal gap `(3/5)^floor(log2 n) -> 0`, while existential protocol encodings admit an `O(log n)` vector-disagreement protocol with one semantic query and constant gap `3/5`. The remaining question is which encoding quantifier v0.1 intended; another parity grid cannot decide that normative scope issue. |
-| ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Candidate negative resolution with positive replacement characterization; external review pending.** The [metric-robust bilateral theorem](asmp4_metric_robust_collapse_v0_3/RESULT.md) proves a diagonal-quadrant region for every shared relabel-invariant transcript-tree cost. The [v0.4 heterogeneous-cost boundary](asmp4_heterogeneous_port_costs_v0_4/RESULT.md) proves that unit rescaling preserves rectangularity but expected-read versus worst-write semantics can yield an exact nonrectangular frontier. The [v0.2 theorem](asmp4_serial_collapse_theorem_v0_2/RESULT.md) supplies exact finite corrections; the earlier [108-cell game](asmp4_two_port_game/RESULT.md) remains a frozen memoryless-grammar result. |
+| ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Partial structural classification with an exact registration fork; canonical specification choice required.** The [metric-robust bilateral theorem](asmp4_metric_robust_collapse_v0_3/RESULT.md) proves a diagonal-quadrant region for every shared relabel-invariant transcript-tree cost when the serial code class is closed under both computation normal forms. The [v0.6 registration-fork theorem](asmp4_registration_fork_v0_6/RESULT.md) holds the plant, evaluator, authority, channels, and canonical metric fixed and proves that a computed sensor has corner `(1,1)` while a forced raw sensor has corner `(2,1)`; only upstream computation closure changes. Its full-reset theorem gives corner `(log2 kappa,log2 m)` for every sensor-partition grammar, while its fixed-transducer constrained-graph theorem gives `(h_f,h_g)` from finite subset-observer spectral radii. Its adaptive constrained-grammar theorem gives an exact finite Bellman recurrence and, by a credited prescribed-initial-state entropy-game reduction, the exact stationary-policy corner `(log2 rho_I,h_g)` for every finite registered graph; a strongly connected, aperiodic fixture has adaptive corner `(log2 phi,log2 phi)` versus best fixed corner `(1,log2 phi)`, and two independent censuses agree on all 120,050 three-mode two-partition cases at horizon four. The golden-mean fixed-transducer fixture has forced/computed corners `(log2 phi,0)` and `(0,0)`. An exact rational realization also has unstable evaluator-normal multiplier `3/2`, zero tangent reset derivative, and unit normal-control derivative. Central and import-independent parsers of the canonical source find all eight relevant architecture clauses but no clause selecting either upstream computation closure, while both exact completions satisfy those explicit obligations. Thus the canonical phrase “registered causal code” must fix its sensor grammar before a broader region is well-posed. The [v0.4 heterogeneous-cost boundary](asmp4_heterogeneous_port_costs_v0_4/RESULT.md) and [v0.5 adaptive-history successor](asmp4_adaptive_history_collapse_v0_5/RESULT.md) remain exact boundary results: v0.5 gives the Bellman recursion and guarded rectangles for stationary ergodic public predictors, including a two-sided rational Shapley certificate. The [v0.2 theorem](asmp4_serial_collapse_theorem_v0_2/RESULT.md) supplies exact finite corrections; the earlier [108-cell game](asmp4_two_port_game/RESULT.md) remains a frozen memoryless-grammar result. |
 | ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; repaired bounded result complete.** The [v0.1 verifier-drift census](asmp5_verifier_drift/RESULT.md) correctly stopped at its frozen wall-time cap. The separately registered [v0.2 repair](asmp5_verifier_drift/v0_2_repair/RESULT_v0_2.md) exhaustively finds depth-two unsafe paths when a successor checker becomes active, while a frozen-root refinement blocks them and retains an eight-step, nine-state safe chain. This is one finite counterexample/control pair, not an open-ended composition theorem. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Formally addressed, unresolved.** The [registered finite semantic-collusion frontier](asmp6_semantic_collusion_frontier/RESULT_v0_1.md) exactly separates message-averaged from per-message covertness over a four-symbol registry and measures the effect of a charged active auditor. It is neither an asymptotic capacity theorem nor evidence of language-model collusion. |
 | ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry. The [excluded-band successor](asmp7_attestability_frontier/RESULT_v0_2_1.md) computes 40 exact nonzero-gap audit minima and calibrates how cost grows as the policy boundary narrows. Both assume trusted-meter coverage and establish neither real-model nor transformation-universal attestability. |
+
+**ASMP-4 v0.6 audit addendum.** The stopping case is now stronger than the
+compact table entry: central and import-independent model builders verify all
+13 extracted canonical obligations for both registry completions; a whole-
+document audit finds 31 uses of `registered` and zero causal-code domain
+definitions, while the companion machine index is explicitly non-normative;
+and the complete four-mode registry lattice classifies all 32,767 nonempty
+registries and verifies all 245,760 inclusion-cover edges. A general
+Stirling/Bell formula then classifies every registry corner for all action-
+fiber shapes and is independently checked on 75 action partitions through
+five modes. On constrained graphs, the complete three-mode adaptive grammar
+lattice adds 372,155 nonempty grammar cases and 960,400 inclusion edges,
+isolating 12 singleton horizon-four-only cases that fail at horizon five. The
+fixed-transducer census further classifies all 60,134 singleton-grammar cases:
+37,430 are infinitely safe, while the others first fail at horizons one through
+five with exact histogram `10642,8406,3110,534,12`; the maximal finite-safe
+prefix has length four. The integrated ASMP-4 chain passes 81 tests and the
+v0.6 payload passes 21 gates.
 
 ## ASMP-1 evidence chain
 
