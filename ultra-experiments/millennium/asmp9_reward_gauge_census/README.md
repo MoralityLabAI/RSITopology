@@ -11,7 +11,7 @@ linear-query result to human preference comparisons, discounted MDPs, or
 behavioral IRL.
 
 The current
-[resolution-obligation matrix after v0.80](RESOLUTION_OBLIGATION_MATRIX_v0_80.md)
+[resolution-obligation matrix after v0.81](RESOLUTION_OBLIGATION_MATRIX_v0_81.md)
 records the full program boundary. The v0.68.1 physical construction result
 is separately audited in its
 [post-construction status](context_quotient_response_v0_68/RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md).
@@ -33,6 +33,18 @@ was sealed before outcomes. The
 is a valid negative: W0 and byte-identical replay passed, but R0 failed because
 the maximum cardinal-margin error `0.2448` exceeded the frozen `0.15`
 threshold. L0 and M0 are formally `not_evaluated`.
+
+The prospectively registered
+[v0.81 structured successor](physical_target_interface_v0_81/PROTOCOL_v0_81.md)
+then preserved the same controlled system, sample count, target semantics, and
+thresholds while replacing the armwise decoder with one joint likelihood over
+the exact known intervention offsets. All six gates passed on fresh rows and
+the [independent audit](physical_target_interface_v0_81/AUDIT_v0_81.md)
+reproduced them. On the same fresh rows, the old armwise comparator still
+missed R0 (`0.1854`), while the structured decoder reached `0.0665`; the M0
+bound passed narrowly at `0.04503`. This is a controlled constructive
+sufficiency example, not evidence that natural systems expose calibrated
+intervention offsets or that ASMP-9 is resolved.
 
 The unregistered
 [joint linear quotient v0.69](joint_linear_quotient_v0_69/THEOREM_DRAFT_v0_69.md)
