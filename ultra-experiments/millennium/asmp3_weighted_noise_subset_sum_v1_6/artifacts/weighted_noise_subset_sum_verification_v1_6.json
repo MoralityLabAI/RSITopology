@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_weighted_language_dp_and_symmetry_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_complete_2729_row_registry_reconstructed": true,
+    "V2_all_languages_scores_states_and_saddles_reconstructed": true,
+    "V3_score_symmetrization_exhaustion_replayed": true,
+    "V4_unit_cost_parent_reduction_exact": true,
+    "V5_equal_size_total_budget_opposite_phase_pair_reconstructed": true,
+    "V6_binary_weight_exponential_obstruction_reconstructed": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates finite positive-integer flip costs under a hard terminal budget. It does not extend the quotient to stochastic, signed, real-valued, or path-observed cost models.",
+  "passed": true,
+  "schema_version": "asmp3_weighted_noise_subset_sum_verification_v1_6"
+}
