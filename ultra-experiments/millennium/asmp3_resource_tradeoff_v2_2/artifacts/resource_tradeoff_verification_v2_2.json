@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_cover_frontier_and_noise_cost_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_433_frontier_rows_reconstructed": true,
+    "V2_lower_bound_and_partition_attainment_exact": true,
+    "V3_small_cover_search_replayed": true,
+    "V4_robust_replication_operating_points_reconstructed": true,
+    "V5_endpoint_and_capacity_frontiers_exact": true,
+    "V6_parent_search_and_noise_contracts_match": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates the one-message deterministic perfect completeness/soundness cover interface. It does not extend the lower bound to interactive, randomized, bounded-error, or adaptive protocols.",
+  "passed": true,
+  "schema_version": "asmp3_resource_tradeoff_verification_v2_2"
+}
