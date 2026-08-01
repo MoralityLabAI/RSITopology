@@ -1,0 +1,1657 @@
+{
+  "certified": true,
+  "claim_boundary": "The invariant theorem assumes actual bijections of transcript and semantic-equivalence quotient objects plus sound-complete witness transport. Adding a new macro semantic oracle is not an encoding. The parity lower bound is deterministic exact-query complexity, not a lower bound for randomized approximation or promised inputs.",
+  "exhaustive_alias_rows": [
+    {
+      "alias_multiplicities": [
+        1,
+        2
+      ],
+      "class_count": 2,
+      "level": 1,
+      "matches": true,
+      "quotient_minimum": 1,
+      "raw_atoms_enumerated": 3,
+      "raw_minimum": 1
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2
+      ],
+      "class_count": 2,
+      "level": 2,
+      "matches": true,
+      "quotient_minimum": 2,
+      "raw_atoms_enumerated": 3,
+      "raw_minimum": 2
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1
+      ],
+      "class_count": 3,
+      "level": 1,
+      "matches": true,
+      "quotient_minimum": 1,
+      "raw_atoms_enumerated": 4,
+      "raw_minimum": 1
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1
+      ],
+      "class_count": 3,
+      "level": 2,
+      "matches": true,
+      "quotient_minimum": 2,
+      "raw_atoms_enumerated": 4,
+      "raw_minimum": 2
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1
+      ],
+      "class_count": 3,
+      "level": 3,
+      "matches": true,
+      "quotient_minimum": 3,
+      "raw_atoms_enumerated": 4,
+      "raw_minimum": 3
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "class_count": 4,
+      "level": 1,
+      "matches": true,
+      "quotient_minimum": 1,
+      "raw_atoms_enumerated": 6,
+      "raw_minimum": 1
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "class_count": 4,
+      "level": 2,
+      "matches": true,
+      "quotient_minimum": 2,
+      "raw_atoms_enumerated": 6,
+      "raw_minimum": 2
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "class_count": 4,
+      "level": 3,
+      "matches": true,
+      "quotient_minimum": 3,
+      "raw_atoms_enumerated": 6,
+      "raw_minimum": 3
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "class_count": 4,
+      "level": 4,
+      "matches": true,
+      "quotient_minimum": 4,
+      "raw_atoms_enumerated": 6,
+      "raw_minimum": 4
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "class_count": 5,
+      "level": 1,
+      "matches": true,
+      "quotient_minimum": 1,
+      "raw_atoms_enumerated": 7,
+      "raw_minimum": 1
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "class_count": 5,
+      "level": 2,
+      "matches": true,
+      "quotient_minimum": 2,
+      "raw_atoms_enumerated": 7,
+      "raw_minimum": 2
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "class_count": 5,
+      "level": 3,
+      "matches": true,
+      "quotient_minimum": 3,
+      "raw_atoms_enumerated": 7,
+      "raw_minimum": 3
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "class_count": 5,
+      "level": 4,
+      "matches": true,
+      "quotient_minimum": 4,
+      "raw_atoms_enumerated": 7,
+      "raw_minimum": 4
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "class_count": 5,
+      "level": 5,
+      "matches": true,
+      "quotient_minimum": 5,
+      "raw_atoms_enumerated": 7,
+      "raw_minimum": 5
+    }
+  ],
+  "experiment_id": "ASMP-3-ENCODING-INVARIANCE-v2.0",
+  "gates": {
+    "E0_transport_registry_complete": true,
+    "E1_quotient_dimension_invariant_under_all_bijections": true,
+    "E2_alias_alphabet_growth_does_not_change_quotient_count": true,
+    "E3_small_alias_expansions_exhaustively_reconstructed": true,
+    "E4_honest_witness_search_transports_constructively": true,
+    "E5_all_parity_partial_assignments_certify_query_lower_bound": true,
+    "E6_macro_dimension_drop_is_semantic_not_benign": true,
+    "E7_macro_global_evaluation_cost_rejected": true,
+    "E8_parent_replication_contract_is_preserved": true,
+    "E9_all_rows_certified": true
+  },
+  "parent_result": "ASMP-3-BLOCK-SELECTION-COMPOSITION-v1.9",
+  "parity_macro_rows": [
+    {
+      "ambiguous_partial_assignment_formula": 65,
+      "ambiguous_partial_assignments_checked": 65,
+      "base_refutation_dimension": 4,
+      "benign_encoding": false,
+      "bit_count": 4,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 3,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 4,
+      "macro_evaluation_cost": 4,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 4,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 211,
+      "ambiguous_partial_assignments_checked": 211,
+      "base_refutation_dimension": 5,
+      "benign_encoding": false,
+      "bit_count": 5,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 3,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 5,
+      "macro_evaluation_cost": 5,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 5,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 665,
+      "ambiguous_partial_assignments_checked": 665,
+      "base_refutation_dimension": 6,
+      "benign_encoding": false,
+      "bit_count": 6,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 3,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 6,
+      "macro_evaluation_cost": 6,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 6,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 2059,
+      "ambiguous_partial_assignments_checked": 2059,
+      "base_refutation_dimension": 7,
+      "benign_encoding": false,
+      "bit_count": 7,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 3,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 7,
+      "macro_evaluation_cost": 7,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 7,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 6305,
+      "ambiguous_partial_assignments_checked": 6305,
+      "base_refutation_dimension": 8,
+      "benign_encoding": false,
+      "bit_count": 8,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 4,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 8,
+      "macro_evaluation_cost": 8,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 8,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 19171,
+      "ambiguous_partial_assignments_checked": 19171,
+      "base_refutation_dimension": 9,
+      "benign_encoding": false,
+      "bit_count": 9,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 4,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 9,
+      "macro_evaluation_cost": 9,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 9,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 58025,
+      "ambiguous_partial_assignments_checked": 58025,
+      "base_refutation_dimension": 10,
+      "benign_encoding": false,
+      "bit_count": 10,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 4,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 10,
+      "macro_evaluation_cost": 10,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 10,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 175099,
+      "ambiguous_partial_assignments_checked": 175099,
+      "base_refutation_dimension": 11,
+      "benign_encoding": false,
+      "bit_count": 11,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 4,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 11,
+      "macro_evaluation_cost": 11,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 11,
+      "semantic_class_bijection_exists": false
+    },
+    {
+      "ambiguous_partial_assignment_formula": 527345,
+      "ambiguous_partial_assignments_checked": 527345,
+      "base_refutation_dimension": 12,
+      "benign_encoding": false,
+      "bit_count": 12,
+      "certified": true,
+      "declared_local_atom_evaluation_budget": 4,
+      "every_nonterminal_partial_assignment_ambiguous": true,
+      "exact_deterministic_query_complexity": 12,
+      "macro_evaluation_cost": 12,
+      "macro_refutation_dimension": 1,
+      "macro_within_declared_budget": false,
+      "pivotal_bits": 12,
+      "semantic_class_bijection_exists": false
+    }
+  ],
+  "replication_contract_result": "ASMP-3-INDEPENDENT-NOISE-AMPLIFICATION-v1.8",
+  "schema_version": "asmp3_encoding_invariance_v2_0",
+  "status": "exact_replication_quotient_invariance_and_macro_cost_barrier",
+  "theorem": {
+    "benign_transport": "bijections on false transcripts and semantic equivalence classes with sound-complete Refute transport",
+    "dimension_result": "replication-quotiented refutation dimension is exact invariant",
+    "macro_barrier": "an N-bit parity macro has deterministic evaluation-query cost N despite one-atom syntax",
+    "search_result": "canonical witnesses transport constructively at linear witness cost"
+  },
+  "transport_rows": [
+    {
+      "alias_multiplicities": [
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 2,
+      "dimension_invariant": true,
+      "encoded_dimension": 2,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 2,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 3,
+      "semantic_class_count": 2,
+      "source_dimension": 2,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2
+      },
+      "transcript_levels": [
+        1,
+        2
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 2,
+      "dimension_invariant": true,
+      "encoded_dimension": 1,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 1,
+        "encoded_1": 1
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 5,
+      "semantic_class_count": 2,
+      "source_dimension": 1,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 1
+      },
+      "transcript_levels": [
+        1,
+        1
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 2,
+      "dimension_invariant": true,
+      "encoded_dimension": 2,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 2,
+        "encoded_1": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 4,
+      "semantic_class_count": 2,
+      "source_dimension": 2,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2
+      },
+      "transcript_levels": [
+        1,
+        2
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 3,
+      "dimension_invariant": true,
+      "encoded_dimension": 3,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 3,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 6,
+      "semantic_class_count": 3,
+      "source_dimension": 3,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 3
+      },
+      "transcript_levels": [
+        1,
+        3
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 3,
+      "dimension_invariant": true,
+      "encoded_dimension": 2,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 2,
+        "encoded_1": 1
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 6,
+      "semantic_class_count": 3,
+      "source_dimension": 2,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2
+      },
+      "transcript_levels": [
+        1,
+        2
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 3,
+      "dimension_invariant": true,
+      "encoded_dimension": 3,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2
+        ],
+        "encoded_1": [
+          0,
+          1
+        ],
+        "encoded_2": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 3,
+        "encoded_1": 2,
+        "encoded_2": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 6,
+      "semantic_class_count": 3,
+      "source_dimension": 3,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 4,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 7,
+      "semantic_class_count": 4,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 4
+      },
+      "transcript_levels": [
+        1,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 4,
+      "dimension_invariant": true,
+      "encoded_dimension": 3,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2
+        ],
+        "encoded_1": [
+          0,
+          1
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 3,
+        "encoded_1": 2
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 8,
+      "semantic_class_count": 4,
+      "source_dimension": 3,
+      "source_transcript_minima": {
+        "tau_0": 2,
+        "tau_1": 3
+      },
+      "transcript_levels": [
+        2,
+        3
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 4,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 9,
+      "semantic_class_count": 4,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 5,
+      "dimension_invariant": true,
+      "encoded_dimension": 5,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 5,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 9,
+      "semantic_class_count": 5,
+      "source_dimension": 5,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 5
+      },
+      "transcript_levels": [
+        1,
+        5
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 5,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 2
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 11,
+      "semantic_class_count": 5,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 2,
+        "tau_1": 4
+      },
+      "transcript_levels": [
+        2,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 5,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 10,
+      "semantic_class_count": 5,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 6,
+      "dimension_invariant": true,
+      "encoded_dimension": 6,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 6,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 12,
+      "semantic_class_count": 6,
+      "source_dimension": 6,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 6
+      },
+      "transcript_levels": [
+        1,
+        6
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 6,
+      "dimension_invariant": true,
+      "encoded_dimension": 5,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 5,
+        "encoded_1": 3
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 12,
+      "semantic_class_count": 6,
+      "source_dimension": 5,
+      "source_transcript_minima": {
+        "tau_0": 3,
+        "tau_1": 5
+      },
+      "transcript_levels": [
+        3,
+        5
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 6,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 12,
+      "semantic_class_count": 6,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 7,
+      "dimension_invariant": true,
+      "encoded_dimension": 7,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 7,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 13,
+      "semantic_class_count": 7,
+      "source_dimension": 7,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 7
+      },
+      "transcript_levels": [
+        1,
+        7
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 7,
+      "dimension_invariant": true,
+      "encoded_dimension": 6,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 6,
+        "encoded_1": 3
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 14,
+      "semantic_class_count": 7,
+      "source_dimension": 6,
+      "source_transcript_minima": {
+        "tau_0": 3,
+        "tau_1": 6
+      },
+      "transcript_levels": [
+        3,
+        6
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 7,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 15,
+      "semantic_class_count": 7,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 8,
+      "dimension_invariant": true,
+      "encoded_dimension": 8,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 8,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 15,
+      "semantic_class_count": 8,
+      "source_dimension": 8,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 8
+      },
+      "transcript_levels": [
+        1,
+        8
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 8,
+      "dimension_invariant": true,
+      "encoded_dimension": 7,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 7,
+        "encoded_1": 4
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 17,
+      "semantic_class_count": 8,
+      "source_dimension": 7,
+      "source_transcript_minima": {
+        "tau_0": 4,
+        "tau_1": 7
+      },
+      "transcript_levels": [
+        4,
+        7
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 8,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 16,
+      "semantic_class_count": 8,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 9,
+      "dimension_invariant": true,
+      "encoded_dimension": 9,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 9,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 18,
+      "semantic_class_count": 9,
+      "source_dimension": 9,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 9
+      },
+      "transcript_levels": [
+        1,
+        9
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 9,
+      "dimension_invariant": true,
+      "encoded_dimension": 8,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 8,
+        "encoded_1": 4
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 18,
+      "semantic_class_count": 9,
+      "source_dimension": 8,
+      "source_transcript_minima": {
+        "tau_0": 4,
+        "tau_1": 8
+      },
+      "transcript_levels": [
+        4,
+        8
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 9,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 18,
+      "semantic_class_count": 9,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 10,
+      "dimension_invariant": true,
+      "encoded_dimension": 10,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "encoded_1": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 10,
+        "encoded_1": 1
+      },
+      "profile_id": 0,
+      "raw_alias_alphabet_size": 19,
+      "semantic_class_count": 10,
+      "source_dimension": 10,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 10
+      },
+      "transcript_levels": [
+        1,
+        10
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 10,
+      "dimension_invariant": true,
+      "encoded_dimension": 9,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 9,
+        "encoded_1": 5
+      },
+      "profile_id": 1,
+      "raw_alias_alphabet_size": 20,
+      "semantic_class_count": 10,
+      "source_dimension": 9,
+      "source_transcript_minima": {
+        "tau_0": 5,
+        "tau_1": 9
+      },
+      "transcript_levels": [
+        5,
+        9
+      ]
+    },
+    {
+      "alias_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "canonical_witness_transport_holds": true,
+      "certified": true,
+      "class_count": 10,
+      "dimension_invariant": true,
+      "encoded_dimension": 4,
+      "encoded_search_witnesses": {
+        "encoded_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "encoded_1": [
+          0,
+          1,
+          2
+        ],
+        "encoded_2": [
+          0,
+          1
+        ],
+        "encoded_3": [
+          0
+        ]
+      },
+      "encoded_transcript_minima": {
+        "encoded_0": 4,
+        "encoded_1": 3,
+        "encoded_2": 2,
+        "encoded_3": 1
+      },
+      "profile_id": 2,
+      "raw_alias_alphabet_size": 21,
+      "semantic_class_count": 10,
+      "source_dimension": 4,
+      "source_transcript_minima": {
+        "tau_0": 1,
+        "tau_1": 2,
+        "tau_2": 3,
+        "tau_3": 4
+      },
+      "transcript_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}
