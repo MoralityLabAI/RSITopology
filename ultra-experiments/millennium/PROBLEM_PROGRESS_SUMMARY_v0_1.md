@@ -38,7 +38,7 @@ or bounded theorem meets that standard.
 
 | ID | Problem | Core question | Current ASMP-bound status |
 |---|---|---|---|
-| ASMP-1 | Mechanistic Identifiability Modulo Functional Symmetry | When do measurements and interventions identify a real causal mechanism, after quotienting permitted symmetries? | **Addressed, unresolved.** Two closed finite theorem seeds and one completed Qwen falsification experiment sharpen the target. |
+| ASMP-1 | Mechanistic Identifiability Modulo Functional Symmetry | When do measurements and interventions identify a real causal mechanism, after quotienting permitted symmetries? | **Candidate negative resolution of the uniform representation-independent program; external scope review pending.** The representation-boundary theorem proves uniform undecidability for arbitrary computable-real analytic encodings without a certified gap, decidability for rational semialgebraic encodings, and a complete constructive linear-gauge lane. |
 | ASMP-2 | Shift-Spanning Safety Certification | When do finitely many evaluations justify a uniform claim over a declared family of deployment shifts? | **Formally addressed, unresolved.** The [registered crossed-shift result](asmp2_crossed_shift/RESULT.md) validates an exact forced counterexample shape. The [active-design census](asmp2_active_design_census/RESULT_v0_2_2.md) exhaustively rejects the registered myopic minimax selector as an efficient multi-step policy in one finite polynomial class. Neither is a uniform shift-spanning certification theorem. |
 | ASMP-3 | The Weak-Verifier Soundness Frontier | Which superhuman work can a weaker, noisy semantic verifier judge soundly? | **Exact protocol-quantifier fork; authoritative scope review pending.** The [v0.3 `Refute`-interface result](asmp3_resolution_boundary_v0_3/NEGATIVE_RESOLUTION_CANDIDATE_v0_3.md) proves the parity-channel obstruction conditionally. The [v0.7 complete-game successor](asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md) closes the game-specification gap and certifies both readings: frozen semantic encodings give optimal gap `(3/5)^floor(log2 n) -> 0`, while existential protocol encodings admit an `O(log n)` vector-disagreement protocol with one semantic query and constant gap `3/5`. The remaining question is which encoding quantifier v0.1 intended; another parity grid cannot decide that normative scope issue. |
 | ASMP-4 | Two-Port Evaluator-Relative Confinement | What separate read and write information rates are necessary and sufficient for evaluator-relative control? | **Formally addressed, unresolved.** The [registered two-port result](asmp4_two_port_game/RESULT.md) gives an exact 108-cell phase map for one finite rational architecture and separates read- and write-deficient controls. It does not establish necessary and sufficient confinement conditions in the canonical scope. |
@@ -86,9 +86,61 @@ The [Qwen projector result](asmp1_qwen_projector_tomography/RESULT.md) applied t
 
 The result narrows the empirical object toward context-conditioned interaction coefficients. Its frozen S0 specificity fraction was later recognized as scale-confounded; the [audit addendum](asmp1_qwen_projector_tomography/AUDIT_ADDENDUM.md) limits the interpretation, and the [v0.2 successor draft](../../protocols/qwen08_projector_tomography_v0_2.json) prospectively introduces magnitude matching and absolute higher-order energy.
 
+### 4. Cut-separation well-posedness audit
+
+The [exact cut-separation audit](asmp1_cut_separation_audit/RESULT_v0_1.md)
+tests both directions of the proposed iff:
+
+- a coarse nonconstant abstraction is exactly identified without excitation
+  sufficient to recover the full local mechanism class, so the necessity
+  condition must be `Q`-relative;
+- full replacement access to a typed analytic cut can leave a
+  positive-dimensional upstream fiber through a dimension-reducing downstream
+  mechanism; and
+- full environment support plus a singleton intervention hypergraph that
+  covers, pair-separates, and has full incidence rank on every parent still
+  leaves an exact higher-order interaction kernel.
+
+These witnesses refute literal full-class and purely structural readings. If
+cut separation or `kappa>0` is instead defined as positive separation of every
+distinct `Q/G` pair, the condition assumes quotient identifiability and is
+circular. The audit therefore supplies a stopping argument for the v0.1 iff as
+written, not a resolution of the broader classification program.
+
+### 5. Representation-sensitive resolution boundary
+
+The [representation-boundary theorem](asmp1_resolution_boundary_v0_2/RESULT_v0_2.md)
+supplies a replacement classification:
+
+- every identifiable `Q/G` must factor through the registered observation
+  experiment, making the observation-fiber quotient the universal
+  maximum-information identifiable abstraction;
+- exact quotient identifiability is decidable for compact rational
+  semialgebraic mechanism classes with rational polynomial maps and a finite
+  rational gauge;
+- no total uniform criterion exists when analytic coefficients may be named by
+  arbitrary computable-real Cauchy programs without a certified nonzero gap;
+  the proof is a direct halting reduction using degree-one entire functions,
+  with an equivalent program-generated `{0,1}` rational Taylor encoding;
+  and
+- linear analytic mechanisms with a frozen translation gauge are identifiable
+  exactly at full quotient row rank, with pseudoinverse recovery, an explicit
+  Gaussian finite-sample bound, exact collision and minimum-query lower bounds,
+  and a matching two-point stability lower bound.
+
+The exact harness classified all 21,300 `{-1,0,1}` designs through quotient
+dimension three: 12,516 full-rank designs received checked rational left
+inverses, while 8,784 deficient designs received checked nonzero nullspace
+collisions. The [resolution audit](asmp1_resolution_boundary_v0_2/RESOLUTION_AUDIT_v0_2.md)
+labels this a candidate negative resolution of the uniform program. Full
+canonical closure depends on whether v0.1 intended arbitrary computable-real
+encodings or only a fixed decidable rational/algebraic grammar.
+
 ## What would count as resolving ASMP-1
 
-The current chain does not satisfy the canonical four-part resolution obligation. A complete ASMP-1 resolution still requires:
+The representation-boundary result now addresses all four obligations in the
+linear-gauge lane and supplies a uniform impossibility theorem at the
+computable-real encoding boundary:
 
 1. a maximal or explicitly justified symmetry/equivalence quotient;
 2. necessary and sufficient intervention and environment conditions;
@@ -97,12 +149,24 @@ The current chain does not satisfy the canonical four-part resolution obligation
 
 A counterexample to the frozen Cut-Separation Conjecture can resolve that conjecture as false, but it resolves the broader classification program only if accompanied by a complete replacement criterion or an impossibility theorem for criteria of the declared form.
 
+The remaining closure question is now one scope fork rather than a missing
+bounded experiment. If arbitrary program-named computable-real coefficients
+are admitted by `F`, the no-uniform-criterion theorem is a candidate negative
+resolution under the canonical rule. If `F` was intended to be a fixed
+decidable rational/algebraic grammar with certified margins, the theorem
+proves decidability and completely resolves the linear-gauge subclass but does
+not provide a polynomial recovery theorem for every nonlinear semialgebraic
+SCM. External review must adjudicate that encoding quantifier before this
+summary changes `candidate resolution` to `resolved`.
+
 ## Recommended peer-review order
 
 1. Read this progress map for scope and status.
 2. Review the [canonical problem statements](AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md), especially quantifier order and resolution obligations.
 3. Read the [hostile referee audit](REFEREE_AUDIT_v0_1.md) for known definition debt and reasons the set is not yet prize-ready.
-4. For ASMP-1, review the finite-chain theorem, interaction-tomography theorem, and real-model negative in that order.
+4. For ASMP-1, review the finite-chain theorem, interaction-tomography theorem,
+   cut-separation audit, representation-boundary theorem and audit, then the
+   real-model negative.
 5. Check the [machine-readable registry](problem_set_v0_1.json) and [validation receipt](VALIDATION_RECEIPT_v0_1.json) for structural consistency. The validation receipt checks document integrity, not mathematical truth or novelty.
 
 ## Questions for external reviewers
