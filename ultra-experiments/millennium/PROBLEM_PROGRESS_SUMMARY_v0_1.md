@@ -131,6 +131,128 @@ integrated chain passes 145 tests.  This strengthens the request for normative
 sensor/computation registration without promoting the stochastic boundary
 example or claiming a canonical solution.
 
+**ASMP-4 v0.11 NHIM/cocycle repair.** A further adversarial audit found that
+v0.6's binary action set made its formal input derivative too weak, by itself,
+as a local-controllability certificate.  The
+[v0.11 repair](asmp4_nhim_cocycle_audit_v0_11/RESULT.md) gives the same rational
+plant bounded interval authority `[-1,2]`: controls `0` and `1` remain the only
+safe values, while `|n|<=1/6` can reach every `|eta|<=3/4` by an exact local
+formula.  A bi-infinite full-shift base produces the closed-loop cocycle
+`phi(k,omega,n)=(3/2)^k n`; a rendered primary-definition audit maps its point
+manifold and `E^u/E^c/E^s` splitting to every checked NHIM clause for all mode
+sequences.  Central and independent harnesses reject five category-breaking
+mutations and preserve the `(1,1)` computed and `(2,1)` raw corners without
+future-disturbance lookahead.  The integrated ASMP-4 chain now contains 155
+tests.  The canonical NHIM formalism, sensor registry, robust full resolution,
+and external expert acceptance remain open.
+
+**ASMP-4 v0.12 positive-dimensional NHIM.** The
+[circle extension](asmp4_positive_dimensional_nhim_v0_12/RESULT.md) removes the
+remaining degenerate-point escape hatch.  It augments the repaired plant with
+the neutral tangent rotation `theta_next=theta+1/4 mod 1`.  Safe feedback on
+the cylinder is the global diffeomorphism
+`(theta,n)->(theta+1/4,(3/2)n)`, whose invariant circle is compact, connected,
+and one-dimensional.  A rendered primary-definition audit checks the exact
+classical inequalities: unstable inverse norm `2/3`, tangent norm `1`, and
+`lambda=3/4` satisfy both normal hyperbolicity and domination.  The tangent
+phase is not transmitted, local interval control survives, and the computed
+and raw regions remain `(1,1)` and `(2,1)`.  Five adversarial mutations are
+rejected by central and independent implementations.  The expanded integrated
+chain contains 164 tests.  Positive ambient volume, a canonical registered
+NHIM class, a selected sensor registry, and external review remain open.
+
+**ASMP-4 v0.13 positive-volume collar.** The
+[collar theorem](asmp4_positive_volume_collar_v0_13/RESULT.md) embeds the
+one-dimensional invariant circle in
+`S^1 x [-1,1] x {-3,-1,1,3}`, a safe set of normalized volume 2.  With normal
+multiplier 2, bounded authority `[-2,10]`, and two control-relevant mode
+fibers separated by 8, a causal branch policy realizes every normal and
+disturbance word.  The exact full-collar regions are `(2,2)` for the computed
+registry and `(3,2)` for the forced raw registry.  For every fixed initial
+normal radius `0<rho<=1`, an explicit equal-interval construction and a
+matching final-diameter converse give the exact finite-horizon correction
+`N_T(rho)=ceil(rho*2^T)`.  An import-independent verifier checks dyadic and
+non-dyadic margins, full-collar enumeration through horizon five, the NHIM
+inequalities, and five adversarial mutations.  The expanded integrated chain
+passes all 174 tests.  This removes the positive-dimension and positive-volume
+degeneracy objections but does not establish perturbation/noise robustness,
+select the canonical sensor registry, supply the global ASMP-4 variational
+classification, or substitute for external review.
+
+**ASMP-4 v0.14 harness stop certificate.** The
+[final local certificate](asmp4_positive_volume_stop_certificate_v0_14/HARNESS_STOP_CERTIFICATE_v0_14.md)
+seals the canonical source, the v0.10 hostile audit, and the v0.13
+positive-volume claim.  It symbolically replays the distinct `(2,2)` and
+`(3,2)` corners through every horizon, audits six candidate sensor-selector
+terms as absent from the canonical ASMP-4 section, and tests five
+counterfactual selector clauses.  Computed-statistic clauses select `(2,2)`,
+raw-injectivity clauses select `(3,2)`, and explicit registry parameterization
+produces a family; each requires text not present in the source.  V0.10's
+sealed literature audit likewise found no ASMP-4 registry selector in four
+canonical primary sources or three targeted near-misses.  The certificate
+therefore stops further bounded local construction and requests normative
+registration or external review.  Its four reopening conditions cover a
+canonical registry clause, an attributable fork error, a specified
+perturbation/noise model that collapses the completions, or an attributable
+theorem/expert mapping to one unique formal class.  This is explicitly a
+harness stopping decision, not a claim that the full ASMP-4 variational
+program is mathematically resolved.  The expanded chain passes all 184 tests.
+
+**ASMP-4 v0.15 semantic-selector red team.** A preregistered
+[clause-complete audit](asmp4_semantic_selector_audit_v0_15/RESULT.md) rejects
+the strongest inference in v0.14.  It covers all 23 canonical ASMP-4 units
+exactly once and, under a rule where any uncertainty blocks support, labels 15
+units `no_selector`, seven `ambiguous`, and the split-port witness
+`selects_parameterized` because it explicitly says to hold the sensor
+experiment fixed.  A separately staged selector-risk metric passes all five
+held-out robustness families, while the generic pairwise preflight remains
+release-blocking because the source is a fixed 23-unit population rather than
+a held-out blinded comparison.  The exact positive-volume v0.13 regions remain
+valid, but lexical absence of six phrases no longer supports a theorem of
+semantic underdetermination.  The current disposition retains the stop on
+producing more local fixtures, now as a scoped operational decision: the
+source may intentionally request a parameterized theorem over registered
+sensor experiments, and this repository has not proved that global theorem.
+External clause adjudication or a formal registered-class grammar is the next
+legitimate step.  The expanded chain passes all 194 tests.
+
+**ASMP-4 v0.16 registered sensor classification.** The
+[partition theorem](asmp4_registered_sensor_classification_v0_16/RESULT.md)
+pursues the formal-grammar route opened by v0.15.  It declares a registered
+sensor experiment to be a fixed partition `P` of the four modes whose current
+symbol remains injectively recoverable from the charged read transcript.  Two
+independent partition generators classify all 15 partitions: exactly four
+refine the two control-relevant `q` fibers and are feasible, with block-count
+histogram `1,2,1` for `k=2,3,4`; the other eleven merge a `q=0` and `q=8` mode
+and fail at the first step because their safe-control intervals `[-1,1]` and
+`[7,9]` are disjoint.  Every feasible partition has exact full-collar region
+`[1+log2(k),infinity) x [2,infinity)`, yielding read corners `2`, `log2(6)`,
+and `3`.  For initial radius `rho`, exact counts are
+`k^T ceil(rho*2^T)` reads and `2^T ceil(rho*2^T)` writes.  The four feasible
+partitions form a Boolean refinement square with strictly increasing read
+threshold and constant write threshold.  This resolves the sensor parameter
+for the local nondegenerate plant; it neither chooses the canonical universal
+grammar nor proves the nonlinear variational theorem.  The expanded chain
+passes all 204 tests.
+
+**ASMP-4 v0.17 support-zero-error sensor kernels.** The
+[kernel theorem](asmp4_zero_error_sensor_kernels_v0_17/RESULT.md) extends the
+registered grammar from deterministic partitions to finite stochastic
+memoryless sensors.  A kernel is feasible exactly when the union of outputs
+supported by `q=0` modes is disjoint from the union supported by `q=8` modes.
+For `a` active raw output symbols, the exact region is
+`[1+log2(a),infinity) x [2,infinity)`, with finite counts
+`a^T ceil(rho*2^T)` reads and `2^T ceil(rho*2^T)` writes.  Central exhaustion
+and an independent multinomial proof classify all 53,108 nonempty support
+relations through four declared outputs: 724 feasible, 52,384 infeasible, and
+620 genuinely randomized feasible.  The feasible active-support histogram is
+`20,210,494` for `a=2,3,4`.  The 104 labeled deterministic kernels collapse
+to exactly the four v0.16 partitions.  Thus randomization changes available
+support refinements but not the support-zero-error formula.  Block error,
+expected-length coding, channel memory, hidden sensor state, and vanishing
+failure probability remain separate registered problems.  The expanded chain
+passes all 214 tests.
+
 ## ASMP-1 evidence chain
 
 ### 1. Finite-chain identifiability seed

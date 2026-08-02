@@ -75,6 +75,9 @@ set, exact transcript counts, selector mutations, and relabeling census.
    review and external field review remain absent.
 6. The three-source near-miss search is targeted, not exhaustive, and rejects
    only those inspected applicability mappings.  It is not external review.
+7. The v0.6 binary action set does not alone support the differential local-
+   control label used here.  Review the v0.11 bounded-authority cocycle repair
+   for the stronger positive-class witness.
 
 ## Falsification conditions
 

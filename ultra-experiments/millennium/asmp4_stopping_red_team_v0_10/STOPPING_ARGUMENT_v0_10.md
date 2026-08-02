@@ -1,5 +1,11 @@
 # ASMP-4 adversarial stopping argument v0.10
 
+**Successor qualification.** V0.11 repairs the discrete-input/local-control
+category gap in the v0.6 embedding.  On bounded interval authority `[-1,2]`,
+the same safe controls are unique, local evaluator-normal reachability is
+explicit, and a full-shift cocycle satisfies a checked primary NHIM definition.
+The registry fork and stopping disposition survive.
+
 ## Why stop survives the scope challenge
 
 The strongest immediate objection to v0.9 is correct but nonfatal: the v0.8

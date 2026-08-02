@@ -1,5 +1,11 @@
 # ASMP-4 adversarial stopping theorem v0.10
 
+**Successor qualification.** The `normal_control_derivative=1` check below was
+attached to a binary action set and is not, alone, an operational local-
+reachability proof.  V0.11 repairs this with a bounded control interval, an
+exact uniform reachability box, and a full-shift cocycle NHIM.  The computed
+and raw regions remain the same.
+
 ## Question
 
 Does the v0.9 stopping conclusion survive the strongest immediate scope

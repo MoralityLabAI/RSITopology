@@ -1,0 +1,50 @@
+{
+  "schema_version": "asmp4_positive_volume_collar_claim_v0_13",
+  "status": "positive-volume collar preserves an exact sensor-registry capacity fork",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_12_claim_sha256": "b135f61ebf72e3e5ef7ac7a1733c18fe17fe6ea5d250ccc7253ea235e99aa506"
+  },
+  "plant": {
+    "state": "(theta,n,z) in S^1 x R x {-3,-1,1,3}",
+    "dynamics": "theta_next=theta+1/4 mod 1; n_next=2n+u-q(z); z_next=w",
+    "q_polynomial": "(12+13z-z^3)/3",
+    "q_values": [
+      0,
+      0,
+      8,
+      8
+    ],
+    "authority": "[-2,10]"
+  },
+  "safe_geometry": {
+    "full_collar": "K=K_0=S^1 x [-1,1] x {-3,-1,1,3}",
+    "normalized_volume": "2",
+    "embedded_nhim": "S^1 x {0}",
+    "nhim_dimension": 1
+  },
+  "full_collar_regions": {
+    "computed": "[2,infinity) x [2,infinity)",
+    "raw": "[3,infinity) x [2,infinity)",
+    "computed_read_words": "4^T",
+    "raw_read_words": "8^T",
+    "write_words": "4^T"
+  },
+  "finite_margin": {
+    "initial_collar": "S^1 x [-rho,rho] with 0<rho<=1",
+    "normal_spanning_words": "ceil(rho*2^T)",
+    "computed_read_and_write_words": "2^T ceil(rho*2^T)",
+    "raw_read_words": "4^T ceil(rho*2^T)"
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 13,
+    "tests": 164
+  },
+  "decision": "positive_dimension_and_positive_volume_objections_removed",
+  "nonclaim": "The exact collar theorem does not establish perturbation/noise robustness, select a canonical sensor registry, or supply the full ASMP-4 variational classification; external expert review is absent."
+}

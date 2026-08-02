@@ -5,6 +5,14 @@ that the same-plant rational NHIM sensor fork alone establishes semantic
 underdetermination, firewalls the v0.8 diagonal from positive-NHIM use, and
 tests explicit computed/raw/relational/union selector mutations.
 
+**Successor note.** V0.11 found that v0.6's binary action set did not by itself
+justify a differential local-controllability label.  The
+[NHIM/cocycle repair](../asmp4_nhim_cocycle_audit_v0_11/RESULT.md) replaces that
+shortcut with bounded interval authority and a primary-definition-level
+full-shift cocycle audit.  Both exact registry regions survive.  The frozen
+v0.10 claim is retained for provenance, while v0.11 is the stronger
+positive-class witness.
+
 It also audits the definition pages of the four primary works cited by ASMP-4.
 Those works each fix one charged information resource, none selects a separate
 read/write registry, and Tatikonda and Mitter explicitly show that an encoder

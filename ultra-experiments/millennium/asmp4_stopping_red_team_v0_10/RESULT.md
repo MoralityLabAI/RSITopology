@@ -1,5 +1,11 @@
 # ASMP-4 stopping red-team result v0.10
 
+**Successor qualification.** The v0.11 audit identifies a category gap in the
+binary-input local-control justification below and repairs it with bounded
+interval authority plus an explicit full-shift cocycle NHIM.  The two exact
+regions are unchanged.  V0.11 should be used for the strongest positive-class
+version of this stopping argument.
+
 ## Result
 
 The v0.9 stopping conclusion survives adversarial scope reduction.  Its minimal
