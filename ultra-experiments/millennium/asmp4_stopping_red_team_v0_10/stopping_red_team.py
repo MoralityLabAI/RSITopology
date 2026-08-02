@@ -31,6 +31,10 @@ V09_CLAIM = (
     MILLENNIUM / "asmp4_completion_atlas_v0_9" / "completion_atlas_claim_v0_9.json"
 )
 CLAIM = HERE / "stopping_red_team_claim_v0_10.json"
+PRIOR_ART_RECEIPT = HERE / "prior_art_scope_receipt_v0_10.json"
+PRIOR_ART_DOCUMENT = HERE / "EXTERNAL_PRIOR_ART_SCOPE_v0_10.md"
+TARGETED_LITERATURE_RECEIPT = HERE / "targeted_literature_near_miss_receipt_v0_10.json"
+TARGETED_LITERATURE_DOCUMENT = HERE / "TARGETED_LITERATURE_NEAR_MISSES_v0_10.md"
 
 SEALED_RESOURCES = {
     "canonical_source": (
@@ -193,6 +197,174 @@ def canonical_scope_report() -> dict[str, Any]:
             "registered sensor/computation domain",
             "randomness/disturbance quantifier order",
         ],
+        "pass": all(checks.values()),
+    }
+
+
+def prior_art_scope_report() -> dict[str, Any]:
+    """Audit only the four primary works cited by the canonical ASMP-4 source."""
+
+    receipt = _json(PRIOR_ART_RECEIPT)
+    document = PRIOR_ART_DOCUMENT.read_text(encoding="utf-8")
+    source = SOURCE.read_text(encoding="utf-8")
+    section_norm = _normalized(_asmp4_section())
+    document_norm = _normalized(document)
+    rows = receipt.get("sources", [])
+    canonical_urls = [row.get("canonical_citation_url") for row in rows]
+    primary_urls = [row.get("primary_full_text_url") for row in rows]
+    hashes = [row.get("local_pdf_sha256", "") for row in rows]
+    derived_totals = {
+        "canonical_primary_sources": len(rows),
+        "single_charged_information_resources": sum(
+            row.get("single_charged_resource") is True for row in rows
+        ),
+        "separate_write_ports_charged": sum(
+            row.get("separate_controller_to_actuator_write_port_charged") is True
+            for row in rows
+        ),
+        "asmp4_two_port_registry_selectors": sum(
+            row.get("selects_asmp4_read_write_registry") is True for row in rows
+        ),
+        "explicit_information_pattern_sensitivity_sources": sum(
+            row.get("explicit_information_pattern_sensitivity") is True for row in rows
+        ),
+        "external_expert_review": False,
+    }
+    checks = {
+        "receipt_schema": receipt.get("schema_version")
+        == "asmp4_external_prior_art_scope_receipt_v0_10",
+        "exactly_four_distinct_sources": len(rows) == 4
+        and len({row.get("id") for row in rows}) == 4,
+        "all_four_canonical_urls_are_in_source": len(set(canonical_urls)) == 4
+        and all(isinstance(url, str) and url in source for url in canonical_urls),
+        "all_primary_full_text_urls_are_documented": len(set(primary_urls)) == 4
+        and all(isinstance(url, str) and url in document for url in primary_urls),
+        "all_pdf_receipts_are_sha256": all(
+            len(value) == 64
+            and all(character in "0123456789abcdef" for character in value)
+            for value in hashes
+        ),
+        "each_source_has_one_charged_information_resource": all(
+            row.get("single_charged_resource") is True
+            and bool(row.get("charged_information_resource"))
+            for row in rows
+        ),
+        "no_source_charges_a_separate_write_port": not any(
+            row.get("separate_controller_to_actuator_write_port_charged") is True
+            for row in rows
+        ),
+        "no_source_selects_the_asmp4_registry": not any(
+            row.get("selects_asmp4_read_write_registry") is True for row in rows
+        ),
+        "tatikonda_alone_records_explicit_information_pattern_sensitivity": [
+            row.get("id")
+            for row in rows
+            if row.get("explicit_information_pattern_sensitivity") is True
+        ]
+        == ["tatikonda_mitter_2004"],
+        "derived_totals_match_frozen_receipt": receipt.get("totals") == derived_totals,
+        "canonical_source_calls_for_a_joint_two_interface_object": (
+            "data-rate theorems, invariance entropy, uncertain-system feedback entropy"
+            in section_norm
+            and "output invariance entropy already exist" in section_norm
+            and "missing object is the joint two-interface capacity region"
+            in section_norm
+        ),
+        "bounded_scope_and_nonclaims_are_explicit": all(
+            marker in document_norm
+            for marker in (
+                "bounded primary-source audit",
+                "not an exhaustive literature search",
+                "not external expert review",
+                "does not prove that no later theorem could add a selector",
+            )
+        ),
+    }
+    return {
+        "scope": receipt.get("audit_scope"),
+        "rows": rows,
+        "totals": derived_totals,
+        "bounded_inference": receipt.get("bounded_inference"),
+        "checks": checks,
+        "pass": all(checks.values()),
+    }
+
+
+def targeted_literature_near_miss_report() -> dict[str, Any]:
+    """Freeze a bounded audit of three uncited neighboring primary results."""
+
+    receipt = _json(TARGETED_LITERATURE_RECEIPT)
+    document = TARGETED_LITERATURE_DOCUMENT.read_text(encoding="utf-8")
+    document_norm = _normalized(document)
+    rows = receipt.get("sources", [])
+    primary_urls = [row.get("primary_url") for row in rows]
+    hashes = [row.get("local_pdf_sha256", "") for row in rows]
+    derived_totals = {
+        "reviewed_primary_near_misses": len(rows),
+        "genuine_multirate_regions": sum(
+            row.get("near_miss_type") == "genuine n-dimensional convex data-rate region"
+            for row in rows
+        ),
+        "same_channel_multiple_rate_notions": sum(
+            row.get("near_miss_type")
+            == "two rate notions for one event-triggered channel"
+            for row in rows
+        ),
+        "network_ife_compositions": sum(
+            row.get("near_miss_type")
+            == "scalar network IFE bounded by a sum of subsystem IFEs"
+            for row in rows
+        ),
+        "asmp4_registry_selectors": sum(
+            row.get("selects_asmp4_sensor_computation_registry") is True for row in rows
+        ),
+        "full_text_definition_reviews": sum(
+            row.get("full_text_definition_reviewed") is True for row in rows
+        ),
+        "exhaustive_search": False,
+        "external_expert_review": False,
+    }
+    checks = {
+        "receipt_schema": receipt.get("schema_version")
+        == "asmp4_targeted_literature_near_miss_receipt_v0_10",
+        "exactly_three_distinct_sources": len(rows) == 3
+        and len({row.get("id") for row in rows}) == 3,
+        "all_primary_urls_are_documented": len(set(primary_urls)) == 3
+        and all(isinstance(url, str) and url in document for url in primary_urls),
+        "all_pdf_receipts_are_sha256": all(
+            len(value) == 64
+            and all(character in "0123456789abcdef" for character in value)
+            for value in hashes
+        ),
+        "all_full_text_definitions_have_page_anchors": all(
+            row.get("full_text_definition_reviewed") is True
+            and len(row.get("checked_pages", [])) >= 3
+            for row in rows
+        ),
+        "all_require_added_architecture_mapping": all(
+            row.get("requires_added_architecture_mapping") is True for row in rows
+        ),
+        "no_near_miss_selects_the_asmp4_registry": not any(
+            row.get("selects_asmp4_sensor_computation_registry") is True for row in rows
+        ),
+        "derived_totals_match_frozen_receipt": receipt.get("totals") == derived_totals,
+        "bounded_scope_and_nonclaims_are_explicit": all(
+            marker in document_norm
+            for marker in (
+                "targeted primary-source applicability audit",
+                "not an exhaustive literature search",
+                "not external expert review",
+                "only the applicability of the three inspected near-misses is rejected",
+            )
+        ),
+        "receipt_preserves_three_nonclaims": len(receipt.get("nonclaims", [])) == 3,
+    }
+    return {
+        "scope": receipt.get("audit_scope"),
+        "rows": rows,
+        "totals": derived_totals,
+        "bounded_inference": receipt.get("bounded_inference"),
+        "checks": checks,
         "pass": all(checks.values()),
     }
 
@@ -613,6 +785,8 @@ def selector_mutation_report() -> dict[str, Any]:
 
 def counterargument_matrix() -> dict[str, Any]:
     scope = canonical_scope_report()
+    prior = prior_art_scope_report()
+    near_misses = targeted_literature_near_miss_report()
     index = machine_index_report()
     sensor = primary_sensor_witness_report()
     stochastic = stochastic_scope_firewall_report()
@@ -751,13 +925,38 @@ def counterargument_matrix() -> dict[str, Any]:
             ),
             "resolved": coordinates["pass"],
         },
+        {
+            "id": "A13",
+            "challenge": "The cited control literature might silently supply a default registry.",
+            "answer": (
+                "A bounded audit of all four cited works finds one charged "
+                "information resource per work, no separate charged write "
+                "port, and no ASMP-4 read/write registry selector; Tatikonda "
+                "and Mitter explicitly show information-pattern sensitivity."
+            ),
+            "resolved": prior["pass"],
+        },
+        {
+            "id": "A14",
+            "challenge": (
+                "An uncited multidimensional or network rate theorem may already "
+                "invalidate the semantic diagnosis."
+            ),
+            "answer": (
+                "Three full-text near-misses define subsystem coordinates, "
+                "same-channel dual accounting, or scalar network/subsystem "
+                "composition. None selects the read/write registry; importing "
+                "any one requires an added architecture mapping."
+            ),
+            "resolved": near_misses["pass"],
+        },
     ]
     unresolved = [row["id"] for row in rows if not row["resolved"]]
     return {
         "rows": rows,
         "count": len(rows),
         "unresolved": unresolved,
-        "pass": len(rows) == 12 and not unresolved,
+        "pass": len(rows) == 14 and not unresolved,
     }
 
 
@@ -850,7 +1049,25 @@ def expected_claim_payload() -> dict[str, Any]:
             "positive_nhim_conjecture_witness": False,
             "orthogonal_specification_gap": True,
         },
-        "counterargument_audit": {"cases": 12, "unresolved": 0},
+        "counterargument_audit": {"cases": 14, "unresolved": 0},
+        "cited_prior_art_scope_audit": {
+            "canonical_primary_sources": 4,
+            "single_charged_information_resources": 4,
+            "separate_write_ports_charged": 0,
+            "asmp4_two_port_registry_selectors": 0,
+            "explicit_information_pattern_sensitivity_sources": 1,
+            "external_expert_review": False,
+        },
+        "targeted_literature_near_miss_audit": {
+            "reviewed_primary_near_misses": 3,
+            "genuine_multirate_regions": 1,
+            "same_channel_multiple_rate_notions": 1,
+            "network_ife_compositions": 1,
+            "asmp4_registry_selectors": 0,
+            "full_text_definition_reviews": 3,
+            "exhaustive_search": False,
+            "external_expert_review": False,
+        },
         "selector_mutations": {
             "cases": 5,
             "canonical_targets": 3,
@@ -875,7 +1092,7 @@ def expected_claim_payload() -> dict[str, Any]:
             "normative sensor/computation registry",
             "attributable proof error in the primary sensor fork",
             "new canonical clause that selects one existing completion",
-            "new registered class that invalidates the finite completion analysis",
+            "an attributable theorem or new registered class that invalidates the finite completion analysis",
         ],
         "nonclaim": (
             "The stochastic diagonal is not asserted to be a normally hyperbolic "
@@ -897,6 +1114,8 @@ def claim_exactness_report() -> dict[str, Any]:
 def stopping_red_team_report() -> dict[str, Any]:
     integrity = resource_integrity_report()
     scope = canonical_scope_report()
+    prior = prior_art_scope_report()
+    near_misses = targeted_literature_near_miss_report()
     index = machine_index_report()
     sensor = primary_sensor_witness_report()
     stochastic = stochastic_scope_firewall_report()
@@ -909,6 +1128,8 @@ def stopping_red_team_report() -> dict[str, Any]:
     components = (
         integrity,
         scope,
+        prior,
+        near_misses,
         index,
         sensor,
         stochastic,
@@ -923,6 +1144,8 @@ def stopping_red_team_report() -> dict[str, Any]:
         "schema_version": "asmp4_stopping_red_team_v0_10",
         "resource_integrity": integrity,
         "canonical_scope": scope,
+        "cited_prior_art_scope": prior,
+        "targeted_literature_near_misses": near_misses,
         "machine_index": index,
         "primary_sensor_witness": sensor,
         "stochastic_scope_firewall": stochastic,
@@ -949,13 +1172,21 @@ def verification_gates(report: dict[str, Any] | None = None) -> dict[str, bool]:
             "selector_mutations"
         ]["pass"],
         "R6_coordinate_relabeling_invariance": report["coordinate_relabeling"]["pass"],
-        "R7_twelve_counterarguments_resolved": report["counterargument_matrix"]["pass"],
-        "R8_minimal_sensor_only_stopping_theorem": report["minimal_stopping_theorem"][
+        "R7_cited_prior_art_has_no_two_port_selector": report["cited_prior_art_scope"][
             "pass"
         ],
-        "R9_predecessor_inventory_127": report["test_inventory"]["pass"],
-        "R10_frozen_claim_exactness": report["claim_exactness"]["pass"],
-        "R11_complete_payload": report["pass"],
+        "R8_targeted_near_misses_require_added_mapping": report[
+            "targeted_literature_near_misses"
+        ]["pass"],
+        "R9_fourteen_counterarguments_resolved": report["counterargument_matrix"][
+            "pass"
+        ],
+        "R10_minimal_sensor_only_stopping_theorem": report["minimal_stopping_theorem"][
+            "pass"
+        ],
+        "R11_predecessor_inventory_127": report["test_inventory"]["pass"],
+        "R12_frozen_claim_exactness": report["claim_exactness"]["pass"],
+        "R13_complete_payload": report["pass"],
     }
 
 

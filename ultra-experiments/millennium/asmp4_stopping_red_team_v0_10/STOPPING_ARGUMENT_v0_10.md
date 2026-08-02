@@ -16,6 +16,21 @@ registry.
 No larger local census can infer a missing normative predicate.  It can only
 classify another declared completion.
 
+Nor do the four primary works cited by ASMP-4 fill that predicate.  Their
+checked definitions charge one sensor-to-controller alphabet or one spanning-
+set cardinality, not separate read and write transcripts, and none selects raw
+versus computed sensing.  Tatikonda and Mitter further demonstrate that encoder
+information pattern can change the required rate.  This is a bounded audit of
+the cited works, not an exhaustive field claim.
+
+The strongest located uncited near-misses do not alter that conclusion.  One
+proves a genuine vector rate region across direct-product plant subsystems, one
+separates payload and timing accounting on a single event-triggered channel,
+and one composes scalar subsystem IFEs.  None maps its coordinates to ASMP-4's
+sequential read/write transcripts or chooses raw versus computed sensing.
+Using any of them would first require the missing architecture mapping.  This
+three-source check is targeted and non-exhaustive, not external expert review.
+
 Explicit mutation confirms the point: computed-only, relational-only,
 raw-only, and union selectors all make the target determinate, but none is in
 the source.  The union's computed rectangle is therefore a coherent answer to
@@ -34,7 +49,8 @@ met:
 1. the canonical source adds a normative sensor/computation registry;
 2. an attributable audit finds an error in the primary sensor fork;
 3. a new canonical clause selects one of the existing completions; or
-4. a new registered class invalidates the finite completion analysis.
+4. an attributable theorem or new registered class invalidates the finite
+   completion analysis.
 
 The probability/disturbance-order question remains a separate productive
 specification task.  It is not needed to justify this stop.

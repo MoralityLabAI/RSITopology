@@ -75,7 +75,32 @@ The v0.6 central and independent model builders verify 13 of 13 explicit
 architecture obligations for both registries, including component separation,
 no side channel, universal safety, and exact transcript languages.
 
-## 3. Sensor-only minimal stopping theorem
+## 3. Cited prior art does not select the registry
+
+ASMP-4 cites four relevant primary works.  Their checked definitions fix one
+charged information resource apiece: Tatikonda and Mitter use one noiseless
+sensor-to-controller channel; the two Colonius-Kawan papers count one spanning
+set of open-loop control functions; and Tomar-Rungger-Zamani use one finite
+sensor/coder-to-controller alphabet.  None charges a distinct controller-to-
+actuator write transcript or supplies a raw/computed sensor selector for the
+joint ASMP-4 target.
+
+This is not merely an argument from silence.  Tatikonda and Mitter compare two
+encoder information patterns on the same single-channel architecture, with and
+without access to past control signals, and report different sufficient-rate
+requirements.  Information pattern is therefore a load-bearing premise.  The
+four-source audit is bounded and does not claim exhaustive field coverage or
+external expert review.
+
+The targeted audit also checks three strong uncited near-misses.  A genuine
+vector network-data-rate region assigns its coordinates to direct-product plant
+subsystems; an event-triggered theorem distinguishes payload rate from
+payload-plus-timing rate on one channel; and a compositional theorem bounds one
+network IFE by a sum of subsystem IFEs.  These are architecture-specific
+results, not inherited read/write coordinates.  None selects the ASMP-4 sensor
+registry, and applying any one requires an added architecture mapping.
+
+## 4. Sensor-only minimal stopping theorem
 
 **Theorem.** The canonical ASMP-4 text does not determine a unique capacity
 region unless it normatively fixes the registered sensor/computation domain.
@@ -92,13 +117,15 @@ underdetermined.  QED.
 This proof has no probability, randomness, uncountable-disturbance, or v0.8
 premise.  Deleting the stochastic lane leaves every premise true.
 
-## 4. Adversarial objections
+## 5. Adversarial objections
 
-The executable audit resolves twelve challenges: NHIM scope, same-plant
+The executable audit resolves fourteen challenges: NHIM scope, same-plant
 identity, architecture compliance, finite-versus-asymptotic scope, machine-
 index normativity, union-of-registries semantics, rectangular-witness scope,
 enumeration-versus-proof scope, deletion of v0.8, thin-initial-set scope, and
-the robust-version graduation rule.  The union objection does
+the robust-version graduation rule, coordinate/symbol invariance, and claimed
+inheritance of a default registry from the four cited works, plus applicability
+of uncited multidimensional and network near-misses.  The union objection does
 not choose a canonical answer: taking a union is itself another completion of
 the undefined registry-domain predicate.
 
@@ -113,11 +140,11 @@ not promote it to a robust full classification.
 Finally, the coordinate-artifact objection is rejected exhaustively.  The
 harness applies all `24*2*2*24=2,304` relabelings of modes, actions, computed
 read symbols, and raw read symbols.  It replays every mode word through horizon
-three—193,536 words per registry—and obtains zero safety or language-count
+three - 193,536 words per registry - and obtains zero safety or language-count
 failures.  The `(1,1)` and `(2,1)` corners are therefore invariant under these
 declared finite coordinate changes.
 
-## 5. Disposition
+## 6. Disposition
 
 The theorem supports stopping further local capacity enumeration.  More exact
 regions inside another chosen registry cannot determine which registry the

@@ -116,11 +116,18 @@ NHIM/local-control plant satisfy all 13 explicit architecture obligations but
 have distinct exact regions `[1,infinity) x [1,infinity)` and
 `[2,infinity) x [1,infinity)`.  Central and import-independent replays seal five
 resources, reconstruct 5,460 mode words per registry through horizon six, and
-resolve twelve adversarial objections with zero unresolved cases.  Five
+resolve fourteen adversarial objections with zero unresolved cases.  Five
 selector mutations show that computed, relational, raw, or union choices make
 the target determinate only by adding a clause absent from the source.  All
 2,304 mode/action/read-symbol relabelings preserve both regions with zero
-failures.  The integrated chain passes 143 tests.  This strengthens the request for normative
+failures.  A bounded audit of all four primary works cited by ASMP-4 finds one
+charged information resource in each, no separate charged write port, and no
+two-port registry selector; Tatikonda and Mitter explicitly show that encoder
+information pattern can change the required rate.  A targeted full-text audit
+of three uncited near-misses finds one genuine vector subsystem region, one
+same-channel payload/timing rate pair, and one network IFE composition, but no
+ASMP-4 registry selector; all three require an added architecture mapping.  The
+integrated chain passes 145 tests.  This strengthens the request for normative
 sensor/computation registration without promoting the stochastic boundary
 example or claiming a canonical solution.
 

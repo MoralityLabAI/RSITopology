@@ -32,8 +32,8 @@ python verify_stopping_red_team.py
 python -m pytest -q test_stopping_red_team.py
 ~~~
 
-Expected results are twelve central gates, eleven import-independent checks,
-and 16 focused tests.  Both implementations recompute the rational invariant
+Expected results are fourteen central gates, thirteen import-independent checks,
+and 18 focused tests.  Both implementations recompute the rational invariant
 set, exact transcript counts, selector mutations, and relabeling census.
 
 ## Evidence ledger
@@ -46,11 +46,19 @@ set, exact transcript counts, selector mutations, and relabeling census.
   read, and write languages.
 - Five selector cases distinguish an unmodified three-target source from four
   explicit determinate completions.
+- A bounded audit of the four cited primary works finds four single charged
+  information resources, zero separate charged write ports, and zero ASMP-4
+  two-port registry selectors.  Tatikonda and Mitter explicitly show
+  information-pattern sensitivity.
+- A targeted audit of three uncited near-misses checks one genuine multirate
+  region, one same-channel dual-rate theorem, and one network IFE composition.
+  All three require an added architecture mapping and supply zero ASMP-4
+  registry selectors.
 - All 2,304 mode/action/read-symbol relabelings pass across 193,536 mode words
   per registry.
-- Twelve adversarial objections have zero unresolved cases.
+- Fourteen adversarial objections have zero unresolved cases.
 - The predecessor inventory is 127 tests across ten packages; the integrated
-  chain including v0.10 is 143 tests.
+  chain including v0.10 is 145 tests.
 
 ## Scope caveats a reviewer should preserve
 
@@ -63,7 +71,10 @@ set, exact transcript counts, selector mutations, and relabeling census.
    union is an added normative selector, not language present in the source.
 4. The package diagnoses semantic underdetermination.  It does not claim that
    any conditional region is the intended canonical ASMP-4 answer.
-5. External field review remains absent.
+5. The four-source audit is bounded to ASMP-4's citations; exhaustive literature
+   review and external field review remain absent.
+6. The three-source near-miss search is targeted, not exhaustive, and rejects
+   only those inspected applicability mappings.  It is not external review.
 
 ## Falsification conditions
 

@@ -14,7 +14,9 @@
 | Machine index | Non-normative, draft, ungraduated, no selector key | Reproduced |
 | Stochastic scope | General-setting boundary; not positive NHIM witness | Firewalled |
 | Thin/robust scope | Thin `K_0` permitted; robust graduation remains unsatisfied | Firewalled |
-| Adversarial matrix | Twelve challenges | 12/12 resolved |
+| Cited prior art | Four primary definitions; one charged resource each; no two-port selector | Bounded audit |
+| Targeted near-miss literature | Three primary full-text definition reviews; all require added architecture mapping | 3/3 inapplicable as inherited selectors |
+| Adversarial matrix | Fourteen challenges | 14/14 resolved |
 | Predecessor harness | Ten packages, 127 tests | Inventoried |
 
 V0.9's five-requirement evidence atlas remains conditional rather than a full

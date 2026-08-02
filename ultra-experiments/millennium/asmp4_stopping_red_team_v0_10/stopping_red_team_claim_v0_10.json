@@ -26,8 +26,26 @@
     "orthogonal_specification_gap": true
   },
   "counterargument_audit": {
-    "cases": 12,
+    "cases": 14,
     "unresolved": 0
+  },
+  "cited_prior_art_scope_audit": {
+    "canonical_primary_sources": 4,
+    "single_charged_information_resources": 4,
+    "separate_write_ports_charged": 0,
+    "asmp4_two_port_registry_selectors": 0,
+    "explicit_information_pattern_sensitivity_sources": 1,
+    "external_expert_review": false
+  },
+  "targeted_literature_near_miss_audit": {
+    "reviewed_primary_near_misses": 3,
+    "genuine_multirate_regions": 1,
+    "same_channel_multiple_rate_notions": 1,
+    "network_ife_compositions": 1,
+    "asmp4_registry_selectors": 0,
+    "full_text_definition_reviews": 3,
+    "exhaustive_search": false,
+    "external_expert_review": false
   },
   "selector_mutations": {
     "cases": 5,
@@ -53,7 +71,7 @@
     "normative sensor/computation registry",
     "attributable proof error in the primary sensor fork",
     "new canonical clause that selects one existing completion",
-    "new registered class that invalidates the finite completion analysis"
+    "an attributable theorem or new registered class that invalidates the finite completion analysis"
   ],
   "nonclaim": "The stochastic diagonal is not asserted to be a normally hyperbolic positive-conjecture witness, and ASMP-4 is not claimed canonically resolved."
 }

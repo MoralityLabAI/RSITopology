@@ -18,6 +18,10 @@ V06 = ROOT / "asmp4_registration_fork_v0_6" / "registration_claim_v0_6.json"
 V08 = ROOT / "asmp4_randomness_quantifier_boundary_v0_8" / "randomness_claim_v0_8.json"
 V09 = ROOT / "asmp4_completion_atlas_v0_9" / "completion_atlas_claim_v0_9.json"
 CLAIM = HERE / "stopping_red_team_claim_v0_10.json"
+PRIOR_RECEIPT = HERE / "prior_art_scope_receipt_v0_10.json"
+PRIOR_DOCUMENT = HERE / "EXTERNAL_PRIOR_ART_SCOPE_v0_10.md"
+TARGETED_RECEIPT = HERE / "targeted_literature_near_miss_receipt_v0_10.json"
+TARGETED_DOCUMENT = HERE / "TARGETED_LITERATURE_NEAR_MISSES_v0_10.md"
 
 SEALS = {
     SOURCE: "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
@@ -137,6 +141,161 @@ def independent_scope_parser() -> dict[str, Any]:
         and "support zero error" not in whole,
     }
     return {"checks": checks, "pass": all(checks.values())}
+
+
+def independent_prior_art_scope() -> dict[str, Any]:
+    """Verify the frozen four-source audit without importing central code."""
+
+    receipt = _load(PRIOR_RECEIPT)
+    source = SOURCE.read_text(encoding="utf-8")
+    document = PRIOR_DOCUMENT.read_text(encoding="utf-8")
+    normalized_document = " ".join(document.casefold().split())
+    rows = receipt.get("sources", [])
+    by_id = {row.get("id"): row for row in rows}
+    expected_ids = {
+        "tatikonda_mitter_2004",
+        "colonius_kawan_control_2009",
+        "colonius_kawan_outputs_2011",
+        "tomar_rungger_zamani_2019",
+    }
+    expected_canonical_urls = {
+        "https://doi.org/10.1109/TAC.2004.831187",
+        "https://doi.org/10.1137/080713902",
+        "https://doi.org/10.1007/s00498-011-0056-9",
+        "https://arxiv.org/abs/1706.05242",
+    }
+    totals = receipt.get("totals", {})
+    checks = {
+        "receipt_schema": receipt.get("schema_version")
+        == "asmp4_external_prior_art_scope_receipt_v0_10",
+        "exact_source_ids": set(by_id) == expected_ids and len(rows) == 4,
+        "exact_canonical_urls": {row.get("canonical_citation_url") for row in rows}
+        == expected_canonical_urls,
+        "canonical_links_occur_in_source": all(
+            f"]({url})" in source for url in expected_canonical_urls
+        ),
+        "primary_links_occur_in_document": all(
+            f"]({row.get('primary_full_text_url')})" in document for row in rows
+        ),
+        "every_row_has_checked_pages_and_hash": all(
+            len(row.get("checked_pages", [])) >= 2
+            and len(row.get("local_pdf_sha256", "")) == 64
+            for row in rows
+        ),
+        "four_single_resources": sum(
+            row.get("single_charged_resource") is True for row in rows
+        )
+        == 4,
+        "zero_separate_write_ports": sum(
+            row.get("separate_controller_to_actuator_write_port_charged") is True
+            for row in rows
+        )
+        == 0,
+        "zero_two_port_selectors": sum(
+            row.get("selects_asmp4_read_write_registry") is True for row in rows
+        )
+        == 0,
+        "one_information_pattern_sensitivity_source": {
+            row.get("id")
+            for row in rows
+            if row.get("explicit_information_pattern_sensitivity") is True
+        }
+        == {"tatikonda_mitter_2004"},
+        "frozen_totals": totals
+        == {
+            "canonical_primary_sources": 4,
+            "single_charged_information_resources": 4,
+            "separate_write_ports_charged": 0,
+            "asmp4_two_port_registry_selectors": 0,
+            "explicit_information_pattern_sensitivity_sources": 1,
+            "external_expert_review": False,
+        },
+        "bounded_nonclaims": all(
+            marker in normalized_document
+            for marker in (
+                "not an exhaustive literature search",
+                "not external expert review",
+                "does not prove that no later theorem could add a selector",
+            )
+        ),
+    }
+    return {
+        "source_ids": sorted(by_id),
+        "totals": totals,
+        "checks": checks,
+        "pass": all(checks.values()),
+    }
+
+
+def independent_targeted_literature_near_misses() -> dict[str, Any]:
+    """Independently verify the bounded three-source near-miss receipt."""
+
+    receipt = _load(TARGETED_RECEIPT)
+    document = TARGETED_DOCUMENT.read_text(encoding="utf-8")
+    normalized_document = " ".join(document.casefold().split())
+    rows = receipt.get("sources", [])
+    by_id = {row.get("id"): row for row in rows}
+    expected_ids = {
+        "kawan_delvenne_network_entropy_2016",
+        "khojasteh_timing_information_2020",
+        "tomar_zamani_compositional_ife_2020",
+    }
+    expected_primary_urls = {
+        "https://arxiv.org/pdf/1409.6037",
+        "https://arxiv.org/pdf/1609.09594",
+        "https://edoc.ub.uni-muenchen.de/28710/1/Tomar_Mahendra_Singh.pdf",
+    }
+    expected_totals = {
+        "reviewed_primary_near_misses": 3,
+        "genuine_multirate_regions": 1,
+        "same_channel_multiple_rate_notions": 1,
+        "network_ife_compositions": 1,
+        "asmp4_registry_selectors": 0,
+        "full_text_definition_reviews": 3,
+        "exhaustive_search": False,
+        "external_expert_review": False,
+    }
+    checks = {
+        "receipt_schema": receipt.get("schema_version")
+        == "asmp4_targeted_literature_near_miss_receipt_v0_10",
+        "exact_source_ids": set(by_id) == expected_ids and len(rows) == 3,
+        "exact_primary_urls": {row.get("primary_url") for row in rows}
+        == expected_primary_urls,
+        "primary_links_occur_in_document": all(
+            f"]({url})" in document for url in expected_primary_urls
+        ),
+        "every_row_has_three_page_anchors_and_hash": all(
+            len(row.get("checked_pages", [])) >= 3
+            and len(row.get("local_pdf_sha256", "")) == 64
+            for row in rows
+        ),
+        "all_definition_reviews_complete": all(
+            row.get("full_text_definition_reviewed") is True for row in rows
+        ),
+        "all_require_added_mapping": all(
+            row.get("requires_added_architecture_mapping") is True for row in rows
+        ),
+        "zero_registry_selectors": sum(
+            row.get("selects_asmp4_sensor_computation_registry") is True for row in rows
+        )
+        == 0,
+        "frozen_totals": receipt.get("totals") == expected_totals,
+        "bounded_nonclaims": all(
+            marker in normalized_document
+            for marker in (
+                "not an exhaustive literature search",
+                "not external expert review",
+                "only the applicability of the three inspected near-misses is rejected",
+            )
+        )
+        and len(receipt.get("nonclaims", [])) == 3,
+    }
+    return {
+        "source_ids": sorted(by_id),
+        "totals": receipt.get("totals"),
+        "checks": checks,
+        "pass": all(checks.values()),
+    }
 
 
 def independent_index_audit() -> dict[str, Any]:
@@ -393,8 +552,28 @@ def independent_claim_audit() -> dict[str, Any]:
             "stochastic_witness_required"
         ]
         is False,
-        "twelve_resolved": claim["counterargument_audit"]
-        == {"cases": 12, "unresolved": 0},
+        "fourteen_resolved": claim["counterargument_audit"]
+        == {"cases": 14, "unresolved": 0},
+        "cited_prior_art": claim["cited_prior_art_scope_audit"]
+        == {
+            "canonical_primary_sources": 4,
+            "single_charged_information_resources": 4,
+            "separate_write_ports_charged": 0,
+            "asmp4_two_port_registry_selectors": 0,
+            "explicit_information_pattern_sensitivity_sources": 1,
+            "external_expert_review": False,
+        },
+        "targeted_near_misses": claim["targeted_literature_near_miss_audit"]
+        == {
+            "reviewed_primary_near_misses": 3,
+            "genuine_multirate_regions": 1,
+            "same_channel_multiple_rate_notions": 1,
+            "network_ife_compositions": 1,
+            "asmp4_registry_selectors": 0,
+            "full_text_definition_reviews": 3,
+            "exhaustive_search": False,
+            "external_expert_review": False,
+        },
         "selector_mutations": claim["selector_mutations"]
         == {
             "cases": 5,
@@ -426,9 +605,13 @@ def document_sentinels() -> dict[str, Any]:
         "stopping": (HERE / "STOPPING_ARGUMENT_v0_10.md").read_text(encoding="utf-8"),
         "audit": (HERE / "COMPLETION_AUDIT_v0_10.md").read_text(encoding="utf-8"),
         "prior": (HERE / "PRIOR_ART_AUDIT_v0_10.md").read_text(encoding="utf-8"),
+        "external": PRIOR_DOCUMENT.read_text(encoding="utf-8"),
+        "targeted": TARGETED_DOCUMENT.read_text(encoding="utf-8"),
         "reviewer": (HERE / "REVIEWER_PACKET_v0_10.md").read_text(encoding="utf-8"),
     }
     normalized_result = " ".join(documents["result"].split())
+    normalized_external = " ".join(documents["external"].split())
+    normalized_targeted = " ".join(documents["targeted"].split())
     checks = {
         "minimal_theorem": "sensor-only minimal stopping theorem"
         in documents["theorem"].casefold(),
@@ -436,13 +619,21 @@ def document_sentinels() -> dict[str, Any]:
         in documents["theorem"],
         "thirteen": "13 of 13" in documents["theorem"],
         "nhim": "NHIM" in documents["theorem"],
-        "twelve_challenges": "twelve adversarial counterarguments" in normalized_result,
+        "fourteen_challenges": "fourteen adversarial counterarguments"
+        in normalized_result,
         "relabelings": "2,304 coordinate and symbol relabelings" in normalized_result,
         "tests": "127 predecessor tests" in documents["result"],
         "registry": "normative sensor/computation registry" in documents["stopping"],
         "four_reopening": "four reopening conditions" in documents["stopping"],
         "primary": "Primary witness" in documents["audit"],
         "nonclaim": "does not claim" in documents["prior"],
+        "external_scope": "four control-under-information-constraints works"
+        in normalized_external
+        and "not an exhaustive literature search" in normalized_external
+        and "not external expert review" in normalized_external,
+        "targeted_near_misses": "three strongest near-misses" in normalized_targeted
+        and "not an exhaustive literature search" in normalized_targeted
+        and "not external expert review" in normalized_targeted,
         "reviewer_commands": all(
             command in documents["reviewer"]
             for command in (
@@ -453,7 +644,7 @@ def document_sentinels() -> dict[str, Any]:
         ),
         "reviewer_caveats": "Scope caveats a reviewer should preserve"
         in documents["reviewer"]
-        and "External field review remains absent" in documents["reviewer"],
+        and "external field review remain absent" in documents["reviewer"].casefold(),
     }
     return {"checks": checks, "pass": all(checks.values())}
 
@@ -461,6 +652,8 @@ def document_sentinels() -> dict[str, Any]:
 def independent_report() -> dict[str, Any]:
     integrity = independent_integrity()
     scope = independent_scope_parser()
+    prior = independent_prior_art_scope()
+    near_misses = independent_targeted_literature_near_misses()
     index = independent_index_audit()
     sensor = independent_sensor_replay()
     coordinates = independent_coordinate_relabeling()
@@ -472,21 +665,25 @@ def independent_report() -> dict[str, Any]:
     checks = {
         "I0_resource_integrity": integrity["pass"],
         "I1_line_state_scope_parser": scope["pass"],
-        "I2_machine_index_audit": index["pass"],
-        "I3_sensor_witness_replay": sensor["pass"],
-        "I4_coordinate_relabeling": coordinates["pass"],
-        "I5_stochastic_scope_firewall": stochastic["pass"],
-        "I6_selector_mutations": selectors["pass"],
-        "I7_test_inventory": tests["pass"],
-        "I8_frozen_claim": claim["pass"],
-        "I9_document_sentinels": docs["pass"],
-        "I10_minimal_proof_is_sensor_only": sensor["pass"]
+        "I2_cited_prior_art_scope": prior["pass"],
+        "I3_targeted_literature_near_misses": near_misses["pass"],
+        "I4_machine_index_audit": index["pass"],
+        "I5_sensor_witness_replay": sensor["pass"],
+        "I6_coordinate_relabeling": coordinates["pass"],
+        "I7_stochastic_scope_firewall": stochastic["pass"],
+        "I8_selector_mutations": selectors["pass"],
+        "I9_test_inventory": tests["pass"],
+        "I10_frozen_claim": claim["pass"],
+        "I11_document_sentinels": docs["pass"],
+        "I12_minimal_proof_is_sensor_only": sensor["pass"]
         and stochastic["minimal_proof_dependency"] is False,
     }
     return {
         "schema_version": "asmp4_stopping_red_team_independent_v0_10",
         "resource_integrity": integrity,
         "canonical_scope": scope,
+        "cited_prior_art_scope": prior,
+        "targeted_literature_near_misses": near_misses,
         "machine_index": index,
         "sensor_replay": sensor,
         "coordinate_relabeling": coordinates,

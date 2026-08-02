@@ -9,11 +9,13 @@ from stopping_red_team import (
     counterargument_matrix,
     machine_index_report,
     minimal_stopping_theorem,
+    prior_art_scope_report,
     primary_sensor_witness_report,
     resource_integrity_report,
     selector_mutation_report,
     stochastic_scope_firewall_report,
     stopping_red_team_report,
+    targeted_literature_near_miss_report,
     test_inventory_report as predecessor_test_inventory_report,
     verification_gates,
 )
@@ -23,11 +25,13 @@ from verify_stopping_red_team import (
     independent_coordinate_relabeling,
     independent_index_audit,
     independent_integrity,
+    independent_prior_art_scope,
     independent_report,
     independent_scope_parser,
     independent_selector_mutations,
     independent_sensor_replay,
     independent_stochastic_firewall,
+    independent_targeted_literature_near_misses,
     independent_test_inventory,
 )
 
@@ -47,6 +51,36 @@ def test_two_parsers_partition_canonical_scope() -> None:
     assert independent["pass"]
     assert central["checks"]["positive_conjecture_is_registered_nhim"]
     assert central["checks"]["boundary_task_names_nonhyperbolicity"]
+
+
+def test_four_cited_primary_sources_supply_no_two_port_registry_selector() -> None:
+    central = prior_art_scope_report()
+    independent = independent_prior_art_scope()
+    assert central["pass"]
+    assert independent["pass"]
+    assert central["totals"] == independent["totals"]
+    assert central["totals"]["canonical_primary_sources"] == 4
+    assert central["totals"]["single_charged_information_resources"] == 4
+    assert central["totals"]["separate_write_ports_charged"] == 0
+    assert central["totals"]["asmp4_two_port_registry_selectors"] == 0
+    assert central["totals"]["explicit_information_pattern_sensitivity_sources"] == 1
+    assert central["totals"]["external_expert_review"] is False
+
+
+def test_three_targeted_near_misses_require_added_architecture_mapping() -> None:
+    central = targeted_literature_near_miss_report()
+    independent = independent_targeted_literature_near_misses()
+    assert central["pass"]
+    assert independent["pass"]
+    assert central["totals"] == independent["totals"]
+    assert central["totals"]["reviewed_primary_near_misses"] == 3
+    assert central["totals"]["genuine_multirate_regions"] == 1
+    assert central["totals"]["same_channel_multiple_rate_notions"] == 1
+    assert central["totals"]["network_ife_compositions"] == 1
+    assert central["totals"]["asmp4_registry_selectors"] == 0
+    assert central["totals"]["full_text_definition_reviews"] == 3
+    assert central["totals"]["exhaustive_search"] is False
+    assert central["totals"]["external_expert_review"] is False
 
 
 def test_machine_index_cannot_supply_either_selector() -> None:
@@ -134,10 +168,10 @@ def test_explicit_selector_mutations_make_the_target_determinate() -> None:
     assert central["rows"][-1]["selected_target"] == ("[1,infinity) x [1,infinity)")
 
 
-def test_all_twelve_adversarial_counterarguments_are_resolved() -> None:
+def test_all_fourteen_adversarial_counterarguments_are_resolved() -> None:
     report = counterargument_matrix()
     assert report["pass"]
-    assert report["count"] == 12
+    assert report["count"] == 14
     assert report["unresolved"] == []
     assert all(row["resolved"] for row in report["rows"])
 
@@ -170,12 +204,12 @@ def test_documents_and_independent_report_pass() -> None:
     assert document_sentinels()["pass"]
     report = independent_report()
     assert report["pass"]
-    assert len(report["checks"]) == 11
+    assert len(report["checks"]) == 13
 
 
-def test_complete_red_team_report_passes_all_twelve_gates() -> None:
+def test_complete_red_team_report_passes_all_fourteen_gates() -> None:
     report = stopping_red_team_report()
     gates = verification_gates(report)
     assert report["pass"]
-    assert len(gates) == 12
+    assert len(gates) == 14
     assert all(gates.values())

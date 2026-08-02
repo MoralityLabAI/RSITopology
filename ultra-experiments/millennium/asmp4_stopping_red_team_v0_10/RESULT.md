@@ -23,6 +23,24 @@ The canonical Markdown does not select either domain, and the machine index is
 explicitly non-normative and ungraduated.  A union of registries is not an
 implicit repair; it is a third, also-unselected completion.
 
+A bounded primary-source audit covers all four control-under-information-
+constraints works cited by ASMP-4.  Each defines one charged information
+resource: a single sensor-to-controller alphabet or a single spanning-set
+cardinality.  None charges a separate controller-to-actuator transcript or
+selects the ASMP-4 raw/computed registry.  Tatikonda and Mitter instead provide
+direct evidence that changing the encoder information pattern can change the
+required rate.  This is a cited-source scope check, not an exhaustive literature
+search or external expert review.
+
+A targeted audit then checks three strong neighboring results that are not in
+the canonical citation list.  Kawan-Delvenne's genuine vector rate region uses
+coordinates for direct-product plant subsystems; Khojasteh et al.'s two rates
+measure payload versus payload-plus-timing on one sensor-controller channel;
+and Tomar-Zamani's compositional bound sums scalar IFEs for plant subsystems.
+None supplies an ASMP-4 read/write registry selector.  Importing any of the
+three requires an additional architecture mapping and sensor-domain choice.
+This targeted search is explicitly non-exhaustive and is not external review.
+
 Five selector mutations make this precise.  The unmodified source admits three
 distinct targets.  Explicit computed-only, relational-only, raw-only, and
 union selectors each make the target determinate; the union selects the
@@ -34,7 +52,7 @@ four selectors occurs in the normative source.
 Central and import-independent implementations reconstruct the source scope,
 machine-index status, rational polynomial embedding, exact mode-word counts
 through horizon six, and the two regions.  They seal five resources, resolve
-twelve adversarial counterarguments with zero unresolved cases, and inventory
+fourteen adversarial counterarguments with zero unresolved cases, and inventory
 127 predecessor tests across ten packages.
 
 A separate coordinate audit exhausts all 2,304 coordinate and symbol
