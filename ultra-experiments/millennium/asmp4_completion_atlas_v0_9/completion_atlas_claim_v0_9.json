@@ -1,0 +1,53 @@
+{
+  "schema_version": "asmp4_completion_atlas_claim_v0_9",
+  "status": "conditional mathematical coverage complete; canonical target semantically underdetermined",
+  "sealed_resources": {
+    "count": 8,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_2_claim_sha256": "2d0979b370b93aeb047fafcbe86ee1afdbd1afb3ce9fbe31c8964f65976225e9",
+    "v0_3_claim_sha256": "eb56ebbbccc2f088e09ccc5a6ff55f6403dcdf54ef47d9879dc207285cf31da1",
+    "v0_4_claim_sha256": "e7e05f47bfd5fd715e1a39c4d0ec272ca8cbeedd0af6a3b50072c819064d7784",
+    "v0_5_claim_sha256": "f37212d37353f9a1af577fe976c412117d0d67bb833100205fc17c8892a84996",
+    "v0_6_claim_sha256": "812c17f913c1e498d835c13430b7880b95a188496333b48355883f0fe634c5a5",
+    "v0_7_claim_sha256": "6cf4f5c04e789a75510cb1ff032a1ce764312ab8969ae97e32126f4685870749",
+    "v0_8_claim_sha256": "0cfce1a8751eae64ba746e7a773eb1cee48355c5168465c4a208c2fa07b1cf16"
+  },
+  "canonical_requirements": {
+    "count": 5,
+    "conditional_evidence_coverage": 5,
+    "canonical_completion_proven": 0
+  },
+  "normative_source_gaps": [
+    "registered sensor/computation domain",
+    "randomness/disturbance quantifier order"
+  ],
+  "model_completion_atlas": {
+    "sensor_models": 3,
+    "sensor_distinct_targets": 3,
+    "stochastic_models": 3,
+    "stochastic_distinct_targets": 2,
+    "independent_missing_dimensions": 2
+  },
+  "sensor_targets": {
+    "computed": "[1,infinity) x [1,infinity)",
+    "adaptive_relational": "nonrectangular log2(3)-to-(2,1) wedge",
+    "forced_raw": "[2,infinity) x [1,infinity)"
+  },
+  "stochastic_targets": {
+    "per_disturbance_almost_sure": "origin achievable",
+    "uniform_or_support_zero_error": "infeasible"
+  },
+  "test_inventory": {
+    "predecessor_packages": 9,
+    "predecessor_tests": 112
+  },
+  "underdetermination_decision": "canonical_asmp4_target_not_semantically_determinate",
+  "stopping_decision": "stop_local_enumeration_and_request_normative_registration",
+  "reopening_conditions": [
+    "normative sensor/computation registry",
+    "normative probability/disturbance order",
+    "new unreduced registered plant class",
+    "attributable external proof error"
+  ],
+  "nonclaim": "This atlas does not assert that any one completion is the intended canonical ASMP-4 problem."
+}

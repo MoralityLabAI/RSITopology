@@ -90,3 +90,9 @@ python -m pytest -q test_registration_fork.py
 
 The integrated ASMP-4 run now contains 81 tests across seven generations and
 11 central/independent audit programs, plus the frozen v0.1 receipt replay.
+
+The [v0.7 relational-action successor](../asmp4_relational_action_frontier_v0_7/RESULT.md)
+closes the nonunique-safe-action seam and proves a third, genuinely
+nonrectangular registration region without weakening this package's scope
+firewall. It also derandomizes every zero-error observation support under the
+same charged-language convention.

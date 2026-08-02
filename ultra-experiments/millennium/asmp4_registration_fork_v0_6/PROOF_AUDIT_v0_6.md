@@ -140,6 +140,13 @@ policy and direct action emission attain both simultaneously, yielding
 
 This proof does not turn the registration-dependent result into one canonical
 region across incompatible sensor grammars. It does not cover noisy channels,
-randomized observation kernels, nonunique safe-action correspondences,
-continuous belief spaces, or every normally hyperbolic nonlinear plant. It
-also does not claim the entropy-game positional theorem as new.
+randomized observation kernels, continuous belief spaces, or every normally
+hyperbolic nonlinear plant.
+It also does not claim the entropy-game positional theorem as new.
+
+The v0.7 relational-action successor closes the nonunique-safe-action seam for
+one exact full-reset grammar. Its concave-moment converse permits arbitrary
+public read-history adaptation and yields a genuinely nonrectangular region;
+its support-derandomization theorem also closes randomized observation kernels
+under zero-error support-cardinality accounting. That successor is separate
+from the unique-action Theorems 4-6 audited here.

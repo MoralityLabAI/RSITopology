@@ -154,6 +154,15 @@ credited to the entropy-game literature in `PRIOR_ART_AUDIT_v0_6.md`; the
 ASMP-4 contribution is the exact belief/partition reduction and two-port
 consequence.
 
+The v0.7 relational-action successor removes unique safe actions as a scope
+loophole. On one four-mode full-reset plant it proves an exact nonrectangular
+adaptive region between `(log2 3,log2 3)` and `(2,1)`, while the computed and
+raw registrations on that same plant remain distinct rectangles. This
+successor also proves that zero-error randomized observation supports contain
+a deterministic safe subtree with no larger port languages. These results
+strengthen the registration stopping conclusion without changing any v0.6
+claim.
+
 Two independent implementations exhaust all 120,050 three-mode two-partition
 grammar cases at horizon four. They find 99,524 adaptively feasible cases,
 including 1,572 with no feasible fixed member, and 4,863 strict improvements

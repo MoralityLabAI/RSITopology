@@ -131,6 +131,14 @@ inside either branch can improve regression coverage but cannot establish that
 the other branch was not intended. The missing bit is not mathematical data;
 it is the quantifier over admitted sensor grammars.
 
+The v0.7 successor explicitly attacks the nonunique-safe-action loophole. It
+finds and proves a third, nonrectangular exact region on the same plant under a
+two-partition adaptive grammar, alongside computed and raw rectangles. Thus
+architecture-dependent tradeoffs enlarge the classified family but still do
+not select the omitted canonical grammar. Its support-derandomization theorem
+also rules out zero-error randomized observation kernels as a way around the
+support-cardinality fork.
+
 ## Conditions for productive continuation
 
 Reopen the canonical lane when one of the following is supplied:

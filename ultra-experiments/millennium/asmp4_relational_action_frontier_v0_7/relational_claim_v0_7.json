@@ -1,0 +1,85 @@
+{
+  "schema_version": "asmp4_relational_action_frontier_claim_v0_7",
+  "status": "exact conditional nonrectangular region; canonical registry remains underdetermined",
+  "plant": {
+    "modes": [0, 1, 2, 3],
+    "actions": ["a", "d", "e"],
+    "safe_action_relation": {
+      "0": ["a", "d"],
+      "1": ["a", "e"],
+      "2": ["d"],
+      "3": ["e"]
+    },
+    "disturbance": "full adversarial reset after every safe action",
+    "metric": "log2 cardinality of complete read and write transcript languages"
+  },
+  "registered_adaptive_grammar": {
+    "coarse_partition": [[0, 1], [2], [3]],
+    "raw_partition": [[0], [1], [2], [3]],
+    "selection_rule": "either partition may be selected from arbitrary public read history",
+    "safe_local_schemes": 5,
+    "nondominated_local_count_pairs": [[3, 3], [4, 2]]
+  },
+  "finite_horizon_converse": {
+    "theta": "log2(3/2)",
+    "read_bound": "R_T >= 3^T",
+    "write_bound": "W_T >= 2^T",
+    "joint_bound": "R_T^theta W_T^(1-theta) >= 3^T",
+    "potential": "Phi_theta(c)=sum_w c_w^theta"
+  },
+  "exact_closed_region": {
+    "read": "r_read >= log2(3)",
+    "write": "r_write >= 1",
+    "tradeoff": "theta*r_read + (1-theta)*r_write >= log2(3)",
+    "pareto_endpoints": [["log2(3)", "log2(3)"], ["2", "1"]],
+    "nonrectangular": true
+  },
+  "minimality_census": {
+    "relations_through_four_modes": 2800,
+    "feasible_relation_partition_cells": 24221,
+    "strict_tradeoff_relations_at_four_modes": 72,
+    "strict_tradeoff_partition_pairs": 72,
+    "first_tradeoff_signature": "(3,3)->(4,2)"
+  },
+  "adaptive_tree_census": {
+    "maximum_horizon": 3,
+    "horizon_three_candidates": 84672,
+    "horizon_three_states": 1872,
+    "horizon_three_frontier": [[27, 27], [28, 26], [29, 25], [30, 24], [31, 23], [32, 22], [33, 21], [34, 20], [35, 19], [36, 18], [38, 17], [40, 16], [42, 15], [44, 14], [46, 13], [48, 12], [52, 11], [56, 10], [60, 9], [64, 8]]
+  },
+  "randomized_kernel_census": {
+    "support_alphabet_sizes": [1, 2, 3, 4],
+    "support_kernels": 53108,
+    "surjective_support_kernels": 43744,
+    "zero_error_feasible": 994,
+    "genuinely_randomized_feasible": 950,
+    "deterministic_sensor_maps_checked": 4280,
+    "controller_support_kernels_checked": 3058,
+    "derandomization_failures": 0
+  },
+  "three_registry_regions": {
+    "all_computed_partitions": "[1,infinity) x [1,infinity)",
+    "coarse_or_raw_history_adaptive": "r>=log2(3), w>=1, theta*r+(1-theta)*w>=log2(3)",
+    "forced_raw": "[2,infinity) x [1,infinity)"
+  },
+  "continuous_embedding": {
+    "dynamics": "n_next=(3/2)n+H(z,u), z_next=w",
+    "coupling": "H(z,u)=sum_i L_i(z)h_i(u)",
+    "normal_multiplier": "3/2",
+    "safe_registered_pairs": 6,
+    "unsafe_registered_pairs": 6,
+    "safe_pair_control_derivatives_nonzero": true
+  },
+  "robustness": {
+    "prefix_free_worst_case": "same asymptotic region with less than one bit finite overhead per complete port transcript",
+    "independent_shared_randomness": "no improvement under worst-seed, seed-averaged-log, or union-alphabet conventions when zero-error safety is retained",
+    "randomized_observation_kernels": "every zero-error finite/countable support kernel has a deterministic safe subtree with no larger read or write support language"
+  },
+  "canonical_disposition": "The relational theorem closes one nonunique-action grammar and strengthens the registration fork, but it cannot choose the canonical sensor registry omitted by v0.1.",
+  "nonclaims": [
+    "noisy or positive-error safety",
+    "state-correlated shared randomness",
+    "continuous belief spaces beyond the exact rational embedding",
+    "a registration-independent canonical ASMP-4 region"
+  ]
+}
