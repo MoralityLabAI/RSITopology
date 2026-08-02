@@ -39,3 +39,8 @@ attributable proof error.
 
 This is a rigorous stopping certificate and negative well-posedness result,
 not a claim that one conditional region resolves the intended ASMP-4 problem.
+
+The [v0.10 stopping red team](../asmp4_stopping_red_team_v0_10/RESULT.md)
+strengthens this disposition: after fire-walling the stochastic diagonal from
+positive-NHIM use, the same-plant sensor fork alone still proves semantic
+underdetermination and resolves nine adversarial objections.

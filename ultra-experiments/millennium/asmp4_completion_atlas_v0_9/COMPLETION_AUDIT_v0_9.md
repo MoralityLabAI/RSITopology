@@ -26,3 +26,7 @@ a proof-backed stopping certificate and exact well-posedness diagnosis.
 V0.9 does not merge incompatible regions, choose a preferred completion, or
 claim external peer review.  It preserves every predecessor scope condition
 and invalidates itself if any sealed source or claim changes.
+
+The [v0.10 red-team audit](../asmp4_stopping_red_team_v0_10/COMPLETION_AUDIT_v0_10.md)
+separately verifies that the minimal stopping theorem uses only the rational
+NHIM sensor fork and no stochastic-witness premise.

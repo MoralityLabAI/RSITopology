@@ -40,3 +40,7 @@ Resume only for a normative sensor registry, normative stochastic order, new
 unreduced registered class, or attributable external proof error.  Merely
 increasing horizon, state count, alphabet size, or Monte Carlo budget does not
 meet this contract.
+
+The [v0.10 adversarial audit](../asmp4_stopping_red_team_v0_10/STOPPING_ARGUMENT_v0_10.md)
+shows that this stop does not depend on treating the v0.8 stochastic diagonal
+as an NHIM witness: the primary sensor fork alone suffices.

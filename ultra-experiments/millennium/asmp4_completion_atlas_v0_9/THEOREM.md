@@ -139,3 +139,7 @@ premises:
 
 Until then, the mathematically justified action is to stop local enumeration
 and request normative registration.
+
+The [v0.10 stopping red team](../asmp4_stopping_red_team_v0_10/THEOREM.md)
+adversarially removes the stochastic diagonal from the minimal proof and shows
+that the same-plant rational NHIM sensor fork alone establishes this conclusion.

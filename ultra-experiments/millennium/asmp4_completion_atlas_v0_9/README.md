@@ -8,6 +8,8 @@ requirement-by-requirement stopping certificate.
 - [COMPLETION_AUDIT_v0_9.md](COMPLETION_AUDIT_v0_9.md): requirement matrix
 - [STOPPING_ARGUMENT_v0_9.md](STOPPING_ARGUMENT_v0_9.md): reopening contract
 - [completion_atlas_claim_v0_9.json](completion_atlas_claim_v0_9.json): frozen claim
+- [v0.10 stopping red team](../asmp4_stopping_red_team_v0_10/RESULT.md):
+  adversarial scope and dependency audit
 
 Run:
 

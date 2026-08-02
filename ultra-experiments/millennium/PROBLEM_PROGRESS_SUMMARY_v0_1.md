@@ -107,6 +107,23 @@ while v0.9 passes eleven central and eight independent gates.  This supports
 stopping further local enumeration and requesting normative registration; it
 does not claim a full canonical ASMP-4 resolution.
 
+**ASMP-4 v0.10 adversarial stopping audit.** The
+[stopping red team](asmp4_stopping_red_team_v0_10/RESULT.md) removes the v0.8
+stochastic diagonal from the minimal proof because that fixture is not a
+positive-NHIM classification.  The stopping conclusion still follows from the
+v0.6 primary witness alone: two sensor-domain completions on the same rational
+NHIM/local-control plant satisfy all 13 explicit architecture obligations but
+have distinct exact regions `[1,infinity) x [1,infinity)` and
+`[2,infinity) x [1,infinity)`.  Central and import-independent replays seal five
+resources, reconstruct 5,460 mode words per registry through horizon six, and
+resolve twelve adversarial objections with zero unresolved cases.  Five
+selector mutations show that computed, relational, raw, or union choices make
+the target determinate only by adding a clause absent from the source.  All
+2,304 mode/action/read-symbol relabelings preserve both regions with zero
+failures.  The integrated chain passes 143 tests.  This strengthens the request for normative
+sensor/computation registration without promoting the stochastic boundary
+example or claiming a canonical solution.
+
 ## ASMP-1 evidence chain
 
 ### 1. Finite-chain identifiability seed

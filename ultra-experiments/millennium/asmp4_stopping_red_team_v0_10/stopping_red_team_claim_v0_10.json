@@ -1,0 +1,59 @@
+{
+  "schema_version": "asmp4_stopping_red_team_claim_v0_10",
+  "status": "minimal sensor-only stopping theorem survives adversarial scope audit",
+  "sealed_resources": {
+    "count": 5,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "machine_index_sha256": "30ff673486b140c178d279eb100c81a46c849ba5b9955eddee16c83824d43ee0",
+    "v0_6_claim_sha256": "812c17f913c1e498d835c13430b7880b95a188496333b48355883f0fe634c5a5",
+    "v0_8_claim_sha256": "0cfce1a8751eae64ba746e7a773eb1cee48355c5168465c4a208c2fa07b1cf16",
+    "v0_9_claim_sha256": "1be836878a75d3537f80974b3bd9a674f67cc8de1ed723622c719bee756e8d4d"
+  },
+  "primary_witness": {
+    "scope": "registered rational NHIM/local-control sensor-domain fork",
+    "same_plant": true,
+    "compact_safe_manifold": "K=K_0={0} x {-3,-1,1,3}",
+    "bounded_uncertainty": true,
+    "unique_safe_binary_control": true,
+    "source_obligations_per_model": 13,
+    "computed_region": "[1,infinity) x [1,infinity)",
+    "raw_region": "[2,infinity) x [1,infinity)",
+    "stochastic_witness_required": false
+  },
+  "stochastic_scope_firewall": {
+    "general_definition_counterexample": true,
+    "positive_nhim_conjecture_witness": false,
+    "orthogonal_specification_gap": true
+  },
+  "counterargument_audit": {
+    "cases": 12,
+    "unresolved": 0
+  },
+  "selector_mutations": {
+    "cases": 5,
+    "canonical_targets": 3,
+    "union_target": "[1,infinity) x [1,infinity)",
+    "source_selector_present": false
+  },
+  "coordinate_relabeling_audit": {
+    "cases": 2304,
+    "horizons": [1, 2, 3],
+    "mode_words_per_registry": 193536,
+    "failures": 0,
+    "computed_region": "[1,infinity) x [1,infinity)",
+    "raw_region": "[2,infinity) x [1,infinity)"
+  },
+  "test_inventory": {
+    "predecessor_packages": 10,
+    "predecessor_tests": 127
+  },
+  "decision": "stop_local_enumeration_and_request_normative_registration",
+  "minimal_reason": "The v0.6 same-plant sensor fork alone gives two models satisfying the explicit architecture with distinct exact regions.",
+  "reopening_conditions": [
+    "normative sensor/computation registry",
+    "attributable proof error in the primary sensor fork",
+    "new canonical clause that selects one existing completion",
+    "new registered class that invalidates the finite completion analysis"
+  ],
+  "nonclaim": "The stochastic diagonal is not asserted to be a normally hyperbolic positive-conjecture witness, and ASMP-4 is not claimed canonically resolved."
+}
