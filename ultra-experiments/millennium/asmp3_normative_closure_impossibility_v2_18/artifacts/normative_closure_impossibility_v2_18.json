@@ -1,0 +1,913 @@
+{
+  "authority_audit": {
+    "all_checks_pass": true,
+    "authoritative_channels": 1,
+    "authoritative_selecting_channels": 0,
+    "certified": true,
+    "channel_count": 6,
+    "channels": [
+      {
+        "authoritative_for_parent": true,
+        "channel": "canonical_v0_1",
+        "check": true,
+        "evidence": "normative statement is an ungraduated research-agenda definition draft",
+        "selects_one_interface_mode": false
+      },
+      {
+        "authoritative_for_parent": false,
+        "channel": "machine_registry_v0_1",
+        "check": true,
+        "evidence": "registry_is_normative=false",
+        "selects_one_interface_mode": false
+      },
+      {
+        "authoritative_for_parent": false,
+        "channel": "typed_successor_v0_2",
+        "check": true,
+        "evidence": "nonnormative draft exposes both WV-FIX and WV-ADM",
+        "selects_one_interface_mode": false
+      },
+      {
+        "authoritative_for_parent": false,
+        "channel": "protocol_fork_v0_7",
+        "check": true,
+        "evidence": "exact mathematical fork with explicit authorial-intent boundary",
+        "selects_one_interface_mode": false
+      },
+      {
+        "authoritative_for_parent": false,
+        "channel": "consolidated_disposition_v2_17",
+        "check": true,
+        "evidence": "normative_definition=unclosed",
+        "selects_one_interface_mode": false
+      },
+      {
+        "authoritative_for_parent": false,
+        "channel": "external_expert_gate",
+        "check": true,
+        "evidence": "0/2 qualifying teams and no independent team checker",
+        "selects_one_interface_mode": false
+      }
+    ]
+  },
+  "authority_bit_audit": {
+    "bit_interpretation": "0 selects ADM; 1 selects FIX (or the reverse convention)",
+    "certified": true,
+    "completion_modes": [
+      "ADM",
+      "FIX"
+    ],
+    "minimum_external_normative_bits": 1,
+    "one_external_bit_decisive": true,
+    "one_external_bit_partition": [
+      [
+        "ADM"
+      ],
+      [
+        "FIX"
+      ]
+    ],
+    "scope": "selection within the audited binary FIX/ADM fork",
+    "zero_external_bits_decisive": false,
+    "zero_external_bits_partition": [
+      [
+        "ADM",
+        "FIX"
+      ]
+    ]
+  },
+  "certified": true,
+  "claim_boundary": "This is an impossibility theorem for unique, entailment-sound normative closure from the sealed v0.1 source and current authority channels. It does not prove that normative choice is metaphysically impossible, recover authorial intent, or prevent an authorized maintainer from adding one scope axiom. FIX remains the natural strict-freeze repair; choosing it is an amendment unless authority explicitly adopts that reading.",
+  "claim_boundary_audit": {
+    "certified": true,
+    "checks": {
+      "authorized_repair_is_allowed": true,
+      "both_single_axiom_repairs_are_constructed": true,
+      "does_not_claim_authorial_intent": true,
+      "natural_reading_is_not_mislabeled_as_entailment": true,
+      "source_relative_not_metaphysical": true
+    },
+    "statement": "This is an impossibility theorem for unique, entailment-sound normative closure from the sealed v0.1 source and current authority channels. It does not prove that normative choice is metaphysically impossible, recover authorial intent, or prevent an authorized maintainer from adding one scope axiom. FIX remains the natural strict-freeze repair; choosing it is an amendment unless authority explicitly adopts that reading."
+  },
+  "completion_models": [
+    {
+      "added_scope_axiom": "the game interface is fixed before protocol algorithms are quantified",
+      "all_explicit_obligations_satisfied": true,
+      "clause_preserving_completion": true,
+      "explicit_obligations": {
+        "adaptive_query_access_is_part_of_game": true,
+        "atomic_semantic_query_language_is_frozen_within_realized_game": true,
+        "decision_relation_is_frozen": true,
+        "honest_prover_strategy_is_efficient": true,
+        "noise_model_is_complete_and_nonzero": true,
+        "protocol_admission_phrase_is_present": true,
+        "public_coin_order_and_stopping_are_frozen_within_realized_game": true,
+        "transcript_encoding_is_part_of_realized_game": true,
+        "verifier_and_prover_randomness_are_part_of_game": true,
+        "verifier_query_and_transcript_budgets_are_polylogarithmic": true
+      },
+      "mode": "FIX",
+      "parity_counterexample_status": "valid counterexample to displayed sufficiency",
+      "parity_gap": "(3/5)^d -> 0",
+      "parity_interface": "G_fix",
+      "quantifier_order": "forall frozen game G, exists protocol algorithms Pi inside G",
+      "same_task_relation_world_oracle_and_budgets": true
+    },
+    {
+      "added_scope_axiom": "protocol admission may select a game interface from a declared interface class",
+      "all_explicit_obligations_satisfied": true,
+      "clause_preserving_completion": true,
+      "explicit_obligations": {
+        "adaptive_query_access_is_part_of_game": true,
+        "atomic_semantic_query_language_is_frozen_within_realized_game": true,
+        "decision_relation_is_frozen": true,
+        "honest_prover_strategy_is_efficient": true,
+        "noise_model_is_complete_and_nonzero": true,
+        "protocol_admission_phrase_is_present": true,
+        "public_coin_order_and_stopping_are_frozen_within_realized_game": true,
+        "transcript_encoding_is_part_of_realized_game": true,
+        "verifier_and_prover_randomness_are_part_of_game": true,
+        "verifier_query_and_transcript_budgets_are_polylogarithmic": true
+      },
+      "mode": "ADM",
+      "parity_counterexample_status": "not a counterexample because vector interface is admitted",
+      "parity_gap": "3/5",
+      "parity_interface": "G_admit",
+      "quantifier_order": "exists game G in declared Interfaces(E), exists protocol algorithms Pi inside G",
+      "same_task_relation_world_oracle_and_budgets": true
+    }
+  ],
+  "experiment_id": "ASMP-3-NORMATIVE-CLOSURE-IMPOSSIBILITY-v2.18",
+  "gates": {
+    "N0_canonical_source_contains_both_load_bearing_markers": true,
+    "N1_canonical_source_contains_no_unique_interface_selector": true,
+    "N2_no_current_authoritative_channel_selects_one_mode": true,
+    "N3_FIX_and_ADM_are_both_clause_preserving_completions": true,
+    "N4_same_substrate_completion_models_have_materially_distinct_outcomes": true,
+    "N5_no_deterministic_source_only_selector_is_both_sound_and_decisive": true,
+    "N6_randomization_cannot_reduce_worst_completion_error_below_one_half": true,
+    "N7_within_audited_FIX_ADM_fork_one_external_normative_bit_is_necessary_and_sufficient": true,
+    "N8_minimal_scope_axiom_mutations_close_each_branch_and_both_are_inconsistent": true,
+    "N9_impossibility_is_source_relative_and_repairable_not_metaphysical": true
+  },
+  "material_fork_audit": {
+    "admissible_gap": "3/5",
+    "certified": true,
+    "distinct_added_scope_axioms": true,
+    "distinct_quantifier_orders": true,
+    "fixed_gap": "(3/5)^d -> 0",
+    "material_outcomes_differ": true,
+    "same_substrate": true
+  },
+  "mutation_audit": [
+    {
+      "adds_ADM_scope_axiom": false,
+      "adds_FIX_scope_axiom": false,
+      "expected_survivors": [
+        "ADM",
+        "FIX"
+      ],
+      "matches": true,
+      "mutation": "sealed_v0_1",
+      "surviving_completion_modes": [
+        "ADM",
+        "FIX"
+      ],
+      "unique_normative_closure": false
+    },
+    {
+      "adds_ADM_scope_axiom": false,
+      "adds_FIX_scope_axiom": true,
+      "expected_survivors": [
+        "FIX"
+      ],
+      "matches": true,
+      "mutation": "add_FIX_scope_axiom",
+      "surviving_completion_modes": [
+        "FIX"
+      ],
+      "unique_normative_closure": true
+    },
+    {
+      "adds_ADM_scope_axiom": true,
+      "adds_FIX_scope_axiom": false,
+      "expected_survivors": [
+        "ADM"
+      ],
+      "matches": true,
+      "mutation": "add_ADM_scope_axiom",
+      "surviving_completion_modes": [
+        "ADM"
+      ],
+      "unique_normative_closure": true
+    },
+    {
+      "adds_ADM_scope_axiom": true,
+      "adds_FIX_scope_axiom": true,
+      "expected_survivors": [],
+      "matches": true,
+      "mutation": "add_both_incompatible_scope_axioms",
+      "surviving_completion_modes": [],
+      "unique_normative_closure": false
+    }
+  ],
+  "parent_results": [
+    "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7",
+    "ASMP-3-CONSOLIDATED-RESOURCE-SCOPE-v2.17"
+  ],
+  "randomized_selector_audit": {
+    "certified": true,
+    "denominators_attaining_global_minimum": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64
+    ],
+    "denominators_audited": 64,
+    "global_minimum_worst_model_error": "1/2",
+    "rows": [
+      {
+        "denominator": 1,
+        "minimax_numerators_choosing_FIX": [
+          0,
+          1
+        ],
+        "minimum_worst_model_error": "1",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 2,
+        "minimax_numerators_choosing_FIX": [
+          1
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 3,
+        "minimax_numerators_choosing_FIX": [
+          1,
+          2
+        ],
+        "minimum_worst_model_error": "2/3",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 4,
+        "minimax_numerators_choosing_FIX": [
+          2
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 5,
+        "minimax_numerators_choosing_FIX": [
+          2,
+          3
+        ],
+        "minimum_worst_model_error": "3/5",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 6,
+        "minimax_numerators_choosing_FIX": [
+          3
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 7,
+        "minimax_numerators_choosing_FIX": [
+          3,
+          4
+        ],
+        "minimum_worst_model_error": "4/7",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 8,
+        "minimax_numerators_choosing_FIX": [
+          4
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 9,
+        "minimax_numerators_choosing_FIX": [
+          4,
+          5
+        ],
+        "minimum_worst_model_error": "5/9",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 10,
+        "minimax_numerators_choosing_FIX": [
+          5
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 11,
+        "minimax_numerators_choosing_FIX": [
+          5,
+          6
+        ],
+        "minimum_worst_model_error": "6/11",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 12,
+        "minimax_numerators_choosing_FIX": [
+          6
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 13,
+        "minimax_numerators_choosing_FIX": [
+          6,
+          7
+        ],
+        "minimum_worst_model_error": "7/13",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 14,
+        "minimax_numerators_choosing_FIX": [
+          7
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 15,
+        "minimax_numerators_choosing_FIX": [
+          7,
+          8
+        ],
+        "minimum_worst_model_error": "8/15",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 16,
+        "minimax_numerators_choosing_FIX": [
+          8
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 17,
+        "minimax_numerators_choosing_FIX": [
+          8,
+          9
+        ],
+        "minimum_worst_model_error": "9/17",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 18,
+        "minimax_numerators_choosing_FIX": [
+          9
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 19,
+        "minimax_numerators_choosing_FIX": [
+          9,
+          10
+        ],
+        "minimum_worst_model_error": "10/19",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 20,
+        "minimax_numerators_choosing_FIX": [
+          10
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 21,
+        "minimax_numerators_choosing_FIX": [
+          10,
+          11
+        ],
+        "minimum_worst_model_error": "11/21",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 22,
+        "minimax_numerators_choosing_FIX": [
+          11
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 23,
+        "minimax_numerators_choosing_FIX": [
+          11,
+          12
+        ],
+        "minimum_worst_model_error": "12/23",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 24,
+        "minimax_numerators_choosing_FIX": [
+          12
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 25,
+        "minimax_numerators_choosing_FIX": [
+          12,
+          13
+        ],
+        "minimum_worst_model_error": "13/25",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 26,
+        "minimax_numerators_choosing_FIX": [
+          13
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 27,
+        "minimax_numerators_choosing_FIX": [
+          13,
+          14
+        ],
+        "minimum_worst_model_error": "14/27",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 28,
+        "minimax_numerators_choosing_FIX": [
+          14
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 29,
+        "minimax_numerators_choosing_FIX": [
+          14,
+          15
+        ],
+        "minimum_worst_model_error": "15/29",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 30,
+        "minimax_numerators_choosing_FIX": [
+          15
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 31,
+        "minimax_numerators_choosing_FIX": [
+          15,
+          16
+        ],
+        "minimum_worst_model_error": "16/31",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 32,
+        "minimax_numerators_choosing_FIX": [
+          16
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 33,
+        "minimax_numerators_choosing_FIX": [
+          16,
+          17
+        ],
+        "minimum_worst_model_error": "17/33",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 34,
+        "minimax_numerators_choosing_FIX": [
+          17
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 35,
+        "minimax_numerators_choosing_FIX": [
+          17,
+          18
+        ],
+        "minimum_worst_model_error": "18/35",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 36,
+        "minimax_numerators_choosing_FIX": [
+          18
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 37,
+        "minimax_numerators_choosing_FIX": [
+          18,
+          19
+        ],
+        "minimum_worst_model_error": "19/37",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 38,
+        "minimax_numerators_choosing_FIX": [
+          19
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 39,
+        "minimax_numerators_choosing_FIX": [
+          19,
+          20
+        ],
+        "minimum_worst_model_error": "20/39",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 40,
+        "minimax_numerators_choosing_FIX": [
+          20
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 41,
+        "minimax_numerators_choosing_FIX": [
+          20,
+          21
+        ],
+        "minimum_worst_model_error": "21/41",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 42,
+        "minimax_numerators_choosing_FIX": [
+          21
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 43,
+        "minimax_numerators_choosing_FIX": [
+          21,
+          22
+        ],
+        "minimum_worst_model_error": "22/43",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 44,
+        "minimax_numerators_choosing_FIX": [
+          22
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 45,
+        "minimax_numerators_choosing_FIX": [
+          22,
+          23
+        ],
+        "minimum_worst_model_error": "23/45",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 46,
+        "minimax_numerators_choosing_FIX": [
+          23
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 47,
+        "minimax_numerators_choosing_FIX": [
+          23,
+          24
+        ],
+        "minimum_worst_model_error": "24/47",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 48,
+        "minimax_numerators_choosing_FIX": [
+          24
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 49,
+        "minimax_numerators_choosing_FIX": [
+          24,
+          25
+        ],
+        "minimum_worst_model_error": "25/49",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 50,
+        "minimax_numerators_choosing_FIX": [
+          25
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 51,
+        "minimax_numerators_choosing_FIX": [
+          25,
+          26
+        ],
+        "minimum_worst_model_error": "26/51",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 52,
+        "minimax_numerators_choosing_FIX": [
+          26
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 53,
+        "minimax_numerators_choosing_FIX": [
+          26,
+          27
+        ],
+        "minimum_worst_model_error": "27/53",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 54,
+        "minimax_numerators_choosing_FIX": [
+          27
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 55,
+        "minimax_numerators_choosing_FIX": [
+          27,
+          28
+        ],
+        "minimum_worst_model_error": "28/55",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 56,
+        "minimax_numerators_choosing_FIX": [
+          28
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 57,
+        "minimax_numerators_choosing_FIX": [
+          28,
+          29
+        ],
+        "minimum_worst_model_error": "29/57",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 58,
+        "minimax_numerators_choosing_FIX": [
+          29
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 59,
+        "minimax_numerators_choosing_FIX": [
+          29,
+          30
+        ],
+        "minimum_worst_model_error": "30/59",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 60,
+        "minimax_numerators_choosing_FIX": [
+          30
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 61,
+        "minimax_numerators_choosing_FIX": [
+          30,
+          31
+        ],
+        "minimum_worst_model_error": "31/61",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 62,
+        "minimax_numerators_choosing_FIX": [
+          31
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 63,
+        "minimax_numerators_choosing_FIX": [
+          31,
+          32
+        ],
+        "minimum_worst_model_error": "32/63",
+        "zero_error_possible": false
+      },
+      {
+        "denominator": 64,
+        "minimax_numerators_choosing_FIX": [
+          32
+        ],
+        "minimum_worst_model_error": "1/2",
+        "zero_error_possible": false
+      }
+    ],
+    "zero_error_randomized_selector_exists": false
+  },
+  "schema_version": "asmp3_normative_closure_impossibility_v2_18",
+  "sealed_source_hashes": {
+    "canonical_sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5",
+    "expert_status_sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D",
+    "fork_artifact_sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D",
+    "fork_theorem_sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313",
+    "registry_sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0",
+    "typed_json_sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837",
+    "typed_markdown_sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B",
+    "v2_17_disposition_sha256": "563809EE38E11AEB1599CF655FCA2D4966D0AE4ABFC48F16C2C742D4822E64BE"
+  },
+  "selector_audit": {
+    "candidate_output_count": 4,
+    "certified": true,
+    "clause_preserving_mode_count": 2,
+    "entailed_singleton_modes": [],
+    "epistemically_safe_nonclosure": "ABSTAIN",
+    "rows": [
+      {
+        "action_kind": "no_claim",
+        "covers_every_clause_preserving_model": false,
+        "decisive_singleton": false,
+        "entailment_sound": true,
+        "excluded_clause_preserving_models": [],
+        "selected_modes": [],
+        "selector_output": "ABSTAIN",
+        "sound_and_decisive_normative_closure": false
+      },
+      {
+        "action_kind": "model_set_claim",
+        "covers_every_clause_preserving_model": false,
+        "decisive_singleton": true,
+        "entailment_sound": false,
+        "excluded_clause_preserving_models": [
+          "ADM"
+        ],
+        "selected_modes": [
+          "FIX"
+        ],
+        "selector_output": "FIX",
+        "sound_and_decisive_normative_closure": false
+      },
+      {
+        "action_kind": "model_set_claim",
+        "covers_every_clause_preserving_model": false,
+        "decisive_singleton": true,
+        "entailment_sound": false,
+        "excluded_clause_preserving_models": [
+          "FIX"
+        ],
+        "selected_modes": [
+          "ADM"
+        ],
+        "selector_output": "ADM",
+        "sound_and_decisive_normative_closure": false
+      },
+      {
+        "action_kind": "model_set_claim",
+        "covers_every_clause_preserving_model": true,
+        "decisive_singleton": false,
+        "entailment_sound": true,
+        "excluded_clause_preserving_models": [],
+        "selected_modes": [
+          "ADM",
+          "FIX"
+        ],
+        "selector_output": "BOTH",
+        "sound_and_decisive_normative_closure": false
+      }
+    ],
+    "set_valued_safe_repair": "BOTH",
+    "sound_decisive_selector_count": 0
+  },
+  "source_scope_audit": {
+    "canonical_section_sha256": "CF6B18A27FC4B8615B432FDF9976BEFD7D5C7900CC0F5F787CC0A85BC74584F2",
+    "certified": true,
+    "explicit_clause_checks": {
+      "declares_version_changes_for_quantifier_changes": true,
+      "defines_noise_profile": true,
+      "defines_refutation_dimension": true,
+      "encodings_are_part_of_game": true,
+      "freezes_atomic_query_language": true,
+      "freezes_decision_relation": true,
+      "freezes_public_coin_order_and_stopping": true,
+      "requires_formal_class": true,
+      "uses_task_admits_protocol_phrase": true
+    },
+    "explicit_clause_checks_passed": 9,
+    "explicit_clause_count": 9,
+    "selector_phrase_count": 0,
+    "selector_phrase_presence": {
+      "fixes_interface_before_protocol_algorithms": false,
+      "names_WV_ADM": false,
+      "names_WV_FIX": false,
+      "permits_protocol_to_select_interface": false,
+      "quantifies_exists_G_in_interface_class": false,
+      "selects_ADMISSIBLE_as_normative_mode": false,
+      "selects_FIXED_as_normative_mode": false
+    }
+  },
+  "status": "source_relative_impossibility_of_sound_decisive_normative_closure",
+  "theorem": {
+    "authority_information": "within the audited binary fork, one external normative bit is necessary and sufficient to select FIX versus ADM",
+    "deterministic_frontier": "FIX and ADM each exclude one admissible model; BOTH is sound but nondecisive; ABSTAIN is safe but not closure",
+    "randomized_frontier": "minimum worst-completion selection error is 1/2",
+    "repair": "add exactly one authoritative quantifier-order axiom or publish a successor that explicitly poses both targets",
+    "selector_impossibility": "no source-only selector can be both entailment-sound and decisive on sealed v0.1",
+    "semantic_underdetermination": "if two clause-preserving completions assign different material outcomes, the source does not entail a unique completion"
+  }
+}
