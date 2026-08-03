@@ -42,15 +42,14 @@ and full-census equality.
 
 ## Measurement reliability
 
-The primary path used exact `Fraction` arithmetic.  A standalone verifier that
+The primary path used exact `Fraction` arithmetic. A standalone verifier that
 does not import the implementation repeated all 1,399,680 pointwise cells and
-matched the total cell count, robust violation count, full-census count, and
-plug-in false-declaration count.  All comparisons agreed.
-
-The first combined shell wrapper reached its external 120-second limit after
-the primary artifact had completed.  The independent replay was then run as a
-separate bounded command and completed successfully in 73.7 seconds.  No
-scientific threshold or cell selection changed between those commands.
+all 729 adaptive traces with scaled exact integers. It independently matched
+the complete pointwise/adaptive summaries, first witnesses, digest, policy
+feasibility, reveal monotonicity, five probes, seven primary gates, exact result
+key universe, and four conclusion layers. All comparisons agreed. On the
+review machine the primary replay took 89.0 seconds and the independent replay
+took 7.4 seconds.
 
 ## Claim support and operation
 
@@ -68,7 +67,14 @@ model, or ASMP-8 as a whole.
 
 | Artifact | SHA-256 |
 |---|---|
-| `artifacts_v0_6/result_v0_6.json` | `13ae6cee5333247f4906b089f68782aeaecbf24515063fb3374f885105b6b2eb` |
-| `artifacts_v0_6/verification_v0_6.json` | `73e518d61d53901ac64c9bebcab0c928b199eb48138916ce087bf4fa61ae14f2` |
+| `artifacts_v0_6/result_v0_6.json` | `2d5a83acf7cd0fcb5964a5040ca695eff0444a3e625173b7f9750b75740787d4` |
+| `artifacts_v0_6/run_receipt_v0_6.json` | `5d95014895f40682f92180fab3232fe999aa235b249f9cf8c2a452a95a03760f` |
+| `artifacts_v0_6/verification_v0_6.json` | `b1ec0abbad370c5c0cb1a87955068986373ae52ba9fb71e8f7d20cbacbda7a8c` |
+| `artifacts_v0_6/bundle_receipt_v0_6.json` | `4735bc4d4e2d15f1848e487589bebdbb7b64b1cf7cf2ad16028c22ca9f2d8501` |
 
-Dedicated tests: `6 passed`.
+The verifier-hardening source checkpoint is
+`78ac61ea553c2f2936edb7b62897850d47d327ff`. The primary and independent
+writers were rerun afterward; their exact source-file hashes match that
+checkpoint, and the bundle receipt binds the regenerated verification.
+
+Dedicated tests: `15 passed`.

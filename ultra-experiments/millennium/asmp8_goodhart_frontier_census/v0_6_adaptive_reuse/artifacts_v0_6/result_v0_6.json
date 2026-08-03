@@ -38,6 +38,26 @@
     }
   },
   "operational_decision": "retain_bound_require_new_noisy_label_protocol",
+  "protocol_binding": {
+    "exact_field_set": true,
+    "field_alphabet_size": true,
+    "field_claim_boundary": true,
+    "field_error_alphabet": true,
+    "field_error_cap": true,
+    "field_policy_mass_move": true,
+    "field_protocol_id": true,
+    "field_schema_version": true
+  },
+  "protocol_constants": {
+    "alphabet_size": 6,
+    "error_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "error_cap": 1,
+    "policy_mass_move": "1/6"
+  },
   "protocol_id": "ASMP8-ADAPTIVE-REUSE-v0.6",
   "schema_version": "asmp8_adaptive_reuse_result_v0_6",
   "summary": {
