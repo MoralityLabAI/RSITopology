@@ -23,6 +23,13 @@ robustness probes. The graph digest root identifies the deterministic cell
 collection summarized by a report. Reliability applies only to the frozen
 catalog, payoff families, grid, and strict-edge semantics.
 
+As of v0.3.1, "registered" means exact equality to the machine manifest: the
+ordered 512-catalog sequence, parameter values, complete Cartesian graph keys,
+and every ordered budget and temptation adjacency. Counts alone are not
+registry evidence. Exact relations, decorations, margins, and gain witnesses
+must match an import-independent reconstruction, and the released compact
+bundle must bind its source checkpoint and all evidence roots.
+
 ## Claims not supported
 
 The equilibrium sets are not called an ordinary bifiltration. This phase does

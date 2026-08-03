@@ -1,5 +1,12 @@
 # ASMP-12 constructible survival correspondence result v0.3
 
+> **Superseded evidence status:** The finite mathematical object and counts in
+> this report were reproduced, but the v0.3 verifier accepted cardinality-only
+> registry substitutions, omitted or duplicated adjacencies, and forged event
+> or relation payloads. Use the source-bound v0.3.1 result and synthesis receipt
+> for an accepted disposition. The original hashes below remain a historical
+> record and are not final reliability evidence.
+
 ## Verdict
 
 `finite_constructible_survival_correspondence_built`

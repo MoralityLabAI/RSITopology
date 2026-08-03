@@ -247,6 +247,7 @@ def adjacent_union_zigzag(
         left_key[0] == right_key[0]
         and left_key[1] == right_key[1]
         and left_key[3] == right_key[3]
+        and (left_key[2], right_key[2]) in set(zip(TEMPTATIONS, TEMPTATIONS[1:]))
     )
     union_vertices = frozenset(left["vertices"] | right["vertices"])
     union_edges = frozenset(left["edges"] | right["edges"])

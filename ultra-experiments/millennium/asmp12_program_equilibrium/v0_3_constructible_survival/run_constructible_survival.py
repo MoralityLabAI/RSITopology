@@ -66,13 +66,69 @@ def canonical_certificates(surface: dict[str, object]) -> dict[str, object]:
 
 @lru_cache(maxsize=1)
 def build_report() -> dict[str, object]:
-    surface = primary.build_surface()
+    return build_report_from_surface(primary.build_surface())
+
+
+def _expected_primary_events(
+    graphs: dict[tuple[int, str, primary.Fraction, int], dict[str, object]],
+) -> tuple[dict[str, object], ...]:
+    events: list[dict[str, object]] = []
+    for catalog_index in range(512):
+        for family in independent.EXPECTED_FAMILIES:
+            for temptation in independent.EXPECTED_TEMPTATIONS:
+                for left_budget, right_budget in zip(
+                    independent.EXPECTED_BUDGETS, independent.EXPECTED_BUDGETS[1:]
+                ):
+                    left_key = (catalog_index, family, temptation, left_budget)
+                    right_key = (catalog_index, family, temptation, right_budget)
+                    events.extend(
+                        primary.adjacent_sink_events(
+                            "budget",
+                            left_key,
+                            right_key,
+                            graphs[left_key],
+                            graphs[right_key],
+                        )
+                    )
+            for budget in independent.EXPECTED_BUDGETS:
+                for left_temptation, right_temptation in zip(
+                    independent.EXPECTED_TEMPTATIONS,
+                    independent.EXPECTED_TEMPTATIONS[1:],
+                ):
+                    left_key = (catalog_index, family, left_temptation, budget)
+                    right_key = (catalog_index, family, right_temptation, budget)
+                    events.extend(
+                        primary.adjacent_sink_events(
+                            "temptation",
+                            left_key,
+                            right_key,
+                            graphs[left_key],
+                            graphs[right_key],
+                        )
+                    )
+    return tuple(events)
+
+
+def build_report_from_surface(surface: dict[str, object]) -> dict[str, object]:
     graphs = surface["graphs"]
     budget_maps = surface["graph_maps"]["budget_inclusions"]
     zigzags = surface["graph_maps"]["temptation_adjacent_union_zigzags"]
     events = surface["cooperative_sink_events"]
 
-    graph_gate = len(graphs) == 512 * 2 * 8 * 3 and all(
+    expected_keys = independent.expected_graph_keys()
+    frozen_registry_gate = bool(
+        independent.load_manifest() == independent.expected_manifest()
+        and surface["config"]
+        == {
+            "costs": independent.EXPECTED_COSTS,
+            "budgets": independent.EXPECTED_BUDGETS,
+            "temptations": independent.EXPECTED_TEMPTATIONS,
+            "families": independent.EXPECTED_FAMILIES,
+        }
+        and surface["catalogs"] == independent.frozen_catalogs()
+        and tuple(graphs) == expected_keys
+    )
+    graph_gate = frozen_registry_gate and all(
         primary.graph_is_typed(graph) and primary.graph_margin_status_valid(graph)
         for graph in graphs.values()
     )
@@ -87,9 +143,20 @@ def build_report() -> dict[str, object]:
                     and first["edges"] <= last["edges"]
                     and all(first["gains"][edge] == last["gains"][edge] for edge in first["edges"])
                 )
-    budget_gate = (
-        len(budget_maps) == 512 * 2 * 8 * 2
-        and all(record["verified"] for record in budget_maps)
+    expected_budget_pairs = independent.expected_budget_pairs()
+    budget_gate = bool(
+        tuple((record["left_key"], record["right_key"]) for record in budget_maps)
+        == expected_budget_pairs
+        and all(
+            record
+            == primary.budget_inclusion(
+                left_key,
+                right_key,
+                graphs[left_key],
+                graphs[right_key],
+            )
+            for record, (left_key, right_key) in zip(budget_maps, expected_budget_pairs)
+        )
         and budget_composition
     )
 
@@ -98,9 +165,20 @@ def build_report() -> dict[str, object]:
         relation_counts["right_strict_subgraph_of_left"]
         + relation_counts["incomparable_edge_sets"]
     )
+    expected_temptation_pairs = independent.expected_temptation_pairs()
     zigzag_gate = bool(
-        len(zigzags) == 512 * 2 * 7 * 3
-        and all(record["verified"] for record in zigzags)
+        tuple((record["left_key"], record["right_key"]) for record in zigzags)
+        == expected_temptation_pairs
+        and all(
+            record
+            == primary.adjacent_union_zigzag(
+                left_key,
+                right_key,
+                graphs[left_key],
+                graphs[right_key],
+            )
+            for record, (left_key, right_key) in zip(zigzags, expected_temptation_pairs)
+        )
         and nonmonotone_count > 0
         and all(
             record["verified_direct_inclusion"] is None
@@ -110,9 +188,11 @@ def build_report() -> dict[str, object]:
         )
     )
 
+    expected_events = _expected_primary_events(graphs) if frozen_registry_gate else ()
     event_gate = bool(
         events
-        and all(primary.event_certificate_valid(event) for event in events)
+        and tuple(events) == expected_events
+        and all(primary.event_certificate_valid(event) for event in expected_events)
         and {event["axis"] for event in events} == {"budget", "temptation"}
         and {event["kind"] for event in events}
         == {"cooperative_sink_birth", "cooperative_sink_death"}
@@ -123,6 +203,7 @@ def build_report() -> dict[str, object]:
         probe["passed"] for probe in robustness.values()
     )
     gates = {
+        "F0_frozen_registry_exact": frozen_registry_gate,
         "U0_every_cell_graph_defined_and_margin_typed": graph_gate,
         "B0_budget_inclusions_and_composition_verified": budget_gate,
         "Z0_adjacent_union_zigzags_typed": zigzag_gate,
@@ -139,7 +220,7 @@ def build_report() -> dict[str, object]:
 
     event_counts = Counter((event["axis"], event["kind"]) for event in events)
     return {
-        "schema_version": "asmp12_constructible_survival_v0_3_report_v1",
+        "schema_version": "asmp12_constructible_survival_v0_3_1_report_v1",
         "task_result": {
             "status": (
                 "finite_constructible_survival_correspondence_built"
@@ -159,7 +240,9 @@ def build_report() -> dict[str, object]:
                 f"{axis}|{kind}": count
                 for (axis, kind), count in sorted(event_counts.items())
             },
-            "canonical_event_margin_certificates": canonical_certificates(surface),
+            "canonical_event_margin_certificates": (
+                canonical_certificates(surface) if event_gate else {}
+            ),
             "cell_graph_digest_root": digest.hexdigest(),
         },
         "reliability": {
@@ -180,13 +263,21 @@ def build_report() -> dict[str, object]:
             },
         },
         "claim_support": {
-            "status": "supports_only_the_registered_finite_constructible_correspondence",
-            "supported": [
-                "one exact profitable-deviation graph at every registered cell",
-                "verified weighted graph inclusions along the budget axis",
-                "typed adjacent-union zigzags along every temptation step",
-                "separate exact cooperative-sink birth/death and margin certificates",
-            ],
+            "status": (
+                "supports_only_the_registered_finite_constructible_correspondence"
+                if passed
+                else "not_established_due_to_gate_failure"
+            ),
+            "supported": (
+                [
+                    "one exact profitable-deviation graph at every registered cell",
+                    "verified weighted graph inclusions along the budget axis",
+                    "typed adjacent-union zigzags along every temptation step",
+                    "separate exact cooperative-sink birth/death and margin certificates",
+                ]
+                if passed
+                else []
+            ),
             "not_supported": [
                 "an ordinary bifiltration of equilibrium sets",
                 "weight-preserving temptation-axis graph maps",

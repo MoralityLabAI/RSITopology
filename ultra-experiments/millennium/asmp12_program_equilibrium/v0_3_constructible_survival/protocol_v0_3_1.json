@@ -1,0 +1,55 @@
+{
+  "budgets": [
+    1,
+    2,
+    3
+  ],
+  "catalogs": {
+    "alphabet": [
+      0,
+      1
+    ],
+    "canonical_sha256": "8b3e2a44c4cddca770554dada7b89ebdd41f835a6a59c85b8647a458c61358c1",
+    "count": 512,
+    "order": "lexicographic_row_major_product",
+    "shape": [
+      3,
+      3
+    ]
+  },
+  "claim_boundary": "finite_exact_pure_strategy_graph_correspondence_only",
+  "costs": [
+    1,
+    2,
+    3
+  ],
+  "expected_counts": {
+    "budget_adjacencies": 16384,
+    "graphs": 24576,
+    "temptation_adjacencies": 21504
+  },
+  "families": {
+    "chicken_order": {
+      "P": "0",
+      "R": "3",
+      "S": "1"
+    },
+    "pd_order": {
+      "P": "1",
+      "R": "3",
+      "S": "0"
+    }
+  },
+  "protocol_id": "ASMP12-CONSTRUCTIBLE-SURVIVAL-v0.3.1",
+  "schema_version": "asmp12_constructible_survival_protocol_v0_3_1",
+  "temptations": [
+    "0",
+    "1/2",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ]
+}

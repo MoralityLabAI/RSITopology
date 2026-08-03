@@ -1,4 +1,10 @@
-# ASMP-12 constructible survival correspondence protocol v0.3
+# ASMP-12 constructible survival correspondence protocol v0.3.1
+
+Version 0.3.1 preserves the v0.3 mathematical object and adds executable
+registry and evidence-integrity gates. `protocol_v0_3_1.json` is the canonical
+machine manifest. It freezes the exact ordered binary catalog sequence, costs,
+budgets, payoff-family values, temptation values, expected Cartesian cell
+keys, and both ordered adjacency registries.
 
 ## Objective and inherited universe
 
@@ -78,11 +84,15 @@ vertex.
 
 ## Independent verifier
 
-The independent implementation imports no v0.3 primary code. From the passed
-catalogs and frozen parameters it reconstructs every cell graph, gain, margin,
-sink set, and cooperative sink set. It then independently checks every budget
-inclusion, every adjacent union and endpoint decoration, and the complete sink
-event signature set.
+The independent implementation imports no v0.3 primary code. It constructs
+the frozen catalog sequence and parameter values from a second implementation;
+it does not accept supplied counts or config values as registry evidence. It
+requires the exact Cartesian graph-key set and the exact ordered endpoint pair
+for every budget inclusion and temptation zigzag. It then reconstructs every
+cell graph, gain, margin, sink set, cooperative sink set, map, union relation,
+endpoint decoration, and complete sink-event record. Event comparison includes
+exact margins, edge identities, gains, endpoint statuses, multiplicity, and
+order.
 
 ## Five robustness probes
 
@@ -101,6 +111,8 @@ event signature set.
 
 ## Conjunctive gates
 
+- the machine manifest, ordered catalog universe, config, graph keys, and both
+  adjacency registries match the frozen values exactly;
 - every one of `512*2*8*3=24,576` cell graphs is typed and margin-consistent;
 - all `512*2*8*2=16,384` budget inclusions and composites verify;
 - all `512*2*7*3=21,504` adjacent-union zigzags verify, including live
@@ -112,6 +124,13 @@ event signature set.
 A complete pass yields
 `finite_constructible_survival_correspondence_built`; any failure yields
 `instrument_failed`.
+
+The source-bound v0.3.1 artifact writer runs only against a prior Git source
+checkpoint whose committed bytes match all bound sources. It emits a result,
+independent verification, and synthesis receipt into a fresh output directory.
+Canonical roots separately bind the manifest, catalogs, graph keys, all cell
+graphs, budget maps, temptation zigzags, sink events, and robustness probes;
+their root-of-roots is part of both evidence artifacts.
 
 ## Four conclusion layers
 

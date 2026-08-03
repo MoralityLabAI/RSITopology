@@ -2,6 +2,7 @@ from fractions import Fraction
 
 import pytest
 
+import build_artifacts as artifacts
 import constructible_survival as primary
 import run_constructible_survival as runner
 import verify_constructible_survival as independent
@@ -33,6 +34,7 @@ def test_profitable_deviation_graph_and_signed_margin_are_exact():
 
 
 def test_every_registered_cell_has_a_typed_graph(surface):
+    assert independent.load_manifest() == independent.expected_manifest()
     assert len(surface["catalogs"]) == 512
     assert len(surface["graphs"]) == 512 * 2 * 8 * 3
     assert all(primary.graph_is_typed(graph) for graph in surface["graphs"].values())
@@ -83,8 +85,64 @@ def test_cooperative_sink_events_are_separate_and_have_exact_certificates(surfac
 def test_independent_verifier_reconstructs_graphs_maps_zigzags_and_events(surface):
     verification = independent.verify_surface(surface)
     assert verification["rebuilt_graph_count"] == 512 * 2 * 8 * 3
+    assert verification["reconstructed_budget_map_count"] == 512 * 2 * 8 * 2
+    assert verification["reconstructed_temptation_zigzag_count"] == 512 * 2 * 7 * 3
     assert all(verification["checks"].values())
     assert verification["verified"]
+
+
+def test_frozen_registry_and_exact_records_reject_stale_green_mutations(surface):
+    mutated_config = dict(surface)
+    mutated_config["config"] = dict(surface["config"])
+    mutated_config["config"]["temptations"] = tuple(
+        Fraction(99) if value == 5 else value for value in surface["config"]["temptations"]
+    )
+    config_check = independent.verify_surface(mutated_config)
+    assert not config_check["checks"]["frozen_config_matches"]
+    assert not config_check["verified"]
+
+    mutated_catalogs = dict(surface)
+    catalogs = list(surface["catalogs"])
+    catalogs[0] = catalogs[1]
+    mutated_catalogs["catalogs"] = tuple(catalogs)
+    catalog_check = independent.verify_surface(mutated_catalogs)
+    assert not catalog_check["checks"]["frozen_catalog_sequence_matches"]
+    assert not catalog_check["verified"]
+
+    mutated_adjacency = dict(surface)
+    mutated_adjacency["graph_maps"] = dict(surface["graph_maps"])
+    zigzags = list(surface["graph_maps"]["temptation_adjacent_union_zigzags"])
+    zigzags[0] = zigzags[1]
+    mutated_adjacency["graph_maps"]["temptation_adjacent_union_zigzags"] = tuple(zigzags)
+    adjacency_check = independent.verify_surface(mutated_adjacency)
+    assert not adjacency_check["checks"]["complete_temptation_adjacency_registry"]
+    assert not adjacency_check["verified"]
+
+    mutated_payload = dict(surface)
+    mutated_payload["graph_maps"] = dict(surface["graph_maps"])
+    zigzags = list(surface["graph_maps"]["temptation_adjacent_union_zigzags"])
+    zigzags[0] = dict(zigzags[0], relation="left_strict_subgraph_of_right")
+    mutated_payload["graph_maps"]["temptation_adjacent_union_zigzags"] = tuple(zigzags)
+    events = list(surface["cooperative_sink_events"])
+    events[0] = dict(events[0], right_margin=Fraction(-999))
+    mutated_payload["cooperative_sink_events"] = tuple(events)
+    payload_check = independent.verify_surface(mutated_payload)
+    assert not payload_check["checks"][
+        "all_adjacent_unions_relations_and_decorations_reverified"
+    ]
+    assert not payload_check["checks"][
+        "all_cooperative_sink_event_records_reverified_exactly"
+    ]
+    assert not payload_check["verified"]
+
+    failed_report = runner.build_report_from_surface(mutated_payload)
+    assert failed_report["task_result"]["status"] == "instrument_failed"
+    assert failed_report["claim_support"]["status"] == "not_established_due_to_gate_failure"
+    assert not failed_report["claim_support"]["supported"]
+    assert not failed_report["reliability"]["gates"]["Z0_adjacent_union_zigzags_typed"]
+    assert not failed_report["reliability"]["gates"][
+        "S0_cooperative_sink_events_separate_and_certified"
+    ]
 
 
 def test_five_robustness_probes_pass(surface):
@@ -97,6 +155,25 @@ def test_five_robustness_probes_pass(surface):
         "positive_margin_payoff_perturbation",
     }
     assert all(probe["passed"] for probe in probes.values())
+
+
+def test_evidence_root_binds_registries_maps_events_and_probes(surface, report):
+    roots = artifacts.evidence_roots(surface, report)
+    assert set(roots) == {
+        "manifest",
+        "catalog_sequence",
+        "graph_key_registry",
+        "cell_graphs",
+        "budget_maps",
+        "temptation_zigzags",
+        "cooperative_sink_events",
+        "robustness_probes",
+        "root_of_roots",
+    }
+    assert all(len(value) == 64 for value in roots.values())
+    zigzags = list(surface["graph_maps"]["temptation_adjacent_union_zigzags"])
+    zigzags[0] = dict(zigzags[0], relation="left_strict_subgraph_of_right")
+    assert artifacts.digest_value(tuple(zigzags)) != roots["temptation_zigzags"]
 
 
 def test_report_has_four_distinct_conclusion_layers(report):
