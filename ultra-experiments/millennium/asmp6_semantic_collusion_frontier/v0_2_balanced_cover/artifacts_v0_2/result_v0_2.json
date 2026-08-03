@@ -1443,19 +1443,23 @@
   ],
   "claim_boundary": [
     "one-shot opaque-symbol laws only",
+    "exactly two equiprobable messages only",
+    "uniform benign cover law only",
+    "exact message-averaged cover and exact per-message control only",
     "no learned or linguistic encoder",
     "no multiletter or ASMP-6 resolution claim"
   ],
-  "claim_support": "one_shot_uniform_exact_average_cover",
+  "claim_support": "one_shot_two_equiprobable_messages_uniform_exact_average_cover",
   "gates": {
-    "G0_probability_feasibility": true,
-    "G1_exact_optimality": true,
-    "G2_parity_boundary": true,
-    "G3_odd_error_formula": true,
-    "G4_messagewise_control": true,
-    "G5_metric_robustness": true
+    "G0_frozen_protocol_binding": true,
+    "G1_probability_feasibility": true,
+    "G2_exact_optimality": true,
+    "G3_parity_boundary": true,
+    "G4_odd_error_formula": true,
+    "G5_messagewise_control": true,
+    "G6_metric_robustness": true
   },
-  "measurement_reliability": "pending_independent_extremal_replay",
+  "measurement_reliability": "awaiting_independent_verification",
   "metric_robustness": {
     "anti_gaming": {
       "pass": true,
@@ -1478,7 +1482,18 @@
       "probe": "odd_to_even_divisibility_boundary"
     }
   },
-  "operational_decision": "register_multiletter_successor",
+  "operational_decision": "await_independent_verification",
+  "protocol_binding": {
+    "claim_boundary_is_frozen": true,
+    "cover_law_is_uniform": true,
+    "enumeration_maximum_is_nine": true,
+    "message_count_is_two": true,
+    "message_prior_is_equal_half": true,
+    "protocol_fields_are_exact": true,
+    "protocol_id_is_frozen": true,
+    "protocol_schema_is_frozen": true,
+    "registered_alphabet_range_is_2_through_31": true
+  },
   "protocol_id": "ASMP6-BALANCED-COVER-v0.2",
   "schema_version": "asmp6_balanced_cover_result_v0_2",
   "task_result": "sharp_uniform_alphabet_parity_frontier"

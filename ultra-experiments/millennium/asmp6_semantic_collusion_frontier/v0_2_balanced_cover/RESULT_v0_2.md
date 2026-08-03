@@ -1,4 +1,4 @@
-# ASMP-6 balanced-cover parity result v0.2
+# ASMP-6 balanced-cover parity result v0.2.1 verification repair
 
 ## Verdict
 
@@ -27,48 +27,61 @@ TV(P0,P1) <= 2 floor(m/2) / m.
 ```
 
 The bound is attained by assigning `+1/m` to `floor(m/2)` coordinates,
-`-1/m` to the same number, and—only for odd `m`—zero to the remaining
+`-1/m` to the same number, and, only for odd `m`, zero to the remaining
 coordinate.  Even alphabets split into disjoint message supports.  Odd
 alphabets retain one shared neutral symbol and hence error `1/(2m)`.
 
-The registered exact grid covered every alphabet size from 2 through 31.  All
-probability, averaged-cover, optimality, parity, odd-error, and messagewise
-control gates passed.
+## Verification repair
 
-## Metric robustness
+The primary execution now binds its formula to the frozen uniform-cover,
+two-message, equal-prior protocol and rejects semantic mutations.  It emits
+only a pre-verification measurement status and an
+`await_independent_verification` operation.
 
-All five frozen probe families passed:
+The import-independent path reconstructs and compares every field of all 30
+registered cells `m=2..31`; recalculates probability, exact cover, total
+variation, Bayes error, and the primary gates; replays the full continuous
+feasible-polytope vertices for `m=2..9`; and checks the closed-form dual through
+`m=63`.  A mutation of the previously unchecked `m=31` cell is now rejected.
 
-- symbol relabeling leaves the error unchanged;
-- the `m=3` to `m=4` change crosses the divisibility boundary;
-- relaxing per-message cover to averaged cover never worsens the optimum;
-- every construction meets the independent sign-count bound; and
-- identical message laws reproduce chance error.
+## Five conclusion layers
 
-## Measurement reliability
+- **Metric robustness:** symbol relabeling, parity-boundary sensitivity,
+  cover-relaxation monotonicity, dual-bound anti-gaming, and identical-law
+  clean control are independently reconstructed.
+- **Task result:** the sharp one-shot parity frontier above.
+- **Measurement reliability:** exact rational full-grid reconstruction plus
+  independent continuous-extremal and dual replays.
+- **Claim support:** one shot, two equiprobable messages, uniform finite cover,
+  and exact message-averaged cover only.
+- **Operational decision:** register a multiletter successor only after
+  independent verification and a passing source/artifact-bound receipt.
 
-The primary path used exact `Fraction` arithmetic.  An import-independent
-verifier enumerated every ternary extremal sign vector for `m=2..9` and found
-zero discrepancies.  It separately checked the general sign-count formula
-through `m=63`, again with zero failures.
+## Claim boundary and artifact state
 
-## Claim support and operation
+This package contains no language, learned encoder, shared key, adaptive
+policy, active auditor, or history.  It is not an asymptotic capacity theorem,
+an operational covert channel, or a resolution of ASMP-6.  The elementary
+extremal argument is not claimed as novel.
 
-The result supports only a one-shot, two-message, uniform-alphabet statement
-under exact averaged cover.  It is an opaque-symbol regression fixture for
-future ASMP-6 instruments.  The next useful step must register multiletter or
-history semantics and an active auditor.
+The primary and verification artifacts can be regenerated from the repaired
+source.  The final receipt is deliberately not fabricated from an uncommitted
+working tree: after the repaired source is committed,
+`synthesize_receipt.py --source-commit <40-hex-commit>` binds the exact source
+bytes and SHA-256 hashes of the protocol, primary result, and independent
+verification.  It also requires the stored verification to match a fresh
+independent replay, blocking a stale passing artifact whose input hash was
+manually updated.  It refuses output on any mismatch.
 
-This package contains no language, learned encoder, shared key, or adaptive
-policy.  It is not an asymptotic capacity theorem, an operational covert
-channel, or a resolution of ASMP-6.  The elementary extremal argument is not
-claimed as novel.
+The accepted source checkpoint is
+`75757216a7c6c73d704308170006ef0ecd700d99`. Its committed source hashes
+match the working bytes, the stored independent verification matches a fresh
+replay exactly, and all eight final receipt checks passed.
 
-## Artifact integrity
-
-| Artifact | SHA-256 |
+| Generated artifact | SHA-256 |
 |---|---|
-| `artifacts_v0_2/result_v0_2.json` | `afa4c9aebe274f512bc8d7bd09a7f921b6ac395e84101e7a43799583995a387d` |
-| `artifacts_v0_2/verification_v0_2.json` | `26cdfbfbc84c32eacc7864393b796571ed47b83ee4afd3dfc79d0bc2468ee808` |
+| `artifacts_v0_2/result_v0_2.json` | `7e28898c132996212482454a97c73eb95466bd2c8f8b60e994bb5d06d804c32c` |
+| `artifacts_v0_2/verification_v0_2.json` | `4d500af4d8747f2ee218ec2fe126e1f52a16981c4f42699a17138d9fd642c586` |
+| `artifacts_v0_2/final_receipt_v0_2.json` | `ffc0dc6e5406810722b2be28fc96ce60597c03f56b700c9a191cf24b220047d9` |
 
-Dedicated tests: `5 passed`.
+Focused tests: `24 passed`.

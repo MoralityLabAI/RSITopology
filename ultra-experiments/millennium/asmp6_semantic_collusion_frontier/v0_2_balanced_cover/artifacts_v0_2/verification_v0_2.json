@@ -1,7 +1,11 @@
 {
-  "claim_support": "one_shot_uniform_exact_average_cover",
-  "dual_bound_failures": [],
-  "enumerated_alphabet_sizes": [
+  "bindings": {
+    "protocol_v0_2.json": "59239383bbcbee827870450080365cb22102df040f402c09f04ed578486afec0",
+    "result_v0_2.json": "7e28898c132996212482454a97c73eb95466bd2c8f8b60e994bb5d06d804c32c"
+  },
+  "cell_mismatches": [],
+  "claim_support": "one_shot_two_equiprobable_messages_uniform_exact_average_cover",
+  "continuous_vertex_enumerated_alphabet_sizes": [
     2,
     3,
     4,
@@ -11,9 +15,84 @@
     8,
     9
   ],
-  "measurement_reliability": "independent_extremal_and_dual_replay_passed",
-  "mismatches": [],
+  "continuous_vertex_failures": [],
+  "derived_primary_gates": {
+    "G0_frozen_protocol_binding": true,
+    "G1_probability_feasibility": true,
+    "G2_exact_optimality": true,
+    "G3_parity_boundary": true,
+    "G4_odd_error_formula": true,
+    "G5_messagewise_control": true,
+    "G6_metric_robustness": true
+  },
+  "dual_bound_failures": [],
+  "final_conclusion_layers": {
+    "claim_support": "one_shot_two_equiprobable_messages_uniform_exact_average_cover",
+    "measurement_reliability": "independent_full_grid_continuous_extremal_and_dual_replay_passed",
+    "metric_robustness": "five_probe_pack_independently_replayed",
+    "operational_decision": "register_multiletter_successor",
+    "task_result": "sharp_uniform_alphabet_parity_frontier"
+  },
+  "independent_gates": {
+    "V0_frozen_protocol_binding": true,
+    "V1_registered_cell_grid_exact": true,
+    "V2_every_registered_cell_recomputed_exactly": true,
+    "V3_probability_and_cover_recomputed": true,
+    "V4_continuous_polytope_vertex_replay": true,
+    "V5_general_sign_count_dual_replay": true,
+    "V6_metric_probe_pack_recomputed": true,
+    "V7_primary_gates_derived_and_matched": true,
+    "V8_preverification_conclusion_layers_match": true,
+    "V9_protocol_and_result_identity_match": true
+  },
+  "measurement_reliability": "independent_full_grid_continuous_extremal_and_dual_replay_passed",
+  "metric_probe_mismatches": [],
   "operational_decision": "register_multiletter_successor",
   "pass": true,
-  "schema_version": "asmp6_balanced_cover_verification_v0_2"
+  "primary_gate_mismatches": [],
+  "probability_failures": [],
+  "protocol_binding": {
+    "claim_boundary_is_frozen": true,
+    "cover_law_is_uniform": true,
+    "enumeration_maximum_is_nine": true,
+    "message_count_is_two": true,
+    "message_prior_is_equal_half": true,
+    "protocol_fields_are_exact": true,
+    "protocol_id_is_frozen": true,
+    "protocol_schema_is_frozen": true,
+    "registered_alphabet_range_is_2_through_31": true
+  },
+  "registered_alphabet_sizes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "schema_version": "asmp6_balanced_cover_verification_v0_2_1"
 }
