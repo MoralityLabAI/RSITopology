@@ -31,3 +31,12 @@ The v0.25 successor discharges periodic block completeness for finite public
 additive scheduler state, component by component. It also supplies a sharp
 nonconvex boundary: irreversible recurrent SCCs must remain a disjunction, so
 one support family is not globally exact across their union.
+
+The v0.33 successor discharges periodic completeness without finite public
+state under a sublinear safe-closing property. It preserves the same
+component-indexed support formula and supplies an aperiodic no-finite-quotient
+witness plus an exact vector closing correction.
+
+The v0.34 successor supplies a compact local-to-global criterion for v0.33's
+safe-closing hypothesis: a connected finite safe cover of the charged public
+information state yields uniform time and two-port connector bounds.

@@ -140,3 +140,16 @@ root at the missing registered-class grammar and abstraction/replacement
 theorem. Its four reopening conditions make this the current convincing
 harness-backed operational stop on autonomous bounded expansion, not a full
 resolution of ASMP-4.
+
+V0.33 follows the allowed nonfinite-theorem route rather than adding another
+bounded sensor fixture. Sublinear safe closing now promotes reset blocks to
+the entire componentwise region for arbitrary public state spaces, and an
+aperiodic witness proves finite quotients are unnecessary. The remaining
+global obstruction is narrower: derive that safe-closing property from a
+formal normally hyperbolic nonlinear registration.
+
+V0.34 proves the compact local-to-global step: safe local connector
+certificates on a connected public-information core yield constant two-port
+closing overhead. Hidden-state controllability alone is insufficient, so the
+remaining global task is to construct those charged public certificates from
+the formal nonlinear architecture.

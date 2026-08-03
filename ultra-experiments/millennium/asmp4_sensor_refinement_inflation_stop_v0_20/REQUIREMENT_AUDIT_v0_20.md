@@ -166,3 +166,14 @@ in every row. Its sealed dependency and mutation audits identify the missing
 registered-class grammar plus abstraction/replacement theorem as the upstream
 root. Further autonomous bounded fixtures should therefore stop unless one of
 the certificate's four explicit reopening conditions is met.
+
+V0.33 meets the mathematical-replacement reopening condition. Its nonfinite
+safe-closing theorem upgrades the reset-block support formula to the full
+componentwise region without finite state. It does not select the missing
+global grammar or prove safe closing for that class, so the bounded-fixture
+stop remains while the nonlinear shadowing/closing route is active.
+
+V0.34 derives the required safe closing on every compact connected recurrent
+public component admitting safe local finite-cost connectors. Its hidden-mode,
+unsafe-overlap, and private-memory boundaries show why ordinary physical local
+controllability is not yet the missing charged public theorem.

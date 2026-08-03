@@ -115,3 +115,20 @@ autonomous bounded expansion. It does not support saying ASMP-4 is solved, and
 it does not support saying no global theorem exists. The correct next input is
 a formal class plus abstraction theorem, attributable semantic adjudication,
 or a concrete falsification of this certificate—not another local fixture.
+
+## V0.33 reopening note
+
+V0.33 satisfies reopening condition 2 without resuming bounded fixture
+enumeration. Its sublinear safe-closing theorem proves periodic completeness
+directly for arbitrary public state spaces once safe component return and
+sublinear vector transcript overhead are established. The aperiodic
+Thue-Morse witness confirms that this route does not assume a finite exact
+quotient. The operational stop remains valid for further autonomous bounded
+expansion, while global mathematical work is now reopened at the sharper task
+of deriving safe closing from a formal normally hyperbolic nonlinear class.
+
+V0.34 then derives safe closing from compact connected local controllability on
+the charged public information state. This is still a theorem-route advance,
+not bounded enumeration. It narrows the remaining premise to construction of
+robust finite-cost public local certificates from the canonical plant-level
+hyperbolicity, observation, disturbance, and actuator data.

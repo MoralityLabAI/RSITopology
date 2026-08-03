@@ -30,3 +30,6 @@ pytest caching disabled.
 This is not a full resolution of ASMP-4 and not a proof that a nonlinear
 variational theorem is impossible. It is a verified decision that more
 autonomous bounded fixtures do not target the missing upstream obligations.
+
+V0.33 preserves this scope boundary and reopens only the nonfinite theorem
+route named in the certificate.

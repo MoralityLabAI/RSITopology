@@ -1,0 +1,13 @@
+{
+  "schema_version": "asmp4_safe_closing_contract_v0_33",
+  "objective": "prove a nonfinite variational replacement that promotes componentwise safe reset blocks to the full two-port region under a checkable sublinear closing property",
+  "requirements": {
+    "entire_region": "component-indexed union of exact support-functional regions",
+    "finite_quotient": "not required",
+    "closing": "every infinite safe code has cofinally many safely closable prefixes with sublinear vector cost overhead",
+    "composition": "closed blocks concatenate with submultiplicative transcript counts",
+    "robustness": "shadowing error is smaller than the registered safety margin",
+    "invariance": "cost-preserving causal state conjugacies and transcript relabelings transport the entire construction"
+  },
+  "scope_boundary": "this is not a full ASMP-4 resolution because the safe-closing property is not proved for the unspecified canonical nonlinear class"
+}

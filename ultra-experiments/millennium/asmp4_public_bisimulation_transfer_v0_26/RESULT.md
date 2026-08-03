@@ -34,3 +34,7 @@ repair.
 The v0.31 successor uses classical conjunctive mean-payoff game theory to
 compute every additive finite alternating quotient supplied by this theorem,
 including possible infinite controller memory and finite-memory closure.
+
+The v0.33 successor bypasses finite exact quotients entirely under a sublinear
+safe-closing property. Its Thue-Morse reset witness realizes the nonfinite
+alternative anticipated by this package's aperiodic boundary.

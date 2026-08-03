@@ -30,3 +30,7 @@ global theorem exists. It says further autonomous bounded fixtures cannot
 supply the missing formal class, abstraction theorem, or semantic authority;
 four explicit reopening conditions identify evidence that would justify
 resuming construction.
+
+V0.33 subsequently meets the certificate's nonfinite-variational reopening
+condition. It does not invalidate the stop on bounded enumeration; it replaces
+the finite-quotient dependency with an explicit safe-closing obligation.

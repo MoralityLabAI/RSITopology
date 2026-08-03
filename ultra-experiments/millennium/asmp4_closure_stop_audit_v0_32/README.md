@@ -22,3 +22,7 @@ python verify_closure_stop_audit.py
 python -m pytest -q
 python -m ruff check .
 ```
+
+V0.33 is the first successor to satisfy a reopening condition: it supplies a
+nonfinite safe-closing variational theorem while preserving this package's stop
+on further bounded fixture enumeration.

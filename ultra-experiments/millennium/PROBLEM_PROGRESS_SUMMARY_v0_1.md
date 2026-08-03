@@ -551,6 +551,50 @@ after a formal class, a concrete abstraction or replacement theorem, external
 semantic adjudication, or an error in a sealed premise is supplied.  The
 expanded chain passes all 364 tests.
 
+**ASMP-4 v0.33 nonfinite safe-closing theorem.** The
+[sublinear safe-closing theorem](asmp4_nonfinite_safe_closing_v0_33/RESULT.md)
+reopens v0.32's permitted nonfinite-variational route and removes the finite-
+quotient premise from periodic completeness.  In every registered recurrent
+component where safe reset blocks concatenate and every infinite safe code has
+cofinally many prefixes closable with sublinear read/write cost and time
+overhead, the complete component region is
+`closure(upward(conv(P_q)))`, equivalently the intersection of the weighted
+support half-spaces `h_q(lambda)`.  The full closed region is the closure of the
+union of these component regions, so irreversible choices remain nonconvex.
+Cost-preserving causal conjugacies transport the whole construction.  The
+finite-horizon bound exposes the two closing charges separately, while a
+metric lift requires shadow error below the registered evaluator margin.  A
+Thue-Morse scheduler with a one-step reset has no finite exact stationary cost
+quotient but has exact corner `(1/2,1/2)`; two irreversible aperiodic components
+retain the false-convexification boundary at `(1,1)`.  Central and independent
+harnesses check 4,096 prefix horizons, 8,320 bounded eventual-period candidates,
+26,112 finite corrections, and eight mutations.  This is a genuine nonfinite
+replacement, not a full resolution: proving safe closing for a formal global
+normally hyperbolic nonlinear class remains open.  The expanded chain passes
+all 374 tests.
+
+**ASMP-4 v0.34 compact public-connector theorem.** The
+[local-to-global connector theorem](asmp4_compact_public_connector_v0_34/RESULT.md)
+derives v0.33 safe closing from a formal compact class rather than assuming it.
+The registered state is the charged public belief/reachable set together with
+every reset-relevant memory, never hidden plant state for free.  A compact
+connected recurrent safe component admits a finite cover by neighborhoods with
+safe local causal connector certificates.  Connectedness makes the safe
+overlap nerve connected; concatenating certificates along a simple nerve path
+gives uniform bounds `L=sum_j L_j` and separate
+`B_i=sum_j B_i,j`.  Constant overhead activates v0.33 and yields the complete
+nonfinite component region plus the indexed global union.  The construction is
+invariant under registered causal conjugacy.  A noncompact ladder has linear
+return cost despite local unit connectors; a hidden two-mode plant needs one
+charged read bit; unsafe ambient overlap and unreset actuator memory separately
+break concatenation.  Central code classifies all 32,768 six-vertex overlap
+graphs and 961,344 connected ordered pairs; an independent union-find/Warshall
+implementation reproduces the result and eight mutation rejections.  The
+remaining full-scope obligation is now sharper: derive robust finite-cost
+public local connector certificates from a formal normally hyperbolic plant,
+sensor, disturbance, and actuator registration.  The expanded chain passes all
+384 tests.
+
 ## ASMP-1 evidence chain
 
 ### 1. Finite-chain identifiability seed

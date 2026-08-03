@@ -44,3 +44,7 @@ finite-horizon safety-margin corrections.
 
 V0.32 audits those exclusions against the full frozen completion standard and
 issues the current operational stop on further autonomous bounded expansion.
+
+V0.33 then reopens the nonfinite theorem route: safe closing promotes reset
+blocks to complete component regions without assuming the finite quotient that
+this package computes after it is supplied.
