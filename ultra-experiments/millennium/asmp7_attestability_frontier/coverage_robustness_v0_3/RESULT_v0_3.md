@@ -4,11 +4,12 @@
 
 `selective_suppression_weakens_registered_attestability`
 
-The committed CPU-exact package evaluated all 96 frozen cells. Every
+The CPU-exact package evaluated all 96 frozen cells. Every
 exactness, reproduction, monotonicity, common-law, and brute-force gate passed,
-as did all five metric-robustness probes. The import-independent verifier
-recomputed all 96 records, repeated the small-case census, and reported zero
-failures.
+as did the all-cell cross-model weakening gate and all five metric-robustness
+probes. The import-independent verifier recomputed the exact registered
+protocol, all 96 complete records, gates, probes, witnesses, and four conclusion
+layers; it repeated the small-case census and reported zero failures.
 
 ## Exact contrast
 
@@ -50,18 +51,25 @@ control all passed.
 
 ## Artifact binding
 
-Source checkpoint: `96f5fb1`.
+The original v0.3 evidence used source checkpoint `96f5fb1`. The verifier
+hardening source checkpoint is
+`91c9f47bd9bc786a603c8a9a08e5bc4963be9f4f`. The artifact writers were
+rerun afterward; the receipt's exact source-file hashes match the bytes in that
+checkpoint, and the bundle receipt binds the regenerated verification.
 
 | Artifact | SHA-256 |
 |---|---|
-| `artifacts_v0_3/result.json` | `630aaefc4045978b91e4c5fc18572ac6e24e02c40ab2c16e4cedceb920863130` |
-| `artifacts_v0_3/receipt.json` | `8b90b3b341736e662e620c34d1960c3d2cc7b2a0c6f54d257f75c54b7c49e8b7` |
-| `artifacts_v0_3/verification.json` | `66a5e690e7522d188e066d0564b7187117fa5d7a75a15efec0d583bf75278fd9` |
+| `artifacts_v0_3/result.json` | `8277b755f4ee26cfb1df48b9986d252a8102a2f92eb6a6a7afa6d2d3b7134ffa` |
+| `artifacts_v0_3/receipt.json` | `f22d5e493028c6ec7c5679fb53f9d41fd94296c23c8a23b5c09e817dbf294c70` |
+| `artifacts_v0_3/verification.json` | `e741bf99191e4de1f77ac25ebb170efb9b357659e6c424afd3839751450bf07a` |
+| `artifacts_v0_3/bundle_receipt.json` | `b7ddbad42daa8aef0b85a627fac77112961594afaa80352b78be6368354381b6` |
 
 ## Claim boundary
 
-This result concerns a 16-point Boolean registry, exact-size event coverage,
-fresh fair fallback bits, independent challenges, and two declared
-suppression models. It does not establish real meter coverage, identify a
-deployment threshold, characterize adaptive history-dependent suppression,
-prove transformation-universal attestability, or resolve ASMP-7.
+This result concerns a 16-point Boolean registry, fresh per-challenge
+policy-independent coverage events, an execution-dependent exact-`c`-point
+selective mask fixed across challenges, fresh fair fallback bits, and
+independent challenges. It does not cover an execution-fixed random independent
+mask, establish real meter coverage, identify a deployment threshold,
+characterize adaptive history-dependent suppression, prove
+transformation-universal attestability, or resolve ASMP-7.

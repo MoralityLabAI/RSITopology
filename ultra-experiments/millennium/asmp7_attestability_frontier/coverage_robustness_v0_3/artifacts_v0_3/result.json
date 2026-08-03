@@ -1,9 +1,14 @@
 {
-  "claim_boundary": "This result concerns a 16-point Boolean registry, exact-size event coverage, fresh fair fallback bits, independent challenges, and two declared suppression models. It does not establish real meter coverage, identify a deployment threshold, characterize adaptive history-dependent suppression, prove transformation-universal attestability, or resolve ASMP-7.",
+  "claim_boundary": "This result concerns a 16-point Boolean registry, fresh per-challenge policy-independent coverage events, an execution-dependent exact-c-point selective mask fixed across challenges, fresh fair fallback bits, and independent challenges. It does not cover an execution-fixed random independent mask, establish real meter coverage, identify a deployment threshold, characterize adaptive history-dependent suppression, prove transformation-universal attestability, or resolve ASMP-7.",
   "claim_support": {
     "all_pass": true,
     "claim": "On the frozen Boolean grid, selective suppression can create an exact common-law region and otherwise weakly increases audit burden relative to policy-independent coverage.",
     "status": "registered_finite_claim_supported"
+  },
+  "coverage_semantics": {
+    "adversarial_selective": "execution_dependent_exact_c_point_mask_fixed_across_challenges",
+    "fixed_independent_mask_counterfactual": "out_of_scope_sensitivity_only",
+    "policy_independent": "fresh_per_challenge_event_with_probability_c_over_16"
   },
   "evidence_class": "exact_finite_rational_composite_testing",
   "experiment_id": "ASMP-7-METER-COVERAGE-ROBUSTNESS-v0.3",
@@ -22,6 +27,10 @@
         4,
         5
       ]
+    },
+    "C0_cross_model_weakening": {
+      "failures": [],
+      "pass": true
     },
     "E0_exact_adjacency": {
       "failures": [],
@@ -110,6 +119,7 @@
       "1/1"
     ]
   },
+  "protocol_schema": "asmp7_coverage_robustness_protocol_v0_3",
   "records": [
     {
       "common_law_witness": {
