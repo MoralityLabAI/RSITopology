@@ -1,0 +1,19 @@
+{
+  "environment": {
+    "arithmetic": "integer binomial masses and fractions.Fraction",
+    "gpu": "not used",
+    "implementation": "CPython",
+    "python": "3.11.4"
+  },
+  "executed_utc": "2026-08-03T21:25:01.458041+00:00",
+  "experiment_id": "ASMP-7-METER-COVERAGE-ROBUSTNESS-v0.3",
+  "result_sha256": "630aaefc4045978b91e4c5fc18572ac6e24e02c40ab2c16e4cedceb920863130",
+  "source_hashes": {
+    "PROTOCOL_v0_3.md": "f1cd9844a9959c924fb44372727c029971126e873a5959f8ec8f30002879cb53",
+    "README.md": "e97c287db75a7e7829fe243896e874335f1d047985d7fc48b91373fa3ce1c021",
+    "coverage_robustness.py": "598b2f36ee97f85c0de436c6bd195695b8594f4c869302553d05a7156405fddd",
+    "run.py": "1da33a4133f85e00477400c95331997d65517a33d1024be9a787cf5573afd5bb",
+    "test_coverage_robustness.py": "43d62770cdf3b3edf4dc9ddba2caf22b958fe6cf9247c0aa45c4b0a651abc918",
+    "verify_result.py": "63e79e5df73527f52f172e29bf4c849e66282978700cc706ba803b1560df8bd6"
+  }
+}
