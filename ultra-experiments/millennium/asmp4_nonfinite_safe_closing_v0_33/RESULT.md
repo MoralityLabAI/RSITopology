@@ -39,3 +39,10 @@ registered normally hyperbolic nonlinear class.
 V0.34 subsequently proves safe closing for compact connected public-information
 components with safe local finite-cost connector certificates. It does not
 derive those certificates from the still-underspecified plant-level wording.
+
+V0.35 supplies a quantitative alternative sufficient condition: a compact
+fixed-reset atlas built from strict Lipschitz safety margins, charged source
+labels, and charged actuator words gives constant safe closing directly.  It
+constructs such an atlas for an exact nonlinear uncertain fixture, while
+leaving robust pointwise connector existence for the full canonical class
+open.

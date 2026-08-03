@@ -48,3 +48,7 @@ issues the current operational stop on further autonomous bounded expansion.
 V0.33 then reopens the nonfinite theorem route: safe closing promotes reset
 blocks to complete component regions without assuming the finite quotient that
 this package computes after it is supplied.
+
+V0.35 constructs that safe-closing property from a finite robust fixed-reset
+atlas, bypassing the finite game when registered nonlinear connector tubes are
+available.

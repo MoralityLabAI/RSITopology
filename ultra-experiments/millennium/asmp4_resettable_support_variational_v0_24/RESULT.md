@@ -40,3 +40,7 @@ witness plus an exact vector closing correction.
 The v0.34 successor supplies a compact local-to-global criterion for v0.33's
 safe-closing hypothesis: a connected finite safe cover of the charged public
 information state yields uniform time and two-port connector bounds.
+
+The v0.35 successor supplies a second concrete criterion: strict Lipschitz
+connector tubes on a compact public source set yield a finite fixed-reset atlas
+with separately charged labels and actuator words.

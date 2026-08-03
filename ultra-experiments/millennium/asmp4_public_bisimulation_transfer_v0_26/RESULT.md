@@ -38,3 +38,7 @@ including possible infinite controller memory and finite-memory closure.
 The v0.33 successor bypasses finite exact quotients entirely under a sublinear
 safe-closing property. Its Thue-Morse reset witness realizes the nonfinite
 alternative anticipated by this package's aperiodic boundary.
+
+The v0.35 successor derives safe closing from a compact robust fixed-reset
+atlas, providing a plant-level sufficient route that also bypasses finite exact
+bisimulation.

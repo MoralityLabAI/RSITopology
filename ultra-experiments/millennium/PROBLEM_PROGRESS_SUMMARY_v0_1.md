@@ -6,7 +6,7 @@ This is a non-normative review aid for `ASMP-CANDIDATE-SET-v0.1`. The canonical 
 
 The set contains seven proposed long-horizon mathematical problems for AI safety. They are candidate research problems, not Clay Mathematics Institute prizes, and have not yet received the external field review required for public-prize status.
 
-## Progress accounting as of 2026-08-02
+## Progress accounting as of 2026-08-03
 
 - **Formally addressed under an exact ASMP problem ID and prospectively frozen
   claim boundary:** 7 of 7.
@@ -18,9 +18,10 @@ The set contains seven proposed long-horizon mathematical problems for AI safety
   scientific result:** 1 (`ASMP-5` v0.1); its versioned v0.2 repair now has a
   completed bounded result.
 - **Self-contained candidate mathematical resolutions at the full frozen
-  Millennium-problem scope:** 0 of 7. The ASMP-4 v0.3 theorem remains exact
-  conditionally, but its v0.6 registration fork shows that its normal-form
-  closure premise is not automatic across the canonical wording.
+  Millennium-problem scope:** 0 of 7. ASMP-4 now has a verified conditional
+  nonfinite theorem route through v0.35, but the v0.36 single-root audit confirms
+  that its normative registration domain remains unselected and materially
+  forked.
 - **Externally peer-reviewed resolutions:** 0 of 7.
 - **Closed theorem or exact-enumeration seeds inside an addressed problem:** 7.
 - **Completed real-model falsification experiments inside an addressed problem:** 1.
@@ -53,6 +54,12 @@ resolution.
 | ASMP-5 | Reflective Safety under Open-Ended Self-Modification | When do local safety certificates compose through recursive replacement of the system and its evaluators? | **Formally addressed, unresolved; repaired bounded result complete.** The [v0.1 verifier-drift census](asmp5_verifier_drift/RESULT.md) correctly stopped at its frozen wall-time cap. The separately registered [v0.2 repair](asmp5_verifier_drift/v0_2_repair/RESULT_v0_2.md) exhaustively finds depth-two unsafe paths when a successor checker becomes active, while a frozen-root refinement blocks them and retains an eight-step, nine-state safe chain. This is one finite counterexample/control pair, not an open-ended composition theorem. |
 | ASMP-6 | Adaptive Semantic Collusion Capacity | How much strategic coordination can agents hide in allowed communication under active auditing? | **Formally addressed, unresolved.** The [registered finite semantic-collusion frontier](asmp6_semantic_collusion_frontier/RESULT_v0_1.md) exactly separates message-averaged from per-message covertness over a four-symbol registry and measures the effect of a charged active auditor. It is neither an asymptotic capacity theorem nor evidence of language-model collusion. |
 | ASMP-7 | Capability Attestability under Compression and Decomposition | Which governance predicates remain verifiable after capability is compressed, decomposed, or migrated? | **Formally addressed, unresolved.** The [registered finite attestation result](asmp7_attestability_frontier/RESULT_v0_1.md) proves trace-law overlap for one 3,145,728-state execution/representation registry. The [excluded-band successor](asmp7_attestability_frontier/RESULT_v0_2_1.md) computes 40 exact nonzero-gap audit minima and calibrates how cost grows as the policy boundary narrows. Both assume trusted-meter coverage and establish neither real-model nor transformation-universal attestability. |
+
+**ASMP-4 current disposition.** The table's historical classification is now
+completed by the [v0.36 single-root stop certificate](asmp4_single_root_stop_v0_36/STOP_CERTIFICATE_v0_36.md):
+the conditional theorem chain is preserved, full canonical scope remains
+unresolved, and autonomous work stops pending one of four explicit semantic or
+falsification inputs.
 
 **ASMP-4 v0.7 audit addendum.** The stopping case is now stronger than the
 compact table entry: central and import-independent model builders verify all
@@ -594,6 +601,45 @@ remaining full-scope obligation is now sharper: derive robust finite-cost
 public local connector certificates from a formal normally hyperbolic plant,
 sensor, disturbance, and actuator registration.  The expanded chain passes all
 384 tests.
+
+**ASMP-4 v0.35 robust public reset-atlas theorem.** The
+[quantitative reset-atlas bridge](asmp4_robust_public_atlas_v0_35/RESULT.md)
+constructs v0.33 safe closing from robust plant-level connector words rather
+than assuming a public connector certificate.  If a nominal word has state and
+disturbance Lipschitz constants `(A,D)`, source-cell radius `eta`, and
+disturbance radius `omega`, the exact error recurrence is
+`E_(t+1)=A E_t+D omega`.  Strict evaluator-safe and terminal reset margins make
+the word valid on an open public source basin.  Compactness selects finitely
+many basins; their labels cost `ceil(log2 N_read)` read bits, their distinct
+actuator words separately cost `ceil(log2 N_words)` write bits, and their
+maximum duration is constant.  The nonlinear uncertain fixture
+`x_next=2*x+u+x^2/4+w` uses 33 cells and 33 words on `[-1,1]`, with
+`|w|<=1/128` and exact error `11/128<1/8`, hence six bits at each port per
+closing event.  Central and independent implementations check 3,888 error
+rows, 3,171 nonlinear rows, dimension growth, and eight mutations.  A scope
+correction is explicit: this fixed-reset atlas proves safe closing directly
+but does not establish v0.34's stronger all-pairs local premise.  The remaining
+canonical gap is narrower but still decisive: the normally hyperbolic wording
+does not itself register robust pointwise public connector words, a sensor
+grammar, belief-cell semantics, or the actuator dictionary.  The expanded
+chain passes all 394 tests.
+
+**ASMP-4 v0.36 single-root stop certificate.** The
+[final stopping audit](asmp4_single_root_stop_v0_36/STOP_CERTIFICATE_v0_36.md)
+seals the canonical source, the two material registration forks, and the
+v0.33-v0.35 nonfinite theorem chain. Independent regex and line parsers recover
+all five completion requirements, six explicit architecture clauses, and seven
+missing domain selectors. V0.6 proves the sensor choice changes the closed
+region, while v0.8 proves the unselected probability/disturbance order changes
+feasibility. Every completion requirement has conditional mathematical
+evidence, but frozen-scope completion remains `0/5` because all rows share one
+unselected state/code domain. A dependency audit identifies one residual root:
+formal normative registration or attributable semantic adjudication. Central
+and independent code enumerate all 32 stop/reopen assignments; exactly the
+current assignment authorizes stopping. The decision is operational, not a
+resolution or universal impossibility theorem. Work reopens only for a formal
+registry, attributable adjudication, a sealed error, or a theorem collapsing
+the material forks. The expanded chain passes all 404 tests.
 
 ## ASMP-1 evidence chain
 

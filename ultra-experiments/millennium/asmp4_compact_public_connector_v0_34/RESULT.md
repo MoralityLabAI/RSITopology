@@ -28,3 +28,9 @@ explicit sufficient formal class for the nonfinite region theorem.  It is not
 a full resolution of ASMP-4: deriving robust, finite-cost public local
 certificates from the canonical normally hyperbolic plant wording remains
 open.
+
+V0.35 subsequently constructs a finite fixed-reset public atlas from
+registered Lipschitz tubes and strict reset margins.  That atlas reaches this
+package's safe-closing conclusion directly, with separate finite read and
+write charges.  It does not claim this package's stronger all-pairs local
+premise; an all-pairs atlas must be registered separately.

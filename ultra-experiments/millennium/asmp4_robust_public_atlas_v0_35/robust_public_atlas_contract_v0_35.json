@@ -1,0 +1,13 @@
+{
+  "schema_version": "asmp4_robust_public_atlas_contract_v0_35",
+  "objective": "derive finite two-port safe-closing certificates from robust nominal connector words on a compact registered public source set",
+  "requirements": {
+    "plant": "registered metric plant with finite connector words, state and disturbance Lipschitz bounds, and strict evaluator-safe and reset margins",
+    "public_state": "sensor cell labels determine charged public reachable sets and all reset-relevant memories",
+    "compactness": "the robust source basins cover a compact registered recurrent component",
+    "ports": "sensor labels and actuator words are separately charged",
+    "uncertainty": "universal bounded disturbance, not expectation",
+    "execution": "the actuator dictionary includes word duration and resets every registered private memory"
+  },
+  "scope_boundary": "this theorem does not prove robust pointwise connectors for every canonical normally hyperbolic class, and a fixed-reset atlas does not by itself satisfy the stronger all-pairs local premise of v0.34"
+}

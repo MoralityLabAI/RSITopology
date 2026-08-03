@@ -33,3 +33,8 @@ autonomous bounded fixtures do not target the missing upstream obligations.
 
 V0.33 preserves this scope boundary and reopens only the nonfinite theorem
 route named in the certificate.
+
+V0.34 and v0.35 add a compact public local-to-global theorem and a robust
+fixed-reset atlas construction.  Both are conditional on registered public
+architecture data absent from canonical ASMP-4, so this audit's full-scope
+status remains unchanged.

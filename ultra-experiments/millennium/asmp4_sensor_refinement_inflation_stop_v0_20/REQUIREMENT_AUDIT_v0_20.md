@@ -177,3 +177,8 @@ V0.34 derives the required safe closing on every compact connected recurrent
 public component admitting safe local finite-cost connectors. Its hidden-mode,
 unsafe-overlap, and private-memory boundaries show why ordinary physical local
 controllability is not yet the missing charged public theorem.
+
+V0.35 derives constant safe closing from a compact robust fixed-reset atlas and
+constructs one for an exact nonlinear uncertain plant.  It charges the sensor
+cover and actuator dictionary separately, while confirming that the canonical
+class still does not provide the needed public connector data.

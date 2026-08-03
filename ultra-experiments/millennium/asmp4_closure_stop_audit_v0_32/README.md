@@ -26,3 +26,7 @@ python -m ruff check .
 V0.33 is the first successor to satisfy a reopening condition: it supplies a
 nonfinite safe-closing variational theorem while preserving this package's stop
 on further bounded fixture enumeration.
+
+V0.34 derives safe closing from compact connected public local certificates;
+v0.35 constructs a finite fixed-reset certificate from strict Lipschitz tubes.
+Neither successor supplies the missing canonical registration.

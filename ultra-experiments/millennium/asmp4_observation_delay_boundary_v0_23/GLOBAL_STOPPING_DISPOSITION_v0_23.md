@@ -153,3 +153,12 @@ certificates on a connected public-information core yield constant two-port
 closing overhead. Hidden-state controllability alone is insufficient, so the
 remaining global task is to construct those charged public certificates from
 the formal nonlinear architecture.
+
+V0.35 constructs a fixed-reset version of those certificates whenever strict
+Lipschitz tubes, public source labels, and actuator words are registered.  Its
+exact uncertain nonlinear fixture confirms the bridge, but the canonical
+wording does not supply those registered ingredients.
+
+V0.36 seals the resulting single-root disposition. Further autonomous work
+stops because two source-compatible registry choices remain materially
+different and no normative selector or attributable adjudication exists.

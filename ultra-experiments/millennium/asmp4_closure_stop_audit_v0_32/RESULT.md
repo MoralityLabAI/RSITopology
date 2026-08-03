@@ -34,3 +34,8 @@ resuming construction.
 V0.33 subsequently meets the certificate's nonfinite-variational reopening
 condition. It does not invalidate the stop on bounded enumeration; it replaces
 the finite-quotient dependency with an explicit safe-closing obligation.
+
+V0.34 and v0.35 progressively discharge that obligation for compact public
+local-connector covers and for robust fixed-reset atlases constructed from
+registered Lipschitz margins.  They leave the same canonical grammar and
+architecture-registration root open.

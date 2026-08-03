@@ -132,3 +132,21 @@ the charged public information state. This is still a theorem-route advance,
 not bounded enumeration. It narrows the remaining premise to construction of
 robust finite-cost public local certificates from the canonical plant-level
 hyperbolicity, observation, disturbance, and actuator data.
+
+V0.35 advances that theorem route again: strict registered Lipschitz and reset
+margins turn pointwise connector words into open public basins, and compactness
+selects a finite fixed-reset atlas with separately charged labels and actuator
+words.  Its nonlinear uncertain fixture verifies the construction exactly.
+The operational stop still applies at canonical scope because the frozen
+wording supplies neither those robust pointwise words nor their public sensor,
+belief, memory, and actuator registration.
+
+## V0.36 final disposition
+
+V0.36 reseals the source and the v0.6/v0.8 material forks after the complete
+v0.33-v0.35 theorem route. Its independent parsers and 32-row stopping truth
+table reduce the residual dependency to one root: formal normative registration
+or attributable semantic adjudication. The original bounded-expansion stop is
+therefore strengthened to a stop on all further autonomous ASMP-4 work until a
+formal registry, attributable adjudication, sealed error, or
+registry-independence theorem appears.
