@@ -51,9 +51,15 @@ def compact_json(payload: object) -> str:
     return json.dumps(payload, sort_keys=True, separators=(",", ":"), allow_nan=False)
 
 
+def write_lf_text(path: Path, payload: str) -> None:
+    """Write UTF-8 text without platform newline translation."""
+
+    path.write_text(payload, encoding="utf-8", newline="\n")
+
+
 def atomic_json(path: Path, payload: object) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(canonical_json(payload), encoding="utf-8")
+    write_lf_text(temporary, canonical_json(payload))
     os.replace(temporary, path)
 
 

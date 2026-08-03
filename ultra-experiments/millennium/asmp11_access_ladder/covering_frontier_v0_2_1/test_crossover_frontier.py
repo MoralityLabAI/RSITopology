@@ -193,3 +193,27 @@ def test_manifest_anchor_and_future_registration_source_set_are_complete() -> No
     _, checks = run.validate_prior_anchor(ROOT / "prior_anchor_v0_2.json")
     assert all(row["pass"] for row in checks)
     assert all((ROOT / relative).is_file() for relative in build_registration.BOUND_SOURCES)
+
+
+def test_all_hash_bound_text_writers_emit_lf_bytes(tmp_path: Path) -> None:
+    payload = '{\n  "alpha": 1,\n  "beta": 2\n}\n'
+    for index, writer in enumerate(
+        (run.write_lf_text, build_registration.write_lf_text, independent.write_lf_text)
+    ):
+        output = tmp_path / f"writer_{index}.json"
+        writer(output, payload)
+        emitted = output.read_bytes()
+        assert emitted == payload.encode("utf-8")
+        assert b"\r\n" not in emitted
+        assert emitted.endswith(b"\n")
+
+
+def test_atomic_json_and_jsonl_emit_lf_bytes(tmp_path: Path) -> None:
+    json_path = tmp_path / "atomic.json"
+    jsonl_path = tmp_path / "rows.jsonl"
+    run.atomic_json(json_path, {"nested": {"value": 1}, "rows": [1, 2]})
+    run.write_jsonl(jsonl_path, ({"row": 1}, {"row": 2}))
+    for output in (json_path, jsonl_path):
+        emitted = output.read_bytes()
+        assert b"\r\n" not in emitted
+        assert emitted.endswith(b"\n")

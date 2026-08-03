@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent
 BOUND_SOURCES = (
     "README.md",
     "PROTOCOL_v0_2_1.md",
+    "SERIALIZATION_REPAIR_v0_2_1_1.md",
     "experiment_v0_2_1.json",
     "prior_anchor_v0_2.json",
     "crossover_frontier.py",
@@ -27,6 +28,12 @@ BOUND_SOURCES = (
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_lf_text(path: Path, payload: str) -> None:
+    """Write hash-bound UTF-8 text with repository-stable LF bytes."""
+
+    path.write_text(payload, encoding="utf-8", newline="\n")
 
 
 def git(*args: str) -> str:
@@ -81,7 +88,7 @@ def main() -> int:
         "claim_boundary": "Finite bounds-aware crossover surface for the transparent parity oracle only.",
         "output_policy": "write_once_non_aliasing",
     }
-    output.write_text(json.dumps(registration, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_lf_text(output, json.dumps(registration, indent=2, sort_keys=True) + "\n")
     print(output)
     return 0
 

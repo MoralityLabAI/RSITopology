@@ -30,6 +30,12 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def write_lf_text(path: Path, payload: str) -> None:
+    """Write verification text with stable LF bytes on every host."""
+
+    path.write_text(payload, encoding="utf-8", newline="\n")
+
+
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     rows = []
     with path.open(encoding="utf-8") as handle:
@@ -449,7 +455,7 @@ def main() -> int:
     if output.exists():
         raise FileExistsError(f"verification receipt is write-once: {output}")
     temporary = output.with_suffix(output.suffix + ".tmp")
-    temporary.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_lf_text(temporary, json.dumps(result, indent=2, sort_keys=True) + "\n")
     os.replace(temporary, output)
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0 if result["verified"] else 2
