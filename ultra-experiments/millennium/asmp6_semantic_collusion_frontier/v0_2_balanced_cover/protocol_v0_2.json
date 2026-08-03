@@ -5,6 +5,9 @@
   },
   "claim_boundary": [
     "one-shot opaque-symbol laws only",
+    "exactly two equiprobable messages only",
+    "uniform benign cover law only",
+    "exact message-averaged cover and exact per-message control only",
     "no learned or linguistic encoder",
     "no multiletter or ASMP-6 resolution claim"
   ],
