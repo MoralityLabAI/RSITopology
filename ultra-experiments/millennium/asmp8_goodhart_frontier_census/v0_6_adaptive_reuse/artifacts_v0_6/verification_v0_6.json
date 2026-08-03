@@ -1,0 +1,15 @@
+{
+  "agreements": {
+    "full_census_failures": true,
+    "naive_false_declarations": true,
+    "pointwise_cells": true,
+    "robust_soundness_failures": true
+  },
+  "claim_support": "deterministic_finite_adaptive_audit_reuse",
+  "implementation_imported": false,
+  "measurement_reliability": "independent_complete_replay_passed",
+  "operational_decision": "retain_bound_require_new_noisy_label_protocol",
+  "pass": true,
+  "replayed_pointwise_cells": 1399680,
+  "schema_version": "asmp8_adaptive_reuse_verification_v0_6"
+}
