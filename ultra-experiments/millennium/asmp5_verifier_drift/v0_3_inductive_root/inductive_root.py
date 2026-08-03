@@ -2,12 +2,16 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
 
 
 ROOT_CHECKER = 0b0011
+CHECKER_COUNT = 16
+INDUCTIVE_RADII = (0, 1, 2, 3, 4)
+TEMPLATE_WIDTH = 2
 RULES = ("self_endorsement", "pairwise_agreement", "root_refinement")
 
 
@@ -40,7 +44,13 @@ def transition_allowed(
 ) -> bool:
     if rule not in RULES:
         raise ValueError(f"unknown rule: {rule}")
-    if behavior >= (1 << width) or next_behavior >= (1 << width):
+    if width < 1 or radius < 0:
+        return False
+    if not 0 <= checker < CHECKER_COUNT or not 0 <= next_checker < CHECKER_COUNT:
+        return False
+    if not 0 <= behavior < (1 << width) or not 0 <= next_behavior < (1 << width):
+        return False
+    if rule == "root_refinement" and not 0 <= root_checker < CHECKER_COUNT:
         return False
     if (behavior ^ next_behavior).bit_count() != 1:
         return False
@@ -58,6 +68,169 @@ def transition_allowed(
         if rule == "root_refinement" and present and (next_checker & ~root_checker) == 0:
             return True
     return False
+
+
+def transition_truth_table_digest(root_checker: int = ROOT_CHECKER) -> dict[str, Any]:
+    """Hash the complete rooted transition relation on the two-bit template.
+
+    Width two contains the hazard coordinate and one representative
+    nonhazard coordinate. Every four-bit checker pair, behavior, one-bit edge,
+    and distinct Hamming-radius regime is included. Radii above four add no
+    transitions in the frozen checker grammar.
+    """
+
+    digest = hashlib.sha256()
+    digest.update(b"ASMP5-root-refinement-transition-truth-table-v1\n")
+    row_count = 0
+    allowed_count = 0
+    for radius in INDUCTIVE_RADII:
+        for behavior in range(1 << TEMPLATE_WIDTH):
+            for checker in range(CHECKER_COUNT):
+                for coordinate in range(TEMPLATE_WIDTH):
+                    next_behavior = behavior ^ (1 << coordinate)
+                    for next_checker in range(CHECKER_COUNT):
+                        allowed = transition_allowed(
+                            behavior=behavior,
+                            checker=checker,
+                            next_behavior=next_behavior,
+                            next_checker=next_checker,
+                            width=TEMPLATE_WIDTH,
+                            radius=radius,
+                            rule="root_refinement",
+                            root_checker=root_checker,
+                        )
+                        row = (
+                            f"{radius},{behavior},{checker},{next_behavior},"
+                            f"{next_checker},{int(allowed)}\n"
+                        )
+                        digest.update(row.encode("ascii"))
+                        row_count += 1
+                        allowed_count += int(allowed)
+    return {
+        "schema": "root_refinement_transition_truth_table_v1",
+        "template_width": TEMPLATE_WIDTH,
+        "checker_count": CHECKER_COUNT,
+        "radii": list(INDUCTIVE_RADII),
+        "row_count": row_count,
+        "allowed_count": allowed_count,
+        "sha256": digest.hexdigest(),
+    }
+
+
+def rooted_one_step_closure(radius: int, root_checker: int = ROOT_CHECKER) -> dict[str, Any]:
+    """Exhaust the inductive safety step using the primary transition relation."""
+
+    if radius < 0:
+        raise ValueError("radius must be nonnegative")
+    violations: list[dict[str, int]] = []
+    checked_edges = 0
+    accepted_edges = 0
+    for behavior in range(1 << TEMPLATE_WIDTH):
+        if bit(behavior, 0):
+            continue
+        for checker in range(CHECKER_COUNT):
+            if checker & ~root_checker:
+                continue
+            for coordinate in range(TEMPLATE_WIDTH):
+                next_behavior = behavior ^ (1 << coordinate)
+                for next_checker in range(CHECKER_COUNT):
+                    checked_edges += 1
+                    allowed = transition_allowed(
+                        behavior=behavior,
+                        checker=checker,
+                        next_behavior=next_behavior,
+                        next_checker=next_checker,
+                        width=TEMPLATE_WIDTH,
+                        radius=radius,
+                        rule="root_refinement",
+                        root_checker=root_checker,
+                    )
+                    if not allowed:
+                        continue
+                    accepted_edges += 1
+                    if bit(next_behavior, 0) or next_checker & ~root_checker:
+                        violations.append(
+                            {
+                                "behavior": behavior,
+                                "checker": checker,
+                                "next_behavior": next_behavior,
+                                "next_checker": next_checker,
+                            }
+                        )
+    base_case = not (root_checker & ~ROOT_CHECKER) and all(
+        not checker_accepts(root_checker, 1, proof_class) for proof_class in (0, 1)
+    )
+    return {
+        "radius": radius,
+        "base_case": base_case,
+        "checked_edges": checked_edges,
+        "accepted_edges": accepted_edges,
+        "violations": violations,
+        "pass": base_case and not violations,
+    }
+
+
+def rooted_induction_certificate(root_checker: int = ROOT_CHECKER) -> dict[str, Any]:
+    closures = [rooted_one_step_closure(radius, root_checker) for radius in INDUCTIVE_RADII]
+    return {
+        "pass": all(record["pass"] for record in closures),
+        "radii_complete": "radii_0_through_4_cover_all_four_bit_checker_distances",
+        "closures": closures,
+        "transition_truth_table": transition_truth_table_digest(root_checker),
+    }
+
+
+def nonhazard_permutation_invariance(root_checker: int = ROOT_CHECKER) -> dict[str, Any]:
+    """Swap the two nonhazard coordinates and compare every rooted edge."""
+
+    width = 3
+
+    def swap_nonhazard(value: int) -> int:
+        hazard = value & 1
+        bit_one = (value >> 1) & 1
+        bit_two = (value >> 2) & 1
+        return hazard | (bit_one << 2) | (bit_two << 1)
+
+    failures: list[dict[str, int]] = []
+    checked_edges = 0
+    for radius in INDUCTIVE_RADII:
+        for behavior in range(1 << width):
+            for checker in range(CHECKER_COUNT):
+                for coordinate in range(width):
+                    next_behavior = behavior ^ (1 << coordinate)
+                    for next_checker in range(CHECKER_COUNT):
+                        original = transition_allowed(
+                            behavior=behavior,
+                            checker=checker,
+                            next_behavior=next_behavior,
+                            next_checker=next_checker,
+                            width=width,
+                            radius=radius,
+                            rule="root_refinement",
+                            root_checker=root_checker,
+                        )
+                        permuted = transition_allowed(
+                            behavior=swap_nonhazard(behavior),
+                            checker=checker,
+                            next_behavior=swap_nonhazard(next_behavior),
+                            next_checker=next_checker,
+                            width=width,
+                            radius=radius,
+                            rule="root_refinement",
+                            root_checker=root_checker,
+                        )
+                        checked_edges += 1
+                        if original != permuted:
+                            failures.append(
+                                {
+                                    "radius": radius,
+                                    "behavior": behavior,
+                                    "checker": checker,
+                                    "coordinate": coordinate,
+                                    "next_checker": next_checker,
+                                }
+                            )
+    return {"pass": not failures, "checked_edges": checked_edges, "failures": failures}
 
 
 def unrooted_witness(width: int, radius: int, rule: str) -> list[dict[str, int]] | None:
@@ -131,19 +304,22 @@ def theorem_cell(width: int, radius: int, rule: str) -> dict[str, Any]:
     if width < 1 or radius < 0:
         raise ValueError("width must be positive and radius nonnegative")
     if rule == "root_refinement":
+        closure = rooted_one_step_closure(radius)
+        liveness_cycle = rooted_liveness_cycle(width, radius)
         return {
             "width": width,
             "radius": radius,
             "rule": rule,
             "unsafe_depth": None,
-            "all_depth_safety": True,
-            "arbitrary_time_liveness": width >= 2,
+            "all_depth_safety": closure["pass"],
+            "arbitrary_time_liveness": width >= 2 and liveness_cycle is not None,
             "certificate": {
                 "base": "initial_checker_subset_of_root",
                 "step": "accepted_successor_checker_subset_of_root",
                 "consequence": "root_subsets_reject_both_hazard_proof_classes",
+                "one_step_closure": closure,
             },
-            "liveness_cycle": rooted_liveness_cycle(width, radius),
+            "liveness_cycle": liveness_cycle,
         }
     witness = unrooted_witness(width, radius, rule)
     return {
@@ -158,6 +334,8 @@ def theorem_cell(width: int, radius: int, rule: str) -> dict[str, Any]:
 
 
 def robustness_probes() -> dict[str, dict[str, Any]]:
+    induction = rooted_induction_certificate()
+    permutation = nonhazard_permutation_invariance()
     mutated_root = ROOT_CHECKER | (1 << 2)
     sensitivity_live = transition_allowed(
         behavior=0,
@@ -171,17 +349,18 @@ def robustness_probes() -> dict[str, dict[str, Any]]:
     )
     return {
         "invariance": {
-            "pass": theorem_cell(3, 1, "root_refinement")["all_depth_safety"]
-            == theorem_cell(7, 1, "root_refinement")["all_depth_safety"],
-            "probe": "add_or_permute_nonhazard_coordinates",
+            "pass": permutation["pass"],
+            "probe": "permute_representative_nonhazard_coordinates",
+            "checked_edges": permutation["checked_edges"],
         },
         "sensitivity": {
             "pass": sensitivity_live,
             "probe": "root_hazard_acceptance_mutation_yields_depth_one_failure",
         },
         "monotonicity": {
-            "pass": all(theorem_cell(6, radius, "root_refinement")["all_depth_safety"] for radius in range(5)),
+            "pass": induction["pass"],
             "probe": "all_horizons_and_checker_radii",
+            "radii": list(INDUCTIVE_RADII),
         },
         "anti_gaming": {
             "pass": unrooted_witness(6, 1, "self_endorsement") is not None
@@ -204,11 +383,21 @@ def compile_result(protocol: dict[str, Any]) -> dict[str, Any]:
         for rule in protocol["rules"]
     ]
     probes = robustness_probes()
+    induction = rooted_induction_certificate()
+    closure_registration = protocol.get("inductive_closure")
+    expected_closure_registration = {
+        "checker_domain": [0, CHECKER_COUNT - 1],
+        "radii": list(INDUCTIVE_RADII),
+        "template_width": TEMPLATE_WIDTH,
+        "transition_digest_schema": "root_refinement_transition_truth_table_v1",
+    }
     gates = {
-        "G0_root_table": ROOT_CHECKER == int(protocol["root_checker"]),
+        "G0_root_table": ROOT_CHECKER == int(protocol["root_checker"])
+        and closure_registration == expected_closure_registration,
         "G1_inductive_safety": all(
             cell["all_depth_safety"] for cell in cells if cell["rule"] == "root_refinement"
-        ),
+        )
+        and induction["pass"],
         "G2_arbitrary_time_liveness": all(
             cell["arbitrary_time_liveness"]
             for cell in cells
@@ -225,6 +414,8 @@ def compile_result(protocol: dict[str, Any]) -> dict[str, Any]:
     return {
         "schema_version": "asmp5_inductive_root_result_v0_3",
         "protocol_id": protocol["protocol_id"],
+        "transition_relation": induction["transition_truth_table"],
+        "induction_certificate": induction,
         "metric_robustness": probes,
         "task_result": "all_depth_rooted_safety_with_arbitrary_time_liveness" if passed else "not_established",
         "measurement_reliability": "pending_independent_replay" if passed else "failed",

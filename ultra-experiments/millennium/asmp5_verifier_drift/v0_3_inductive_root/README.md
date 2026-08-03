@@ -18,6 +18,11 @@ python ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/run
 python ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/verify_independent.py
 ```
 
-The runner is a deterministic theorem compiler.  The independent verifier
-does not import it and replays the registered finite grid by explicit graph
-search.
+The runner is a deterministic theorem compiler.  It derives rooted safety from
+an exhaustive one-step closure of the actual transition relation and records a
+truth-table digest.  The independent verifier does not import it: it replays
+the registered finite graph grid, reconstructs the closure and digest, and
+writes both `verification_v0_3.json` and the hash-bound
+`synthesis_receipt_v0_3.json`.  The synthesis receipt is the authoritative
+combined conclusion and binds the executable primary/verifier sources as well
+as the protocol and two evidence artifacts.

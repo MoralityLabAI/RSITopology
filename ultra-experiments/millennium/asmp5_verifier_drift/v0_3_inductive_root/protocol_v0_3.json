@@ -9,6 +9,12 @@
     "radii": [0, 1, 2],
     "widths": [2, 3, 4, 6, 8]
   },
+  "inductive_closure": {
+    "checker_domain": [0, 15],
+    "radii": [0, 1, 2, 3, 4],
+    "template_width": 2,
+    "transition_digest_schema": "root_refinement_transition_truth_table_v1"
+  },
   "proof_classes": [0, 1],
   "protocol_id": "ASMP5-INDUCTIVE-ROOT-v0.3",
   "root_checker": 3,

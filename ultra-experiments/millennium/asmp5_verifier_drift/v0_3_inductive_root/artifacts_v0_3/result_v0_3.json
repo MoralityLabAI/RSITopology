@@ -24,6 +24,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -95,6 +103,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -166,6 +182,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -211,6 +235,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -282,6 +314,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -353,6 +393,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -398,6 +446,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -469,6 +525,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -540,6 +604,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -585,6 +657,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -656,6 +736,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -727,6 +815,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -772,6 +868,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -843,6 +947,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -914,6 +1026,14 @@
       "certificate": {
         "base": "initial_checker_subset_of_root",
         "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
         "step": "accepted_successor_checker_subset_of_root"
       },
       "liveness_cycle": [
@@ -949,6 +1069,67 @@
     "G3_unrooted_separation": true,
     "G4_metric_robustness": true
   },
+  "induction_certificate": {
+    "closures": [
+      {
+        "accepted_edges": 6,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 0,
+        "violations": []
+      },
+      {
+        "accepted_edges": 18,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 1,
+        "violations": []
+      },
+      {
+        "accepted_edges": 24,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 2,
+        "violations": []
+      },
+      {
+        "accepted_edges": 24,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 3,
+        "violations": []
+      },
+      {
+        "accepted_edges": 24,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 4,
+        "violations": []
+      }
+    ],
+    "pass": true,
+    "radii_complete": "radii_0_through_4_cover_all_four_bit_checker_distances",
+    "transition_truth_table": {
+      "allowed_count": 1088,
+      "checker_count": 16,
+      "radii": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "row_count": 10240,
+      "schema": "root_refinement_transition_truth_table_v1",
+      "sha256": "fecf0df05e101c21713118b32901810c2bccb639d390c188eacd3ba1d19ca925",
+      "template_width": 2
+    }
+  },
   "measurement_reliability": "pending_independent_replay",
   "metric_robustness": {
     "anti_gaming": {
@@ -960,12 +1141,20 @@
       "probe": "safe_certificate_is_not_deadlock"
     },
     "invariance": {
+      "checked_edges": 30720,
       "pass": true,
-      "probe": "add_or_permute_nonhazard_coordinates"
+      "probe": "permute_representative_nonhazard_coordinates"
     },
     "monotonicity": {
       "pass": true,
-      "probe": "all_horizons_and_checker_radii"
+      "probe": "all_horizons_and_checker_radii",
+      "radii": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
     },
     "sensitivity": {
       "pass": true,
@@ -975,5 +1164,20 @@
   "operational_decision": "run_independent_replay",
   "protocol_id": "ASMP5-INDUCTIVE-ROOT-v0.3",
   "schema_version": "asmp5_inductive_root_result_v0_3",
-  "task_result": "all_depth_rooted_safety_with_arbitrary_time_liveness"
+  "task_result": "all_depth_rooted_safety_with_arbitrary_time_liveness",
+  "transition_relation": {
+    "allowed_count": 1088,
+    "checker_count": 16,
+    "radii": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "row_count": 10240,
+    "schema": "root_refinement_transition_truth_table_v1",
+    "sha256": "fecf0df05e101c21713118b32901810c2bccb639d390c188eacd3ba1d19ca925",
+    "template_width": 2
+  }
 }

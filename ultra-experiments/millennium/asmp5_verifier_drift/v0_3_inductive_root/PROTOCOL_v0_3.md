@@ -2,9 +2,12 @@
 
 ## Frozen object
 
-- behavior is a width-`w` bit vector with hazard coordinate zero;
+- behavior is an integer in `0..2^w-1` interpreted as a width-`w` bit vector,
+  with bit zero designated as the hazard coordinate;
 - a checker is a four-bit acceptance table indexed by
   `(hazard, proof_class)`;
+- checker values are integers in the closed domain `0..15`; values with a
+  negative sign or any higher bit are outside the grammar and are rejected;
 - the root checker is binary `0011`, accepting both proof classes exactly when
   the proposed behavior is nonhazardous;
 - one step flips one behavior bit and changes the installed checker within a
@@ -27,7 +30,13 @@
 
 The standalone verifier exhausts widths `{2,3,4,6,8}`, radii `{0,1,2}`, all
 three certificate rules, and horizons through six.  The grid checks the
-theorem compiler; it is not the basis of the all-depth induction.
+theorem compiler; it is not the basis of the all-depth induction.  The
+all-depth basis is a separate exhaustive one-step closure over the width-two
+safe/hazard templates, all 16 current and successor checker values, and radii
+`{0,1,2,3,4}`.  Those radii cover every distinct Hamming-distance regime in a
+four-bit checker grammar.  The primary compiler hashes all 10,240 rows of that
+rooted transition truth table, and the standalone verifier independently
+reconstructs both the closure and its digest.
 
 ## Robustness probes
 
@@ -35,7 +44,7 @@ theorem compiler; it is not the basis of the all-depth induction.
 - sensitivity: granting the root one hazard acceptance bit produces a
   depth-one unsafe transition;
 - monotonicity: the rooted invariant is closed under arbitrary horizon
-  extension;
+  extension in every distinct four-bit checker-radius regime;
 - anti-gaming: the unrooted two-step witness is live rather than suppressed;
 - clean control: the rooted system has an explicit safe two-cycle and is not
   certified by deadlock.
@@ -44,10 +53,15 @@ theorem compiler; it is not the basis of the all-depth induction.
 
 - **Task result:** the four theorem targets for the frozen grammar.
 - **Measurement reliability:** agreement with an import-independent finite
-  graph replay on the registered grid.
+  graph replay, one-step closure, and transition-relation digest.
 - **Claim support:** an all-depth certificate for one exact rooted rule.
 - **Operational decision:** retire deeper brute-force expansion of this toy
   positive control and move to replaceable-root or learned-checker robustness.
+
+The final synthesis receipt binds the protocol, primary result, and independent
+verification, plus the primary and verifier source files, by SHA-256. Its five
+conclusion layers are the authoritative combined verdict; the primary result
+alone remains pending independent replay.
 
 ## Claim boundary
 
