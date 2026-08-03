@@ -1,0 +1,19 @@
+{
+  "claim_support": "one_shot_uniform_exact_average_cover",
+  "dual_bound_failures": [],
+  "enumerated_alphabet_sizes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "measurement_reliability": "independent_extremal_and_dual_replay_passed",
+  "mismatches": [],
+  "operational_decision": "register_multiletter_successor",
+  "pass": true,
+  "schema_version": "asmp6_balanced_cover_verification_v0_2"
+}
