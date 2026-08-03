@@ -13,7 +13,7 @@
   ],
   "model": {
     "entrypoint": "run.py",
-    "code_hash": "bound by prospective registration before claim-grid execution",
+    "code_hash": "v0.2.1.2 source commit and blob hashes must be bound by prospective registration before claim-grid execution",
     "config_paths": [
       "experiment_v0_2_1.json",
       "prior_anchor_v0_2.json"
@@ -48,10 +48,10 @@
       "v0.2 construction pilot dimensions 8,12,16,20"
     ],
     "confirmatory": [
-      "v0.2.1 full intermediate grid dimensions 13,15,17"
+      "v0.2.1.2 full intermediate grid dimensions 13,15,17"
     ],
     "holdout": [
-      "five non-binding metric robustness probes"
+      "four non-binding alternative-metric probes plus one excluded identity replay diagnostic"
     ],
     "pairing": "No RNG exists; labels identify disjoint design roles rather than stochastic seeds."
   },
@@ -107,14 +107,15 @@
     "execution": "sequential deterministic covering cells; no GPU and no parallel solver state"
   },
   "artifacts": {
-    "raw_rows": "artifacts_v0_2_1/cost_cells.jsonl",
-    "summary": "artifacts_v0_2_1/result_layer.json",
+    "raw_rows": "artifacts_v0_2_1_2/cost_cells.jsonl",
+    "summary": "artifacts_v0_2_1_2/result_layer.json",
     "seed_manifest": "experiment_v0_2_1.json (deterministic design roles; no RNG seeds)",
-    "replay_command": "python run.py --registration registration_v0_2_1.json --output-dir artifacts_v0_2_1"
+    "replay_command": "python run.py --registration registration_v0_2_1_2.json --output-dir artifacts_v0_2_1_2"
   },
   "asmp11": {
     "protocol_id": "asmp11.intermediate_width_crossover.v0.2.1",
-    "status": "source_freeze_candidate_not_registered",
+    "release_id": "asmp11.intermediate_width_crossover.v0.2.1.2",
+    "status": "registration_required_before_execution",
     "dimensions": [
       13,
       15,
@@ -148,7 +149,8 @@
       "covering_cells": 48,
       "cost_cells": 144,
       "brackets": 18,
-      "metric_probes_per_cost_cell": 5
+      "metric_records_per_cost_cell": 5,
+      "robustness_probes_per_cost_cell": 4
     }
   }
 }

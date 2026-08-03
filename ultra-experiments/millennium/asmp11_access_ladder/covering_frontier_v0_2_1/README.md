@@ -1,4 +1,4 @@
-# ASMP-11 intermediate-width crossover v0.2.1
+# ASMP-11 intermediate-width crossover v0.2.1.2 source hardening
 
 This package implements the previously drafted bounds-aware successor to the
 sealed v0.2 high-width census. It is CPU-only and deterministic. It never
@@ -12,9 +12,11 @@ interval and may remain scientifically unresolved.
 
 ## Current status
 
-The checked-in sources are a source-freeze candidate. Do not execute the claim
-grid until a source commit exists and `registration_v0_2_1.json` has been
-created and committed separately.
+The working sources are a v0.2.1.2 hardening checkpoint. Do not execute the
+claim grid yet. First commit the source checkpoint, then create and separately
+commit `registration_v0_2_1_2.json`. Only that committed registration may
+authorize a new run in `artifacts_v0_2_1_2/`. The v0.2.1.1 evidence bundle is
+immutable and must not be overwritten or relabeled.
 
 ## Pre-registration checks
 
@@ -36,17 +38,27 @@ Commit that registration before running the claim grid.
 
 ```powershell
 python ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/run.py `
-  --registration ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/registration_v0_2_1.json `
-  --output-dir ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/artifacts_v0_2_1
+  --registration ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/registration_v0_2_1_2.json `
+  --output-dir ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/artifacts_v0_2_1_2
 
 python ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/verify_result.py `
-  --registration ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/registration_v0_2_1.json `
-  --artifacts ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/artifacts_v0_2_1
+  --registration ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/registration_v0_2_1_2.json `
+  --artifacts ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/artifacts_v0_2_1_2
+
+python ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/synthesize_receipt.py `
+  --registration ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/registration_v0_2_1_2.json `
+  --artifacts ultra-experiments/millennium/asmp11_access_ladder/covering_frontier_v0_2_1/artifacts_v0_2_1_2
 ```
 
 The runner writes separate result, reliability, claim, and operation layers,
 raw per-cell JSONL, checkpoints, and a hash receipt. The verifier does not
-import the primary covering or probability implementation.
+import the primary covering or probability implementation. It replays exact
+Cartesian grids, complete probe records and summaries, operation consistency,
+and every receipt link. The synthesis receipt is the authoritative final
+five-layer conclusion: it fresh-replays and exact-compares the independent
+verification before binding it. Alternative-metric disagreement remains a
+non-binding sensitivity result. The receipt reports RAM compliance as
+unestablished because peak RAM is not measured.
 
 ## Claim boundary
 

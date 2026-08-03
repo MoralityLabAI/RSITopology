@@ -1,11 +1,13 @@
-# ASMP-11 intermediate-width crossover protocol v0.2.1
+# ASMP-11 intermediate-width crossover protocol v0.2.1, release v0.2.1.2
 
 ## Status
 
-Source-freeze candidate only. Claim-grid execution is forbidden until these
-sources are committed and a separate prospective registration binds their
-hashes. The v0.2 artifacts are sealed prior information. This package neither
-rewrites them nor treats their high-width cells as new v0.2.1 observations.
+Source-hardening checkpoint only. Claim-grid execution is forbidden until these
+v0.2.1.2 sources are committed and a separate prospective registration binds
+their full source commit, SHA-256 commit-blob hashes, and Git blob OIDs. That
+registration must then be committed separately before execution into a new
+non-aliasing artifact directory. The v0.2 and v0.2.1.1 artifacts are immutable
+prior information, not v0.2.1.2 observations.
 
 ## Knowledge contract
 
@@ -63,6 +65,11 @@ On either stop, the complete family of `s`-blocks is retained as a valid
 incumbent and the exact lower bound is still emitted. A stop can widen an
 interval; it cannot create an optimum or a crossover.
 
+Wall, round, candidate, event, and stop observations are checked against the
+registered operation record. Peak RAM is not measured by this instrument, so
+the registered RAM ceiling is reported as `compliance=not_established`, never
+as a passing resource gate.
+
 ## Exact finite-sample cost
 
 The observational baseline is byte-for-byte equivalent in mathematical rule
@@ -86,64 +93,78 @@ Each cell receives exactly one status:
   below baseline; or
 - `unresolved_covering_gap` otherwise.
 
-For each `(n,k,eta)` stratum, `s_yes` is the smallest certified width, `s_no`
-is the largest smaller certified non-crossover, and `s_star=s_yes` only when
-every smaller width is certified not to cross. Otherwise the result is the
-honest bracket `(s_no,s_yes]` plus the unresolved widths.
+For each `(n,k,eta)` stratum, `s_yes` is the smallest certified width. Because
+cost monotonicity is not assumed, `s_no` is the end of the contiguous certified
+non-crossover prefix beginning at the analytic `s=k` control; a later
+non-crossover after an unresolved width cannot raise this lower endpoint.
+`s_star=s_yes` only when every smaller width is certified not to cross.
+Otherwise the result is the honest bracket `(s_no,s_yes]` plus the unresolved
+widths.
 
-## Metric firewall and five robustness probes
+## Metric firewall, four alternatives, and one identity diagnostic
 
 The greedy uncovered-gain score is a selection metric only. Evidence metrics
 are witness validity, exact lower and upper bounds, exact total sample costs,
 and the three-way status. Stop reasons, elapsed time, interval width, and
 sample-cap failures are hazards. These groups do not overlap.
 
-Five predeclared probes are non-binding and cannot repair a failed primary
-gate:
+Five predeclared records are non-binding and cannot repair a failed primary
+gate. The first is an identity replay diagnostic and is excluded from every
+robustness denominator:
 
-1. `P1_bound_interval_adversary`: enumerate every integer query count in
-   `[L,U]` rather than choosing a favorable endpoint.
+1. `D1_primary_bound_interval_replay`: replay the primary interval rule. This
+   is a diagnostic identity check, not robustness evidence.
 2. `P2_query_count_only`: repeat the comparison without replicate cost.
 3. `P3_stricter_familywise_error`: use Bonferroni `alpha=1/40`.
 4. `P4_stricter_power`: use power floor `19/20`.
 5. `P5_exact_independent_fwer`: use exact independent-query familywise error
    instead of the Bonferroni upper bound.
 
-Probe disagreement is reported as metric sensitivity, not hidden or voted
-away.
+Alternative-metric disagreement is reported as sensitivity, not hidden or
+voted away. Version 0.2.1.2 does not relabel these four alternatives as the
+five-family invariance/sensitivity/monotonicity/anti-gaming/clean-control pack.
 
 ## Evidence layers
 
 Outputs are deliberately separated:
 
 - **result layer:** raw covering/cost cells and minimum-width brackets;
-- **reliability layer:** binding gates, interval coverage, and all five metric
-  probes;
+- **reliability layer:** binding gates, interval coverage, the identity
+  diagnostic, and all four alternative-metric probes;
 - **claim layer:** observed, inferred, not-supported, robustness, confounds,
   and a provisional verdict pending independent verification; and
 - **operation layer:** registration, environment, resource use, stop reasons,
   and partial-run status.
 
-The independent verifier writes a separate verification receipt. Operational
-success alone cannot promote the claim layer.
+The independent verifier writes a separate verification receipt. A final
+synthesis writer fresh-replays that verifier, requires exact equality with its
+stored receipt, and then binds the committed registration, primary receipt,
+independent verification, and the five conclusion layers: metric robustness,
+task result, measurement reliability, claim support, and operational decision.
+Alternative metric disagreement is reported as sensitivity but remains
+non-binding for the task result. Operational success alone cannot promote the
+claim layer.
 
 ## Binding gates
 
-- `B0_binding`: every registered source hash and sealed v0.2 anchor hash
-  matches.
+- `B0_binding`: the exact source-name set, full source and registration commit
+  chain, commit-blob hashes/OIDs, manifest, and prior anchor match. Receipt-link
+  closure is checked independently after the primary layers are written.
 - `B1_witness_validity`: every incumbent covers the complete support universe.
 - `B2_lower_bound_replay`: counting and Schoenheim bounds replay exactly and
   never exceed the incumbent.
 - `B3_probability_exactness`: every primary baseline, incumbent, and optimistic
   design replays with exact rational tails.
-- `B4_total_classification`: all 144 claim-grid views receive exactly one
-  status.
+- `B4_total_classification`: exact Cartesian `Counter` equality proves all 144
+  claim-grid views occur exactly once and receive one status.
 - `B5_minimum_width`: `s_star` appears only when every smaller width is a
   certified non-crossover.
-- `B6_resource_honesty`: stops retain bounds and witnesses and never claim
-  optimality because of a timeout.
-- `B7_metric_probe_completeness`: every cost cell has all five non-binding
-  probes.
+- `B6_resource_honesty_ram_unmeasured`: registered measured caps, events, and
+  stops are internally consistent; stopped cells retain bounds and witnesses;
+  RAM compliance is explicitly unestablished.
+- `B7_metric_probe_completeness`: every cost cell has one excluded identity
+  diagnostic and four complete non-binding alternative-metric records, with
+  full records and summaries independently replayed.
 
 ## Claim boundary
 

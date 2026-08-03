@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from fractions import Fraction
 from functools import lru_cache
 from itertools import combinations
-from math import ceil, comb
+from math import comb
 from time import monotonic
 from typing import Iterable, Sequence
 
@@ -104,7 +104,9 @@ def schoenheim_lower_bound(n: int, block_size: int, support_size: int) -> int:
     )
 
 
-def replayable_lower_bound(n: int, block_size: int, support_size: int) -> dict[str, int]:
+def replayable_lower_bound(
+    n: int, block_size: int, support_size: int
+) -> dict[str, int]:
     counting = counting_lower_bound(n, block_size, support_size)
     schoenheim = schoenheim_lower_bound(n, block_size, support_size)
     return {
@@ -127,25 +129,37 @@ def verify_cover(
         block = tuple(raw_block)
         if len(block) != block_size or tuple(sorted(block)) != block:
             return False
-        if len(set(block)) != block_size or any(point < 0 or point >= n for point in block):
+        if len(set(block)) != block_size or any(
+            point < 0 or point >= n for point in block
+        ):
             return False
         covered.update(combinations(block, support_size))
     return len(covered) == comb(n, support_size)
 
 
 def _incidence_masks(
-    n: int, block_size: int, support_size: int
-) -> tuple[tuple[tuple[int, ...], ...], tuple[tuple[int, ...], ...], tuple[int, ...]]:
+    n: int,
+    block_size: int,
+    support_size: int,
+    deadline: float | None = None,
+) -> tuple[
+    tuple[tuple[int, ...], ...],
+    tuple[tuple[int, ...], ...],
+    tuple[int, ...],
+    bool,
+]:
     supports = subsets(n, support_size)
     support_index = {support: index for index, support in enumerate(supports)}
     blocks = subsets(n, block_size)
     masks: list[int] = []
     for block in blocks:
+        if deadline is not None and monotonic() >= deadline:
+            return supports, blocks, tuple(masks), True
         mask = 0
         for support in combinations(block, support_size):
             mask |= 1 << support_index[support]
         masks.append(mask)
-    return supports, blocks, tuple(masks)
+    return supports, blocks, tuple(masks), False
 
 
 def _iter_set_bits(mask: int) -> Iterable[int]:
@@ -156,19 +170,28 @@ def _iter_set_bits(mask: int) -> Iterable[int]:
 
 
 def _reverse_delete(
-    selected: Sequence[int], masks: Sequence[int], universe_size: int
-) -> tuple[int, ...]:
+    selected: Sequence[int],
+    masks: Sequence[int],
+    universe_size: int,
+    deadline: float | None = None,
+) -> tuple[tuple[int, ...], bool]:
     counts = [0] * universe_size
     for index in selected:
+        if deadline is not None and monotonic() >= deadline:
+            return tuple(selected), True
         for support_index in _iter_set_bits(masks[index]):
             counts[support_index] += 1
     kept = list(selected)
     for index in reversed(tuple(selected)):
-        if all(counts[support_index] >= 2 for support_index in _iter_set_bits(masks[index])):
+        if deadline is not None and monotonic() >= deadline:
+            return tuple(kept), True
+        if all(
+            counts[support_index] >= 2 for support_index in _iter_set_bits(masks[index])
+        ):
             kept.remove(index)
             for support_index in _iter_set_bits(masks[index]):
                 counts[support_index] -= 1
-    return tuple(kept)
+    return tuple(kept), False
 
 
 def deterministic_cover_bounds(
@@ -189,23 +212,29 @@ def deterministic_cover_bounds(
 
     if max_greedy_rounds < 0:
         raise ValueError("max_greedy_rounds must be nonnegative")
+    if hard_wall_seconds is not None and hard_wall_seconds < 0:
+        raise ValueError("hard_wall_seconds must be nonnegative")
+    deadline = (
+        monotonic() + hard_wall_seconds if hard_wall_seconds is not None else None
+    )
     candidate_count = comb(n, block_size)
     if candidate_count > max_candidate_blocks:
         raise ValueError(
             f"candidate block cap exceeded: {candidate_count}>{max_candidate_blocks}"
         )
-    supports, blocks, masks = _incidence_masks(n, block_size, support_size)
+    supports, blocks, masks, wall_hit = _incidence_masks(
+        n, block_size, support_size, deadline
+    )
     lower = replayable_lower_bound(n, block_size, support_size)
-    deadline = monotonic() + hard_wall_seconds if hard_wall_seconds is not None else None
     universe_mask = (1 << len(supports)) - 1
     uncovered = universe_mask
     selected: list[int] = []
     selected_set: set[int] = set()
     rounds = 0
     evaluations = 0
-    stop_reason = "cover_complete"
+    stop_reason = "operational_wall_stop" if wall_hit else "cover_complete"
 
-    while uncovered:
+    while uncovered and not wall_hit:
         if rounds >= max_greedy_rounds:
             stop_reason = "deterministic_round_cap"
             break
@@ -215,6 +244,10 @@ def deterministic_cover_bounds(
         best_index: int | None = None
         best_gain = 0
         for index, mask in enumerate(masks):
+            if deadline is not None and monotonic() >= deadline:
+                wall_hit = True
+                stop_reason = "operational_wall_stop"
+                break
             if index in selected_set:
                 continue
             gain = (mask & uncovered).bit_count()
@@ -222,6 +255,8 @@ def deterministic_cover_bounds(
             if gain > best_gain:
                 best_gain = gain
                 best_index = index
+        if wall_hit:
+            break
         if best_index is None or best_gain == 0:
             stop_reason = "construction_stalled"
             break
@@ -236,7 +271,11 @@ def deterministic_cover_bounds(
         chosen = tuple(range(len(blocks)))
         construction_status = "bounded_stop_with_trivial_incumbent"
     else:
-        chosen = _reverse_delete(selected, masks, len(supports))
+        chosen, reverse_wall_hit = _reverse_delete(
+            selected, masks, len(supports), deadline
+        )
+        if reverse_wall_hit:
+            stop_reason = "operational_wall_stop"
         construction_status = "deterministic_greedy_incumbent"
 
     selected_blocks = tuple(blocks[index] for index in chosen)
@@ -462,17 +501,33 @@ def build_minimum_width_bracket(
 
     by_width = {int(row["block_size"]): str(row["status"]) for row in intermediate_rows}
     expected = set(range(support_size + 1, anchor_width))
-    if set(by_width) != expected:
+    if len(intermediate_rows) != len(expected) or set(by_width) != expected:
         raise ValueError("intermediate width rows are incomplete or duplicated")
     if any(status not in CLASSIFICATION_STATUSES for status in by_width.values()):
         raise ValueError("unknown crossover classification")
-    statuses = {support_size: STATUS_IMPOSSIBLE, **by_width, anchor_width: STATUS_CERTIFIED}
-    s_yes = min(width for width, status in statuses.items() if status == STATUS_CERTIFIED)
+    statuses = {
+        support_size: STATUS_IMPOSSIBLE,
+        **by_width,
+        anchor_width: STATUS_CERTIFIED,
+    }
+    s_yes = min(
+        width for width, status in statuses.items() if status == STATUS_CERTIFIED
+    )
     smaller = {width: statuses[width] for width in range(support_size, s_yes)}
-    impossible = [width for width, status in smaller.items() if status == STATUS_IMPOSSIBLE]
-    unresolved = [width for width, status in smaller.items() if status == STATUS_UNRESOLVED]
-    s_no = max(impossible) if impossible else None
-    s_star = s_yes if not unresolved and len(impossible) == s_yes - support_size else None
+    impossible = [
+        width for width, status in smaller.items() if status == STATUS_IMPOSSIBLE
+    ]
+    unresolved = [
+        width for width, status in smaller.items() if status == STATUS_UNRESOLVED
+    ]
+    s_no = support_size
+    for width in range(support_size + 1, s_yes):
+        if statuses[width] != STATUS_IMPOSSIBLE:
+            break
+        s_no = width
+    s_star = (
+        s_yes if not unresolved and len(impossible) == s_yes - support_size else None
+    )
     return {
         "s_no": s_no,
         "s_yes": s_yes,
@@ -518,23 +573,30 @@ def metric_robustness_probes(
     target_power: Fraction,
     sample_cap: int,
 ) -> tuple[dict[str, object], ...]:
-    """Return five predeclared, non-binding metric robustness probes."""
+    """Return one identity diagnostic and four non-binding robustness probes."""
 
     lower = primary.lower_query_bound
     upper = primary.upper_query_bound
     alternatives = (
         (
-            "P1_bound_interval_adversary",
+            "D1_primary_bound_interval_replay",
             primary.status,
             {
                 "metric": "exact total samples over every integer q in [L,U]",
                 "evaluated_query_counts": primary.evaluated_query_counts,
+                "record_kind": "identity_diagnostic",
+                "counts_toward_robustness": False,
             },
         ),
         (
             "P2_query_count_only",
             classify_query_interval(lower, upper, baseline_query_count),
-            {"metric": "query count without replicate cost"},
+            {
+                "metric": "query count without replicate cost",
+                "record_kind": "robustness_probe",
+                "probe_family": "query_count_only_alternative",
+                "counts_toward_robustness": True,
+            },
         ),
         (
             "P3_stricter_familywise_error",
@@ -547,7 +609,13 @@ def metric_robustness_probes(
                 target_power,
                 sample_cap,
             ).status,
-            {"alpha": str(alpha / 2), "fwer_mode": "bonferroni"},
+            {
+                "alpha": str(alpha / 2),
+                "fwer_mode": "bonferroni",
+                "record_kind": "robustness_probe",
+                "probe_family": "stricter_alpha_alternative",
+                "counts_toward_robustness": True,
+            },
         ),
         (
             "P4_stricter_power",
@@ -560,7 +628,13 @@ def metric_robustness_probes(
                 Fraction(19, 20),
                 sample_cap,
             ).status,
-            {"target_power": "19/20", "fwer_mode": "bonferroni"},
+            {
+                "target_power": "19/20",
+                "fwer_mode": "bonferroni",
+                "record_kind": "robustness_probe",
+                "probe_family": "stricter_power_alternative",
+                "counts_toward_robustness": True,
+            },
         ),
         (
             "P5_exact_independent_fwer",
@@ -578,6 +652,9 @@ def metric_robustness_probes(
                 "alpha": str(alpha),
                 "fwer_mode": "independent_exact",
                 "assumption": "fresh query samples are independent",
+                "record_kind": "robustness_probe",
+                "probe_family": "independent_fwer_alternative",
+                "counts_toward_robustness": True,
             },
         ),
     )
