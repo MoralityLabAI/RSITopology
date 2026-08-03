@@ -1,0 +1,22 @@
+{
+  "claim_boundary": [
+    "no claim about replaceable or learned root checkers",
+    "no claim of infinitely many distinct behavior states",
+    "no ASMP-5 resolution claim"
+  ],
+  "independent_replay": {
+    "horizon": 6,
+    "radii": [0, 1, 2],
+    "widths": [2, 3, 4, 6, 8]
+  },
+  "proof_classes": [0, 1],
+  "protocol_id": "ASMP5-INDUCTIVE-ROOT-v0.3",
+  "root_checker": 3,
+  "rules": [
+    "self_endorsement",
+    "pairwise_agreement",
+    "root_refinement"
+  ],
+  "safety_predicate": "behavior_hazard_bit_0_equals_zero",
+  "schema_version": "asmp5_inductive_root_protocol_v0_3"
+}
