@@ -1,0 +1,121 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-NORMATIVE-CLOSURE-REASSESSMENT-v2.19",
+  "file_count": 28,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_consolidated_resource_scope_v2_17/RESOURCE_SCOPE_DISPOSITION_v2_17.md": {
+      "bytes": 4594,
+      "sha256": "A045381136399C1F169C942E60941FBF1985FC4F1D4EFA7E77921DBB361BCA04"
+    },
+    "../asmp3_consolidated_resource_scope_v2_17/artifacts/consolidated_resource_scope_v2_17.json": {
+      "bytes": 22695,
+      "sha256": "563809EE38E11AEB1599CF655FCA2D4966D0AE4ABFC48F16C2C742D4822E64BE"
+    },
+    "../asmp3_normative_closure_impossibility_v2_18/NORMATIVE_CLOSURE_IMPOSSIBILITY_THEOREM_v2_18.md": {
+      "bytes": 6921,
+      "sha256": "CDB40D8F215E56AC51EA0D5FB89B3D235B4A73DAD35B283E962473219326C410"
+    },
+    "../asmp3_normative_closure_impossibility_v2_18/SUPERSEDED_BY_v2_19.md": {
+      "bytes": 614,
+      "sha256": "B4902AFC1178470F1F503618E80EDFEBB2AA3D7768F4A8680A72AF587E524FBE"
+    },
+    "../asmp3_normative_closure_impossibility_v2_18/artifacts/normative_closure_impossibility_v2_18.json": {
+      "bytes": 26531,
+      "sha256": "6EE32AF9F42B8BE4DD3652D7A917F7C65098A2B6BD26F74F87EE87312803A120"
+    },
+    "../asmp3_normative_closure_impossibility_v2_18/artifacts/normative_closure_impossibility_verification_v2_18.json": {
+      "bytes": 1030,
+      "sha256": "E735FD53EF723AA3722778004667265241BA3A6E462F944BC1CA1231464666D7"
+    },
+    "../asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md": {
+      "bytes": 4301,
+      "sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "../asmp3_resolution_boundary_v0_3/artifacts/expert_review_status_v0_6.json": {
+      "bytes": 746,
+      "sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_typed_successor_v0_2/typed_successor_v0_2.json": {
+      "bytes": 2482,
+      "sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/WITNESS_TRANSPARENT_NORMAL_FORM_THEOREM_v2_5.md": {
+      "bytes": 8540,
+      "sha256": "44E1936EF0A36E605311BD1A5977D3D555AE4CDE7F60D16D4FA4CAE73EFDB27B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/artifacts/witness_transparent_normal_form_v2_5.json": {
+      "bytes": 84594,
+      "sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_19.md": {
+      "bytes": 1165,
+      "sha256": "050E812D06A0D93694574CF6D8B0211CC07D16A2223FD14CF482EBF38FA14D10"
+    },
+    "LANE_STOP_AND_RESUME_v2_19.md": {
+      "bytes": 1009,
+      "sha256": "294E9BD0377D9AEFBA949614D8384AFD3CE6FE8810EDE33C608CB4643A5DCC61"
+    },
+    "README.md": {
+      "bytes": 927,
+      "sha256": "D55421E4499DC30C1AE03EC566DC7DCCD0DE29F49235C2E454364F8006312D2F"
+    },
+    "REASSESSMENT_AND_CORRECTION_v2_19.md": {
+      "bytes": 5487,
+      "sha256": "7FFB12A891E1A1213347AF76548AD4C825477F0FA9C8217CDB9917614DA3A3BC"
+    },
+    "STRICT_FIX_DISPOSITION_v2_19.md": {
+      "bytes": 1751,
+      "sha256": "EEA536619C42C83E0242BD37EBD1E3236AFEF1C510A4B22E2082EC7803BF1AB9"
+    },
+    "artifacts/normative_closure_reassessment_v2_19.json": {
+      "bytes": 9529,
+      "sha256": "2AA99EA20E1BC878460407611951D70502D6126090757EFD105352D3F54FD1A4"
+    },
+    "artifacts/normative_closure_reassessment_verification_v2_19.json": {
+      "bytes": 1151,
+      "sha256": "D56D4784ACB948CF6D186C0F2F013946B492594785CE575A9E13F89F98F2FA89"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3471,
+      "sha256": "CFDCF3F3A1C40CC1C3FBECA234D9BBA6B2598E575D9346A97CCF417E36629B7D"
+    },
+    "normative_closure_reassessment.py": {
+      "bytes": 18867,
+      "sha256": "A176966073CAEF8C4329E452BFE270B47B502FE25912F3C77C1D7C7D10ACAE4E"
+    },
+    "run_normative_closure_reassessment.py": {
+      "bytes": 467,
+      "sha256": "1512458CF9692274A9BA161241AC59ED0A7D0F4156BBC1ADB010CF462B7BDB04"
+    },
+    "test_normative_closure_reassessment.py": {
+      "bytes": 4045,
+      "sha256": "344ED213514ED25E2281FC846B8053200EDB1FFD785AD97DF4CAA9A4C92F1BE9"
+    },
+    "verify_normative_closure_reassessment.py": {
+      "bytes": 10200,
+      "sha256": "424A54186668522A12C3ADC376F1942297DB979DD3392B01B9A24F284020F4F0"
+    }
+  },
+  "release_status": "v2_18_goal_completion_withdrawn_conditional_lemma_retained_full_ASMP3_open",
+  "schema_version": "asmp3_normative_closure_reassessment_release_v2_19"
+}
