@@ -28,3 +28,7 @@ Sequential minimax prefix-free cost under nonisomorphic causal factors,
 arbitrary transcript-tree functionals, quotient construction for nonlinear or
 continuous-belief systems, and multidimensional adversarial mean-payoff
 computation are not claimed.
+
+The v0.30 successor closes the first listed cost-transfer gap with a
+per-prefix rounded local-fiber theorem. The other construction and game-theory
+gaps remain outside v0.29 and v0.30.

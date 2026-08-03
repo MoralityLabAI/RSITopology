@@ -1,0 +1,29 @@
+{
+  "schema_version": "asmp4_adversarial_mean_payoff_contract_v0_31",
+  "game": {
+    "state": "finite public turn-based quotient state",
+    "controller": "chooses registered safe public actions",
+    "adversary": "chooses registered successors after public actions",
+    "cost": "nonnegative rational read/write vector on every transition"
+  },
+  "objective": {
+    "cost_rate": "coordinatewise limsup of prefix-average transition costs",
+    "budget": "every play consistent with one controller strategy has cost rate at most R",
+    "reward_translation": "w=R-c converts the objective to conjunctive mean-payoff-inf at threshold zero"
+  },
+  "region_formula": {
+    "fixed_spoiler": "for each memoryless adversary policy tau, take the union over reachable SCCs of upward cycle-mean polytopes",
+    "full_region": "intersection over memoryless adversary policies tau of those fixed-policy one-player regions",
+    "quantifiers": "intersection_tau union_C upward(conv(simple-cycle means in C))"
+  },
+  "memory": {
+    "adversary": "a losing budget has a memoryless spoiling policy",
+    "controller": "exact winning may require infinite memory",
+    "finite_memory_closure": "every exact winning budget has finite-memory epsilon relaxations, so closures agree"
+  },
+  "nonclaims": [
+    "polynomial-time solution of classical scalar mean-payoff games",
+    "finite-memory attainment of every closed boundary point",
+    "construction of a finite quotient for arbitrary nonlinear plants"
+  ]
+}

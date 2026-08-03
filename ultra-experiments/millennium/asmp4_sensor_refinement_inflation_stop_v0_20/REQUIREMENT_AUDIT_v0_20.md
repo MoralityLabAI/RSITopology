@@ -147,3 +147,22 @@ V0.29 separates the prefix-branching analogue: terminal history fibers may be
 one while local successor fibers have positive path entropy. Clone families
 remain sharp, but a causal disclosure block proves that the correct invariant
 depends on the registered tree cost rather than on one universal quotient size.
+
+V0.30 handles the remaining registered sequential prefix-free cost. The
+correct factor modulus is the worst-path sum of rounded local successor-fiber
+logs, not terminal multiplicity or one final rounding of the v0.29 product.
+This strengthens the quotient contract without supplying the missing global
+nonlinear quotient grammar or construction.
+
+V0.31 removes the finite adversarial additive-game gap after quotienting. Its
+memoryless-spoiler/SCC formula computes the entire two-port region and shows
+that finite-memory strategies are dense but may miss exact boundary points.
+The operational stop remains directed at nonlinear quotient construction, not
+at another finite game calculation.
+
+V0.32 rechecks this accumulated chain against the five frozen completion
+requirements and records `0/5` full-scope proofs despite conditional evidence
+in every row. Its sealed dependency and mutation audits identify the missing
+registered-class grammar plus abstraction/replacement theorem as the upstream
+root. Further autonomous bounded fixtures should therefore stop unless one of
+the certificate's four explicit reopening conditions is met.

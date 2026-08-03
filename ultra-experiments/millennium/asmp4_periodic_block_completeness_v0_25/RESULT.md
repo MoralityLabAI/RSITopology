@@ -31,3 +31,7 @@ The v0.26 successor proves that an exact costed alternating-bisimulation
 quotient preserves the full vector budget region and therefore transfers this
 finite deterministic formula to any registered public-history game admitting
 such a quotient.
+
+The v0.31 successor supplies the finite adversarial formula: intersect the
+component-indexed cycle-polytope unions over all memoryless adversary policies.
+The empty-adversary special case is exactly the theorem above.

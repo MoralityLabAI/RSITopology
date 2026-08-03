@@ -31,3 +31,7 @@ python -m pytest -q test_causal_branch_fiber.py
 
 The frozen registration and claim are `causal_branch_fiber_contract_v0_29.json`
 and `causal_branch_fiber_claim_v0_29.json`.
+
+The v0.30 successor supplies the separate Kraft-rounding theorem left open
+here. It replaces each local `log2 m(p)` by `ceil(log2 m(p))` before taking the
+worst path, which is necessary for the sequential minimax prefix-free cost.

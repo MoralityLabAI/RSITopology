@@ -15,6 +15,15 @@ The v0.29 successor gives a quotient-transfer law specifically for uniform
 causal branching. Local successor-fiber products, not terminal word fibers,
 control distortion when distinctions are merged and later disclosed.
 
+The v0.30 successor gives the analogous law for this package's exact
+worst-case sequential binary prefix-free cost. The correction is the
+worst-path sum of per-prefix `ceil(log2 m(p))`; unrounded products or one final
+ceiling are insufficient.
+
+The v0.31 successor computes the complete additive vector-cost region when an
+exact finite alternating public quotient is supplied. It extends v0.25's
+one-player SCC formula by intersecting over memoryless adversary policies.
+
 Run:
 
 ~~~powershell

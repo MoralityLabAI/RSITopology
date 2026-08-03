@@ -31,3 +31,8 @@ V0.27 quantifies the cost side of this bridge: exact safety and successor
 matching with per-edge vector cost error at most `epsilon` imply asymptotic
 region slack at most `epsilon`. It separately identifies the strict safety
 margin needed to obtain the exact Boolean premise from metric closeness.
+
+V0.31 closes this package's finite nondeterministic corollary. For additive
+two-port costs, it computes the exact arbitrary-memory quotient region as an
+intersection over memoryless adversary policies of component-indexed
+cycle-polytope unions.

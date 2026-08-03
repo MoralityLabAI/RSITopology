@@ -18,10 +18,10 @@ quotient is eventually periodic and Thue-Morse is not. A parity chain has the
 same rate and an exact two-state quotient. Finite bisimulation is thus
 sufficient, not necessary.
 
-The theorem assumes additive edge costs. It transfers nondeterministic games
-but does not solve their multidimensional adversarial mean-payoff regions, and
-it does not prove finite abstraction for general nonlinear or continuous-
-belief ASMP-4 systems.
+The theorem assumes additive edge costs. At v0.26 it transferred but did not
+compute nondeterministic multidimensional adversarial regions; v0.31 now closes
+that finite-quotient computation. Neither theorem proves finite abstraction for
+general nonlinear or continuous-belief ASMP-4 systems.
 
 The complete 27-package chain passes all 304 tests in 281.10 seconds with
 Python bytecode and pytest caching disabled.
@@ -30,3 +30,7 @@ The v0.27 successor proves a sharp `epsilon` region bound when only matched
 edge costs are approximate and safety remains exact. It also refutes
 metric-only zero-error safety transfer and supplies a strict Lipschitz-margin
 repair.
+
+The v0.31 successor uses classical conjunctive mean-payoff game theory to
+compute every additive finite alternating quotient supplied by this theorem,
+including possible infinite controller memory and finite-memory closure.

@@ -35,3 +35,8 @@ V0.28 subsequently handles nonadditive realized-language log-cardinality by
 adding a port-specific causal history-fiber entropy profile. Its exponential
 clone proves that this extra profile cannot be inferred from finite quotient
 state or successor-class data alone.
+
+V0.31 subsequently closes the listed nondeterministic finite-quotient
+mean-payoff gap. The exact region is an intersection over memoryless adversary
+policies of reachable-SCC cycle-polytope unions. Continuous-belief quotient
+construction remains open.

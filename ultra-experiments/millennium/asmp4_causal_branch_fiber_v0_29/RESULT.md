@@ -23,9 +23,9 @@ through 16,384 leaves, 256 clone rows, and 8,192 sparse horizons. The independen
 verifier checks 2,115 ternary-output morphisms, eight block powers, and 16,384
 sparse horizons. Eight mutations are rejected twice.
 
-The theorem does not transfer the sequential minimax prefix-free cost without
-a separate Kraft-rounding argument, and it does not construct nonlinear
-quotients.
+This theorem alone does not transfer the sequential minimax prefix-free cost.
+The v0.30 successor now supplies that separate Kraft-rounding argument. Neither
+package constructs nonlinear quotients.
 
 The complete 30-package chain passes all 334 tests in 327.19 seconds with
 Python bytecode and pytest caching disabled.

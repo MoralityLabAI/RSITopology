@@ -486,6 +486,71 @@ minimax prefix-free cost still needs a separate Kraft-rounding distortion
 theorem, and nonlinear quotient construction remains open.  The expanded
 chain passes all 334 tests.
 
+**ASMP-4 v0.30 sequential Kraft-rounding boundary.** The
+[rounded local-fiber theorem](asmp4_prefix_kraft_fiber_v0_30/RESULT.md) closes
+the sequential minimax prefix-free cost gap left by v0.29.  For a causal tree
+factor, let `C_i(T)` be the worst-path sum of
+`ceil(log2 m_i(p))`, where `m_i(p)` is the maximum local successor fiber.  A
+backward Kraft induction proves
+`P_i^target(T) <= P_i^source(T)+C_i(T)`; the normalized limsup is the directed
+rate correction, and bidirectional sublinear profiles preserve the complete
+prefix-cost region when the safe strategy transfers exist.  The rounding
+location is sharp: a full ternary tree mapped to a deterministic image costs
+`2T`, while its unrounded fiber cost is `T log2 3`; even one final ceiling is
+strictly too small from `T >= 3` (but not at `T=2`).  The v0.29 disclosure
+factor remains terminal-bijective yet attains an exact one-third-bit prefix
+gap.  Moreover `log2 F(T) <= C(T) <= 2 log2 F(T)`, so v0.29 and v0.30 have the
+same zero-rate phase boundary but different positive corrections.  The
+central harness checks 332,928 binary maps, 512 clone rows, and 16,384 mixed
+schedules; the independent implementation checks 4,096 full ternary-tree
+maps, 30 explicit trees, and 15,625 mixed recurrences.  Classical
+Kraft/McMillan coding results are explicitly credited.  Nonlinear quotient
+construction and adversarial multidimensional mean-payoff synthesis remain
+open.  The expanded chain passes all 344 tests.
+
+**ASMP-4 v0.31 adversarial mean-payoff region.** The
+[memoryless-spoiler SCC theorem](asmp4_adversarial_mean_payoff_v0_31/RESULT.md)
+closes the finite nondeterministic additive-quotient seam left by v0.26.  After
+fixing each memoryless adversary policy `tau`, form the union of upward
+simple-cycle mean polytopes over reachable SCCs of the remaining one-player
+graph; the exact arbitrary-memory budget region is the intersection of those
+unions over `tau`.  The registered `limsup` cost upper bound maps to the
+classical conjunctive mean-payoff-`inf` reward objective under `w=R-c`, so the
+memoryless-spoiler and nonnegative-multicycle theorems apply with the correct
+polarity.  The arbitrary-memory region equals the closure of the finite-memory
+region, but boundary attainment can require infinite memory: a two-state
+connector fixture has exact corner `(1,1)`, while every balanced finite period
+has positive slack `1/(k+1)`.  An adversarial irreversible fork has robust
+corner `(3,3)`, whereas the controller version retains v0.25's nonconvex union
+of corners `(1,3)` and `(3,1)`.  Central exact rational code classifies 2,304
+budgets across 256 games; an independent algorithm classifies 1,296 budgets
+across 81 games, with every loss carrying a validated memoryless spoiler.
+Velner et al. and Chatterjee et al. are explicitly credited for the classical
+game theory.  The remaining global gap is construction (or replacement) of a
+finite exact public quotient for the declared nonlinear/continuous-belief
+class, not computation after such a quotient is supplied.  The expanded chain
+passes all 354 tests.
+
+**ASMP-4 v0.32 closure and stopping audit.** The
+[sealed stopping certificate](asmp4_closure_stop_audit_v0_32/STOP_CERTIFICATE_v0_32.md)
+re-audits the five frozen completion requirements after the seven conditional
+layers v0.25-v0.31.  Two independent parsers recover the same five
+requirements; every row has conditional evidence, but the declared full
+nonlinear scope remains proved in `0/5`.  A sealed dependency audit identifies
+the residual root: the source supplies neither a formal grammar for the
+registered nonlinear class nor a theorem constructing a public abstraction
+(or a nonfinite variational replacement).  The global finite-horizon margin
+obligation depends on those missing nodes.  V0.26's Thue-Morse boundary rules
+out silently imposing finite exact quotients as necessary, while v0.28-v0.30
+show that quotient state count cannot replace the registered transcript-cost
+profiles.  A separate 32-row truth table, nine claim-chain checks, and eight
+hostile mutations reproduce the stop decision.  The result is a convincing
+harness-backed operational stop on further autonomous bounded finite/local
+expansion, explicitly not a mathematical resolution.  Work should reopen only
+after a formal class, a concrete abstraction or replacement theorem, external
+semantic adjudication, or an error in a sealed premise is supplied.  The
+expanded chain passes all 364 tests.
+
 ## ASMP-1 evidence chain
 
 ### 1. Finite-chain identifiability seed

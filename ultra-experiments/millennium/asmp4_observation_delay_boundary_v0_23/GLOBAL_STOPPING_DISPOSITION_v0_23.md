@@ -119,3 +119,24 @@ terminal fibers: successor-fiber multiplicities accumulated along causal paths.
 An injective terminal map can still carry positive local branch-fiber entropy.
 This is another global factor condition, not a reason to resume local sensor
 enumeration.
+
+V0.30 closes the sequential prefix-free cost case by applying the Kraft
+recurrence at every causal prefix. Its correction rounds each local fiber
+before accumulating it along a path; a ternary clone proves that a final
+ceiling is too weak. This completes another cost-transfer layer but still
+assumes a supplied causal factor, so the stop on unregistered nonlinear
+quotient construction and further local fixture enumeration remains.
+
+V0.31 computes the complete additive region of every supplied finite
+alternating quotient, including adversarial successor choices and the
+infinite-memory boundary. The remaining obstruction is now upstream: obtaining
+such a finite exact quotient (or a more general computable abstraction) for the
+declared nonlinear class. More bounded sensor fixtures do not address it.
+
+V0.32 seals the resulting disposition against the five canonical completion
+requirements. Two independent audits find conditional evidence in all five
+rows but full-scope proof in none, and a dependency graph locates the remaining
+root at the missing registered-class grammar and abstraction/replacement
+theorem. Its four reopening conditions make this the current convincing
+harness-backed operational stop on autonomous bounded expansion, not a full
+resolution of ASMP-4.

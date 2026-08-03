@@ -34,3 +34,7 @@ two-port mapping and SCC-disjunction diagnosis.
 V0.26 supplies a sufficient bridge into this theorem: an exact costed
 alternating bisimulation preserves the full safety-budget region, so a
 deterministic finite quotient may use the component-indexed cycle formula.
+
+V0.31 extends the computation to finite alternating quotients. It intersects
+the v0.25-style component unions over memoryless adversary policies and
+retains the nonconvex SCC disjunction within each fixed-policy graph.

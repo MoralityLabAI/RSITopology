@@ -32,3 +32,7 @@ or absent reset connectors remain outside the theorem.
 V0.26 closes the exact transfer step when a costed alternating-bisimulation
 quotient is supplied. It also proves with a Thue-Morse boundary that existence
 of a finite exact quotient is sufficient rather than necessary.
+
+V0.31 closes the remaining additive finite alternating-game calculation using
+the classical memoryless-spoiler and multicycle characterization. It does not
+alter the open nonlinear quotient-existence boundary.
