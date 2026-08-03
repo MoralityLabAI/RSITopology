@@ -62,7 +62,7 @@ def ensure_source_checkpoint(source_commit: str) -> dict[str, str]:
         relative = path.relative_to(repository).as_posix()
         try:
             committed = subprocess.check_output(
-                ["git", "show", f"{source_commit}:{relative}"], cwd=HERE
+                ["git", "show", f"{source_commit}:{relative}"], cwd=repository
             )
         except subprocess.CalledProcessError:
             missing.append(relative)
