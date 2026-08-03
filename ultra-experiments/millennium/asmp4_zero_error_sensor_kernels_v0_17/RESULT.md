@@ -8,4 +8,9 @@ The complete census covers 53,108 relations through four output symbols: 724 fea
 
 This does not classify block error, expected-length coding, memory, hidden sensor state, or vanishing failure probability.
 
+The v0.18 successor closes the finite known-initial-state hidden-sensor lane:
+global support separation is replaced by reachable subset-observer
+homogeneity, with read rate governed by the observer language's spectral
+radius. The frozen v0.17 memoryless claim remains unchanged.
+
 The complete 18-package chain passes all 214 focused tests in 374.34 seconds.

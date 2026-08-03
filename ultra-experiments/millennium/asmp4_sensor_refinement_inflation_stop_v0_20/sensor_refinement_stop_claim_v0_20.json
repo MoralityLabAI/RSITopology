@@ -1,0 +1,48 @@
+{
+  "schema_version": "asmp4_sensor_refinement_stop_claim_v0_20",
+  "status": "scoped stopping theorem against plant-only forced-raw read entropy",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_19_initial_state_claim_sha256": "1ca7caed965fd8826985b566eb42ed2ecd4e6b0451634a4e4b6c9134a612c70b"
+  },
+  "general_theorem": {
+    "feasibility_invariant": true,
+    "adjacency": "A_m=mA",
+    "language": "L_T(m)=m^T L_T",
+    "forced_raw_shift": "log2(m)",
+    "write_invariant": true,
+    "coarsening_recovers_base": true
+  },
+  "deterministic_robustness": {
+    "seed": 202008,
+    "base_cases": 64,
+    "clone_checks": 192
+  },
+  "computed_family": {
+    "raw_region": "[2+log2(m),infinity) x [2,infinity)",
+    "coarsened_region": "[2,infinity) x [2,infinity)",
+    "finite_raw_reads": "(2m)^T ceil(rho*2^T)",
+    "finite_coarsened_reads": "2^T ceil(rho*2^T)"
+  },
+  "small_census": {
+    "clone_instances": 768,
+    "colors": [
+      1,
+      2,
+      3
+    ],
+    "feasible_each": 80,
+    "infeasible_each": 176
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 20,
+    "tests": 234
+  },
+  "decision": "stop_plant_only_read_entropy_without_sensor_selector_or_quotient",
+  "nonclaim": "This does not refute a theorem parameterized by the registered sensor experiment, nor a capacity region that optimizes over sensor encoders or quotients irrelevant raw labels. It does not prove the full global nonlinear ASMP-4 variational theorem."
+}

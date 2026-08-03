@@ -253,6 +253,176 @@ expected-length coding, channel memory, hidden sensor state, and vanishing
 failure probability remain separate registered problems.  The expanded chain
 passes all 214 tests.
 
+**ASMP-4 v0.18 finite-state sensor transducers.** The
+[finite-memory theorem](asmp4_finite_state_sensor_transducers_v0_18/RESULT.md)
+replaces the memoryless support test with an exact reachable subset-observer
+criterion.  For a registered finite hidden-state sensor with known initial
+state, universal support safety is feasible exactly when every reachable
+observer transition assigns the current raw output a singleton control-
+relevant `q` class.  If `A` is the observer's output-multiplicity adjacency
+matrix and `L_T` its length-`T` raw language, exact finite counts are
+`L_T ceil(rho*2^T)` reads and `2^T ceil(rho*2^T)` writes, and the exact region
+is `[1+log2(rho(A)),infinity) x [2,infinity)`.  A golden-refinement fixture
+realizes `L_T=2^T F_(T+2)` and the noninteger corner `2+log2(phi)`.  A
+history-toggle fixture is feasible despite globally overlapping current
+supports, proving that raw-history state tracking is strictly more general
+than the v0.17 memoryless test.  Independent frozenset and bitmask observers
+classify all 256 deterministic two-state binary-output transducers: 80 are
+feasible, 176 infeasible, and 48 of the feasible cases are history-essential.
+Unknown initial sensor state, continuous memory, raw-output compression,
+expected length, block error, and the global nonlinear variational theorem
+remain outside the claim.  The expanded chain passes all 224 tests.
+
+**ASMP-4 v0.19 uncertain initial sensor state.** The
+[start-belief theorem](asmp4_uncertain_initial_sensor_state_v0_19/RESULT.md)
+removes v0.18's known-initial-state assumption by registering a nonempty
+adversarial initial set `I` and initializing the subset observer at `B_0=I`.
+The same reachable `q`-homogeneity criterion is necessary and sufficient, but
+the start belief is load-bearing: exact reads are
+`L_T(I) ceil(rho*2^T)`, and the read corner is
+`1+log2(rho(A_I))`.  A synchronizing fixture incurs only one transient bit,
+while a union-dominant fixture raises the read corner from 2 to 3; the
+history-toggle fixture is feasible from either known state but infeasible from
+their unknown union.  Two independent implementations classify all 768 pairs
+of a deterministic two-state binary transducer and one of its three nonempty
+initial sets: 192 are feasible and 576 infeasible, with feasibility counts
+`80,80,32`.  Exactly 32 transducers work from both known singleton states but
+fail from full initial uncertainty.  Probabilistic initial priors, active
+pre-safety calibration, continuous state, raw compression, block error, and
+the global nonlinear theorem remain outside the claim.  The expanded chain
+passes all 234 tests.
+
+**ASMP-4 v0.20 raw-refinement inflation stop.** The
+[refinement theorem](asmp4_sensor_refinement_inflation_stop_v0_20/RESULT.md)
+gives a harness-backed scoped stopping argument.  Clone every registered raw
+sensor symbol into `m` irrelevant colors while preserving its current `q`
+class, hidden-state successor, plant, and actuator.  Feasibility and exact
+writes are invariant, but the observer and raw language obey `A_m=mA` and
+`L_T(m)=m^T L_T`; forced-raw read capacity shifts by `log2(m)`.  For the
+computed sensor, the same plant and control-relevant statistic therefore have
+forced-raw regions `[2+log2(m),infinity) x [2,infinity)`, unbounded in `m`,
+while the exact quotient `(y,j)->y` retains `[2,infinity) x [2,infinity)`.
+Central and independent implementations check computed/golden fixtures and
+768 clones of all 256 small transducers; each clone factor preserves the
+`80/176` feasibility split.  This stops further local-fixture work aimed at a
+plant-only forced-raw `h_read_perp` until the statement chooses a fixed sensor
+experiment, optimization over encoders, or a sufficient-statistic quotient.
+It does not refute a sensor-parameterized theorem and does not resolve the
+global nonlinear variational program.  The expanded chain passes all 244
+tests.
+
+**ASMP-4 v0.21 support-incidence quotient.** The
+[exact-support quotient](asmp4_support_incidence_quotient_v0_21/RESULT.md)
+executes one explicit quotient-first resume route from v0.20.  Each active raw
+symbol is represented by its complete event-incidence signature
+`sigma(y)={(s,z,s_next):(y,s_next) in E(s,z)}`; equal signatures are duplicate
+labels.  This is the coarsest quotient preserving the full finite support
+relation up to duplicates.  It preserves feasibility, is idempotent and
+invariant under raw renaming and every v0.20 clone factor, and yields semantic
+observer region `[1+log2(rho(A_sem)),infinity) x [2,infinity)`.  Independent
+row-support and column-signature enumerations reclassify all 53,108 memoryless
+relations: among 724 feasible kernels, 260 contain duplicates, and the raw
+active histogram `20,210,494` becomes semantic-class histogram `64,396,264`.
+The 104 feasible deterministic relations are unchanged.  This removes a
+precise coordinate artifact but is not claimed minimal for control, selected
+by the source, or sufficient for the global nonlinear theorem.  The expanded
+chain passes all 254 tests.
+
+**ASMP-4 v0.22 causal encoder collapse.** The
+[encoder-optimized theorem](asmp4_causal_encoder_collapse_v0_22/RESULT.md)
+executes the stronger optimized-code route from v0.20.  For any finite
+two-`q` sensor whose raw subset observer is homogeneous, a causal sensor
+encoder tracks the current belief, emits only the uniquely decoded current
+`q` class, and updates its belief.  Conversely, no downstream encoding can
+repair an earliest mixed raw transition.  Thus every feasible finite sensor
+has exact optimized counts `2^T ceil(rho*2^T)` on both ports and region
+`[2,infinity) x [2,infinity)`; infeasible sensors have empty region.  A
+three-symbol contextual witness strictly separates static and causal
+coarsening: all five static partitions are exhausted, only the discrete
+partition is feasible with raw language `3^T`, while the belief-aware encoder
+uses `2^T`.  The theorem inherits the complete `80/176` small-transducer and
+`724/52,384` memoryless-support splits.  This resolves the finite local collar
+family under same-step encoder-optimized semantics, not delayed, bounded-
+memory, forced-raw, continuous, or global nonlinear variants.  The expanded
+chain passes all 264 tests.
+
+**ASMP-4 v0.23 observation-delay boundary.** The
+[sharp timing theorem](asmp4_observation_delay_boundary_v0_23/RESULT.md)
+closes the delayed-sensing nonclaim for the registered local collar.  At a
+common normal coordinate, the safe-control intervals for current modes 0 and
+8 are `[-1-2n,1-2n]` and `[7-2n,9-2n]`, separated by an exact constant gap of
+6.  Hence delay zero retains the v0.22 region
+`[2,infinity) x [2,infinity)`, but every positive integer observation delay
+has empty region under arbitrary current modes, safety from the first write,
+and no current preview.  This impossibility survives unbounded message
+capacity, controller memory, and universally quantified plant-independent
+shared randomness.  A charged current-mode preview restores the v0.22 region;
+if the mode is constant and announced by a charged pre-safety seed, the exact
+region is `[1,infinity) x [1,infinity)`.  Central and import-independent
+harnesses check 84 and 756 differently constructed adversary rows, exact
+finite collar counts, and five mutation kills.  Predictable disturbances,
+post-calibration safety, overlapping robust-control sets, continuous sensors,
+and the global nonlinear class remain outside the claim.  The expanded chain
+passes all 274 tests.
+
+**ASMP-4 v0.24 resettable support-functional bridge.** The
+[weighted variational theorem](asmp4_resettable_support_variational_v0_24/RESULT.md)
+replaces two isolated scalar thresholds by the concave family
+`h(lambda)=inf [lambda log2 R_T+(1-lambda)log2 W_T]/T` for fully registered
+safe reset blocks.  Multiplicative block concatenation convexifies normalized
+log-count pairs, and all nonnegative supporting inequalities reconstruct the
+complete closed reset-block-generated region.  This recovers diagonal and
+unequal rectangles, the v0.20 raw-clone family, the empty v0.23 delayed region,
+and the v0.7 nonrectangular wedge.  For the last case,
+`h(lambda)=min(log2(3),1+lambda)`; the endpoint thresholds admit the false
+corner `(log2(3),1)`, while the critical normal
+`lambda=log2(3/2)` excludes it exactly.  A separate verifier exhausts 1,022
+public schedules through horizon nine and compares support inequalities with
+direct upper-convex-hull membership on 64 deterministic random finite rate
+sets.  The theorem is coordinate invariant under transported state conjugacy
+and transcript relabeling.  It characterizes the full canonical region only
+when periodic block completeness is separately proved; nonresetting global
+nonlinear registrations remain open.  The expanded chain passes all 284
+tests.
+
+**ASMP-4 v0.25 finite-scheduler periodic completeness.** The
+[cycle-polytope theorem](asmp4_periodic_block_completeness_v0_25/RESULT.md)
+resolves v0.24's periodic-completeness condition for finite public additive
+scheduler state.  Every infinite walk eventually remains in one reachable
+cyclic strongly connected component; its exact component region is the upward
+convex hull of simple-cycle mean read/write costs, and its weighted support is
+a classical minimum-cycle-mean value.  Periodic closed walks are dense in each
+component polytope.  A strongly connected two-state fixture has Pareto cycle
+means `(1,3)` and `(3,1)` and explicit periodic midpoint error `3/(k+1)`.
+An irreversible fork proves the boundary sharp: the true region is a union of
+two component quadrants, `(2,2)` belongs to neither, but minimizing one support
+family across components falsely convexifies and accepts it.  Thus the general
+finite formula is a component-indexed disjunction of support families.  The
+central harness covers all 15 nonempty two-state edge subsets; an independent
+mutual-reachability implementation covers all 511 nonempty three-state edge
+subsets and audits over a thousand closed walks.  Karp's minimum-cycle-mean and
+Ziemian's finite-type rotation-set results are explicitly credited as prior
+art.  Finite public additive abstraction for arbitrary nonlinear control
+remains outside the claim.  The expanded chain passes all 294 tests.
+
+**ASMP-4 v0.26 public-bisimulation transfer.** The
+[quotient-transfer theorem](asmp4_public_bisimulation_transfer_v0_26/RESULT.md)
+proves that exact costed alternating bisimulation preserves universal safety
+and the entire achievable worst-path read/write budget region of an additive
+public-history game.  The two-direction strategy construction retains
+unrestricted causal history and matches enabled action types, exact vector
+costs, state safety, and adversarial successor-class sets.  Consequently, a
+deterministic finite quotient inherits v0.25's component-indexed cycle-polytope
+formula.  Central decorated covers transfer vector Pareto frontiers for 256
+factor/horizon pairs through 64 raw states; an import-independent checker
+compares five scalarizations for 2,400 cases through 96 raw states.  The
+Thue-Morse unary chain has exact rate `(1/2,1/2)` but no finite exact stationary
+quotient, while a parity chain has the same rate and a two-state quotient.
+Finite exact abstraction is therefore sufficient, not necessary.  Approximate
+bisimulation, nonlinear or nonadditive costs, continuous-belief quotient
+construction, and nondeterministic multidimensional mean-payoff computation
+remain outside the theorem.  The expanded chain passes all 304 tests.
+
 ## ASMP-1 evidence chain
 
 ### 1. Finite-chain identifiability seed

@@ -15,3 +15,8 @@ python -m pytest -q test_zero_error_sensor_kernels.py
 ```
 
 Block error, expected-length coding, channel memory, hidden state, and vanishing failure probability remain outside this registered contract.
+
+The v0.18 successor classifies finite hidden-state transducers with a known
+initial sensor state. It replaces global current-support separation by
+reachable subset-observer homogeneity and recovers this theorem as the
+one-state special case.

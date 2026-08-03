@@ -1,0 +1,41 @@
+{
+  "schema_version": "asmp4_public_bisimulation_transfer_claim_v0_26",
+  "status": "exact capacity-region transfer through costed public-history bisimulation",
+  "sealed_resources": {
+    "count": 3,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_18_finite_sensor_claim_sha256": "758b3c0a668b4c77985928271ce314ca4bedd3205f2a570bd4c18fc29ae5916c",
+    "v0_25_periodic_claim_sha256": "447e5dc0d440611d59b4e6b94cd5c68493b7e3c68d8c68ed9b87dd28f9f90d38"
+  },
+  "main_theorem": {
+    "equivalence": "exact costed alternating bisimulation on public histories",
+    "conclusion": "identical achievable worst-path read/write limsup budget regions",
+    "strategy_memory": "unrestricted causal memory over quotient histories is retained",
+    "finite_deterministic_corollary": "apply the v0.25 component-indexed cycle-polytope formula"
+  },
+  "decorated_cover_harness": {
+    "maximum_decoration_factor": 32,
+    "maximum_raw_states": 64,
+    "maximum_horizon": 8,
+    "support_weights": 5,
+    "transfer_failures": 0
+  },
+  "infinite_boundary": {
+    "sequence": "Thue-Morse parity of binary digit sum",
+    "checked_prefix": 4096,
+    "finite_quotient_sizes_rejected_through": 32,
+    "candidate_periods_witnessed": 64,
+    "exact_average_cost": "1/2",
+    "finite_exact_stationary_quotient": false
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 26,
+    "tests": 294
+  },
+  "decision": "finite_costed_public_bisimulation_is_a_checkable_sufficient_bridge_to_the_finite_scheduler_theorem_not_a_necessary_condition",
+  "nonclaim": "The theorem assumes additive edge costs and an exact public-history bisimulation. It does not prove that general nonlinear or continuous-belief ASMP-4 systems admit a finite quotient, and it does not reduce nondeterministic quotient games to the one-player v0.25 cycle formula."
+}
