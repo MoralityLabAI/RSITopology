@@ -210,4 +210,3 @@ def verify_solver_result(result: dict[str, object]) -> dict[str, object]:
         "certificate": certificate,
         "verified": certificate["certificate_valid"] and all(agreements.values()),
     }
-

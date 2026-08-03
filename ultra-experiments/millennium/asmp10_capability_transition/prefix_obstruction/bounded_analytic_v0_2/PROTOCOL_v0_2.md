@@ -109,4 +109,3 @@ The deterministic report has four deliberately separate records:
 4. `operation`: CPU/network/GPU/write facts.
 
 Passing reliability gates is not itself represented as broader claim support.
-

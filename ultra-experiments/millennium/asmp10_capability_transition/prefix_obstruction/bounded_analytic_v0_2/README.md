@@ -24,4 +24,3 @@ python ultra-experiments/millennium/asmp10_capability_transition/prefix_obstruct
 See `PROTOCOL_v0_2.md` for the frozen theorem, census, and gates, and
 `CLAIM_BOUNDARY_v0_2.md` for the deliberately narrow inference scope. This
 directory does not authorize or modify the separate GPU training branch.
-

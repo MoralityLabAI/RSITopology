@@ -317,4 +317,3 @@ def witness_is_feasible(result: dict[str, object]) -> bool:
         and separation == result["witness_separation"]
         and separation == result["optimum_separation"]
     )
-

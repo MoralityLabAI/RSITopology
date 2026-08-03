@@ -46,4 +46,3 @@ The report builder performs deterministic CPU-exact computation and writes
 only to standard output. It does not authorize or launch the GPU training-model
 branch, use the network, alter existing v0.1 artifacts, or update shared ASMP
 status documents.
-

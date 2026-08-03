@@ -123,4 +123,3 @@ def test_report_separates_result_reliability_claim_support_and_operation():
     assert report["operation"]["gpu_used"] is False
     assert report["operation"]["network_used"] is False
     assert report["operation"]["repository_writes"] is False
-
