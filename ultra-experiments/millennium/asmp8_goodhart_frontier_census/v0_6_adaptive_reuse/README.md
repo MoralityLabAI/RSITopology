@@ -20,3 +20,9 @@ python ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_6_adaptive
 
 This exact six-atom regression is not a learned-reward-model or open-ended
 policy-search experiment.
+
+The JSON protocol is executable and exact: extra fields or changes to the
+error alphabet, cap, mass move, or claim boundary are rejected. The run writes
+`run_receipt_v0_6.json`; the independent verifier reconstructs both the full
+pointwise census and all adaptive traces, derives gates and conclusion layers,
+and writes `bundle_receipt_v0_6.json` to bind the verification bytes as well.

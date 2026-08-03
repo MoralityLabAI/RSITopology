@@ -61,7 +61,9 @@ declarations are a hazard metric.
 - **Task result:** deterministic adaptive-selection soundness in the frozen
   finite class.
 - **Measurement reliability:** complete exact census plus an import-independent
-  replay.
+  replay of the pointwise census, adaptive policy/audit traces, policy
+  feasibility, reveal monotonicity, metric probes, gates, witnesses, digest,
+  and conclusion layers.
 - **Claim support:** reusable pointwise partial-census certificates for bounded
   deterministic atom errors.
 - **Operational decision:** retain this certificate for adaptive finite audits,
@@ -74,3 +76,16 @@ human labels, reuse of a confidence sequence after data-dependent model
 training, a learned reward model, an open-ended output space, or ASMP-8 as a
 whole.  It proves soundness, not favorable audit efficiency for every adaptive
 search.
+
+## Executable registration and artifact binding
+
+`protocol_v0_6.json` is authoritative. The primary and independent paths each
+freeze its exact field set and exact values, including the ternary error
+alphabet, unit cap, `1/6` mass move, and claim boundary. The verifier derives
+the final gates and conclusions from an import-independent integer replay; it
+never propagates primary gate or claim fields.
+
+The primary run writes a receipt binding the protocol, result, and exact source
+set. Verification checks those hashes and emits a bundle receipt that also
+hashes the verification artifact. A changed protocol, forged gate, altered
+adaptive count, digest mutation, or broadened claim therefore fails closed.

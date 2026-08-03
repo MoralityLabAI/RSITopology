@@ -10,8 +10,63 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
+FROZEN_PROTOCOL_ID = "ASMP8-ADAPTIVE-REUSE-v0.6"
+FROZEN_PROTOCOL_SCHEMA = "asmp8_adaptive_reuse_protocol_v0_6"
+FROZEN_ALPHABET_SIZE = 6
+FROZEN_ERROR_ALPHABET = (-1, 0, 1)
+FROZEN_ERROR_CAP = 1
+FROZEN_POLICY_MASS_MOVE = "1/6"
+FROZEN_CLAIM_BOUNDARY = (
+    "deterministic bounded errors on enumerable atoms only",
+    "no stochastic optional-stopping or learned-policy claim",
+    "no ASMP-8 resolution claim",
+)
+FROZEN_PROTOCOL_KEYS = frozenset(
+    {
+        "alphabet_size",
+        "claim_boundary",
+        "error_alphabet",
+        "error_cap",
+        "policy_mass_move",
+        "protocol_id",
+        "schema_version",
+    }
+)
+
+
 def canonical_json(value: Any) -> str:
     return json.dumps(value, indent=2, sort_keys=True, allow_nan=False) + "\n"
+
+
+def frozen_protocol() -> dict[str, Any]:
+    return {
+        "alphabet_size": FROZEN_ALPHABET_SIZE,
+        "claim_boundary": list(FROZEN_CLAIM_BOUNDARY),
+        "error_alphabet": list(FROZEN_ERROR_ALPHABET),
+        "error_cap": FROZEN_ERROR_CAP,
+        "policy_mass_move": FROZEN_POLICY_MASS_MOVE,
+        "protocol_id": FROZEN_PROTOCOL_ID,
+        "schema_version": FROZEN_PROTOCOL_SCHEMA,
+    }
+
+
+def protocol_binding_checks(protocol: dict[str, Any]) -> dict[str, bool]:
+    expected = frozen_protocol()
+    return {
+        "exact_field_set": set(protocol) == FROZEN_PROTOCOL_KEYS,
+        **{
+            f"field_{name}": protocol.get(name) == expected[name]
+            for name in sorted(FROZEN_PROTOCOL_KEYS)
+        },
+    }
+
+
+def validate_protocol(protocol: dict[str, Any]) -> dict[str, bool]:
+    checks = protocol_binding_checks(protocol)
+    failures = [name for name, passed in checks.items() if not passed]
+    if failures:
+        raise ValueError(f"protocol binding failed: {failures}")
+    return checks
 
 
 def fraction_text(value: Fraction) -> str:
@@ -222,6 +277,7 @@ def robustness_probes(summary: dict[str, Any], size: int, cap: Fraction) -> dict
 
 
 def compile_result(protocol: dict[str, Any]) -> dict[str, Any]:
+    protocol_binding = validate_protocol(protocol)
     size = int(protocol["alphabet_size"])
     cap = Fraction(int(protocol["error_cap"]))
     policies = policy_registry(size)
@@ -253,6 +309,13 @@ def compile_result(protocol: dict[str, Any]) -> dict[str, Any]:
     return {
         "schema_version": "asmp8_adaptive_reuse_result_v0_6",
         "protocol_id": protocol["protocol_id"],
+        "protocol_binding": protocol_binding,
+        "protocol_constants": {
+            "alphabet_size": size,
+            "error_alphabet": list(FROZEN_ERROR_ALPHABET),
+            "error_cap": int(protocol["error_cap"]),
+            "policy_mass_move": protocol["policy_mass_move"],
+        },
         "metric_robustness": probes,
         "task_result": "adaptive_pointwise_certificate_sound" if passed else "not_established",
         "measurement_reliability": "pending_independent_complete_replay" if passed else "failed",
