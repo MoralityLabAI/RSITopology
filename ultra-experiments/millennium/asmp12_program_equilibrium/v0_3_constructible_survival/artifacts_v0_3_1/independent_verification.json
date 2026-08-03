@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "all_adjacent_unions_relations_and_decorations_reverified": true,
+    "all_budget_inclusions_reverified_exactly": true,
+    "all_cell_graphs_reconstructed_exactly": true,
+    "all_cooperative_sink_event_records_reverified_exactly": true,
+    "complete_budget_adjacency_registry": true,
+    "complete_graph_key_registry": true,
+    "complete_temptation_adjacency_registry": true,
+    "frozen_catalog_sequence_matches": true,
+    "frozen_config_matches": true,
+    "frozen_manifest_matches": true
+  },
+  "evidence_roots": {
+    "budget_maps": "50b6bef33b600718906604fa2308869c6386106408c003170345b8bd8ec7f3e8",
+    "catalog_sequence": "8b3e2a44c4cddca770554dada7b89ebdd41f835a6a59c85b8647a458c61358c1",
+    "cell_graphs": "eeaa4fa8bafddfcd77b2ef81562add01ca9768b6939bee0488d63b204430dfe0",
+    "cooperative_sink_events": "da2de839058a86f3c8fa38b12cfda74728abb874cf7a61dda2928cc9673caf74",
+    "graph_key_registry": "61d051d68dc9100848798e5091d9700305a7b1fc1174c8a98664a73e413aad34",
+    "manifest": "2ece67ceedd13163c4b4891eb306568d99fe8599838edeac19d74ab278c510f7",
+    "robustness_probes": "7b34cb6ad1cfc69bba7329a4935814ce59252a411278c8d7ec94f38c2df2a233",
+    "root_of_roots": "59a86eea88f48acbaf089cc7561626c292d8f9faf703000c0ce847cc6eb342a7",
+    "temptation_zigzags": "fef3cc49ab1343dfcb6556d2d4f49c9c542b2338433ad19446c6c9736e4c3877"
+  },
+  "rebuilt_graph_count": 24576,
+  "reconstructed_budget_map_count": 16384,
+  "reconstructed_event_count": 21312,
+  "reconstructed_temptation_zigzag_count": 21504,
+  "result_sha256": "f82970f0969b700960db13c12147fa3173f5ad5010833974dcbb86c3fe889cc0",
+  "schema_version": "asmp12_constructible_survival_v0_3_1_independent_verification_v1",
+  "source_checkpoint": "fc7310a5061ad0843d01c8fbea7f67c5d5657810",
+  "source_hashes": {
+    "CLAIM_BOUNDARY_v0_3.md": "281bf3cb30078ffdf8272698a0290b4084695de8ff329e482575b241ced027a1",
+    "PROTOCOL_v0_3.md": "1ed2b9f132020ab778f2b8cbbb9563ec055e4a53615e634a94c9757ddd6ea899",
+    "README.md": "8601e463940885b8c39df805aa7acced289f239fb8ea6ef26e91734e4e9ead4d",
+    "build_artifacts.py": "1860621f775c01acdc4d11e1fa688ebdea78edd07ef3b7e0f75f2ff423b90cad",
+    "constructible_survival.py": "2641d1eb8357d633abe15500d5df8d1e6fd674b7bd2d38f4c33a57474fd4d57c",
+    "protocol_v0_3_1.json": "2ece67ceedd13163c4b4891eb306568d99fe8599838edeac19d74ab278c510f7",
+    "run_constructible_survival.py": "9975cd482fa7fec643d57be61a4e4372144736a19f8b8a73012252c81b3ae50c",
+    "test_constructible_survival.py": "4f7a77a09ac2b2f8ce9603a24dc787255e0a1dd2836dba343f0bfd8b5f09ee50",
+    "verify_constructible_survival.py": "4a4dc5c178e73f65ae96e88bcd6b95d9ffbbee3910805017276bbc0373a8dbf3"
+  },
+  "verified": true,
+  "verifier": "verify_constructible_survival.verify_surface"
+}
