@@ -1,0 +1,169 @@
+{
+  "claim_support": {
+    "not_supported": [
+      "an ordinary bifiltration of equilibrium sets",
+      "weight-preserving temptation-axis graph maps",
+      "homology, barcode, interleaving, or stability-module claims",
+      "mixed or unrestricted program equilibria",
+      "language-model cooperation or equilibrium selection dynamics"
+    ],
+    "status": "supports_only_the_registered_finite_constructible_correspondence",
+    "supported": [
+      "one exact profitable-deviation graph at every registered cell",
+      "verified weighted graph inclusions along the budget axis",
+      "typed adjacent-union zigzags along every temptation step",
+      "separate exact cooperative-sink birth/death and margin certificates"
+    ]
+  },
+  "operation": {
+    "arithmetic": "fractions.Fraction for all payoff, gain, and margin values",
+    "gpu_used": false,
+    "network_used": false,
+    "repository_writes": false,
+    "status": "deterministic_cpu_exact_report_built"
+  },
+  "reliability": {
+    "gates": {
+      "B0_budget_inclusions_and_composition_verified": true,
+      "I0_independent_reconstruction": true,
+      "R0_five_robustness_probes": true,
+      "S0_cooperative_sink_events_separate_and_certified": true,
+      "U0_every_cell_graph_defined_and_margin_typed": true,
+      "Z0_adjacent_union_zigzags_typed": true
+    },
+    "independent_verifier": {
+      "checks": {
+        "all_adjacent_unions_reverified": true,
+        "all_budget_inclusions_reverified": true,
+        "all_cell_graphs_reconstructed_exactly": true,
+        "all_cooperative_sink_event_signatures_reverified": true,
+        "registered_graph_count_reproduced": true
+      },
+      "rebuilt_graph_count": 24576,
+      "reconstructed_event_count": 21312,
+      "verified": true
+    },
+    "robustness_probes": {
+      "cost_padding_replay": {
+        "checks": 24576,
+        "passed": true
+      },
+      "exact_boundary_microgrid": {
+        "passed": true
+      },
+      "positive_margin_payoff_perturbation": {
+        "epsilon_rule": "epsilon=margin/4; residual=margin-2*epsilon",
+        "passed": true,
+        "positive_margin_certificates": 12384,
+        "zero_margin_controls": 19680
+      },
+      "program_label_equivariance": {
+        "checks": 24576,
+        "passed": true,
+        "permutation_old_to_new": [
+          2,
+          0,
+          1
+        ]
+      },
+      "source_blind_column_permutation_null": {
+        "checks": 384,
+        "passed": true
+      }
+    },
+    "status": "all_registered_gates_passed"
+  },
+  "schema_version": "asmp12_constructible_survival_v0_3_result_v1",
+  "source_checkpoint": "487f2cde89289bee9d7e6989304cc8ab66feae0e",
+  "task_result": {
+    "budget_inclusion_count": 16384,
+    "canonical_event_margin_certificates": {
+      "budget_death_at_T4": {
+        "axis": "budget",
+        "kind": "cooperative_sink_death",
+        "left_cell": "catalog=24|family=pd_order|T=4|budget=2",
+        "left_margin": "2",
+        "left_profitable_edges": [],
+        "profile": [
+          1,
+          1
+        ],
+        "right_cell": "catalog=24|family=pd_order|T=4|budget=3",
+        "right_margin": "-1",
+        "right_profitable_edges": [
+          {
+            "edge": [
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            "gain": "1"
+          },
+          {
+            "edge": [
+              1,
+              1,
+              2,
+              1,
+              0
+            ],
+            "gain": "1"
+          }
+        ]
+      },
+      "temptation_death_T3_to_T4": {
+        "axis": "temptation",
+        "kind": "cooperative_sink_death",
+        "left_cell": "catalog=24|family=pd_order|T=3|budget=3",
+        "left_margin": "0",
+        "left_profitable_edges": [],
+        "profile": [
+          1,
+          1
+        ],
+        "right_cell": "catalog=24|family=pd_order|T=4|budget=3",
+        "right_margin": "-1",
+        "right_profitable_edges": [
+          {
+            "edge": [
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            "gain": "1"
+          },
+          {
+            "edge": [
+              1,
+              1,
+              2,
+              1,
+              0
+            ],
+            "gain": "1"
+          }
+        ]
+      }
+    },
+    "cell_graph_digest_root": "eeaa4fa8bafddfcd77b2ef81562add01ca9768b6939bee0488d63b204430dfe0",
+    "cooperative_sink_event_counts": {
+      "budget|cooperative_sink_birth": 18080,
+      "budget|cooperative_sink_death": 1632,
+      "temptation|cooperative_sink_death": 1600
+    },
+    "nonmonotone_temptation_step_count": 1576,
+    "object_type": "verified budget inclusions plus temptation adjacent-union zigzags in underlying finite directed graphs",
+    "status": "finite_constructible_survival_correspondence_built",
+    "temptation_relation_counts": {
+      "equal_underlying_graphs": 17720,
+      "left_strict_subgraph_of_right": 2208,
+      "right_strict_subgraph_of_left": 1576
+    },
+    "temptation_zigzag_count": 21504,
+    "weighted_cell_graph_count": 24576
+  }
+}
