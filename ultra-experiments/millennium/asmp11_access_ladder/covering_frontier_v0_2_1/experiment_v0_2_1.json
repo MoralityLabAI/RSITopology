@@ -1,0 +1,154 @@
+{
+  "schema": "alife.experiment.v1",
+  "question": "At what intermediate intervention width is the bounded covering estimator certified to use fewer exact oracle samples than the frozen exhaustive observational estimator?",
+  "benefit": "measurement",
+  "claim_scope": "model_only",
+  "experimental_unit": "one deterministic dimension-degree-width covering cell",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "Every stratum has a certified crossover width or an honest lower-upper bracket ending at the sealed v0.2 anchor.",
+      "falsifier": "A witness, lower bound, exact cost, cell classification, or minimum-width bracket fails independent replay."
+    }
+  ],
+  "model": {
+    "entrypoint": "run.py",
+    "code_hash": "bound by prospective registration before claim-grid execution",
+    "config_paths": [
+      "experiment_v0_2_1.json",
+      "prior_anchor_v0_2.json"
+    ],
+    "update_order": "lexicographic candidate enumeration, deterministic maximum-gain selection, reverse deletion, then exact query-count enumeration",
+    "rng": "none; the experiment and all tie breaks are deterministic"
+  },
+  "interventions": [
+    {
+      "name": "intermediate_parent_fixing_width",
+      "changes": {
+        "block_size": "every integer strictly between k and the sealed high-width anchor"
+      }
+    }
+  ],
+  "controls": [
+    {
+      "name": "observational_boundary_s_equals_k",
+      "type": "baseline"
+    },
+    {
+      "name": "sealed_v0_2_high_width_anchor",
+      "type": "simple_limit"
+    },
+    {
+      "name": "independent_artifact_replay",
+      "type": "independent_replication"
+    }
+  ],
+  "seed_plan": {
+    "discovery": [
+      "v0.2 construction pilot dimensions 8,12,16,20"
+    ],
+    "confirmatory": [
+      "v0.2.1 full intermediate grid dimensions 13,15,17"
+    ],
+    "holdout": [
+      "five non-binding metric robustness probes"
+    ],
+    "pairing": "No RNG exists; labels identify disjoint design roles rather than stochastic seeds."
+  },
+  "metrics": {
+    "selection": [
+      "greedy_uncovered_support_gain"
+    ],
+    "evidence": [
+      "verified_cover_upper_bound",
+      "replayed_combinatorial_lower_bound",
+      "exact_total_oracle_samples",
+      "three_way_crossover_status"
+    ],
+    "hazard": [
+      "greedy_round_cap",
+      "operational_wall_stop",
+      "candidate_family_cap",
+      "covering_bound_width",
+      "sample_cap_failure"
+    ],
+    "denominators": {
+      "coverage": "all binom(n,k) planted supports",
+      "sample_cost": "fresh oracle draws per queried intervention block"
+    },
+    "exposure": {
+      "eligibility": "every planted k-support is enumerated",
+      "activation": "a selected s-block contains the support",
+      "state_change": "the support is marked covered by the incumbent witness",
+      "minimum_per_condition": 1,
+      "balance_tolerance": 0
+    }
+  },
+  "analysis": {
+    "primary_outcomes": [
+      "three_way_crossover_status",
+      "minimum_width_bracket"
+    ],
+    "uncertainty": "deterministic certified interval [L,U], not sampling uncertainty",
+    "multiple_comparisons": "all grid cells are reported; no winner selection or pooled p-value",
+    "ood_conditions": [
+      "stricter alpha",
+      "stricter power",
+      "exact independent-query familywise error",
+      "query-count-only scalarization"
+    ],
+    "stopping_rule": "4096 deterministic greedy rounds per cell or the frozen operational wall/resource ceiling; retain valid incumbent and lower bound on stop"
+  },
+  "budget": {
+    "max_wall_seconds": 900,
+    "max_steps_per_episode": 4096,
+    "max_episodes": 48,
+    "max_cells_per_world": 30000,
+    "execution": "sequential deterministic covering cells; no GPU and no parallel solver state"
+  },
+  "artifacts": {
+    "raw_rows": "artifacts_v0_2_1/cost_cells.jsonl",
+    "summary": "artifacts_v0_2_1/result_layer.json",
+    "seed_manifest": "experiment_v0_2_1.json (deterministic design roles; no RNG seeds)",
+    "replay_command": "python run.py --registration registration_v0_2_1.json --output-dir artifacts_v0_2_1"
+  },
+  "asmp11": {
+    "protocol_id": "asmp11.intermediate_width_crossover.v0.2.1",
+    "status": "source_freeze_candidate_not_registered",
+    "dimensions": [
+      13,
+      15,
+      17
+    ],
+    "degrees": [
+      3,
+      4
+    ],
+    "width_rule": {
+      "3": "every integer s with 3 < s < n-3",
+      "4": "every integer s with 4 < s < n-2"
+    },
+    "flip_rates": [
+      "1/20",
+      "3/20",
+      "1/4"
+    ],
+    "alpha": "1/20",
+    "target_power": "9/10",
+    "sample_cap": 4096,
+    "resource_policy": {
+      "max_greedy_rounds_per_cell": 4096,
+      "max_candidate_blocks_per_cell": 30000,
+      "hard_wall_seconds_per_cell": 15,
+      "max_total_wall_seconds": 900,
+      "max_ram_bytes": 4294967296,
+      "execution": "sequential_cpu_only"
+    },
+    "expected_counts": {
+      "covering_cells": 48,
+      "cost_cells": 144,
+      "brackets": 18,
+      "metric_probes_per_cost_cell": 5
+    }
+  }
+}
