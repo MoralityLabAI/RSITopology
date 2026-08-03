@@ -1,0 +1,10 @@
+{
+  "claim_support": "bounded_exact_grammar_only",
+  "measurement_reliability": "independent_graph_replay_passed",
+  "mismatches": [],
+  "operational_decision": "close_toy_horizon_gap",
+  "pass": true,
+  "replayed_cells": 45,
+  "safe_cycle_replayed": true,
+  "schema_version": "asmp5_inductive_root_verification_v0_3"
+}
