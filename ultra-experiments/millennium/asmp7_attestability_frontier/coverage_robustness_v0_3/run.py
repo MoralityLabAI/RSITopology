@@ -7,11 +7,12 @@ import platform
 from datetime import datetime, timezone
 from pathlib import Path
 
-from coverage_robustness import build_result
+from coverage_robustness import build_result, validate_protocol
 
 
 HERE = Path(__file__).resolve().parent
 SOURCE_FILES = (
+    "protocol_v0_3.json",
     "PROTOCOL_v0_3.md",
     "README.md",
     "coverage_robustness.py",
@@ -19,6 +20,7 @@ SOURCE_FILES = (
     "verify_result.py",
     "test_coverage_robustness.py",
 )
+PROTOCOL_PATH = HERE / "protocol_v0_3.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -47,13 +49,18 @@ def main() -> None:
     if (result_path.exists() or receipt_path.exists()) and not args.force:
         raise RuntimeError("output exists; use --force for an explicit replay")
 
+    protocol = json.loads(PROTOCOL_PATH.read_text(encoding="utf-8"))
+    protocol_binding = validate_protocol(protocol)
     result = build_result()
     write_json(result_path, result)
     receipt = {
+        "schema_version": "asmp7_coverage_robustness_run_receipt_v0_3_1",
         "experiment_id": result["experiment_id"],
         "executed_utc": datetime.now(timezone.utc).isoformat(),
+        "protocol_sha256": sha256_file(PROTOCOL_PATH),
         "result_sha256": sha256_file(result_path),
         "source_hashes": {name: sha256_file(HERE / name) for name in SOURCE_FILES},
+        "protocol_binding": protocol_binding,
         "environment": {
             "python": platform.python_version(),
             "implementation": platform.python_implementation(),

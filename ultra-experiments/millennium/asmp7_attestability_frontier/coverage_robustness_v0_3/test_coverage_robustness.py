@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import ast
 import copy
+import json
+import platform
 from fractions import Fraction
 from pathlib import Path
 
 import pytest
 
 from coverage_robustness import (
+    CLAIM_BOUNDARY,
     ERROR_LIMIT,
     MODELS,
     brute_force_small_cases,
@@ -17,8 +20,10 @@ from coverage_robustness import (
     observation_pair,
     policy_independent_probability,
     selective_probability,
+    validate_protocol,
 )
-from verify_result import verify_payload
+from run import SOURCE_FILES, sha256_file, write_json
+from verify_result import verify_artifact_bundle, verify_payload
 
 
 HERE = Path(__file__).resolve().parent
@@ -113,3 +118,78 @@ def test_verifier_has_no_implementation_import() -> None:
         elif isinstance(node, ast.ImportFrom) and node.module:
             imported.add(node.module)
     assert "coverage_robustness" not in imported
+
+
+def test_universal_claim_forged_gates_and_boundary_are_rejected(
+    result: dict[str, object],
+) -> None:
+    tampered = copy.deepcopy(result)
+    tampered["gates"] = {"forged_gate": {"pass": True, "failures": []}}
+    tampered["task_result"]["basis"] = "ASMP-7 universally solved"
+    tampered["claim_support"]["claim"] = (
+        "universal adaptive transformation attestability proved"
+    )
+    tampered["operational_decision"]["reason"] = "deploy immediately"
+    tampered["claim_boundary"] = "ASMP-7 solved without qualifications"
+
+    verification = verify_payload(tampered)
+
+    assert not verification["pass"]
+    assert any(path.startswith("gates") for path in verification["failures"])
+    assert "claim_support.claim" in verification["failures"]
+    assert "claim_boundary" in verification["failures"]
+
+
+def test_protocol_binds_fresh_event_semantics_and_excludes_fixed_mask() -> None:
+    protocol = json.loads((HERE / "protocol_v0_3.json").read_text(encoding="utf-8"))
+    assert all(validate_protocol(protocol).values())
+    assert protocol["independent_coverage_semantics"] == (
+        "fresh_per_challenge_event_with_probability_c_over_16"
+    )
+    assert protocol["fixed_independent_mask_counterfactual"] == (
+        "out_of_scope_sensitivity_only"
+    )
+    assert "execution-fixed random independent mask" in CLAIM_BOUNDARY
+
+    mutated = copy.deepcopy(protocol)
+    mutated["independent_coverage_semantics"] = (
+        "one_uniform_exact_c_point_mask_fixed_across_challenges"
+    )
+    with pytest.raises(ValueError, match="protocol binding failed"):
+        validate_protocol(mutated)
+
+
+def test_artifact_bundle_binds_protocol_result_receipt_and_exact_sources(
+    tmp_path: Path, result: dict[str, object]
+) -> None:
+    result_path = tmp_path / "result.json"
+    receipt_path = tmp_path / "receipt.json"
+    write_json(result_path, result)
+    protocol_path = HERE / "protocol_v0_3.json"
+    source_hashes = {name: sha256_file(HERE / name) for name in SOURCE_FILES}
+    protocol = json.loads(protocol_path.read_text(encoding="utf-8"))
+    receipt = {
+        "schema_version": "asmp7_coverage_robustness_run_receipt_v0_3_1",
+        "experiment_id": result["experiment_id"],
+        "executed_utc": "2026-08-03T00:00:00+00:00",
+        "protocol_sha256": sha256_file(protocol_path),
+        "result_sha256": sha256_file(result_path),
+        "source_hashes": source_hashes,
+        "protocol_binding": validate_protocol(protocol),
+        "environment": {
+            "python": platform.python_version(),
+            "implementation": platform.python_implementation(),
+            "arithmetic": "integer binomial masses and fractions.Fraction",
+            "gpu": "not used",
+        },
+    }
+    write_json(receipt_path, receipt)
+    verification = verify_artifact_bundle(tmp_path, HERE)
+    assert verification["pass"], verification
+    assert all(verification["binding_gates"].values())
+
+    receipt["source_hashes"]["coverage_robustness.py"] = "0" * 64
+    write_json(receipt_path, receipt)
+    rejected = verify_artifact_bundle(tmp_path, HERE)
+    assert not rejected["pass"]
+    assert not rejected["binding_gates"]["V5_exact_source_set_and_hashes_bound"]

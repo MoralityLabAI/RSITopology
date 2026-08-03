@@ -15,6 +15,79 @@ THETA_GRID = (Fraction(1, 2), Fraction(3, 4), Fraction(4, 5), Fraction(1))
 COVERAGE_COUNTS = (0, 8, 10, 12, 14, 16)
 MODELS = ("policy_independent", "adversarial_selective")
 M_CAP = 8192
+PROTOCOL_ID = "ASMP-7-METER-COVERAGE-ROBUSTNESS-v0.3"
+PROTOCOL_SCHEMA = "asmp7_coverage_robustness_protocol_v0_3"
+INDEPENDENT_COVERAGE_SEMANTICS = (
+    "fresh_per_challenge_event_with_probability_c_over_16"
+)
+SELECTIVE_COVERAGE_SEMANTICS = (
+    "execution_dependent_exact_c_point_mask_fixed_across_challenges"
+)
+FIXED_MASK_COUNTERFACTUAL = "out_of_scope_sensitivity_only"
+CLAIM_BOUNDARY = (
+    "This result concerns a 16-point Boolean registry, fresh per-challenge "
+    "policy-independent coverage events, an execution-dependent exact-c-point selective "
+    "mask fixed across challenges, fresh fair fallback bits, and independent challenges. "
+    "It does not cover an execution-fixed random independent mask, establish real meter "
+    "coverage, identify a deployment threshold, characterize adaptive history-dependent "
+    "suppression, prove transformation-universal attestability, or resolve ASMP-7."
+)
+FROZEN_PROTOCOL_KEYS = frozenset(
+    {
+        "schema_version",
+        "protocol_id",
+        "domain_size",
+        "compliant_boundary",
+        "forbidden_boundaries",
+        "theta_grid",
+        "coverage_counts",
+        "models",
+        "error_limit",
+        "m_cap",
+        "independent_coverage_semantics",
+        "selective_coverage_semantics",
+        "fixed_independent_mask_counterfactual",
+        "claim_boundary",
+    }
+)
+
+
+def frozen_protocol() -> dict[str, object]:
+    return {
+        "schema_version": PROTOCOL_SCHEMA,
+        "protocol_id": PROTOCOL_ID,
+        "domain_size": DOMAIN_SIZE,
+        "compliant_boundary": COMPLIANT_BOUNDARY,
+        "forbidden_boundaries": list(FORBIDDEN_BOUNDARIES),
+        "theta_grid": [fraction_text(value) for value in THETA_GRID],
+        "coverage_counts": list(COVERAGE_COUNTS),
+        "models": list(MODELS),
+        "error_limit": fraction_text(ERROR_LIMIT),
+        "m_cap": M_CAP,
+        "independent_coverage_semantics": INDEPENDENT_COVERAGE_SEMANTICS,
+        "selective_coverage_semantics": SELECTIVE_COVERAGE_SEMANTICS,
+        "fixed_independent_mask_counterfactual": FIXED_MASK_COUNTERFACTUAL,
+        "claim_boundary": CLAIM_BOUNDARY,
+    }
+
+
+def protocol_binding_checks(protocol: dict[str, object]) -> dict[str, bool]:
+    expected = frozen_protocol()
+    return {
+        "exact_field_set": set(protocol) == FROZEN_PROTOCOL_KEYS,
+        **{
+            f"field_{name}": protocol.get(name) == expected[name]
+            for name in sorted(FROZEN_PROTOCOL_KEYS)
+        },
+    }
+
+
+def validate_protocol(protocol: dict[str, object]) -> dict[str, bool]:
+    checks = protocol_binding_checks(protocol)
+    failures = [name for name, passed in checks.items() if not passed]
+    if failures:
+        raise ValueError(f"protocol binding failed: {failures}")
+    return checks
 
 
 @dataclass(frozen=True)
@@ -456,6 +529,35 @@ def evaluate_gates(records: list[dict[str, object]]) -> dict[str, dict[str, obje
         if row["status"] != "common_law_impossible":
             common_failures.append(f"selective_overlap:k1=14,theta={fraction_text(theta)},c=10")
 
+    cross_model_failures: list[str] = []
+    for k1 in FORBIDDEN_BOUNDARIES:
+        for theta in THETA_GRID:
+            for coverage_count in COVERAGE_COUNTS:
+                independent = index[("policy_independent", k1, theta, coverage_count)]
+                selective = index[("adversarial_selective", k1, theta, coverage_count)]
+                label = (
+                    f"k1={k1},theta={fraction_text(theta)},c={coverage_count}"
+                )
+                independent_delta = _fraction(independent["effective_delta"])
+                selective_delta = _fraction(selective["effective_delta"])
+                if selective_delta > independent_delta:
+                    cross_model_failures.append(f"delta:{label}")
+                if independent["status"] == "common_law_impossible":
+                    if selective["status"] != "common_law_impossible":
+                        cross_model_failures.append(f"common_law:{label}")
+                    continue
+                if selective["status"] == "common_law_impossible":
+                    continue
+                if independent["status"] == "feasible_exact":
+                    if selective["status"] == "feasible_exact":
+                        if int(selective["m_star"]) < int(independent["m_star"]):
+                            cross_model_failures.append(f"burden:{label}")
+                    elif selective["status"] != "infeasible_within_cap":
+                        cross_model_failures.append(f"status:{label}")
+                elif independent["status"] == "infeasible_within_cap":
+                    if selective["status"] == "feasible_exact":
+                        cross_model_failures.append(f"cap_order:{label}")
+
     brute_force = brute_force_small_cases()
     return {
         "E0_exact_adjacency": {"pass": not adjacency_failures, "failures": adjacency_failures},
@@ -471,6 +573,10 @@ def evaluate_gates(records: list[dict[str, object]]) -> dict[str, dict[str, obje
         "Z0_common_law_zero_information": {
             "pass": not common_failures,
             "failures": common_failures,
+        },
+        "C0_cross_model_weakening": {
+            "pass": not cross_model_failures,
+            "failures": cross_model_failures,
         },
         "B0_bruteforce_small_cases": brute_force,
     }
@@ -558,7 +664,11 @@ def build_result() -> dict[str, object]:
         "B0_bruteforce_small_cases",
     )
     measurement_reliable = all(gates[name]["pass"] for name in reliability_gate_names)
-    claim_gate_names = ("M0_coverage_monotonicity", "Z0_common_law_zero_information")
+    claim_gate_names = (
+        "M0_coverage_monotonicity",
+        "Z0_common_law_zero_information",
+        "C0_cross_model_weakening",
+    )
     claim_supported = measurement_reliable and all(gates[name]["pass"] for name in claim_gate_names) and all(
         probe["pass"] for probe in probes.values()
     )
@@ -571,7 +681,13 @@ def build_result() -> dict[str, object]:
         else "registered_coverage_contrast_not_established"
     )
     return {
-        "experiment_id": "ASMP-7-METER-COVERAGE-ROBUSTNESS-v0.3",
+        "experiment_id": PROTOCOL_ID,
+        "protocol_schema": PROTOCOL_SCHEMA,
+        "coverage_semantics": {
+            "policy_independent": INDEPENDENT_COVERAGE_SEMANTICS,
+            "adversarial_selective": SELECTIVE_COVERAGE_SEMANTICS,
+            "fixed_independent_mask_counterfactual": FIXED_MASK_COUNTERFACTUAL,
+        },
         "evidence_class": "exact_finite_rational_composite_testing",
         "protocol_constants": {
             "domain_size": DOMAIN_SIZE,
@@ -611,10 +727,5 @@ def build_result() -> dict[str, object]:
         "gates": gates,
         "metric_robustness_probes": probes,
         "records": records,
-        "claim_boundary": (
-            "This result concerns a 16-point Boolean registry, exact-size event coverage, fresh fair "
-            "fallback bits, independent challenges, and two declared suppression models. It does not "
-            "establish real meter coverage, identify a deployment threshold, characterize adaptive "
-            "history-dependent suppression, prove transformation-universal attestability, or resolve ASMP-7."
-        ),
+        "claim_boundary": CLAIM_BOUNDARY,
     }

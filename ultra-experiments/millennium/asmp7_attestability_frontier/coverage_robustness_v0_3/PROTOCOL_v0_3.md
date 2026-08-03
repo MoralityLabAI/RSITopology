@@ -28,7 +28,7 @@ An uncovered event releases a fresh fair bit. Challenges sample the full
 randomized-response coins are fresh. Separate false-positive and
 false-negative limits remain `1/20`.
 
-Coverage is registered as an exact count
+Coverage rates are indexed by the integer numerator
 
 ```text
 c in {0,8,10,12,14,16};  rho = c/16.
@@ -81,6 +81,15 @@ The mask is fixed for one execution while challenges are sampled with
 replacement. Adaptive history-dependent mask changes are outside this
 protocol.
 
+The two temporal semantics are intentionally different. The independent arm
+resamples a fresh coverage event on every challenge; it is not a single random
+`c`-point mask held fixed for an execution. That fixed-independent-mask model
+would induce a hypergeometric mixture of binomials and is an out-of-scope
+sensitivity, not evidence for or against either registered arm. For example,
+at `k=8`, `theta=3/4`, `c=8`, the registered `m=304` upper-tail test has exact
+false-positive probability `1/20` under fresh event-level thinning, while a
+uniform execution-fixed eight-point mask would give approximately `0.138044`.
+
 ## Exact test and certificates
 
 When the robust endpoints satisfy `q0<q1`, use the exact size-`1/20`
@@ -110,6 +119,10 @@ floating-point quantity decides a cell, gate, claim, or operational status.
 - `Z0_common_law_zero_information`: zero coverage and `theta=1/2` emit common
   fair laws; selective `k1=14,c=10` additionally has an explicit aligned-mask
   common-law witness for every nonprivate registered channel.
+- `C0_cross_model_weakening`: every one of the 48 matched grid positions
+  verifies that selective suppression has no larger robust separation and is
+  either common-law impossible, cap-infeasible, or at least as burdensome as
+  policy-independent coverage.
 - `B0_bruteforce_small_cases`: complete four-point mask enumeration reproduces
   the attainable-agreement formula for every agreement/coverage count, and
   direct report-string enumeration through length five reproduces the
@@ -144,10 +157,20 @@ The artifact reports four noninterchangeable objects:
 A reliable measurement does not itself authorize the claim. A supported
 finite claim does not authorize a real meter threshold or deployment action.
 
+`protocol_v0_3.json` is the executable registration. Both primary and
+independent paths require its exact field set and exact values. The independent
+path reconstructs the full result, gates, probes, conclusion layers, witnesses,
+and record key universe rather than accepting primary pass flags. The run
+receipt binds the protocol, result, and exact source-file set; verification
+checks those bindings and emits a bundle receipt that additionally hashes the
+verification artifact.
+
 ## Claim boundary
 
-This protocol concerns a 16-point Boolean registry, exact-size event
-coverage, fresh fair fallback bits, independent challenges, and two declared
-suppression models. It does not establish real meter coverage, identify a
-deployment threshold, characterize adaptive history-dependent suppression,
-prove transformation-universal attestability, or resolve ASMP-7.
+This protocol concerns a 16-point Boolean registry, fresh per-challenge
+policy-independent coverage events, an execution-dependent exact-`c`-point
+selective mask fixed across challenges, fresh fair fallback bits, and
+independent challenges. It does not cover an execution-fixed random independent
+mask, establish real meter coverage, identify a deployment threshold,
+characterize adaptive history-dependent suppression, prove
+transformation-universal attestability, or resolve ASMP-7.
