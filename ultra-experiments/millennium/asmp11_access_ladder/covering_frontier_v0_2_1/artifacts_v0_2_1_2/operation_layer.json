@@ -1,0 +1,487 @@
+{
+  "elapsed_seconds": 97.67199999999866,
+  "environment": {
+    "cpu_count": 12,
+    "git_head": "2fcc764fc99ab90d2fb28118a3d10398cd021c2f",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]"
+  },
+  "events": [
+    {
+      "block_size": 4,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.01599999999598367,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 5,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.01600000000325963,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 6,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.014999999999417923,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 7,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.01600000000325963,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 8,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.014999999999417923,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 9,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.0,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 5,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.046999999998661224,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 6,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.031000000002677552,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 7,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.014999999999417923,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 8,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.01600000000325963,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 9,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.014999999999417923,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 10,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.01599999999598367,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 13,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 4,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.031000000002677552,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 5,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.030999999995401595,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 6,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.046999999998661224,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 7,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.06199999999807915,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 8,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.07800000000133878,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 9,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.07800000000133878,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 10,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.09399999999732245,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 11,
+      "construction_status": "exact_bounds_match",
+      "elapsed_seconds": 0.046999999998661224,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 5,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.25,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 6,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.25,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 7,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.2180000000007567,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 8,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.2190000000045984,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 9,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.2180000000007567,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 10,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.17199999999866122,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 11,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.125,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 12,
+      "construction_status": "exact_bounds_match",
+      "elapsed_seconds": 0.06300000000192085,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 15,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 4,
+      "construction_status": "exact_bounds_match",
+      "elapsed_seconds": 0.13999999999941792,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 5,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.20300000000133878,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 6,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.2649999999994179,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 7,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.3120000000053551,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 8,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.48400000000401633,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 9,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.5780000000013388,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 10,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.625,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 11,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.46899999999732245,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 12,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.25,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 13,
+      "construction_status": "exact_bounds_match",
+      "elapsed_seconds": 0.1569999999992433,
+      "event": "covering_cell_complete",
+      "k": 3,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 5,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.485000000000582,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 6,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.4219999999986612,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 7,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.7819999999992433,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 8,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.8440000000045984,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 9,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.7189999999973224,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 10,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.7969999999986612,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 11,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 1.4069999999992433,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 12,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.8279999999940628,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 13,
+      "construction_status": "deterministic_greedy_incumbent",
+      "elapsed_seconds": 0.6560000000026776,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    },
+    {
+      "block_size": 14,
+      "construction_status": "exact_bounds_match",
+      "elapsed_seconds": 0.46899999999732245,
+      "event": "covering_cell_complete",
+      "k": 4,
+      "n": 17,
+      "stop_reason": "cover_complete"
+    }
+  ],
+  "finished_utc": "2026-08-03T23:00:02.764998+00:00",
+  "missing_cost_cells": [],
+  "registration": {
+    "path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp11_access_ladder\\covering_frontier_v0_2_1\\registration_v0_2_1_2.json",
+    "registration_commit": "2fcc764fc99ab90d2fb28118a3d10398cd021c2f",
+    "sha256": "3bfacf0b1d58e8f8f0557d5abf8c0e093e4e50ed6a0a47c65d6abe049330686b",
+    "source_commit": "1b1bcd80af3880e5165176cf12af3e1e2e109873"
+  },
+  "release_id": "asmp11.intermediate_width_crossover.v0.2.1.2",
+  "resource_compliance": {
+    "aggregate_elapsed_consistent": true,
+    "candidates_within_registered_cap": true,
+    "completed_cells_within_registered_wall": true,
+    "cover_metadata_consistent": true,
+    "events_match_covering_rows": true,
+    "measured_checks_pass": true,
+    "nonnegative_elapsed": true,
+    "ram": {
+      "compliance": "not_established",
+      "measurement_status": "unmeasured",
+      "peak_bytes": null,
+      "registered_cap_bytes": 4294967296
+    },
+    "rounds_within_registered_cap": true,
+    "stop_reasons_valid": true,
+    "stop_semantics_valid": true,
+    "total_wall_consistent": true,
+    "wall_stop_timing_valid": true
+  },
+  "resource_policy": {
+    "execution": "sequential_cpu_only",
+    "hard_wall_seconds_per_cell": 15,
+    "max_candidate_blocks_per_cell": 30000,
+    "max_greedy_rounds_per_cell": 4096,
+    "max_ram_bytes": 4294967296,
+    "max_total_wall_seconds": 900
+  },
+  "run_status": "complete",
+  "schema_version": "asmp11_intermediate_crossover_operation_layer_v0_2_1_2",
+  "started_utc": "2026-08-03T22:58:25.087652+00:00",
+  "stop_reason_counts": {
+    "cover_complete": 48
+  },
+  "total_wall_stop": false
+}
