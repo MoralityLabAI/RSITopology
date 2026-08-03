@@ -100,3 +100,22 @@ quotient may invoke v0.25. The Thue-Morse counterboundary shows that finite
 exact quotients do not characterize every system with a well-defined rate.
 The stop therefore remains on unregistered global quotient existence and on
 further local fixture enumeration.
+
+V0.27 allows matched additive edge costs to differ by `epsilon`, with sharp
+asymptotic budget slack `epsilon`, provided safety and alternating successor
+matching stay exact. Its arbitrarily-close safe/unsafe loops show why metric
+closeness alone cannot reopen a zero-error global claim; a strict registered
+safety margin is required. The productive route remains a global abstraction
+or variational theorem with those guards, not more local sensor fixtures.
+
+V0.28 identifies the additional invariant needed when the charged object is a
+whole port language rather than an additive path: maximum causal transcript
+fiber growth. A finite one-class quotient can hide exponential fibers, while
+subexponential fibers preserve the rate. This again narrows a global theorem
+condition without justifying further local fixture enumeration.
+
+V0.29 shows that prefix branching needs a stricter local invariant than v0.28
+terminal fibers: successor-fiber multiplicities accumulated along causal paths.
+An injective terminal map can still carry positive local branch-fiber entropy.
+This is another global factor condition, not a reason to resume local sensor
+enumeration.

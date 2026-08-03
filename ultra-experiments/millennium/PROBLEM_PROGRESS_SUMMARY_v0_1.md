@@ -423,6 +423,69 @@ bisimulation, nonlinear or nonadditive costs, continuous-belief quotient
 construction, and nondeterministic multidimensional mean-payoff computation
 remain outside the theorem.  The expanded chain passes all 304 tests.
 
+**ASMP-4 v0.27 approximate-cost and zero-error robustness boundary.** The
+[epsilon-cost transfer theorem](asmp4_approximate_bisimulation_robustness_v0_27/RESULT.md)
+quantifies v0.26's bridge.  When state and transition safety, registered action
+types, and alternating successor matching remain exact while every matched
+read/write edge cost differs by at most `epsilon`, horizon-`T` budgets transfer
+with sharp cumulative slack `T epsilon` and worst-path limsup regions have
+`l_infinity` Hausdorff slack at most `epsilon`.  The representative-history
+proof retains unrestricted causal memory and applies to adversarial public
+successors.  Zero-error safety is discontinuous under metric closeness alone:
+for every positive `delta`, two `delta`-close zero-cost loops can have a
+nonempty and an empty region.  A strict `L delta` signed safety margin repairs
+the implication, and equality is sharp.  Central vector dynamic programs cover
+256 factor/horizon pairs through 64 states and eight adversarial horizons; an
+independent minimax implementation checks 2,400 scalarized comparisons through
+96 states.  Classical approximate and alternating bisimulation results are
+explicitly credited.  Nonadditive costs, general approximate safety,
+continuous-belief quotient construction, and nondeterministic multidimensional
+mean-payoff computation remain outside the theorem.  The expanded chain passes
+all 314 tests.
+
+**ASMP-4 v0.28 transcript-fiber entropy boundary.** The
+[causal fiber theorem](asmp4_transcript_fiber_entropy_v0_28/RESULT.md) extends
+the quotient lane from additive path costs to the nonadditive port cost
+`log2 |L_i(T)|` on the whole realized safe transcript language.  A
+port-compatible causal factor with maximum horizon fiber `M_i(T)` gives the
+exact inequality `J_i^target(T) <= J_i^source(T)+log2 M_i(T)`; its normalized
+limsup is the directional relative fiber entropy.  Separate read/write maps
+and separate transfer directions are load-bearing.  Bidirectional
+subexponential fibers preserve the complete region, while uniformly bounded
+fibers are sufficient but not necessary.  A sharp finite raw game with `r*w`
+states and one exact quotient class has zero additive costs but transcript
+fibers `r^T,w^T`, shifting the corner by `(log2 r,log2 w)`.  Thus finite state
+and exact successor-class bisimulation do not control history multiplicity.
+Sparse dyadic branching gives unbounded zero-entropy fibers, and a burst
+schedule proves that limsup cannot be weakened to liminf.  Central checks cover
+2,048 clone rows and 4,096 sparse horizons; an independent verifier constructs
+35 tries through 78,125 leaves, exhausts 6,561 multiplicity schedules, and
+checks 8,192 sparse horizons.  Relative factor entropy is explicitly credited
+as prior art.  Other transcript-tree functionals still require their own
+registered distortion moduli, and nonlinear quotient construction remains
+open.  The expanded chain passes all 324 tests.
+
+**ASMP-4 v0.29 causal branch-fiber boundary.** The
+[local successor-fiber theorem](asmp4_causal_branch_fiber_v0_29/RESULT.md)
+supplies the factor law for v0.3's worst-path prefix branching cost.  Under a
+length-preserving causal tree morphism, let `F_i(T)` be the largest product,
+along one target port path, of the maximum local successor fibers.  Then
+`B_i^target(T) <= B_i^source(T)+log2 F_i(T)`, and the normalized limsup is the
+directional branch-rate correction.  Bidirectional subexponential profiles
+preserve the full branching-cost region.  Terminal fibers do not suffice: a
+three-step factor is bijective on `{000,001,010,100}` but maps it to
+`{000,001,010,011}`, changing branch cost from three bits to two with local
+fiber product two.  Repeating the block keeps terminal fiber one and attains an
+exact one-third-bit-per-step gap.  Full local cloning attains `log2 m`, while
+sparse merging is unbounded with zero rate and burst schedules make limsup
+load-bearing.  The central harness checks all 332,928 binary causal morphisms
+through depth three, including 10,496 injective-terminal/nontrivial-local
+cases; the independent verifier checks 2,115 ternary-output morphisms.  The
+feedback/invariance-entropy lineage is explicitly credited.  Sequential
+minimax prefix-free cost still needs a separate Kraft-rounding distortion
+theorem, and nonlinear quotient construction remains open.  The expanded
+chain passes all 334 tests.
+
 ## ASMP-1 evidence chain
 
 ### 1. Finite-chain identifiability seed

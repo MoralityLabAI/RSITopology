@@ -1,0 +1,35 @@
+{
+  "schema_version": "asmp4_approximate_bisimulation_contract_v0_27",
+  "objective": "quantified two-port rate transfer with zero-error safety",
+  "game_semantics": {
+    "controller": "causal public-history strategies choose registered action types",
+    "adversary": "universally quantified public successor outcomes",
+    "costs": "nonnegative additive read/write edge log-cost vectors",
+    "safety": "all visited states and traversed transitions must be safe",
+    "rate": "coordinatewise worst-path limsup average cost"
+  },
+  "approximate_relation": {
+    "state_safety": "exact",
+    "transition_safety": "exact on matched outcomes",
+    "enabled_action_types": "exact",
+    "successors": "exact relational back-and-forth for every adversarial outcome",
+    "cost_error": "per matched edge l_infinity error at most epsilon"
+  },
+  "transfer": {
+    "finite_horizon": "cumulative vector-budget slack at most T epsilon",
+    "asymptotic": "rate-region l_infinity Hausdorff slack at most epsilon",
+    "empty_region": "preserved because safety status is exact"
+  },
+  "metric_safety_margin": {
+    "guard": "safe iff signed margin m is positive",
+    "regularity": "m is L-Lipschitz on related observations",
+    "sufficient_margin": "every related reachable source has m greater than L delta",
+    "sharpness": "equality can map a safe state to the unsafe boundary"
+  },
+  "nonclaims": [
+    "approximate safety without a strict margin",
+    "nonadditive transcript-tree costs",
+    "construction of finite quotients for arbitrary nonlinear systems",
+    "solution of multidimensional adversarial mean-payoff games"
+  ]
+}

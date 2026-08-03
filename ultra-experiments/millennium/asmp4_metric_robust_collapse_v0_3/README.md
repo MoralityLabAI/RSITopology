@@ -11,6 +11,10 @@ and deterministic-prefix-invariant transcript-tree cost, including
 whole-language cardinality, uniform causal branching, and exact worst-case
 prefix-free length.
 
+The v0.29 successor gives a quotient-transfer law specifically for uniform
+causal branching. Local successor-fiber products, not terminal word fibers,
+control distortion when distinctions are merged and later disclosed.
+
 Run:
 
 ~~~powershell

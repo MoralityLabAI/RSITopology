@@ -25,3 +25,8 @@ belief ASMP-4 systems.
 
 The complete 27-package chain passes all 304 tests in 281.10 seconds with
 Python bytecode and pytest caching disabled.
+
+The v0.27 successor proves a sharp `epsilon` region bound when only matched
+edge costs are approximate and safety remains exact. It also refutes
+metric-only zero-error safety transfer and supplies a strict Lipschitz-margin
+repair.

@@ -129,3 +129,21 @@ sets. Its aperiodic Thue-Morse witness also shows that a finite exact quotient
 cannot be made a necessary condition for existence of an asymptotic rate. The
 remaining global gap is quotient construction or a more general replacement,
 not another bounded registration census.
+
+V0.27 proves robust region transfer for an epsilon-cost alternating relation
+with exact safety and gives a strict Lipschitz-margin route from observation
+closeness to that exact Boolean clause. At every smaller metric scale, its
+boundary witness still flips the region from nonempty to empty when the margin
+is omitted. This strengthens rather than relaxes the stop on unguarded global
+approximation claims and repeated bounded fixtures.
+
+V0.28 lifts this package's clone obstruction into a general quotient theorem.
+The rate correction is the limsup growth of the maximum port-history fiber;
+the original `m`-clone family attains `log2 m`. A finite quotient with one
+state class can still have exponential history fibers, so quotient-first work
+must register this profile for whole-language costs.
+
+V0.29 separates the prefix-branching analogue: terminal history fibers may be
+one while local successor fibers have positive path entropy. Clone families
+remain sharp, but a causal disclosure block proves that the correct invariant
+depends on the registered tree cost rather than on one universal quotient size.

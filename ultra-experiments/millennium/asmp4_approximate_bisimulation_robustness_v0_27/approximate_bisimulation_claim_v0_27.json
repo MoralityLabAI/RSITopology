@@ -1,0 +1,42 @@
+{
+  "schema_version": "asmp4_approximate_bisimulation_robustness_v0_27",
+  "theorem": {
+    "name": "epsilon-cost alternating-bisimulation transfer",
+    "finite_horizon": "b in R_left(T) implies b+T epsilon 1 in R_right(T), and conversely",
+    "asymptotic": "d_H,infinity(R_left,R_right) <= epsilon",
+    "safety_condition": "state and transition safety are exact on the relation",
+    "strategy_memory": "unrestricted causal representative histories in both directions"
+  },
+  "sharpness": {
+    "cost": "one-state loops attain normalized gap epsilon at every horizon",
+    "safety": "for every delta>0, delta-close observations can have nonempty versus empty zero-error regions",
+    "margin": "strict L delta safety margin suffices; equality is insufficient"
+  },
+  "central_harness": {
+    "decorated_rows": 256,
+    "maximum_raw_states": 64,
+    "maximum_horizon": 8,
+    "adversarial_vector_horizons": 8,
+    "cost_sharpness_horizons": 32,
+    "safety_flip_scales": 128
+  },
+  "independent_harness": {
+    "weighted_comparisons": 2400,
+    "maximum_raw_states": 96,
+    "maximum_horizon": 10,
+    "weights": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "safety_flip_scales": 256
+  },
+  "mutations_rejected": 7,
+  "predecessor_inventory": {
+    "packages": 27,
+    "tests": 304
+  },
+  "disposition": "approximate cost transfer resolved under exact safety; metric-only zero-error transfer refuted"
+}

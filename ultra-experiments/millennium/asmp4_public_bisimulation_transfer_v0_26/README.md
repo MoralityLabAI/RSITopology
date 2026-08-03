@@ -26,3 +26,8 @@ python -m pytest -q test_public_bisimulation_transfer.py
 
 The exact registration and frozen claim are `public_bisimulation_contract_v0_26.json`
 and `public_bisimulation_claim_v0_26.json`.
+
+V0.27 quantifies the cost side of this bridge: exact safety and successor
+matching with per-edge vector cost error at most `epsilon` imply asymptotic
+region slack at most `epsilon`. It separately identifies the strict safety
+margin needed to obtain the exact Boolean premise from metric closeness.
