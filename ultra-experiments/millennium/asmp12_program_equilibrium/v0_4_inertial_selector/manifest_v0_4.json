@@ -1,0 +1,293 @@
+{
+  "analysis": {
+    "multiple_comparisons": "none; every registered trajectory, graph, control, and mutation gate is conjunctive",
+    "ood_conditions": [
+      "max-attached-cost best-response tie-break",
+      "simultaneous rather than alternating updates"
+    ],
+    "primary_outcomes": [
+      "initialized_terminal_cooperation",
+      "selected_pure_equilibrium",
+      "complete_augmented_state_attractor"
+    ],
+    "stopping_rule": "validate source and predecessor bindings before scientific work; process 12 graph cells and 24 initialized trajectories in declared order; stop before the next stage on an exactness, 15-second wall, 64-MiB traced-Python, or one-MiB artifact breach",
+    "uncertainty": "none; the two fair schedules form an exact finite distribution with rational weights"
+  },
+  "artifacts": {
+    "raw_rows": "../artifacts_v0_4_inertial_selector/result_v0_4.json#primary_rows",
+    "replay_command": "python -I run.py --source-commit <40-hex-source-commit>",
+    "seed_manifest": "manifest_v0_4.json#seed_plan",
+    "summary": "../artifacts_v0_4_inertial_selector/result_v0_4.json#conclusion_layers",
+    "verification": "../artifacts_v0_4_inertial_selector/verification_v0_4.json"
+  },
+  "benefit": "robustness",
+  "budget": {
+    "execution": "strictly sequential; standard library only; no RNG or worker subprocesses",
+    "max_artifact_bytes": 1048576,
+    "max_cells_per_world": 18,
+    "max_episodes": 24,
+    "max_graph_cells": 12,
+    "max_primary_trajectories": 24,
+    "max_scheduled_updates_per_trajectory": 19,
+    "max_steps_per_episode": 19,
+    "max_traced_python_mib": 64,
+    "max_wall_seconds": 15
+  },
+  "claim_boundary": [
+    "registered three-program total source-table language only",
+    "canonical DDD/DCC/DDD catalog with costs 1,2,3 and initial profile (p1,p1)",
+    "two exact payoff families with R=3 and temptation in {299/100,3,301/100}",
+    "deterministic alternating inertial best response with minimum attached-cost tie-breaking",
+    "fair scheduler means the exact half-row-first half-column-first finite distribution",
+    "complete augmented-state graphs and basins only for the 12 registered canonical cells",
+    "no basin-general result outside those finite graphs, mixed or stochastic equilibrium selection, unrestricted programs, proof agents, language models, real cooperation, deployment, or ASMP-12 resolution"
+  ],
+  "claim_scope": "model_only",
+  "conclusion_layer_names": [
+    "metric_robustness",
+    "task_result",
+    "measurement_reliability",
+    "claim_support",
+    "operational_decision"
+  ],
+  "controls": [
+    {
+      "name": "repaired_duplicate_extensional",
+      "type": "mechanism_knockout"
+    },
+    {
+      "name": "source_blind_early_vulnerability",
+      "type": "null"
+    },
+    {
+      "name": "additive_cost_padding",
+      "type": "no_op"
+    },
+    {
+      "name": "six_semantic_relabelings",
+      "type": "no_op"
+    },
+    {
+      "name": "inertia_and_cycle_fixtures",
+      "type": "baseline"
+    },
+    {
+      "name": "max_cost_and_simultaneous_scope_breakers",
+      "type": "simple_limit"
+    }
+  ],
+  "experimental_unit": "one deterministic initialized trajectory for one family, temptation, budget, and first-mover schedule; graph states and robustness replays are repeated exact checks, not independent units",
+  "hypotheses": [
+    {
+      "falsifier": "any budget-two initialized trajectory is noncooperative, any budget-three T<=R trajectory leaves (p1,p1), or any budget-three T>R trajectory remains cooperative",
+      "id": "H1_initialized_threshold",
+      "prediction": "the 24 canonical trajectories contain exactly 20 cooperative and 4 noncooperative selections"
+    },
+    {
+      "falsifier": "a terminal initialized profile is absent from the pure-equilibrium set or its trace does not reach the reported graph attractor",
+      "id": "H2_dynamic_binding",
+      "prediction": "every selected profile is an available pure equilibrium and every initialized trace is bound to its complete augmented-state attractor"
+    },
+    {
+      "falsifier": "the repaired catalog loses initialized cooperation or the source-blind control changes selection between normalized budgets two and three",
+      "id": "H3_mechanism_controls",
+      "prediction": "repair removes the budget effect while source blindness exhibits identical budget-two and budget-three outcomes, including early vulnerability above R"
+    },
+    {
+      "falsifier": "cost padding or any simultaneous semantic relabeling changes a mapped trace, graph relation, or selected distribution",
+      "id": "H4_encoding_robustness",
+      "prediction": "attached-cost selection is invariant to +2 cost padding and covariant under all six program/source relabelings"
+    }
+  ],
+  "interventions": [
+    {
+      "changes": {
+        "budget": "2_to_3"
+      },
+      "name": "admit_duplicate_exploiter"
+    },
+    {
+      "changes": {
+        "catalog": "DDD_DCD_DDD"
+      },
+      "name": "duplicate_extensional_repair"
+    },
+    {
+      "changes": {
+        "catalog": "DDD_CCC_DDD"
+      },
+      "name": "source_blind_null"
+    }
+  ],
+  "metrics": {
+    "denominators": {
+      "graph_cell": "one family, temptation, and budget",
+      "primary_trajectory": "one graph cell and one first-mover schedule",
+      "robustness_replay": "one semantic trajectory under one frozen encoding transformation"
+    },
+    "evidence": [
+      "terminal_cooperation",
+      "terminal_profile_is_pure_equilibrium",
+      "attractor_and_basin_certificate"
+    ],
+    "exposure": {
+      "activation": "p2 is a unique profitable best response to p1 exactly when budget=3 and T>R",
+      "balance_tolerance": 0,
+      "eligibility": "the inherited initial profile is (p1,p1) and the relevant programs are admitted",
+      "minimum_per_condition": 1,
+      "state_change": "the first scheduled mover leaves p1 for p2 in each live canonical condition"
+    },
+    "hazard": [
+      "dynamic_cycle",
+      "non_equilibrium_terminal",
+      "raw_label_tie_break",
+      "missing_or_duplicate_cell",
+      "binding_failure",
+      "resource_stop"
+    ],
+    "selection": []
+  },
+  "model": {
+    "code_hash": "the required --source-commit must contain byte-identical copies of exactly the eight source-freeze files",
+    "config_paths": [
+      "manifest_v0_4.json",
+      "PROTOCOL_v0_4.md"
+    ],
+    "entrypoint": "run.py",
+    "rng": "none; fair scheduling is an exact two-atom distribution, not a random draw",
+    "update_order": "row-first or column-first, then strict alternation; incumbent stays when already an exact best response, otherwise the unique minimum attached-cost best response is chosen"
+  },
+  "predecessor_binding": {
+    "evidence_commit": "db7939d3bf0d0eefa829e21ed29399b94b3256c4",
+    "files": [
+      {
+        "path": "ultra-experiments/millennium/asmp12_program_equilibrium/v0_3_constructible_survival/protocol_v0_3_1.json",
+        "role": "registration",
+        "sha256": "2ece67ceedd13163c4b4891eb306568d99fe8599838edeac19d74ab278c510f7"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp12_program_equilibrium/v0_3_constructible_survival/RESULT_v0_3_1.md",
+        "role": "result_note",
+        "sha256": "06f2a56addaa5126b3e64b2018431d72f9bdd027726238579a79d9e1be54a950"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp12_program_equilibrium/v0_3_constructible_survival/artifacts_v0_3_1/result.json",
+        "role": "result",
+        "sha256": "f82970f0969b700960db13c12147fa3173f5ad5010833974dcbb86c3fe889cc0"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp12_program_equilibrium/v0_3_constructible_survival/artifacts_v0_3_1/independent_verification.json",
+        "role": "verification",
+        "sha256": "d66182331b2885cc12d99ffaa18ccdd1ca045a412b609f7da46f19269d4ed5ef"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp12_program_equilibrium/v0_3_constructible_survival/artifacts_v0_3_1/synthesis_receipt.json",
+        "role": "receipt",
+        "sha256": "2c2415d9a80ffc538152281d458b4b3b07bad8a48aa76df5357a885d3e535f6f"
+      }
+    ],
+    "source_checkpoint": "fc7310a5061ad0843d01c8fbea7f67c5d5657810"
+  },
+  "protocol_id": "ASMP12-INERTIAL-SELECTOR-v0.4",
+  "question": "Under one fully specified finite selection dynamic, does admitting the canonical duplicate exploiter change which pure equilibrium is reached from the inherited cooperative profile?",
+  "registration_status": "source_candidate_not_executed_requires_commit_before_run",
+  "registry": {
+    "budgets": [
+      2,
+      3
+    ],
+    "canonical_catalog": [
+      "DDD",
+      "DCC",
+      "DDD"
+    ],
+    "catalog_costs": [
+      1,
+      2,
+      3
+    ],
+    "families": {
+      "chicken_threshold": {
+        "P": "0/1",
+        "R": "3/1",
+        "S": "1/1"
+      },
+      "pd_threshold": {
+        "P": "1/1",
+        "R": "3/1",
+        "S": "0/1"
+      }
+    },
+    "family_order": [
+      "chicken_threshold",
+      "pd_threshold"
+    ],
+    "fair_schedule_weights": {
+      "column_first": "1/2",
+      "row_first": "1/2"
+    },
+    "graph_cell_count": 12,
+    "graph_loop_order": [
+      "family",
+      "temptation",
+      "budget"
+    ],
+    "graph_state_count": 156,
+    "initial_profile": [
+      1,
+      1
+    ],
+    "primary_trajectory_count": 24,
+    "primary_loop_order": [
+      "family",
+      "temptation",
+      "budget",
+      "schedule"
+    ],
+    "schedules": [
+      "row_first",
+      "column_first"
+    ],
+    "temptations": [
+      "299/100",
+      "3/1",
+      "301/100"
+    ]
+  },
+  "schema": "alife.experiment.v1",
+  "schema_version": "asmp12_inertial_selector_manifest_v0_4",
+  "seed_plan": {
+    "confirmatory": [
+      "C0-exact-24-trajectory-registry"
+    ],
+    "discovery": [
+      "D0-source-only-fixtures-no-registered-grid"
+    ],
+    "holdout": [
+      "H0-import-independent-complete-graph-reconstruction"
+    ],
+    "pairing": "deterministic symbolic cells; no RNG or stochastic replicate"
+  },
+  "source_freeze": {
+    "artifact_execution_before_commit": "forbidden",
+    "files": [
+      "PROTOCOL_v0_4.md",
+      "README.md",
+      "SOURCE_FREEZE.md",
+      "inertial_selector.py",
+      "manifest_v0_4.json",
+      "run.py",
+      "test_inertial_selector.py",
+      "verify_independent.py"
+    ],
+    "ignored_live_cache_policy": "none; caches and every ninth entry are unexpected",
+    "import_safe_launch": "run.py and verify_independent.py require Python isolated safe-path mode (-I) before any non-builtin import",
+    "live_directory_policy": "exactly the eight frozen regular non-reparse files",
+    "required": true
+  },
+  "write_once_artifacts": {
+    "primary": "../artifacts_v0_4_inertial_selector/result_v0_4.json",
+    "refuse_existing_paths": true,
+    "verification": "../artifacts_v0_4_inertial_selector/verification_v0_4.json"
+  }
+}
