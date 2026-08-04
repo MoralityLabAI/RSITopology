@@ -36,16 +36,17 @@ criterion.  This finding must not be paraphrased as "all ASMPs are resolved."
 Every top-level problem remains subject to its own much stronger resolution
 rule.
 
-## Genuinely untouched successor obligations
+## Successor-obligation queue and dispositions
 
-The next useful work is on successor obligations for which the repository has
-not yet run an experiment or supplied a proof/negative proof.
+At audit time, the next useful work was on successor obligations for which the
+repository had not yet run an experiment or supplied a proof/negative proof.
+Completed rows remain in the queue for chronology but cease to be untouched.
 
 | Priority | Area and untouched obligation | Evidence of the gap | Disposition |
 |---:|---|---|---|
-| 1 | ASMP-6 multiletter/tensorization and correlated block encoders | The v0.2 protocol is explicitly one-shot and excludes block codes/history; prior design prose has no executed experiment or theorem result. | A source freeze is planned in `v0_3_multiletter_tensorization`; no outcome may be inspected before source commit. |
-| 2 | ASMP-10 disjoint-seed held-out transition predictor | `PREDICTOR_PROTOCOL_DRAFT_v0_5_2.md` is explicitly unregistered and unauthorized. | Freeze power, seeds, margins, and stop rules before execution. |
-| 3 | ASMP-7 adaptive history-dependent suppression | The v0.3 protocol covers fixed selective suppression and places adaptive masks outside scope. | Register a causal adaptive-mask class and a matched fixed-mask control. |
+| 1 | ASMP-6 multiletter/tensorization and correlated block encoders | The v0.2 protocol is explicitly one-shot and excludes block codes/history; prior design prose had no executed experiment or theorem result. | **Completed attempt.** The source-frozen v0.3 theorem/grid found four finite odd-alphabet block advantages and passed independent replay; see [`RESULT_v0_3.md`](asmp6_semantic_collusion_frontier/artifacts_v0_3_multiletter_tensorization/RESULT_v0_3.md). This does not resolve ASMP-6. |
+| 2 | ASMP-10 disjoint-seed held-out transition predictor | `PREDICTOR_PROTOCOL_DRAFT_v0_5_2.md` is explicitly unregistered and unauthorized. | **Registration no-go pending power.** Cross-review showed that eight confirmation clusters cannot credibly power the proposed conjunction. Freeze an executable target-free joint-power simulation, choose cluster count from it, and seal construction-only preprocessing before any confirmation run. |
+| 3 | ASMP-7 adaptive history-dependent suppression | The v0.3 protocol covers fixed selective suppression and places adaptive masks outside scope. | Register the exact nonanticipating filtration, prove the full-history-to-count-state quotient and monotone Bellman endpoint theorem, retain the inherited 48 parameter triples, and use a small branch-complete oracle plus anticipatory and nonmonotone scope breakers. |
 | 4 | ASMP-11 real-model/obfuscation access ladder | Existing evidence is transparent Boolean parity, not learned conditional defection. | Freeze estimator, replicate unit, confidence rule, and access interventions before any model run. |
 | 5 | ASMP-12 mixed strategies or equilibrium-selection dynamics | The current correspondence is finite and pure/constructible only. | Register one selection dynamic or finite mixed-equilibrium class with encoding robustness. |
 | 6 | ASMP-5 dynamic trusted-anchor replacement, learned-checker error, or infinite distinct-state progress | V0.3 keeps the trusted root fixed, although it already tests successor-checker replacement and a static root-permission mutation; arbitrary time comes from a repeated two-cycle. | Require a dynamic root/anchor safety theorem, stochastic checker-learning error, or infinitely many distinct safe states. |
