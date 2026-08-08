@@ -25,6 +25,7 @@ RELEASE_FILES = (
     "../asmp3_resolution_boundary_v0_3/artifacts/expert_review_status_v0_6.json",
     ".gitignore",
     "README.md",
+    "ASMP3_RESEARCH_REPORT_v2_19.md",
     "REASSESSMENT_AND_CORRECTION_v2_19.md",
     "STRICT_FIX_DISPOSITION_v2_19.md",
     "LANE_STOP_AND_RESUME_v2_19.md",

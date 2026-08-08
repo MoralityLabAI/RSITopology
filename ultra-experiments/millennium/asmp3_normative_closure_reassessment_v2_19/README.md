@@ -14,7 +14,8 @@ full ASMP-3 classification = open
 ASMP-3 impossibility = not proved
 ```
 
-Read `REASSESSMENT_AND_CORRECTION_v2_19.md` for the argument,
+Read `ASMP3_RESEARCH_REPORT_v2_19.md` for the consolidated research report,
+`REASSESSMENT_AND_CORRECTION_v2_19.md` for the correction argument,
 `STRICT_FIX_DISPOSITION_v2_19.md` for the safe status, and
 `LANE_STOP_AND_RESUME_v2_19.md` for the bounded stopping decision.
 
