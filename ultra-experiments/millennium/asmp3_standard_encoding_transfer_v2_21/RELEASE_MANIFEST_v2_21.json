@@ -1,0 +1,109 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-STANDARD-ENCODING-TRANSFER-v2.21",
+  "file_count": 25,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/FINITE_TV_FRONTIER_THEOREM_v0_8.md": {
+      "bytes": 7277,
+      "sha256": "0811DAB26F29F0B2BCD4AB19A2A3EF3908758BA915A8D895F02AF841729796A5"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/artifacts/finite_tv_frontier_v0_8.json": {
+      "bytes": 10257,
+      "sha256": "BFB6CF9ADC9500B22B774628C632EE0575CE13C9085BF1BBFD931ABE3C14DF08"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_typed_successor_v0_2/typed_successor_v0_2.json": {
+      "bytes": 2482,
+      "sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837"
+    },
+    "../asmp3_uniform_membership_undecidability_v2_20/RELEASE_MANIFEST_v2_20.json": {
+      "bytes": 5119,
+      "sha256": "427F30EF272596D3B6697BED410B1F2F7D99468C0C4B2FB424FBAB41E62D637E"
+    },
+    "../asmp3_uniform_membership_undecidability_v2_20/UNIFORM_MEMBERSHIP_UNDECIDABILITY_THEOREM_v2_20.md": {
+      "bytes": 7898,
+      "sha256": "C8E5B671248C272D37E192CFFD8A3F2CD3BA28C4C159791503C28067773A1685"
+    },
+    "../asmp3_uniform_membership_undecidability_v2_20/artifacts/uniform_membership_undecidability_v2_20.json": {
+      "bytes": 156615,
+      "sha256": "D7D429C4C0E4143DA8703C738479009C6BC6AD1FB984D0E105E88EEABD881DE3"
+    },
+    "../asmp3_uniform_membership_undecidability_v2_20/artifacts/uniform_membership_undecidability_verification_v2_20.json": {
+      "bytes": 1080,
+      "sha256": "E93EBEDBDF65857842B5566CEE4DA64736C1371412F447EE34BFFE2A3BF70F7D"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "ASMP3_RESEARCH_REPORT_v2_21.md": {
+      "bytes": 6544,
+      "sha256": "85CB507C111891C12A0D7D6D18857F7D3ED06F85A23714830334FE709C189D85"
+    },
+    "CANONICAL_ADMISSIBILITY_AUDIT_v2_21.md": {
+      "bytes": 2977,
+      "sha256": "C43AD62DA4CEE8056FB4B5B8A56F8CAA575BD891CB31D9DB844B268642406770"
+    },
+    "COMPLETION_AUDIT_v2_21.md": {
+      "bytes": 877,
+      "sha256": "0F4D545FF2970277E2E0D399B6A5EFDA5D73343160B642727ABB65108FE14DFD"
+    },
+    "PARENT_RESOLUTION_DISPOSITION_v2_21.md": {
+      "bytes": 2525,
+      "sha256": "5F2622DF7BB1714084CFB230917AF077B4B62959088838CD627B648BE33F6D1B"
+    },
+    "PRIOR_ART_BOUNDARY_v2_21.md": {
+      "bytes": 997,
+      "sha256": "018FEC7F3D788305388E20D35743B7A353A7B89A648C3BD835BAF5169818E47B"
+    },
+    "README.md": {
+      "bytes": 807,
+      "sha256": "5E5BCDB0EB3FBA82A6FF36D9B59914716A82B019C30E2970DB98B4252F54D008"
+    },
+    "STANDARD_ENCODING_AND_QUANTIFIER_TRANSFER_THEOREM_v2_21.md": {
+      "bytes": 7417,
+      "sha256": "71F25E2A5AB93861F64247FBB5CC5202CF814F8F7ECCFB04B5ADD0BE3059AFB0"
+    },
+    "artifacts/standard_encoding_transfer_v2_21.json": {
+      "bytes": 1456081,
+      "sha256": "92C2ECB6BF40DDE15FA6C88409555D45F4BF1266009E59C98D1D8E88F8424C79"
+    },
+    "artifacts/standard_encoding_transfer_verification_v2_21.json": {
+      "bytes": 1175,
+      "sha256": "3AEBD64E5154AC5861CDF368F682D656F50E52846A5CF004D3307FBECECA24B1"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3118,
+      "sha256": "12949D0FC08A3834146E621C723BE08FC8CE4985D6B076C7C8C589905FD61C79"
+    },
+    "run_standard_encoding_transfer.py": {
+      "bytes": 455,
+      "sha256": "0945E06E8F57E060F5C43D9176FC6F2B519C085844F9C9CFAD1609477D790E04"
+    },
+    "standard_encoding_transfer.py": {
+      "bytes": 25721,
+      "sha256": "AA27B272F605D8108DCF3619A437F8D01D647A4732427B35906E8945AC933BFB"
+    },
+    "test_standard_encoding_transfer.py": {
+      "bytes": 4426,
+      "sha256": "047E792AD9EE9B76045EB3ED73FC3F32F62E9553BD6A15513D2E39BBB868F043"
+    },
+    "verify_standard_encoding_transfer.py": {
+      "bytes": 12906,
+      "sha256": "B119941497ED5806DB5419F16CEC3510BDB0301C539D8E80237D6C9AE38947C4"
+    }
+  },
+  "release_status": "full_set_standard_encoding_and_FIX_ADM_transfer_proved_external_acceptance_open",
+  "schema_version": "asmp3_standard_encoding_transfer_release_v2_21"
+}
