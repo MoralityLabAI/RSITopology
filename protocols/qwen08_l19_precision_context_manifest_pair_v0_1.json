@@ -1,0 +1,19 @@
+{
+  "common_prompt_payload_sha256": "87d2f05eb24e7074943b6625c907bf08362db5ffa5ac24f6a313f7d75806c14e",
+  "identical_except_runtime_precision": true,
+  "precision_views": {
+    "4bit": {
+      "prompt_count": 2304,
+      "prompt_payload_sha256": "87d2f05eb24e7074943b6625c907bf08362db5ffa5ac24f6a313f7d75806c14e",
+      "runtime_precision": "4bit",
+      "tokenization_contract": "same tokenizer source, order, final non-padding token rule"
+    },
+    "float16": {
+      "prompt_count": 2304,
+      "prompt_payload_sha256": "87d2f05eb24e7074943b6625c907bf08362db5ffa5ac24f6a313f7d75806c14e",
+      "runtime_precision": "float16",
+      "tokenization_contract": "same tokenizer source, order, final non-padding token rule"
+    }
+  },
+  "schema_version": "qwen08_l19_precision_context_manifest_pair_v0_1"
+}

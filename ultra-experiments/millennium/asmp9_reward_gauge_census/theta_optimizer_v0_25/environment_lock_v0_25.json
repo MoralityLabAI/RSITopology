@@ -1,0 +1,7 @@
+{
+  "gpu_allowed": false,
+  "networkx": "3.5",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "pytest": "8.3.3",
+  "python": "3.11.4"
+}

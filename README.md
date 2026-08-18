@@ -45,6 +45,29 @@ defensive JSONL loading, measured loop-closure transport animation, receipt
 filters, and copyable provenance details. See
 [`godel-globe/README.md`](godel-globe/README.md) for usage and validation.
 
+The v0.1 real-model protocol now uses the current harness rather than rebuilding
+it: family-resolved v0.3 between-class objects, mandatory control calibration,
+the lineage-first `beta_1` gate, precision × context loops, existing patch
+sectioning, and the existing certificate API. Its deterministic 1,152-prompt
+manifest and target-blind capture/replay commands are documented in
+[`docs/GODEL_GLOBES_V0_1.md`](docs/GODEL_GLOBES_V0_1.md). The preserved Silico
+float32/bfloat16 result is treated as calibration only.
+
+The fresh Qwen0.8B L19 precision/context replication is frozen separately in
+[`protocols/qwen08_l19_precision_context_v0_1.json`](protocols/qwen08_l19_precision_context_v0_1.json).
+It compares four-bit NF4/float16-compute against unquantized float16 weights on
+identical fresh prompt bytes, recomputes the complete rank-one matched-null
+margin inside a paired nested bootstrap, and treats rank-one determinant signs
+as diagnostics only. See
+[`reports/qwen08_l19_precision_context_protocol.md`](reports/qwen08_l19_precision_context_protocol.md).
+
+The task-aligned controller-mesh successor is registered separately in
+[`protocols/qwen08_controller_task_capture_v0_1.json`](protocols/qwen08_controller_task_capture_v0_1.json).
+It binds 576 outcome-blind gym calibration prompts and captures final-token layer-19/layer-23 stalks without
+generation, logits, gradients, or weight mutation. The capture remains `registered_not_run` and requires a clean
+remote commit plus explicit confirmation of the frozen Job Object caps; see
+[`reports/qwen08_controller_task_capture_protocol.md`](reports/qwen08_controller_task_capture_protocol.md).
+
 ## Holonomy-bounded edit sectioning
 
 `section_edits()` converts context-by-checkpoint identity receipts into maximal
@@ -89,17 +112,58 @@ The June Research_Engine edit receipts lack the actual edit matrices and
 source provenance required to reconstruct the geometry; they may inform power
 planning but cannot validate the edit gate retrospectively.
 
-Current engineering protocol: `protocols/spectral_bundle_discovery_v0_2_2.json`.
-The v0.1 protocol and its absolute-uplift failure remain preserved. Large or
+Preserved parent engineering protocol:
+`protocols/spectral_bundle_discovery_v0_2_2.json`; the current additive
+amendment is `protocols/spectral_bundle_discovery_v0_3.json`. The v0.1 protocol
+and its absolute-uplift failure remain preserved. Large or
 model-bearing runs are currently blocked by
 `reports/resource_enforcement_audit.md`; only unit-scale controls are allowed
 until CPU and I/O cgroups are delegated or an approved container path exists.
+
+## Confinement-width CPU validation
+
+Six additive CPU experiments now test the classical data-rate/invariance-
+entropy mechanism used by the Confinement Width manuscript: split read/write
+rate limits, spectral scaling with `h2(A_u)`, finite-horizon margin, evaluator-
+transversal modes, sufficiency-audit scaling, and spherical 3-spin sampler
+robustness. Universal volume obstructions are never pooled with constructive
+controller results or Monte Carlo evidence. See
+[`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md) and
+[`docs/CONFINEMENT_VALIDATION_SUITE.md`](docs/CONFINEMENT_VALIDATION_SUITE.md).
+The bounded 2026-07-16 outcomes, including the stopped spin-glass pilot, are in
+[`reports/CONFINEMENT_VALIDATION_PILOT.md`](reports/CONFINEMENT_VALIDATION_PILOT.md).
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/run_confinement_smoke.ps1
+```
+
+The full configurations are specifications only; they are not run by tests or
+smoke scripts.
 v0.2.1 leaves every v0.2 primary threshold unchanged, adds environment-stamped
 receipts, sparse geometry noise, occupancy-margin warnings, and a descriptive
 KL-normalized information coefficient. External Fable replays remain
 diagnostic-only.
 v0.2.2 likewise changes no gate; it binds every geometry summary to its band
 and makes selection failover explicit.
+
+Protocol v0.3 is an additive amendment and leaves v0.2.2 unchanged. It changes
+the primary lineage object to the frozen top-r eigenspace of cross-fitted
+between-class scatter over family-defining class means. The prior
+covariance/Gram consensus remains executable but is `reported_ungated`; no
+v0.3 gate may consume it. Certification is capped at
+`engineering_evidence` unless a matched random-label control clears its
+permutation null by a strict margin above `0.02`.
+
+The amendment follows the EM-pair calibration: 216 same-site state-cross
+edges transported cleanly (median worst-direction retention `0.95`), while
+396 adjacent-layer edges had median retention approximately `0.003`; none of
+99 attempted loops survived the `0.5` persistence floor, and all 108 anchors
+remained `engineering_evidence`. v0.3 therefore filters the transport graph at
+the frozen lineage floor before considering holonomy. It reports
+`holonomy_unavailable` when
+`beta_1(G_tau) = |E_tau| - |V| + c(G_tau)` is zero; this cycle-rank condition
+replaces any arbitrary “enough loops” check. See
+[`protocols/spectral_bundle_discovery_v0_3.json`](protocols/spectral_bundle_discovery_v0_3.json).
 
 The sparse fixture's `geometry_noise=0` point is a legacy-RNG compatibility
 baseline. Positive-noise sweeps consume an additional skew draw and must use

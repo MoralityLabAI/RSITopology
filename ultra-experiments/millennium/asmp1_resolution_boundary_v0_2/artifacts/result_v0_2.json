@@ -1,0 +1,437 @@
+{
+  "all_exact_gates_pass": true,
+  "computable_real_undecidability_fixture": {
+    "analytic_family": "Y=(1+c_e)X+A on [0,1]^2",
+    "canonical_rational_taylor_binding": {
+      "abstraction": "Q(Y)=Y(1/2,0)",
+      "active_edge_count": 2,
+      "analytic_radius": "infinity",
+      "covering_number_upper_bound": 2,
+      "environment": "(X,A)=(0,0)",
+      "gauge": "identity",
+      "intervention": "do(A=1) at X=0",
+      "intervention_strength_margin": 1,
+      "local_conditioning_margin": 1,
+      "maximum_indegree": 2,
+      "mechanism_class_size_upper_bound": 2,
+      "noise_model": "deterministic",
+      "norm_bound": 2,
+      "state_dimension": 1,
+      "typed_node_count": 3
+    },
+    "cauchy_name": "to precision 2^{-n}, simulate e for n steps; return 2^{-t} if halted by then, otherwise 0",
+    "coefficient_definition": "c_e=0 if machine e never halts; c_e=2^{-t} if it first halts at t",
+    "equivalent_rational_taylor_encoding": "h_e(X)=sum_n a_(e,n)X^n where a_(e,n)=1 exactly if e first halts at n; on X=1/2, h_e(1/2)=c_e",
+    "fixtures": [
+      {
+        "do_A_equals_1_at_x0": "1",
+        "halts_at": 1,
+        "identifiable_against_base_model": false,
+        "maximum_error_times_2_to_precision": "0",
+        "minimum_local_derivative": "1",
+        "nonzero_rational_taylor_coefficient_count": 1,
+        "observation_at_x0": "0",
+        "rational_taylor_target_at_x_half": "1/2",
+        "registered_intervention_effect": "1",
+        "target_at_x1": "3/2",
+        "true_coefficient": "1/2"
+      },
+      {
+        "do_A_equals_1_at_x0": "1",
+        "halts_at": 2,
+        "identifiable_against_base_model": false,
+        "maximum_error_times_2_to_precision": "1/2",
+        "minimum_local_derivative": "1",
+        "nonzero_rational_taylor_coefficient_count": 1,
+        "observation_at_x0": "0",
+        "rational_taylor_target_at_x_half": "1/4",
+        "registered_intervention_effect": "1",
+        "target_at_x1": "5/4",
+        "true_coefficient": "1/4"
+      },
+      {
+        "do_A_equals_1_at_x0": "1",
+        "halts_at": 5,
+        "identifiable_against_base_model": false,
+        "maximum_error_times_2_to_precision": "1/2",
+        "minimum_local_derivative": "1",
+        "nonzero_rational_taylor_coefficient_count": 1,
+        "observation_at_x0": "0",
+        "rational_taylor_target_at_x_half": "1/32",
+        "registered_intervention_effect": "1",
+        "target_at_x1": "33/32",
+        "true_coefficient": "1/32"
+      },
+      {
+        "do_A_equals_1_at_x0": "1",
+        "halts_at": 17,
+        "identifiable_against_base_model": false,
+        "maximum_error_times_2_to_precision": "1/2",
+        "minimum_local_derivative": "1",
+        "nonzero_rational_taylor_coefficient_count": 1,
+        "observation_at_x0": "0",
+        "rational_taylor_target_at_x_half": "1/131072",
+        "registered_intervention_effect": "1",
+        "target_at_x1": "131073/131072",
+        "true_coefficient": "1/131072"
+      },
+      {
+        "do_A_equals_1_at_x0": "1",
+        "halts_at": 64,
+        "identifiable_against_base_model": false,
+        "maximum_error_times_2_to_precision": "1/2",
+        "minimum_local_derivative": "1",
+        "nonzero_rational_taylor_coefficient_count": 1,
+        "observation_at_x0": "0",
+        "rational_taylor_target_at_x_half": "1/18446744073709551616",
+        "registered_intervention_effect": "1",
+        "target_at_x1": "18446744073709551617/18446744073709551616",
+        "true_coefficient": "1/18446744073709551616"
+      },
+      {
+        "do_A_equals_1_at_x0": "1",
+        "halts_at": null,
+        "identifiable_against_base_model": true,
+        "maximum_error_times_2_to_precision": "0",
+        "minimum_local_derivative": "1",
+        "nonzero_rational_taylor_coefficient_count": 0,
+        "observation_at_x0": "0",
+        "rational_taylor_target_at_x_half": "0",
+        "registered_intervention_effect": "1",
+        "target_at_x1": "1",
+        "true_coefficient": "0"
+      }
+    ],
+    "gates": {
+      "all_cauchy_names_have_uniform_2_to_minus_n_modulus": true,
+      "late_halting_creates_arbitrarily_small_nonzero_gap": true,
+      "positive_intervention_strength_margin_is_uniform": true,
+      "positive_local_conditioning_margin_is_uniform": true,
+      "rational_taylor_encoding_has_at_most_one_nonzero_coefficient": true,
+      "rational_taylor_encoding_matches_cauchy_real_fixture": true,
+      "registered_observations_are_identical": true,
+      "target_differs_exactly_on_halting_fixtures": true
+    },
+    "observation": "Y(0,0)=0 and registered do(A=1) gives Y(0,1)=1",
+    "target": "Q(f_e)=Y(1,0)=1+c_e"
+  },
+  "finite_sample_fixture": {
+    "cells": [
+      {
+        "pairwise_lower_repeats_per_row": 322,
+        "quotient_dimension": 1,
+        "separation_modulus": 0.25,
+        "upper_repeats_per_row": 19020
+      },
+      {
+        "pairwise_lower_repeats_per_row": 81,
+        "quotient_dimension": 1,
+        "separation_modulus": 0.5,
+        "upper_repeats_per_row": 4755
+      },
+      {
+        "pairwise_lower_repeats_per_row": 21,
+        "quotient_dimension": 1,
+        "separation_modulus": 1.0,
+        "upper_repeats_per_row": 1189
+      },
+      {
+        "pairwise_lower_repeats_per_row": 6,
+        "quotient_dimension": 1,
+        "separation_modulus": 2.0,
+        "upper_repeats_per_row": 298
+      },
+      {
+        "pairwise_lower_repeats_per_row": 322,
+        "quotient_dimension": 2,
+        "separation_modulus": 0.25,
+        "upper_repeats_per_row": 23864
+      },
+      {
+        "pairwise_lower_repeats_per_row": 81,
+        "quotient_dimension": 2,
+        "separation_modulus": 0.5,
+        "upper_repeats_per_row": 5966
+      },
+      {
+        "pairwise_lower_repeats_per_row": 21,
+        "quotient_dimension": 2,
+        "separation_modulus": 1.0,
+        "upper_repeats_per_row": 1492
+      },
+      {
+        "pairwise_lower_repeats_per_row": 6,
+        "quotient_dimension": 2,
+        "separation_modulus": 2.0,
+        "upper_repeats_per_row": 373
+      },
+      {
+        "pairwise_lower_repeats_per_row": 322,
+        "quotient_dimension": 4,
+        "separation_modulus": 0.25,
+        "upper_repeats_per_row": 31652
+      },
+      {
+        "pairwise_lower_repeats_per_row": 81,
+        "quotient_dimension": 4,
+        "separation_modulus": 0.5,
+        "upper_repeats_per_row": 7913
+      },
+      {
+        "pairwise_lower_repeats_per_row": 21,
+        "quotient_dimension": 4,
+        "separation_modulus": 1.0,
+        "upper_repeats_per_row": 1979
+      },
+      {
+        "pairwise_lower_repeats_per_row": 6,
+        "quotient_dimension": 4,
+        "separation_modulus": 2.0,
+        "upper_repeats_per_row": 495
+      },
+      {
+        "pairwise_lower_repeats_per_row": 322,
+        "quotient_dimension": 8,
+        "separation_modulus": 0.25,
+        "upper_repeats_per_row": 44541
+      },
+      {
+        "pairwise_lower_repeats_per_row": 81,
+        "quotient_dimension": 8,
+        "separation_modulus": 0.5,
+        "upper_repeats_per_row": 11136
+      },
+      {
+        "pairwise_lower_repeats_per_row": 21,
+        "quotient_dimension": 8,
+        "separation_modulus": 1.0,
+        "upper_repeats_per_row": 2784
+      },
+      {
+        "pairwise_lower_repeats_per_row": 6,
+        "quotient_dimension": 8,
+        "separation_modulus": 2.0,
+        "upper_repeats_per_row": 696
+      }
+    ],
+    "delta": 0.05,
+    "epsilon": 0.1,
+    "gates": {
+      "all_bounds_positive": true,
+      "both_bounds_have_inverse_square_kappa_scaling": true,
+      "upper_bound_deteriorates_with_dimension": true
+    },
+    "noise_model": "N independent repeats per row with Gaussian variance sigma^2",
+    "sigma": 1.0
+  },
+  "general_factorization_criterion": "Q/G is identifiable from O iff every O-fiber lies inside one Q/G-fiber, equivalently Q/G factors through O",
+  "linear_design_census": {
+    "alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "cells": [
+      {
+        "exact_collision_checks": 1,
+        "exact_recovery_checks": 0,
+        "full_rank_count": 0,
+        "matrix_count": 1,
+        "quotient_dimension": 1,
+        "rank_deficient_count": 1,
+        "row_count": 0
+      },
+      {
+        "exact_collision_checks": 1,
+        "exact_recovery_checks": 2,
+        "full_rank_count": 2,
+        "matrix_count": 3,
+        "quotient_dimension": 1,
+        "rank_deficient_count": 1,
+        "row_count": 1
+      },
+      {
+        "exact_collision_checks": 1,
+        "exact_recovery_checks": 8,
+        "full_rank_count": 8,
+        "matrix_count": 9,
+        "quotient_dimension": 1,
+        "rank_deficient_count": 1,
+        "row_count": 2
+      },
+      {
+        "exact_collision_checks": 1,
+        "exact_recovery_checks": 26,
+        "full_rank_count": 26,
+        "matrix_count": 27,
+        "quotient_dimension": 1,
+        "rank_deficient_count": 1,
+        "row_count": 3
+      },
+      {
+        "exact_collision_checks": 1,
+        "exact_recovery_checks": 0,
+        "full_rank_count": 0,
+        "matrix_count": 1,
+        "quotient_dimension": 2,
+        "rank_deficient_count": 1,
+        "row_count": 0
+      },
+      {
+        "exact_collision_checks": 9,
+        "exact_recovery_checks": 0,
+        "full_rank_count": 0,
+        "matrix_count": 9,
+        "quotient_dimension": 2,
+        "rank_deficient_count": 9,
+        "row_count": 1
+      },
+      {
+        "exact_collision_checks": 33,
+        "exact_recovery_checks": 48,
+        "full_rank_count": 48,
+        "matrix_count": 81,
+        "quotient_dimension": 2,
+        "rank_deficient_count": 33,
+        "row_count": 2
+      },
+      {
+        "exact_collision_checks": 105,
+        "exact_recovery_checks": 624,
+        "full_rank_count": 624,
+        "matrix_count": 729,
+        "quotient_dimension": 2,
+        "rank_deficient_count": 105,
+        "row_count": 3
+      },
+      {
+        "exact_collision_checks": 1,
+        "exact_recovery_checks": 0,
+        "full_rank_count": 0,
+        "matrix_count": 1,
+        "quotient_dimension": 3,
+        "rank_deficient_count": 1,
+        "row_count": 0
+      },
+      {
+        "exact_collision_checks": 27,
+        "exact_recovery_checks": 0,
+        "full_rank_count": 0,
+        "matrix_count": 27,
+        "quotient_dimension": 3,
+        "rank_deficient_count": 27,
+        "row_count": 1
+      },
+      {
+        "exact_collision_checks": 729,
+        "exact_recovery_checks": 0,
+        "full_rank_count": 0,
+        "matrix_count": 729,
+        "quotient_dimension": 3,
+        "rank_deficient_count": 729,
+        "row_count": 2
+      },
+      {
+        "exact_collision_checks": 7875,
+        "exact_recovery_checks": 11808,
+        "full_rank_count": 11808,
+        "matrix_count": 19683,
+        "quotient_dimension": 3,
+        "rank_deficient_count": 7875,
+        "row_count": 3
+      }
+    ],
+    "full_rank_count": 12516,
+    "gates": {
+      "every_deficient_design_has_exact_collision": true,
+      "every_full_rank_design_has_exact_left_inverse": true,
+      "every_matrix_classified": true,
+      "fewer_than_q_scalar_queries_never_identify": true,
+      "q_coordinate_queries_identify": true
+    },
+    "matrix_count": 21300,
+    "max_quotient_dimension": 3,
+    "max_rows": 3,
+    "rank_deficient_count": 8784
+  },
+  "linear_gauge_fixture": {
+    "bad_collision_in_quotient_coordinates": [
+      "0",
+      "1"
+    ],
+    "bad_design": [
+      [
+        "2",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "gates": {
+      "bad_design_has_non_gauge_collision": true,
+      "bad_design_rank_deficient": true,
+      "good_design_annihilates_gauge": true,
+      "good_quotient_design_full_rank": true,
+      "good_recovery_is_exact": true,
+      "minimum_scalar_query_count_met": true
+    },
+    "gauge_dimension": 2,
+    "good_design": [
+      [
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "3",
+        "0",
+        "0"
+      ]
+    ],
+    "good_exact_recovery": [
+      [
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/3"
+      ]
+    ],
+    "good_quotient_design": [
+      [
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "3"
+      ]
+    ],
+    "good_separation_modulus": "2",
+    "parameter_dimension": 4,
+    "quotient_dimension": 2
+  },
+  "problem": "ASMP-1",
+  "schema_version": "asmp1_identifiability_boundary_v0_2",
+  "semialgebraic_decidability_boundary": {
+    "assumptions": [
+      "compact rational semialgebraic mechanism parameter set Theta",
+      "rational polynomial observation and abstraction maps",
+      "finite explicitly listed rational polynomial gauge action"
+    ],
+    "decidability_reason": "both are first-order formulas over a real closed field; finite minima and orbit inequalities expand to finite Boolean formulas",
+    "failure_formula": "exists theta,theta' in Theta: O(theta)=O(theta') and for every g in G, Q(theta') != g.Q(theta)",
+    "gates": {
+      "exact_failure_is_first_order_semialgebraic": true,
+      "fixed_kappa_failure_is_first_order_semialgebraic": true,
+      "no_polynomial_time_claim_is_made": true
+    },
+    "polynomial_time_claim": false,
+    "stable_failure_formula": "exists theta,theta' in Theta with distinct Q/G orbits and ||O(theta)-O(theta')||^2 < kappa^2 min_g ||Q(theta')-g.Q(theta)||^2"
+  },
+  "source_sha256": "1a45ed9647a9f3e24f1281d2e2bef11b81c29e9dd5a61c6283569f8ee5408447",
+  "verdict": "uniform representation-independent exact criterion is impossible; semialgebraic instances are decidable and linear-gauge instances have a sharp constructive boundary"
+}

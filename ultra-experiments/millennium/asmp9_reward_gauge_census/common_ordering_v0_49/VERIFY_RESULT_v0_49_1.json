@@ -1,0 +1,28 @@
+{
+  "corrected_universe": {
+    "admissible_table_count": 167,
+    "common_chain_mismatches": 0,
+    "dedekind_count": 168,
+    "excluded_constant_one": 1,
+    "ordered_pair_count": 27889,
+    "tight_dag_mismatches": 0
+  },
+  "ok": true,
+  "original_D0": false,
+  "original_failure_is_count_only": true,
+  "original_receipt_match": true,
+  "original_registration_match": true,
+  "original_sources_match": true,
+  "repair_registration_sha256": "aea8a36bc9761cd16dfef64674ca7914c0052b416ab70b4d1742a63ea0ae0447",
+  "repair_sources_match": true,
+  "schema": "asmp9-v0.49.1-verification-repair-v1",
+  "status": "finite_common_ordering_theorem_verified",
+  "unchanged_gate_values": {
+    "G0": true,
+    "H0": true,
+    "M0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "V0": true
+  }
+}

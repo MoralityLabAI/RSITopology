@@ -1,0 +1,56 @@
+{
+  "binding_match": true,
+  "bindings": {
+    "protocol_v0_3.json": "b999ee7bdb456457f25c1999d762279501968738625c24521191eca6d3eaafc1",
+    "result_v0_3.json": "a3e96165b58027a98edf17ce5cd007e283ae65059af7ef8f9e36a471da028f8a",
+    "verification_v0_3.json": "4a0b8a7bd9c06dd3c10ccadbbd03660ce4a4630254d7454f51d6f4cbbceb6d5e"
+  },
+  "claim_boundary": [
+    "no claim about replaceable or learned root checkers",
+    "no claim of infinitely many distinct behavior states",
+    "no ASMP-5 resolution claim"
+  ],
+  "conclusion_layers": {
+    "claim_support": "bounded_exact_grammar_only",
+    "measurement_reliability": "independent_graph_replay_closure_and_digest_passed",
+    "metric_robustness": {
+      "anti_gaming": {
+        "pass": true,
+        "probe": "matched_unrooted_failure_remains_live"
+      },
+      "clean_control": {
+        "pass": true,
+        "probe": "safe_certificate_is_not_deadlock"
+      },
+      "invariance": {
+        "checked_edges": 30720,
+        "pass": true,
+        "probe": "permute_representative_nonhazard_coordinates"
+      },
+      "monotonicity": {
+        "pass": true,
+        "probe": "all_horizons_and_checker_radii",
+        "radii": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "sensitivity": {
+        "pass": true,
+        "probe": "root_hazard_acceptance_mutation_yields_depth_one_failure"
+      }
+    },
+    "operational_decision": "close_toy_horizon_gap",
+    "task_result": "all_depth_rooted_safety_with_arbitrary_time_liveness"
+  },
+  "pass": true,
+  "schema_version": "asmp5_inductive_root_synthesis_receipt_v0_3",
+  "source_bindings": {
+    "inductive_root.py": "724e701a8d0acde0353d671128fb577994bf62b1daa41c606b0d9ea6262620e6",
+    "run.py": "ab1170032af1675959c6298c1939b9fa342b4320583f1479bac18fadccec393f",
+    "verify_independent.py": "4349ee53fb2f76be95079f902f9126999afe4b0b31b029e514afb6e9307e6916"
+  }
+}

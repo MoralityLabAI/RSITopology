@@ -1,0 +1,113 @@
+{
+  "chunks_completed": 4,
+  "chunks_registered": 4,
+  "cuda_available": true,
+  "cuda_device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "elapsed_seconds": 183.73400000000402,
+  "error": null,
+  "results": [
+    {
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 3.025202987468289e-06,
+        "step": 4000,
+        "test_accuracy": 0.39168110489845276,
+        "test_loss": 7.293956279754639,
+        "train_accuracy": 1.0,
+        "train_loss": 1.5335777447944565e-07
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.597593575678129,
+        "parameter_l2": 21.81738785271364,
+        "representation_effective_rank": 23.137724958293486,
+        "token_embedding_stable_rank": 9.797321562066054
+      },
+      "metric_count": 81,
+      "run_id": "seed00_wd010",
+      "seed": 0,
+      "status": "completed",
+      "steps_completed": 4000,
+      "transition_step": null,
+      "weight_decay": 0.1
+    },
+    {
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 2.3497991699095305e-05,
+        "step": 4000,
+        "test_accuracy": 0.40381282567977905,
+        "test_loss": 6.86168098449707,
+        "train_accuracy": 1.0,
+        "train_loss": 7.832420010345231e-07
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.808474472973288,
+        "parameter_l2": 21.607610833795974,
+        "representation_effective_rank": 23.182531762129663,
+        "token_embedding_stable_rank": 10.119471166196039
+      },
+      "metric_count": 81,
+      "run_id": "seed01_wd010",
+      "seed": 1,
+      "status": "completed",
+      "steps_completed": 4000,
+      "transition_step": null,
+      "weight_decay": 0.1
+    },
+    {
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.0005239129751665802,
+        "step": 4000,
+        "test_accuracy": 0.40727904438972473,
+        "test_loss": 4.561127185821533,
+        "train_accuracy": 1.0,
+        "train_loss": 6.218057387741283e-05
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 14.883841781992043,
+        "parameter_l2": 16.530244044950578,
+        "representation_effective_rank": 21.857398624105656,
+        "token_embedding_stable_rank": 9.092773559471508
+      },
+      "metric_count": 81,
+      "run_id": "seed00_wd100",
+      "seed": 0,
+      "status": "completed",
+      "steps_completed": 4000,
+      "transition_step": null,
+      "weight_decay": 1.0
+    },
+    {
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.003771062154013864,
+        "step": 4000,
+        "test_accuracy": 0.41941073536872864,
+        "test_loss": 3.3940844535827637,
+        "train_accuracy": 1.0,
+        "train_loss": 0.0008083130815066397
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 14.130283185808086,
+        "parameter_l2": 16.134171016744112,
+        "representation_effective_rank": 22.79769813341456,
+        "token_embedding_stable_rank": 9.494769321735696
+      },
+      "metric_count": 81,
+      "run_id": "seed01_wd100",
+      "seed": 1,
+      "status": "completed",
+      "steps_completed": 4000,
+      "transition_step": null,
+      "weight_decay": 1.0
+    }
+  ],
+  "schema_version": "asmp10_modular_transition_pilot_summary_v0_1",
+  "status": "completed",
+  "task_id": "asmp10-grokking-v0-1"
+}

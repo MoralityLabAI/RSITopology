@@ -1,0 +1,21 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2",
+  "experiment": "07_percolation_phase",
+  "run_id": "smoke_v1",
+  "seed": 2026071621,
+  "parameters": {
+    "layers": [2],
+    "context_columns": [4],
+    "graph_replicates": 2,
+    "lineage_floors": [0.85, 0.92],
+    "sign_flip_rates": [0.0, 1.0],
+    "retention_arms": [
+      "observed",
+      "pooled_retention_permutation",
+      "within_class_retention_permutation"
+    ],
+    "checkpoint_retention": {"mean": 0.9958, "sd": 0.0015},
+    "context_retention": {"mean": 0.9, "sd": 0.02}
+  }
+}

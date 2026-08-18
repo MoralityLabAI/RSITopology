@@ -1,0 +1,21 @@
+{
+  "allowed_change": "Replace only peak_resident_bytes by runtime monkeypatch after importing the sealed v0.31 runner.",
+  "forbidden_changes": [
+    "scientific module",
+    "fixture",
+    "threshold",
+    "gate",
+    "result schema",
+    "independent verifier"
+  ],
+  "original_failure_receipt": "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/failure_receipt_v0_31.json",
+  "original_registration": "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/registration_v0_31.json",
+  "original_runner": "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/run_verification_v0_31.py",
+  "protocol_id": "ASMP-9-JOINT-APPROXIMATE-v0.31.1-resource-repair",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 268435456,
+    "wall_seconds": 30
+  },
+  "version": "0.31.1"
+}

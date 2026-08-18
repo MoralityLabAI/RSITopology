@@ -1,0 +1,50 @@
+{
+  "schema_version": "asmp8_rust_parallelization_result_v0_1",
+  "status": "completed_nonclaim_benchmark",
+  "matched_8k_scale": {
+    "audits_per_stream": 8192,
+    "streams": 1024,
+    "total_audits": 8388608,
+    "serial": {
+      "workers": 1,
+      "elapsed_seconds": 0.0316242,
+      "audits_per_second": 265259136.990027,
+      "checksum": "298603a4f5f57250"
+    },
+    "parallel": {
+      "workers": 6,
+      "elapsed_seconds": 0.0063848,
+      "audits_per_second": 1313840370.880842,
+      "checksum": "298603a4f5f57250"
+    },
+    "speedup": 4.9530447312366865,
+    "parallel_efficiency": 0.8255074552061145
+  },
+  "full_scale": {
+    "audits_per_stream": 524288,
+    "streams": 1024,
+    "total_audits": 536870912,
+    "workers": 6,
+    "elapsed_seconds": 0.3566858,
+    "audits_per_second": 1505164803.308682,
+    "peak_working_set_bytes": 4186112,
+    "hard_memory_cap_bytes": 268435456,
+    "hard_cpu_cap_percent": 50,
+    "cleanup_passed": true,
+    "checksum": "cc756e9b9188c501"
+  },
+  "model_forward": {
+    "optimized_by_this_tool": false,
+    "measured_seconds_per_audit": 0.9520076796036784,
+    "eta_8192_hours": 2.1663463642537035
+  },
+  "hashes": {
+    "rust_source_sha256": "e07e487f3da7b0044aafbd623fd37ac6939896f989d639c1f32533ceb77e6a45",
+    "cargo_manifest_sha256": "fa11af3477390ce54daef26be933e1a2e137e3861a5d2e8db386dc60c4ae3ed4",
+    "cargo_lock_sha256": "4224358fc7adbe8d0d5d21df96e18eb40c4b11a2f62fc457dc6deeb9c8347f15",
+    "serial_8k_receipt_sha256": "258e7764bac0443b573d979cee67253ba06d84b8605a39c28036b39ead180238",
+    "parallel_8k_receipt_sha256": "fada841cf9b31813b386f48c4d3d3fa2b737dae6c81d44968b2df509bdeabb44",
+    "parallel_524k_receipt_sha256": "fa1e6383f7a1fce7167230b48403526ccfca75cd0d4d0d0321d0325686ab5883"
+  },
+  "claim_boundary": "Deterministic synthetic audit sampling and moment reduction only. The counter-based RNG is not the sealed NumPy stream; this does not replace v0.5 scientific artifacts or accelerate model inference."
+}

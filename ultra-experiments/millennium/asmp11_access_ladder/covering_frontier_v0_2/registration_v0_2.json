@@ -1,0 +1,32 @@
+{
+  "schema_version": "asmp11_covering_frontier_registration_v0_2",
+  "protocol_id": "asmp11.covering_mediated_finite_sample_frontier.v0.2",
+  "registered_at_utc": "2026-07-21T19:31:27.3373614Z",
+  "status": "prospective_registration_before_claim_grid_execution",
+  "proposed_asmp_id": "ASMP-11",
+  "source_hashes": {
+    "PRIOR_ART_v0_2.md": "6db42c4c5f36274a348af5661549a7c5bf42be413ff3c0239722b27138e1e615",
+    "PROTOCOL_v0_2.md": "91e6c75ed1b5a95211b0579d9978072975359a8edf48a23aae69c88f504e66eb",
+    "README.md": "8ba43e857b716b5901ce5ca0c158d07647a7ca892fed3ce22c6e2423175aca7a",
+    "covering_frontier.py": "504cfdb0c66ec9845cbfa49b0ff59272ee34dae0d03624de1e5d37b400ebb833",
+    "run.py": "dbe2a4f97354ab2bdc860e0b0874d0e22b13c381524615c780cc915bf0aceb05",
+    "test_covering_frontier.py": "eabe3164e53ea3799a4a05a1a37bee9fb7f68ae497bdf3efc346514de37d21d4",
+    "verify_result.py": "52a61f42a356e7098bc9cafc942a553f5076cf793e65477af3eec302c835b693"
+  },
+  "claim_grid": {
+    "dimensions": [13, 15, 17],
+    "degrees": [3, 4],
+    "width_rule": {
+      "3": ["n-3", "n-2", "n-1", "n"],
+      "4": ["n-2", "n-1", "n"]
+    },
+    "flip_rates": ["1/20", "3/20", "1/4"],
+    "familywise_error_ceiling": "1/20",
+    "power_floor": "9/10",
+    "samples_per_query_cap": 4096,
+    "solver_seconds_per_cell": 120
+  },
+  "pilot_dimensions_excluded": [8, 12, 16, 20],
+  "claim_boundary": "Solver-certified finite covering designs and exact rational power for a transparent parity oracle only.",
+  "output_policy": "write_once_non_aliasing"
+}

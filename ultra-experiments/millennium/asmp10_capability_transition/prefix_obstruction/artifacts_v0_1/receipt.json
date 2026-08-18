@@ -1,0 +1,7 @@
+{
+  "registration_sha256": "bc3005a820858902e6bac965fac68cdcedf114e92443144136d241b12fd2e63e",
+  "registration_source_commit": "a99c17fa8f8ed4fe1fcc5713d934f965744d9914",
+  "result_sha256": "639c2eddc7f8814b7af07bcbc708c7b0f72ec8f0d121bb9a84b512978570fe0c",
+  "schema_version": "asmp10_prefix_obstruction_receipt_v0_1",
+  "verdict": "finite_prefix_obstruction_established_for_registered_class"
+}

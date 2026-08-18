@@ -22,6 +22,15 @@ const loops = readJsonl("demo_loop_receipts.jsonl");
 const certificates = readJsonl("demo_lineage_certificates.jsonl");
 const calibration = JSON.parse(fs.readFileSync(path.join(root, "fixtures", "demo_calibration.json"), "utf8"));
 
+const extended = context.window.GodelData.parseNodeId(
+  "full_float32/L22/graph_reachability/shard-03/rank-2"
+);
+assert.equal(extended.state, "full_float32");
+assert.equal(extended.layer, 22);
+assert.equal(extended.family, "graph_reachability");
+assert.equal(extended.context_shard, "shard-03");
+assert.equal(extended.rank, 2);
+
 const data = context.window.GodelData.compile({
   name: "fixture-validation",
   edges,
@@ -51,4 +60,22 @@ for (const loop of data.loops) {
   }
 }
 
-console.log("Gödel globe fixtures valid: 20 nodes, 26 edges, 6 loops.");
+const saeRaw = JSON.parse(fs.readFileSync(path.join(root, "fixtures", "demo_sae_path_bundle.json"), "utf8"));
+const sae = context.window.GodelData.normalizeSaeBundle(saeRaw, "demo_sae_path_bundle.json");
+assert.equal(sae.mode, "sae_paths");
+assert.equal(sae.dimensions.length, 5);
+assert.deepEqual(Array.from(sae.defaultAxes), ["feature_01", "feature_02", "feature_03"]);
+assert.equal(sae.nodes.length, 6);
+assert.equal(sae.edges.length, 3);
+assert.equal(sae.paths.length, 3);
+assert.deepEqual(Array.from(new Set(sae.nodes.map((node) => node.state))).sort(), ["base", "beast", "jinn"]);
+assert.ok(sae.edges.every((edge) => edge.is_sae_path));
+assert.ok(sae.paths.every((path) => path.is_sae_path && path.node_order.length === 2));
+assert.equal(sae.nodeMap.get("beast/L31/civic_pluralist--srt/demo/control").behavioral_hard_failure, true);
+
+assert.throws(
+  () => context.window.GodelData.normalizeSaeBundle({ ...saeRaw, dimensions: saeRaw.dimensions.slice(0, 4) }, "bad.json"),
+  /requires 5-15 dimensions/
+);
+
+console.log("Gödel globe fixtures valid: holonomy receipts plus 5D base/Jinn/Beast SAE paths.");

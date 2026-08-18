@@ -1,0 +1,27 @@
+{
+  "allowed_changes": [
+    "parse practical-margin rational strings through Fraction",
+    "derive seed from the exact v0.42.1 registration bytes with a versioned domain separator",
+    "add regression tests and repair receipts"
+  ],
+  "forbidden_changes": [
+    "sample count",
+    "query or target universe",
+    "confidence level or radius",
+    "losses or tolerances",
+    "practical margins",
+    "gates or status precedence",
+    "resource ceilings",
+    "claim boundary"
+  ],
+  "parent_protocol": "asmp9-finite-sample-risk-access-v0.42",
+  "parent_status": "implementation_failure_no_scientific_result",
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42.1",
+  "sampling": {
+    "samples_per_target_query": 48000,
+    "seed_rule": "SHA256(exact v0.42.1 registration bytes || NUL || asmp9-v0.42.1-sampled-confirmation)",
+    "targets": 4
+  },
+  "status": "prospective_unregistered_repair",
+  "version": "0.42.1"
+}

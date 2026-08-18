@@ -1,0 +1,185 @@
+{
+  "authority_and_progress_audit": {
+    "certified": true,
+    "external_completion_gate": false,
+    "external_qualifying_teams": 0,
+    "external_required_teams": 2,
+    "prior_internal_named_iff_status": null,
+    "prior_normative_definition": "unclosed",
+    "prior_unrestricted_classification": null
+  },
+  "certified": true,
+  "claim_boundary": "This reassessment proves that v2.18 does not complete the resolve-or-impossibility goal. It retains the conditional selector lemma, records strict FIX as the conservative natural reading, and cross-checks the exact two-sided refutation of the displayed iff. It does not prove formal-language entailment of FIX, a complete unrestricted characterization, mathematical impossibility of ASMP-3, or external acceptance.",
+  "disposition": {
+    "ADM_clause_preservation": "not_established",
+    "ASMP_3_mathematical_impossibility": "not_proved",
+    "best_operational_conclusion": "formalize a strict FIX target or publish FIX and ADM separately before claiming a unique unrestricted characterization",
+    "best_supported_v0_1_reading": "strict_FIX_but_not_formally_entailed",
+    "conditional_selector_lemma": "valid",
+    "full_ASMP_3_classification": "not_established",
+    "prize_grade_resolution": "not_established",
+    "strict_FIX_displayed_iff": "internally_refuted_in_both_directions",
+    "v2_18_unconditional_closure_claim": "withdrawn"
+  },
+  "experiment_id": "ASMP-3-NORMATIVE-CLOSURE-REASSESSMENT-v2.19",
+  "gates": {
+    "R0_all_sealed_inputs_hashed": true,
+    "R1_source_order_supports_FIX_as_conservative_but_not_formally_entailed": true,
+    "R2_ADM_introduces_undeclared_interface_objects": true,
+    "R3_ADM_clause_preservation_is_not_certified": true,
+    "R4_v2_18_survives_only_as_conditional_selector_lemma": true,
+    "R5_strict_FIX_sufficiency_and_literal_necessity_are_both_refuted": true,
+    "R6_canonical_policy_blocks_promotion_of_criterion_refutation_to_full_resolution": true,
+    "R7_full_classification_and_impossibility_are_not_established": true,
+    "R8_normative_and_external_gates_remain_open": true,
+    "R9_stop_is_lane_specific_and_has_concrete_resume_triggers": true
+  },
+  "interface_delta_audit": {
+    "ADM_added_object_count": 4,
+    "ADM_added_objects": {
+      "admissible_protocol_package_Q_n": true,
+      "declared_Interfaces_E_n": true,
+      "typed_environment_E_n": true,
+      "typed_game_interface_G_n": true
+    },
+    "ADM_clause_preservation_status": "not_established",
+    "ADM_is_reasonable_successor_target": true,
+    "FIX_status": "conservative_natural_reading_not_formally_entailed",
+    "certified": true,
+    "typed_successor_status_check": true,
+    "why_not_established": "ADM adds an interface class and moves game selection into protocol admission; no formal semantics proves that this preserves the earlier freeze scope"
+  },
+  "parent_result": "ASMP-3-NORMATIVE-CLOSURE-IMPOSSIBILITY-v2.18",
+  "prior_claim_audit": {
+    "certified": true,
+    "claim_rows": [
+      {
+        "claim": "conditional_no_singleton_selector_lemma",
+        "status": "valid_conditional_on_two_legitimate_completions",
+        "supported": true
+      },
+      {
+        "claim": "ADM_is_clause_preserving",
+        "status": "asserted_not_rigorously_established",
+        "supported": false
+      },
+      {
+        "claim": "v0_1_is_definitely_semantically_underdetermined",
+        "status": "plausible_but_incomplete",
+        "supported": false
+      },
+      {
+        "claim": "ASMP_3_is_impossible_to_solve_or_achieve",
+        "status": "not_proved",
+        "supported": false
+      },
+      {
+        "claim": "v2_18_satisfies_resolve_or_impossibility_goal",
+        "status": "withdrawn",
+        "supported": false
+      }
+    ],
+    "conditional_lemma_survives": true,
+    "prior_goal_completion_withdrawn": true,
+    "satisfaction_proof_field_count": 0,
+    "satisfaction_proof_fields_present": {
+      "formal_source_semantics": false,
+      "independent_ADM_scope_proof": false,
+      "model_satisfaction_derivation": false
+    },
+    "v2_18_producer_certified": true,
+    "v2_18_verifier_passed": true,
+    "what_those_checks_establish": "internal consistency of the encoded two-completion assumption"
+  },
+  "resolution_policy_audit": {
+    "canonical_policy_markers": {
+      "changed_assumption_is_new_version": true,
+      "full_frozen_statement_required": true,
+      "negative_requires_sharp_boundary": true,
+      "single_criterion_refutation_not_enough": true
+    },
+    "certified": true,
+    "complete_resolution_item_presence": {
+      "A constructive protocol with explicit completeness and soundness against adaptive, obfuscating provers": true,
+      "A formal complexity class for the protocols above and a class equality, separation, or complete invariant characterizing it": true,
+      "A proof that the local-refutation definition is invariant under benign transcript encodings": true,
+      "A robust theorem for correlated/noisy semantic judgments": true,
+      "Matching communication, semantic-query, and honest-prover lower bounds": true
+    },
+    "complete_resolution_items_present": 5,
+    "literal_iff_refutation_is_full_resolution": false,
+    "reason": "the displayed iff is one proposed criterion inside a broader class-characterization program",
+    "registry_canonical_target": "Characterize tasks admitting polylog-cost sound verification in a frozen atomic-query game by a weaker verifier using noisy correlated semantic judgments against adaptive obfuscating provers with an efficient honest strategy.",
+    "registry_is_normative": false,
+    "registry_negative_resolution_allowed": true
+  },
+  "schema_version": "asmp3_normative_closure_reassessment_v2_19",
+  "source_hashes": {
+    "canonical_sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5",
+    "expert_status_sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D",
+    "registry_sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0",
+    "typed_json_sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837",
+    "typed_markdown_sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B",
+    "v0_7_artifact_sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D",
+    "v0_7_theorem_sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313",
+    "v2_17_artifact_sha256": "563809EE38E11AEB1599CF655FCA2D4966D0AE4ABFC48F16C2C742D4822E64BE",
+    "v2_18_artifact_sha256": "6EE32AF9F42B8BE4DD3652D7A917F7C65098A2B6BD26F74F87EE87312803A120",
+    "v2_18_theorem_sha256": "CDB40D8F215E56AC51EA0D5FB89B3D235B4A73DAD35B283E962473219326C410",
+    "v2_18_verification_sha256": "E735FD53EF723AA3722778004667265241BA3A6E462F944BC1CA1231464666D7",
+    "v2_5_artifact_sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945",
+    "v2_5_theorem_sha256": "44E1936EF0A36E605311BD1A5977D3D555AE4CDE7F60D16D4FA4CAE73EFDB27B"
+  },
+  "source_structure_audit": {
+    "all_scope_definitions_missing": true,
+    "canonical_setting_precedes_protocol_admission": true,
+    "certified_syntactic_facts_only": true,
+    "conservative_reading": "FIX",
+    "conservative_reading_reason": "ordinary sequential scope keeps protocol algorithms inside the already frozen canonical game",
+    "formal_entailment_of_FIX_proved": false,
+    "freeze_instruction_precedes_game_membership_and_conjecture": true,
+    "missing_scope_definitions": {
+      "declared_interface_class": true,
+      "formal_protocol_algorithm_quantifier": true,
+      "protocol_selects_game_interface": true,
+      "source_language_satisfaction_relation": true
+    },
+    "ordered_markers": {
+      "## Canonical mathematical setting": 241,
+      "## Weak-Verifier Characterization Conjecture": 2422,
+      "## What a complete resolution requires": 3148,
+      "A task family admits a constant-gap, doubly efficient, noise-robust oversight protocol": 2467,
+      "Admissible transcript encodings, verifier and prover randomness, and adaptive query access are part of the game": 1049,
+      "For input length `n`, freeze a decision relation `R_n`": 275,
+      "Freeze a decidable syntactic relation": 1277
+    }
+  },
+  "status": "v2_18_goal_completion_withdrawn_conditional_lemma_retained_full_ASMP3_open",
+  "stop_resume": {
+    "all_internal_search_should_stop": false,
+    "continue_or_resume": [
+      "an authoritative scope clarification",
+      "a registered strict-FIX formal class and reduction notion",
+      "a non-black-box task-specific or universal structure theorem",
+      "interface-uniform resource lower bounds for that registered class",
+      "attributable external reproduction"
+    ],
+    "current_source_only_impossibility_lane_should_stop": true,
+    "stop": [
+      "treating v2_18 as a completion of the resolve-or-impossibility goal",
+      "claiming ADM is clause-preserving without a formal source semantics",
+      "extending parity grids whose strict-FIX gap is already symbolic"
+    ]
+  },
+  "strict_FIX_mathematical_audit": {
+    "broader_classification_resolved": false,
+    "certified": true,
+    "displayed_iff_status": "internally_refuted_in_both_directions",
+    "displayed_necessity_direction": "exactly_refuted",
+    "displayed_sufficiency_direction": "exactly_refuted",
+    "interpretation_authoritative": false,
+    "mathematical_impossibility_proved": false,
+    "v0_7_exact_gap": "(3/5)^d -> 0",
+    "v2_5_nonbinding_rows": 6,
+    "working_interpretation": "strict_FIX"
+  }
+}

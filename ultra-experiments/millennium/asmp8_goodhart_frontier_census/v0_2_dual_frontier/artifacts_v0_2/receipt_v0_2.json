@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "frontier": {
+      "path": "frontier_v0_2.csv",
+      "sha256": "7d575a52574cf0ea3504c8faa80429abed0183895578fbca53b62453793e7fdf"
+    },
+    "report": {
+      "path": "RESULT_v0_2.md",
+      "sha256": "16dbb9c929ac4ee12a37f8459f55a2ae40ed129f16b57100d70ea6c074581050"
+    },
+    "result": {
+      "path": "result_v0_2.json",
+      "sha256": "eec7c72e4c08566f32b715b3c93fedbef1c1c85f6f77e824e8ef7e8263627474"
+    },
+    "witnesses": {
+      "path": "witnesses_v0_2.json",
+      "sha256": "103c5a7c81cc2c538e60b03de0a6db3beb2dbf5814b25af6b08e05f92f394956"
+    }
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "protocol_sha256": "481159bfd00cebb00049ea09db12c157cbb3c186dbba02c7e19ecda9adafb9ce",
+  "registration_sha256": "8758948cdbf57d41f43385e931036b5be5e2398be184f3a36da9a96901ccb94a",
+  "resource": {
+    "elapsed_seconds": 5.207014700004947,
+    "pass": true,
+    "process_peak_rss_bytes": 28909568
+  },
+  "schema_version": "asmp8_dual_frontier_receipt_v0_2",
+  "source_commit": "36ef46ce43aa6c62fcd64fd91dc7ea062ab7df2d"
+}

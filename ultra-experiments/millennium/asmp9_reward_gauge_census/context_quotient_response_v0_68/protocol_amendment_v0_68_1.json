@@ -1,0 +1,43 @@
+{
+  "schema_version": "asmp9_context_quotient_scientific_protocol_amendment_v0_68_1",
+  "protocol_id": "ASMP-9-CONTEXT-QUOTIENT-RESPONSE-v0.68.1",
+  "status": "frozen_prereveal_amendment_execution_unregistered",
+  "base_protocol": {
+    "path": "protocol_v0_68.json",
+    "sha256": "68bfedfa059e735c9a2058ff681a76384c866d2cb6d4a7f7175ddfb0a12c0fae",
+    "modified": false
+  },
+  "correction": {
+    "retired_interpretation": "The 2^12 scenario-level content/label sign-inversion upper-tail fraction is an exact randomization p-value.",
+    "reason": "The scenario registry is fixed, content and label were not randomly assigned to independent units, and no symmetric scenario-error law was registered.",
+    "retained_descriptive_statistic": "Exact upper-tail rank of the observed mean-of-scenario-means among all 4096 scenario-level sign inversions.",
+    "probability_interpretation": false,
+    "consumed_by_gate": false
+  },
+  "replacement_L0": {
+    "required_scenario_successes": 10,
+    "scenario_trials": 12,
+    "scenario_success": "Both targets by both display orders have directed content-minus-label specificity strictly greater than endpoint_epsilon.",
+    "median_scenario_worst_direction": "strictly greater than endpoint_epsilon",
+    "mean_scenario_mean_specificity": "strictly greater than endpoint_epsilon"
+  },
+  "unchanged": [
+    "fresh scenario universe",
+    "score jobs and exact repeats",
+    "N0",
+    "Q0",
+    "S0",
+    "G0",
+    "endpoint epsilon",
+    "construction/confirmation separation",
+    "global confirmation intersection rule",
+    "claim boundary outside the local finite registry"
+  ],
+  "decision_mapping": {
+    "instrument_invalid": "instrument_invalid; stop all scientific interpretation",
+    "instrument_valid_and_replacement_L0_fail": "local_response_family_not_established",
+    "replacement_L0_pass_and_G0_fail": "local_response_family_established_on_frozen_registry_context_conditioned",
+    "replacement_L0_pass_and_G0_pass": "local_response_family_established_on_frozen_registry_shared_magnitude_compatible"
+  },
+  "claim_boundary": "A positive result is an exact finite-registry statement about nuisance-quotiented expressed response contrasts. It is not a random-sample inference, moral-value identification, reward-orbit identification, or ASMP-9 resolution."
+}

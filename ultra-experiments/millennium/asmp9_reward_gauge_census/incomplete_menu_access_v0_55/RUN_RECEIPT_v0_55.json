@@ -1,0 +1,54 @@
+{
+  "claim_boundary": "Elementary finite completion-ambiguity theorem layered on classical Luce and ARSP tests; no representation-theorem novelty, finite-sample or general-domain identification, endogenous-menu, human/model, moral-value, strategic, dynamic, physical-channel, or full ASMP-9 claim.",
+  "commands": {
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_incomplete_menu.py ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_verifier_v0_55.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/verify_theorems_v0_55.py"
+  },
+  "commits": {
+    "development": "8f5894f4da538a984e63a2a8d7046f35dbc5184d",
+    "positive_witness_repair": "0f2b5d4aac55cbe58f0f8e6b1cfa74bf88fdbf3f",
+    "registration": "43e5c82f0d6f743ff209fc0e8fb7900b93f8e25f",
+    "verification_result": "56016f617b0bb775d8be267df9945d554a6810bc",
+    "verification_source": "a7372842a21699c234ddd5cbce8257097d3fa4b8"
+  },
+  "gates": {
+    "D0": true,
+    "E0": true,
+    "FULL0": true,
+    "H0": true,
+    "N0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "TIER0": true
+  },
+  "protocol_id": "asmp9-incomplete-menu-tier-identification-v0.55",
+  "registration_sha256": "2b9df78c26213db60749e8592dbfe18a2d23bfc8e2394ed13b648fc7a49b18a5",
+  "resource": {
+    "elapsed_seconds": 19.636858,
+    "resident_bytes": 26312704,
+    "workers": 1
+  },
+  "result": {
+    "construction_failures": 0,
+    "domain_count": 15,
+    "domain_summary_sha256": "a584b8954bc7ddfb8901d7b6907fa90c0b5c0b45eb770de5c8cd30e9e6241e69",
+    "middle_witness_failures": 0,
+    "proper_projection_count": 1125,
+    "proper_tier_counts": {
+      "no_random_utility_representation": 575,
+      "random_utility_non_luce|no_random_utility_representation": 422,
+      "scalar_luce|random_utility_non_luce|no_random_utility_representation": 128
+    },
+    "scalar_witness_failures": 0,
+    "solver_failures": 0
+  },
+  "schema": "asmp9-v0.55-run-receipt-v1",
+  "status": "incomplete_menu_tier_identification_verified",
+  "tests": {
+    "expected": 9,
+    "passed": 9
+  },
+  "verification_sha256": "2de6b2d5d229f12d112611a87de9c21eaadf9bffcf70a5923f6f399ab7282b2c",
+  "version": "0.55"
+}

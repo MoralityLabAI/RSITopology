@@ -1,0 +1,42 @@
+{
+  "check_count": 11,
+  "checks": {
+    "all_registered_gates_pass": true,
+    "block_product_control": true,
+    "bridge_control": true,
+    "pentagonal_prism_three_way": true,
+    "petersen_three_way": true,
+    "registration_hash": true,
+    "result_hash": true,
+    "sealed_hashes": true,
+    "subdivided_k4_star_three_way": true,
+    "verdict": true,
+    "wheel_7_three_way": true
+  },
+  "independent_primary_results": {
+    "pentagonal_prism": {
+      "asmp": 1800,
+      "orientation": 1800,
+      "subset_tutte_02": 1800
+    },
+    "petersen": {
+      "asmp": 1920,
+      "orientation": 1920,
+      "subset_tutte_02": 1920
+    },
+    "subdivided_k4_star": {
+      "asmp": 24,
+      "orientation": 24,
+      "subset_tutte_02": 24
+    },
+    "wheel_7": {
+      "asmp": 726,
+      "orientation": 726,
+      "subset_tutte_02": 726
+    }
+  },
+  "pass": true,
+  "result_sha256": "b92f7b68547cbd84a7629ea270bd789a4b01087a70f62f43f94c08e3a43336aa",
+  "verifier_imports_implementation": false,
+  "verifier_imports_runner": false
+}

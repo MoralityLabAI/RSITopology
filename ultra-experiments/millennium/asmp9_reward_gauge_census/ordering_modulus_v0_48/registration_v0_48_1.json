@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "Post-outcome provenance repair only. It may verify a valid registered null but cannot alter, strengthen, or reinterpret any scientific value or prediction.",
+  "expected_prediction_gate_X0": false,
+  "expected_recorded_status": "decision_dependent_ordering_not_established",
+  "permitted_change": "independent verifier acceptance mapping only",
+  "protocol_id": "asmp9-ordering-verifier-repair-v0.48.1",
+  "registered_at": "2026-07-29T10:41:08-04:00",
+  "repair_implementation_commit": "48b145c6501b7c9f6c1e5f04f2e5ca930dd7e71e",
+  "scientific_changes_permitted": false,
+  "scientific_result_commit": "83bae5e5e850a5c586d028745f09ad48a70fc0a5",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/VERIFIER_REPAIR_PROTOCOL_v0_48_1.md": "892abba6c5680b13527ad40a78e55cd3873a673ff0739c34cd6a7d0b0a3ce2b4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/VERIFY_RESULT_v0_48.json": "9675399fd37904b73dfee0053034d244f11505f80a6aa457fbe6dd1af68de2c6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/artifacts_v0_48/experiment_rows_v0_48.json": "d0024a9ff29962372c5bfc6ad3e29601a5fb880c6bd9d094cc192dbea134193f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/artifacts_v0_48/result_v0_48.json": "bfae0cd82bc6a59c862d963b7a76ac8b25b8d74e00217a377ff1051a9caaff3d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/artifacts_v0_48/subset_bounds_v0_48.json": "6067bf95b61c60f6a86ff317f711497b69dd46f9d42fad00502aa8f61151dea3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/build_release_v0_48_1.py": "b7b784de504328e640ccb38f37c1988f11eb6097288051145981a0bf6d389fe3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/registration_v0_48.json": "35e94a38aeebdfe6a33352498a309bf17e6aaa5914519432faaacfb9eb1b065a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/test_verifier_repair_v0_48_1.py": "eb353035bf19d524924661e9ea2f1eab79ba4773f38f7831de3cb5896f124b07",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/verify_result_v0_48_1.py": "e7abf5f176c8acda895b964a0dd7c4688ef0443f6e8f14917c3f9716f295e1e1"
+  },
+  "status": "registered_after_outcome_for_verifier_only",
+  "version": "0.48.1"
+}

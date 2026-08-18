@@ -1,0 +1,36 @@
+{
+  "affine_rank_checks": {
+    "3": {
+      "ambient_dimension": 5,
+      "ranking_affine_rank": 5
+    },
+    "4": {
+      "ambient_dimension": 17,
+      "ranking_affine_rank": 17
+    },
+    "5": {
+      "ambient_dimension": 49,
+      "ranking_affine_rank": 49
+    }
+  },
+  "claim_boundary": "Development-only finite checks of an arbitrary-n theorem draft; not registered, not an arbitrary-n proof, and not an ASMP-9 resolution.",
+  "domain_checks": {
+    "3": {
+      "maximum_dimension_gap": 3,
+      "minimum_dimension_gap": 1,
+      "nonrum_witness_failures": 0,
+      "observed_data_preservation_failures": 0,
+      "proper_domains": 15
+    },
+    "4": {
+      "maximum_dimension_gap": 14,
+      "minimum_dimension_gap": 1,
+      "nonrum_witness_failures": 0,
+      "observed_data_preservation_failures": 0,
+      "proper_domains": 2047
+    }
+  },
+  "schema": "asmp9-v0.56-development-result-v1",
+  "status": "candidate_general_incomplete_menu_theorem_supported",
+  "version": "0.56"
+}

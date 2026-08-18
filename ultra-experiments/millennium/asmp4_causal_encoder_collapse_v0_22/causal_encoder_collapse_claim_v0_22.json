@@ -1,0 +1,41 @@
+{
+  "schema_version": "asmp4_causal_encoder_collapse_claim_v0_22",
+  "status": "finite encoder-optimized read/write collapse theorem",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_21_support_quotient_claim_sha256": "89bf8dac4bb615afa16d24cddc181d077b313f361903f5c0723f78407af4eee8"
+  },
+  "general_theorem": {
+    "feasibility_equivalence": "reachable raw q-homogeneity",
+    "encoder_output": "current q class",
+    "finite_read_words": "2^T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "region": "[2,infinity) x [2,infinity)"
+  },
+  "contextual_separation": {
+    "raw_symbols": 3,
+    "static_partitions": 5,
+    "feasible_static_partitions": 1,
+    "static_radius": 3,
+    "causal_radius": 2
+  },
+  "censuses": {
+    "small_transducers": 256,
+    "small_feasible": 80,
+    "small_infeasible": 176,
+    "memoryless_relations": 53108,
+    "memoryless_feasible": 724,
+    "memoryless_infeasible": 52384
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 22,
+    "tests": 254
+  },
+  "decision": "causal_encoder_optimization_collapses_all_feasible_finite_sensors_to_computed_q_rate",
+  "nonclaim": "The theorem assumes a finite sensor, two arbitrary current q classes, same-step raw observation before writing, encoder memory, and universal support safety. It does not cover delayed sensing, restricted encoder memory, forced-raw retention, continuous observations, or the global nonlinear ASMP-4 class."
+}

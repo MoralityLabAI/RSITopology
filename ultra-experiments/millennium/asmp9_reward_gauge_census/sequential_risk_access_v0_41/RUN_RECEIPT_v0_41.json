@@ -1,0 +1,47 @@
+{
+  "execution": {
+    "canonical_completed_at_utc": "2026-07-29T10:53:33Z",
+    "command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/execute_confirmation.py",
+    "elapsed_seconds": 134.3748897999758,
+    "environment_variables": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "orchestration_note": "The desktop caller timed out while the original executor continued. One later duplicate restart attempt was terminated before output. The original process alone wrote the canonical result.",
+    "peak_working_set_bytes": 75210752
+  },
+  "implementation_commit": "4a4b24b6741882d94cc21c08c48810f5c3dee24b",
+  "outputs": {
+    "artifacts_v0_41/RESULT_v0_41.json": {
+      "bytes": 5652,
+      "sha256": "b76bd22e972478c6b98e2a8d0701e7d4b2993fcfda150c0660babea1b039e685"
+    },
+    "artifacts_v0_41/VERIFY_v0_41.json": {
+      "bytes": 473,
+      "sha256": "f83fdf080e6895871dc3b9927fe9cc2fe16df77e44138d5b0ae9754aee39b9bb"
+    }
+  },
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41",
+    "elapsed_seconds": 12.259872,
+    "tests_passed": 14
+  },
+  "protocol_id": "asmp9-sequential-risk-access-v0.41",
+  "registration": {
+    "bytes": 2675,
+    "commit": "797a7990be5edd48655e39be37da756ff39a5b06",
+    "path": "registration_v0_41.json",
+    "sha256": "1666885fe1072f9c718268d6007c98b453a9c534394bef047f1f1629febeb08e"
+  },
+  "result_content_sha256": "e9221f35cea03a165b7461dd6a7953a90d03fa7e0dcf5b1f89512de021bfc30f",
+  "status": "finite_sequential_risk_access_characterization_established",
+  "verification": {
+    "classification_cells_replayed": 6,
+    "completed_at_utc": "2026-07-29T10:56:09Z",
+    "exact_replay_match": true,
+    "group_cells_replayed": 2,
+    "sealed_files_checked": 13
+  }
+}

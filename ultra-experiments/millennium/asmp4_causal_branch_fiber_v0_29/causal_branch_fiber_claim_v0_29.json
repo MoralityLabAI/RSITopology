@@ -1,0 +1,32 @@
+{
+  "schema_version": "asmp4_causal_branch_fiber_v0_29",
+  "theorem": {
+    "name": "causal successor-fiber branching transfer",
+    "finite_horizon": "target branch product is at most source branch product times maximum local-fiber path product",
+    "asymptotic": "directed branch-rate slack is local successor-fiber entropy",
+    "exact_corollary": "bidirectional subexponential local-fiber products preserve the complete branch-cost region"
+  },
+  "sharpness": {
+    "disclosure": "three-step injective terminal map has branch costs 3 and 2 with local fiber product 2",
+    "repetition": "block powers have terminal fiber one and exact branch gap one third bit per step",
+    "clone": "m-to-one merging every step attains log2 m"
+  },
+  "central_harness": {
+    "binary_causal_maps": 332928,
+    "disclosure_block_powers": 7,
+    "largest_block_language": 16384,
+    "clone_rows": 256,
+    "sparse_horizons": 8192
+  },
+  "independent_harness": {
+    "ternary_output_maps": 2115,
+    "disclosure_block_powers": 8,
+    "sparse_horizons": 16384
+  },
+  "mutations_rejected": 8,
+  "predecessor_inventory": {
+    "packages": 29,
+    "tests": 324
+  },
+  "disposition": "causal branching transfer requires local successor-fiber entropy; terminal fibers alone are insufficient"
+}

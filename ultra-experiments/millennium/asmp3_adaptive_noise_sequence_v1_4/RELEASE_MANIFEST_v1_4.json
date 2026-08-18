@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-ADAPTIVE-NOISE-SEQUENCE-v1.4",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_sequence_form_bridge_v1_3/RELEASE_MANIFEST_v1_3.json": {
+      "bytes": 2923,
+      "sha256": "9D5E7BB28ACEDADF18810116B2EB3AEF773DCB29E9D868CE5A9D9245D47591E6"
+    },
+    "../asmp3_sequence_form_bridge_v1_3/SEQUENCE_FORM_THEOREM_v1_3.md": {
+      "bytes": 8002,
+      "sha256": "A77E19066470028E7F23906E2506E9C1C35BEB265C1812C1DFD5642281800E8A"
+    },
+    "../asmp3_sequence_form_bridge_v1_3/artifacts/sequence_form_bridge_v1_3.json": {
+      "bytes": 117318,
+      "sha256": "45025B0091D1898BCB9883A28F85A55FA321ABD035C449AE389F04720855D99C"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "ADAPTIVE_NOISE_THEOREM_v1_4.md": {
+      "bytes": 5931,
+      "sha256": "299EF04D9E99C7E2B5DF118F3FD039BE2B018BE39C2005C03E1B378406C187EA"
+    },
+    "COMPLETION_AUDIT_v1_4.md": {
+      "bytes": 1263,
+      "sha256": "FF694EA4EF2AD25A8FD1C6445518D21BDD237A75C06FD03416F7E4E740BB7EC5"
+    },
+    "README.md": {
+      "bytes": 545,
+      "sha256": "626428C916AD4D95D09F0FFAB8B0F8B23A2DB02B09B1C385633021C3A85F70E8"
+    },
+    "adaptive_noise_sequence.py": {
+      "bytes": 9568,
+      "sha256": "B0CE1AD74A2D4B2A9319441632C2A6E96906CE21E4079CE6C2473D75D65D8AAE"
+    },
+    "artifacts/adaptive_noise_sequence_v1_4.json": {
+      "bytes": 204580,
+      "sha256": "ED54D40E3892B96EAF8B94960A7ABD99742F3AA6DC6ECC528A865DADADE6EC47"
+    },
+    "artifacts/adaptive_noise_sequence_verification_v1_4.json": {
+      "bytes": 695,
+      "sha256": "CB92F9D18603FF7C50A60B7FF05D7C09A48FBDE21FCA3D054EC21D8CE2BC5BDB"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2484,
+      "sha256": "291733540F8C3EB2232F2B5DE4EDDC0B74214ED342C2473E10C45EBB2329FBF6"
+    },
+    "run_adaptive_noise_sequence.py": {
+      "bytes": 825,
+      "sha256": "AFD55ED22B595BE6B58DDBD3952EA4ED891585A09297B96F66055F1A2BAEB2D7"
+    },
+    "test_adaptive_noise_sequence.py": {
+      "bytes": 3686,
+      "sha256": "6A08E34CEE4AC1D64E9238ABBBA41EFB851C9AB71F1F94B760AADDBDEB43B0D2"
+    },
+    "verify_adaptive_noise_sequence.py": {
+      "bytes": 6506,
+      "sha256": "AB9AC9BE42CA476AEDBCD6186E84EBA9BD78FED761D0F7501EB5F5D219194CC6"
+    }
+  },
+  "release_status": "exact_joint_noise_budget_phase",
+  "schema_version": "asmp3_adaptive_noise_sequence_release_v1_4"
+}

@@ -1,0 +1,159 @@
+{
+  "claim_boundary": "Unregistered finite numerical census with one exact rational counterexample certificate; not a claim-eligible theorem.",
+  "context_count": 2,
+  "exact_smallest_witness_certificate": {
+    "context_count": 2,
+    "edge_count": 6,
+    "item_count": 4,
+    "local_rank": 5,
+    "obstruction_dimension": 2,
+    "robust_amplification_squared": "1",
+    "robust_normalized_gram": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "robust_sigma_min_squared": "1",
+    "robust_total_support": 8,
+    "shared_rank": 3,
+    "short_amplification_squared": "3/2",
+    "short_normalized_gram": [
+      [
+        "2/3",
+        "0"
+      ],
+      [
+        "0",
+        "2/3"
+      ]
+    ],
+    "short_sigma_min_squared": "2/3",
+    "short_total_support": 6
+  },
+  "maximum_items": 4,
+  "maximum_observed_amplification_ratio": {
+    "amplification_ratio": 1.8228756555322947,
+    "candidate_count": 17,
+    "e_optimal": {
+      "amplification": 1.1547005383792517,
+      "indices": [
+        0,
+        1,
+        14
+      ],
+      "sigma_min": 0.8660254037844385,
+      "total_support": 8
+    },
+    "edge_count": 8,
+    "item_count": 4,
+    "masks": [
+      51,
+      30
+    ],
+    "minimum_total_support": 7,
+    "obstruction_dimension": 3,
+    "shortest_best": {
+      "amplification": 2.104875500841572,
+      "indices": [
+        0,
+        1,
+        9
+      ],
+      "sigma_min": 0.47508748123116057,
+      "total_support": 7
+    },
+    "shortest_is_condition_optimal": false,
+    "spanning_design_count": 438
+  },
+  "smallest_suboptimal_shortest_basis": {
+    "amplification_ratio": 1.224744871391589,
+    "candidate_count": 6,
+    "e_optimal": {
+      "amplification": 1.0,
+      "indices": [
+        4,
+        5
+      ],
+      "sigma_min": 1.0,
+      "total_support": 8
+    },
+    "edge_count": 6,
+    "item_count": 4,
+    "masks": [
+      12,
+      51
+    ],
+    "minimum_total_support": 6,
+    "obstruction_dimension": 2,
+    "shortest_best": {
+      "amplification": 1.224744871391589,
+      "indices": [
+        0,
+        3
+      ],
+      "sigma_min": 0.8164965809277261,
+      "total_support": 6
+    },
+    "shortest_is_condition_optimal": false,
+    "spanning_design_count": 13
+  },
+  "status": "unregistered_development_only",
+  "summaries": {
+    "2": {
+      "by_obstruction_dimension": {
+        "1": {
+          "count": 1,
+          "maximum_amplification_ratio": 1.0,
+          "suboptimal_shortest_count": 0
+        }
+      },
+      "live_pair_count": 1,
+      "ordered_graph_pair_count": 4,
+      "suboptimal_shortest_pair_count": 0
+    },
+    "3": {
+      "by_obstruction_dimension": {
+        "1": {
+          "count": 27,
+          "maximum_amplification_ratio": 1.0,
+          "suboptimal_shortest_count": 0
+        },
+        "2": {
+          "count": 16,
+          "maximum_amplification_ratio": 1.0,
+          "suboptimal_shortest_count": 0
+        }
+      },
+      "live_pair_count": 43,
+      "ordered_graph_pair_count": 64,
+      "suboptimal_shortest_pair_count": 0
+    },
+    "4": {
+      "by_obstruction_dimension": {
+        "1": {
+          "count": 864,
+          "maximum_amplification_ratio": 1.0,
+          "suboptimal_shortest_count": 0
+        },
+        "2": {
+          "count": 1511,
+          "maximum_amplification_ratio": 1.224744871391589,
+          "suboptimal_shortest_count": 18
+        },
+        "3": {
+          "count": 1444,
+          "maximum_amplification_ratio": 1.8228756555322947,
+          "suboptimal_shortest_count": 556
+        }
+      },
+      "live_pair_count": 3819,
+      "ordered_graph_pair_count": 4096,
+      "suboptimal_shortest_pair_count": 574
+    }
+  }
+}

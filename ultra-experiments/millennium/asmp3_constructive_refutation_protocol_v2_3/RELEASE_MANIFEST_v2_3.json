@@ -1,0 +1,113 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-CONSTRUCTIVE-REFUTATION-PROTOCOL-v2.3",
+  "file_count": 26,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_block_selection_composition_v1_9/BLOCK_SELECTION_COMPOSITION_THEOREM_v1_9.md": {
+      "bytes": 6418,
+      "sha256": "691FA772F81A5ED84112E365E8B60F6948DD205F2D63EBE30DE0CD7635F9AAED"
+    },
+    "../asmp3_block_selection_composition_v1_9/RELEASE_MANIFEST_v1_9.json": {
+      "bytes": 3074,
+      "sha256": "E5D48F7F9E93A6D2189E20C4838E51D881AB5D2D0210F393360AD9BD9635289C"
+    },
+    "../asmp3_block_selection_composition_v1_9/artifacts/block_selection_composition_v1_9.json": {
+      "bytes": 1691219,
+      "sha256": "63E16A22B9EC6B459DE3F38887E323F224F0B64FA7C4EC4FA682E4FAE788E561"
+    },
+    "../asmp3_encoding_invariance_v2_0/ENCODING_INVARIANCE_THEOREM_v2_0.md": {
+      "bytes": 6929,
+      "sha256": "149B10B278FE41C9EDB8D37A9CAF5719C48A14E66F85570F54A6A8C23CAE0E82"
+    },
+    "../asmp3_encoding_invariance_v2_0/RELEASE_MANIFEST_v2_0.json": {
+      "bytes": 3620,
+      "sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075"
+    },
+    "../asmp3_encoding_invariance_v2_0/artifacts/encoding_invariance_v2_0.json": {
+      "bytes": 34866,
+      "sha256": "0EFF1BB9F80AE281EFA29E151FD87FA0200CC62A651F1B5E5E777BED5A44C191"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_resource_tradeoff_v2_2/RELEASE_MANIFEST_v2_2.json": {
+      "bytes": 3539,
+      "sha256": "E0440C6A3B291A09D2698F143DC37AEDB03DF3A7B22CD7BCBD557996064C964E"
+    },
+    "../asmp3_resource_tradeoff_v2_2/RESOURCE_TRADEOFF_THEOREM_v2_2.md": {
+      "bytes": 5860,
+      "sha256": "64FB084ED49E1ED43EBF8845507D838962F69316537DFED8885769C3F4F2CE26"
+    },
+    "../asmp3_resource_tradeoff_v2_2/artifacts/resource_tradeoff_v2_2.json": {
+      "bytes": 340282,
+      "sha256": "4D4DD4AEDEBA45677ADCC15BB2085AED779D3A53CE11B6C9B88499AF26B6B98D"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v2_3.md": {
+      "bytes": 1706,
+      "sha256": "35FD9DF3915ADF9F2038F2B680382E47FC5E51AC350A07D57B16AEE21A3E0566"
+    },
+    "CONSTRUCTIVE_REFUTATION_PROTOCOL_THEOREM_v2_3.md": {
+      "bytes": 7668,
+      "sha256": "F917A462E418018FF289A1891C7978299077B4AA14AD412660C46960B86C018C"
+    },
+    "README.md": {
+      "bytes": 714,
+      "sha256": "7DB170FD94C97F5BEBA98748BCEAC50C2CD61C921B974D96CB7016DED6D9473C"
+    },
+    "artifacts/constructive_refutation_protocol_v2_3.json": {
+      "bytes": 620625,
+      "sha256": "A437C1BD67171B4DB07D32D53B96A5D6DE79D25AC11E9B498BD817EFD0C72781"
+    },
+    "artifacts/constructive_refutation_protocol_verification_v2_3.json": {
+      "bytes": 864,
+      "sha256": "9239DA4CFC45DB511F1542F9700AA2B5D6E2E825B582384BC0998CD8123EDFF3"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3294,
+      "sha256": "171E5EDC3A8FFD1110044A7A4FEB034D49B5E6892552080270E2846210A523CF"
+    },
+    "constructive_refutation_protocol.py": {
+      "bytes": 10966,
+      "sha256": "854884E6FCBD793D6D6BDD5531EEC9C980F71714680D6EABB5DBAEFD454525A0"
+    },
+    "run_constructive_refutation_protocol.py": {
+      "bytes": 859,
+      "sha256": "B8E9E5F02C48F3103CB79E7C4BCD49F932C3ACFBABB05CB70AA5206A5DC0998E"
+    },
+    "test_constructive_refutation_protocol.py": {
+      "bytes": 3961,
+      "sha256": "2968E5A23E58511790655B2F5B29898FDA5B3BD0E77E033D2636C1985A3AE706"
+    },
+    "verify_constructive_refutation_protocol.py": {
+      "bytes": 9118,
+      "sha256": "9A6315BB196E05EB92290818FD4B0C030EDF8B2A1A1B5481FBFF0AF5E34C87EB"
+    }
+  },
+  "release_status": "constructive_positive_protocol_under_typed_finder_noise_contracts",
+  "schema_version": "asmp3_constructive_refutation_protocol_release_v2_3"
+}

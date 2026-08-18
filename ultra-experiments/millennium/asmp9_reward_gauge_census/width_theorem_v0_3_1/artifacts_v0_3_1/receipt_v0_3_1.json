@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-07-28T17:57:13.034135+00:00",
+  "elapsed_seconds": 220.0448210000177,
+  "implementation_commit": "ecc7481e9b2b787783932b5eb745317166338fc4",
+  "output_hashes": {
+    "RESULT_v0_3_1.md": "2767f2756f50a5bcdd71fac2a6276286e3941f29ad558215a918cbaf4f13463e",
+    "result_v0_3_1.json": "02dba9bc3d345b7f05d09ee0811ef6e5f235fd81e690a9c4f932291a63f5af0c"
+  },
+  "protocol_id": "ASMP-9-SHARP-WIDTH-v0.3.1",
+  "registration_commit": "1741389aba2041a125738668d326d57307ceb462",
+  "registration_sha256": "51f9fb42309bf440915968d46523e4a40caa348703cb87ccc2a45b471c108c58"
+}

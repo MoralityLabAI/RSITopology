@@ -1,0 +1,39 @@
+{
+  "certificates": {
+    "exact_residual_identity": true,
+    "lower_polynomial_sign": 1,
+    "roots_in_isolating_interval": 1,
+    "roots_in_unit_interval": 1,
+    "upper_polynomial_sign": -1
+  },
+  "certified": true,
+  "claim_boundary": "Post-result exact characterization of one frozen beta-binomial cell; pairwise rho alone does not identify a nine-judgment joint law. Not a preregistered scientific outcome or a real-verifier estimate.",
+  "configuration": {
+    "families": 1,
+    "fp_fn_limit": "1/20",
+    "marginal_error": "1/5",
+    "model": "single-family beta-binomial exchangeable errors",
+    "parameterization": "kappa=(1-rho)/rho; alpha=(1/5)kappa; beta=(4/5)kappa",
+    "q": 9
+  },
+  "critical_rho": {
+    "definition": "unique root of the threshold polynomial in [0,1]",
+    "fail_for": "rho above the critical value",
+    "interval_width": "1/1000000000000",
+    "lower": "59108062397/1000000000000",
+    "lower_decimal": 0.059108062397,
+    "pass_for": "rho at or below the critical value",
+    "upper": "29554031199/500000000000",
+    "upper_decimal": 0.059108062398
+  },
+  "threshold_polynomial_coefficients_ascending": [
+    "5281",
+    "40728",
+    "-1046494",
+    "-15144160",
+    "-67432815",
+    "-110905976",
+    "-39111828",
+    "23595264"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "asmp9_prime_analysis_execution_v0_34_4",
+  "execution_id": "ASMP-9-PHYSICAL-ACQUISITION-PRIME-ANALYSIS-v0.34.4",
+  "prepared_utc": "2026-07-29T07:45:15Z",
+  "status": "registered_not_run",
+  "outcomes_consumed_before_registration": false,
+  "scientific_contract_changed": false,
+  "registration": {
+    "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_4.json",
+    "sha256": "6f518cede92b5b6defad6caf00db4066f331ae3cc595ea7c82dfd0950bfc7482",
+    "content_sha256": "c727589896111166a2965dfb5019b3e040d4da4a92887a6c6d7ceb8628ab7692"
+  },
+  "capture_inputs": {
+    "pilot_records.jsonl": {
+      "sha256": "8797772ac629a5b02cbc116acdc890236c3768989fbb02620ed857717b906c40",
+      "records": 1944
+    },
+    "summary.json": {
+      "sha256": "c9cd3c18ddcd45f48376ee710e49ba9d33a5acc39a1113aaf08bb12356938d6d"
+    },
+    "measurement_plan.json": {
+      "sha256": "09b814b310eee89d9251ca59cadab23fae34cc21ab4d082cbc27af945be9f62b"
+    },
+    "wrapper_summary.json": {
+      "sha256": "4eb2048d84e04f5fee44b9d4429c91bba4404105d136bf1690e1d31b7b0c3d50"
+    },
+    "cleanup_summary.json": {
+      "sha256": "5037981de618d300ca0b3192af122fe5d877f4a98992353c70ef6870b4aa08e3"
+    }
+  },
+  "implementation": {
+    "sealed_analyzer": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/analyze_burned_pilot.py",
+      "sha256": "e0835561376baa2a1b4f9b5f5d50786c08fa942a566df0e7cccff1829bb3a6e4"
+    },
+    "prime_schema_adapter": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/analyze_burned_pilot_prime_v0_34_4.py",
+      "sha256": "42416d7e85a7dda289e48f079f652c741a457e9f057b72197be4fd1c444b05d2"
+    },
+    "hard_cap_wrapper": {
+      "path": "scripts/run_prime_asmp9_analysis_v0344_guarded.sh",
+      "sha256": "a3cb6dd24427d91ba70b892742124e98bbb22f7919dcae07e541e170993590c0"
+    },
+    "tests": {
+      "path": "tests/test_asmp9_physical_acquisition_prime_analysis_v0344.py",
+      "sha256": "5ec830389ac7992afdb02245e11fc50786f296ff58d67309fc70a8d435643b5b",
+      "focused_tests_passed": 15
+    }
+  },
+  "environment": {
+    "pod_id": "fa3b9e2ed2b5455b88f16c616fd20923",
+    "python_version": "3.10.12",
+    "numpy_version": "2.2.6",
+    "analysis_requires_gpu": false
+  },
+  "resource_caps": {
+    "memory_mb": 4096,
+    "swap_bytes": 0,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 600
+  },
+  "exact_inner_command": [
+    "/usr/bin/python3",
+    "/workspace/asmp9_physical_v0343/repo/ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/analyze_burned_pilot_prime_v0_34_4.py",
+    "--registration",
+    "/workspace/asmp9_physical_v0343/repo/ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_4.json",
+    "--output-dir",
+    "/workspace/asmp9_physical_v0343/output",
+    "--analysis-json",
+    "/workspace/asmp9_physical_v0343/analysis/BURNED_PILOT_ANALYSIS_v0_34_4.json",
+    "--report",
+    "/workspace/asmp9_physical_v0343/analysis/BURNED_PILOT_REPORT_v0_34_4.md"
+  ],
+  "output_paths": {
+    "analysis_json": "/workspace/asmp9_physical_v0343/analysis/BURNED_PILOT_ANALYSIS_v0_34_4.json",
+    "report": "/workspace/asmp9_physical_v0343/analysis/BURNED_PILOT_REPORT_v0_34_4.md"
+  },
+  "analysis_contract": {
+    "thresholds": "unchanged_from_burned_pilot_registration_v0_34_4",
+    "confirmation_thresholds": "unset",
+    "confirmation_authorized": false,
+    "holdout_authorized": false,
+    "partial_capture_pooling": false
+  },
+  "claim_boundary": "This analysis may calibrate one prompt-level ASMP-9 successor on one quantized Qwen model and one separately reported Prime runtime. It is not confirmation evidence, does not validate expected utility or semantic policy identity, does not authorize edits or stochastic policy trials, and does not resolve ASMP-9."
+}

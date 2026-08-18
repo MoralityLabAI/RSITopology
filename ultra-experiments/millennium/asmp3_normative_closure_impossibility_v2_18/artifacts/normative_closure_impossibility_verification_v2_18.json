@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_source_authority_model_selector_minimax_mutation_and_claim_boundary_audit",
+  "checks": {
+    "V0_schema_status_parent_and_hashes": true,
+    "V1_canonical_clause_inventory_and_selector_absence": true,
+    "V2_current_authority_state_has_no_selector": true,
+    "V3_two_incompatible_clause_preserving_completions": true,
+    "V4_same_substrate_has_material_FIX_ADM_fork": true,
+    "V5_deterministic_selector_frontier_reconstructed": true,
+    "V6_randomized_minimax_frontier_reconstructed": true,
+    "V7_one_normative_bit_is_necessary_and_sufficient_inside_audited_fork": true,
+    "V8_scope_axiom_mutations_close_exactly_as_claimed": true,
+    "V9_claim_is_source_relative_repairable_and_not_metaphysical": true
+  },
+  "claim_boundary": "This verifies source-relative underdetermination of a unique FIX/ADM selection; it neither supplies authority nor decides authorial intent.",
+  "passed": true,
+  "schema_version": "asmp3_normative_closure_impossibility_verification_v2_18"
+}

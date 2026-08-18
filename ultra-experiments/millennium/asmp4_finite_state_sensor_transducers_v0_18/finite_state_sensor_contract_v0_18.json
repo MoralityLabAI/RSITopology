@@ -1,0 +1,19 @@
+{
+  "schema_version": "asmp4_finite_state_sensor_contract_v0_18",
+  "base_plant": "v0.13 positive-volume collar with arbitrary two-class q disturbance",
+  "transducer": {
+    "parameter": "finite state S, initial state s0, finite raw output Y, and nonempty support E(s,z) subseteq Y x S",
+    "timing": "from current sensor state and mode, emit y and update hidden sensor state; controller observes raw y history before writing",
+    "normal_channel": "normal-cell symbol depends only on n and is charged separately; it cannot encode mode or sensor state",
+    "charging": "each raw output word must remain injectively recoverable",
+    "safety_quantifier": "every disturbance word and every transducer event word in support"
+  },
+  "theorem": {
+    "feasibility": "every reachable subset-observer transition has a singleton current q set",
+    "language_count": "L_T is the number of raw output words accepted from {s0}",
+    "finite_read_words": "L_T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "asymptotic_region": "[1+log2(rho(A)),infinity) x [2,infinity)",
+    "A": "multiplicity adjacency matrix of the reachable deterministic subset observer"
+  }
+}

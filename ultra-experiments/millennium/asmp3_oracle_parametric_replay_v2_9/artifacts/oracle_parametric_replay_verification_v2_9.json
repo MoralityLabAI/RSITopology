@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_tree_seed_contract_firewall_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status": true,
+    "V1_exhaustive_adaptive_tree_audit_reconstructed": true,
+    "V2_fresh_seed_marginal_audit_reconstructed": true,
+    "V3_contract_mutant_and_positive_rows_reconstructed": true,
+    "V4_transcript_only_firewall_reconstructed": true,
+    "V5_all_12_parent_compositions_reconstructed": true,
+    "V6_every_replay_resource_is_explicitly_charged": true,
+    "V7_parent_trace_and_coupling_contract_is_certified": true,
+    "V8_all_10_producer_gates_true": true,
+    "V9_claim_boundary_preserves_operational_scope": true
+  },
+  "claim_boundary": "This checker certifies ideal replay under a total restartable oracle-parametric runtime contract. It does not infer restartability, ideal-provider access, or trace binding from protocol admission alone.",
+  "passed": true,
+  "schema_version": "asmp3_oracle_parametric_replay_verification_v2_9"
+}

@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "Exact finite deterministic direct-map completeness only; classical Buehler corollary; no novelty, aggregate randomized coverage, continuous or strategic robustness, physical preference-channel validation, or ASMP-9 resolution.",
+  "commands": {
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/test_direct_map_completeness.py ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/test_verifier_v0_52.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/verify_theorems_v0_52.py"
+  },
+  "commits": {
+    "development": "d8aa67e5b43a7a937dc1e95afef19a434b0f86df",
+    "registration": "96190e52282bff2353119d50b5352241b22a45f8",
+    "verification_result": "9a99438a3402ee774e03724f512b3b926a84519d",
+    "verification_source": "0b9b82f6629c9bd53f16d8bc594b872668e51ce8"
+  },
+  "gates": {
+    "C0": true,
+    "D0": true,
+    "H0": true,
+    "O0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "U0": true,
+    "X0": true
+  },
+  "protocol_id": "asmp9-deterministic-direct-map-completeness-v0.52",
+  "registration_sha256": "f84ac8f00cf93a59992f5ad01a3e0e3edfb3129b223bd15714ede691c7c4e0ae",
+  "resource": {
+    "elapsed_seconds": 5.8549900999933016,
+    "peak_working_set_bytes": 22413312,
+    "worker_processes": 1
+  },
+  "result": {
+    "candidate_direct_map_count": 3996,
+    "consistent_order_check_count": 3342,
+    "global_optimum_check_count": 1480,
+    "mismatch_count": 0,
+    "strict_dominance_check_count": 2454,
+    "table_count": 148,
+    "valid_direct_map_count": 1494
+  },
+  "schema": "asmp9-v0.52-run-receipt-v1",
+  "status": "deterministic_direct_map_completeness_verified",
+  "tests": {
+    "expected": 11,
+    "passed": 11
+  },
+  "verification_sha256": "7fc7bcc2fe98870ab5e302887529b5a1ac1264bcd2f484143911921076b7eb4a",
+  "version": "0.52"
+}

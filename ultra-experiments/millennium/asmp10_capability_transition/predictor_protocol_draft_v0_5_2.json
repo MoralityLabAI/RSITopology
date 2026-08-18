@@ -1,0 +1,56 @@
+{
+  "schema_version": "asmp10_predictor_protocol_draft_v0_5_2",
+  "status": "draft_not_registered_not_authorized",
+  "amends": "predictor_protocol_draft_v0_5_1.json",
+  "primary_prediction_object": {
+    "type": "three_way_categorical",
+    "classes": [
+      "no_adjudicable_horizon_stable_transition",
+      "early_horizon_stable",
+      "delayed_horizon_stable"
+    ],
+    "proper_scoring_rule": "grouped_heldout_multinomial_log_loss",
+    "secondary_only": [
+      "transition_time_interval_coverage",
+      "multistate_hazard_curve"
+    ]
+  },
+  "state_machine_amendment": {
+    "entry_logic": "test_accuracy>=0.90 AND test_loss<=0.50",
+    "exit_logic": "test_accuracy<0.80 OR test_loss>0.75",
+    "entry_dwell_steps": 500,
+    "primary_exit_dwell_steps": 300,
+    "primary_cadence_steps": 25,
+    "entry_dwell_evaluations": 21,
+    "exit_dwell_evaluations": 13,
+    "rationale": "A stability claim must meet both performance requirements; sustained failure of either revokes it. Exit dwell exceeds the v0.4 interval-censored duration bound."
+  },
+  "dwell_validity": {
+    "exit_dwell_sensitivity_steps": [250, 300, 400],
+    "require_identical_primary_class": true,
+    "require_identical_event_kind_order": true,
+    "require_identical_final_state": true,
+    "failure_instrument_status": "dwell_fragile",
+    "failure_gate_decision": "not_evaluated"
+  },
+  "cadence_validity": {
+    "evaluation_spacing_steps": [25, 50, 100],
+    "exit_dwell_steps": 300,
+    "failure_instrument_status": "cadence_dependent",
+    "failure_gate_decision": "not_evaluated"
+  },
+  "task_scope": {
+    "family": "modular_addition_only",
+    "require_complete_published_progress_baseline_everywhere": true,
+    "missing_baseline_instrument_status": "incomplete_baseline",
+    "missing_baseline_gate_decision": "not_evaluated",
+    "weaker_baseline_fallback_allowed": false
+  },
+  "power_estimand": "paired_seed_grouped_multinomial_log_loss_improvement_B2_plus_B3_over_B2",
+  "checkpoint_audit": {
+    "v0_4_checkpoint_count": 6,
+    "all_checkpoint_steps": [15000],
+    "intermediate_replay_available": false,
+    "excursion_duration_observation": "interval_censored_below_200_steps"
+  }
+}

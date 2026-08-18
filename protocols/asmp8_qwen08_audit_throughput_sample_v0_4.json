@@ -1,0 +1,60 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-audit-throughput-sample-v0-4-20260723",
+  "amends": "protocols/asmp8_qwen08_audit_throughput_sample_v0_3.json",
+  "amendment_reason": "The v0.3 foreground wrapper was externally interrupted during model load. The measurement contract and caps are unchanged; this run uses a detached hidden wrapper so chat steering cannot terminate it.",
+  "purpose": "Measure compute-side forward-equivalent audit throughput; not a scientific outcome gate.",
+  "measurement_contract": {
+    "audit_unit": "one Qwen 0.8B forward pass plus final-token residual RMS reduction",
+    "sample_count": 1000,
+    "warmup_count": 20,
+    "batch_size": 4,
+    "max_length": 512,
+    "checkpoint_every_audits": 100,
+    "load_mode": "fp16",
+    "generation": false,
+    "gradients": false,
+    "weights_modified": false
+  },
+  "resource_caps": {
+    "memory_mb": 4096,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 900,
+    "gpu_allowance_mb": 3440,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_audit_throughput_sample_v0_4"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_audit_throughput_sample_v0_4\\wrapper",
+  "checkpoint_strategy": "atomic progress.json and append-only events.jsonl every 100 measured audits",
+  "exact_inner_command": [
+    "D:\\Research_Engine\\.venv-train\\Scripts\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\benchmark_qwen08_audit_throughput.py",
+    "--model-path",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B-Base-HF",
+    "--prompt-manifest",
+    "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_audit_throughput_sample_v0_4",
+    "--sample-count",
+    "1000",
+    "--warmup-count",
+    "20",
+    "--batch-size",
+    "4",
+    "--max-length",
+    "512",
+    "--checkpoint-every",
+    "100",
+    "--gpu-allowance-mb",
+    "3440",
+    "--load-mode",
+    "fp16"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  }
+}

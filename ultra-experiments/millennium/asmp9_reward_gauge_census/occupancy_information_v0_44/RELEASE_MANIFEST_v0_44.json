@@ -1,0 +1,70 @@
+{
+  "files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": {
+      "bytes": 24889,
+      "sha256": "8830b3b3ddd44b57d12e4de7a5487ed57b077fc4558af74864691037bd35d6ae"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_44.md": {
+      "bytes": 6237,
+      "sha256": "48d20ffc12365d5f802ace2d177ae6ea5b3d99bc6f5fb3ae45f5d40686ba5117"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PRIOR_ART_GATE_v0_44.md": {
+      "bytes": 3136,
+      "sha256": "2e200e9eb98e32916453b1deb35366f30740435df09a713cc9f197343d0f5e19"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PROTOCOL_v0_44.md": {
+      "bytes": 3370,
+      "sha256": "1cee808700925cc90c47846ceef09a5467bb8f62024e26b9c5a84f312b5cecab"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/RESULT_v0_44.md": {
+      "bytes": 5086,
+      "sha256": "d46b6364f587c9650a20df708f537bafcc6b14d50cb7e2a2f6696655e1a63680"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/RUN_RECEIPT_v0_44.json": {
+      "bytes": 1111,
+      "sha256": "0423da67276a41194d1ecf25a55b99a86384b556276d74ee556a01dac0adda01"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/THEOREM_DRAFT_v0_44.md": {
+      "bytes": 5694,
+      "sha256": "1b20710fe54c48b784fb30e78e7311147d4317e610303dde8d0b22ca080b5649"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/VERIFY_RESULT_v0_44.json": {
+      "bytes": 3832,
+      "sha256": "2913d3e405cdc0a162c073f8edc91fb3a50bfa1cbed2326f9b7d30dd4772eddd"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/artifacts_v0_44/RESULT_v0_44.json": {
+      "bytes": 42321,
+      "sha256": "76375faf5bad1d8c93fd78f2293fa0d9c79680ea8f8c945f476057d34b24cbf5"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/build_release_v0_44.py": {
+      "bytes": 4033,
+      "sha256": "c8400003df43b47bc1ed71355652f43c7509d02562096e8c3839ff7be84a1b9b"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/environment_lock_v0_44.json": {
+      "bytes": 182,
+      "sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py": {
+      "bytes": 15662,
+      "sha256": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/registration_v0_44.json": {
+      "bytes": 3582,
+      "sha256": "067690ee28cc38f69b70d8581f12fafaf1194a66b6b0b82d1af5854f774746e5"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/run_confirmation_v0_44.py": {
+      "bytes": 16920,
+      "sha256": "719c407da887b101dab1a531859121a9ab287139d01c79e3cd2d3e8294cc9595"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/test_occupancy_information.py": {
+      "bytes": 8948,
+      "sha256": "6956b3b2475e90b863be35221cd1a6806e7e443d829371c421bd7df9b002394e"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/verify_result_v0_44.py": {
+      "bytes": 2651,
+      "sha256": "d31543398dcd5e0fce77bf6d7c52fbf95a4e86ca5608eeb40ffbbed7e8babb03"
+    }
+  },
+  "protocol_id": "asmp9-policy-specific-information-v0.44",
+  "version": "0.44"
+}

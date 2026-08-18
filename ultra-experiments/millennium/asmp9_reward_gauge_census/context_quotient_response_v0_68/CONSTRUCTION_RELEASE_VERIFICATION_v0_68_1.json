@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "Exact finite-registry nuisance-quotiented expressed response contrasts in one frozen model only; no random-sample inference, value, reward-orbit, or ASMP-9 resolution claim.",
+  "decision": "local_and_global_confirmation_authorized",
+  "global_intersection": [
+    0.7343614199407966,
+    0.750013550256881
+  ],
+  "manifest_files_checked": 18,
+  "mean_scenario_mean_specificity": 0.9381510370100538,
+  "median_specificity_minimum_directed": 0.3203125,
+  "records": 528,
+  "scenario_successes": 12,
+  "scenarios": 12,
+  "schema_version": "asmp9_context_quotient_release_verification_v0_68_1",
+  "semantic_inputs": 264,
+  "status": "passed"
+}

@@ -1,0 +1,152 @@
+{
+  "binding_checks": {
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/CONDITIONING_COUNTEREXAMPLE_v0_12.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/DEVELOPMENT_CENSUS_v0_12.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/DEVELOPMENT_NOTE_v0_12.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/DEVELOPMENT_RECEIPT_v0_12.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/PRIOR_ART_GATE_v0_12.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/PROTOCOL_v0_12.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/THEOREM_DRAFT_v0_12.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/THEOREM_v0_12.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/development_census.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/environment_v0_12.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/exact_certificate.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/experiment.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/protocol_v0_12.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/robust_gluing.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/test_experiment.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/test_robust_gluing.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/test_run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/verify_result.py": true,
+    "head_is_registration_commit": true,
+    "implementation_is_ancestor": true,
+    "tracked_tree_clean": true
+  },
+  "claim_boundary": "Finite Euclidean nested-subspace and normalized linear-query theorem with a synthetic graph census; not finite-sample preference estimation, norm selection, latent-context inference, human/model evidence, or ASMP-9 resolution.",
+  "elapsed_seconds": 4.329161800007569,
+  "exact_witness": {
+    "certificate": {
+      "context_count": 2,
+      "edge_count": 6,
+      "item_count": 4,
+      "local_rank": 5,
+      "obstruction_dimension": 2,
+      "robust_amplification_squared": "1",
+      "robust_normalized_gram": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "robust_sigma_min_squared": "1",
+      "robust_total_support": 8,
+      "shared_rank": 3,
+      "short_amplification_squared": "3/2",
+      "short_normalized_gram": [
+        [
+          "2/3",
+          "0"
+        ],
+        [
+          "0",
+          "2/3"
+        ]
+      ],
+      "short_sigma_min_squared": "2/3",
+      "short_total_support": 6
+    },
+    "exact_match": true,
+    "expected": {
+      "context_count": 2,
+      "edge_count": 6,
+      "item_count": 4,
+      "local_rank": 5,
+      "obstruction_dimension": 2,
+      "robust_amplification_squared": "1",
+      "robust_normalized_gram": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "robust_sigma_min_squared": "1",
+      "robust_total_support": 8,
+      "shared_rank": 3,
+      "short_amplification_squared": "3/2",
+      "short_normalized_gram": [
+        [
+          "2/3",
+          "0"
+        ],
+        [
+          "0",
+          "2/3"
+        ]
+      ],
+      "short_sigma_min_squared": "2/3",
+      "short_total_support": 6
+    }
+  },
+  "fresh_cells": {
+    "actual_count": 512,
+    "context_count": 2,
+    "count": 512,
+    "cycle_basis_mismatch_count": 0,
+    "dimension_distribution": {
+      "2": 70,
+      "3": 271,
+      "4": 171
+    },
+    "dimension_mismatch_count": 0,
+    "edges_per_context": 4,
+    "expected_obstruction_dimensions": [
+      2,
+      3,
+      4
+    ],
+    "item_count": 5,
+    "local_projection_mismatch_count": 0,
+    "locally_scalar_gluing_positive_count": 512,
+    "maximum_amplification_ratio": 1.732050807568877,
+    "normalized_bound_mismatch_count": 0,
+    "orthonormal_mismatch_count": 0,
+    "pythagorean_mismatch_count": 0,
+    "radius_optimality_mismatch_count": 0,
+    "seed": 1201201,
+    "shared_control_mismatch_count": 0,
+    "shortest_suboptimal_count": 103,
+    "tolerance": 1e-08,
+    "underquery_mismatch_count": 0
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_exact_counterexample": true,
+    "G2_nested_geometry": true,
+    "G3_exact_repair_radius": true,
+    "G4_query_count_lower_bound": true,
+    "G5_orthonormal_optimum": true,
+    "G6_fresh_coverage": true,
+    "G7_simple_cycle_basis": true,
+    "G8_conditioning_separation_liveness": true,
+    "G9_resource_envelope": true
+  },
+  "protocol_id": "ASMP-9-ROBUST-CONTEXT-GLUING-v0.12",
+  "registration_commit": "db63b4757ce6d6404ae1aae9d304b34b2035ce27",
+  "registration_sha256": "fc0e88228a44d9b5f4c5d6f76d2f63130725cf0eddc752926e257ab7a17f4832",
+  "resource_observation": {
+    "gpu_used": false,
+    "maximum_ram_bytes": 2147483648,
+    "maximum_wall_seconds": 120,
+    "peak_resident_bytes": 32493568
+  },
+  "verdict": "robust_context_gluing_geometry_verified_v0_12"
+}

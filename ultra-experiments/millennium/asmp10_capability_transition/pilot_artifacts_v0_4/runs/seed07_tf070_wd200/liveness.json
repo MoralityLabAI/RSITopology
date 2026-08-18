@@ -1,0 +1,31 @@
+{
+  "delay_steps": 300,
+  "delayed_transition_candidate": false,
+  "device": "cuda",
+  "final_metrics": {
+    "gradient_norm": 3.3273910773681354,
+    "step": 15000,
+    "test_accuracy": 1.0,
+    "test_loss": 0.054038576781749725,
+    "train_accuracy": 1.0,
+    "train_loss": 0.043771181255578995
+  },
+  "geometry": {
+    "feature_step": 500,
+    "output_weight_stable_rank": 12.67075167683947,
+    "parameter_l2": 13.86354214510737,
+    "representation_effective_rank": 16.22674806102644,
+    "token_embedding_stable_rank": 9.892999579448464
+  },
+  "memorization_step": 100,
+  "metric_count": 151,
+  "peak_cuda_allocated_mb": 66.103515625,
+  "peak_cuda_reserved_mb": 92.0,
+  "run_id": "seed07_tf070_wd200",
+  "seed": 7,
+  "status": "completed",
+  "steps_completed": 15000,
+  "train_fraction": 0.7,
+  "transition_step": 400,
+  "weight_decay": 2.0
+}

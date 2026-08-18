@@ -1,0 +1,20 @@
+{
+  "check_count": 11,
+  "checks": {
+    "all_gates_pass": true,
+    "formula_direct_orientation_census": true,
+    "formula_rows": true,
+    "gate_universe": true,
+    "optimizer_rows": true,
+    "protocol_hash": true,
+    "registration_hash": true,
+    "resource_caps": true,
+    "result_hash": true,
+    "sealed_files": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "fc489bac8d148549b5f627e5d60ec935387bf1e6fa494306b1e2fe9f49edc151",
+  "result_sha256": "1c7bfcd79fc2574a5055729e38b62f5eeb92d8834fab6777a6ba1116d3e162c5",
+  "verifier_sha256": "f7167555495208c6c2bb9a30079146bd1d8e4f00112a6a35ea3c0bb4e26b1f1e"
+}

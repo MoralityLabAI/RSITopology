@@ -1,0 +1,101 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-WITNESS-TRANSPARENT-NORMAL-FORM-v2.5",
+  "file_count": 23,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_encoding_invariance_v2_0/ENCODING_INVARIANCE_THEOREM_v2_0.md": {
+      "bytes": 6929,
+      "sha256": "149B10B278FE41C9EDB8D37A9CAF5719C48A14E66F85570F54A6A8C23CAE0E82"
+    },
+    "../asmp3_encoding_invariance_v2_0/RELEASE_MANIFEST_v2_0.json": {
+      "bytes": 3620,
+      "sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075"
+    },
+    "../asmp3_encoding_invariance_v2_0/artifacts/encoding_invariance_v2_0.json": {
+      "bytes": 34866,
+      "sha256": "0EFF1BB9F80AE281EFA29E151FD87FA0200CC62A651F1B5E5E777BED5A44C191"
+    },
+    "../asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md": {
+      "bytes": 4301,
+      "sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313"
+    },
+    "../asmp3_protocol_quantifier_v0_7/RELEASE_MANIFEST_v0_7.json": {
+      "bytes": 2507,
+      "sha256": "E93DA3ACD8E96B93B0EFAED5D22142AFDFBC27E269998644FEC1DF234FD46D23"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "../asmp3_randomized_finder_amplification_v2_4/RANDOMIZED_FINDER_AMPLIFICATION_THEOREM_v2_4.md": {
+      "bytes": 6965,
+      "sha256": "E97F1F96590DA68F1606392918966E16E6653E473CDC9CB7A7F81D4FBCDF9A7F"
+    },
+    "../asmp3_randomized_finder_amplification_v2_4/RELEASE_MANIFEST_v2_4.json": {
+      "bytes": 3699,
+      "sha256": "CC1A6F4831499AE522A54EA00A15A521D5CF8249EFEBBA9F44B732D50F51862A"
+    },
+    "../asmp3_randomized_finder_amplification_v2_4/artifacts/randomized_finder_amplification_v2_4.json": {
+      "bytes": 451719,
+      "sha256": "F1FA19490327833AFDA5A877D4B2161D5C6517ADC9D99136BADF3A1F772C7821"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_5.md": {
+      "bytes": 1834,
+      "sha256": "359CB131341293027BE3213E9C569F400FEF22764A962E1DB4F37F0D2908A726"
+    },
+    "README.md": {
+      "bytes": 802,
+      "sha256": "252309B6F0C4C9B8AD11D3EF0F428D4B032A1A6C19E3928AF465A12D103F4162"
+    },
+    "WITNESS_TRANSPARENT_NORMAL_FORM_THEOREM_v2_5.md": {
+      "bytes": 8540,
+      "sha256": "44E1936EF0A36E605311BD1A5977D3D555AE4CDE7F60D16D4FA4CAE73EFDB27B"
+    },
+    "artifacts/witness_transparent_normal_form_v2_5.json": {
+      "bytes": 84594,
+      "sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945"
+    },
+    "artifacts/witness_transparent_normal_form_verification_v2_5.json": {
+      "bytes": 936,
+      "sha256": "34FF1094D5EFC850EE5A5096954AC6128752A1D133FE45F40DF7857B1EDFBC80"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3089,
+      "sha256": "18D079D2ED80F82BEA681C2F2B02B35FC297E8DE24258296F610DBA6E184B0D1"
+    },
+    "run_witness_transparent_normal_form.py": {
+      "bytes": 880,
+      "sha256": "B016762D0CB35E02363572FF1B1727DE821DD4DDF495548C520FCD2651A4CFEF"
+    },
+    "test_witness_transparent_normal_form.py": {
+      "bytes": 4770,
+      "sha256": "AE3D3862B1B88D7D75167580189E0D2C0CEBBA2CC4DBD8574B0B7DAC225BE159"
+    },
+    "verify_witness_transparent_normal_form.py": {
+      "bytes": 17660,
+      "sha256": "11B9D8C95A09F4B2DDC2C6A190D362901630ED5BE0335C12AE71B2A6CE2BADAC"
+    },
+    "witness_transparent_normal_form.py": {
+      "bytes": 24746,
+      "sha256": "051C3A2EE2B682C815E7598B254A6DB5C9F0844BE61B977CF8BDBC24311A869D"
+    }
+  },
+  "release_status": "conditional_protocol_to_finder_normal_form_and_literal_two_sided_separation",
+  "schema_version": "asmp3_witness_transparent_normal_form_release_v2_5"
+}

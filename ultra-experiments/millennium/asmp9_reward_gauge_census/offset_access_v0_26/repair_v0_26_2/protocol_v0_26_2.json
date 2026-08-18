@@ -1,0 +1,91 @@
+{
+  "claim_boundary": "This is a resource-instrumentation repair of the registered v0.26.1 mechanical re-adjudication. It imports the v0.26.1 adjudication logic byte-for-byte and changes only the Windows peak-memory helper by declaring the native handle argument types already used by the successful v0.26 runner. It changes no scientific cell, formula, threshold, source result, original v0.26 verdict, or v0.26.1 unavailability status. It may establish the offset-access boundary only if the immutable v0.26 science passed, the original failure remains isolated to G9, the structural claim and prior-art checks pass, and all v0.26.2 gates pass. It may not claim that v0.26 passed, that v0.26.1 produced an adjudication, that v0.26.2 is a fresh scientific run, that the mathematics is novel, that ordinary comparisons expose cardinal offsets, or that ASMP-9 is resolved.",
+  "gate_ids": [
+    "R0_repair_registration_binding",
+    "R1_immutable_source_binding",
+    "R2_original_scientific_gates",
+    "R3_original_failure_isolation",
+    "R4_structural_prior_art_gate",
+    "R5_claim_boundary",
+    "R6_derived_adjudication",
+    "R7_resource_and_scope"
+  ],
+  "protocol_id": "ASMP-9-OFFSET-ACCESS-v0.26.2-RUNNER-REPAIR",
+  "required_prior_art_identifiers": [
+    "ASMP-9-v0.8",
+    "arXiv:2405.02612",
+    "doi:10.1016/0167-2681(90)90086-S",
+    "doi:10.1093/0199248915.003.0015",
+    "doi:10.1093/biomet/asm029",
+    "doi:10.1287/moor.2018.0938"
+  ],
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "source_artifacts": {
+    "failed_repair_execution_note": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/EXECUTION_NOTE_v0_26_1.md",
+      "sha256": "92bab8cebebd5ea1528f2872c1646d279ab203d4e04d7ab22548fd8f1b07a763"
+    },
+    "failed_repair_protocol": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/protocol_v0_26_1.json",
+      "sha256": "e006194a23a5758eb08396d8278df7be9beb8108f7ca34d13a99047e6ad33f27"
+    },
+    "failed_repair_registration": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/registration_v0_26_1.json",
+      "sha256": "5352b253bb2e5fe05db4c3cd3332f3bee175daf4858e83826e776535a38e7d73"
+    },
+    "independent_verification": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/artifacts_v0_26/independent_verification_v0_26.json",
+      "sha256": "9e2f8589d020052e1de2a57e4ab760ec03c05272d1d715b91bd8e143a9d05d8d"
+    },
+    "original_registration": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/registration_v0_26.json",
+      "sha256": "50cf84a1921ad943adc3d6fb65c62e34939ea6621a93c775c8f31c4db917c52e"
+    },
+    "postrun_note": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/POSTRUN_NOTE_v0_26.md",
+      "sha256": "87d0ad30edf392d1ea3d0c247b3a4eba93c61f46389f0af6c7b7a6f1bd18784c"
+    },
+    "prior_art_audit": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/PRIOR_ART_GATE_v0_26.md",
+      "sha256": "7e1fdb042bb9e88cc1c55b61d6c7851098957e975cc73f99ee5741c1740f31e6"
+    },
+    "protocol": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/protocol_v0_26.json",
+      "sha256": "24dfb1c80beca86b4ba39410e6b94d592b61fbe8585568d4d7c966734a199c49"
+    },
+    "result": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/artifacts_v0_26/result_v0_26.json",
+      "sha256": "e21ee3222858f31356ba2c3c0676f3afaea97f3aea607d51895c4039a418c15a"
+    },
+    "run_receipt": {
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/artifacts_v0_26/run_receipt_v0_26.json",
+      "sha256": "d18645a03628327dc460023e5e5b285408b14d9a64edda2c4a325a3367a23d3f"
+    }
+  },
+  "structured_claims": {
+    "allowed": [
+      "V0.26.2 is a resource-runner repair over the registered v0.26.1 mechanical adjudication and prospective v0.26 scientific data.",
+      "The v0.26 mathematical checks may support the offset-access theorem only if their original gates and independent recomputations all passed.",
+      "The repaired prior-art gate checks structured identifiers and frozen claim lists rather than typography in explanatory prose."
+    ],
+    "forbidden": [
+      "V0.26 itself passed.",
+      "V0.26.1 generated fresh scientific evidence.",
+      "V0.26.1 produced an adjudication result.",
+      "V0.26.2 generated fresh scientific evidence.",
+      "The repair changed any scientific threshold, cell, result, or original verdict.",
+      "Classical preference elicitation, bisection, active learning, or stochastic root finding is new.",
+      "Ordinary preference comparisons expose known cardinal reward offsets.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.26.2",
+  "verdict_map": {
+    "all_gates_pass": "offset_access_boundary_established_by_runner_repair_v0_26_2",
+    "any_gate_fails": "offset_access_boundary_not_established_v0_26_2"
+  }
+}

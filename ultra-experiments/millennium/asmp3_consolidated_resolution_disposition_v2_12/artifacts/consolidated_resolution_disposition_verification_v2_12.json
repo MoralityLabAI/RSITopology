@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_source_hash_manifest_status_disposition_and_external_gate_audit",
+  "checks": {
+    "V0_schema_parent_status": true,
+    "V1_all_source_hashes_reconstructed": true,
+    "V2_all_twelve_package_manifests_rehashed": true,
+    "V3_all_18_requirement_statuses_match": true,
+    "V4_literal_two_sided_refutation_reconstructed": true,
+    "V5_online_one_shot_and_minimality_progress_reconstructed": true,
+    "V6_five_remaining_blockers_are_non_grid": true,
+    "V7_external_gate_reconstructed_as_zero_of_two": true,
+    "V8_all_10_producer_gates_true": true,
+    "V9_claim_boundary_forbids_normative_or_acceptance_overclaim": true
+  },
+  "claim_boundary": "This checker validates the internal evidence disposition. It does not supply normative authority, unrestricted classification, or external expert acceptance.",
+  "passed": true,
+  "schema_version": "asmp3_consolidated_resolution_disposition_verification_v2_12"
+}

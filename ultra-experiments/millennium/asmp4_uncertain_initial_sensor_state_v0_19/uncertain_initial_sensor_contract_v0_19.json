@@ -1,0 +1,22 @@
+{
+  "schema_version": "asmp4_uncertain_initial_sensor_contract_v0_19",
+  "base_plant": "v0.13 positive-volume collar with arbitrary two-class q disturbance",
+  "initial_state": {
+    "parameter": "registered nonempty set I subseteq S",
+    "knowledge": "controller knows I but not the adversarially selected actual initial sensor state",
+    "start_belief": "B_0=I"
+  },
+  "transducer": {
+    "parameter": "finite S, finite raw Y, and nonempty support E(s,z) subseteq Y x S",
+    "charging": "raw output word and normal cell are separately injective",
+    "normal_channel": "depends only on n and cannot encode initial sensor state, mode, or event",
+    "safety_quantifier": "every initial sensor state in I, disturbance word, and supported event word"
+  },
+  "theorem": {
+    "feasibility": "every reachable transition from B_0=I has singleton current q set",
+    "language_count": "L_T(I)=e_I^T A_I^T 1",
+    "finite_read_words": "L_T(I) ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "asymptotic_region": "[1+log2(rho(A_I)),infinity) x [2,infinity)"
+  }
+}

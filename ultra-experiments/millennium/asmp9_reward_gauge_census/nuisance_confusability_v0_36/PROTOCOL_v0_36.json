@@ -1,0 +1,84 @@
+{
+  "schema_version": "asmp9_nuisance_confusability_protocol_v0_36",
+  "status": "prospective_protocol_not_run",
+  "outcomes_consumed": false,
+  "scientific_question": "When an unknown response nuisance is shared across interventions, is the correct ASMP-9 identifiability object a confusability graph rather than a reward-gauge orbit?",
+  "model": {
+    "parameter_set": "Theta={0,1,2}",
+    "nuisance_set": "H={0,1}",
+    "observation_alphabet": "Y={0,1}",
+    "query_tables": "deterministic maps Theta x H -> Y",
+    "decision_target": "identity on Theta"
+  },
+  "definitions": {
+    "shared_signature": "S_A(theta)={(f_q(theta,h))_{q in A}:h in H}",
+    "reset_signature": "R_A(theta)=product_{q in A}{f_q(theta,h):h in H}",
+    "confusable": "theta~theta' iff their registered signature sets intersect",
+    "uniform_decision_identification": "a decoder returns d(theta) for every theta and every admitted nuisance"
+  },
+  "theorems_under_test": [
+    "A uniform decision decoder exists iff no confusability edge joins parameters with different declared decisions.",
+    "Confusability is reflexive and symmetric but need not be transitive; a nontransitive confusability relation cannot be the orbit relation of any group action.",
+    "Adding queries under one shared nuisance can only delete confusability edges.",
+    "Shared-nuisance signatures are subsets of reset-nuisance signatures, so resetting the nuisance cannot improve zero-error identification."
+  ],
+  "enumeration": {
+    "one_query_primary": {
+      "theta_count": 3,
+      "nuisance_count": 2,
+      "alphabet_count": 2,
+      "tables": 64
+    },
+    "two_query_primary": {
+      "ordered_table_pairs": 4096,
+      "nuisance_modes": [
+        "shared",
+        "reset"
+      ],
+      "decision_maps_checked_per_channel": 27
+    },
+    "minimality_controls": [
+      "theta_count<=2",
+      "nuisance_count=1",
+      "alphabet_count=1"
+    ]
+  },
+  "planted_witness": {
+    "q0": "1{theta>=h}, with h in {1,2}",
+    "q1": "1{theta>=3-h}, with the same h",
+    "predictions": [
+      "Each query alone has the nontransitive path confusability graph 0--1--2.",
+      "The pair identifies theta exactly when h is shared.",
+      "The pair does not identify theta when h resets independently."
+    ]
+  },
+  "fixed_gates": [
+    {
+      "gate": "N0",
+      "condition": "The planted one-query relation is reflexive, symmetric, nontransitive, and has path edge bits 101 in pair order (0,1),(0,2),(1,2).",
+      "failure": "nontransitive_witness_failed"
+    },
+    {
+      "gate": "M0",
+      "condition": "No smaller theta, nuisance, or alphabet cardinality in the registered controls admits a nontransitive relation.",
+      "failure": "minimality_failed"
+    },
+    {
+      "gate": "D0",
+      "condition": "For every registered table and table pair, the edge criterion agrees exactly with the direct transcript-fiber decoder criterion.",
+      "failure": "decision_theorem_failed"
+    },
+    {
+      "gate": "Q0",
+      "condition": "For every table pair, adding the second shared query deletes no distinguishability and shared confusability is a subset of reset confusability.",
+      "failure": "query_monotonicity_failed"
+    },
+    {
+      "gate": "W0",
+      "condition": "The mirrored-threshold pair identifies under a shared nuisance, fails under nuisance reset, and at least one table pair in the full census has the same shared-only identification pattern.",
+      "failure": "shared_nuisance_calibration_witness_failed"
+    }
+  ],
+  "decision_rule": "All five gates must pass. Any failure stops the bounded theorem seed without changing the definitions.",
+  "claim_boundary": "This is an exact finite deterministic compound-channel theorem seed. Confusability graphs and zero-error decoding are classical. The result may refine ASMP-9's maximal-invariance obligation, but it does not characterize general stochastic demonstrators, prove a new zero-error coding theorem, identify a real reward, or resolve ASMP-9."
+}

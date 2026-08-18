@@ -1,0 +1,101 @@
+{
+  "caps_confirmed_by_user": true,
+  "capture_contract": {
+    "activation_sites": [
+      "model.layers.11",
+      "model.layers.15",
+      "model.layers.19",
+      "model.layers.23"
+    ],
+    "generation": false,
+    "gradients": false,
+    "state_id": "shuffled_vpd_policy_qlora",
+    "weight_mutation": false
+  },
+  "capture_parameters": {
+    "batch_size": 4,
+    "output_dir": "D:\\Research_Engine\\runs\\qwen08_holonomy_shuffled_capture_v0_1",
+    "quantization": "4bit"
+  },
+  "checkpoint_strategy": "one_state_site_context_shard_geometry_half",
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+    "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+  },
+  "environment_lock": {
+    "gpu_static": [
+      "NVIDIA GeForce RTX 3050 Laptop GPU, 555.99, 4096"
+    ],
+    "packages": {
+      "numpy": "2.4.3",
+      "scikit-learn": "1.7.1",
+      "scipy": "1.16.2",
+      "torch": "2.5.1+cu121",
+      "transformers": "5.3.0"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_executable": "C:\\Python311\\python.exe",
+    "python_version": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]"
+  },
+  "exact_inner_command": [
+    "C:\\Python311\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\capture_qwen_holonomy_state.py",
+    "--protocol",
+    "C:\\projects\\RSITopology\\protocols\\qwen_holonomy_causal_transfer_v0_1.json",
+    "--geometry-manifest",
+    "C:\\projects\\RSITopology\\protocols\\godel_globes_prompt_manifest_v0_1.json",
+    "--authorization",
+    "C:\\projects\\RSITopology\\artifacts\\qwen08_holonomy_capture_v0_1\\shuffled_authorization.json",
+    "--state-id",
+    "shuffled_vpd_policy_qlora",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\qwen08_holonomy_shuffled_capture_v0_1",
+    "--batch-size",
+    "4",
+    "--quantization",
+    "4bit"
+  ],
+  "geometry_manifest_sha256": "19dc2bbe38ab959036ab1e437e10536e0b4dec12792afccf7134d17ffc865794",
+  "hard_cap_validation_receipt": {
+    "path": "C:\\projects\\RSITopology\\artifacts\\hard_cap_validation\\qwen_holonomy_jobobject_v0_1\\hard_cap_validation_receipt.json",
+    "sha256": "ff15b811d2c2564d44baa840557e3552be52c824ae122f23aa9c03bbfd5fba21"
+  },
+  "hard_cap_validation_status": "passed",
+  "hard_cap_wrapper": {
+    "path": "C:\\projects\\RSITopology\\scripts\\run_qwen_holonomy_jobobject.ps1",
+    "sha256": "d285b5fb3dbc86db5d1d9a05355238936d14056274a01a14025fbb98375d5958"
+  },
+  "implementation_commit": "903a4d4010d949fe66e2bdd9679fa7fe7ac5518d",
+  "protocol_sha256": "a56473f6628887fb7dc7df43dc7660010be4f95a526d6587d0d6ec95ebabe872",
+  "remote_refs_containing_commit": [
+    "origin/feat/spectral-bundle-v0.3-bifiltration"
+  ],
+  "resource_caps": {
+    "checkpoint_every_seconds": 300,
+    "cpu_percent": 50,
+    "gpu_allowance_mb": 3440,
+    "io_mb_s": 750,
+    "memory_mb": 6144,
+    "swap_bytes": 0,
+    "timeout_seconds": 3600
+  },
+  "run_id": "qwen08-holonomy-shuffled-capture-v01",
+  "schema_version": "qwen_holonomy_state_capture_authorization_v0_1",
+  "source_paths": {
+    "capture_entrypoint": "C:\\projects\\RSITopology\\scripts\\capture_qwen_holonomy_state.py",
+    "causal_prompt_module": "C:\\projects\\RSITopology\\rsi_topology\\qwen_holonomy_causal.py",
+    "godel_capture_module": "C:\\projects\\RSITopology\\rsi_topology\\godel_capture.py",
+    "preparation_entrypoint": "C:\\projects\\RSITopology\\scripts\\prepare_qwen_holonomy_causal.py",
+    "state_capture_module": "C:\\projects\\RSITopology\\rsi_topology\\qwen_state_capture.py"
+  },
+  "source_sha256": {
+    "capture_entrypoint": "d1c8b468da4807192273d5cbd16f50810e296e4d96b211ac88793d4eb935f551",
+    "causal_prompt_module": "8c7a7cbd67e5a996831662f1c7dc2f0b4e8349c71b3b3c49c6fd1a59084e3c5d",
+    "godel_capture_module": "0ec363034c4122ae25ffc0bf029140dbc78e7e88598d5d17e0e9846924e712f3",
+    "preparation_entrypoint": "ecfcd5fd86d0288d3b116ddf153ceef4613a035263e210b937df6048aa14f819",
+    "state_capture_module": "a5d593ef7cff05399f0e4449b4c698decefec297350d824f901375981307c16f"
+  },
+  "state_id": "shuffled_vpd_policy_qlora",
+  "status": "authorized_for_qwen_holonomy_state_capture",
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\qwen08_holonomy_shuffled_capture_v0_1\\_wrapper"
+}

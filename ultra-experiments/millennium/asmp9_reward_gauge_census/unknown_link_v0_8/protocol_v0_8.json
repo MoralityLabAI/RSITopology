@@ -1,0 +1,33 @@
+{
+  "protocol_id": "ASMP-9-UNKNOWN-LINK-v0.8",
+  "known_link": {
+    "seed": 98081,
+    "count": 32768,
+    "minimum_items": 2,
+    "maximum_items": 16
+  },
+  "primitive_shell": {
+    "minimum_last_coordinate": 65,
+    "maximum_last_coordinate": 128
+  },
+  "ambiguity_pairs": {
+    "seed": 98082,
+    "count": 16384,
+    "maximum_gap": 4096
+  },
+  "two_item_controls": {
+    "seed": 98083,
+    "count": 8192
+  },
+  "order_mismatch_controls": {
+    "seed": 98084,
+    "count": 8192,
+    "maximum_gap": 4096
+  },
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_ram_gib": 2,
+    "maximum_wall_seconds": 300
+  },
+  "success_verdict": "unknown_link_finite_design_nonidentifiability_verified"
+}

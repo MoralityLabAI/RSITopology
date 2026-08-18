@@ -1,0 +1,86 @@
+{
+  "file_count": 16,
+  "files": [
+    {
+      "bytes": 6521,
+      "path": "DEVELOPMENT_CENSUS_v0_55.json",
+      "sha256": "052e29a4080f44b2a303dbda9f752695aae8ae0524798dc057fb68cd42b85695"
+    },
+    {
+      "bytes": 2289,
+      "path": "DEVELOPMENT_RESULT_v0_55.md",
+      "sha256": "4b2ae9f32e21e02761e2be862c499b3ec5c089c24968fff5ab0503f5bdb3ae76"
+    },
+    {
+      "bytes": 2727,
+      "path": "PRIOR_ART_GATE_v0_55.md",
+      "sha256": "bbb16ac46ec31d44205758bc273fb808312968f455ae38ed24e1d58bbed16ffa"
+    },
+    {
+      "bytes": 533,
+      "path": "README.md",
+      "sha256": "efe529d8302ac0c773e0512f61df5b9a06135b4ed9151e508a3093bcb5f791d0"
+    },
+    {
+      "bytes": 3382,
+      "path": "register_verification_v0_55.py",
+      "sha256": "bd98a24297d9b55350cc26aef9bab98f87f6d1f044b4689f7372601069c95435"
+    },
+    {
+      "bytes": 5751,
+      "path": "RESULT_v0_55.md",
+      "sha256": "48565222903b93b988bab0a91c906c3d9167a7d05cea5aa9dee608e5ad566b7a"
+    },
+    {
+      "bytes": 3869,
+      "path": "run_development_v0_55.py",
+      "sha256": "84e4665cc505dfc2d6fa72e78d045456f1d72f29cabd0c8b83c053e200a8c5d3"
+    },
+    {
+      "bytes": 2332,
+      "path": "RUN_RECEIPT_v0_55.json",
+      "sha256": "c27b9c6ee9b46b80b024c2c742a85365dc8f7d3c56d87743e2f7e7a1d7e0b031"
+    },
+    {
+      "bytes": 15703,
+      "path": "incomplete_menu.py",
+      "sha256": "3c146892ed862877a34d547f98447198b1c4b10539c25da7cb6e36fb8f9fe987"
+    },
+    {
+      "bytes": 2143,
+      "path": "test_incomplete_menu.py",
+      "sha256": "a3568d3f181f147bfb7b486a39123a1b948c7fbd7e7b8293b813807c67cff08e"
+    },
+    {
+      "bytes": 1544,
+      "path": "test_verifier_v0_55.py",
+      "sha256": "7223273127e97ee0329c9d18078fa8e824fa1dbb9bd7165ef4663c2dd851b055"
+    },
+    {
+      "bytes": 4036,
+      "path": "THEOREM_DRAFT_v0_55.md",
+      "sha256": "c7e2aee6dd63d5dff39745880a5c28ef0dc4d01213aa8fe532d2662e9ee8ec7d"
+    },
+    {
+      "bytes": 4276,
+      "path": "VERIFICATION_PROTOCOL_v0_55.md",
+      "sha256": "b9551d1766dba4ea2914fdcb528e197a29ee304ba1be7b748ee651db16810687"
+    },
+    {
+      "bytes": 3121,
+      "path": "verification_registration_v0_55.json",
+      "sha256": "2b9df78c26213db60749e8592dbfe18a2d23bfc8e2394ed13b648fc7a49b18a5"
+    },
+    {
+      "bytes": 10854,
+      "path": "VERIFY_RESULT_v0_55.json",
+      "sha256": "2de6b2d5d229f12d112611a87de9c21eaadf9bffcf70a5923f6f399ab7282b2c"
+    },
+    {
+      "bytes": 17277,
+      "path": "verify_theorems_v0_55.py",
+      "sha256": "56114766227ae01e76f9ee770809d29061cb4d001857101f99ec8e239a1c6525"
+    }
+  ],
+  "schema": "asmp9-v0.55-release-manifest-v1"
+}

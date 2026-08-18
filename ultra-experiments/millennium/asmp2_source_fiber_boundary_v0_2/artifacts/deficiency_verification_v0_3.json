@@ -1,0 +1,15 @@
+{
+  "check_count": 6,
+  "checks": {
+    "active_choice": true,
+    "exact_table": true,
+    "identity": true,
+    "reported_gates": true,
+    "theorem_hash": true,
+    "zero_signal_infinite_complexity": true
+  },
+  "passed": true,
+  "passed_count": 6,
+  "result_sha256": "8487b5984b20ac04b69f24b1b630fc092940caa297674723743d54e0803f696b",
+  "schema_version": "asmp2_safety_deficiency_verification_v0_3"
+}

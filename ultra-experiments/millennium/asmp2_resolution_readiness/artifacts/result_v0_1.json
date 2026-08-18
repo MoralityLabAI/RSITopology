@@ -1,0 +1,188 @@
+{
+  "authoritative_inputs": {
+    "AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "REFEREE_AUDIT_v0_1.md": "19173021ad49e523624c7cb5d09b391b998f1dd8874175c5a1213cf5b27949b3",
+    "problem_set_v0_1.json": "30ff673486b140c178d279eb100c81a46c849ba5b9955eddee16c83824d43ee0"
+  },
+  "claim_boundary": "The harness establishes a resolution-readiness stop for v0.1 as written. It does not prove that no well-posed successor ASMP-2 can be solved and does not promote a finite countermodel to a complete classification theorem.",
+  "closure_audit": {
+    "all_authoritative_status_checks_passed": true,
+    "all_placeholder_checks_passed": true,
+    "authoritative_status": {
+      "candidate_definition_draft": true,
+      "empirical_resolution_forbidden": true,
+      "exact_problem_version_required": true,
+      "graduation_standard_unsatisfied": true,
+      "narrow_subclass_not_full_resolution": true,
+      "referee_requires_external_quotient_audit": true,
+      "referee_says_global_class_conditional": true,
+      "registry_defers_to_normative_markdown": true
+    },
+    "decision": "stop_definition_not_closed",
+    "missing_binding_count": 15,
+    "missing_bindings": [
+      "model_class_registration",
+      "common_parameterization_and_tangent_transport",
+      "nuisance_spaces_and_trajectories",
+      "support_overlap_constants",
+      "curvature_and_remainder_constants",
+      "deployment_set_and_metric",
+      "source_environments_and_sample_allocation",
+      "policy_or_monitor_class",
+      "regular_local_certificate_definition",
+      "minimax_radius_and_loss",
+      "conditioning_norm_and_margin",
+      "simultaneous_confidence_regime",
+      "active_design_action_space",
+      "active_design_cost_and_budget",
+      "active_design_objective_and_tie_rule"
+    ],
+    "negative_resolution_obligations": [
+      "counterexample_respects_the_frozen_qmd_model_and_utility_floor",
+      "or_sharp_impossibility_for_local_identification_or_global_continuation"
+    ],
+    "passed": false,
+    "placeholder_checks": {
+      "active_design_has_no_registered_objective": true,
+      "continuation_is_an_open_request": true,
+      "model_class_is_placeholder": true,
+      "source_sizes_are_placeholder": true
+    },
+    "positive_resolution_obligations": [
+      "local_semiparametric_characterization",
+      "separate_local_to_global_theorem",
+      "minimax_sample_bounds",
+      "active_environment_design",
+      "no_free_lunch_converse"
+    ]
+  },
+  "decision": "stop_full_resolution_attempt_pending_successor_definition",
+  "exact_countermodel": {
+    "all_gates_passed": true,
+    "deployment": {
+      "minus_world_risk": "7/16",
+      "plus_world_risk": "11/16",
+      "risk_gap": "1/4",
+      "threshold": "9/16",
+      "uniform_success_probability_upper_bound": "0/1"
+    },
+    "family": {
+      "deployment_point": "1/1",
+      "g": "(16/9)*theta^2*(theta^2-1/4)^2",
+      "p_y_world": "1/2 + theta/16 + world*g(theta)/8",
+      "p_z": "1/2 + theta/8",
+      "policy_class": "singleton {act}",
+      "safety_threshold": "9/16",
+      "source_environments": [
+        "-1/2",
+        "0/1",
+        "1/2"
+      ],
+      "theta_domain": "[-1,1]",
+      "utility": "1",
+      "utility_floor": "4/5"
+    },
+    "gates": {
+      "bump_and_first_derivative_vanish_at_sources": true,
+      "bump_is_bounded_on_compact_domain": true,
+      "common_finite_curvature_bound": true,
+      "deployment_worlds_cross_safety_threshold": true,
+      "global_risk_gap_nonzero": true,
+      "nonzero_utility_floor_met": true,
+      "observation_probabilities_have_common_full_support": true,
+      "positive_local_fisher_information": true,
+      "risk_derivative_factors_through_identified_z_score": true,
+      "source_first_derivatives_identical": true,
+      "source_laws_identical": true,
+      "uniform_certificate_goal_fails_for_all_source_sample_sizes": true
+    },
+    "local_certificate_data": {
+      "factor_through_z_score": "1/2",
+      "fisher_total": "5/64",
+      "fisher_y": "1/64",
+      "fisher_z": "1/16",
+      "kappa_squared": "5/64",
+      "risk_derivative": "1/16"
+    },
+    "regularity": {
+      "g_extrema_candidates": {
+        "x=0": "0/1",
+        "x=1": "1/1",
+        "x=1/12": "1/243",
+        "x=1/4": "0/1"
+      },
+      "g_second_extrema_candidates": {
+        "x=0": "2/9",
+        "x=1": "386/9",
+        "x=1/10": "-14/45"
+      },
+      "max_abs_g_second": "386/9",
+      "qmd_reason": "finite product Bernoulli family with polynomial probabilities uniformly bounded away from 0 and 1",
+      "risk_curvature_bound": "193/36"
+    },
+    "scope": "refutes any continuation rule based only on the audited qualitative premises; does not refute a successor theorem with bound quantitative coverage, margin, and model-class assumptions",
+    "source_rows": [
+      {
+        "g": "0/1",
+        "g_prime": "0/1",
+        "pmf": {
+          "00": "153/512",
+          "01": "135/512",
+          "10": "119/512",
+          "11": "105/512"
+        },
+        "pmf_equal": true,
+        "risk_derivative_equal": true,
+        "theta": "-1/2"
+      },
+      {
+        "g": "0/1",
+        "g_prime": "0/1",
+        "pmf": {
+          "00": "1/4",
+          "01": "1/4",
+          "10": "1/4",
+          "11": "1/4"
+        },
+        "pmf_equal": true,
+        "risk_derivative_equal": true,
+        "theta": "0/1"
+      },
+      {
+        "g": "0/1",
+        "g_prime": "0/1",
+        "pmf": {
+          "00": "105/512",
+          "01": "119/512",
+          "10": "135/512",
+          "11": "153/512"
+        },
+        "pmf_equal": true,
+        "risk_derivative_equal": true,
+        "theta": "1/2"
+      }
+    ]
+  },
+  "problem_id": "ASMP-2",
+  "problem_resolved": false,
+  "problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "required_successor_repairs": [
+    "model_class_registration",
+    "common_parameterization_and_tangent_transport",
+    "nuisance_spaces_and_trajectories",
+    "support_overlap_constants",
+    "curvature_and_remainder_constants",
+    "deployment_set_and_metric",
+    "source_environments_and_sample_allocation",
+    "policy_or_monitor_class",
+    "regular_local_certificate_definition",
+    "minimax_radius_and_loss",
+    "conditioning_norm_and_margin",
+    "simultaneous_confidence_regime",
+    "active_design_action_space",
+    "active_design_cost_and_budget",
+    "active_design_objective_and_tie_rule"
+  ],
+  "schema_version": "asmp2_resolution_readiness_v0_1",
+  "stop_is_supported": true
+}

@@ -1,0 +1,89 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-RESOURCE-TRADEOFF-v2.2",
+  "file_count": 20,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_block_selection_composition_v1_9/BLOCK_SELECTION_COMPOSITION_THEOREM_v1_9.md": {
+      "bytes": 6418,
+      "sha256": "691FA772F81A5ED84112E365E8B60F6948DD205F2D63EBE30DE0CD7635F9AAED"
+    },
+    "../asmp3_block_selection_composition_v1_9/RELEASE_MANIFEST_v1_9.json": {
+      "bytes": 3074,
+      "sha256": "E5D48F7F9E93A6D2189E20C4838E51D881AB5D2D0210F393360AD9BD9635289C"
+    },
+    "../asmp3_block_selection_composition_v1_9/artifacts/block_selection_composition_v1_9.json": {
+      "bytes": 1691219,
+      "sha256": "63E16A22B9EC6B459DE3F38887E323F224F0B64FA7C4EC4FA682E4FAE788E561"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v2_2.md": {
+      "bytes": 1742,
+      "sha256": "B8A570AAED1E6611CA0A60C564E79172FD3357EA7F500AEF6F1B70DF5BADAA1B"
+    },
+    "README.md": {
+      "bytes": 689,
+      "sha256": "FDCCB84B9D70DE6D028F07D596D4E7579101A736B1501706C026038313321FD7"
+    },
+    "RESOURCE_TRADEOFF_THEOREM_v2_2.md": {
+      "bytes": 5860,
+      "sha256": "64FB084ED49E1ED43EBF8845507D838962F69316537DFED8885769C3F4F2CE26"
+    },
+    "artifacts/resource_tradeoff_v2_2.json": {
+      "bytes": 340282,
+      "sha256": "4D4DD4AEDEBA45677ADCC15BB2085AED779D3A53CE11B6C9B88499AF26B6B98D"
+    },
+    "artifacts/resource_tradeoff_verification_v2_2.json": {
+      "bytes": 838,
+      "sha256": "C44BA4C51A0B6099D914DAE193546B45C5A661F20C8492D8D8988649023A6C96"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2700,
+      "sha256": "440DF64F64644DB5C8C36E7739AA6B74AA794DFCA04CCE9F880AF9E8AD0D9769"
+    },
+    "resource_tradeoff.py": {
+      "bytes": 10601,
+      "sha256": "29FBBF73883B1D2430759779E19C6C6DAD48A2CC21D2C491C746633E861EBA00"
+    },
+    "run_resource_tradeoff.py": {
+      "bytes": 870,
+      "sha256": "B607DC6A39202F80FD937E1B88C01E10C28BCC8214175192AD705ED8DA189473"
+    },
+    "test_resource_tradeoff.py": {
+      "bytes": 4270,
+      "sha256": "A540040F2A07A1C68DB8514C0CC62BB0AD0999C23C8751196A0552E39306AB74"
+    },
+    "verify_resource_tradeoff.py": {
+      "bytes": 8526,
+      "sha256": "9204BC5FE4A508DC18A92044E10F3C675091A3ECFFB34FADEB56882EF5C50CF0"
+    }
+  },
+  "release_status": "exact_unique_marker_communication_query_frontier",
+  "schema_version": "asmp3_resource_tradeoff_release_v2_2"
+}

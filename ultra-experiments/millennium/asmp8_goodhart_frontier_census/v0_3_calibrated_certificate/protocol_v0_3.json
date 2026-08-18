@@ -1,0 +1,83 @@
+{
+  "schema_version": "asmp8_calibrated_certificate_protocol_v0_3",
+  "protocol_id": "asmp8.goodhart.calibrated_dual_certificate.v0.3a",
+  "status": "frozen_candidate_before_registration_and_run",
+  "parent_result": "../v0_2_dual_frontier/artifacts_v0_2/RESULT_v0_2.md",
+  "outcome_registry": {
+    "outcome_count": 64,
+    "reference_policy": "uniform",
+    "proxy_reward": "64 equally spaced values from -0.5 through 0.5",
+    "pointwise_error_cap": 1.0,
+    "error_families": [
+      "diffuse_low_error",
+      "heteroskedastic_proxy_coupled",
+      "rare_top_tail"
+    ]
+  },
+  "policy_paths": {
+    "gibbs_betas": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "best_of_n": [2, 4, 8, 16, 32],
+    "top_spike_alpha": [0.1, 0.25, 0.5, 0.75, 1.0],
+    "scrambled_gibbs_betas": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "selection_information": "proxy reward and frozen path parameters only; hidden true-error values are unavailable"
+  },
+  "calibration": {
+    "sample_sizes": [32, 128, 512],
+    "replicates_per_condition": 4096,
+    "root_seed": 80320260723,
+    "draws": "IID with replacement from p0",
+    "familywise_alpha": 0.05,
+    "allocation": {
+      "weighted_l1_error_moment": 0.025,
+      "weighted_l2_error_second_moment": 0.025,
+      "linfinity": "deterministic declared cap"
+    },
+    "bounds": {
+      "delta_1": "min(1, sample_mean(abs(error)) + sqrt(log(1/0.025)/(2m)))",
+      "delta_2": "sqrt(min(1, sample_mean(error^2) + sqrt(log(1/0.025)/(2m))))",
+      "delta_infinity": 1.0
+    }
+  },
+  "comparators": {
+    "proxy_only": "proxy_gain > 0; intentionally invalid as a safety certificate",
+    "rmse_only": "proxy_gain - delta_2 > 0; intentionally omits policy movement",
+    "pinsker": "proxy_gain - sqrt(2 KL(pi||p0)) > 0 under the declared unit sup-norm cap",
+    "registered": "maximum of the three simultaneously valid dual lower bounds"
+  },
+  "primary_outputs": [
+    "simultaneous norm-bound failure rate and one-sided exact binomial upper bound",
+    "false-safe count conditional on valid norm bounds",
+    "certified true-positive fraction by error family, sample size, and optimizer path",
+    "risk-coverage curve using the registered lower-bound margin",
+    "rare-tail false-safe comparison against proxy-only and RMSE-only"
+  ],
+  "gates": {
+    "G0_registration_binding": "Claim packet, prior art, protocol, implementation, tests, verifier, and README are committed and hash-bound before execution.",
+    "G1_calibration_coverage": "For every error-family/sample-size condition, the one-sided 95% Clopper-Pearson upper bound on simultaneous norm-bound failure is at most 0.06.",
+    "G2_certificate_soundness": "There are zero positive registered certificates with non-positive true gain when both sampled norm bounds are valid.",
+    "G3_nonvacuity": "At m=512 on diffuse_low_error, at least 10% of truly positive policy/replicate cells receive a positive registered certificate.",
+    "G4_stronger_than_pinsker": "At m=512 on diffuse_low_error, the registered certified true-positive fraction exceeds the Pinsker comparator by at least 0.10.",
+    "G5_optimizer_transfer": "At m=512 on diffuse_low_error, every registered optimizer family has at least one policy certified in at least 50% of replicates, without family-specific refitting.",
+    "G6_rare_tail_liveness": "On rare_top_tail, proxy-only and RMSE-only each produce at least one false-safe policy/replicate cell, while G2 remains satisfied.",
+    "G7_sample_size_ordering": "Within each error family, mean registered certification coverage is nondecreasing across m=32,128,512.",
+    "G8_resources_and_receipts": "The run stays within registered CPU/RAM ceilings and emits write-once result, summaries, risk curve, report, and receipt artifacts."
+  },
+  "gates_numeric": {
+    "max_failure_cp_upper": 0.06,
+    "minimum_diffuse_nonvacuity": 0.10,
+    "minimum_pinsker_advantage": 0.10,
+    "optimizer_family_policy_certification_floor": 0.50
+  },
+  "decision_rule": {
+    "validated_nonvacuous": "G0 through G8 all pass",
+    "valid_but_vacuous": "G0, G1, G2, G6, G7, and G8 pass but G3, G4, or G5 fails",
+    "not_established": "Any of G1, G2, G6, or G7 fails while registration and receipts remain valid",
+    "invalid": "G0 or G8 fails"
+  },
+  "resource_ceiling": {
+    "wall_seconds": 180,
+    "process_peak_rss_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "claim_boundary": "Synthetic finite-population calibration of a classical robust lower bound; no learned reward model, no real human-preference uncertainty set, no RL trajectory, and no ASMP-8 resolution."
+}

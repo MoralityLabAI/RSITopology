@@ -1,0 +1,44 @@
+{
+  "clean_detached_commit": "0297fcddbe34ea028597fe60b0d3cb849deabfaf",
+  "focused_tests": {
+    "passed": 11,
+    "status": "pass"
+  },
+  "independent_verifier": {
+    "check_count": 41,
+    "failed_check_count": 0,
+    "status": "pass"
+  },
+  "primary_run": {
+    "elapsed_seconds": 81.56129760001204,
+    "peak_resident_bytes": 24076288,
+    "result_sha256": "a0b340faaf2753248d17c97b0b3cd14c4ea2c58b9119dc44dc4c9bfa81c844fe"
+  },
+  "registration_sha256": "fc0931d34707dad22481e34c3fb50b686978e444828adbd1fd9686b599813b1b",
+  "replay_run": {
+    "elapsed_seconds": 78.8378297999734,
+    "peak_resident_bytes": 24137728,
+    "receipt_sha256": "e4bb3cae05a083fcc767998e109e5df58c0a1fc808f66d9ab1f38ed002fc6658",
+    "result_sha256": "d7cb57c82a71c53a61b349cb2a42af75487e355f9a08d656bda0c6adebd63ad7"
+  },
+  "scientific_payload_equality": {
+    "availability_records": true,
+    "bad_support_records": true,
+    "binding_checks": true,
+    "claim_boundary": true,
+    "endpoint_monotonicity_records": true,
+    "exponent_certificate_records": true,
+    "finite_counterexample": true,
+    "gates": true,
+    "implementation_commit": true,
+    "protocol_id": true,
+    "registration_commit": true,
+    "registration_sha256": true,
+    "registry_record": true,
+    "residual_rank_records": true,
+    "summary": true,
+    "verdict": true
+  },
+  "status": "pass",
+  "timing_fields_excluded_from_byte_identity": true
+}

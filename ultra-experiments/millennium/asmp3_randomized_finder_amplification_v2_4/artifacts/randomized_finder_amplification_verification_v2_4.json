@@ -1,0 +1,18 @@
+{
+  "check_count": 9,
+  "checker": "clean_room_restart_noise_budget_and_obstruction_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_72_protocol_rows_reconstructed": true,
+    "V2_restart_minimality_and_gap_reconstructed": true,
+    "V3_noise_depth_minimality_reconstructed": true,
+    "V4_exhaustive_boolean_restart_spaces_reconstructed": true,
+    "V5_registered_and_held_out_scaling_reconstructed": true,
+    "V6_unique_marker_obstruction_reconstructed": true,
+    "V7_parent_alpha_one_endpoint_matches": true,
+    "V8_all_11_producer_gates_true": true
+  },
+  "claim_boundary": "This checker certifies the independent-restart theorem and its charged resource frontier. It does not prove a randomized finder exists for all positive ASMP-3 interfaces or cover correlated retry failures.",
+  "passed": true,
+  "schema_version": "asmp3_randomized_finder_amplification_verification_v2_4"
+}

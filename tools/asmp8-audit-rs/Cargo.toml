@@ -1,0 +1,12 @@
+[package]
+name = "asmp8-audit"
+version = "0.1.0"
+edition = "2024"
+description = "Deterministic bounded parallel moment engine for ASMP-8 audits"
+license = "MIT"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+panic = "abort"
+strip = true

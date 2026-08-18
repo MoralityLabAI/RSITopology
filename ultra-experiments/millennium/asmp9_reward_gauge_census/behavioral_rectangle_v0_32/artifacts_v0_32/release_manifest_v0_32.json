@@ -1,0 +1,41 @@
+{
+  "artifact_count": 26,
+  "artifacts": {
+    "ILIAD_FELLOWSHIP_RESEARCH_LINKS_20260729.md": "83987b3da267e3c736f870a2fab0d9198c92434e44c7d37e73e50f080105d5e6",
+    "ultra-experiments/millennium/V0_2_EXPERIMENT_PROGRESS_v0_1.md": "4299b4785eddb2406766f0909e8ab48f0358e8a274f8143e857d7f737db4b3eb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": "1dbd4598407bc54e041c08498856870428732ca26988531118d708f6def7c902",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_32.md": "8984c4cc0d1274f34cf2938db003ac6639c51fe4633ab32329a8240e1214f0db",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/DEVELOPMENT_NOTE_v0_32.md": "5efa0fb59ae9217308d1f33c4e46329bfea3be2a26307cc3e082168b8c348253",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/PRIOR_ART_GATE_v0_32.md": "49524f03a6918c8391d7d63d9748917bfe32562e849f96c359e0e781da463313",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/PUBLIC_SUMMARY_v0_32.md": "437dab9d0936bc018302fd8c5b8676e9d2c45787fd65b90d9f32b397ed69146f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/README.md": "becc560e1ad1aa45d655f68abd4e7041a5a85402661384d13f49a0febd594df7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/THEOREM_DRAFT_v0_32.md": "dac6e50c4de97bf1d987df900c188d219b99782eec34f3a044c6dca0a56e30a0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/THEOREM_v0_32.md": "bf441676dab3cea8e87a4b844cf185e49d19759e09068146d1e2ce803eed596c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/__init__.py": "a472456817c935ac075810934efe3fafa04ba205709ace30f1d06beb48fd4819",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/artifacts_v0_32/RESULT_v0_32.md": "dff4f972748b504c0bde27636ad4a35794dd4121b461cfc3f05348a0790407bb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/artifacts_v0_32/independent_verification_v0_32.json": "4892d81ba700738c5eb4d78a8fead9e538b579e3d9232a07131e595cae3cf972",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/artifacts_v0_32/result_v0_32.json": "5729d7909fbf31b2de7b7260f6a30677a5d1f0d367613e37eb6938085b05819f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/artifacts_v0_32/run_receipt_v0_32.json": "7862f69eafbe7f04371842b15c3ee5ad1014f4e00bef68d5ead14bbe60023501",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/behavioral_rectangle.py": "b9bfd6a60d23671329aed3d4453387c38df3ace3f0d3efc7db1280b2fc9dccdb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/environment_lock_v0_32.json": "b86474022470087e97bbe3023155327ca69b488cda2b46530b290daa7af15db4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/make_release_manifest_v0_32.py": "fae319a36dcc9a48d4a37e426a7b9edc4889944e0323aedbe6b71bf1f579fabe",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/protocol_v0_32.json": "d7ec8ecb3f5c3ea4ced0b0b193ea35f55f9018c76ca7e6f9b911bfb9944a73e0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/register_v0_32.py": "5adac5034a610cd5d7329a468bff4f0bf9f9f0324fa5522676c896e4c3d9e773",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/registration_v0_32.json": "95eb63461eec234601b6bc0caa0d20238d1e534ff4acbd5633baa8ea9940c5f9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/run_verification_v0_32.py": "df6c0f064de46828462807abc7a8b7a1266091c092086bc034be07826fef61a3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/test_behavioral_rectangle.py": "f4947597d7378fc2bee279389d9f38d5363393a80e0544b54358c231bee7beb6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/test_protocol_v0_32.py": "cddb830edb8a3c8feaaf25f1ede9ea9556195c5e47b0448a555223cbac61c3cc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/verify_release_manifest_v0_32.py": "9af6f00f5eeeb2ac679ebc3a43de0880c2e366c861d3d471de5d9ba344305925",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/verify_result_v0_32.py": "bafe2d9c7bfcf49dfc65981f5ce5b6f6b1a6e759754890a8842c6fd2f1d6e026"
+  },
+  "execution": {
+    "implementation_commit": "899cee20ce171f996f9c2adf4774a5beeb58fc01",
+    "independent_verification_sha256": "4892d81ba700738c5eb4d78a8fead9e538b579e3d9232a07131e595cae3cf972",
+    "registration_commit": "f2fb9565996ae604aa1b3ba90fd7d4073aa1d835",
+    "registration_sha256": "95eb63461eec234601b6bc0caa0d20238d1e534ff4acbd5633baa8ea9940c5f9",
+    "result_sha256": "5729d7909fbf31b2de7b7260f6a30677a5d1f0d367613e37eb6938085b05819f",
+    "run_receipt_sha256": "7862f69eafbe7f04371842b15c3ee5ad1014f4e00bef68d5ead14bbe60023501"
+  },
+  "manifest_id": "ASMP-9-BEHAVIORAL-RECTANGLE-v0.32-release",
+  "verdict": "behavioral_rectangle_boundary_established_v0_32"
+}

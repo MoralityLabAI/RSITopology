@@ -1,0 +1,20 @@
+{
+  "claim_scope": "model_only",
+  "confounds": [
+    "covering gaps can widen minimum-width brackets",
+    "Bonferroni total samples do not price intervention cost",
+    "the parity oracle is transparent and finite"
+  ],
+  "inferred": "Only strata with complete certified brackets support a minimum-width statement.",
+  "next_experiment": "Independently verify every artifact, then target unresolved covering cells with a separately frozen proof-producing solver.",
+  "not_supported": [
+    "general adaptive group-testing rates",
+    "an observational minimax lower bound",
+    "white-box neural backdoor detection",
+    "overall resource dominance after pricing intervention width or harm"
+  ],
+  "observed": "Deterministic covering bounds and exact cost classifications on the frozen intermediate-width grid.",
+  "robustness": "Five non-binding metric probes are reported cell by cell; disagreement is retained as sensitivity.",
+  "schema_version": "asmp11_intermediate_crossover_claim_layer_v0_2_1",
+  "verdict": "claim_ready_for_independent_verification"
+}

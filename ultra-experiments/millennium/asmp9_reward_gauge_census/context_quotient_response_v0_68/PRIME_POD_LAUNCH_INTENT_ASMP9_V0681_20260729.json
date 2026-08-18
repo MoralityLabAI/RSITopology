@@ -1,0 +1,69 @@
+{
+  "schema_version": "asmp9_context_quotient_prime_launch_intent_v0_68_1",
+  "status": "prepared_not_launched",
+  "prepared_utc": "2026-07-29T22:19:55.7844840Z",
+  "account": {
+    "username": "moralitylab",
+    "user_id": "cmbqxo1kc0020eppjy9mnws3d"
+  },
+  "protected_run": {
+    "id": "e2s64hw5ywag1d8hgwfef6jd",
+    "status_at_preflight": "COMPLETED",
+    "must_not_mutate": true
+  },
+  "task": {
+    "id": "asmp9-context-quotient-v0.68.1-construction",
+    "description": "Validate and register the target environment, execute only the 528-record construction split under hard caps, analyze with the frozen v0.68.1 finite-registry gates, copy and hash artifacts, and terminate. Confirmation inference is forbidden unless separately registered after construction authorization.",
+    "pod_name": "jinn-paper-20260725-asmp9-v0681-construct",
+    "spot_interruption_acceptable": true,
+    "interruption_reason": "Every score is a write-once resumable work unit and interruption is a registered infrastructure outcome; it cannot change any scientific threshold.",
+    "source_commit": "be61301e712985c82a2a86f576bba92655e8ee00",
+    "protocol_sha256": "68bfedfa059e735c9a2058ff681a76384c866d2cb6d4a7f7175ddfb0a12c0fae",
+    "protocol_amendment_sha256": "b68d3a0317aa676b029d61a52c42406a40930d0989293fcde0da0d72a1d0f8d0",
+    "local_prereveal_validation_sha256": "187b8c1c1511705a96c79b1da967b889a08a9ddde54b04c02ffb4429b725b611"
+  },
+  "selected_availability": {
+    "id": "0c9d6a",
+    "cloud_id": "1A100.22V_SPOT",
+    "provider": "datacrunch",
+    "region": "FI",
+    "gpu_type": "A100_80GB",
+    "gpu_count": 1,
+    "socket": "PCIe",
+    "listed_hourly_usd": 0.6265,
+    "spot": true,
+    "stock_status_at_preflight": "Available"
+  },
+  "launch": {
+    "image": "ubuntu_22_cuda_12",
+    "disk_size_gb": 200,
+    "maximum_planned_lifetime_seconds": 7200,
+    "maximum_estimated_cost_usd": 1.253,
+    "additional_hosted_rl_run": false,
+    "local_gpu_workload": false,
+    "secrets_in_environment": false
+  },
+  "expected_output": {
+    "remote_root": "/workspace/asmp9_context_v0681/construction",
+    "local_root": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_1\\prime_construction",
+    "required": [
+      "registration.json",
+      "authorization.json",
+      "result/completion_summary.json",
+      "analysis/records.jsonl",
+      "analysis/analysis.json",
+      "analysis/decision.json",
+      "analysis/analysis_receipt.json",
+      "_wrapper/attempts/*/wrapper_summary.json",
+      "_wrapper/attempts/*/cleanup_summary.json"
+    ]
+  },
+  "preflight": {
+    "active_pods": 0,
+    "account_match": true,
+    "availability_within_price_cap": true,
+    "source_prereveal_validation_status": "passed",
+    "source_model_forward_passes": 0,
+    "confirmation_authorized": false
+  }
+}

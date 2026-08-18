@@ -1,0 +1,183 @@
+{
+  "protocol_id": "godel_globes_falsification_v0_1",
+  "schema_version": "1.0.0",
+  "status": "implementation_ready_not_run",
+  "created_on": "2026-07-16",
+  "scientific_parents": [
+    "spectral_bundle_discovery_v0_3",
+    "identity_attestation_v1",
+    "edit_sectioning_crossover_v0_3",
+    "proposal_recursive_patchwise_reentry_v2_1"
+  ],
+  "purpose": "Test whether real Qwen representations admit family-resolved, gauge-invariant identity patches across context and runtime precision, and emit receipts consumable by the Godel globe, VPD edit program, and HRMmmm control harness.",
+  "claim_boundary": "This target-blind protocol measures spectral identity geometry. It does not establish semantic identity, causal edit value, capability preservation, compactification, recursive improvement, or RSI. The archived Silico run is calibration only. No outcome-bearing intervention is performed here.",
+  "invariant_levels": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "new_invariant_levels": false,
+  "model_lock": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "local_path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified",
+    "files": {
+      "model-00001-of-00002.safetensors": "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5",
+      "model-00002-of-00002.safetensors": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9",
+      "model.safetensors.index.json": "0d660e94b165eb912669a5249dff44b83188c4777a07ddb9611fb78d91b0578d",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    }
+  },
+  "candidate_sites": [
+    "model.layers.16.self_attn.v_proj",
+    "model.layers.17.self_attn.v_proj",
+    "model.layers.18.self_attn.v_proj",
+    "model.layers.19.self_attn.v_proj",
+    "model.layers.20.self_attn.v_proj",
+    "model.layers.21.self_attn.v_proj",
+    "model.layers.22.self_attn.v_proj",
+    "model.layers.23.self_attn.v_proj",
+    "model.layers.24.self_attn.v_proj",
+    "model.layers.25.self_attn.v_proj",
+    "model.layers.26.self_attn.v_proj",
+    "model.layers.27.self_attn.v_proj"
+  ],
+  "runtime_precisions": [
+    "full_float32",
+    "full_bfloat16"
+  ],
+  "precision_axis_rule": "Weights, tokenizer, prompts, token positions, sites, and batch membership are identical across arms. Models are loaded and released sequentially. A float32-only pass is runtime_specific_identity and cannot authorize bfloat16 use.",
+  "prompt_design": {
+    "seed": 2026071601,
+    "families": [
+      "affine_recurrence",
+      "symbol_transport",
+      "grid_rotation",
+      "graph_reachability"
+    ],
+    "subconditions_per_family": 9,
+    "context_shards": 8,
+    "halves": [
+      "construction",
+      "geometry_validation"
+    ],
+    "prompts_per_subcondition_per_half_per_shard": 2,
+    "total_prompts": 1152,
+    "answer_keys_are_geometry_blind": true,
+    "vpd_selector_audit_outer_prompts_prohibited": true
+  },
+  "capture_contract": {
+    "activation_site": "registered v_proj module output at the final non-padding prompt token",
+    "outcomes_prohibited": true,
+    "generation_prohibited": true,
+    "weight_mutation_prohibited": true,
+    "attention_masked_padding": true,
+    "chunk_unit": "one runtime_precision x site x context_shard x half array",
+    "chunk_format": "NPZ with exactly one finite rank-2 array named activations; prompt row order is sealed in capture_index.json",
+    "checkpoint_cadence": "after every context-shard/half forward batch and no less often than every 300 seconds",
+    "cleanup": "release hooks, model, tokenizer, batches, and tensors; gc.collect; synchronize/empty CUDA cache/ipc cache; terminate only registered owned PIDs; emit cleanup receipt"
+  },
+  "resource_rule": {
+    "live_capture_requires_explicit_hard_caps": true,
+    "required_caps": [
+      "RAM/commit",
+      "CPU",
+      "I/O",
+      "timeout",
+      "zero swap",
+      "GPU allowance"
+    ],
+    "no_implicit_defaults": true,
+    "current_repository_resource_audit_must_pass_before_capture": true,
+    "abort_is_valid_outcome": true
+  },
+  "primary_object": {
+    "kind": "cross_fitted_between_class_scatter",
+    "ranks": [1, 2, 3, 4, 5, 6, 7, 8],
+    "rank_selection": "largest prefix rank passing the strict bootstrap-versus-label-permutation margin on every registered node of the relevant runtime grid",
+    "bootstrap_replicates": 128,
+    "minimum_strict_null_margin": 0.02,
+    "covariance_gram_status": "reported_ungated"
+  },
+  "instrument_calibration": {
+    "kind": "matched_random_named_family positive construction plus label-permutation null",
+    "interpretation": "This is a planted instrument calibration. It is distinct from the real primary object's label-permutation null and is not real-model evidence.",
+    "required_margin": 0.02,
+    "failure_effect": "All certificates cap at engineering_evidence with negative_control_not_passed."
+  },
+  "graph": {
+    "node": "runtime_precision/site/family/context_shard/rank",
+    "edges": "adjacent context shards within each runtime plus same-shard cross-runtime edges",
+    "elementary_loops_per_site_family_rank": 7,
+    "lineage_floor": 0.9,
+    "minimum_mean_edge_chordal_lineage": 0.95,
+    "beta_1_formula": "beta_1 = |E_tau| - |V| + c(G_tau)",
+    "beta_1_zero": "holonomy_unavailable; certification cannot reach holonomy_clean",
+    "adjacent_depth_edges": "negative-boundary report only; never used to manufacture loops"
+  },
+  "holonomy": {
+    "budget": {
+      "maximum_canonical_angle_degrees": 5.0,
+      "maximum_identity_loss": 0.05
+    },
+    "measurement_split": "geometry_validation",
+    "construction_validation_agreement": "compare determinant component and sorted canonical-angle spectrum",
+    "prompt_resampling_replicates": 128,
+    "nontrivial_signal": "validation maximum canonical angle must exceed the matched flat/noise 95th percentile; aggregate support requires at least three sites across two families",
+    "area_law_status": "secondary calibration only on the regular 2x8 registered grid",
+    "det_negative": "categorical orientation reversal; suppress canonical angles"
+  },
+  "corotation": {
+    "object": "gauge-invariant ambient partial-isometry transport",
+    "comparison": "construction-versus-validation within-family distance against matched cross-family distance at equal supported rank",
+    "gate": "95% lower confidence bound of cross-family median distance minus within-family median distance is strictly positive",
+    "failure_effect": "render independent family globes; do not invalidate identity attestation"
+  },
+  "gauge_preflight": {
+    "reframings": 32,
+    "tolerance": 1e-8,
+    "must_preserve": [
+      "lineage metrics",
+      "determinant flags",
+      "canonical angle spectra",
+      "certification decisions",
+      "patch memberships",
+      "audit ordering"
+    ],
+    "tamper_controls": [
+      "spectrum_preserving_conjugation",
+      "band_failover",
+      "curvature_injection"
+    ]
+  },
+  "sectioning": {
+    "budgets": [0.0, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5],
+    "shard_prefixes": [2, 4, 6, 8],
+    "stability_rule": "The 95% bootstrap interval for patch-count change from six to eight shards must lie within plus/minus max(1, 10% of the six-shard count).",
+    "navigation_ceiling_per_family": 40,
+    "ceiling_effect": "Use hierarchical navigation; do not declare the geometry false."
+  },
+  "aggregate_identity_gate": {
+    "minimum_physical_sites": 3,
+    "minimum_behavior_families": 2,
+    "both_runtime_precisions_required_for_cross_runtime_authorization": true
+  },
+  "consumer_rules": {
+    "signed_intervention": "holonomy_clean",
+    "signed_reward": "holonomy_clean",
+    "disparate_weight_edit": "holonomy_clean",
+    "energy_reward": "lineage_certified",
+    "bundle_energy_reward": "lineage_certified",
+    "all_other_uses": "engineering_evidence"
+  },
+  "chronology": {
+    "pre_run": "pushed Git commit or tag plus sealed protocol, prompt, capture-index template, environment, and source hashes",
+    "post_run": "write-once manifest and release hash",
+    "opentimestamps": "optional_not_binding"
+  },
+  "causal_handoff": {
+    "protocol": "proposal_recursive_patchwise_reentry_v2_1",
+    "condition": "Only existing P1-passing holonomy-clean patches may be sealed for its still-unread P2 holdout.",
+    "this_protocol_runs_p2": false
+  }
+}

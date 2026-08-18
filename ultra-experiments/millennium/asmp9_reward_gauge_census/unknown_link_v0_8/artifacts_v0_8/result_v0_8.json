@@ -1,0 +1,100 @@
+{
+  "ambiguity_pairs": {
+    "affine_mismatch_count": 0,
+    "count": 16384,
+    "known_link_separation_mismatch_count": 0,
+    "link_probe_mismatch_count": 0,
+    "matching_law_mismatch_count": 0,
+    "maximum_gap": 4096,
+    "same_order_mismatch_count": 0,
+    "seed": 98082
+  },
+  "binding_checks": {
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/PRIOR_ART_v0_8.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/PROTOCOL_v0_8.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/README.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/THEOREM_DRAFT_v0_8.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/protocol_v0_8.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/test_unknown_link.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/unknown_link.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/verify_result.py": true,
+    "head_is_registration_commit": true,
+    "implementation_is_ancestor": true,
+    "tracked_tree_clean": true
+  },
+  "elapsed_seconds": 164.53009639997617,
+  "explicit_witness": {
+    "passed": true,
+    "shared_law": {
+      "0,1": [
+        3,
+        4
+      ],
+      "0,2": [
+        7,
+        8
+      ],
+      "1,2": [
+        5,
+        6
+      ]
+    },
+    "source_utility": [
+      0,
+      1,
+      3
+    ],
+    "target_utility": [
+      0,
+      1,
+      4
+    ]
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_known_link_recovery": true,
+    "G2_explicit_witness": true,
+    "G3_primitive_shell": true,
+    "G4_unknown_link_matching": true,
+    "G5_known_link_separation": true,
+    "G6_link_validity": true,
+    "G7_two_item_minimality": true,
+    "G8_order_mismatch_rejection": true
+  },
+  "known_link": {
+    "count": 32768,
+    "edge_count": 1477970,
+    "maximum_items": 16,
+    "minimum_items": 2,
+    "mismatch_count": 0,
+    "seed": 98081
+  },
+  "order_mismatch_controls": {
+    "count": 8192,
+    "maximum_gap": 4096,
+    "missed_rejection_count": 0,
+    "seed": 98084
+  },
+  "primitive_shell": {
+    "class_count": 2,
+    "class_sizes": [
+      1881,
+      1881
+    ],
+    "equality_count": 0,
+    "maximum_last_coordinate": 128,
+    "minimum_last_coordinate": 65,
+    "nonaffine_mismatch_count": 0,
+    "ray_count": 3762
+  },
+  "protocol_id": "ASMP-9-UNKNOWN-LINK-v0.8",
+  "registration_commit": "863f5df964d078b801bfd0bec82c01bb87f8b466",
+  "registration_sha256": "448f247abb2dd80f91ca774c2762f3dfcea640643c386c82778eb108d66c6400",
+  "two_item_controls": {
+    "count": 8192,
+    "mismatch_count": 0,
+    "seed": 98083
+  },
+  "verdict": "unknown_link_finite_design_nonidentifiability_verified"
+}

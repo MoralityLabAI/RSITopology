@@ -1,0 +1,21 @@
+{
+  "check_count": 12,
+  "checker": "clean_room_source_hash_standard_encoding_compiler_fixture_full_set_NONHALT_and_claim_boundary_audit",
+  "checks": {
+    "V0_schema_parent_and_all_hashes": true,
+    "V10_all_interactive_inactive_couplings_reconstructed": true,
+    "V11_FIX_ADM_universal_induction_and_scope_boundary_present": true,
+    "V1_source_full_set_standard_encoding_and_resolution_clauses": true,
+    "V2_all_sixteen_canonical_admissibility_rows_present": true,
+    "V3_three_compilers_reconstructed_independently": true,
+    "V4_all_720_fixture_rows_reconstructed_exactly": true,
+    "V5_nonhalting_and_halting_semantics_match_in_every_encoding": true,
+    "V6_adequacy_axioms_target_full_decision_set": true,
+    "V7_NONHALT_transfer_implications_complete": true,
+    "V8_representation_evasion_cases_are_explicit": true,
+    "V9_parent_claim_and_external_gate_not_conflated": true
+  },
+  "claim_boundary": "The checker reconstructs source bindings and finite encodings; the universal transfer is the written many-one proof under the five explicit adequacy axioms.",
+  "passed": true,
+  "schema_version": "asmp3_standard_encoding_transfer_verification_v2_21"
+}

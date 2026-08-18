@@ -1,0 +1,1377 @@
+{
+  "claim_boundary": [
+    "the primary model is the frozen four-bit anchor R*=0011 with exact safe-acceptance bits and one-sided 0-to-1 noise only on its two hazard-rejection bits",
+    "the 2m hazard-bit replica errors are mutually independent Bernoulli(epsilon) coins in the declared bit-major replica-minor order",
+    "fresh_iid uses a new independent 2m-coin batch at each of exactly H post-install attack opportunities; persistent installs one batch and reuses it for all H opportunities",
+    "the installed anchor is visible before an adaptive adversary chooses one of exactly two proof classes and makes the registered hazard proposal",
+    "the registered finite grid is m in {1,3,5}, epsilon in {0,1/20,1/10}, H in {1,8,64}, and the two frozen temporal models",
+    "the perfect-correlation, false-negative-only, blinded-adversary, swapped-bit, epsilon-zero, and inherited safe-cycle cases are controls, not enlargements of the primary model",
+    "no claim about arbitrary learners, arbitrary or unknown correlation, two-sided or state-dependent error, learned evidence, infinite distinct-state progress, open-ended verifier replacement, general ASMP-5 systems, or resolution of ASMP-5"
+  ],
+  "conclusion_layers": {
+    "claim_support": "pending_independent_verification",
+    "measurement_reliability": "awaiting_import_independent_verification",
+    "metric_robustness": "controls_computed_awaiting_independent_replay",
+    "operational_decision": "no_generalization_or_deployment_authorized",
+    "task_result": "finite_dynamic_noisy_anchor_grid_compiled"
+  },
+  "controls": {
+    "blinded_one_class_adversary": {
+      "pass": true,
+      "per_installation_risk": "p_m",
+      "visible_strictly_larger_on_positive_grid": true
+    },
+    "epsilon_zero_exact_anchor": {
+      "all_failure_and_deadlock_zero": true,
+      "pass": true,
+      "row_count": 18
+    },
+    "false_negative_only_safety_and_deadlock": {
+      "all_unsafe_risks_zero": true,
+      "pass": true,
+      "positive_deadlock_is_live": true
+    },
+    "hazard_bit_swap": {
+      "all_rows_invariant": true,
+      "identity": "1-(1-p0)(1-p1)=1-(1-p1)(1-p0)",
+      "pass": true
+    },
+    "perfectly_correlated_hazard_bits": {
+      "independent_bounds_hold": true,
+      "pass": true,
+      "per_installation_risk": "p_m",
+      "strict_separation_live": true
+    },
+    "single_bit_exploit_witnesses": {
+      "pass": true,
+      "records": [
+        {
+          "accepted": true,
+          "chosen_proof_class": 0,
+          "erroneous_hazard_bit": 2,
+          "hazard": 1,
+          "installed_anchor": "0111"
+        },
+        {
+          "accepted": true,
+          "chosen_proof_class": 1,
+          "erroneous_hazard_bit": 3,
+          "hazard": 1,
+          "installed_anchor": "1011"
+        }
+      ]
+    },
+    "temporal_correlation": {
+      "comparison_count": 12,
+      "pass": true,
+      "strict_fresh_gt_persistent_positive_H_gt_1": true
+    },
+    "v0_3_safe_two_cycle": {
+      "all_safe": true,
+      "hazard_bits": [
+        0,
+        0,
+        0
+      ],
+      "pass": true,
+      "proof_class": 0,
+      "returns_to_start": true,
+      "root_accepts_each_safe_step": true,
+      "states": [
+        {
+          "behavior": 0,
+          "checker": 3
+        },
+        {
+          "behavior": 2,
+          "checker": 3
+        },
+        {
+          "behavior": 0,
+          "checker": 3
+        }
+      ]
+    }
+  },
+  "gates": {
+    "G0_manifest_and_order": true,
+    "G1_source_and_predecessor_binding": true,
+    "G2_complete_exact_54_rows": true,
+    "G3_product_error_and_visibility_semantics": true,
+    "G4_symbolic_fresh_infinite_horizon_negative": true,
+    "G5_scope_controls": true,
+    "G6_metric_robustness": true,
+    "G7_no_float_or_rng": true
+  },
+  "manifest_sha256": "f99df92025289947ed27b78076c3e440808875a60497858d4b1055abe16e542b",
+  "metric_robustness": {
+    "anti_gaming": "false_negative_safety_reports_deadlock",
+    "clean_control": "epsilon_zero_and_v0_3_cycle_passed",
+    "invariance": "hazard_bit_swap_passed",
+    "monotonicity": "fresh_horizon_accumulation_live",
+    "sensitivity": "visible_vs_blinded_and_independent_vs_correlated_live"
+  },
+  "predecessor_binding": {
+    "commit": "61a2f802adb4c4b5f06272d97d9de888413d5352",
+    "files": {
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/artifacts_v0_3/result_v0_3.json": "a3e96165b58027a98edf17ce5cd007e283ae65059af7ef8f9e36a471da028f8a",
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/artifacts_v0_3/synthesis_receipt_v0_3.json": "11cb0b249a7688877e3d508cdd438d9e6ce67dd0f5bfe8943e9d8fee93655047",
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/artifacts_v0_3/verification_v0_3.json": "4a0b8a7bd9c06dd3c10ccadbbd03660ce4a4630254d7454f51d6f4cbbceb6d5e",
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/inductive_root.py": "724e701a8d0acde0353d671128fb577994bf62b1daa41c606b0d9ea6262620e6",
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/protocol_v0_3.json": "b999ee7bdb456457f25c1999d762279501968738625c24521191eca6d3eaafc1",
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/run.py": "ab1170032af1675959c6298c1939b9fa342b4320583f1479bac18fadccec393f",
+      "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/verify_independent.py": "4349ee53fb2f76be95079f902f9126999afe4b0b31b029e514afb6e9307e6916"
+    },
+    "pass": true,
+    "receipt_binding_match": true,
+    "receipt_pass": true
+  },
+  "protocol_id": "ASMP5-DYNAMIC-REPLICATED-NOISY-ANCHOR-v0.4",
+  "registry_rows": [
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 1,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=0/1|H=1|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 1,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=0/1|H=1|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 8,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=0/1|H=8|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 8,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=0/1|H=8|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 64,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=0/1|H=64|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 64,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=0/1|H=64|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/20",
+      "blinded_one_class_per_installation_failure": "1/20",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "1/400",
+        "per_installation_deadlock": "1/400",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "39/400",
+      "finite_horizon_safety": "361/400",
+      "horizon": 1,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/20|H=1|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/20",
+      "perfectly_correlated_bits_per_installation_failure": "1/20",
+      "single_hazard_bit_error_probability": "1/20",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "39/400"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/20",
+      "blinded_one_class_per_installation_failure": "1/20",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "1/400",
+        "per_installation_deadlock": "1/400",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "39/400",
+      "finite_horizon_safety": "361/400",
+      "horizon": 1,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/20|H=1|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/20",
+      "perfectly_correlated_bits_per_installation_failure": "1/20",
+      "single_hazard_bit_error_probability": "1/20",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "39/400"
+    },
+    {
+      "blinded_one_class_horizon_failure": "8616436959/25600000000",
+      "blinded_one_class_per_installation_failure": "1/20",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "12993083651579523199/655360000000000000000",
+        "per_installation_deadlock": "1/400",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "366918586432378832319/655360000000000000000",
+      "finite_horizon_safety": "288441413567621167681/655360000000000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/20|H=8|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "8616436959/25600000000",
+      "perfectly_correlated_bits_per_installation_failure": "1/20",
+      "single_hazard_bit_error_probability": "1/20",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "39/400"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/20",
+      "blinded_one_class_per_installation_failure": "1/20",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "1/400",
+        "per_installation_deadlock": "1/400",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "39/400",
+      "finite_horizon_safety": "361/400",
+      "horizon": 8,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/20|H=8|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/20",
+      "perfectly_correlated_bits_per_installation_failure": "1/20",
+      "single_hazard_bit_error_probability": "1/20",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "39/400"
+    },
+    {
+      "blinded_one_class_horizon_failure": "177545458810958428583363043334595857101472627772239425432763168752355962746518746879/184467440737095516160000000000000000000000000000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "1/20",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "5037094637534329301048563137732300365989027893982550470934857741496422857004347453321241657063149911322693865036028155401896451273093847826190830147540211920573465599/34028236692093846346337460743176821145600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "1/400",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "33980322858308077841405921642370007538874784247032097666672893742199766297797299165705903133650428388040656306624422330913397681094628428266590180340675362207527759359/34028236692093846346337460743176821145600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "47913833785768504931539100806813606725215752967902333327106257800233702202700834294096866349571611959343693375577669086602318905371571733409819659324637792472240641/34028236692093846346337460743176821145600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/20|H=64|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "177545458810958428583363043334595857101472627772239425432763168752355962746518746879/184467440737095516160000000000000000000000000000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "1/20",
+      "single_hazard_bit_error_probability": "1/20",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "39/400"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/20",
+      "blinded_one_class_per_installation_failure": "1/20",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "1/400",
+        "per_installation_deadlock": "1/400",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "39/400",
+      "finite_horizon_safety": "361/400",
+      "horizon": 64,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/20|H=64|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/20",
+      "perfectly_correlated_bits_per_installation_failure": "1/20",
+      "single_hazard_bit_error_probability": "1/20",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "39/400"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/10",
+      "blinded_one_class_per_installation_failure": "1/10",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "1/100",
+        "per_installation_deadlock": "1/100",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "19/100",
+      "finite_horizon_safety": "81/100",
+      "horizon": 1,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/10|H=1|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/10",
+      "perfectly_correlated_bits_per_installation_failure": "1/10",
+      "single_hazard_bit_error_probability": "1/10",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "19/100"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/10",
+      "blinded_one_class_per_installation_failure": "1/10",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "1/100",
+        "per_installation_deadlock": "1/100",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "19/100",
+      "finite_horizon_safety": "81/100",
+      "horizon": 1,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/10|H=1|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/10",
+      "perfectly_correlated_bits_per_installation_failure": "1/10",
+      "single_hazard_bit_error_probability": "1/10",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "19/100"
+    },
+    {
+      "blinded_one_class_horizon_failure": "56953279/100000000",
+      "blinded_one_class_per_installation_failure": "1/10",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "772553055720799/10000000000000000",
+        "per_installation_deadlock": "1/100",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "8146979811148159/10000000000000000",
+      "finite_horizon_safety": "1853020188851841/10000000000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/10|H=8|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "56953279/100000000",
+      "perfectly_correlated_bits_per_installation_failure": "1/10",
+      "single_hazard_bit_error_probability": "1/10",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "19/100"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/10",
+      "blinded_one_class_per_installation_failure": "1/10",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "1/100",
+        "per_installation_deadlock": "1/100",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "19/100",
+      "finite_horizon_safety": "81/100",
+      "horizon": 8,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/10|H=8|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/10",
+      "perfectly_correlated_bits_per_installation_failure": "1/10",
+      "single_hazard_bit_error_probability": "1/10",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "19/100"
+    },
+    {
+      "blinded_one_class_horizon_failure": "9988209815422261416828479127138587481334321788407724158890903039/10000000000000000000000000000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "1/10",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "47440351247443766510562145618915972031051985849437834408036633905240966005776772985948154800514219197337143305041013624043846399/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "1/100",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "99999860991547622855267235060213210338696885781149191470862008395175569963927370233564058998230845890390478188334459451100564479/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "139008452377144732764939786789661303114218850808529137991604824430036072629766435941001769154109609521811665540548899435521/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/10|H=64|temporal=fresh_iid",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "9988209815422261416828479127138587481334321788407724158890903039/10000000000000000000000000000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "1/10",
+      "single_hazard_bit_error_probability": "1/10",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "19/100"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1/10",
+      "blinded_one_class_per_installation_failure": "1/10",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "1/100",
+        "per_installation_deadlock": "1/100",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "19/100",
+      "finite_horizon_safety": "81/100",
+      "horizon": 64,
+      "joint_replica_pattern_count": 4,
+      "key": "m=1|epsilon=1/10|H=64|temporal=persistent",
+      "m": 1,
+      "majority_threshold": 1,
+      "perfectly_correlated_bits_horizon_failure": "1/10",
+      "perfectly_correlated_bits_per_installation_failure": "1/10",
+      "single_hazard_bit_error_probability": "1/10",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "19/100"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 1,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=0/1|H=1|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 1,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=0/1|H=1|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 8,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=0/1|H=8|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 8,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=0/1|H=8|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 64,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=0/1|H=64|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 64,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=0/1|H=64|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "29/4000",
+      "blinded_one_class_per_installation_failure": "29/4000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "841/16000000",
+        "per_installation_deadlock": "841/16000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "231159/16000000",
+      "finite_horizon_safety": "15768841/16000000",
+      "horizon": 1,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/20|H=1|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "29/4000",
+      "perfectly_correlated_bits_per_installation_failure": "29/4000",
+      "single_hazard_bit_error_probability": "29/4000",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "231159/16000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "29/4000",
+      "blinded_one_class_per_installation_failure": "29/4000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "841/16000000",
+        "per_installation_deadlock": "841/16000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "231159/16000000",
+      "finite_horizon_safety": "15768841/16000000",
+      "horizon": 1,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/20|H=1|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "29/4000",
+      "perfectly_correlated_bits_per_installation_failure": "29/4000",
+      "single_hazard_bit_error_probability": "29/4000",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "231159/16000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "3706021353586508663987475039/65536000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "29/4000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "1805701529122811401963395392468091309942762978219212479/4294967296000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "841/16000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "472021036584051685731908166660698611566285367333351948479/4294967296000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "3822946259415948314268091833339301388433714632666648051521/4294967296000000000000000000000000000000000000000000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/20|H=8|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "3706021353586508663987475039/65536000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "29/4000",
+      "single_hazard_bit_error_probability": "29/4000",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "231159/16000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "29/4000",
+      "blinded_one_class_per_installation_failure": "29/4000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "841/16000000",
+        "per_installation_deadlock": "841/16000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "231159/16000000",
+      "finite_horizon_safety": "15768841/16000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/20|H=8|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "29/4000",
+      "perfectly_correlated_bits_per_installation_failure": "29/4000",
+      "single_hazard_bit_error_probability": "29/4000",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "231159/16000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "126686535781593949352605870193759492003155192263717752094652410784263287356123860693887322795828457786599087932812749221661537804026981833474472611871145197919024211882557870649482523358848445761805553221354775255292873351726539519/340282366920938463463374607431768211456000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "29/4000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "388880345065228405187065941575772389398783443374929666105266560881889168442690220466002069789204588449362286604979202066559076007764533370375518805187062895454546443725036396079641517577926654408931559655819209791380215581504821511305203130669853792489971694062269114214055675812270373121553810612892151317324030590020888260618901978912374343651386657297295554181674988833375744434141204019646425746262628430034684677036104546172741421423424310266881153840639/115792089237316195423570985008687907853269984665640564039457584007913129639936000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "841/16000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "70168910157208819830592342437575445693799712791566661998598697325258317423216619983702234521569593181034469140665807387418331595065459201945048591669883971827842207736825660671690325590668977626927391425214551257692586272873212212326649014955666222523650414326506632250315473266559928297257972549795065007886046113392550267552562782911181801776391582526099968338636166117845215022077778767666218216378116487189933088386058979402768305606857981345223989331248639/115792089237316195423570985008687907853269984665640564039457584007913129639936000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "45623179080107375592978642571112462159470271874073902040858886682654812216719380016297765478430406818965530859334192612581668404934540798054951408330116028172157792263174339328309674409331022373072608574785448742307413727126787787673350985044333777476349585673493367749684526733440071702742027450204934992113953886607449732447437217088818198223608417473900031661363833882154784977922221232333781783621883512810066911613941020597231694393142018654776010668751361/115792089237316195423570985008687907853269984665640564039457584007913129639936000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/20|H=64|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "126686535781593949352605870193759492003155192263717752094652410784263287356123860693887322795828457786599087932812749221661537804026981833474472611871145197919024211882557870649482523358848445761805553221354775255292873351726539519/340282366920938463463374607431768211456000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "29/4000",
+      "single_hazard_bit_error_probability": "29/4000",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "231159/16000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "29/4000",
+      "blinded_one_class_per_installation_failure": "29/4000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "841/16000000",
+        "per_installation_deadlock": "841/16000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "231159/16000000",
+      "finite_horizon_safety": "15768841/16000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/20|H=64|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "29/4000",
+      "perfectly_correlated_bits_per_installation_failure": "29/4000",
+      "single_hazard_bit_error_probability": "29/4000",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "231159/16000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "7/250",
+      "blinded_one_class_per_installation_failure": "7/250",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "49/62500",
+        "per_installation_deadlock": "49/62500",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "3451/62500",
+      "finite_horizon_safety": "59049/62500",
+      "horizon": 1,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/10|H=1|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "7/250",
+      "perfectly_correlated_bits_per_installation_failure": "7/250",
+      "single_hazard_bit_error_probability": "7/250",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "3451/62500"
+    },
+    {
+      "blinded_one_class_horizon_failure": "7/250",
+      "blinded_one_class_per_installation_failure": "7/250",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "49/62500",
+        "per_installation_deadlock": "49/62500",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "3451/62500",
+      "finite_horizon_safety": "59049/62500",
+      "horizon": 1,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/10|H=1|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "7/250",
+      "perfectly_correlated_bits_per_installation_failure": "7/250",
+      "single_hazard_bit_error_probability": "7/250",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "3451/62500"
+    },
+    {
+      "blinded_one_class_horizon_failure": "3101123603443071199/15258789062500000000",
+      "blinded_one_class_per_installation_failure": "7/250",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "1456312972918959482284228194118930399/232830643653869628906250000000000000000",
+        "per_installation_deadlock": "49/62500",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "85021814239523705590166789793616702399/232830643653869628906250000000000000000",
+      "finite_horizon_safety": "147808829414345923316083210206383297601/232830643653869628906250000000000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/10|H=8|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "3101123603443071199/15258789062500000000",
+      "perfectly_correlated_bits_per_installation_failure": "7/250",
+      "single_hazard_bit_error_probability": "7/250",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "3451/62500"
+    },
+    {
+      "blinded_one_class_horizon_failure": "7/250",
+      "blinded_one_class_per_installation_failure": "7/250",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "49/62500",
+        "per_installation_deadlock": "49/62500",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "3451/62500",
+      "finite_horizon_safety": "59049/62500",
+      "horizon": 8,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/10|H=8|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "7/250",
+      "perfectly_correlated_bits_per_installation_failure": "7/250",
+      "single_hazard_bit_error_probability": "7/250",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "3451/62500"
+    },
+    {
+      "blinded_one_class_horizon_failure": "2461424803244414655435362839474449787630439038890980289921793657550271161756301123669739477865759621759244926171829703259626917651377690385331655168249599/2938735877055718769921841343055614194546663891930218803771879265696043148636817932128906250000000000000000000000000000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "7/250",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "422798254171097490929200836640711953795639683860115528707706162401133592811542763910993793925039109243894688800510227240481481353439783157908502694210576105872045166804823846388435929077686802146841221989971802680820347697440830670664002157533914306635801509310878482719206786454123152243147419801698963199/8636168555094444625386351862800399571116000364436281385023703470168591803162427057971507503472288226560547293946149663596995098946831946693653003777058074774686247110366821289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "49/62500",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "8408342693911544420898425699546190700914230386079853348801996911506984115185241308706922852689145118399754916054276354710688392096372823355641812881134369774309669380963929673014348630732747624011557684269420554415638280976471600559571348801529316735433048371869908513299647064979245204562100179382436339199/8636168555094444625386351862800399571116000364436281385023703470168591803162427057971507503472288226560547293946149663596995098946831946693653003777058074774686247110366821289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "227825861182900204487926163254208870201769978356428036221706558661607687977185749264584650783143108160792377891873308886306706850459123338011190895923705000376577729402891616048151369267252375988442315730579445584361719023528399440428651198470683264566951628130091486700352935020754795437899820617563660801/8636168555094444625386351862800399571116000364436281385023703470168591803162427057971507503472288226560547293946149663596995098946831946693653003777058074774686247110366821289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/10|H=64|temporal=fresh_iid",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "2461424803244414655435362839474449787630439038890980289921793657550271161756301123669739477865759621759244926171829703259626917651377690385331655168249599/2938735877055718769921841343055614194546663891930218803771879265696043148636817932128906250000000000000000000000000000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "7/250",
+      "single_hazard_bit_error_probability": "7/250",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "3451/62500"
+    },
+    {
+      "blinded_one_class_horizon_failure": "7/250",
+      "blinded_one_class_per_installation_failure": "7/250",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "49/62500",
+        "per_installation_deadlock": "49/62500",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "3451/62500",
+      "finite_horizon_safety": "59049/62500",
+      "horizon": 64,
+      "joint_replica_pattern_count": 64,
+      "key": "m=3|epsilon=1/10|H=64|temporal=persistent",
+      "m": 3,
+      "majority_threshold": 2,
+      "perfectly_correlated_bits_horizon_failure": "7/250",
+      "perfectly_correlated_bits_per_installation_failure": "7/250",
+      "single_hazard_bit_error_probability": "7/250",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "3451/62500"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 1,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=0/1|H=1|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 1,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=0/1|H=1|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 8,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=0/1|H=8|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 8,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=0/1|H=8|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 64,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=0/1|H=64|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "0/1",
+      "blinded_one_class_per_installation_failure": "0/1",
+      "epsilon": "0/1",
+      "false_negative_only": {
+        "horizon_deadlock": "0/1",
+        "per_installation_deadlock": "0/1",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "0/1",
+      "finite_horizon_safety": "1/1",
+      "horizon": 64,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=0/1|H=64|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "0/1",
+      "perfectly_correlated_bits_per_installation_failure": "0/1",
+      "single_hazard_bit_error_probability": "0/1",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "0/1"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1853/1600000",
+      "blinded_one_class_per_installation_failure": "1853/1600000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "3433609/2560000000000",
+        "per_installation_deadlock": "3433609/2560000000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "5926166391/2560000000000",
+      "finite_horizon_safety": "2554073833609/2560000000000",
+      "horizon": 1,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/20|H=1|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "1853/1600000",
+      "perfectly_correlated_bits_per_installation_failure": "1853/1600000",
+      "single_hazard_bit_error_probability": "1853/1600000",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "5926166391/2560000000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1853/1600000",
+      "blinded_one_class_per_installation_failure": "1853/1600000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "3433609/2560000000000",
+        "per_installation_deadlock": "3433609/2560000000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "5926166391/2560000000000",
+      "finite_horizon_safety": "2554073833609/2560000000000",
+      "horizon": 1,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/20|H=1|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "1853/1600000",
+      "perfectly_correlated_bits_per_installation_failure": "1853/1600000",
+      "single_hazard_bit_error_probability": "1853/1600000",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "5926166391/2560000000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "396319471438064269000873685347246272627450655839/42949672960000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "1853/1600000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "19793315354882797566944717731264157104833991170266542714903171735488119076985401635979156006079/1844674407370955161600000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "3433609/2560000000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "33886514248448895858197225261063790882041189463154573989934654764311848819968210110071208775206079/1844674407370955161600000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "1810787893122506265741802774738936209117958810536845426010065345235688151180031789889928791224793921/1844674407370955161600000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/20|H=8|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "396319471438064269000873685347246272627450655839/42949672960000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "1853/1600000",
+      "single_hazard_bit_error_probability": "1853/1600000",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "5926166391/2560000000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1853/1600000",
+      "blinded_one_class_per_installation_failure": "1853/1600000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "3433609/2560000000000",
+        "per_installation_deadlock": "3433609/2560000000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "5926166391/2560000000000",
+      "finite_horizon_safety": "2554073833609/2560000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/20|H=8|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "1853/1600000",
+      "perfectly_correlated_bits_per_installation_failure": "1853/1600000",
+      "single_hazard_bit_error_probability": "1853/1600000",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "5926166391/2560000000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "827677499244423431343074525637497269187761849414970985252347092911608299035689799760861981418708787493611501983064655407777710556641357376412431185087521015348650827367469979576837885332535007488207148466564051584602330471522989143704983700033290936686493112916907857779228189961090533953134211719886432342728131897178930551276428919633895129683893342559363612322188102613830659549214010340913919/11579208923731619542357098500868790785326998466564056403945758400791312963993600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "1853/1600000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "11508806246419941603996384080421627968740147314137491350808159726146302746961830710841027747801156515066812352416052517372094733259079206716384061060781564946361547302166383004046951080580262031804483085043293804303097599234254246636077992009269233235507706038886962159726776901695023445983971591980682853554383099977022193467368525716742411050483460925980381150689019658297816915651541086290694797850402572773228919703918226001638674812599895294027454331755002265931668926699154318902070158825873059103058869387911193539496833886952778056474325148848319414279837191727186828434654235805272277792823905018618513263107843756725813930644449515512821415532681215544810987282051392960099143443518150011129529585018026974272509813092569406406771402892628981412249383349683458828434593040254461439/134078079299425970995740249982058461274793658205923933777235614437217640300735469768018742981669034276900318581864860508537538828119465699464336490060840960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "3433609/2560000000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "18482651327690294625067147382693972287529661183617843870553642201693981885560567493748361877249017137230569264820906777901559970787242112177956355583317284697319600084429713005707957279399385536102266296283338622840389062130937070732813715143653533548426788017714106585693700081600623498884920823084089657371950488888174573323336277714671780465140869169155945267673175514267612063656181592372151881682677661115673060240896237269994870776266916903490851251098894062261683153258098770501070261503706145163222485148600794220458425567284138629911054189258604937483937908551745467689957385086205417559766861638203488392286042065899541068654349219989564461750908364984189936882535939790391362267370993816997852080086249376375439821075495435176983355020528004451209883188483721165256846167319832061439/134078079299425970995740249982058461274793658205923933777235614437217640300735469768018742981669034276900318581864860508537538828119465699464336490060840960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "115595427971735676370673102599364488987263997022306089906681972235523658415174902274270381104420017139669749317043953730635978857332223587286380134477523675302680399915570286994292042720600614463897733703716661377159610937869062929267186284856346466451573211982285893414306299918399376501115079176915910342628049511111825426676663722285328219534859130830844054732326824485732387936343818407627848118317322338884326939759103762730005129223733083096509148748901105937738316846741901229498929738496293854836777514851399205779541574432715861370088945810741395062516062091448254532310042614913794582440233138361796511607713957934100458931345650780010435538249091635015810063117464060209608637732629006183002147919913750623624560178924504564823016644979471995548790116811516278834743153832680167938561/134078079299425970995740249982058461274793658205923933777235614437217640300735469768018742981669034276900318581864860508537538828119465699464336490060840960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/20|H=64|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "827677499244423431343074525637497269187761849414970985252347092911608299035689799760861981418708787493611501983064655407777710556641357376412431185087521015348650827367469979576837885332535007488207148466564051584602330471522989143704983700033290936686493112916907857779228189961090533953134211719886432342728131897178930551276428919633895129683893342559363612322188102613830659549214010340913919/11579208923731619542357098500868790785326998466564056403945758400791312963993600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "1853/1600000",
+      "single_hazard_bit_error_probability": "1853/1600000",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "5926166391/2560000000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "1853/1600000",
+      "blinded_one_class_per_installation_failure": "1853/1600000",
+      "epsilon": "1/20",
+      "false_negative_only": {
+        "horizon_deadlock": "3433609/2560000000000",
+        "per_installation_deadlock": "3433609/2560000000000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "5926166391/2560000000000",
+      "finite_horizon_safety": "2554073833609/2560000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/20|H=64|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "1853/1600000",
+      "perfectly_correlated_bits_per_installation_failure": "1853/1600000",
+      "single_hazard_bit_error_probability": "1853/1600000",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "5926166391/2560000000000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "107/12500",
+      "blinded_one_class_per_installation_failure": "107/12500",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "11449/156250000",
+        "per_installation_deadlock": "11449/156250000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "2663551/156250000",
+      "finite_horizon_safety": "153586449/156250000",
+      "horizon": 1,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/10|H=1|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "107/12500",
+      "perfectly_correlated_bits_per_installation_failure": "107/12500",
+      "single_hazard_bit_error_probability": "107/12500",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "2663551/156250000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "107/12500",
+      "blinded_one_class_per_installation_failure": "107/12500",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "11449/156250000",
+        "per_installation_deadlock": "11449/156250000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "2663551/156250000",
+      "finite_horizon_safety": "153586449/156250000",
+      "horizon": 1,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/10|H=1|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "107/12500",
+      "perfectly_correlated_bits_per_installation_failure": "107/12500",
+      "single_hazard_bit_error_probability": "107/12500",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "2663551/156250000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "39615088918309904312313610980799/596046447753906250000000000000000",
+      "blinded_one_class_per_installation_failure": "107/12500",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "208202695779393211068504668339347231216260473954357392564721599/355271367880050092935562133789062500000000000000000000000000000000",
+        "per_installation_deadlock": "11449/156250000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "45655510784421909495667318222306407175786449517042146289253321599/355271367880050092935562133789062500000000000000000000000000000000",
+      "finite_horizon_safety": "309615857095628183439894815566756092824213550482957853710746678401/355271367880050092935562133789062500000000000000000000000000000000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/10|H=8|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "39615088918309904312313610980799/596046447753906250000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "107/12500",
+      "single_hazard_bit_error_probability": "107/12500",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "2663551/156250000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "107/12500",
+      "blinded_one_class_per_installation_failure": "107/12500",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "11449/156250000",
+        "per_installation_deadlock": "11449/156250000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "2663551/156250000",
+      "finite_horizon_safety": "153586449/156250000",
+      "horizon": 8,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/10|H=8|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "107/12500",
+      "perfectly_correlated_bits_per_installation_failure": "107/12500",
+      "single_hazard_bit_error_probability": "107/12500",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "2663551/156250000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "6741400100226830020731772332155739844701065068655936059662708239362675613696508829794566470226789750300112597501615891316816929422077178352228583436934559273026281742254885456973213532641871402868980665112880700559652618112350836908365491068870974344012037926399/15930919111324522770288803977677118055911045551926187860738858533861629015130581609430898747201826859409834469261113554239273071289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "blinded_one_class_per_installation_failure": "107/12500",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "1187427564999394348466814587304404760821142411178809816023999740590036495153722381741716531780582321054295600724686902844285876320881925152302352784747434723619646167559813247915139925369491411320024027982674080426436592071537963947601147206150161494124935003667597018735173453335233661731540336740739565909974351322001942024465027303270401216808223710423506680953747261213443904266079021262267110192265668281448290963410792017251912103252602034905864495412674179446244278494772168471633249368990070291229735181481310092799/253794183731564922327402455583054354682361884970109558160606032123947669788929947393240742905578428622966459105775089584660207134244362670278070635767617977843871649973569506688265882066824380684095282718078071105138279721374775302344950489441544050350785255432128906250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "per_installation_deadlock": "11449/156250000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "169346924076239005447810503439243705617919068836651799837232705550073881524449237811063770775110372685118587889198130301736631212162882096644687139255817143585700089152044555314924826421261096167761571417221429973832826606553559063929587969581044594166686238615876598370267253176284615154618546079507366095613449756823278809011038335566717615941433309428225367676994835986789065540820639570305664757478639289371356155164846892544222038009282982225098650252252903134485051191294708609725171930336648405638876473816012258892799/253794183731564922327402455583054354682361884970109558160606032123947669788929947393240742905578428622966459105775089584660207134244362670278070635767617977843871649973569506688265882066824380684095282718078071105138279721374775302344950489441544050350785255432128906250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_horizon_safety": "84447259655325916879591952143810649064442816133457758323373326573873788264480709582176972130468055937847871216576959282923575922081480573633383496511800834258171560821524951373341055645563284516333711300856641131305453114821216238415362519860499456184099016816252307879732746823715384845381453920492633904386550243176721190988961664433282384058566690571774632323005164013210934459179360429694335242521360710628643844835153107455777961990717017774901349747747096865514948808705291390274828069663351594361123526183987741107201/253794183731564922327402455583054354682361884970109558160606032123947669788929947393240742905578428622966459105775089584660207134244362670278070635767617977843871649973569506688265882066824380684095282718078071105138279721374775302344950489441544050350785255432128906250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/10|H=64|temporal=fresh_iid",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "6741400100226830020731772332155739844701065068655936059662708239362675613696508829794566470226789750300112597501615891316816929422077178352228583436934559273026281742254885456973213532641871402868980665112880700559652618112350836908365491068870974344012037926399/15930919111324522770288803977677118055911045551926187860738858533861629015130581609430898747201826859409834469261113554239273071289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "perfectly_correlated_bits_per_installation_failure": "107/12500",
+      "single_hazard_bit_error_probability": "107/12500",
+      "temporal_model": "fresh_iid",
+      "visible_adversary_per_installation_failure": "2663551/156250000"
+    },
+    {
+      "blinded_one_class_horizon_failure": "107/12500",
+      "blinded_one_class_per_installation_failure": "107/12500",
+      "epsilon": "1/10",
+      "false_negative_only": {
+        "horizon_deadlock": "11449/156250000",
+        "per_installation_deadlock": "11449/156250000",
+        "unsafe_failure": "0/1"
+      },
+      "finite_horizon_failure": "2663551/156250000",
+      "finite_horizon_safety": "153586449/156250000",
+      "horizon": 64,
+      "joint_replica_pattern_count": 1024,
+      "key": "m=5|epsilon=1/10|H=64|temporal=persistent",
+      "m": 5,
+      "majority_threshold": 3,
+      "perfectly_correlated_bits_horizon_failure": "107/12500",
+      "perfectly_correlated_bits_per_installation_failure": "107/12500",
+      "single_hazard_bit_error_probability": "107/12500",
+      "temporal_model": "persistent",
+      "visible_adversary_per_installation_failure": "2663551/156250000"
+    }
+  ],
+  "schema_version": "asmp5_dynamic_replicated_noisy_anchor_result_v0_4",
+  "source_binding": {
+    "files": {
+      "PROTOCOL_v0_4.md": {
+        "git_blob_oid": "8374c3b75528382bb2480da978732b67b4e148bf",
+        "sha256": "d7a67c1e221b4a94064b540c0af5b4216cdfc889a902aafea24fb1a4d74ee03b"
+      },
+      "README.md": {
+        "git_blob_oid": "82a4f8cdbc73d706aa54753723a0d31f521237a1",
+        "sha256": "3519bd5fec8a78ec96c1645554704b5725f95921f3d6fa08a8c3f07812b02935"
+      },
+      "SOURCE_FREEZE.md": {
+        "git_blob_oid": "1a1435b224b25cb8f73d8cd59641843d1c1d8f8f",
+        "sha256": "d0bf5f24372279914f4e89d58c413ffe28d43be0512a11b17783700d6b813644"
+      },
+      "manifest_v0_4.json": {
+        "git_blob_oid": "877615e12b843ed8952ce83fd78c82d2eb826f7f",
+        "sha256": "957276157dc6b8b386dfd7a570c442dda581eeefe3f35bc26266536e9f45a307"
+      },
+      "noisy_anchor.py": {
+        "git_blob_oid": "d67b949aada577b684a8f6519b2e3a0f4e16bc3a",
+        "sha256": "401348be2838f8ffdd2908a84b67308b9cb434682a8f571da1972a9e95fdf832"
+      },
+      "run.py": {
+        "git_blob_oid": "1d413027d2b4aa8fb8b30fc9a994e306fd06cc20",
+        "sha256": "415dabc1048b7a901fcaedf993bab3b6e55f412a382f34b03cd9442e7f50e90a"
+      },
+      "test_noisy_anchor.py": {
+        "git_blob_oid": "c972aee1c0428c124ba5e6b186c99ee661aaec92",
+        "sha256": "6b88d4d923a4690fc621947de0423127c98744e95acfbf283eae6530f28c2d30"
+      },
+      "verify_independent.py": {
+        "git_blob_oid": "af7b9c756a15b591b04dbfae4d9fd87e30ebe69b",
+        "sha256": "fa82aff76752950e6c97e6e046ae27109e6cc20b9a0eeb26d5ba2f0a03dfa81e"
+      }
+    },
+    "pass": true,
+    "repo_relative_directory": "ultra-experiments/millennium/asmp5_verifier_drift/v0_4_dynamic_noisy_anchor",
+    "source_commit": "b3d38bb32ca8fbfc2c158ec1dae9a864881a08bd",
+    "source_commit_is_ancestor_of_head": true,
+    "source_commit_type": "commit"
+  },
+  "status": "computed_awaiting_import_independent_verification",
+  "symbolic_theorem": {
+    "domain": "finite odd m>=1 and 0<epsilon<=1",
+    "fresh_limit": "lim_(H->infinity) [1-(1-q_m)^H]=1",
+    "independent_union": "q_m=1-(1-p_m)^2>0",
+    "pass": true,
+    "persistent_limit": "q_m>0 (constant in H; not asserted to approach 1)",
+    "positive_lower_bound": "p_m>=epsilon^m>0",
+    "proof_steps": [
+      "the all-m-errors event is contained in the strict-majority event",
+      "positive epsilon gives the all-m-errors event probability epsilon^m>0",
+      "independent hazard-bit majorities give q_m=1-(1-p_m)^2",
+      "if q_m=1 failure is immediate; otherwise 0<1-q_m<1 and its Hth power tends to zero"
+    ]
+  }
+}

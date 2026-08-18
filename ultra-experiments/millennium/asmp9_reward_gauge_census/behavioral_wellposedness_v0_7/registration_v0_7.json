@@ -1,0 +1,17 @@
+{
+  "registration_id": "ASMP-9-BEHAVIORAL-WELLPOSEDNESS-v0.7-registration",
+  "registered_at_utc": "2026-07-28T18:50:37Z",
+  "implementation_commit": "d67e4e87e579129ce246ade63b7af4da59ca7415",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/protocol_v0_7.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/THEOREM_DRAFT_v0_7.md": "312d72a195ff0f4147c8f5085a2c6d64838e4ea2279e152b5645ec4b7105ec4f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/PRIOR_ART_v0_7.md": "5d3dcb83d5f7581c07210ab2b81db6606b9cef9c4afc8772348cb92bd66eafd2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/behavioral_access.py": "5d74c79b2b920fb82ca2c84ab04d35c6b3461b40f7c30f28ec756ef9a5567d35",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/test_behavioral_access.py": "477ec4507124f8de907ce5bb65cef0ee5dda8ec7b29a21143e805d6594aeb29a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/PROTOCOL_v0_7.md": "8beaeb55ac6eb921102f2bfdf99cc481a1f7a7cb3f272192d15b4c7975dc08f1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/protocol_v0_7.json": "58fc2c58252278c6b78a914cc8065fb5c367ca571bd510f227c522dfa416fc98",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/run_verification.py": "e4cef1cd0f0aa36585f7e8294252b4a9189088843723f2e59b280a37468237ee",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/verify_result.py": "7928b14a3cfc052a79912f4741f2f0adeddf307a996bc073af32a0e4ee086d3f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_wellposedness_v0_7/README.md": "380d9ce2bac37a5c794b15f99883b350ee0ed194e8b4bff757bb08dc9a097258"
+  }
+}

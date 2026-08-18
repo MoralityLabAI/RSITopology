@@ -1,0 +1,62 @@
+{
+  "analysis_registration": {
+    "path": "C:\\projects\\RSITopology\\protocols\\qwen08_between_class_support_recovery_v0_1.json",
+    "sha256": "939fceeacebfc974488c7996326d3f93809e9342b4fd5f6e941545f680889e47"
+  },
+  "checkpoint_strategy": "one support-recovery analysis with one final write-once result",
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+    "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+  },
+  "exact_inner_command": [
+    "C:\\Python311\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen08_support_recovery.py",
+    "--protocol",
+    "C:\\projects\\RSITopology\\protocols\\qwen08_between_class_support_recovery_v0_1.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\qwen08_between_class_support_recovery_v0_1",
+    "--seed",
+    "2026071606"
+  ],
+  "hard_cap_validation_receipt": {
+    "path": "C:\\projects\\RSITopology\\artifacts\\hard_cap_validation\\qwen_holonomy_jobobject_v0_2\\hard_cap_validation_receipt.json",
+    "sha256": "044965134be9249480d72cb3134b5ab7c7f11d4bbf69eaa6aa71ce1300f1b9a4"
+  },
+  "hard_cap_wrapper": {
+    "path": "C:\\projects\\RSITopology\\scripts\\run_qwen_holonomy_jobobject.ps1",
+    "sha256": "e84854969b030b1a2fb0a8e4423058720876c3e71555dba97ab2ac279dda6fed"
+  },
+  "implementation_commit": "0e3a7ed9f5ba8eead9f0b68aa646928b7d6bd0d1",
+  "outcomes_consumed": false,
+  "remote_refs_containing_commit": [
+    "origin/feat/spectral-bundle-v0.3-bifiltration"
+  ],
+  "resource_caps": {
+    "checkpoint_every_seconds": 7200,
+    "cpu_percent": 50,
+    "gpu_allowance_mb": 1,
+    "io_mb_s": 100,
+    "memory_mb": 4096,
+    "swap_bytes": 0,
+    "timeout_seconds": 7200
+  },
+  "run_id": "qwen08-between-class-support-recovery-v01",
+  "schema_version": "qwen_holonomy_geometry_analysis_authorization_v0_1",
+  "source_paths": {
+    "capture_contract": "C:\\projects\\RSITopology\\rsi_topology\\qwen_state_capture.py",
+    "discovery": "C:\\projects\\RSITopology\\rsi_topology\\discovery.py",
+    "entrypoint": "C:\\projects\\RSITopology\\scripts\\run_qwen08_support_recovery.py",
+    "pair_input_validation": "C:\\projects\\RSITopology\\rsi_topology\\qwen_geometry_analysis.py",
+    "support_recovery": "C:\\projects\\RSITopology\\rsi_topology\\qwen_support_recovery.py"
+  },
+  "source_sha256": {
+    "capture_contract": "a5d593ef7cff05399f0e4449b4c698decefec297350d824f901375981307c16f",
+    "discovery": "decfa2cc078591d1964c3aaf615015a1c24df1ffbcea848f7ba3e0bb0be73ea0",
+    "entrypoint": "818e8a4ebcb733c7e566feb8ea057eb5f7d27b326c2c0aee21607e6e409b7a8b",
+    "pair_input_validation": "6a0e040427d43b643d3163f7716e72214c45ac466c40b95472dbe6c83fe15a1c",
+    "support_recovery": "27ea85b0fdcf688e7769458c7b4cbeb05c4b92ed47c7034a6960da3d146bffd2"
+  },
+  "status": "authorized_for_target_blind_cpu_support_recovery",
+  "weight_mutation_performed": false,
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\qwen08_between_class_support_recovery_v0_1\\_wrapper"
+}

@@ -1,0 +1,2499 @@
+{
+  "claim_boundary": "Exact only for the registered symmetric beta-binomial semantic-bit game. No claim about real judges, refutation search, superhuman work, or ASMP-3 resolution.",
+  "evidence_class": "exact_finite_rational",
+  "experiment_id": "ASMP-3-CORRELATED-NOISE-FRONTIER-v0.1",
+  "frontiers": [
+    {
+      "families": 1,
+      "first_failing_rho_on_grid": "0",
+      "max_passing_rho_on_grid": null,
+      "q": 1
+    },
+    {
+      "families": 1,
+      "first_failing_rho_on_grid": "0",
+      "max_passing_rho_on_grid": null,
+      "q": 3
+    },
+    {
+      "families": 3,
+      "first_failing_rho_on_grid": "0",
+      "max_passing_rho_on_grid": null,
+      "q": 3
+    },
+    {
+      "families": 1,
+      "first_failing_rho_on_grid": "0",
+      "max_passing_rho_on_grid": null,
+      "q": 5
+    },
+    {
+      "families": 3,
+      "first_failing_rho_on_grid": "0",
+      "max_passing_rho_on_grid": null,
+      "q": 5
+    },
+    {
+      "families": 5,
+      "first_failing_rho_on_grid": "0",
+      "max_passing_rho_on_grid": null,
+      "q": 5
+    },
+    {
+      "families": 1,
+      "first_failing_rho_on_grid": "1/20",
+      "max_passing_rho_on_grid": "1/50",
+      "q": 7
+    },
+    {
+      "families": 3,
+      "first_failing_rho_on_grid": "1/5",
+      "max_passing_rho_on_grid": "1/10",
+      "q": 7
+    },
+    {
+      "families": 7,
+      "first_failing_rho_on_grid": null,
+      "max_passing_rho_on_grid": "1/2",
+      "q": 7
+    },
+    {
+      "families": 1,
+      "first_failing_rho_on_grid": "1/10",
+      "max_passing_rho_on_grid": "1/20",
+      "q": 9
+    },
+    {
+      "families": 3,
+      "first_failing_rho_on_grid": "1/3",
+      "max_passing_rho_on_grid": "1/5",
+      "q": 9
+    },
+    {
+      "families": 9,
+      "first_failing_rho_on_grid": null,
+      "max_passing_rho_on_grid": "1/2",
+      "q": 9
+    }
+  ],
+  "gates": {
+    "C0_correlation_boundary": {
+      "pass": true,
+      "rho_0.05_error": {
+        "decimal": 0.04535175232758893,
+        "exact": "560253581/12353515625"
+      },
+      "rho_0.10_error": {
+        "decimal": 0.06986375447272727,
+        "exact": "15009791/214843750"
+      }
+    },
+    "D0_diversity_recovery": {
+      "nine_family_error": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "one_family_error": {
+        "decimal": 0.10989650850909091,
+        "exact": "11805289/107421875"
+      },
+      "pass": true,
+      "three_family_error": {
+        "decimal": 0.04393101312,
+        "exact": "2145069/48828125"
+      }
+    },
+    "E0_exactness": {
+      "pass": true
+    },
+    "G0_global_correlation_kill": {
+      "error_each_q": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "pass": true
+    },
+    "I0_independent_liveness": {
+      "error": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "pass": true
+    },
+    "M0_marginal_bound_kill": {
+      "attacks": [
+        {
+          "atom_average_error": {
+            "decimal": 0.0625,
+            "exact": "1/16"
+          },
+          "n_atoms": 16,
+          "worst_case_false_accept": {
+            "decimal": 1.0,
+            "exact": "1"
+          }
+        },
+        {
+          "atom_average_error": {
+            "decimal": 0.015625,
+            "exact": "1/64"
+          },
+          "n_atoms": 64,
+          "worst_case_false_accept": {
+            "decimal": 1.0,
+            "exact": "1"
+          }
+        },
+        {
+          "atom_average_error": {
+            "decimal": 0.00390625,
+            "exact": "1/256"
+          },
+          "n_atoms": 256,
+          "worst_case_false_accept": {
+            "decimal": 1.0,
+            "exact": "1"
+          }
+        },
+        {
+          "atom_average_error": {
+            "decimal": 0.0009765625,
+            "exact": "1/1024"
+          },
+          "n_atoms": 1024,
+          "worst_case_false_accept": {
+            "decimal": 1.0,
+            "exact": "1"
+          }
+        }
+      ],
+      "pass": true
+    },
+    "S0_separate_error_rule": {
+      "pass": true
+    }
+  },
+  "rows": [
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "false_reject": {
+        "decimal": 0.2,
+        "exact": "1/5"
+      },
+      "families": 1,
+      "family_sizes": [
+        1
+      ],
+      "q": 1,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.6,
+        "exact": "3/5"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.1068419801980198,
+        "exact": "33722/315625"
+      },
+      "false_reject": {
+        "decimal": 0.1068419801980198,
+        "exact": "33722/315625"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.7863160396039603,
+        "exact": "248181/315625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.10960941176470589,
+        "exact": "5823/53125"
+      },
+      "false_reject": {
+        "decimal": 0.10960941176470589,
+        "exact": "5823/53125"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.7807811764705882,
+        "exact": "41479/53125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.11748571428571429,
+        "exact": "514/4375"
+      },
+      "false_reject": {
+        "decimal": 0.11748571428571429,
+        "exact": "514/4375"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.7650285714285714,
+        "exact": "3347/4375"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.1293090909090909,
+        "exact": "889/6875"
+      },
+      "false_reject": {
+        "decimal": 0.1293090909090909,
+        "exact": "889/6875"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.7413818181818181,
+        "exact": "5097/6875"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.1488,
+        "exact": "93/625"
+      },
+      "false_reject": {
+        "decimal": 0.1488,
+        "exact": "93/625"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.7024,
+        "exact": "439/625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.168,
+        "exact": "21/125"
+      },
+      "false_reject": {
+        "decimal": 0.168,
+        "exact": "21/125"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.664,
+        "exact": "83/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.184,
+        "exact": "23/125"
+      },
+      "false_reject": {
+        "decimal": 0.184,
+        "exact": "23/125"
+      },
+      "families": 1,
+      "family_sizes": [
+        3
+      ],
+      "q": 3,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.632,
+        "exact": "79/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_reject": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "families": 3,
+      "family_sizes": [
+        1,
+        1,
+        1
+      ],
+      "q": 3,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.792,
+        "exact": "99/125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.06246662830970704,
+        "exact": "863069194/13816484375"
+      },
+      "false_reject": {
+        "decimal": 0.06246662830970704,
+        "exact": "863069194/13816484375"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.8750667433805859,
+        "exact": "12090345987/13816484375"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.06689100343208401,
+        "exact": "61210494/915078125"
+      },
+      "false_reject": {
+        "decimal": 0.06689100343208401,
+        "exact": "61210494/915078125"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.866217993135832,
+        "exact": "792657137/915078125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.079444345567476,
+        "exact": "2198374/27671875"
+      },
+      "false_reject": {
+        "decimal": 0.079444345567476,
+        "exact": "2198374/27671875"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.841111308865048,
+        "exact": "23275127/27671875"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.09809633566433566,
+        "exact": "219184/2234375"
+      },
+      "false_reject": {
+        "decimal": 0.09809633566433566,
+        "exact": "219184/2234375"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.8038073286713286,
+        "exact": "1796007/2234375"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.128064,
+        "exact": "2001/15625"
+      },
+      "false_reject": {
+        "decimal": 0.128064,
+        "exact": "2001/15625"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.743872,
+        "exact": "11623/15625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.156352,
+        "exact": "2443/15625"
+      },
+      "false_reject": {
+        "decimal": 0.156352,
+        "exact": "2443/15625"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.687296,
+        "exact": "10739/15625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.178816,
+        "exact": "2794/15625"
+      },
+      "false_reject": {
+        "decimal": 0.178816,
+        "exact": "2794/15625"
+      },
+      "families": 1,
+      "family_sizes": [
+        5
+      ],
+      "q": 5,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.642368,
+        "exact": "10037/15625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.058836992,
+        "exact": "114916/1953125"
+      },
+      "false_reject": {
+        "decimal": 0.058836992,
+        "exact": "114916/1953125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.882326016,
+        "exact": "1723293/1953125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.059744768,
+        "exact": "116689/1953125"
+      },
+      "false_reject": {
+        "decimal": 0.059744768,
+        "exact": "116689/1953125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.880510464,
+        "exact": "1719747/1953125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.0624128,
+        "exact": "4876/78125"
+      },
+      "false_reject": {
+        "decimal": 0.0624128,
+        "exact": "4876/78125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.8751744,
+        "exact": "68373/78125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.0666752,
+        "exact": "5209/78125"
+      },
+      "false_reject": {
+        "decimal": 0.0666752,
+        "exact": "5209/78125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.8666496,
+        "exact": "67707/78125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.0745088,
+        "exact": "5821/78125"
+      },
+      "false_reject": {
+        "decimal": 0.0745088,
+        "exact": "5821/78125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.8509824,
+        "exact": "66483/78125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.08352,
+        "exact": "261/3125"
+      },
+      "false_reject": {
+        "decimal": 0.08352,
+        "exact": "261/3125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.83296,
+        "exact": "2603/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.09248,
+        "exact": "289/3125"
+      },
+      "false_reject": {
+        "decimal": 0.09248,
+        "exact": "289/3125"
+      },
+      "families": 3,
+      "family_sizes": [
+        2,
+        2,
+        1
+      ],
+      "q": 5,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.81504,
+        "exact": "2547/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "false_reject": {
+        "decimal": 0.05792,
+        "exact": "181/3125"
+      },
+      "families": 5,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 5,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.88416,
+        "exact": "2763/3125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.038488767229543516,
+        "exact": "13294486276/345412109375"
+      },
+      "false_reject": {
+        "decimal": 0.038488767229543516,
+        "exact": "13294486276/345412109375"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.9230224655409129,
+        "exact": "318823136823/345412109375"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.043582382337822,
+        "exact": "10967353296/251646484375"
+      },
+      "false_reject": {
+        "decimal": 0.043582382337822,
+        "exact": "10967353296/251646484375"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.912835235324356,
+        "exact": "229711777783/251646484375"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05836097366007905,
+        "exact": "28838528/494140625"
+      },
+      "false_reject": {
+        "decimal": 0.05836097366007905,
+        "exact": "28838528/494140625"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.8832780526798419,
+        "exact": "436463569/494140625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.0807757337062937,
+        "exact": "4512082/55859375"
+      },
+      "false_reject": {
+        "decimal": 0.0807757337062937,
+        "exact": "4512082/55859375"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.8384485325874126,
+        "exact": "46835211/55859375"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.11688192,
+        "exact": "45657/390625"
+      },
+      "false_reject": {
+        "decimal": 0.11688192,
+        "exact": "45657/390625"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.76623616,
+        "exact": "299311/390625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.1503616,
+        "exact": "11747/78125"
+      },
+      "false_reject": {
+        "decimal": 0.1503616,
+        "exact": "11747/78125"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.6992768,
+        "exact": "54631/78125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.1762816,
+        "exact": "13772/78125"
+      },
+      "false_reject": {
+        "decimal": 0.1762816,
+        "exact": "13772/78125"
+      },
+      "families": 1,
+      "family_sizes": [
+        7
+      ],
+      "q": 7,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.6474368,
+        "exact": "50581/78125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.034568806156673265,
+        "exact": "852404644/24658203125"
+      },
+      "false_reject": {
+        "decimal": 0.034568806156673265,
+        "exact": "852404644/24658203125"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.9308623876866534,
+        "exact": "22953393837/24658203125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.035785621744941175,
+        "exact": "148524309/4150390625"
+      },
+      "false_reject": {
+        "decimal": 0.035785621744941175,
+        "exact": "148524309/4150390625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.9284287565101177,
+        "exact": "3853342007/4150390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.03938801371428571,
+        "exact": "538508/13671875"
+      },
+      "false_reject": {
+        "decimal": 0.03938801371428571,
+        "exact": "538508/13671875"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.9212239725714285,
+        "exact": "12594859/13671875"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.045230405818181815,
+        "exact": "971747/21484375"
+      },
+      "false_reject": {
+        "decimal": 0.045230405818181815,
+        "exact": "971747/21484375"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.9095391883636363,
+        "exact": "19540881/21484375"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.056289792,
+        "exact": "109941/1953125"
+      },
+      "false_reject": {
+        "decimal": 0.056289792,
+        "exact": "109941/1953125"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.887420416,
+        "exact": "1733243/1953125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.06963911111111111,
+        "exact": "9793/140625"
+      },
+      "false_reject": {
+        "decimal": 0.06963911111111111,
+        "exact": "9793/140625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.8607217777777778,
+        "exact": "121039/140625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.083776,
+        "exact": "1309/15625"
+      },
+      "false_reject": {
+        "decimal": 0.083776,
+        "exact": "1309/15625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        2,
+        2
+      ],
+      "q": 7,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.832448,
+        "exact": "13007/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "false_reject": {
+        "decimal": 0.033344,
+        "exact": "521/15625"
+      },
+      "families": 7,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 7,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.933312,
+        "exact": "14583/15625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.02462135245022792,
+        "exact": "70925139473621/2880635400390625"
+      },
+      "false_reject": {
+        "decimal": 0.02462135245022792,
+        "exact": "70925139473621/2880635400390625"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.9507572950995442,
+        "exact": "2738785121443383/2880635400390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.029777135879185415,
+        "exact": "3559322990408/119532080078125"
+      },
+      "false_reject": {
+        "decimal": 0.029777135879185415,
+        "exact": "3559322990408/119532080078125"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.9404457282416292,
+        "exact": "112413434097309/119532080078125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.04535175232758893,
+        "exact": "560253581/12353515625"
+      },
+      "false_reject": {
+        "decimal": 0.04535175232758893,
+        "exact": "560253581/12353515625"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.9092964953448222,
+        "exact": "11233008463/12353515625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.06986375447272727,
+        "exact": "15009791/214843750"
+      },
+      "false_reject": {
+        "decimal": 0.06986375447272727,
+        "exact": "15009791/214843750"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.8602724910545455,
+        "exact": "92412084/107421875"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.10989650850909091,
+        "exact": "11805289/107421875"
+      },
+      "false_reject": {
+        "decimal": 0.10989650850909091,
+        "exact": "11805289/107421875"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.7802069829818182,
+        "exact": "83811297/107421875"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.1467181056,
+        "exact": "1432794/9765625"
+      },
+      "false_reject": {
+        "decimal": 0.1467181056,
+        "exact": "1432794/9765625"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.7065637888,
+        "exact": "6900037/9765625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.174783488,
+        "exact": "341374/1953125"
+      },
+      "false_reject": {
+        "decimal": 0.174783488,
+        "exact": "341374/1953125"
+      },
+      "families": 1,
+      "family_sizes": [
+        9
+      ],
+      "q": 9,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.650433024,
+        "exact": "1270377/1953125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.02082145865123603,
+        "exact": "130934873473066/6288458251953125"
+      },
+      "false_reject": {
+        "decimal": 0.02082145865123603,
+        "exact": "130934873473066/6288458251953125"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.958357082697528,
+        "exact": "6026588505006993/6288458251953125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.02206338024994703,
+        "exact": "661605146289/29986572265625"
+      },
+      "false_reject": {
+        "decimal": 0.02206338024994703,
+        "exact": "661605146289/29986572265625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.9558732395001059,
+        "exact": "28663361973047/29986572265625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.025789508545306122,
+        "exact": "61703414/2392578125"
+      },
+      "false_reject": {
+        "decimal": 0.025789508545306122,
+        "exact": "61703414/2392578125"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.9484209829093877,
+        "exact": "2269171297/2392578125"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.03195401652219384,
+        "exact": "2076699023/64990234375"
+      },
+      "false_reject": {
+        "decimal": 0.03195401652219384,
+        "exact": "2076699023/64990234375"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.9360919669556124,
+        "exact": "60836836329/64990234375"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.04393101312,
+        "exact": "2145069/48828125"
+      },
+      "false_reject": {
+        "decimal": 0.04393101312,
+        "exact": "2145069/48828125"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.91213797376,
+        "exact": "44537987/48828125"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.05897472,
+        "exact": "23037/390625"
+      },
+      "false_reject": {
+        "decimal": 0.05897472,
+        "exact": "23037/390625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.88205056,
+        "exact": "344551/390625"
+      }
+    },
+    {
+      "admissible": false,
+      "false_accept": {
+        "decimal": 0.07600384,
+        "exact": "29689/390625"
+      },
+      "false_reject": {
+        "decimal": 0.07600384,
+        "exact": "29689/390625"
+      },
+      "families": 3,
+      "family_sizes": [
+        3,
+        3,
+        3
+      ],
+      "q": 9,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.84799232,
+        "exact": "331247/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "0",
+      "rho_decimal": 0.0,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/100",
+      "rho_decimal": 0.01,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/50",
+      "rho_decimal": 0.02,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/20",
+      "rho_decimal": 0.05,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/10",
+      "rho_decimal": 0.1,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/5",
+      "rho_decimal": 0.2,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/3",
+      "rho_decimal": 0.3333333333333333,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    },
+    {
+      "admissible": true,
+      "false_accept": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "false_reject": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "families": 9,
+      "family_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "q": 9,
+      "rho": "1/2",
+      "rho_decimal": 0.5,
+      "robust_gap": {
+        "decimal": 0.96083712,
+        "exact": "375327/390625"
+      }
+    }
+  ],
+  "verdict": "exact_finite_correlation_diversity_frontier_established"
+}

@@ -1,0 +1,111 @@
+{
+  "census": {
+    "certificate_failures": 0,
+    "class_counts": {
+      "no_random_utility_representation": 1019,
+      "random_utility_non_luce": 230,
+      "scalar_luce": 1
+    },
+    "classifier_disagreements": 0,
+    "kernel_count": 1250,
+    "mixture_reproduction_failures": 0,
+    "scalar_without_mixture": 0
+  },
+  "claim_boundary": "Exact finite stochastic-choice classification built from classical Luce/Falmagne/McFadden-Richter results; no novelty, finite-sample or general incomplete-menu theorem, human/model rationality, moral value, strategic robustness, physical preference-channel validation, or ASMP-9 resolution.",
+  "gates": {
+    "A0_access_insufficiency": true,
+    "C0_census_completeness": true,
+    "E0_equivalent_rationalizability_decisions": true,
+    "H0_source_integrity": true,
+    "N0_no_object_tier": true,
+    "R0_middle_tier": true,
+    "RESOURCE": true,
+    "S0_scalar_tier": true,
+    "T0_tests": true
+  },
+  "registration_sha256": "0cb1d81be606d884c566eeabcfca17225bffb9e2f81bd1c869993403e8d80659",
+  "resource": {
+    "elapsed_seconds": 9.734329,
+    "resident_bytes": 21999616,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.54-verification-result-v1",
+  "source_commit": "b08d903dec85cc955376a2d00e8577c97baf1bb8",
+  "source_integrity": [
+    {
+      "actual": "bb2324ebe30e6ca419a9fe3e3ffa40512fc02f883c4bf085edef0e53fe000ed1",
+      "expected": "bb2324ebe30e6ca419a9fe3e3ffa40512fc02f883c4bf085edef0e53fe000ed1",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/PRIOR_ART_GATE_v0_54.md"
+    },
+    {
+      "actual": "006a1fcb1d522bd65aae46270a8c293a335cad4cbee51a2af605a3f66e7e5024",
+      "expected": "006a1fcb1d522bd65aae46270a8c293a335cad4cbee51a2af605a3f66e7e5024",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/THEOREM_DRAFT_v0_54.md"
+    },
+    {
+      "actual": "611bd5cafef5addf705db713054d334ce3ba2fc30f0040798bd60996d6b93fa0",
+      "expected": "611bd5cafef5addf705db713054d334ce3ba2fc30f0040798bd60996d6b93fa0",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/VERIFICATION_PROTOCOL_v0_54.md"
+    },
+    {
+      "actual": "596730a88557d2e902f013ef84cbaea87f9e77c8b4dc8095f16f163c244104b4",
+      "expected": "596730a88557d2e902f013ef84cbaea87f9e77c8b4dc8095f16f163c244104b4",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/register_verification_v0_54.py"
+    },
+    {
+      "actual": "3f03dc080ec822ab6992187f1b77294d8012a63ae4456e327ba99ce2443459ee",
+      "expected": "3f03dc080ec822ab6992187f1b77294d8012a63ae4456e327ba99ce2443459ee",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/stochastic_choice.py"
+    },
+    {
+      "actual": "529bb45e63a19556a0b039732d489bcc5ca41499f8291b30bda2cae7b35f542f",
+      "expected": "529bb45e63a19556a0b039732d489bcc5ca41499f8291b30bda2cae7b35f542f",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/test_stochastic_choice.py"
+    },
+    {
+      "actual": "3815c2a2dae420cb07b07b32aa9fa6f71c944bbc2b9e82f8c8c5a887ca2ff4d0",
+      "expected": "3815c2a2dae420cb07b07b32aa9fa6f71c944bbc2b9e82f8c8c5a887ca2ff4d0",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/test_verifier_v0_54.py"
+    },
+    {
+      "actual": "312df4220270bdeb60605e6339b937324894b4155691f31a82ba37340b15b299",
+      "expected": "312df4220270bdeb60605e6339b937324894b4155691f31a82ba37340b15b299",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/stochastic_choice_trichotomy_v0_54/verify_theorems_v0_54.py"
+    }
+  ],
+  "status": "finite_stochastic_choice_trichotomy_verified",
+  "tests": {
+    "expected": 11,
+    "ok": true,
+    "output": "...........                                                              [100%]\n11 passed in 3.24s",
+    "returncode": 0
+  },
+  "verified": true,
+  "witnesses": {
+    "binary_projection_match": true,
+    "middle_status": "random_utility_non_luce",
+    "no_object_certificate": {
+      "choice": "a",
+      "lower_menu": [
+        "a",
+        "b"
+      ],
+      "value": "-1/4"
+    },
+    "no_object_status": "no_random_utility_representation",
+    "scalar_status": "scalar_luce",
+    "scalar_weights": {
+      "a": "1/6",
+      "b": "1/3",
+      "c": "1/2"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "asmp9_prime_closeout_v0_34_4",
+  "status": "completed_artifacts_verified_pod_terminated",
+  "pod": {
+    "id": "fa3b9e2ed2b5455b88f16c616fd20923",
+    "availability_id": "03c728",
+    "provider": "massedcompute",
+    "region": "US",
+    "gpu": "RTX6000Ada_48GB x1",
+    "image": "ubuntu_22_cuda_12",
+    "created_utc": "2026-07-29T07:07:39Z",
+    "capture_started_utc": "2026-07-29T07:37:01Z",
+    "capture_ended_utc": "2026-07-29T07:40:31Z",
+    "analysis_started_utc": "2026-07-29T07:46:00Z",
+    "analysis_ended_utc": "2026-07-29T07:46:02Z",
+    "terminated_utc": "2026-07-29T07:48:00Z",
+    "elapsed_seconds": 2421,
+    "listed_hourly_usd": 0.75,
+    "listed_rate_elapsed_cost_upper_bound_usd": 0.504375,
+    "provider_history_total_cost_raw": 4718,
+    "final_status": "terminated"
+  },
+  "git": {
+    "branch": "feat/spectral-bundle-v0.3-bifiltration",
+    "capture_registration_commit": "81c1a2c40203617f3e9bed60db6e63ebba9bd490",
+    "analysis_registration_commit": "75a98a5"
+  },
+  "capture": {
+    "status": "burned_pilot_capture_completed",
+    "records": 1944,
+    "unique_prompts": 972,
+    "cold_start_epochs": 2,
+    "maximum_choice_probability_delta_across_cold_starts": 0.0,
+    "maximum_target_log_odds_delta_across_cold_starts": 0.0,
+    "peak_gpu_delta_mb": 1054,
+    "peak_gpu_temperature_c": 38,
+    "thermal_pause_count": 0,
+    "cleanup_passed": true
+  },
+  "analysis": {
+    "status": "burned_pilot_analyzed_not_confirmation",
+    "analysis_content_sha256": "757641da68def358bbe4987b58f9398eddd81e917fbfc02a6dfb8c8b5375be43",
+    "files": {
+      "BURNED_PILOT_ANALYSIS_v0_34_4.json": "9fec63ebcfaa1761b3826a70901e85f7c43b98cb7d77113c70a61b66832dfbf0",
+      "BURNED_PILOT_REPORT_v0_34_4.md": "dbe812e7575a301e6404c09b0aca84d10c833506d22a2919f678e46b6a3afdf1",
+      "analysis_wrapper_summary.json": "fd187cde6a98c87bb40a5864d39d76d6e0b98b849611a166b50192e70b5a6a2c"
+    }
+  },
+  "release": {
+    "local_archive": "D:/Research_Engine/runs/asmp9_physical_acquisition_prime_v0_34_4/RSITopology_ASMP9_physical_pilot_v0_34_4_20260729.tar.gz",
+    "archive_bytes": 1750879,
+    "archive_sha256": "b4e7f656220a375d08f4699b605823f789c64340517f58702798816c2253b6e2",
+    "extracted_manifest_entries_verified": 2004,
+    "extracted_manifest_failures": 0,
+    "sha256sums_sha256": "60f57120a0fa0763111beaa7f78be4126c4a2cc5280e0521a72eba84e51b006b",
+    "model_bytes_included": false
+  },
+  "account_closeout": {
+    "active_pod_count": 0,
+    "protected_run_id": "e2s64hw5ywag1d8hgwfef6jd",
+    "protected_run_status": "COMPLETED",
+    "protected_run_mutated": false
+  },
+  "claim_boundary": "The completed burned pilot calibrates one explicit prompt-level interface on one Q4 Qwen 0.8B model. It is not confirmation evidence, does not validate expected utility or semantic policy identity, does not authorize edits or stochastic policy trials, and does not resolve ASMP-9."
+}

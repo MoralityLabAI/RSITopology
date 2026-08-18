@@ -1,0 +1,21 @@
+{
+  "claim_status": "burned_development_only",
+  "decision_problem": "four_target_zero_one_identification",
+  "fixture": {
+    "left": [0, 1, 0, 0],
+    "right": [0, 0, 0, 1],
+    "root": [0, 0, 1, 1]
+  },
+  "horizons": [2, 3],
+  "predictions": {
+    "adaptive_h2_deficiency": "0",
+    "nonadaptive_h2_deficiency": "1/2",
+    "nonadaptive_h3_deficiency": "0"
+  },
+  "protocol_id": "asmp9-sequential-risk-access-v0.41-development",
+  "resource_caps": {
+    "peak_working_set_bytes": 1073741824,
+    "wall_seconds": 300
+  },
+  "version": "0.41-development"
+}

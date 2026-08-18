@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_source_manifest_requirement_disposition_and_stop_boundary_reconstruction",
+  "checks": {
+    "V0_schema_problem_status_boundary": true,
+    "V1_authoritative_source_hashes_and_clauses_reconstructed": true,
+    "V2_all_eight_package_manifests_and_verifiers_reconstructed": true,
+    "V3_named_conjecture_and_registry_route_dispositions_consistent": true,
+    "V4_full_classification_gaps_not_overclaimed": true,
+    "V5_external_gate_reconstructed_as_zero_of_two": true,
+    "V6_all_requirement_evidence_checks_true": true,
+    "V7_disposition_distinguishes_four_truth_states": true,
+    "V8_stopping_boundary_has_only_nonenumerative_clearance_events": true,
+    "V9_all_10_producer_gates_true": true
+  },
+  "claim_boundary": "This verifier establishes that the disposition follows from the sealed repository evidence and authoritative status clauses. It cannot supply the missing normative decision, universal theorem, or external experts.",
+  "passed": true,
+  "schema_version": "asmp3_resolution_disposition_verification_v2_6"
+}

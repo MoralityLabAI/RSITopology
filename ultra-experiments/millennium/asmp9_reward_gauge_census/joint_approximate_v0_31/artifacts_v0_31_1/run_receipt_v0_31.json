@@ -1,0 +1,11 @@
+{
+  "finished_at_utc": "2026-07-29T05:26:31Z",
+  "implementation_commit": "896904058fd80a0343f2c0ef4ee736f0edd2738c",
+  "protocol_sha256": "b2b2e65e658dbf545a3983bd37ee5920d799c643804ae38e8f877bd00a1e81b8",
+  "registered_at_utc": "2026-07-29T05:23:46Z",
+  "registration_sha256": "4a3d57e5c71335d157fe3e1bd65a4f0b184515dc3be06a143bcca3f019b81379",
+  "result_sha256": "f07ee0b7ef11339f97b2862987495a9d4088e44f55b58c7d708ba9ee0d578e94",
+  "run_commit": "50593abf361afcf867f753b2039261a01434725c",
+  "started_at_utc": "2026-07-29T05:26:31Z",
+  "verdict": "joint_approximate_boundary_established_v0_31"
+}

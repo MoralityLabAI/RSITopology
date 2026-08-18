@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-BLOCK-SELECTION-COMPOSITION-v1.9",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/INDEPENDENT_NOISE_AMPLIFICATION_THEOREM_v1_8.md": {
+      "bytes": 6330,
+      "sha256": "4E473CC86D470FE0F836D7B060D4BD046BC2B366A2C9F015AF13754AE7F16CF0"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/RELEASE_MANIFEST_v1_8.json": {
+      "bytes": 3064,
+      "sha256": "FF45BCAA2873A03E967F20EE934A6AB1F326FF35E8FB92FCD1F2845E00D8D27C"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/artifacts/independent_noise_amplification_v1_8.json": {
+      "bytes": 634098,
+      "sha256": "937308CDB7F321516B0CFCC76AA7167E5B7542E0812E52BD63D493130D90750B"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "BLOCK_SELECTION_COMPOSITION_THEOREM_v1_9.md": {
+      "bytes": 6418,
+      "sha256": "691FA772F81A5ED84112E365E8B60F6948DD205F2D63EBE30DE0CD7635F9AAED"
+    },
+    "COMPLETION_AUDIT_v1_9.md": {
+      "bytes": 2106,
+      "sha256": "6CC26CFBF6C8D9DE1EB660F96F689F41E230B24217C702530E1C510BB6E432E3"
+    },
+    "README.md": {
+      "bytes": 759,
+      "sha256": "F8533D239691EED57590BD36AC2AB4102E07EA22C34558E1A48D479642B2B218"
+    },
+    "artifacts/block_selection_composition_v1_9.json": {
+      "bytes": 1691219,
+      "sha256": "63E16A22B9EC6B459DE3F38887E323F224F0B64FA7C4EC4FA682E4FAE788E561"
+    },
+    "artifacts/block_selection_composition_verification_v1_9.json": {
+      "bytes": 846,
+      "sha256": "AF4F906EF350436DDF29B9089FC22A093F97B8FD0B1908E1A4218C0296A46A28"
+    },
+    "block_selection_composition.py": {
+      "bytes": 12043,
+      "sha256": "407F7C45BE5B5BB1FDB5CD83308C350F1CACD23CC3EDAA1C364990A957E47BE1"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2575,
+      "sha256": "7F03E7641BEFAAE8521F6D235C7395813816DE5043629E85DE2EF395DF08B6B9"
+    },
+    "run_block_selection_composition.py": {
+      "bytes": 892,
+      "sha256": "469D54C55D6F0C56658CA155DA1C6110A055D87BD46A8D7B29B8B8E5CAA37B15"
+    },
+    "test_block_selection_composition.py": {
+      "bytes": 5203,
+      "sha256": "8320D8C9A941E0C9399DF5B42BA34422BCE51B352AB56CF04EF9F8244CD8AC68"
+    },
+    "verify_block_selection_composition.py": {
+      "bytes": 9450,
+      "sha256": "39A8B5D82CDA1EF3DD08727FC542F4813DD4A5CA4EB89F75E406390908779F9F"
+    }
+  },
+  "release_status": "exact_finite_block_composition_and_selection_risk",
+  "schema_version": "asmp3_block_selection_composition_release_v1_9"
+}

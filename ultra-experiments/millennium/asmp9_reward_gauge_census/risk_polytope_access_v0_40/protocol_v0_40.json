@@ -1,0 +1,55 @@
+{
+  "claim_boundary": {
+    "allowed": "Exact finite risk-polytope access characterization and deterministic Test Cover specialization for registered finite loss types.",
+    "forbidden": [
+      "new Blackwell, Le Cam, Torgersen, or Test Cover theorem",
+      "continuous or adaptive reward-access characterization",
+      "real-model evidence",
+      "ASMP-9 resolution"
+    ]
+  },
+  "confirmation_fixture": {
+    "decision_types": {
+      "classification": "four-target zero-one",
+      "combined_groups": ["s0_asymmetric", "s1_asymmetric"],
+      "s0_asymmetric": {
+        "false_negative": "1",
+        "false_positive": "1/4",
+        "labels": [0, 0, 1, 1]
+      },
+      "s1_asymmetric": {
+        "false_negative": "4/5",
+        "false_positive": "3/5",
+        "labels": [0, 1, 0, 1]
+      }
+    },
+    "queries": {
+      "s0": [0, 0, 1, 1],
+      "s1": [0, 1, 0, 1],
+      "s_const": [1, 1, 1, 1],
+      "sx": [0, 1, 1, 0]
+    },
+    "targets": 4
+  },
+  "gates": {
+    "C0": "Classification deficiency is 1-1/k and zero exactly at Test Cover.",
+    "D0": "All zero-tolerance minimal access antichains match.",
+    "F0": "Every exact tolerance-persistence transition matches.",
+    "G0": "Asymmetric group deficiencies match the mixed-block formula.",
+    "H0": "Exact solver spot checks match the analytic partition formula.",
+    "K0": "The target-independent constant query changes no access value.",
+    "P0": "Eight preregistration tests pass.",
+    "R0": "The result row universe equals the registration exactly.",
+    "S0": "All registered source and environment hashes match."
+  },
+  "primary_object": "upper risk-polytope containment",
+  "protocol_id": "asmp9-risk-polytope-access-v0.40",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "status": "prospective_unregistered",
+  "version": "0.40"
+}

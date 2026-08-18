@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "all_adjacent_unions_reverified": true,
+    "all_budget_inclusions_reverified": true,
+    "all_cell_graphs_reconstructed_exactly": true,
+    "all_cooperative_sink_event_signatures_reverified": true,
+    "registered_graph_count_reproduced": true
+  },
+  "rebuilt_graph_count": 24576,
+  "reconstructed_event_count": 21312,
+  "schema_version": "asmp12_constructible_survival_v0_3_independent_verification_v1",
+  "source_checkpoint": "487f2cde89289bee9d7e6989304cc8ab66feae0e",
+  "verified": true,
+  "verifier": "verify_constructible_survival.verify_surface"
+}

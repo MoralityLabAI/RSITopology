@@ -1,0 +1,240 @@
+{
+  "protocol_id": "qwen_holonomy_causal_transfer_v0_1",
+  "schema_version": "1.0.0",
+  "status": "implementation_ready_not_run",
+  "frozen_on": "2026-07-16",
+  "scientific_parents": [
+    "godel_globes_falsification_v0_1",
+    "holonomy_causal_transfer_falsification_v0_1",
+    "spectral_bundle_discovery_v0_3",
+    "identity_attestation_v1"
+  ],
+  "purpose": "Test whether family-resolved Qwen representation bundles form lineage-connected, noise-valid context-by-checkpoint loops and whether their prereveal holonomy predicts path-dependent causal effects of signed activation edits beyond local lineage and Jacobian visibility.",
+  "claim_boundary": "This protocol can establish or falsify an empirical organization and causal-prediction claim on the frozen models, prompts, sites, and interventions. It cannot prove semantic identity, capability preservation, weight-edit efficacy, compactification, recursive improvement, or RSI. A geometry collapse is a resolved negative boundary, not permission to change axes, ranks, floors, or prompts after reveal.",
+  "invariant_levels": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "new_invariant_levels": false,
+  "execution_order": [
+    "D0_qwen08_engineering_geometry",
+    "D1_qwen08_causal_outer_if_eligible",
+    "C0_qwen17_confirmatory_geometry",
+    "C1_qwen17_causal_outer_if_eligible",
+    "VPD_weight_edit_stratification_only_after_C1"
+  ],
+  "development_model": {
+    "role": "architecture-and-cost pilot plus provisional real-model evidence",
+    "model_id": "Qwen/Qwen3.5-0.8B-Base",
+    "local_path": "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B-Base-HF",
+    "architecture": "Qwen3.5 hybrid linear/full attention",
+    "base_files": {
+      "model.safetensors-00001-of-00001.safetensors": "c2b1e5a17d9c1e27685d92ed9b382911ebb99955ecd89052d1721241adfbab6c",
+      "config.json": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204",
+      "tokenizer.json": "fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927"
+    },
+    "states": [
+      {
+        "state_id": "base",
+        "kind": "base"
+      },
+      {
+        "state_id": "naive_qlora",
+        "kind": "peft_adapter",
+        "path": "D:\\Research_Engine\\runs\\qwen08_vpd_policy_arc_policy_smoke_20260707\\adapters\\naive_qlora",
+        "adapter_sha256": "e5cfdeab2e26791adf8d2fe917b0b829c77bc82fb4664316943efcbdc6be1d97",
+        "adapter_config_sha256": "fd54282506f5455a5d543e3837dac9d9b014d6428d7baf156aa59a4b9677c7b5"
+      },
+      {
+        "state_id": "shuffled_vpd_policy_qlora",
+        "kind": "peft_adapter",
+        "path": "D:\\Research_Engine\\runs\\qwen08_vpd_policy_arc_policy_smoke_20260707\\adapters\\shuffled_vpd_policy_qlora",
+        "adapter_sha256": "b510db49c7790aa5481e93e37e9b8f1a9dad031b547dd94225b360dbe8d00619",
+        "adapter_config_sha256": "fd54282506f5455a5d543e3837dac9d9b014d6428d7baf156aa59a4b9677c7b5"
+      },
+      {
+        "state_id": "vpd_policy_qlora",
+        "kind": "peft_adapter",
+        "path": "D:\\Research_Engine\\runs\\qwen08_vpd_policy_arc_policy_smoke_20260707\\adapters\\vpd_policy_qlora",
+        "adapter_sha256": "d7aefe32191f50986e562c756f355be50a5229c157dc5a8857402bc0684217aa",
+        "adapter_config_sha256": "fd54282506f5455a5d543e3837dac9d9b014d6428d7baf156aa59a4b9677c7b5"
+      }
+    ],
+    "state_provenance_limit": "The adapters came from an eight-row engineering smoke run and cannot support a VPD-versus-shuffled scientific claim. They provide a real checkpoint axis only.",
+    "activation_sites": [
+      "model.layers.11",
+      "model.layers.15",
+      "model.layers.19",
+      "model.layers.23"
+    ],
+    "activation_object": "first tensor in residual-block output at the final non-padding prompt token",
+    "ambient_dimension": 1024,
+    "loader": {
+      "quantization": "bitsandbytes_nf4_double_quant_float16_compute",
+      "disable_transformers_caching_allocator_warmup": true,
+      "reason": "Transformers 5.3 sizes its optional speed-only warm-up from the unquantized multimodal parameter graph and OOMs before loading this 4-bit checkpoint on a 4 GB GPU. Disabling the warm-up changes allocation scheduling, not weights or forward mathematics."
+    }
+  },
+  "confirmatory_model": {
+    "role": "frozen confirmatory model after development code and thresholds are sealed",
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "local_path": "D:\\Research_Engine\\Qwen_Storyworld\\cache\\models\\Qwen3-1.7B-70d244cc-verified",
+    "activation_sites": [
+      "model.layers.16",
+      "model.layers.19",
+      "model.layers.22",
+      "model.layers.25",
+      "model.layers.27"
+    ],
+    "activation_object": "first tensor in residual-block output at the final non-padding prompt token",
+    "checkpoint_rule": "Use base plus at least two newly provenance-stamped construction-only checkpoints. Existing outcome-contaminated checkpoints may be reported as engineering evidence but cannot enter confirmatory gates."
+  },
+  "precision_rule": "Use one frozen runtime precision within each causal loop. Precision is a stress axis reported separately and may not substitute for a checkpoint edge. Cross-precision failure cannot be repaired by pooling.",
+  "prompt_splits": {
+    "geometry_manifest": "godel_globes_prompt_manifest_v0_1",
+    "geometry_halves": [
+      "construction",
+      "geometry_validation"
+    ],
+    "causal_manifest": "qwen_holonomy_causal_outer_manifest_v0_1_1",
+    "causal_half": "causal_outer",
+    "causal_seed": 2026071604,
+    "causal_prompt_count": 576,
+    "separation_rule": "The causal manifest must have zero byte-identical prompts with the geometry manifest. Outer prompt bytes, answers, activations, and scores remain unread until the geometry-derived candidate table is hashed."
+  },
+  "stage_1_geometry": {
+    "primary_object": "cross-fitted top-r between-class-scatter eigenspaces of frozen subcondition means",
+    "reported_ungated_object": "covariance_or_gram",
+    "ranks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "lineage_floors": [
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "primary_lineage_floor": 0.9,
+    "graph_axis": "context_shard x model_state within one site, family, rank, and runtime precision",
+    "checkpoint_edges": "base-to-each-adapter or adjacent registered checkpoints at fixed context shard",
+    "context_edges": "adjacent context shards at fixed model state",
+    "loop_unit": "elementary checkpoint-by-adjacent-context rectangle",
+    "negative_control": "matched random labels with the real activation spectrum; required strict 95% lower-confidence retention margin above permutation null of 0.02",
+    "loop_admission": "all edges are in one G_tau component; beta_1 = |E_tau|-|V|+c(G_tau) is positive; det and angle receipt survives prompt-resample validation",
+    "noise_valid_holonomy": "held-out maximum canonical angle exceeds the matched flat-estimation-noise 95th percentile and construction/validation determinant plus angle spectrum agree",
+    "family_grouping_estimand": "held-out within-family partial-transport distance is smaller than equal-rank cross-family distance under physical-site clustered bootstrap",
+    "stop_states": {
+      "negative_control_not_passed": "cap all records at engineering_evidence",
+      "rank_collapse": "report no_supported_identity_rank",
+      "beta_1_zero": "report holonomy_unavailable",
+      "below_noise_floor": "report lineage_only_no_noise_valid_holonomy",
+      "family_grouping_not_established": "report geometry without a behavior-family organization claim"
+    }
+  },
+  "stage_2_prereveal_candidate_table": {
+    "entry_condition": "At least one negative-control-passing graph has beta_1>0 and at least one noise-valid orientation-preserving loop. Orientation reversals remain denial controls and do not enter angle regression.",
+    "loop_sampling": "Within each eligible model, site, family, and state-pair stratum, sample loops across frozen maximum-angle quartiles. Cap development at 48 loops and confirmation at 64 loops using seeded reservoir sampling; do not select only the largest angles.",
+    "path_pair": "For every elementary rectangle, compare context-then-checkpoint against checkpoint-then-context transport from the same root fiber to the same target fiber.",
+    "direction_classes": [
+      "maximally_exposed_right_singular_vector_of_TP_minus_TQ",
+      "seeded_haar_direction",
+      "minimally_exposed_right_singular_vector_of_TP_minus_TQ"
+    ],
+    "edit_norm_fractions_of_target_median_residual_l2": [
+      0.01,
+      0.025,
+      0.05
+    ],
+    "outer_prompt_allocation": "After the candidate table hash is sealed, deterministically assign six causal_outer prompts from the target family and shard, balanced over subconditions where possible.",
+    "sealed_before_outer_read": [
+      "loop universe and geometry receipt hashes",
+      "two path edge orders",
+      "target node and activation site",
+      "target ambient basis hash",
+      "path-transport matrices and hashes",
+      "direction vectors and hashes",
+      "edit norm fractions",
+      "baseline and augmented feature columns",
+      "grouped folds",
+      "candidate-table hash"
+    ]
+  },
+  "stage_2_intervention": {
+    "kind": "paired signed residual-stream activation additions at the registered target block and final prompt token",
+    "same_target_rule": "Both path-specific coordinates are converted through the same target ambient basis and applied to the identical target model, prompt, token, layer, sign, and norm.",
+    "primary_outcome": "absolute difference between the two edits' changes in teacher-forced expected-answer negative log likelihood relative to the shared unedited baseline",
+    "secondary_outcomes": [
+      "Jensen-Shannon distance between next-token distributions under the two edits",
+      "L2 distance between final-residual causal deltas",
+      "task accuracy under each edit"
+    ],
+    "baseline_features": [
+      "edit_norm_fraction",
+      "layer",
+      "state_pair",
+      "behavior_family",
+      "baseline_answer_nll",
+      "baseline_next_token_entropy",
+      "jacobian_visibility",
+      "minimum_edge_worst_direction_retention",
+      "mean_edge_chordal_lineage",
+      "path_edge_count"
+    ],
+    "holonomy_features": [
+      "directional_path_displacement",
+      "maximum_canonical_angle_degrees",
+      "identity_loss",
+      "noise_exceedance_margin"
+    ],
+    "primary_inference": "Nested grouped out-of-fold regression; groups are loop_id and outer prompt subcondition, with leave-one-family-out and leave-one-state-pair-out stress reports.",
+    "practical_margin": "Holonomy features must reduce grouped held-out SSE by at least 0.10 and the grouped-bootstrap one-sided 95% lower bound must be strictly above zero.",
+    "direction_dose_response": "Within the same loop and norm, maximally exposed directions must exceed minimally exposed directions in median primary outcome with one-sided grouped-bootstrap lower bound above zero.",
+    "flat_control": "Loops below the registered noise floor cannot be used as positive evidence and are evaluated only as a negative-control stratum.",
+    "authorization_evaluation": "A conservative risk gate is evaluated for coverage and false-safe rate. No real-model deterministic safety guarantee is claimed from the synthetic Lipschitz calibration."
+  },
+  "stage_2_decisions": {
+    "causal_holonomy_supported": "All instrument gates pass, the incremental-prediction practical margin passes, and the exposed-versus-minimal direction dose response passes on causal_outer.",
+    "geometry_without_causal_value": "Natural geometry passes but either incremental prediction or direction dose response fails.",
+    "holonomy_unavailable": "No eligible loop universe exists at the frozen floors and ranks.",
+    "invalid_instrument": "Negative control, gauge replay, receipt completeness, candidate-table chronology, or outer split separation fails.",
+    "engineering_only": "Development adapter provenance or hard-cap provenance is insufficient for confirmatory claims."
+  },
+  "matched_controls": [
+    "matched random-label activation spectrum",
+    "covariance/Gram object reported but prohibited from gates",
+    "flat-within-noise loops",
+    "minimally exposed direction inside each eligible loop",
+    "seeded Haar direction at matched norm",
+    "det(H)<0 categorical denial",
+    "node-wise gauge reframing preserving ambient edits and decisions",
+    "permuted holonomy features within loop/state/family groups"
+  ],
+  "resource_contract": {
+    "model_bearing_runs_require_validated_hard_caps": true,
+    "required_caps": [
+      "RAM_or_commit",
+      "CPU",
+      "I/O",
+      "timeout",
+      "zero_swap",
+      "GPU_memory_allowance"
+    ],
+    "checkpoint_unit": "one state x site x context shard x split activation capture, and one causal candidate batch during outer evaluation",
+    "abort_is_valid": true,
+    "local_uncapped_execution_prohibited": true
+  },
+  "vpd_handoff": {
+    "condition": "Only after confirmatory causal_holonomy_supported",
+    "analysis": "Compare VPD-selected versus matched-random weight edits within preregistered identity and holonomy-risk strata; do not optimize edit directions on causal_outer.",
+    "failure_interpretation": "If identity-clean VPD edits still do not beat matched random, strengthen the VPD null rather than revising the atlas."
+  }
+}

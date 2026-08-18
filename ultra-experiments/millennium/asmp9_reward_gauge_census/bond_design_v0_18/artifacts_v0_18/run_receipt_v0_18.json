@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 110.2143306999933,
+  "gate_count": 8,
+  "passed_gate_count": 8,
+  "peak_resident_bytes": 23105536,
+  "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+  "registration_sha256": "696d7e46c385e3614e99f2da87cacf77bfb3a741c596ac5d4687ca59f8854d0a",
+  "report_sha256": "f1aaa8af2899537cbf79639424a1676dc2b12ef8f725a4af1178602ff0919cfc",
+  "result_sha256": "78c4a6039dae8230b0f64f3773f9dd6256ac938753d976010bf969f8ae3f3754",
+  "verdict": "bond_characterization_established_in_frozen_model"
+}

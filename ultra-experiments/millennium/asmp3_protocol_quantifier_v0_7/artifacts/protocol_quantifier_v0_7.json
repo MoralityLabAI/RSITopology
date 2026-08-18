@@ -1,0 +1,442 @@
+{
+  "canonical_markers": {
+    "encodings_are_part_of_game": true,
+    "freezes_message_order_and_stopping": true,
+    "uses_admits_protocol_phrase": true
+  },
+  "canonical_source": "ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md",
+  "certified": true,
+  "claim_boundary": "This exact result resolves the countermodel's protocol-quantifier fork. It does not decide which reading the v0.1 authors intended or supply the broader repaired ASMP-3 characterization.",
+  "existential_encoding_branch": {
+    "conclusion": "If protocol admission may choose the semantic message encoding, the same underlying relation admits an O(d)-message, one-query constant-gap protocol.",
+    "constant_gap": "3/5",
+    "rich_protocol_rows": [
+      {
+        "all_opposite_parity_vectors_have_a_differing_coordinate": true,
+        "constant_completeness_soundness_gap": "3/5",
+        "depth": 2,
+        "dishonest_selection_probability": "1/5",
+        "honest_selection_probability": "4/5",
+        "message_bits_big_o": "O(d)",
+        "opposite_parity_pairs_checked": 8,
+        "semantic_queries": 1,
+        "verifier_time_big_o": "O(d)"
+      },
+      {
+        "all_opposite_parity_vectors_have_a_differing_coordinate": true,
+        "constant_completeness_soundness_gap": "3/5",
+        "depth": 3,
+        "dishonest_selection_probability": "1/5",
+        "honest_selection_probability": "4/5",
+        "message_bits_big_o": "O(d)",
+        "opposite_parity_pairs_checked": 32,
+        "semantic_queries": 1,
+        "verifier_time_big_o": "O(d)"
+      },
+      {
+        "all_opposite_parity_vectors_have_a_differing_coordinate": true,
+        "constant_completeness_soundness_gap": "3/5",
+        "depth": 4,
+        "dishonest_selection_probability": "1/5",
+        "honest_selection_probability": "4/5",
+        "message_bits_big_o": "O(d)",
+        "opposite_parity_pairs_checked": 128,
+        "semantic_queries": 1,
+        "verifier_time_big_o": "O(d)"
+      },
+      {
+        "all_opposite_parity_vectors_have_a_differing_coordinate": true,
+        "constant_completeness_soundness_gap": "3/5",
+        "depth": 5,
+        "dishonest_selection_probability": "1/5",
+        "honest_selection_probability": "4/5",
+        "message_bits_big_o": "O(d)",
+        "opposite_parity_pairs_checked": 512,
+        "semantic_queries": 1,
+        "verifier_time_big_o": "O(d)"
+      },
+      {
+        "all_opposite_parity_vectors_have_a_differing_coordinate": true,
+        "constant_completeness_soundness_gap": "3/5",
+        "depth": 6,
+        "dishonest_selection_probability": "1/5",
+        "honest_selection_probability": "4/5",
+        "message_bits_big_o": "O(d)",
+        "opposite_parity_pairs_checked": 2048,
+        "semantic_queries": 1,
+        "verifier_time_big_o": "O(d)"
+      }
+    ]
+  },
+  "experiment_id": "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7",
+  "formal_game": {
+    "correct_output": "parity of the first 2^d public formal bits XOR parity(z)",
+    "frozen_encoding": "canonical component claims, formal bisection messages, and a canonical sorted all-indices semantic refutation; no per-atom value claims",
+    "malformed_or_abort_rule": "the responsible advocate loses formally",
+    "party_information": "both advocates know z; verifier sees the public instance and has only persistent-noise oracle access",
+    "prover_budget": "Theta(n)",
+    "public_instance": "n public formal bits plus d=floor(log2 n) opaque semantic atom identifiers",
+    "semantic_query_budget": "q(n)=d^2",
+    "semantic_world": "z in {0,1}^d, with H_z(i)=z_i",
+    "transcript_budget": "B(n)=18d^2 bits",
+    "verifier_time_budget": "s(n)=64d^2"
+  },
+  "frozen_encoding_branch": {
+    "asymptotic_gap": "(3/5)^d -> 0",
+    "conclusion": "If admissible transcript encodings are frozen task-game data, all three displayed conditions hold but no constant gap exists.",
+    "parity_rows": [
+      {
+        "binary_test_optimum_matches_tv": true,
+        "closed_form_gap": "9/25",
+        "depth": 2,
+        "exhaustive_best_binary_test_gap": "9/25",
+        "frozen_encoding_gap": "9/25",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": true,
+        "closed_form_gap": "27/125",
+        "depth": 3,
+        "exhaustive_best_binary_test_gap": "27/125",
+        "frozen_encoding_gap": "27/125",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": true,
+        "closed_form_gap": "81/625",
+        "depth": 4,
+        "exhaustive_best_binary_test_gap": "81/625",
+        "frozen_encoding_gap": "81/625",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": null,
+        "closed_form_gap": "243/3125",
+        "depth": 5,
+        "exhaustive_best_binary_test_gap": null,
+        "frozen_encoding_gap": "243/3125",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": null,
+        "closed_form_gap": "729/15625",
+        "depth": 6,
+        "exhaustive_best_binary_test_gap": null,
+        "frozen_encoding_gap": "729/15625",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": null,
+        "closed_form_gap": "2187/78125",
+        "depth": 7,
+        "exhaustive_best_binary_test_gap": null,
+        "frozen_encoding_gap": "2187/78125",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": null,
+        "closed_form_gap": "6561/390625",
+        "depth": 8,
+        "exhaustive_best_binary_test_gap": null,
+        "frozen_encoding_gap": "6561/390625",
+        "matches_closed_form": true
+      },
+      {
+        "binary_test_optimum_matches_tv": null,
+        "closed_form_gap": "19683/1953125",
+        "depth": 9,
+        "exhaustive_best_binary_test_gap": null,
+        "frozen_encoding_gap": "19683/1953125",
+        "matches_closed_form": true
+      }
+    ],
+    "refutation_rows": [
+      {
+        "all_false_cases_refutable": true,
+        "depth": 2,
+        "dimension_equals_depth": true,
+        "false_terminal_cases": 28,
+        "maximum_minimum_refutation_size": 2,
+        "semantic_minima": [
+          2
+        ]
+      },
+      {
+        "all_false_cases_refutable": true,
+        "depth": 3,
+        "dimension_equals_depth": true,
+        "false_terminal_cases": 28,
+        "maximum_minimum_refutation_size": 3,
+        "semantic_minima": [
+          3
+        ]
+      },
+      {
+        "all_false_cases_refutable": true,
+        "depth": 4,
+        "dimension_equals_depth": true,
+        "false_terminal_cases": 28,
+        "maximum_minimum_refutation_size": 4,
+        "semantic_minima": [
+          4
+        ]
+      },
+      {
+        "all_false_cases_refutable": true,
+        "depth": 5,
+        "dimension_equals_depth": true,
+        "false_terminal_cases": 28,
+        "maximum_minimum_refutation_size": 5,
+        "semantic_minima": [
+          5
+        ]
+      },
+      {
+        "all_false_cases_refutable": true,
+        "depth": 6,
+        "dimension_equals_depth": true,
+        "false_terminal_cases": 28,
+        "maximum_minimum_refutation_size": 6,
+        "semantic_minima": [
+          6
+        ]
+      },
+      {
+        "all_false_cases_refutable": true,
+        "depth": 7,
+        "dimension_equals_depth": true,
+        "false_terminal_cases": 28,
+        "maximum_minimum_refutation_size": 7,
+        "semantic_minima": [
+          7
+        ]
+      }
+    ]
+  },
+  "gates": {
+    "B0_both_encodings_fit_polylog_budgets": true,
+    "C0_canonical_freeze_and_admits_markers_present": true,
+    "G0_complete_terminal_case_partition": true,
+    "G1_refutation_dimension_equals_depth": true,
+    "H0_uniform_honest_strategy_case_coverage": true,
+    "P0_frozen_parity_gap_matches_formula": true,
+    "P1_all_exhaustive_binary_tests_match_tv": true,
+    "P2_frozen_gap_vanishes": true,
+    "R0_rich_vector_protocol_is_constant_gap": true,
+    "T0_cross_world_nonoracle_transcript_identity": true
+  },
+  "resource_rows": [
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 2,
+      "explicit_all_indices_bits": 2,
+      "formal_leaf_count": 4,
+      "frozen_transcript_bit_upper_bound": 48,
+      "prover_budget": 4,
+      "public_input_length": 4,
+      "rich_transcript_bit_upper_bound": 52,
+      "semantic_atom_count": 2,
+      "semantic_index_width": 1,
+      "semantic_query_budget": 4,
+      "transcript_budget": 72,
+      "verifier_time_budget": 256
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 2,
+      "explicit_all_indices_bits": 2,
+      "formal_leaf_count": 4,
+      "frozen_transcript_bit_upper_bound": 48,
+      "prover_budget": 5,
+      "public_input_length": 5,
+      "rich_transcript_bit_upper_bound": 52,
+      "semantic_atom_count": 2,
+      "semantic_index_width": 1,
+      "semantic_query_budget": 4,
+      "transcript_budget": 72,
+      "verifier_time_budget": 256
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 2,
+      "explicit_all_indices_bits": 2,
+      "formal_leaf_count": 4,
+      "frozen_transcript_bit_upper_bound": 48,
+      "prover_budget": 7,
+      "public_input_length": 7,
+      "rich_transcript_bit_upper_bound": 52,
+      "semantic_atom_count": 2,
+      "semantic_index_width": 1,
+      "semantic_query_budget": 4,
+      "transcript_budget": 72,
+      "verifier_time_budget": 256
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 3,
+      "explicit_all_indices_bits": 6,
+      "formal_leaf_count": 8,
+      "frozen_transcript_bit_upper_bound": 80,
+      "prover_budget": 8,
+      "public_input_length": 8,
+      "rich_transcript_bit_upper_bound": 86,
+      "semantic_atom_count": 3,
+      "semantic_index_width": 2,
+      "semantic_query_budget": 9,
+      "transcript_budget": 162,
+      "verifier_time_budget": 576
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 3,
+      "explicit_all_indices_bits": 6,
+      "formal_leaf_count": 8,
+      "frozen_transcript_bit_upper_bound": 80,
+      "prover_budget": 15,
+      "public_input_length": 15,
+      "rich_transcript_bit_upper_bound": 86,
+      "semantic_atom_count": 3,
+      "semantic_index_width": 2,
+      "semantic_query_budget": 9,
+      "transcript_budget": 162,
+      "verifier_time_budget": 576
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 4,
+      "explicit_all_indices_bits": 8,
+      "formal_leaf_count": 16,
+      "frozen_transcript_bit_upper_bound": 96,
+      "prover_budget": 16,
+      "public_input_length": 16,
+      "rich_transcript_bit_upper_bound": 104,
+      "semantic_atom_count": 4,
+      "semantic_index_width": 2,
+      "semantic_query_budget": 16,
+      "transcript_budget": 288,
+      "verifier_time_budget": 1024
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 4,
+      "explicit_all_indices_bits": 8,
+      "formal_leaf_count": 16,
+      "frozen_transcript_bit_upper_bound": 96,
+      "prover_budget": 31,
+      "public_input_length": 31,
+      "rich_transcript_bit_upper_bound": 104,
+      "semantic_atom_count": 4,
+      "semantic_index_width": 2,
+      "semantic_query_budget": 16,
+      "transcript_budget": 288,
+      "verifier_time_budget": 1024
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 5,
+      "explicit_all_indices_bits": 15,
+      "formal_leaf_count": 32,
+      "frozen_transcript_bit_upper_bound": 152,
+      "prover_budget": 32,
+      "public_input_length": 32,
+      "rich_transcript_bit_upper_bound": 162,
+      "semantic_atom_count": 5,
+      "semantic_index_width": 3,
+      "semantic_query_budget": 25,
+      "transcript_budget": 450,
+      "verifier_time_budget": 1600
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 5,
+      "explicit_all_indices_bits": 15,
+      "formal_leaf_count": 32,
+      "frozen_transcript_bit_upper_bound": 152,
+      "prover_budget": 63,
+      "public_input_length": 63,
+      "rich_transcript_bit_upper_bound": 162,
+      "semantic_atom_count": 5,
+      "semantic_index_width": 3,
+      "semantic_query_budget": 25,
+      "transcript_budget": 450,
+      "verifier_time_budget": 1600
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 6,
+      "explicit_all_indices_bits": 18,
+      "formal_leaf_count": 64,
+      "frozen_transcript_bit_upper_bound": 176,
+      "prover_budget": 64,
+      "public_input_length": 64,
+      "rich_transcript_bit_upper_bound": 188,
+      "semantic_atom_count": 6,
+      "semantic_index_width": 3,
+      "semantic_query_budget": 36,
+      "transcript_budget": 648,
+      "verifier_time_budget": 2304
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 6,
+      "explicit_all_indices_bits": 18,
+      "formal_leaf_count": 64,
+      "frozen_transcript_bit_upper_bound": 176,
+      "prover_budget": 127,
+      "public_input_length": 127,
+      "rich_transcript_bit_upper_bound": 188,
+      "semantic_atom_count": 6,
+      "semantic_index_width": 3,
+      "semantic_query_budget": 36,
+      "transcript_budget": 648,
+      "verifier_time_budget": 2304
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 7,
+      "explicit_all_indices_bits": 21,
+      "formal_leaf_count": 128,
+      "frozen_transcript_bit_upper_bound": 200,
+      "prover_budget": 255,
+      "public_input_length": 255,
+      "rich_transcript_bit_upper_bound": 214,
+      "semantic_atom_count": 7,
+      "semantic_index_width": 3,
+      "semantic_query_budget": 49,
+      "transcript_budget": 882,
+      "verifier_time_budget": 3136
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 8,
+      "explicit_all_indices_bits": 24,
+      "formal_leaf_count": 256,
+      "frozen_transcript_bit_upper_bound": 224,
+      "prover_budget": 256,
+      "public_input_length": 256,
+      "rich_transcript_bit_upper_bound": 240,
+      "semantic_atom_count": 8,
+      "semantic_index_width": 3,
+      "semantic_query_budget": 64,
+      "transcript_budget": 1152,
+      "verifier_time_budget": 4096
+    },
+    {
+      "both_are_polylog_in_prover_budget": true,
+      "depth": 10,
+      "explicit_all_indices_bits": 40,
+      "formal_leaf_count": 1024,
+      "frozen_transcript_bit_upper_bound": 352,
+      "prover_budget": 1024,
+      "public_input_length": 1024,
+      "rich_transcript_bit_upper_bound": 372,
+      "semantic_atom_count": 10,
+      "semantic_index_width": 4,
+      "semantic_query_budget": 100,
+      "transcript_budget": 1800,
+      "verifier_time_budget": 6400
+    }
+  ],
+  "schema_version": "asmp3_protocol_quantifier_v0_7",
+  "status": "exact_quantifier_fork"
+}

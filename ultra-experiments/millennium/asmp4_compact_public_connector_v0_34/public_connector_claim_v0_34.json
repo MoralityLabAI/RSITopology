@@ -1,0 +1,27 @@
+{
+  "schema_version": "asmp4_compact_public_connector_v0_34",
+  "theorem": {
+    "local_to_global": "finite connected safe subcover gives a uniform public connector",
+    "time_bound": "L=sum_j L_j",
+    "cost_bound": "B_i=sum_j B_i,j separately for read and write",
+    "safe_closing": "constant connector bounds imply v0.33 sublinear safe closing",
+    "region": "R_q=closure(upward(conv(P_q))) with component-indexed global union",
+    "coordinate_invariance": "registered causal conjugacies transport the public cover and connector certificates"
+  },
+  "registered_state": {
+    "object": "public information state including belief and registered memories",
+    "hidden_plant_state_is_not_free": true,
+    "private_memory_must_reset": true,
+    "safe_overlap_required": true
+  },
+  "evidence": {
+    "six_vertex_graphs": 32768,
+    "connected_graphs": 26704,
+    "connector_pair_rows": 961344,
+    "noncompact_horizons": 12,
+    "mutations_rejected": 8,
+    "predecessor_packages": 34,
+    "predecessor_tests": 374
+  },
+  "disposition": "compact public local controllability now implies the nonfinite region theorem; deriving the registered public local certificates from the canonical normally hyperbolic plant wording remains open"
+}

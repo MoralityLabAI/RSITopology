@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_exact_gates_pass": true,
+    "canonical_binding_has_positive_local_margins": true,
+    "canonical_binding_is_finite_and_bounded": true,
+    "full_result_recomputes_byte_semantically": true,
+    "matrix_partition_matches": true,
+    "registered_collision_count": true,
+    "registered_full_census_size": true,
+    "registered_recovery_count": true,
+    "required_documents_present": true,
+    "schema_matches": true,
+    "source_hash_matches": true
+  },
+  "recomputed": true,
+  "result_path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp1_resolution_boundary_v0_2\\artifacts\\result_v0_2.json",
+  "result_sha256": "d06456463d6b2f18cb23498221c684042c46ab39fd98aa7e79a6d4767e8115a9",
+  "schema_version": "asmp1_identifiability_boundary_verify_v0_2",
+  "source_path": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp1_resolution_boundary_v0_2\\identifiability_boundary.py",
+  "source_sha256": "1a45ed9647a9f3e24f1281d2e2bef11b81c29e9dd5a61c6283569f8ee5408447",
+  "verified": true
+}

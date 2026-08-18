@@ -1,0 +1,15 @@
+{
+  "check_count": 8,
+  "checks": {
+    "all_registered_gates_pass": true,
+    "independent_bond_reconstruction": true,
+    "independent_certificate_replay": true,
+    "protocol_binding": true,
+    "registration_binding": true,
+    "registration_files": true,
+    "result_receipt_hash": true,
+    "verdict": true
+  },
+  "pass": true,
+  "passed_count": 8
+}

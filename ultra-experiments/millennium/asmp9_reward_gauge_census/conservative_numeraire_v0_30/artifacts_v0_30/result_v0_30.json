@@ -1,0 +1,456 @@
+{
+  "approximate_audit": {
+    "available": true,
+    "bound": "6/17",
+    "bound_valid": true,
+    "maximizer": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "maximum_pairwise_bias": "6/17",
+    "single_cell_residual_bound": "3/17"
+  },
+  "gate_passes": {
+    "G0_registration_binding": true,
+    "G10_resource_and_scope": true,
+    "G1_structural_product_extension": true,
+    "G2_mechanical_negative_controls": true,
+    "G3_semantic_calibration": true,
+    "G4_semantic_negative_controls": true,
+    "G5_constraint_rank_and_omission": true,
+    "G6_mechanics_only_and_scale_no_go": true,
+    "G7_approximate_calibration": true,
+    "G8_v028_eligibility": true,
+    "G9_prior_art_and_claim_boundary": true
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "a925e338a0a4545daa83489afba259698c991b44293cb1459b409fd077c58d14",
+      "sealed_file_count": 13
+    },
+    "G10_resource_and_scope": {
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 20537344,
+      "wall_seconds": 0.12139099999330938
+    },
+    "G1_structural_product_extension": {
+      "consequence_levels": 4,
+      "occupancy_checks": 16,
+      "pass": true,
+      "policy_count": 4
+    },
+    "G2_mechanical_negative_controls": {
+      "control_count": 4,
+      "controls": [
+        {
+          "changed_fields": [
+            "horizon"
+          ],
+          "name": "fresh_horizon_control",
+          "pass": true
+        },
+        {
+          "changed_fields": [
+            "action_sets",
+            "features",
+            "transitions"
+          ],
+          "name": "fresh_policy_feasibility_control",
+          "pass": true
+        },
+        {
+          "changed_fields": [
+            "transitions"
+          ],
+          "name": "fresh_transition_control",
+          "pass": true
+        },
+        {
+          "changed_fields": [
+            "features"
+          ],
+          "name": "fresh_feature_control",
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "G3_semantic_calibration": {
+      "classification": "calibrated_additive",
+      "constraint_count": 15,
+      "maximum_residual": "0",
+      "pass": true
+    },
+    "G4_semantic_negative_controls": {
+      "incomplete_classification": "incomplete_semantic_table",
+      "interaction_classification": "context_interaction",
+      "pass": true,
+      "unknown_scale_classification": "separable_unknown_scale",
+      "unknown_scale_coefficient": "9/7"
+    },
+    "G5_constraint_rank_and_omission": {
+      "constraint_rank": 25,
+      "expected_rank": 25,
+      "omission_checks": 25,
+      "pass": true
+    },
+    "G6_mechanics_only_and_scale_no_go": {
+      "distinct_semantic_classes": 3,
+      "mechanics_hash_count": 1,
+      "pass": true,
+      "scale_match_count": 2
+    },
+    "G7_approximate_calibration": {
+      "epsilon": "3/17",
+      "maximum_pairwise_bias": "6/17",
+      "pass": true,
+      "registered_bound": "6/17"
+    },
+    "G8_v028_eligibility": {
+      "eligible_positive": true,
+      "incomplete_reasons": [
+        "semantic_table_incomplete"
+      ],
+      "pass": true,
+      "structural_rejections": 4,
+      "unknown_scale_reasons": [
+        "semantic_calibration_not_established"
+      ]
+    },
+    "G9_prior_art_and_claim_boundary": {
+      "identifiers": [
+        "ASMP-9-v0.28",
+        "ASMP-9-v0.29",
+        "DOI:10.1016/0022-2496(64)90015-X",
+        "ICML-1999-Ng-Harada-Russell",
+        "Krantz-Luce-Suppes-Tversky-1971",
+        "PMLR:202:32033-32058",
+        "PMLR:235:24808-24828",
+        "PMLR:80:1262-1270"
+      ],
+      "pass": true
+    }
+  },
+  "policy_occupancies": [
+    [
+      "2",
+      "4/3",
+      "1"
+    ],
+    [
+      "4/3",
+      "85/96",
+      "67/32"
+    ],
+    [
+      "11/5",
+      "6/5",
+      "8/5"
+    ],
+    [
+      "2",
+      "341/320",
+      "617/320"
+    ]
+  ],
+  "protocol_id": "ASMP-9-CONSERVATIVE-NUMERAIRE-v0.30",
+  "registration_sha256": "a925e338a0a4545daa83489afba259698c991b44293cb1459b409fd077c58d14",
+  "semantic_results": {
+    "calibrated": {
+      "available": true,
+      "calibrated": true,
+      "classification": "calibrated_additive",
+      "column_effects": [
+        "-7/4",
+        "0",
+        "5/3",
+        "13/4"
+      ],
+      "complete": true,
+      "declared_effects": [
+        "-7/4",
+        "0",
+        "5/3",
+        "13/4"
+      ],
+      "interaction_residuals": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "maximum_calibration_residual": "0",
+      "proportional_coefficient": "1",
+      "residuals": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "separable": true
+    },
+    "incomplete": {
+      "available": false,
+      "classification": "incomplete_semantic_table",
+      "complete": false
+    },
+    "interaction": {
+      "available": true,
+      "calibrated": false,
+      "classification": "context_interaction",
+      "column_effects": [
+        "-7/4",
+        "0",
+        "5/3",
+        "13/4"
+      ],
+      "complete": true,
+      "declared_effects": [
+        "-7/4",
+        "0",
+        "5/3",
+        "13/4"
+      ],
+      "interaction_residuals": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "5/19",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "maximum_calibration_residual": "5/19",
+      "proportional_coefficient": "1",
+      "residuals": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "5/19",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "separable": false
+    },
+    "unknown_scale": {
+      "available": true,
+      "calibrated": false,
+      "classification": "separable_unknown_scale",
+      "column_effects": [
+        "-9/4",
+        "0",
+        "15/7",
+        "117/28"
+      ],
+      "complete": true,
+      "declared_effects": [
+        "-7/4",
+        "0",
+        "5/3",
+        "13/4"
+      ],
+      "interaction_residuals": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "maximum_calibration_residual": "13/14",
+      "proportional_coefficient": "9/7",
+      "residuals": [
+        [
+          "-1/2",
+          "0",
+          "10/21",
+          "13/14"
+        ],
+        [
+          "-1/2",
+          "0",
+          "10/21",
+          "13/14"
+        ],
+        [
+          "-1/2",
+          "0",
+          "10/21",
+          "13/14"
+        ],
+        [
+          "-1/2",
+          "0",
+          "10/21",
+          "13/14"
+        ],
+        [
+          "-1/2",
+          "0",
+          "10/21",
+          "13/14"
+        ]
+      ],
+      "separable": true
+    }
+  },
+  "structural_result": {
+    "baseline_mechanics_hash": "f9248a1e529d4067f9b65155be6b4ff1c2b70e697c4447393228a3d24b1b3740",
+    "intervention_rows": [
+      {
+        "changed_fields": [],
+        "level": "level_0",
+        "mechanics_hash": "f9248a1e529d4067f9b65155be6b4ff1c2b70e697c4447393228a3d24b1b3740",
+        "structurally_conservative": true
+      },
+      {
+        "changed_fields": [],
+        "level": "level_1",
+        "mechanics_hash": "f9248a1e529d4067f9b65155be6b4ff1c2b70e697c4447393228a3d24b1b3740",
+        "structurally_conservative": true
+      },
+      {
+        "changed_fields": [],
+        "level": "level_2",
+        "mechanics_hash": "f9248a1e529d4067f9b65155be6b4ff1c2b70e697c4447393228a3d24b1b3740",
+        "structurally_conservative": true
+      },
+      {
+        "changed_fields": [],
+        "level": "level_3",
+        "mechanics_hash": "f9248a1e529d4067f9b65155be6b4ff1c2b70e697c4447393228a3d24b1b3740",
+        "structurally_conservative": true
+      }
+    ],
+    "status": "structurally_conservative",
+    "structurally_conservative": true
+  },
+  "verdict": "conservative_numeraire_boundary_established_v0_30"
+}

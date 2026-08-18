@@ -1,0 +1,30 @@
+{
+  "schema_version": "asmp4_registered_sensor_contract_v0_16",
+  "plant": {
+    "state": "(theta,n,z) in S^1 x R x {-3,-1,1,3}",
+    "dynamics": "theta_next=theta+1/4 mod 1; n_next=2n+u-q(z); z_next=w",
+    "q_values": [
+      0,
+      0,
+      8,
+      8
+    ],
+    "authority": "[-2,10]",
+    "safe_set": "S^1 x [-1,1] x {-3,-1,1,3}"
+  },
+  "timing": "observe current (n,g_P(z)); emit read; controller emits write; actuator applies u; disturbance chooses next mode",
+  "sensor_experiment": {
+    "parameter": "a fixed partition P of the four modes",
+    "symbol": "g_P(z) is the block of P containing z",
+    "normal_coordinate": "sensor observes n causally; theta is evaluator-tangent and unreported",
+    "charging": "each g_P(z) symbol must remain injectively recoverable from the read transcript; normal information is additionally charged",
+    "admissibility": "q factors through g_P (equivalently P refines the q-fiber partition)"
+  },
+  "theorem": {
+    "feasible_partition_region": "[1+log2(|P|),infinity) x [2,infinity)",
+    "nonrefining_partition_region": "empty",
+    "finite_read_words": "|P|^T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "margin_range": "0<rho<=1"
+  }
+}

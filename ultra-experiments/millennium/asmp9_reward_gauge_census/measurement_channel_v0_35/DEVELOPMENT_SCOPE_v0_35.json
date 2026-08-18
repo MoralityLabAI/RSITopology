@@ -1,0 +1,23 @@
+{
+  "schema_version": "asmp9_measurement_channel_development_scope_v0_35",
+  "status": "retrospective_not_preregistered",
+  "outcomes_previously_inspected": true,
+  "input": {
+    "path": "../physical_acquisition_v0_34/BURNED_PILOT_ANALYSIS_v0_34_4.json",
+    "sha256": "9fec63ebcfaa1761b3826a70901e85f7c43b98cb7d77113c70a61b66832dfbf0"
+  },
+  "question": "How much of the rejected v0.34 ruler failure is local non-monotonicity versus missing robust endpoint support?",
+  "estimand": "Exact L-infinity distance from each observed score curve to the cone of nonincreasing sequences.",
+  "formula": "d_inf(y,C)=0.5*max_{i<j}(y_j-y_i)_+",
+  "decision_rule": {
+    "ruler_admissible": "Every required curve has a robust zero crossing at its exact repair radius.",
+    "ruler_not_admissible": "At least one required curve lacks a robust zero crossing at its exact repair radius."
+  },
+  "allowed_use": "Design the next burned measurement pilot.",
+  "forbidden_use": [
+    "confirmation",
+    "holdout consumption",
+    "post-hoc threshold promotion",
+    "ASMP-9 resolution claim"
+  ]
+}

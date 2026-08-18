@@ -1,0 +1,50 @@
+{
+  "schema_version": "asmp8_audit_efficiency_protocol_v0_5",
+  "protocol_id": "asmp8.goodhart.audit_efficiency.v0.5",
+  "status": "frozen_candidate_before_registration_and_run",
+  "parents": [
+    "../v0_3_calibrated_certificate/protocol_v0_3.json",
+    "../v0_4_dynamic_threshold/artifacts_v0_4/policy_thresholds_v0_4.csv"
+  ],
+  "registry": "Exact v0.3/v0.4 64-outcome registry and 20 proxy-only policies.",
+  "shared_audit": {
+    "checkpoints": [32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576],
+    "nested_streams": 1024,
+    "root_seed": 80520260723,
+    "familywise_alpha": 0.05,
+    "allocation": "equal over 2 sampled moments times 16 checkpoints",
+    "empirical_bernstein": "mean + sqrt(2 sample_variance ln(2/delta)/n) + 7 ln(2/delta)/(3(n-1))",
+    "monotone_envelope": "running minimum of valid upper bounds"
+  },
+  "movement_ordered_partial_census": {
+    "order": "descending absolute policy displacement |pi_i-p0_i| with labelled-index tie break",
+    "unseen_bound": "minus sum_unseen |pi_i-p0_i| under the unit error cap",
+    "crossing": "first distinct audited atom giving strictly positive lower true-gain margin",
+    "maximum_audits": 64
+  },
+  "gates": {
+    "G0_registration_binding": "All sources, protocol, parent tables, tests, and verifier are committed and hash-bound before execution.",
+    "G1_empirical_bernstein_instrument": "For each error population, the 95% exact binomial upper bound on streams with any simultaneous empirical-Bernstein norm failure is at most 0.07.",
+    "G2_conditional_soundness": "Neither empirical Bernstein nor movement-ordered partial census has a positive crossing for a non-positive-true-gain policy when its instrument is valid.",
+    "G3_monotone_dynamics": "All empirical-Bernstein and partial-census certificate paths are nondecreasing and have zero reversions.",
+    "G4_partial_census_exactness": "At 64 audited atoms, the partial-census lower margin equals exact true gain for every policy/error cell.",
+    "G5_top_spike_efficiency_order": "For every diffuse top-spike policy, movement-ordered partial census crosses before the empirical-Bernstein median, which crosses before the frozen Hoeffding minimum.",
+    "G6_complete_threshold_reporting": "Every method reports a crossing or explicit censoring class for every policy/error cell; no crossing-fraction gate is used.",
+    "G7_resources_and_receipts": "The run stays under CPU/RAM ceilings and emits write-once tables, figure, report, and receipts."
+  },
+  "gates_numeric": {
+    "maximum_instrument_failure_cp_upper": 0.07
+  },
+  "decision_rule": {
+    "efficiency_frontier_measured": "G0 through G7 all pass",
+    "ordering_not_established": "G0 through G4, G6, and G7 pass but G5 fails",
+    "not_established": "G1, G2, G3, G4, or G6 fails",
+    "invalid": "G0 or G7 fails"
+  },
+  "resource_ceiling": {
+    "wall_seconds": 180,
+    "process_peak_rss_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "claim_boundary": "Synthetic 64-outcome audit-efficiency comparison; movement-ordered census assumes enumerable atoms and no learned reward model or ASMP-8 resolution."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2",
+  "experiment": "05_sufficiency_audit",
+  "run_id": "smoke_v1",
+  "seed": 2026071605,
+  "parameters": {
+    "dimensions": [8, 16],
+    "thresholds": [0.4, 0.7],
+    "probe_counts": [1, 4, 16, 32],
+    "sparsities": [1, 4],
+    "trials": 128
+  }
+}

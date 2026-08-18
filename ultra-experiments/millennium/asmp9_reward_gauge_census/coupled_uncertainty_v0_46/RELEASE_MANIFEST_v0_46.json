@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "bytes": 1453,
+      "path": "README.md",
+      "sha256": "9c691350988a48735b3d64b707d16415d00da5a16fbe6d23bb94e20d88ea6abb"
+    },
+    {
+      "bytes": 3765,
+      "path": "PRIOR_ART_GATE_v0_46.md",
+      "sha256": "0478ea54191503711f23be8429a6f45eee1accb54da6bf783263eb514d984794"
+    },
+    {
+      "bytes": 5160,
+      "path": "PROTOCOL_v0_46.md",
+      "sha256": "60ee5eee95dc3f1db31b7b63d6b892a078bd17808832e369d36f08f306b16779"
+    },
+    {
+      "bytes": 4747,
+      "path": "THEOREM_DRAFT_v0_46.md",
+      "sha256": "884bb2448589f3509a89bbb2e9515e669446246c998b39734a3bc47dfaec4516"
+    },
+    {
+      "bytes": 108,
+      "path": "environment_lock_v0_46.json",
+      "sha256": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00"
+    },
+    {
+      "bytes": 27121,
+      "path": "coupled_uncertainty.py",
+      "sha256": "0c905affc807dd1add73ff82532f9e4a1ebe92a2bd0802f4fa8298af9f2c7ecc"
+    },
+    {
+      "bytes": 4652,
+      "path": "test_coupled_uncertainty.py",
+      "sha256": "1649c16eab3603303c9c59fc5d9d9dd9084c8acd2c65ff9da125e475d1ac8db8"
+    },
+    {
+      "bytes": 18818,
+      "path": "run_confirmation_v0_46.py",
+      "sha256": "ff3cee62941da2b0dc6dbf8018b3f86a504739323796c5fd32afafab1f56b691"
+    },
+    {
+      "bytes": 3194,
+      "path": "verify_result_v0_46.py",
+      "sha256": "2e41b75e8a7bcd95a2dce87369b8f674531dbe8ec426a4c0395f3ec68b9c8546"
+    },
+    {
+      "bytes": 5158,
+      "path": "registration_v0_46.json",
+      "sha256": "2242ffe6e287f112cd1ed99652252fcf8f30171c11aa5c465c5fdcaf96923598"
+    },
+    {
+      "bytes": 1677232,
+      "path": "artifacts_v0_46/coupled_rows_v0_46.json",
+      "sha256": "6d7db9e610b73ab576ca8a215c60c8712f1d8fc89898c97a915fda9a70b3242a"
+    },
+    {
+      "bytes": 4509,
+      "path": "artifacts_v0_46/rectangle_audit_v0_46.json",
+      "sha256": "7529808e7bd4fe4ff98657dd8858db295dbd9faa3767bce85f99d7778479ebff"
+    },
+    {
+      "bytes": 51630,
+      "path": "artifacts_v0_46/result_v0_46.json",
+      "sha256": "18a6a7b85093a1013dcb4d93ccbf449bbc8203843f2d5c368c4d48639fe5e915"
+    },
+    {
+      "bytes": 5567,
+      "path": "VERIFY_RESULT_v0_46.json",
+      "sha256": "ffbd6864b445caa576b0d87c047da5d217f3af3dd343bf228dcfb9c11da02334"
+    },
+    {
+      "bytes": 7406,
+      "path": "RESULT_v0_46.md",
+      "sha256": "9d72b03478bf572ecb98cfed0772981f9ebab906d892ed55f392c6b32a068fcd"
+    },
+    {
+      "bytes": 2377,
+      "path": "RUN_RECEIPT_v0_46.json",
+      "sha256": "414d7882fe0a605dba2084e2cdee94d065e57c44a47fbce69472344975b1a90d"
+    }
+  ],
+  "schema": "asmp9-v0.46-release-manifest-v1"
+}

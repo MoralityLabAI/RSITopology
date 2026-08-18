@@ -1,0 +1,35 @@
+{
+  "schema_version": "asmp10_predictor_design_receipt_v0_5_2",
+  "status": "draft_design_addendum_not_registered_not_authorized",
+  "created_utc": "2026-07-22T05:21:17Z",
+  "parent_receipt": {
+    "path": "ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/reversion_diagnostics_receipt_v0_4_1.json",
+    "sha256": "3aa4914771ef23fa505fe8a6855a632b643f4b4d38db1021567d354d50929cc1"
+  },
+  "manifest": {
+    "ultra-experiments/millennium/asmp10_capability_transition/CHECKPOINT_DWELL_AUDIT_v0_5_2.md": "607a89b4ceaf57cc5ea688d239e0de13001d941f78bdd9c6c621b25a551a9853",
+    "ultra-experiments/millennium/asmp10_capability_transition/PREDICTOR_PROTOCOL_DRAFT_v0_5_2.md": "d8449654e3b3c833b5826b15bdc9b3251d183cf05f92df9b58f5134e7e31ab01",
+    "ultra-experiments/millennium/asmp10_capability_transition/SPIKE_CONSEQUENCE_TABLE_v0_4_2.md": "b42ed311c112a02ea33c1151496e559d855b9520919893359474e4cf51d24e4e",
+    "ultra-experiments/millennium/asmp10_capability_transition/analyze_spike_consequences_v0_4_2.py": "58717ddfdf1460d8c6aab3e824a7febfbe819948c7960e3aef16765c7eea96d7",
+    "ultra-experiments/millennium/asmp10_capability_transition/capability_state_v0_5_2.py": "bce3a56996b9feeec2e322524844232f42ee15a388ef6d6c7fd951f6a65c7c60",
+    "ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/spike_consequences_v0_4_2.json": "c665822f5942a5d53cc310ecb56f189157c59891466544564f0fd6f48fba4201",
+    "ultra-experiments/millennium/asmp10_capability_transition/predictor_protocol_draft_v0_5_2.json": "2f38840e33b4d49b6f91c009c484ae3faf72cdc9cd8da5feddbc76e83fc6e3ce",
+    "ultra-experiments/millennium/asmp10_capability_transition/test_analyze_spike_consequences_v0_4_2.py": "9fefa2704f79df66cca21ceea31dc6d4250708323f120d90bbd969733581bde9",
+    "ultra-experiments/millennium/asmp10_capability_transition/test_capability_state_v0_5_2.py": "44afa0e2138fad9deb7cec4d448af8e46281ecfce19e909ca0164c01a98a5fb1"
+  },
+  "verification": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp10_capability_transition",
+    "tests_passed": 33,
+    "tests_failed": 0,
+    "manifest_hashes_verified": 9
+  },
+  "frozen_candidate_choices": {
+    "primary_endpoint": "three_way_categorical",
+    "primary_scoring_rule": "grouped_heldout_multinomial_log_loss",
+    "primary_exit_dwell_steps": 300,
+    "dwell_sensitivity_steps": [250, 300, 400],
+    "task_scope": "modular_addition_only",
+    "weaker_baseline_fallback_allowed": false
+  },
+  "claim_boundary": "Design hardening and burned-data description only; no registered prediction experiment and no new capability-transition evidence."
+}

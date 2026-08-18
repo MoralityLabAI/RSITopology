@@ -1,0 +1,50 @@
+{
+  "protocol_id": "asmp9-structured-choice-stack-v0.61",
+  "resource_caps": {
+    "resident_bytes": 805306368,
+    "seconds": 180,
+    "workers": 1
+  },
+  "seed": 610061,
+  "v57_cells": [
+    {"n": 9, "r": 1, "special_item": 4, "special_menu": [2, 4, 7]},
+    {"n": 9, "r": 4, "special_item": 3, "special_menu": [0, 2, 3, 5, 7, 8]},
+    {"n": 9, "r": 7, "special_item": 6, "special_menu": [0, 1, 2, 3, 4, 5, 6, 7, 8]},
+    {"n": 10, "r": 2, "special_item": 6, "special_menu": [1, 3, 6, 9]},
+    {"n": 10, "r": 5, "special_item": 8, "special_menu": [0, 1, 3, 4, 6, 8, 9]},
+    {"n": 10, "r": 8, "special_item": 2, "special_menu": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]},
+    {"n": 11, "r": 3, "special_item": 5, "special_menu": [0, 2, 5, 7, 10]},
+    {"n": 11, "r": 6, "special_item": 4, "special_menu": [0, 1, 2, 4, 6, 8, 9, 10]},
+    {"n": 11, "r": 9, "special_item": 7, "special_menu": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"n": 12, "r": 4, "special_item": 9, "special_menu": [1, 2, 4, 7, 9, 11]},
+    {"n": 12, "r": 7, "special_item": 10, "special_menu": [0, 1, 3, 4, 5, 7, 8, 10, 11]},
+    {"n": 12, "r": 10, "special_item": 5, "special_menu": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
+  ],
+  "v58_eta_paths": ["7/9973", "19/4001", "31/997"],
+  "v58_gamma_paths": ["1/997", "2/773", "7/1000"],
+  "v58_sample_cells": [
+    {"a": "3/25", "delta": "3/100", "gamma": "2/25", "n": 4, "r": 1},
+    {"a": "1/40", "delta": "1/50", "gamma": "1/25", "n": 7, "r": 3},
+    {"a": "1/125", "delta": "1/200", "gamma": "3/200", "n": 9, "r": 6}
+  ],
+  "v59_gamma_witnesses": ["1/887", "3/911", "5/701"],
+  "v59_simplex": {"denominator": 8, "dimension": 4},
+  "v59_contamination_fractions": ["1/7", "3/8", "5/7"],
+  "v60_positive_simplex": {"denominator": 9, "dimension": 4},
+  "v60_conditional_cell": {
+    "a": "7/25",
+    "conditional_delta": "7/200",
+    "gamma": "3/20",
+    "lower_gamma": "4/777",
+    "menu_count": 4,
+    "n": 3,
+    "r": 1,
+    "undercount_delta": "7/200"
+  },
+  "v60_recording_bounds": [
+    {"lower": "4/5", "upper": "1"},
+    {"lower": "2/3", "upper": "5/6"},
+    {"lower": "1/3", "upper": "2/3"}
+  ],
+  "v60_selection_floors": ["1/5", "1/20", "1/125", "1/2000"]
+}

@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "nonresource_gates_exact_replay": true,
+    "registration_hash": true,
+    "resource_gate_passed": true,
+    "sampled_payload_exact_replay": true,
+    "stored_status_matches_gates": true
+  },
+  "status": "independent_replay_passed"
+}

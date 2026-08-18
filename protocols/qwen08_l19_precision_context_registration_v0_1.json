@@ -1,0 +1,71 @@
+{
+  "schema_version": "qwen08_l19_precision_context_registration_v0_1",
+  "registration_id": "qwen08_l19_precision_context_v0_1_prereveal",
+  "status": "registered_before_fresh_capture",
+  "registered_utc": "2026-07-17T15:04:01.137Z",
+  "registration_source_commit": "00836fe191f8c02d948afaf0da6ab7d421acca7c",
+  "remote_ref": "origin/feat/spectral-bundle-v0.3-bifiltration",
+  "remote_commit_at_registration": "00836fe191f8c02d948afaf0da6ab7d421acca7c",
+  "outcomes_available_at_registration": false,
+  "fresh_capture_started_at_registration": false,
+  "analysis_started_at_registration": false,
+  "sealed_inputs": {
+    "scientific_protocol": {
+      "path": "protocols/qwen08_l19_precision_context_v0_1.json",
+      "sha256": "6437d637d6a25efe47c462a0cadeb9aa2dd18a018a794f9e688befa4adb5ef8b"
+    },
+    "fresh_prompt_manifest": {
+      "path": "protocols/qwen08_l19_precision_context_prompt_manifest_v0_1.json",
+      "sha256": "9315073ff8db07fb258563957b509cdbe6ecfdc80ab0a12b869fe614077e88db"
+    },
+    "prompt_separation_receipt": {
+      "path": "protocols/qwen08_l19_precision_context_prompt_separation_v0_1.json",
+      "sha256": "674447c19ec8e93339622ae82766e86030b3c73b67b099eaa5ad731568633aef"
+    },
+    "precision_pair_receipt": {
+      "path": "protocols/qwen08_l19_precision_context_manifest_pair_v0_1.json",
+      "sha256": "52e7c14de1fc7991be401cca09346e65543a015a1dd7f00dd5e02891a086e72a"
+    }
+  },
+  "sealed_sources": [
+    {
+      "path": "rsi_topology/qwen_precision_context.py",
+      "sha256": "07be1e68c331c230c465fadc85044992d83f047163f35f26ab6e1da1e5918288"
+    },
+    {
+      "path": "scripts/capture_qwen08_l19_precision_context.py",
+      "sha256": "f835f536f957e79eb7b71b971a371f37ee475f77c098b1e041636501572a94d9"
+    },
+    {
+      "path": "scripts/prepare_qwen08_l19_precision_context.py",
+      "sha256": "5ebb686bf984a6d7381e86b189d689033fe722055d5d490e2cb8e72a74c20f3e"
+    },
+    {
+      "path": "scripts/run_qwen08_l19_precision_context.py",
+      "sha256": "41f408ed29b38bf3631b6e486dfaecd1ff49571d0a318c5fce12b721f8566395"
+    },
+    {
+      "path": "tests/test_qwen_precision_context.py",
+      "sha256": "5e11f86d7359c6f33c9fc058969f9cf97d2b33c2ca18b7f262e6f7a5aca96ab2"
+    }
+  ],
+  "scientific_parent": {
+    "protocol": {
+      "path": "protocols/qwen08_context_stageb_v0_1.json",
+      "sha256": "62c4e9d2c250957bfd3257c2775691d0078ae50fad772f443d741fcacef935b1"
+    },
+    "prompt_manifest": {
+      "path": "protocols/qwen08_context_stageb_prompt_manifest_v0_1.json",
+      "sha256": "efed466dbd859047679483d971340a937a86320fd299efdb213611c9dec8adf8"
+    },
+    "fourbit_analysis": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_context_stageb_analysis_v0_1\\main_4bit\\analysis_result.json",
+      "sha256": "6f5cf951dcbcf91f3725f6521c0671e004f76ba82e0b568b5b74a690004bbc7d"
+    },
+    "float16_analysis": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_context_stageb_analysis_v0_1\\control_float16\\analysis_result.json",
+      "sha256": "b7e5b25340d1247413610fb370cadb2c84754edf19302f520a7ec5bb9818a977"
+    }
+  },
+  "claim_boundary": "This registration seals an outcome-free measurement study before fresh capture. It cannot establish causal edit value, VPD efficacy, monitor sufficiency, capability preservation, compactification, recursive self-improvement, or RSI. Rank-one determinant holonomy is diagnostic only and cannot create a new attestation level or reopen a closed causal stage."
+}

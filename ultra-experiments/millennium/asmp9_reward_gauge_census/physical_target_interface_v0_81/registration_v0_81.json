@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "Known intervention offsets in one controlled finite-MDP softmax fixture only; registration precedes outcomes and does not resolve ASMP-9.",
+  "environment": {
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]"
+  },
+  "experiment_id": "ASMP9-STRUCTURED-PHYSICAL-TARGET-v0.81",
+  "outcomes_read": false,
+  "parent_negative_result": {
+    "path": "../physical_target_interface_v0_80/RESULT_v0_80.md",
+    "sha256": "9b831fd7d8f2f8986a49612a7750858c88f6b54423755a073e8e98d0034260bd"
+  },
+  "schema_version": "asmp9_structured_target_registration_v0_81",
+  "source_hashes": {
+    "DESIGN_FROM_BURNED_v0_81.md": "2d1bb815adb56e5705fc44b6644ca3bc4bed66b7b034f3a110dd29d53250e13b",
+    "PRIOR_ART_GATE_v0_81.md": "1c471ab04fe1a5c618cab75ec463a52bcd4b957ffbeb61dfba3efa5d081599ec",
+    "PROTOCOL_v0_81.md": "d47922b1ae331bf5a2dfd84a621db80daec1d9ba068572b51a6aa1804e31be3b",
+    "README.md": "300cc492184bbe5b74458009e2cce06fa76b8888f8e27fc2dd9ceb6fe35e812d",
+    "config_v0_81.json": "0cb53430ced8ddd384ea856095de530e4d4b4c6e5c7729027ea8f9a5509337c8",
+    "execute_registered.py": "dc74b3ba971eebb5f87250c70e48316b7474f3dd95cf5bcd702d5b15c715c916",
+    "structured_target.py": "a2299945b47f2f8466d7f27b29a326161aa332f9aa570c4034eeeddd3fc20ace",
+    "test_structured_target.py": "d8c098d8bce4b1da43ed376cdf87af51b35f9fe05754272b968584ebe23c461c"
+  },
+  "status": "registered_prereveal_no_outcomes"
+}

@@ -1,0 +1,108 @@
+{
+  "all_recorded_gates_pass": true,
+  "artifact_sha256": {
+    "coupled_rows_v0_46.json": "6d7db9e610b73ab576ca8a215c60c8712f1d8fc89898c97a915fda9a70b3242a",
+    "rectangle_audit_v0_46.json": "7529808e7bd4fe4ff98657dd8858db295dbd9faa3767bce85f99d7778479ebff",
+    "result_v0_46.json": "18a6a7b85093a1013dcb4d93ccbf449bbc8203843f2d5c368c4d48639fe5e915"
+  },
+  "coupled_rows_match": true,
+  "ok": true,
+  "recorded_status": "coupled_image_conservatism_established_allocation_unchanged",
+  "rectangle_payload_match": true,
+  "registration_hash_match": true,
+  "schema": "asmp9-v0.46-independent-verification-v1",
+  "scientific_payload_match": true,
+  "source_checks": [
+    {
+      "actual": "0478ea54191503711f23be8429a6f45eee1accb54da6bf783263eb514d984794",
+      "expected": "0478ea54191503711f23be8429a6f45eee1accb54da6bf783263eb514d984794",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/PRIOR_ART_GATE_v0_46.md"
+    },
+    {
+      "actual": "60ee5eee95dc3f1db31b7b63d6b892a078bd17808832e369d36f08f306b16779",
+      "expected": "60ee5eee95dc3f1db31b7b63d6b892a078bd17808832e369d36f08f306b16779",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/PROTOCOL_v0_46.md"
+    },
+    {
+      "actual": "9c691350988a48735b3d64b707d16415d00da5a16fbe6d23bb94e20d88ea6abb",
+      "expected": "9c691350988a48735b3d64b707d16415d00da5a16fbe6d23bb94e20d88ea6abb",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/README.md"
+    },
+    {
+      "actual": "884bb2448589f3509a89bbb2e9515e669446246c998b39734a3bc47dfaec4516",
+      "expected": "884bb2448589f3509a89bbb2e9515e669446246c998b39734a3bc47dfaec4516",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/THEOREM_DRAFT_v0_46.md"
+    },
+    {
+      "actual": "bb10cbf98b0314e35d3d7a1d2f4fa94b7a113b722086dff8fc0fedcd37783300",
+      "expected": "bb10cbf98b0314e35d3d7a1d2f4fa94b7a113b722086dff8fc0fedcd37783300",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/build_release_v0_46.py"
+    },
+    {
+      "actual": "0c905affc807dd1add73ff82532f9e4a1ebe92a2bd0802f4fa8298af9f2c7ecc",
+      "expected": "0c905affc807dd1add73ff82532f9e4a1ebe92a2bd0802f4fa8298af9f2c7ecc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/coupled_uncertainty.py"
+    },
+    {
+      "actual": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00",
+      "expected": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/environment_lock_v0_46.json"
+    },
+    {
+      "actual": "ff3cee62941da2b0dc6dbf8018b3f86a504739323796c5fd32afafab1f56b691",
+      "expected": "ff3cee62941da2b0dc6dbf8018b3f86a504739323796c5fd32afafab1f56b691",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/run_confirmation_v0_46.py"
+    },
+    {
+      "actual": "1649c16eab3603303c9c59fc5d9d9dd9084c8acd2c65ff9da125e475d1ac8db8",
+      "expected": "1649c16eab3603303c9c59fc5d9d9dd9084c8acd2c65ff9da125e475d1ac8db8",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/test_coupled_uncertainty.py"
+    },
+    {
+      "actual": "2e41b75e8a7bcd95a2dce87369b8f674531dbe8ec426a4c0395f3ec68b9c8546",
+      "expected": "2e41b75e8a7bcd95a2dce87369b8f674531dbe8ec426a4c0395f3ec68b9c8546",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/verify_result_v0_46.py"
+    },
+    {
+      "actual": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "expected": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+    },
+    {
+      "actual": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "expected": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py"
+    },
+    {
+      "actual": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "expected": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/allocation_design.py"
+    },
+    {
+      "actual": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "expected": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/audit_formula_universe.py"
+    },
+    {
+      "actual": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "expected": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+    }
+  ],
+  "source_hashes_match": true
+}

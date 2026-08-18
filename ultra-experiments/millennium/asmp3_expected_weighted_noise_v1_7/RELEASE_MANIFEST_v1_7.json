@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-EXPECTED-WEIGHTED-NOISE-v1.7",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_weighted_noise_subset_sum_v1_6/RELEASE_MANIFEST_v1_6.json": {
+      "bytes": 3019,
+      "sha256": "CF59382AFE252EE4F5059851449FF16AFAE9F9C6C1BFA6232BBBB14411C30AEE"
+    },
+    "../asmp3_weighted_noise_subset_sum_v1_6/WEIGHTED_NOISE_SUBSET_SUM_THEOREM_v1_6.md": {
+      "bytes": 6925,
+      "sha256": "E3C2514738ADA39121126523F86257499C5380CD70F88C88F4E68BA913E1F378"
+    },
+    "../asmp3_weighted_noise_subset_sum_v1_6/artifacts/weighted_noise_subset_sum_v1_6.json": {
+      "bytes": 3411499,
+      "sha256": "BDD85BEC34CEF4656B749C512EE49F536955A6D6A254386871E264D004526C2B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_7.md": {
+      "bytes": 1955,
+      "sha256": "5C81C5F6C8D54C64FF48CCA987E582E0BB344352CB5459F4196C71E040A0A8B1"
+    },
+    "EXPECTED_WEIGHTED_NOISE_THEOREM_v1_7.md": {
+      "bytes": 6284,
+      "sha256": "7CBEAAC74A516B5E5CD2C31CDE348897D967094E3FC6BB85F8148F5711DFEB1A"
+    },
+    "README.md": {
+      "bytes": 701,
+      "sha256": "153C33145B423819218F9A7EDF8A514D1D676E6CA873BD3B15D2835C36D65A8F"
+    },
+    "artifacts/expected_weighted_noise_v1_7.json": {
+      "bytes": 2695671,
+      "sha256": "C45A16E9836BD422BE69749715B477E50444D979A81371EF2902B2FDB6B5D01C"
+    },
+    "artifacts/expected_weighted_noise_verification_v1_7.json": {
+      "bytes": 858,
+      "sha256": "D7A438A2D0554489E3F9E2EB91B08C6D9E008BF893395CFEEB8CD47A6230A0F7"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2490,
+      "sha256": "CBDAA74C7D71A612DCE4298F602CBDD417C73424B5E757DEC25E1AA3D3171A58"
+    },
+    "expected_weighted_noise.py": {
+      "bytes": 11303,
+      "sha256": "C608589385B21EFE68627675CB0E1B910C79ACF414DF02FF33E09A806515F759"
+    },
+    "run_expected_weighted_noise.py": {
+      "bytes": 892,
+      "sha256": "280FD02B8883F9CBFEFF083C8F3466CE8893F2CFD26EAD0FA1909FC41FCB3DE3"
+    },
+    "test_expected_weighted_noise.py": {
+      "bytes": 4547,
+      "sha256": "22734244461650370243CB56F247AB46B85E75237C86E7357CF699BBDD30DFA7"
+    },
+    "verify_expected_weighted_noise.py": {
+      "bytes": 10061,
+      "sha256": "9F4B0FDE6975BCDA3C29D5EC896D9F2649EFC5213F364DADB0DEEC89F90E10DD"
+    }
+  },
+  "release_status": "exact_expected_budget_tv_phase",
+  "schema_version": "asmp3_expected_weighted_noise_release_v1_7"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "asmp8_dual_frontier_completion_receipt_v0_2",
+  "created_utc": "2026-07-22T05:39:19.3196303Z",
+  "registration_commit": "36ef46ce43aa6c62fcd64fd91dc7ea062ab7df2d",
+  "source_commit_before_registration": "9410dbd071692825f0d54d26c1c88426eab65018",
+  "manifest": {
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/POSTRUN_AUDIT_v0_2.md": "967519243c7b1eb9da47ef88718150431983299c0f00f09387b31c7b8bf67492",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/artifacts_v0_2/RESULT_v0_2.md": "16dbb9c929ac4ee12a37f8459f55a2ae40ed129f16b57100d70ea6c074581050",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/artifacts_v0_2/frontier_v0_2.csv": "7d575a52574cf0ea3504c8faa80429abed0183895578fbca53b62453793e7fdf",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/artifacts_v0_2/receipt_v0_2.json": "e9ee5fbe5ee7487e79418ab875cc780554d14de71fe5c1e1e02001e943fc4f9b",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/artifacts_v0_2/result_v0_2.json": "eec7c72e4c08566f32b715b3c93fedbef1c1c85f6f77e824e8ef7e8263627474",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/artifacts_v0_2/verification_v0_2.json": "7b85942e8f7f8dac0899af56eb263be19bbcae11237bd74775ee30581972c885",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/artifacts_v0_2/witnesses_v0_2.json": "103c5a7c81cc2c538e60b03de0a6db3beb2dbf5814b25af6b08e05f92f394956",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_2_dual_frontier/registration_v0_2.json": "8758948cdbf57d41f43385e931036b5be5e2398be184f3a36da9a96901ccb94a"
+  },
+  "verification": {
+    "independent_checks_passed": 11,
+    "unit_tests_passed": 6,
+    "registered_gates_passed": 8,
+    "frontier_replay_byte_identical": true
+  },
+  "verdict": "dual_frontier_validated",
+  "claim_boundary": "Classical dual-norm robust counterpart validated on a finite rational Goodhart registry; no novelty claim for convex duality, no learned reward model, no RL trajectory, and no ASMP-8 resolution."
+}

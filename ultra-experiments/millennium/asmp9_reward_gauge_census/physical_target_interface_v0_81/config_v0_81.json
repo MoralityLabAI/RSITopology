@@ -1,0 +1,46 @@
+{
+  "betas": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "contexts": [
+    {
+      "base_margin": "1/4",
+      "name": "construction_low",
+      "split": "construction"
+    },
+    {
+      "base_margin": "3/4",
+      "name": "construction_high",
+      "split": "construction"
+    },
+    {
+      "base_margin": "-1/4",
+      "name": "holdout_low",
+      "split": "holdout"
+    },
+    {
+      "base_margin": "-3/4",
+      "name": "holdout_high",
+      "split": "holdout"
+    }
+  ],
+  "decoder_arm_offsets": {
+    "base": 0.0,
+    "nongauge_minus": -2.0,
+    "nongauge_plus": 2.0
+  },
+  "global_seed": 8101,
+  "maximum_absolute_margin_error": 0.15,
+  "maximum_gauge_probability_difference": 0.12,
+  "maximum_robust_error_bound": 0.05,
+  "mle_bisection_iterations": 80,
+  "mle_bracket": [
+    -8.0,
+    8.0
+  ],
+  "per_sample_tv_radius": 1e-05,
+  "samples_per_query": 512
+}
+

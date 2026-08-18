@@ -1,0 +1,23 @@
+{
+  "alphabet_sizes": {
+    "maximum": 31,
+    "minimum": 2
+  },
+  "claim_boundary": [
+    "one-shot opaque-symbol laws only",
+    "exactly two equiprobable messages only",
+    "uniform benign cover law only",
+    "exact message-averaged cover and exact per-message control only",
+    "no learned or linguistic encoder",
+    "no multiletter or ASMP-6 resolution claim"
+  ],
+  "cover_law": "uniform",
+  "independent_extremal_enumeration_maximum": 9,
+  "message_count": 2,
+  "message_prior": [
+    "1/2",
+    "1/2"
+  ],
+  "protocol_id": "ASMP6-BALANCED-COVER-v0.2",
+  "schema_version": "asmp6_balanced_cover_protocol_v0_2"
+}

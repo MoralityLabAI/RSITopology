@@ -1,0 +1,89 @@
+{
+  "schema_version": "qwen08_holonomy_geometry_result_receipt_v0_1",
+  "created_on": "2026-07-16",
+  "model": "Qwen3.5-0.8B-Base plus three engineering LoRA checkpoint states",
+  "capture_protocol_sha256": "a56473f6628887fb7dc7df43dc7660010be4f95a526d6587d0d6ec95ebabe872",
+  "analysis_registration_sha256": "6412ddada05a7dae95466247b926a49d82c5c3bcfebc5f56f174496bbd3d8983",
+  "support_recovery_protocol_sha256": "939fceeacebfc974488c7996326d3f93809e9342b4fd5f6e941545f680889e47",
+  "capture_indices": {
+    "base": "f650d3f6fab60c51f5590023158d2e59b9bb30fcfba5a71853879b0e152365a5",
+    "naive_qlora": "389e77c535646150ca5e181e4b1ca3bf9ce5ff7bdcdf1859071b76c1e630e9a5",
+    "shuffled_vpd_policy_qlora": "b53acc9584b30c42aea73dc16fe4864cdf187c6fa5775d58779af2e2c17e0f61",
+    "vpd_policy_qlora": "0f9d89544b4bdad51dd20bcc11d6748f429458f37ac2e0bdf96529d3da06bdbe"
+  },
+  "capture_universe": {
+    "state_count": 4,
+    "site_count": 4,
+    "context_shards": 8,
+    "halves": 2,
+    "chunk_count": 256,
+    "ambient_dimension": 1024,
+    "all_indices_validated": true,
+    "all_cleanup_passed": true
+  },
+  "pair_results": {
+    "base--vs--naive_qlora": {
+      "analysis_result_sha256": "0f80e8227ed98e59d13a7779155e69bf7a45db15c8d040c1978ab621292e6582",
+      "release_manifest_sha256": "07134c588a6e8f5bbe67c5c5f572a2f271c5855820e93722484c538529b5c61e",
+      "pair_capture_index_sha256": "6447bd0e52748c5dd1a2a9d4cdc75d8b4737e49deeda4081f912de9e024ab99f",
+      "no_supported_grid_count": 16,
+      "graph_count": 0,
+      "loop_count": 0
+    },
+    "base--vs--shuffled_vpd_policy_qlora": {
+      "analysis_result_sha256": "9459a755181166027f8831bed40278ca29609637bef12a837525a8acc931816d",
+      "release_manifest_sha256": "765639e543972cb8df10b27b157ea84d6f3f87d64e6f40b1e0502bcf695a7503",
+      "pair_capture_index_sha256": "6ea0b36b4c85d95ad1ff43864116bb4a12cf61abcbf5d00d03d6e6c5fec29e9a",
+      "no_supported_grid_count": 16,
+      "graph_count": 0,
+      "loop_count": 0
+    },
+    "base--vs--vpd_policy_qlora": {
+      "analysis_result_sha256": "24c12af7569cbfce9e78c23ed2520573b6a0e42f8d74fe46a5e8f930822477c2",
+      "release_manifest_sha256": "254a1ad80010dd6a0a35a89770ca665e15333b1b88a4ec4a1f67d63d630ca0a0",
+      "pair_capture_index_sha256": "6423142ec76ae03851646bdb8e4c43e59d9a51605e5a300438fd644f3c15b1ff",
+      "no_supported_grid_count": 16,
+      "graph_count": 0,
+      "loop_count": 0
+    }
+  },
+  "local_rank_gate": {
+    "unique_node_count": 512,
+    "passing_node_count": 0,
+    "rank_1_median_point_worst_direction_retention": 0.8078903303265903,
+    "rank_1_median_bootstrap_lower_95": 0.2029520779218017,
+    "rank_1_median_permutation_upper_95": 0.7831380970305044,
+    "best_null_margin_over_all_nodes_and_ranks": -0.0064183933918680325,
+    "required_null_margin": 0.02,
+    "decision": "holonomy_unavailable_no_supported_identity_rank"
+  },
+  "support_recovery": {
+    "result_sha256": "f0a65b82cb580f4e139d3aaf3674e24959be0e39af5aa89b4089be25515f396b",
+    "row_count": 1088,
+    "pool_size_2": {
+      "prompts_per_subcondition_per_half": 4,
+      "passing_windows": 65,
+      "total_windows": 512
+    },
+    "pool_size_4": {
+      "prompts_per_subcondition_per_half": 8,
+      "passing_windows": 373,
+      "total_windows": 512
+    },
+    "pool_size_8": {
+      "prompts_per_subcondition_per_half": 16,
+      "passing_cells": 60,
+      "total_cells": 64
+    },
+    "common_full_pool_cells_by_pair": {
+      "base--vs--naive_qlora": 14,
+      "base--vs--shuffled_vpd_policy_qlora": 15,
+      "base--vs--vpd_policy_qlora": 15
+    },
+    "distinct_sites_per_pair": 4,
+    "distinct_families_per_pair": 4,
+    "branch_decision": "advance_to_denser_local_capture"
+  },
+  "interpretation": "The frozen local object is not identifiable with two prompts per subcondition per half per context. The same between-class object is recoverable when contexts are pooled, so a global behavior-family superstructure is supported while local transport and holonomy remain unavailable.",
+  "claim_boundary": "No causal edit, VPD-efficacy, capability-preservation, compactification, recursive-improvement, or RSI claim is supported."
+}

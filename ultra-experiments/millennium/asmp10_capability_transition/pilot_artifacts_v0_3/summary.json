@@ -1,0 +1,12 @@
+{
+  "chunks_completed": 0,
+  "chunks_registered": 2,
+  "cuda_available": true,
+  "cuda_device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "elapsed_seconds": 95.45300000000134,
+  "error": "RuntimeError: gpu_allowance_exceeded_or_monitor_failed: used=3950.0MB allowance=3072.0MB",
+  "results": [],
+  "schema_version": "asmp10_modular_transition_pilot_summary_v0_1",
+  "status": "aborted",
+  "task_id": "asmp10-grokking-pilot-extension-v0-2"
+}

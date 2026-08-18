@@ -1,0 +1,76 @@
+{
+  "protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13",
+  "success_verdict": "conditional_fiber_cycle_quotient_verified_v0_13",
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_graph_arithmetic",
+    "G2_scalar_nuisance_cancellation",
+    "G3_visible_quotient",
+    "G4_nonvacuous_statuses",
+    "G5_one_cycle_formula",
+    "G6_exact_conditional_test",
+    "G7_fresh_power_calibration",
+    "G8_claim_boundary_telemetry",
+    "G9_resource_envelope"
+  ],
+  "fresh_liveness_graphs": [
+    {
+      "name": "cycle_5",
+      "node_count": 5,
+      "edges": [[0,1],[1,2],[2,3],[3,4],[4,0]],
+      "expected_beta1": 1,
+      "trials_per_edge": [1,2,3]
+    },
+    {
+      "name": "cycle_7",
+      "node_count": 7,
+      "edges": [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]],
+      "expected_beta1": 1,
+      "trials_per_edge": [1,2,3]
+    },
+    {
+      "name": "theta_6",
+      "node_count": 5,
+      "edges": [[0,2],[2,1],[0,3],[3,1],[0,4],[4,1]],
+      "expected_beta1": 2,
+      "trials_per_edge": [1,2,3]
+    },
+    {
+      "name": "square_diagonal",
+      "node_count": 4,
+      "edges": [[0,1],[1,2],[2,3],[3,0],[0,2]],
+      "expected_beta1": 2,
+      "trials_per_edge": [1,2,3]
+    },
+    {
+      "name": "bowtie_6",
+      "node_count": 5,
+      "edges": [[0,1],[1,2],[2,0],[0,3],[3,4],[4,0]],
+      "expected_beta1": 2,
+      "trials_per_edge": [1,2,3]
+    }
+  ],
+  "power_calibration": {
+    "alpha": "1/20",
+    "lower_power": "39/50",
+    "upper_power": "41/50",
+    "formula_trials_per_edge": 3,
+    "cells": [
+      {"cycle_length": 10, "odds_ratio": "7/5", "trials_per_edge": 2208},
+      {"cycle_length": 13, "odds_ratio": "7/5", "trials_per_edge": 2871},
+      {"cycle_length": 18, "odds_ratio": "7/5", "trials_per_edge": 3975},
+      {"cycle_length": 10, "odds_ratio": "7/4", "trials_per_edge": 798},
+      {"cycle_length": 13, "odds_ratio": "7/4", "trials_per_edge": 1038},
+      {"cycle_length": 18, "odds_ratio": "7/4", "trials_per_edge": 1437},
+      {"cycle_length": 10, "odds_ratio": "8/3", "trials_per_edge": 260},
+      {"cycle_length": 13, "odds_ratio": "8/3", "trials_per_edge": 338},
+      {"cycle_length": 18, "odds_ratio": "8/3", "trials_per_edge": 468}
+    ]
+  },
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_wall_seconds": 180,
+    "maximum_ram_gib": 2
+  },
+  "claim_boundary": "Exact conditional finite-graph Bradley-Terry quotient and fresh one-cycle calibration; not unconditional goodness-of-fit, positive scalarity certification, dependent or unknown-link behavior, general IRL, or ASMP-9 resolution."
+}

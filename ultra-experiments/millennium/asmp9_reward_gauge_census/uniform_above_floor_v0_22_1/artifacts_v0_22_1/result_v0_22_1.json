@@ -1,0 +1,281 @@
+{
+  "cells": {
+    "chorded_cycle_7": {
+      "2": {
+        "availability": "300617/524288",
+        "common_denominator": 1048576,
+        "microtrial_numerator": 601234,
+        "point": [
+          "2/3",
+          "4/1"
+        ],
+        "prefactor_formula": "300617/524288",
+        "trial_count": 2,
+        "tutte_value": "601234/729",
+        "z": "1/4"
+      },
+      "3": {
+        "availability": "477281109/536870912",
+        "common_denominator": 1073741824,
+        "microtrial_numerator": 954562218,
+        "point": [
+          "6/7",
+          "8/1"
+        ],
+        "prefactor_formula": "477281109/536870912",
+        "trial_count": 3,
+        "tutte_value": "954562218/117649",
+        "z": "1/8"
+      },
+      "5": {
+        "availability": "559451561882397/562949953421312",
+        "common_denominator": 1125899906842624,
+        "microtrial_numerator": 1118903123764794,
+        "point": [
+          "30/31",
+          "32/1"
+        ],
+        "prefactor_formula": "559451561882397/562949953421312",
+        "trial_count": 5,
+        "tutte_value": "1118903123764794/887503681",
+        "z": "1/32"
+      }
+    },
+    "chorded_cycle_8": {
+      "2": {
+        "availability": "1220317/2097152",
+        "common_denominator": 4194304,
+        "microtrial_numerator": 2440634,
+        "point": [
+          "2/3",
+          "4/1"
+        ],
+        "prefactor_formula": "1220317/2097152",
+        "trial_count": 2,
+        "tutte_value": "2440634/2187",
+        "z": "1/4"
+      },
+      "3": {
+        "availability": "3877481121/4294967296",
+        "common_denominator": 8589934592,
+        "microtrial_numerator": 7754962242,
+        "point": [
+          "6/7",
+          "8/1"
+        ],
+        "prefactor_formula": "3877481121/4294967296",
+        "trial_count": 3,
+        "tutte_value": "7754962242/823543",
+        "z": "1/8"
+      },
+      "5": {
+        "availability": "17932978933739961/18014398509481984",
+        "common_denominator": 36028797018963968,
+        "microtrial_numerator": 35865957867479922,
+        "point": [
+          "30/31",
+          "32/1"
+        ],
+        "prefactor_formula": "17932978933739961/18014398509481984",
+        "trial_count": 5,
+        "tutte_value": "35865957867479922/27512614111",
+        "z": "1/32"
+      }
+    },
+    "complete_5": {
+      "2": {
+        "availability": "125867/131072",
+        "common_denominator": 1048576,
+        "microtrial_numerator": 1006936,
+        "point": [
+          "2/3",
+          "4/1"
+        ],
+        "prefactor_formula": "125867/131072",
+        "trial_count": 2,
+        "tutte_value": "1006936/81",
+        "z": "1/4"
+      },
+      "3": {
+        "availability": "133884143/134217728",
+        "common_denominator": 1073741824,
+        "microtrial_numerator": 1071073144,
+        "point": [
+          "6/7",
+          "8/1"
+        ],
+        "prefactor_formula": "133884143/134217728",
+        "trial_count": 3,
+        "tutte_value": "1071073144/2401",
+        "z": "1/8"
+      },
+      "5": {
+        "availability": "140736143812943/140737488355328",
+        "common_denominator": 1125899906842624,
+        "microtrial_numerator": 1125889150503544,
+        "point": [
+          "30/31",
+          "32/1"
+        ],
+        "prefactor_formula": "140736143812943/140737488355328",
+        "trial_count": 5,
+        "tutte_value": "1125889150503544/923521",
+        "z": "1/32"
+      }
+    }
+  },
+  "claim_boundary": "For one finite simple biconnected comparison block under the inherited independent-binomial model, epsilon=1/2, and a declared uniform integer trial count r>=2 on every edge, translate exact quotient-liveness availability into Backman's weighted strongly-connected partial-orientation Tutte specialization. For every fixed r, the evaluation point ((2^r-2)/(2^r-1),2^r) lies on the Jaeger-Vertigan-Welsh #P-hard curve H_-1. Tutte multiplicativity over connected components and vertex-biconnected blocks, with bridge factors known explicitly, gives a polynomial-time Turing reduction from general fixed-point evaluation to an oracle on finite simple biconnected blocks. Therefore the exact microtrial numerator is #P-complete and exact rational availability is #P-hard under polynomial-time Turing reductions even inside one block. This is a prior-art-derived access-model translation. It does not prove that uniform allocation is optimal, classify maximin design or nonuniform counts, arbitrary epsilon, approximation, adaptive allocation, dependence, response misspecification, behavioral reward identification, general IRL, or resolve ASMP-9.",
+  "gate_passes": {
+    "G0_registration_and_predecessor_binding": true,
+    "G1_freshness_and_structure": true,
+    "G2_state_law_and_semantics": true,
+    "G3_weighted_tutte_identity": true,
+    "G4_hard_curve_and_fixed_points": true,
+    "G5_minimal_above_floor_microtrial": true,
+    "G6_endpoint_label_invariance": true,
+    "G7_exact_numerator_ledger": true,
+    "G8_structured_complexity_attribution": true,
+    "G9_resource_and_scope": true
+  },
+  "gates": {
+    "G0_registration_and_predecessor_binding": {
+      "pass": true,
+      "predecessor": {
+        "expected_gate_map_matches": true,
+        "expected_verdict_matches": true,
+        "hashes": {
+          "independent_verification": true,
+          "registration": true,
+          "result": true,
+          "run_receipt": true
+        },
+        "pass": true
+      },
+      "registration_sha256": "ce2038c8a0277acada81cc4206d5ec2f2b703c98a861dd3423f0677094743420",
+      "sealed_file_count": 20
+    },
+    "G1_freshness_and_structure": {
+      "freshness": {
+        "chorded_cycle_7": {
+          "biconnected": true,
+          "bridges": 0,
+          "edge_count": 10,
+          "in_v0_20_burned_atlas_envelope": false,
+          "node_count": 7,
+          "prior_isomorphic_matches": 0
+        },
+        "chorded_cycle_8": {
+          "biconnected": true,
+          "bridges": 0,
+          "edge_count": 11,
+          "in_v0_20_burned_atlas_envelope": false,
+          "node_count": 8,
+          "prior_isomorphic_matches": 0
+        },
+        "complete_5": {
+          "biconnected": true,
+          "bridges": 0,
+          "edge_count": 10,
+          "in_v0_20_burned_atlas_envelope": false,
+          "node_count": 5,
+          "prior_isomorphic_matches": 0
+        }
+      },
+      "pairwise_isomorphism_collisions": 0,
+      "pass": true,
+      "prior_graph_record_count": 38
+    },
+    "G2_state_law_and_semantics": {
+      "interior_semantics": "bidirected edge; equivalent to Backman-unoriented for the no-directed-cut liveness predicate",
+      "pass": true,
+      "state_laws": {
+        "2": {
+          "full": "1/4",
+          "interior": "1/2",
+          "sum": "1/1",
+          "x": "2/3",
+          "y": "4/1",
+          "zero": "1/4"
+        },
+        "3": {
+          "full": "1/8",
+          "interior": "3/4",
+          "sum": "1/1",
+          "x": "6/7",
+          "y": "8/1",
+          "zero": "1/8"
+        },
+        "5": {
+          "full": "1/32",
+          "interior": "15/16",
+          "sum": "1/1",
+          "x": "30/31",
+          "y": "32/1",
+          "zero": "1/32"
+        }
+      }
+    },
+    "G3_weighted_tutte_identity": {
+      "cell_count": 9,
+      "pass": true
+    },
+    "G4_hard_curve_and_fixed_points": {
+      "all_points_on_h_minus_one": true,
+      "nonexception_rule": "all registered points have 0<x<1<y and therefore avoid the JVW special points and easy H_1 curve",
+      "pass": true,
+      "r2_point": [
+        "2/3",
+        "4/1"
+      ]
+    },
+    "G5_minimal_above_floor_microtrial": {
+      "enumerated_trial_matrices": 1048576,
+      "graph": "complete_5",
+      "microtrial_availability": "125867/131072",
+      "pass": true,
+      "status_census_availability": "125867/131072"
+    },
+    "G6_endpoint_label_invariance": {
+      "label_values": {
+        "all_one": "125867/131072",
+        "all_zero": "125867/131072",
+        "alternating": "125867/131072"
+      },
+      "pass": true
+    },
+    "G7_exact_numerator_ledger": {
+      "cell_count": 9,
+      "pass": true,
+      "witness_encoding": "r|E| fair binary trial bits; residual liveness checked by directed reachability"
+    },
+    "G8_structured_complexity_attribution": {
+      "allowed_exact_match": true,
+      "forbidden_exact_match": true,
+      "pass": true,
+      "proof_source": "Backman weighted partial orientations plus Jaeger-Vertigan-Welsh and Tutte block multiplicativity; the finite run is not the proof"
+    },
+    "G9_resource_and_scope": {
+      "claim_boundary": "For one finite simple biconnected comparison block under the inherited independent-binomial model, epsilon=1/2, and a declared uniform integer trial count r>=2 on every edge, translate exact quotient-liveness availability into Backman's weighted strongly-connected partial-orientation Tutte specialization. For every fixed r, the evaluation point ((2^r-2)/(2^r-1),2^r) lies on the Jaeger-Vertigan-Welsh #P-hard curve H_-1. Tutte multiplicativity over connected components and vertex-biconnected blocks, with bridge factors known explicitly, gives a polynomial-time Turing reduction from general fixed-point evaluation to an oracle on finite simple biconnected blocks. Therefore the exact microtrial numerator is #P-complete and exact rational availability is #P-hard under polynomial-time Turing reductions even inside one block. This is a prior-art-derived access-model translation. It does not prove that uniform allocation is optimal, classify maximin design or nonuniform counts, arbitrary epsilon, approximation, adaptive allocation, dependence, response misspecification, behavioral reward identification, general IRL, or resolve ASMP-9.",
+      "environment_lock": {
+        "implementation": "CPython",
+        "networkx": "3.5",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "python": "3.11.4"
+      },
+      "environment_matches": true,
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 38191104,
+      "runtime_environment": {
+        "implementation": "CPython",
+        "networkx": "3.5",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "python": "3.11.4"
+      },
+      "wall_seconds": 35.87642539999797
+    }
+  },
+  "protocol_id": "ASMP-9-UNIFORM-ABOVE-FLOOR-v0.22.1",
+  "registration_sha256": "ce2038c8a0277acada81cc4206d5ec2f2b703c98a861dd3423f0677094743420",
+  "verdict": "uniform_above_floor_value_complexity_classified_v0_22_1"
+}

@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_farkas_and_tv_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_and_boundary": true,
+    "V1_case_registry_exact": true,
+    "V2_all_farkas_and_tv_certificates_reconstructed": true,
+    "V3_interval_gap_exact": true,
+    "V4_collision_gap_zero": true,
+    "V5_joint_event_gap_exact": true,
+    "V6_joint_equal_marginal_witness_feasible": true,
+    "V7_all_producer_gates_pass": true
+  },
+  "claim_boundary": "This checker validates the exact rational certificates; it is not an external review of the polyhedral theorem's scope.",
+  "passed": true,
+  "schema_version": "asmp3_polyhedral_tv_frontier_verification_v0_9"
+}

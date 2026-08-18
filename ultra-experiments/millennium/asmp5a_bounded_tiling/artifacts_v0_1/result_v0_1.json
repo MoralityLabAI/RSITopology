@@ -1,0 +1,409 @@
+{
+  "budget_rows": [
+    {
+      "capacities": {
+        "balanced": 12,
+        "chain": 5,
+        "optimal": 12
+      },
+      "depth": 4,
+      "id": "shallow_parallel",
+      "memory": 4,
+      "work": 23
+    },
+    {
+      "capacities": {
+        "balanced": 3,
+        "chain": 12,
+        "optimal": 12
+      },
+      "depth": 11,
+      "id": "memory_tight_serial",
+      "memory": 2,
+      "work": 23
+    },
+    {
+      "capacities": {
+        "balanced": 7,
+        "chain": 4,
+        "optimal": 7
+      },
+      "depth": 3,
+      "id": "balanced_middle",
+      "memory": 3,
+      "work": 15
+    }
+  ],
+  "claim_boundary": "Exact binary-conjunction proof-tree enumeration through twelve obligations; theorem-generator only, not a bounded-Lob or open-ended tiling result.",
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true
+    },
+    "G1_catalan_completeness": {
+      "pass": true
+    },
+    "G2_total_work_lower_bound": {
+      "pass": true
+    },
+    "G3_minimum_depth": {
+      "pass": true
+    },
+    "G4_resource_ranking_reversal": {
+      "memory_tight_serial": {
+        "balanced": 3,
+        "chain": 12,
+        "optimal": 12
+      },
+      "pass": true,
+      "shallow_parallel": {
+        "balanced": 12,
+        "chain": 5,
+        "optimal": 12
+      }
+    },
+    "G5_semantic_coverage": {
+      "pass": true
+    },
+    "G6_dynamic_program_matches_enumeration": {
+      "pass": true
+    },
+    "G7_label_gauge_invariance": {
+      "pass": true
+    }
+  },
+  "instrument_status": "valid",
+  "protocol_id": "asmp5a-explicit-conjunction-tiling-v0.1",
+  "protocol_sha256": "7fc0988f1a013cd600b21609018c9c5090eae3d58e3396f225d489e10ce2cc55",
+  "registration_sha256": "d6252c2072d9fcaa3e65d849e1cde1aeff9a5328a4e18342d8947df2032005f6",
+  "resource_receipt": {
+    "elapsed_seconds": 3.1786237000051187,
+    "pass": true,
+    "process_peak_rss_bytes": 41230336,
+    "process_peak_rss_ceiling_bytes": 268435456,
+    "wall_ceiling_seconds": 60
+  },
+  "schema_version": "asmp5a_bounded_tiling_result_v0_1",
+  "shape_rows": [
+    {
+      "balanced": {
+        "depth": 0,
+        "memory": 1
+      },
+      "balanced_shape_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+      "chain": {
+        "depth": 0,
+        "memory": 1
+      },
+      "chain_shape_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+      "minimum_depth": 0,
+      "minimum_depth_formula": 0,
+      "obligations": 1,
+      "pareto_depth_memory": [
+        [
+          0,
+          1
+        ]
+      ],
+      "tree_count": 1,
+      "work_nodes": 1
+    },
+    {
+      "balanced": {
+        "depth": 1,
+        "memory": 2
+      },
+      "balanced_shape_sha256": "67c79a8faf1145d57a9b61e3869875b47a7a2cbcbd4c6e44a154b4a27e01ecdb",
+      "chain": {
+        "depth": 1,
+        "memory": 2
+      },
+      "chain_shape_sha256": "67c79a8faf1145d57a9b61e3869875b47a7a2cbcbd4c6e44a154b4a27e01ecdb",
+      "minimum_depth": 1,
+      "minimum_depth_formula": 1,
+      "obligations": 2,
+      "pareto_depth_memory": [
+        [
+          1,
+          2
+        ]
+      ],
+      "tree_count": 1,
+      "work_nodes": 3
+    },
+    {
+      "balanced": {
+        "depth": 2,
+        "memory": 2
+      },
+      "balanced_shape_sha256": "37da537e8a383809760d30c547f8205c1e91afc28df211bf7870a9752ba7c583",
+      "chain": {
+        "depth": 2,
+        "memory": 2
+      },
+      "chain_shape_sha256": "d766501e664c27d2909ba104d8fd6666d1b7724e5b3912afeccc1d142954f8b1",
+      "minimum_depth": 2,
+      "minimum_depth_formula": 2,
+      "obligations": 3,
+      "pareto_depth_memory": [
+        [
+          2,
+          2
+        ]
+      ],
+      "tree_count": 2,
+      "work_nodes": 5
+    },
+    {
+      "balanced": {
+        "depth": 2,
+        "memory": 3
+      },
+      "balanced_shape_sha256": "2eb9c8ffa5a40b8ed911020a281cd6a1aeca95c3999d6542427d17e50a77ad22",
+      "chain": {
+        "depth": 3,
+        "memory": 2
+      },
+      "chain_shape_sha256": "2b3c727c002ead5cc90f7187c70ff1aad7e8ee0e3603d006d6e7c7682b0aa7c5",
+      "minimum_depth": 2,
+      "minimum_depth_formula": 2,
+      "obligations": 4,
+      "pareto_depth_memory": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "tree_count": 5,
+      "work_nodes": 7
+    },
+    {
+      "balanced": {
+        "depth": 3,
+        "memory": 3
+      },
+      "balanced_shape_sha256": "d7aaa15e08e26bf7cdcea4cd1d4ce600c7c415d0566ba26d3c12e536043a10e8",
+      "chain": {
+        "depth": 4,
+        "memory": 2
+      },
+      "chain_shape_sha256": "4bb06df61ca9f911638837540b5b32774a5ee5556f9d990bacd08720d7c3557a",
+      "minimum_depth": 3,
+      "minimum_depth_formula": 3,
+      "obligations": 5,
+      "pareto_depth_memory": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "tree_count": 14,
+      "work_nodes": 9
+    },
+    {
+      "balanced": {
+        "depth": 3,
+        "memory": 3
+      },
+      "balanced_shape_sha256": "07c3e8fd043eb23e8cdfef0726771f199124ce3bd1217bc7f2ac425d6c5d6578",
+      "chain": {
+        "depth": 5,
+        "memory": 2
+      },
+      "chain_shape_sha256": "81441d72a9bed595291666177c07f737041ff5510ca15cd8185bfbe75ba41584",
+      "minimum_depth": 3,
+      "minimum_depth_formula": 3,
+      "obligations": 6,
+      "pareto_depth_memory": [
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "tree_count": 42,
+      "work_nodes": 11
+    },
+    {
+      "balanced": {
+        "depth": 3,
+        "memory": 3
+      },
+      "balanced_shape_sha256": "5e7642378cc39248ff496971edc3e1dd212a6b49b87094cd79b8d3f28a3dec39",
+      "chain": {
+        "depth": 6,
+        "memory": 2
+      },
+      "chain_shape_sha256": "e0fcfd42527dea0b1f899b5a5f04c474f2ad98ceeaedc4cd951a599896d0b42e",
+      "minimum_depth": 3,
+      "minimum_depth_formula": 3,
+      "obligations": 7,
+      "pareto_depth_memory": [
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "tree_count": 132,
+      "work_nodes": 13
+    },
+    {
+      "balanced": {
+        "depth": 3,
+        "memory": 4
+      },
+      "balanced_shape_sha256": "ede3597eded1b9c210d87e6d2f90c3a9301fda6dcfc2f248cf6ddbad7ba1bb74",
+      "chain": {
+        "depth": 7,
+        "memory": 2
+      },
+      "chain_shape_sha256": "68a0ceebfdf57b0a18e04934c1942868c300e13c02c4a2bfecad3b70b8b1df94",
+      "minimum_depth": 3,
+      "minimum_depth_formula": 3,
+      "obligations": 8,
+      "pareto_depth_memory": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "tree_count": 429,
+      "work_nodes": 15
+    },
+    {
+      "balanced": {
+        "depth": 4,
+        "memory": 4
+      },
+      "balanced_shape_sha256": "a0a84d970ff1a93a708f332bc2708ec21c6a072d07129d32b103fc8fa7e44b08",
+      "chain": {
+        "depth": 8,
+        "memory": 2
+      },
+      "chain_shape_sha256": "ef4ca5d17fb11e6682a992acd5b48140db70eeb3916c2500e971e71c7346aadf",
+      "minimum_depth": 4,
+      "minimum_depth_formula": 4,
+      "obligations": 9,
+      "pareto_depth_memory": [
+        [
+          4,
+          3
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "tree_count": 1430,
+      "work_nodes": 17
+    },
+    {
+      "balanced": {
+        "depth": 4,
+        "memory": 4
+      },
+      "balanced_shape_sha256": "8fa61d50bbf04abac67207ffb0cb0be65b1f542a2e652b781ccf320c3cdbc945",
+      "chain": {
+        "depth": 9,
+        "memory": 2
+      },
+      "chain_shape_sha256": "bc5879b5b8fbbb997bf65949396f1770d8ef7769e1c53fee14db863b4e52e305",
+      "minimum_depth": 4,
+      "minimum_depth_formula": 4,
+      "obligations": 10,
+      "pareto_depth_memory": [
+        [
+          4,
+          3
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "tree_count": 4862,
+      "work_nodes": 19
+    },
+    {
+      "balanced": {
+        "depth": 4,
+        "memory": 4
+      },
+      "balanced_shape_sha256": "4a1908f743e67c67ab7ac911e93bda5c58f9aa424e1c448157ba0a262b65de70",
+      "chain": {
+        "depth": 10,
+        "memory": 2
+      },
+      "chain_shape_sha256": "d63c2224b79db328c4d6f36d45b62d4bdae82560627299223bbbdcfcf1ac108d",
+      "minimum_depth": 4,
+      "minimum_depth_formula": 4,
+      "obligations": 11,
+      "pareto_depth_memory": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          2
+        ]
+      ],
+      "tree_count": 16796,
+      "work_nodes": 21
+    },
+    {
+      "balanced": {
+        "depth": 4,
+        "memory": 4
+      },
+      "balanced_shape_sha256": "12b9723ff736fe11cd0a75d361f06a9bc0f161ea0059f3326a6580571bc46fef",
+      "chain": {
+        "depth": 11,
+        "memory": 2
+      },
+      "chain_shape_sha256": "10dd3ab6f5e265aae5ef064648fb9e30fd2950c29e1ecb9fa78980df0c943d9f",
+      "minimum_depth": 4,
+      "minimum_depth_formula": 4,
+      "obligations": 12,
+      "pareto_depth_memory": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          11,
+          2
+        ]
+      ],
+      "tree_count": 58786,
+      "work_nodes": 23
+    }
+  ],
+  "verdict": "finite_multi_resource_tiling_tradeoff_established"
+}

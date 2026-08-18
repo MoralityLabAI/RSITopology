@@ -1,0 +1,28 @@
+{
+  "schema_version": "asmp4_prefix_kraft_fiber_contract_v0_30",
+  "objective": "sequential minimax binary prefix-free cost under causal transcript factors",
+  "prefix_cost": {
+    "leaf": "P(p)=0",
+    "recurrence": "P(p)=ceil(log2 sum_a 2^P(pa))",
+    "interpretation": "minimum worst-case cumulative binary prefix-code length"
+  },
+  "causal_morphism": {
+    "local_fiber": "m(p) is the maximum target-successor preimage count at prefix p",
+    "rounded_profile": "C(T)=max_path sum_t ceil(log2 m(p_t))"
+  },
+  "transfer": {
+    "finite_horizon": "P_target(T) <= P_source(T)+C(T)",
+    "asymptotic": "rate slack chi=limsup_T C(T)/T",
+    "exactness": "bidirectional sublinear rounded profiles preserve the prefix-cost region"
+  },
+  "boundary": {
+    "ternary_clone": "sequential cost is 2T while unrounded fiber cost is T log2 3",
+    "rounding": "ceil(log2 product m_t) cannot replace sum_t ceil(log2 m_t)",
+    "terminal": "terminal fiber one can coexist with positive prefix-cost distortion"
+  },
+  "nonclaims": [
+    "average-length or stochastic source coding",
+    "nonbinary coding alphabets",
+    "nonlinear quotient construction"
+  ]
+}

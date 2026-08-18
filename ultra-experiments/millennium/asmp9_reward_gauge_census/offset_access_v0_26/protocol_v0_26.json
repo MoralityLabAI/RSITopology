@@ -1,0 +1,184 @@
+{
+  "claim_boundary": "For an anchored finite utility vector with gaps in [-B,B], any strictly increasing symmetric response link has the same 1/2 midpoint. If the access model supplies a known reward-unit intervention that adds a scalar offset spanning [-B,B] and returns the population sign relative to 1/2, coordinate bisection recovers utility modulo translation to max-norm error eta in d ceil(log2(B/eta)) queries. A volume argument gives ceil(log2((B/eta)^d)) queries as a uniform lower bound, so the bound is exact on dyadic cells. Restricted offset range leaves separated gaps indistinguishable. Under repeated Bernoulli responses, the registered Hoeffding certificate additionally requires a known margin envelope; no uniform finite-sample rate exists over arbitrarily flat links. This is classical threshold, choice-indifference, and stochastic-root-finding mathematics specialized into an ASMP-9 access ledger; no novelty is claimed. It does not establish that ordinary human comparisons implement cardinal offsets, cover context-dependent links or general MDP policy access, give minimax finite-sample constants, or resolve ASMP-9.",
+  "freshness_rule": {
+    "burned_cells": {
+      "population": [
+        {
+          "radius": "8",
+          "tolerance": "1/16"
+        },
+        {
+          "radius": "5",
+          "tolerance": "1/32"
+        }
+      ],
+      "restricted": [
+        {
+          "maximum_offset": "3",
+          "radius": "8"
+        }
+      ],
+      "robust": [
+        {
+          "radius": "2",
+          "tolerance": "1/4"
+        }
+      ]
+    },
+    "selection_rule": "Fresh radii, tolerances, denominators, dimensions, and offset ceilings were selected by arithmetic diversity and bounded exhaustive cost. The runner was not executed and no fresh recovery error, query count, indistinguishability transcript, bounded-error path, or flat-link endpoint was read before registration."
+  },
+  "fresh_validation": {
+    "dyadic_cells": [
+      {
+        "dimension": 7,
+        "name": "dyadic_d7_ratio1024",
+        "radius": "16",
+        "tolerance": "1/64"
+      },
+      {
+        "dimension": 9,
+        "name": "dyadic_d9_ratio512",
+        "radius": "12",
+        "tolerance": "3/128"
+      }
+    ],
+    "flat_link_cell": {
+      "final_ceiling": "1/1000",
+      "maximum_power": 16,
+      "minimum_power": 1,
+      "radius": "13"
+    },
+    "population_cells": [
+      {
+        "denominator": 113,
+        "name": "population_B7_eta128",
+        "radius": "7",
+        "tolerance": "1/128"
+      },
+      {
+        "denominator": 97,
+        "name": "population_B11_eta3_256",
+        "radius": "11",
+        "tolerance": "3/256"
+      }
+    ],
+    "restricted_cells": [
+      {
+        "grid_denominator": 32,
+        "maximum_offset": "5",
+        "name": "restricted_B13_C5",
+        "radius": "13"
+      },
+      {
+        "grid_denominator": 40,
+        "maximum_offset": "12",
+        "name": "restricted_B17_C12",
+        "radius": "17"
+      }
+    ],
+    "robust_cells": [
+      {
+        "gap_denominator": 16,
+        "name": "robust_B3_eta3_8",
+        "radius": "3",
+        "tolerance": "3/8"
+      },
+      {
+        "gap_denominator": 10,
+        "name": "robust_B5_eta5_16",
+        "radius": "5",
+        "tolerance": "5/16"
+      }
+    ],
+    "sample_bound_cells": [
+      {
+        "dimension": 7,
+        "failure_probability": 0.01,
+        "kappa": 0.04,
+        "name": "sample_alpha1",
+        "radius": 8.0,
+        "tolerance": 0.125,
+        "exponent": 1.0
+      },
+      {
+        "dimension": 5,
+        "failure_probability": 0.025,
+        "kappa": 0.08,
+        "name": "sample_alpha2",
+        "radius": 4.0,
+        "tolerance": 0.25,
+        "exponent": 2.0
+      }
+    ]
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_freshness_and_structure",
+    "G2_population_recovery",
+    "G3_sharp_dyadic_query_bound",
+    "G4_restricted_offset_obstruction",
+    "G5_bounded_error_finite_sample_rule",
+    "G6_flat_link_no_uniform_rate",
+    "G7_no_offset_control",
+    "G8_sample_certificate",
+    "G9_prior_art_and_claim_boundary",
+    "G10_resource_and_scope"
+  ],
+  "prior_art": [
+    {
+      "identifier": "doi:10.1093/biomet/asm029",
+      "role": "unknown-link single-index identifiability requires support and normalization"
+    },
+    {
+      "identifier": "arXiv:2405.02612",
+      "role": "active versus passive recovery of linear utility from pairwise comparisons"
+    },
+    {
+      "identifier": "doi:10.1287/moor.2018.0938",
+      "role": "probabilistic bisection and stochastic root finding with unknown response accuracy"
+    },
+    {
+      "identifier": "doi:10.1016/0167-2681(90)90086-S",
+      "role": "choice-indifference elicitation through up-down and sequential-testing methods"
+    },
+    {
+      "identifier": "doi:10.1093/0199248915.003.0015",
+      "role": "dichotomous-choice and iterative-bidding willingness-to-pay elicitation"
+    },
+    {
+      "identifier": "ASMP-9-v0.8",
+      "role": "finite no-offset unknown-link non-affine obstruction"
+    }
+  ],
+  "protocol_id": "ASMP-9-OFFSET-ACCESS-v0.26",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "statistical_policy": "Primary population, obstruction, and deterministic bounded-error checks use exact rational arithmetic. The finite-sample result is a theorem-level Hoeffding sufficient bound under a declared margin condition; no random response outcomes are generated and no empirical confidence interval is reported.",
+  "structured_claims": {
+    "allowed": [
+      "A known additive-offset channel spanning every admissible indifference threshold identifies the anchored finite utility vector uniformly over strictly increasing symmetric links.",
+      "The population midpoint-sign query count is sharp on the registered dyadic cells under the declared coordinate-threshold access grammar.",
+      "A restricted offset range leaves a positive minimax error even with unlimited population queries.",
+      "Finite-sample recovery has the registered conservative guarantee under a known margin envelope, while no uniform finite-sample rate exists over arbitrarily flat admissible links.",
+      "The construction is a conservative specialization of classical choice-indifference elicitation, bisection, active learning, and stochastic root finding; no novelty is registered."
+    ],
+    "forbidden": [
+      "Ordinary uncalibrated human preference comparisons reveal cardinal utility scale.",
+      "Every environment intervention implements the declared additive offset in latent reward units.",
+      "The result covers context-dependent, item-dependent, nonmonotone, or midpoint-shifted response links.",
+      "The finite-sample upper bound is minimax or has optimal constants.",
+      "The result identifies arbitrary MDP rewards from policy behavior or solves general inverse reinforcement learning.",
+      "Classical bisection, willingness-to-pay, choice-indifference, active-learning, or stochastic-root-finding results are new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.26",
+  "verdict_map": {
+    "all_gates_pass": "offset_access_boundary_established_v0_26",
+    "any_substantive_gate_fails": "offset_access_boundary_not_established_v0_26",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_26"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "completion_gate_satisfied": false,
+  "covered_review_tracks": [],
+  "distinct_qualifying_identities": true,
+  "minimum_independent_teams": 2,
+  "minimum_independently_implemented_checkers": 1,
+  "problem_id": "ASMP-3",
+  "problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "qualifying_independently_implemented_checkers": 0,
+  "qualifying_receipts": 0,
+  "receipt_files_seen": 0,
+  "receipts": [],
+  "release_manifest_member_errors": [],
+  "release_manifest_members_valid": true,
+  "release_manifest_sha256": "2209B67AACBC754B546FBEB7E6A354056A7CA281A8440F36F3ABB7BB7C27350E",
+  "required_review_tracks": [
+    "complexity_and_game_semantics",
+    "probability_noise_and_lower_bound"
+  ],
+  "schema_version": "asmp3_expert_review_status_v0_6"
+}

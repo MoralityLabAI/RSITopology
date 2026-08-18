@@ -1,0 +1,121 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-ONLINE-CONTRACT-MINIMALITY-v2.11",
+  "file_count": 28,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/ONLINE_NOISY_TRACE_EXTRACTOR_THEOREM_v2_10.md": {
+      "bytes": 9014,
+      "sha256": "8F1A8BB73EDA568B6701678961B8F46DE85072FDF189B95E20779837B2508CD5"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/RELEASE_MANIFEST_v2_10.json": {
+      "bytes": 5691,
+      "sha256": "AA0CE04D78E96453B975B852D9F8F2BD80030AC72F2347CA41BA669D815066F5"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/artifacts/online_noisy_trace_extractor_v2_10.json": {
+      "bytes": 29273,
+      "sha256": "67E0D89F118260C189CDF0FCE71FA47DCB5FF61F1E4BF0F6669A527E2AE04851"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/artifacts/online_noisy_trace_extractor_verification_v2_10.json": {
+      "bytes": 1053,
+      "sha256": "DE90C56F709821BCB9F36FEC1D31CB039BE264D9AE54D925E1BA1454970B6D53"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/RELEASE_MANIFEST_v2_8.json": {
+      "bytes": 4231,
+      "sha256": "8E29A8441E591966B6DF36AD1634C6041EFF8C37AA4197B0C25ABC5A3F323FA9"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/TRACE_BINDING_EXTRACTOR_THEOREM_v2_8.md": {
+      "bytes": 5585,
+      "sha256": "23F0A53232A92B2201F22390F4AC1F0B0316A29F6B0854E18A8D348178FFF54B"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/artifacts/trace_binding_extractor_v2_8.json": {
+      "bytes": 31115,
+      "sha256": "C84B77E18639AC6F509EAA50C807E060E96B863F7E7603E9B04F30480E773206"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/artifacts/trace_binding_extractor_verification_v2_8.json": {
+      "bytes": 921,
+      "sha256": "B0EB551CDFAFF585654B008A71B84C0357001B5E65CBB5B8C226E8E1D1272401"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/WITNESS_TRANSPARENT_NORMAL_FORM_THEOREM_v2_5.md": {
+      "bytes": 8540,
+      "sha256": "44E1936EF0A36E605311BD1A5977D3D555AE4CDE7F60D16D4FA4CAE73EFDB27B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/artifacts/witness_transparent_normal_form_v2_5.json": {
+      "bytes": 84594,
+      "sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_11.md": {
+      "bytes": 1503,
+      "sha256": "39AC1114ADC9A30E16C67CA47AC159DA80CC975FD4FAA142B5B3BDB5ADC49518"
+    },
+    "ONLINE_CONTRACT_MINIMALITY_THEOREM_v2_11.md": {
+      "bytes": 8121,
+      "sha256": "E903E61305DDC99DDEF831B072274814A75DB78C6A9E80E9F6AE7EDCD61ED6A0"
+    },
+    "README.md": {
+      "bytes": 606,
+      "sha256": "C258C7792C50A212F5B9714351CA0DFE1E960CC043F7DE226B4394E6A013060E"
+    },
+    "STOPPING_BOUNDARY_v2_11.md": {
+      "bytes": 2493,
+      "sha256": "9C149FBB6D49C1D019BD75BA019F943E32401054A8C34FE2D7D146D700C3C97B"
+    },
+    "artifacts/online_contract_minimality_v2_11.json": {
+      "bytes": 177358,
+      "sha256": "8275CE9CB6C09190DACC59FBA3D97439A02681DD5C45118CDE23EB1C476BD537"
+    },
+    "artifacts/online_contract_minimality_verification_v2_11.json": {
+      "bytes": 990,
+      "sha256": "8D8C70B8F7AC95F6796BD6EBB026DC6A9B74A4C30EB8E81E7A07F4074EAE33F2"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3481,
+      "sha256": "1B0E9DB089F5D0E5F0293CDCE84FC1CFE8D414F11E933FB89B0457B0AA3D1154"
+    },
+    "online_contract_minimality.py": {
+      "bytes": 16358,
+      "sha256": "27F042CD4AA10B60585633CE77740C69FF02AF304D2EB6590F23A5C80FCF4340"
+    },
+    "run_online_contract_minimality.py": {
+      "bytes": 484,
+      "sha256": "4519BDB2109CC389D432A219D661E325DA4DDA03ABB83C5BF637484D866E712F"
+    },
+    "test_online_contract_minimality.py": {
+      "bytes": 3457,
+      "sha256": "8D1696EE351F69738755811AC2FFF375279E53BD18FE250D2965033B238846DA"
+    },
+    "verify_online_contract_minimality.py": {
+      "bytes": 13209,
+      "sha256": "502A74FA3C0944F3CFAB03909126FBFFD64709652F84EB7AF82592CE7336CE5C"
+    }
+  },
+  "release_status": "black_box_las_vegas_online_contract_minimality",
+  "schema_version": "asmp3_online_contract_minimality_release_v2_11"
+}

@@ -1,0 +1,28 @@
+{
+  "check_count": 19,
+  "checks": {
+    "all_gates_pass": true,
+    "claim_boundary": true,
+    "composition_bound": true,
+    "composition_measurement": true,
+    "equality_inconclusive": true,
+    "gate_universe": true,
+    "gauge_precondition": true,
+    "invalid_gauge": true,
+    "protocol_hash": true,
+    "registration_hash": true,
+    "regret_cells": true,
+    "resource_caps": true,
+    "result_hash": true,
+    "scale_policy_invariance": true,
+    "scale_threshold_flip": true,
+    "sealed_files": true,
+    "sharpness": true,
+    "strict_margin": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "485c3c73020f0bf8287b85cacf2c6162b32764141ab325343902f605bb80f878",
+  "result_sha256": "0d9b00cacfc4f6451df7dc5719636bff8b3533711e36b1de4b51a49ee7b5dd0e",
+  "verifier_sha256": "4251c2bf3416a46b9b4cf7046b3263f98ff40935409a9ed25613cd839d1e7581"
+}

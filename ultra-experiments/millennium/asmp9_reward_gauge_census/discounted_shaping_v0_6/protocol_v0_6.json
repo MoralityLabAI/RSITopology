@@ -1,0 +1,39 @@
+{
+  "protocol_id": "ASMP-9-DISCOUNTED-SHAPING-v0.6",
+  "status": "prospective",
+  "burned_development": {
+    "oriented_simple_graph_max_vertices": 5,
+    "trajectory_seed": 96001
+  },
+  "simple_rank": {
+    "vertex_count": 6,
+    "count": 32768,
+    "seed": 96061,
+    "gammas": [[1, 3], [2, 5], [99, 100]]
+  },
+  "multigraph_rank": {
+    "vertex_count": 7,
+    "count": 8192,
+    "seed": 96062,
+    "gammas": [[3, 7], [7, 8]]
+  },
+  "trajectory": {
+    "random_count": 16384,
+    "random_seed": 96063,
+    "matched_count": 4096,
+    "matched_seed": 96064,
+    "mismatched_count": 4096,
+    "mismatched_seed": 96065,
+    "gammas": [[1, 3], [2, 3], [9, 10]]
+  },
+  "planted": {
+    "cycle_lengths": [2, 128],
+    "diamond_path_lengths": [2, 32]
+  },
+  "resources": {
+    "cpu_seconds": 600,
+    "ram_bytes": 4294967296,
+    "gpu": false
+  },
+  "success_verdict": "discounted_shaping_gain_quotient_implementation_verified"
+}

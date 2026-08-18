@@ -1,0 +1,34 @@
+{
+  "version": "v0.65",
+  "registered": false,
+  "claim_eligible": false,
+  "status": "development_checks_passed",
+  "test_command": "python -m pytest ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/test_strategic_elicitation_capacity.py -q -p no:cacheprovider",
+  "test_result": {
+    "passed": 10,
+    "failed": 0
+  },
+  "independent_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/verify_development.py",
+  "independent_counts": {
+    "full_domain_rankings": 5912,
+    "missing_pair_witness_checks": 55,
+    "pair_lottery_report_checks": 15016,
+    "revealed_pair_class_checks": 6,
+    "small_direct_maps": 4103,
+    "small_type_domains": 66,
+    "top_rule_best_response_checks": 5912,
+    "uniform_margin_checks": 6
+  },
+  "registration_decision": "do_not_register",
+  "sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_65.md": "62de5c823b676cfdb7d94a1a929e033cdc71a91cab8f6d0c00a9e916ee63d7c1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/DEVELOPMENT_RESULT_v0_65.md": "7c87eade7880c7bae85d9e93f30ff79dd3ed7d3f07849c0667661d7492a0599a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/PRIOR_ART_GATE_v0_65.md": "2466aa9f291578aebf1e5c5a1732db7487bff10948ff6c8f81dc24787c5aa7f3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/README.md": "eb4a9a999f22430d65c2e4d15f1b3ae15a5718930019915fbbbcecb4109b428c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/REGISTRATION_DECISION_v0_65.md": "b51a7e240d1fbb1020fdcb38ad0cfdf87f9e1cc64482881eb010c5309226036d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/THEOREM_DRAFT_v0_65.md": "c58938144ae652978f745b727513f53fc1a133738a51ffa6172e194ba28aac56",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/strategic_elicitation_capacity.py": "4a9becbd7fce741d56393b21394d966ddaa24d3ffeb0e157ec434aa9496ea2e4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/test_strategic_elicitation_capacity.py": "7fbd445276d91d94802b43a5a4a0033990636e35a64740140a64f035fa5b4cdc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/strategic_elicitation_capacity_v0_65/verify_development.py": "71a8e7232f4ee3a1c0a72d81ad03b2ec0e54e5fa4e9518680bc9d44352fe1d91"
+  }
+}

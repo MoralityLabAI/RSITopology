@@ -1,0 +1,21 @@
+{
+  "schema_version": "asmp4_observation_delay_contract_v0_23",
+  "plant": "n_next=2n+u-q_t with n in [-1,1], u in [-2,10], q_t in {0,8}",
+  "architectures": {
+    "same_step": "current q information arrives before current write",
+    "positive_delay": "at write t, encoder/controller information contains q only through t-d for integer d>=1",
+    "preview": "a charged current q symbol arrives before current write despite delayed raw sensing",
+    "predictable_control": "q_t is constant and a charged initial q seed is supplied before safety begins"
+  },
+  "quantifiers": {
+    "disturbance": "every arbitrary q word in the main delayed architecture",
+    "randomness": "every plant-independent shared-randomness seed",
+    "safety": "every initial normal state and every time from the first write"
+  },
+  "theorem": {
+    "delay_zero_region": "[2,infinity) x [2,infinity)",
+    "positive_delay_region": "empty",
+    "charged_preview_region": "[2,infinity) x [2,infinity)",
+    "seeded_constant_q_region": "[1,infinity) x [1,infinity)"
+  }
+}

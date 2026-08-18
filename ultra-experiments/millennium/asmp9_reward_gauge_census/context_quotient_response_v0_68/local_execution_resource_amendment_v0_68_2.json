@@ -1,0 +1,51 @@
+{
+  "schema_version": "asmp9_context_quotient_local_execution_amendment_v0_68_2",
+  "status": "frozen_prereveal_execution_only",
+  "date": "2026-07-31",
+  "base_resource_plan": {
+    "path": "EXECUTION_RESOURCE_PLAN_v0_68.md",
+    "sha256": "05ec18da37fb07e2ddad932b4689525e27aedd4c24e2dca645f98866277b7b42"
+  },
+  "scientific_protocol": {
+    "path": "protocol_v0_68.json",
+    "sha256": "68bfedfa059e735c9a2058ff681a76384c866d2cb6d4a7f7175ddfb0a12c0fae",
+    "modified": false
+  },
+  "scientific_amendment": {
+    "path": "protocol_amendment_v0_68_1.json",
+    "sha256": "b68d3a0317aa676b029d61a52c42406a40930d0989293fcde0da0d72a1d0f8d0",
+    "modified": false
+  },
+  "workload": {
+    "phase": "confirmation",
+    "training": false,
+    "model_changed": false,
+    "job_universe_changed": false,
+    "analysis_changed": false
+  },
+  "host_class": {
+    "os": "Windows",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "minimum_gpu_memory_mb": 3964,
+    "execution_path": "Windows Job Object plus resource watchdog"
+  },
+  "resource_contract": {
+    "memory_mb": 6144,
+    "minimum_free_memory_mb": 4096,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "io_sustained_samples": 5,
+    "gpu_allowance_mb": 3900,
+    "gpu_clean_start_ceiling_mb": 64,
+    "temperature_limit_c": 88,
+    "timeout_seconds": 3600,
+    "batch_size": 1,
+    "max_prompt_tokens": 768,
+    "checkpoint_every_records": 1,
+    "poll_seconds": 1,
+    "minimum_runtime_free_memory_mb": 2048,
+    "swap_policy": "detect_and_invalidate_cleanup"
+  },
+  "write_once": true,
+  "claim_boundary": "Execution-resource amendment only; no model, job, endpoint, threshold, gate, decision, or scientific claim is changed."
+}

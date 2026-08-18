@@ -1,0 +1,759 @@
+{
+  "controls": {
+    "anisotropic": {
+      "isotropic_radius": "9/10",
+      "margin": "1/5",
+      "policy": {
+        "available": true,
+        "estimated_values": [
+          "0",
+          "1/5"
+        ],
+        "margin_rows": [
+          {
+            "competitor": 0,
+            "lower_margin": "19/100",
+            "margin": "1/5",
+            "policy_identity_certified": true,
+            "worst_case_competitor_regret": "0",
+            "worst_case_margin_loss": "1/100"
+          }
+        ],
+        "policy_identity_certified": true,
+        "robust_regret_bound": "0",
+        "selected_policy": 1,
+        "status": "evaluated"
+      },
+      "zonotope_support": "1/100"
+    },
+    "context_confounding": {
+      "available": false,
+      "dimension": 1,
+      "projected_design": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "projected_rank": 0,
+      "projector": [
+        [
+          "1/2",
+          "-1/2",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "-1/2"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "1/2"
+        ]
+      ],
+      "status": "context_confounded"
+    },
+    "mechanical_boundary": {
+      "erasure_observation_theta_0": "0",
+      "erasure_observation_theta_37": "0",
+      "mechanical_gain": "1",
+      "status": "mechanical_contraction_unavailable"
+    },
+    "semantic_cancellation": {
+      "naive_independent_support": "1/5",
+      "structured_support": "0"
+    }
+  },
+  "decision_controls": {
+    "equality": {
+      "available": true,
+      "estimated_values": [
+        "0",
+        "1"
+      ],
+      "margin_rows": [
+        {
+          "competitor": 0,
+          "lower_margin": "0",
+          "margin": "1",
+          "policy_identity_certified": false,
+          "worst_case_competitor_regret": "0",
+          "worst_case_margin_loss": "1"
+        }
+      ],
+      "policy_identity_certified": false,
+      "robust_regret_bound": "0",
+      "selected_policy": 1,
+      "status": "evaluated"
+    },
+    "risk": {
+      "actual_regret": "9/10",
+      "certificate": {
+        "additive_coordinate_supports": [
+          "1"
+        ],
+        "additive_radius": "1",
+        "analysis_map": [
+          [
+            "1/2",
+            "-1/2"
+          ]
+        ],
+        "available": true,
+        "certificate_available": true,
+        "dimension": 1,
+        "joint_row_widths": [
+          "1",
+          "1"
+        ],
+        "localization_widths": [
+          "1",
+          "1"
+        ],
+        "mechanical_coordinate_gains": [
+          "0"
+        ],
+        "mechanical_gain": "0",
+        "mechanical_row_l1_widths": [
+          "0",
+          "0"
+        ],
+        "midpoint_residual_widths": [
+          "0",
+          "0"
+        ],
+        "projected_design": [
+          [
+            "1"
+          ],
+          [
+            "-1"
+          ]
+        ],
+        "projected_rank": 1,
+        "projector": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "semantic_cell_widths": [],
+        "semantic_incidence": [
+          [],
+          []
+        ],
+        "semantic_map": [
+          []
+        ],
+        "status": "joint_certificate_available",
+        "theta_hat": [
+          "1/10"
+        ],
+        "theta_radius": "11/10"
+      },
+      "policy": {
+        "available": true,
+        "estimated_values": [
+          "0",
+          "1/10"
+        ],
+        "margin_rows": [
+          {
+            "competitor": 0,
+            "lower_margin": "-9/10",
+            "margin": "1/10",
+            "policy_identity_certified": false,
+            "worst_case_competitor_regret": "9/10",
+            "worst_case_margin_loss": "1"
+          }
+        ],
+        "policy_identity_certified": false,
+        "robust_regret_bound": "9/10",
+        "selected_policy": 1,
+        "status": "evaluated"
+      }
+    }
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true
+    },
+    "G10_prior_art_and_claim_boundary": {
+      "pass": true
+    },
+    "G11_resource_and_scope": {
+      "pass": true
+    },
+    "G1_context_projection": {
+      "pass": true
+    },
+    "G2_joint_source_coverage": {
+      "pass": true
+    },
+    "G3_mechanical_contraction": {
+      "pass": true
+    },
+    "G4_semantic_incidence": {
+      "pass": true
+    },
+    "G5_support_sharpness": {
+      "pass": true
+    },
+    "G6_policy_handoff": {
+      "pass": true
+    },
+    "G7_source_ablation": {
+      "pass": true
+    },
+    "G8_shape_advantage": {
+      "pass": true
+    },
+    "G9_context_rank_no_go": {
+      "pass": true
+    }
+  },
+  "primary": {
+    "certificate": {
+      "additive_coordinate_supports": [
+        "8/375",
+        "37/1500",
+        "37/1500"
+      ],
+      "additive_radius": "37/1500",
+      "analysis_map": [
+        [
+          "-1/2",
+          "1/2",
+          "0",
+          "0",
+          "-1/2",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "0",
+          "1/2",
+          "0",
+          "-1/2",
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "-1/2",
+          "0",
+          "0",
+          "1/2"
+        ]
+      ],
+      "available": true,
+      "certificate_available": true,
+      "dimension": 3,
+      "joint_row_widths": [
+        "28781/1176000",
+        "28781/1176000",
+        "28781/1176000",
+        "28781/1176000",
+        "28781/1176000",
+        "28781/1176000",
+        "28781/1176000",
+        "28781/1176000"
+      ],
+      "localization_widths": [
+        "1/200",
+        "1/200",
+        "1/200",
+        "1/200",
+        "1/200",
+        "1/200",
+        "1/200",
+        "1/200"
+      ],
+      "mechanical_coordinate_gains": [
+        "1/50",
+        "1/50",
+        "1/50"
+      ],
+      "mechanical_gain": "1/50",
+      "mechanical_row_l1_widths": [
+        "1/100",
+        "1/100",
+        "1/100",
+        "1/100",
+        "1/100",
+        "1/100",
+        "1/100",
+        "1/100"
+      ],
+      "midpoint_residual_widths": [
+        "1/250",
+        "1/250",
+        "1/250",
+        "1/250",
+        "1/250",
+        "1/250",
+        "1/250",
+        "1/250"
+      ],
+      "projected_design": [
+        [
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "3/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "-1/4",
+          "3/4",
+          "-1/4"
+        ],
+        [
+          "-1/4",
+          "-1/4",
+          "3/4"
+        ],
+        [
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "3/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "-1/4",
+          "3/4",
+          "-1/4"
+        ],
+        [
+          "-1/4",
+          "-1/4",
+          "3/4"
+        ]
+      ],
+      "projected_rank": 3,
+      "projector": [
+        [
+          "3/4",
+          "-1/4",
+          "-1/4",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/4",
+          "3/4",
+          "-1/4",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/4",
+          "-1/4",
+          "3/4",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/4",
+          "-1/4",
+          "-1/4",
+          "3/4",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "3/4",
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "3/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "-1/4",
+          "3/4",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "-1/4",
+          "-1/4",
+          "3/4"
+        ]
+      ],
+      "semantic_cell_widths": [
+        "1/300",
+        "1/300",
+        "1/300",
+        "1/300",
+        "1/300"
+      ],
+      "semantic_incidence": [
+        [
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "1",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "-1",
+          "0"
+        ]
+      ],
+      "semantic_map": [
+        [
+          "0",
+          "1/2",
+          "0",
+          "-1/2",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "1/2",
+          "-1/2",
+          "-1/2"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "-1/2",
+          "-1/2"
+        ]
+      ],
+      "status": "joint_certificate_available",
+      "theta_hat": [
+        "5967/4000",
+        "-1193/2400",
+        "5949/8000"
+      ],
+      "theta_radius": "18197/11760"
+    },
+    "direction_audits": [
+      {
+        "covered": true,
+        "direction": [
+          "1",
+          "0",
+          "0"
+        ],
+        "realized_error": "33/4000",
+        "support": "10247/196000"
+      },
+      {
+        "covered": true,
+        "direction": [
+          "0",
+          "1",
+          "0"
+        ],
+        "realized_error": "7/2400",
+        "support": "32701/588000"
+      },
+      {
+        "covered": true,
+        "direction": [
+          "0",
+          "0",
+          "1"
+        ],
+        "realized_error": "51/8000",
+        "support": "32701/588000"
+      },
+      {
+        "covered": true,
+        "direction": [
+          "1",
+          "1",
+          "0"
+        ],
+        "realized_error": "2/375",
+        "support": "31721/294000"
+      },
+      {
+        "covered": true,
+        "direction": [
+          "1",
+          "0",
+          "1"
+        ],
+        "realized_error": "117/8000",
+        "support": "31721/294000"
+      },
+      {
+        "covered": true,
+        "direction": [
+          "0",
+          "1",
+          "1"
+        ],
+        "realized_error": "83/24000",
+        "support": "32701/294000"
+      },
+      {
+        "covered": true,
+        "direction": [
+          "2",
+          "-3",
+          "1"
+        ],
+        "realized_error": "253/8000",
+        "support": "90263/588000"
+      }
+    ],
+    "localized_values": [
+      "409/1500",
+      "877/500",
+      "-1409/6000",
+      "1481/1500",
+      "1496/375",
+      "10983/2000",
+      "2627/750",
+      "57143/12000"
+    ],
+    "policy": {
+      "available": true,
+      "estimated_values": [
+        "0",
+        "5967/2000",
+        "-1193/1200",
+        "5949/4000",
+        "101381/24000",
+        "41719/24000"
+      ],
+      "margin_rows": [
+        {
+          "competitor": 0,
+          "lower_margin": "4787143/1176000",
+          "margin": "101381/24000",
+          "policy_identity_certified": true,
+          "worst_case_competitor_regret": "0",
+          "worst_case_margin_loss": "90263/588000"
+        },
+        {
+          "competitor": 1,
+          "lower_margin": "1397591/1176000",
+          "margin": "29777/24000",
+          "policy_identity_certified": true,
+          "worst_case_competitor_regret": "0",
+          "worst_case_margin_loss": "10247/196000"
+        },
+        {
+          "competitor": 2,
+          "lower_margin": "5956283/1176000",
+          "margin": "41747/8000",
+          "policy_identity_certified": true,
+          "worst_case_competitor_regret": "0",
+          "worst_case_margin_loss": "90263/588000"
+        },
+        {
+          "competitor": 3,
+          "lower_margin": "1030593/392000",
+          "margin": "65687/24000",
+          "policy_identity_certified": true,
+          "worst_case_competitor_regret": "0",
+          "worst_case_margin_loss": "31721/294000"
+        },
+        {
+          "competitor": 5,
+          "lower_margin": "1398277/588000",
+          "margin": "29831/12000",
+          "policy_identity_certified": true,
+          "worst_case_competitor_regret": "0",
+          "worst_case_margin_loss": "31721/294000"
+        }
+      ],
+      "policy_identity_certified": true,
+      "robust_regret_bound": "0",
+      "selected_policy": 4,
+      "status": "evaluated"
+    },
+    "support_witness": {
+      "attained_support": "90263/588000",
+      "error": [
+        "26821/1176000",
+        "-34661/1176000",
+        "22901/1176000"
+      ],
+      "row_source": [
+        "0",
+        "28781/1176000",
+        "-28781/1176000",
+        "28781/1176000",
+        "0",
+        "28781/1176000",
+        "-28781/1176000",
+        "28781/1176000"
+      ],
+      "semantic_source": [
+        "0",
+        "-1/300",
+        "-1/300",
+        "0",
+        "1/300"
+      ]
+    },
+    "true_theta": [
+      "3/2",
+      "-1/2",
+      "3/4"
+    ]
+  },
+  "protocol_id": "ASMP-9-JOINT-APPROXIMATE-v0.31",
+  "resource": {
+    "gpu_used": false,
+    "peak_resident_bytes": 19697664,
+    "wall_seconds": 0.015625400003045797
+  },
+  "source_ablations": [
+    {
+      "ablated_support": "0",
+      "full_support": "11/90",
+      "full_support_covers": true,
+      "omission_exposes_error": true,
+      "realized_error": "1/10",
+      "source": "mechanical"
+    },
+    {
+      "ablated_support": "0",
+      "full_support": "1/10",
+      "full_support_covers": true,
+      "omission_exposes_error": true,
+      "realized_error": "1/10",
+      "source": "localization"
+    },
+    {
+      "ablated_support": "0",
+      "full_support": "1/10",
+      "full_support_covers": true,
+      "omission_exposes_error": true,
+      "realized_error": "1/10",
+      "source": "midpoint"
+    },
+    {
+      "ablated_support": "0",
+      "full_support": "1/10",
+      "full_support_covers": true,
+      "omission_exposes_error": true,
+      "realized_error": "1/10",
+      "source": "semantic"
+    }
+  ],
+  "verdict": "joint_approximate_boundary_established_v0_31"
+}

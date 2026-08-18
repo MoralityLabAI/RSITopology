@@ -1,0 +1,67 @@
+{
+  "schema_version": "asmp4_nhim_cocycle_claim_v0_11",
+  "status": "positive-class sensor fork repaired under explicit cocycle NHIM and bounded interval authority",
+  "sealed_resources": {
+    "count": 3,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_6_claim_sha256": "812c17f913c1e498d835c13430b7880b95a188496333b48355883f0fe634c5a5",
+    "v0_10_claim_sha256": "fd8b2e74bdd6f16aabd7907dc621254accd6e8fa183957d1eaaf3138163d314c"
+  },
+  "identified_gap": {
+    "v0_6_action_set": [0, 1],
+    "v0_6_input_derivative": "1",
+    "disposition": "insufficient alone as an operational local-reachability certificate"
+  },
+  "repaired_plant": {
+    "dynamics": "n_next=(3/2)n+u-q(z), z_next=w",
+    "q_polynomial": "(12+13z-z^3)/24",
+    "mode_coordinates": ["-3", "-1", "1", "3"],
+    "bounded_authority": "[-1,2]",
+    "unique_safe_controls": [0, 1],
+    "local_state_radius": "1/6",
+    "local_target_radius": "3/4",
+    "normal_input_derivative": "1"
+  },
+  "cocycle_nhim": {
+    "base": "{-3,-1,1,3}^Z with invertible shift",
+    "fiber": "R",
+    "closed_loop": "phi(k,omega,n)=(3/2)^k n",
+    "random_manifold": "M(omega)={0}",
+    "splitting": {
+      "E_u": "R",
+      "E_c": "{0}",
+      "E_s": "{0}"
+    },
+    "exp_alpha": "4/3",
+    "exp_beta": "3/2",
+    "quantifier": "every disturbance sequence"
+  },
+  "causal_timing": {
+    "delay": 0,
+    "lookahead": false,
+    "order": "observe-read-write-control-next disturbance reset",
+    "one_step_stale_variant": "infeasible"
+  },
+  "exact_regions": {
+    "computed": "[1,infinity) x [1,infinity)",
+    "raw": "[2,infinity) x [1,infinity)",
+    "same_plant": true,
+    "same_interval_authority": true
+  },
+  "primary_definition_audit": {
+    "sources": 1,
+    "definitions_checked": 4,
+    "pdf_pages_visually_checked": [4, 5],
+    "external_expert_review": false
+  },
+  "definition_mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 11,
+    "tests": 145
+  },
+  "decision": "repaired_sensor_fork_preserves_harness_backed_stopping_argument",
+  "nonclaim": "ASMP-4 does not itself select the random-cocycle NHIM formalism, interval authority, or either sensor registry; no full canonical classification is claimed."
+}

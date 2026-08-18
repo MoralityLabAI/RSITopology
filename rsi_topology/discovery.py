@@ -1,6 +1,12 @@
-"""Discover stable high-dimensional spectral structures and test their utility.
+"""Discover stable high-dimensional structures and test their utility.
 
-The geometric object is a cross-context consensus eigenspace of a frozen
+Protocol v0.3 uses the cross-fitted top-r eigenspace of between-class scatter
+as its primary lineage object.  The older covariance/Gram/Laplacian consensus
+path remains executable for v0.2.2 compatibility, but every such receipt is
+marked ``reported_ungated`` for v0.3 and is never consumed by the v0.3 object
+gate.
+
+The legacy geometric object is a cross-context consensus eigenspace of a frozen
 spectral band of the normalized, reliability-weighted sheaf Laplacian.  If
 ``P_{c,b}`` is the band projector for context ``c`` and band ``b``, the mean
 projector
@@ -31,7 +37,7 @@ import platform
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable, Mapping
+from typing import Any, Iterable, Mapping, Sequence
 
 import numpy as np
 from scipy.sparse import csr_matrix, issparse, spmatrix
@@ -90,6 +96,106 @@ class DiscoveryResult:
     claim_boundary: str
 
 
+@dataclass(frozen=True)
+class CrossFittedLineageObject:
+    """Cross-fitted high-dimensional lineage object and target-blind nulls."""
+
+    object_kind: str
+    gate_role: str
+    rank: int
+    basis_by_half: tuple[Array, Array]
+    eigenvalues_by_half: tuple[Array, Array]
+    lineage: Mapping[str, float | int]
+    bootstrap_retentions: Array
+    permutation_null_retentions: Array
+    retention_lower_95: float
+    permutation_null_retention_upper_95: float
+    null_margin: float
+    minimum_strict_margin: float
+    passed: bool
+
+    def receipt(self) -> dict[str, Any]:
+        output = {
+            "object_kind": self.object_kind,
+            "gate_role": self.gate_role,
+            "gate_eligible": self.gate_role == "primary",
+            "rank": self.rank,
+            "basis_by_half_sha256": [
+                hashlib.sha256(np.asarray(basis, dtype="<f8").tobytes()).hexdigest()
+                for basis in self.basis_by_half
+            ],
+            "eigenvalues_by_half": [values.tolist() for values in self.eigenvalues_by_half],
+            "lineage": dict(self.lineage),
+            "retention_statistic": "minimum_edge_worst_direction_retention",
+            "retention_lower_95": self.retention_lower_95,
+            "permutation_null_retention_upper_95": (
+                self.permutation_null_retention_upper_95
+            ),
+            "null_margin": self.null_margin,
+            "minimum_strict_margin": self.minimum_strict_margin,
+            "pass_rule": "retention_lower_95 - permutation_null_retention_upper_95 > minimum_strict_margin",
+            "passed": self.passed,
+            "bootstrap_replicates": int(len(self.bootstrap_retentions)),
+            "permutation_replicates": int(len(self.permutation_null_retentions)),
+        }
+        if self.gate_role == "matched_random_label_negative_control":
+            output["random_family_retention_lower_95"] = self.retention_lower_95
+        return output
+
+
+@dataclass(frozen=True)
+class CrossFittedRankFiltration:
+    """Nested v0.3 lineage objects evaluated on shared resampling draws.
+
+    Every rank is a prefix of the same thin-SVD basis on a given draw.  This
+    both preserves the registered between-class object and avoids repeating an
+    ambient-dimensional eigendecomposition once per candidate rank.
+    """
+
+    objects: tuple[CrossFittedLineageObject, ...]
+    maximum_rank: int
+    replicates: int
+    seed: int
+
+    @property
+    def supported_rank(self) -> int:
+        passed = [item.rank for item in self.objects if item.passed]
+        return max(passed, default=0)
+
+    def receipt(self) -> dict[str, Any]:
+        return {
+            "object_kind": "cross_fitted_between_class_rank_filtration",
+            "maximum_rank": self.maximum_rank,
+            "supported_rank": self.supported_rank,
+            "replicates": self.replicates,
+            "seed": self.seed,
+            "shared_resampling_draws": True,
+            "rank_receipts": [item.receipt() for item in self.objects],
+        }
+
+
+@dataclass(frozen=True)
+class PhaseOneLineageObjectsV03:
+    """Primary v0.3 object, mandatory control, and legacy ungated report."""
+
+    primary: CrossFittedLineageObject
+    matched_random_label_negative_control: CrossFittedLineageObject
+    covariance_gram_report: Mapping[str, Any]
+    passed: bool
+
+    def receipt(self) -> dict[str, Any]:
+        return {
+            "protocol_object_version": "spectral_bundle_discovery_v0_3",
+            "primary": self.primary.receipt(),
+            "matched_random_label_negative_control": (
+                self.matched_random_label_negative_control.receipt()
+            ),
+            "covariance_gram": dict(self.covariance_gram_report),
+            "passed": self.passed,
+            "decision_rule": "primary and matched_random_label_negative_control must both pass; covariance_gram is reported_ungated",
+        }
+
+
 def subspace_lineage(reference_basis: Array, current_basis: Array) -> dict:
     """Target-blind principal-angle lineage between orthonormal subspaces."""
 
@@ -130,6 +236,340 @@ def subspace_lineage(reference_basis: Array, current_basis: Array) -> dict:
             np.degrees(np.arccos(np.sqrt(np.min(padded_reference))))
         ),
     }
+
+
+def _between_class_scatter_basis(
+    features: Array,
+    labels: Array,
+    rank: int,
+) -> tuple[Array, Array]:
+    """Return the frozen top-r eigenspace of equally weighted class means."""
+
+    values = np.asarray(features, dtype=np.float64)
+    class_values = np.asarray(labels)
+    if values.ndim != 2 or len(values) != len(class_values):
+        raise ValueError("features must be a matrix with one label per row")
+    if not np.all(np.isfinite(values)):
+        raise ValueError("features must be finite")
+    classes = np.unique(class_values)
+    if len(classes) < 2:
+        raise ValueError("between-class scatter requires at least two classes")
+    maximum_rank = min(values.shape[1], len(classes) - 1)
+    if rank < 1 or rank > maximum_rank:
+        raise ValueError(
+            f"rank must be between one and min(d, classes-1)={maximum_rank}"
+        )
+    means = np.vstack([np.mean(values[class_values == label], axis=0) for label in classes])
+    centered = means - np.mean(means, axis=0, keepdims=True)
+    # The between-class scatter has rank at most classes - 1.  Its nonzero
+    # eigenvectors are the right singular vectors of the centered class-mean
+    # matrix, so a thin SVD is exactly equivalent to materializing the d x d
+    # scatter while remaining practical for transformer-width activations.
+    _, singular_values, right_t = np.linalg.svd(
+        centered / math.sqrt(len(classes)), full_matrices=False
+    )
+    basis = right_t[:rank].T
+    eigenvalues = np.maximum(singular_values[:rank] ** 2, 0.0)
+    return basis, eigenvalues
+
+
+def _validate_construction_halves(
+    features: Array,
+    labels: Sequence[Any],
+    construction_halves: Sequence[Any],
+) -> tuple[Array, Array, Array, tuple[Any, Any]]:
+    values = np.asarray(features, dtype=np.float64)
+    class_values = np.asarray(tuple(labels))
+    half_values = np.asarray(tuple(construction_halves))
+    if values.ndim != 2:
+        raise ValueError("features must be a matrix")
+    if not (len(values) == len(class_values) == len(half_values)):
+        raise ValueError("features, labels, and construction_halves must align")
+    halves = tuple(np.unique(half_values).tolist())
+    if len(halves) != 2:
+        raise ValueError("exactly two disjoint construction halves are required")
+    class_sets = [set(np.unique(class_values[half_values == half]).tolist()) for half in halves]
+    if class_sets[0] != class_sets[1]:
+        raise ValueError("both construction halves must contain the same frozen classes")
+    for half in halves:
+        half_mask = half_values == half
+        for label in class_sets[0]:
+            if int(np.sum(half_mask & (class_values == label))) < 2:
+                raise ValueError("each class needs at least two rows in each construction half")
+    return values, class_values, half_values, halves
+
+
+def _bootstrap_within_classes(
+    features: Array,
+    labels: Array,
+    rng: np.random.Generator,
+) -> tuple[Array, Array]:
+    indices: list[int] = []
+    for label in np.unique(labels):
+        members = np.flatnonzero(labels == label)
+        indices.extend(rng.choice(members, size=len(members), replace=True).tolist())
+    selected = np.asarray(indices, dtype=np.int64)
+    return features[selected], labels[selected]
+
+
+def discover_between_class_scatter_object(
+    *,
+    features: Array,
+    family_labels: Sequence[Any],
+    construction_halves: Sequence[Any],
+    rank: int,
+    object_kind: str = "between_class_scatter",
+    gate_role: str = "primary",
+    replicates: int = 256,
+    seed: int = 20260715,
+    minimum_strict_margin: float = 0.02,
+) -> CrossFittedLineageObject:
+    """Build the v0.3 primary object and its cross-fitted permutation null.
+
+    Outcomes are never accepted by this function. Bootstrap resampling occurs
+    within frozen classes and halves. The permutation null independently
+    shuffles class labels inside each half, preserving the real feature
+    spectrum and every class count.
+    """
+
+    if gate_role not in {"primary", "matched_random_label_negative_control"}:
+        raise ValueError("gate_role must name a registered v0.3 lineage role")
+    if replicates < 32:
+        raise ValueError("at least 32 bootstrap/permutation replicates are required")
+    if not np.isfinite(minimum_strict_margin) or minimum_strict_margin < 0.0:
+        raise ValueError("minimum_strict_margin must be finite and nonnegative")
+    values, labels, half_values, halves = _validate_construction_halves(
+        features, family_labels, construction_halves
+    )
+    half_masks = (half_values == halves[0], half_values == halves[1])
+    half_features = (values[half_masks[0]], values[half_masks[1]])
+    half_labels = (labels[half_masks[0]], labels[half_masks[1]])
+    first_basis, first_eigenvalues = _between_class_scatter_basis(
+        half_features[0], half_labels[0], rank
+    )
+    second_basis, second_eigenvalues = _between_class_scatter_basis(
+        half_features[1], half_labels[1], rank
+    )
+    lineage = subspace_lineage(first_basis, second_basis)
+
+    rng = np.random.default_rng(seed)
+    bootstrap_retentions = np.empty(replicates, dtype=np.float64)
+    permutation_retentions = np.empty(replicates, dtype=np.float64)
+    for replicate in range(replicates):
+        boot_first_x, boot_first_y = _bootstrap_within_classes(
+            half_features[0], half_labels[0], rng
+        )
+        boot_second_x, boot_second_y = _bootstrap_within_classes(
+            half_features[1], half_labels[1], rng
+        )
+        boot_first, _ = _between_class_scatter_basis(
+            boot_first_x, boot_first_y, rank
+        )
+        boot_second, _ = _between_class_scatter_basis(
+            boot_second_x, boot_second_y, rank
+        )
+        bootstrap_retentions[replicate] = subspace_lineage(
+            boot_first, boot_second
+        )["worst_direction_retention"]
+
+        perm_first_y = half_labels[0][rng.permutation(len(half_labels[0]))]
+        perm_second_y = half_labels[1][rng.permutation(len(half_labels[1]))]
+        perm_first, _ = _between_class_scatter_basis(
+            half_features[0], perm_first_y, rank
+        )
+        perm_second, _ = _between_class_scatter_basis(
+            half_features[1], perm_second_y, rank
+        )
+        permutation_retentions[replicate] = subspace_lineage(
+            perm_first, perm_second
+        )["worst_direction_retention"]
+
+    lower = float(np.quantile(bootstrap_retentions, 0.05, method="linear"))
+    null_upper = float(
+        np.quantile(permutation_retentions, 0.95, method="linear")
+    )
+    margin = lower - null_upper
+    return CrossFittedLineageObject(
+        object_kind=object_kind,
+        gate_role=gate_role,
+        rank=rank,
+        basis_by_half=(first_basis, second_basis),
+        eigenvalues_by_half=(first_eigenvalues, second_eigenvalues),
+        lineage=lineage,
+        bootstrap_retentions=bootstrap_retentions,
+        permutation_null_retentions=permutation_retentions,
+        retention_lower_95=lower,
+        permutation_null_retention_upper_95=null_upper,
+        null_margin=margin,
+        minimum_strict_margin=minimum_strict_margin,
+        passed=bool(margin - minimum_strict_margin > 1e-12),
+    )
+
+
+def discover_between_class_rank_filtration(
+    *,
+    features: Array,
+    family_labels: Sequence[Any],
+    construction_halves: Sequence[Any],
+    maximum_rank: int,
+    object_kind: str = "cross_fitted_between_class_scatter",
+    gate_role: str = "primary",
+    replicates: int = 256,
+    seed: int = 20260715,
+    minimum_strict_margin: float = 0.02,
+) -> CrossFittedRankFiltration:
+    """Evaluate every prefix rank with one shared bootstrap/permutation run."""
+
+    if gate_role not in {"primary", "matched_random_label_negative_control"}:
+        raise ValueError("gate_role must name a registered v0.3 lineage role")
+    if replicates < 32:
+        raise ValueError("at least 32 bootstrap/permutation replicates are required")
+    if not np.isfinite(minimum_strict_margin) or minimum_strict_margin < 0.0:
+        raise ValueError("minimum_strict_margin must be finite and nonnegative")
+    values, labels, half_values, halves = _validate_construction_halves(
+        features, family_labels, construction_halves
+    )
+    class_count = len(np.unique(labels))
+    allowed_rank = min(values.shape[1], class_count - 1)
+    if maximum_rank < 1 or maximum_rank > allowed_rank:
+        raise ValueError(
+            f"maximum_rank must be between one and min(d, classes-1)={allowed_rank}"
+        )
+
+    half_masks = (half_values == halves[0], half_values == halves[1])
+    half_features = (values[half_masks[0]], values[half_masks[1]])
+    half_labels = (labels[half_masks[0]], labels[half_masks[1]])
+    first_basis, first_eigenvalues = _between_class_scatter_basis(
+        half_features[0], half_labels[0], maximum_rank
+    )
+    second_basis, second_eigenvalues = _between_class_scatter_basis(
+        half_features[1], half_labels[1], maximum_rank
+    )
+
+    bootstrap = np.empty((replicates, maximum_rank), dtype=np.float64)
+    permutation = np.empty((replicates, maximum_rank), dtype=np.float64)
+    rng = np.random.default_rng(seed)
+    for replicate in range(replicates):
+        boot_first_x, boot_first_y = _bootstrap_within_classes(
+            half_features[0], half_labels[0], rng
+        )
+        boot_second_x, boot_second_y = _bootstrap_within_classes(
+            half_features[1], half_labels[1], rng
+        )
+        boot_first, _ = _between_class_scatter_basis(
+            boot_first_x, boot_first_y, maximum_rank
+        )
+        boot_second, _ = _between_class_scatter_basis(
+            boot_second_x, boot_second_y, maximum_rank
+        )
+
+        perm_first_y = half_labels[0][rng.permutation(len(half_labels[0]))]
+        perm_second_y = half_labels[1][rng.permutation(len(half_labels[1]))]
+        perm_first, _ = _between_class_scatter_basis(
+            half_features[0], perm_first_y, maximum_rank
+        )
+        perm_second, _ = _between_class_scatter_basis(
+            half_features[1], perm_second_y, maximum_rank
+        )
+        for rank in range(1, maximum_rank + 1):
+            bootstrap[replicate, rank - 1] = subspace_lineage(
+                boot_first[:, :rank], boot_second[:, :rank]
+            )["worst_direction_retention"]
+            permutation[replicate, rank - 1] = subspace_lineage(
+                perm_first[:, :rank], perm_second[:, :rank]
+            )["worst_direction_retention"]
+
+    objects: list[CrossFittedLineageObject] = []
+    for rank in range(1, maximum_rank + 1):
+        lower = float(np.quantile(bootstrap[:, rank - 1], 0.05, method="linear"))
+        null_upper = float(
+            np.quantile(permutation[:, rank - 1], 0.95, method="linear")
+        )
+        margin = lower - null_upper
+        objects.append(
+            CrossFittedLineageObject(
+                object_kind=object_kind,
+                gate_role=gate_role,
+                rank=rank,
+                basis_by_half=(first_basis[:, :rank], second_basis[:, :rank]),
+                eigenvalues_by_half=(
+                    first_eigenvalues[:rank],
+                    second_eigenvalues[:rank],
+                ),
+                lineage=subspace_lineage(
+                    first_basis[:, :rank], second_basis[:, :rank]
+                ),
+                bootstrap_retentions=bootstrap[:, rank - 1].copy(),
+                permutation_null_retentions=permutation[:, rank - 1].copy(),
+                retention_lower_95=lower,
+                permutation_null_retention_upper_95=null_upper,
+                null_margin=margin,
+                minimum_strict_margin=minimum_strict_margin,
+                passed=bool(margin - minimum_strict_margin > 1e-12),
+            )
+        )
+    return CrossFittedRankFiltration(
+        objects=tuple(objects),
+        maximum_rank=maximum_rank,
+        replicates=replicates,
+        seed=seed,
+    )
+
+
+def discover_lineage_objects_v03(
+    *,
+    features: Array,
+    family_labels: Sequence[Any],
+    construction_halves: Sequence[Any],
+    negative_control_features: Array,
+    negative_control_labels: Sequence[Any],
+    negative_control_halves: Sequence[Any],
+    rank: int,
+    covariance_gram_output: Mapping[str, Any] | DiscoveryResult | None = None,
+    replicates: int = 256,
+    seed: int = 20260715,
+    minimum_strict_margin: float = 0.02,
+) -> PhaseOneLineageObjectsV03:
+    """Construct all v0.3 Phase-1 objects without consuming outcomes."""
+
+    primary = discover_between_class_scatter_object(
+        features=features,
+        family_labels=family_labels,
+        construction_halves=construction_halves,
+        rank=rank,
+        object_kind="cross_fitted_between_class_scatter",
+        gate_role="primary",
+        replicates=replicates,
+        seed=seed,
+        minimum_strict_margin=minimum_strict_margin,
+    )
+    control = discover_between_class_scatter_object(
+        features=negative_control_features,
+        family_labels=negative_control_labels,
+        construction_halves=negative_control_halves,
+        rank=rank,
+        object_kind="matched_random_label_between_class_scatter",
+        gate_role="matched_random_label_negative_control",
+        replicates=replicates,
+        seed=seed + 1,
+        minimum_strict_margin=minimum_strict_margin,
+    )
+    if isinstance(covariance_gram_output, DiscoveryResult):
+        legacy: Mapping[str, Any] = asdict(covariance_gram_output)
+    else:
+        legacy = covariance_gram_output or {}
+    covariance_report = {
+        "object_kind": "covariance_gram_consensus",
+        "status": "reported_ungated",
+        "gate_eligible": False,
+        "legacy_output": dict(legacy),
+    }
+    return PhaseOneLineageObjectsV03(
+        primary=primary,
+        matched_random_label_negative_control=control,
+        covariance_gram_report=covariance_report,
+        passed=bool(primary.passed and control.passed),
+    )
 
 
 def _validate_laplacian(matrix: Array | spmatrix) -> Array | csr_matrix:
@@ -418,6 +858,12 @@ def evaluate_discovery(
     groups: Iterable[str],
     config: DiscoveryConfig = DiscoveryConfig(),
 ) -> DiscoveryResult:
+    """Run the legacy v0.2.2 covariance/Gram path.
+
+    Results retain their legacy pass fields for replay compatibility, while
+    explicit v0.3 fields prohibit their use in any v0.3 gate.
+    """
+
     values = np.asarray(vectors, dtype=np.float64)
     baseline = np.asarray(baseline_covariates, dtype=np.float64)
     target = np.asarray(outcomes, dtype=np.float64)
@@ -433,14 +879,27 @@ def evaluate_discovery(
         return DiscoveryResult(
             geometry={
                 "passed": False,
+                "object_kind": "covariance_gram_consensus",
+                "v0_3_status": "reported_ungated",
+                "v0_3_gate_eligible": False,
                 "bands": _band_receipts(bands),
                 "band_occupancy_margins": _band_margin_receipts(
                     bands, config.consensus_occupancy
                 ),
                 "failure": "not_established_by_no_stable_high_rank_band",
             },
-            policy={"passed": False, "status": "stopped_by_geometry_gate"},
-            direct_edit={"passed": False, "status": "stopped_by_geometry_gate"},
+            policy={
+                "passed": False,
+                "status": "stopped_by_geometry_gate",
+                "v0_3_status": "reported_ungated",
+                "v0_3_gate_eligible": False,
+            },
+            direct_edit={
+                "passed": False,
+                "status": "stopped_by_geometry_gate",
+                "v0_3_status": "reported_ungated",
+                "v0_3_gate_eligible": False,
+            },
             claim_boundary=_claim_boundary(),
         )
 
@@ -491,6 +950,9 @@ def evaluate_discovery(
     return DiscoveryResult(
         geometry={
             "passed": True,
+            "object_kind": "covariance_gram_consensus",
+            "v0_3_status": "reported_ungated",
+            "v0_3_gate_eligible": False,
             "selected_band": selected.name,
             "selected_rank": selected.rank,
             "minimum_occupancy": selected.minimum_occupancy,
@@ -516,6 +978,8 @@ def evaluate_discovery(
             "realized_ic_role": "descriptive_cap_sensitivity_not_primary_gate",
             "maximum_kl": max_kl,
             "folds": folds,
+            "v0_3_status": "reported_ungated",
+            "v0_3_gate_eligible": False,
         },
         direct_edit={
             "passed": bool(
@@ -530,6 +994,8 @@ def evaluate_discovery(
             ).hexdigest(),
             "proposal_direction": proposal.tolist(),
             "status": "proposal_only_not_applied",
+            "v0_3_status": "reported_ungated",
+            "v0_3_gate_eligible": False,
         },
         claim_boundary=_claim_boundary(),
     )

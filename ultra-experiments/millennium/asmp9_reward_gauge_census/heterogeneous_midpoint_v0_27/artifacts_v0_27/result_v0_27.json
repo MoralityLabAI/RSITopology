@@ -1,0 +1,142 @@
+{
+  "gate_passes": {
+    "G0_registration_binding": true,
+    "G1_shared_midpoint_link_shape": true,
+    "G2_arbitrary_midpoint_obstruction": true,
+    "G3_context_factorization_and_gauge": true,
+    "G4_cycle_liveness": true,
+    "G5_forest_chord_ledger": true,
+    "G6_robust_spectral_bound": true,
+    "G7_prior_art_and_claim_boundary": true,
+    "G8_resource_and_scope": true
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "706764883d5b65398850f61982a10e8d7a7d4b14d1c60afd2ca6e2864aaa22a5",
+      "sealed_file_count": 13
+    },
+    "G1_shared_midpoint_link_shape": {
+      "checked_thresholds": 5207,
+      "link_checks": 585,
+      "link_mismatches": 0,
+      "maximum_error": "19/4096",
+      "maximum_queries": 12,
+      "pass": true
+    },
+    "G2_arbitrary_midpoint_obstruction": {
+      "edge_count": 6,
+      "maximum_item_displacement": "10",
+      "pass": true,
+      "thresholds_identical": true
+    },
+    "G3_context_factorization_and_gauge": {
+      "pass": true,
+      "row_count": 4
+    },
+    "G4_cycle_liveness": {
+      "pass": true,
+      "unavailable_cell_count": 1
+    },
+    "G5_forest_chord_ledger": {
+      "pass": true
+    },
+    "G6_robust_spectral_bound": {
+      "pass": true,
+      "row_count": 2
+    },
+    "G7_prior_art_and_claim_boundary": {
+      "identifiers": [
+        "ASMP-9-v0.11-v0.12",
+        "ASMP-9-v0.26.2",
+        "doi:10.1007/BF02293919",
+        "doi:10.1007/s10107-010-0419-x",
+        "doi:10.1093/biomet/asm029"
+      ],
+      "pass": true
+    },
+    "G8_resource_and_scope": {
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 31313920,
+      "wall_seconds": 0.32870650000404567
+    }
+  },
+  "graph_rows": [
+    {
+      "factorization_consistent": true,
+      "invariants": {
+        "components": 1,
+        "cycle_rank": 1,
+        "edges": 7,
+        "incidence_rank": 6,
+        "vertices": 7
+      },
+      "ledger_match": true,
+      "liveness_status": "live_refutation_observed",
+      "name": "fresh_hexagon_with_leaf",
+      "pass": true
+    },
+    {
+      "factorization_consistent": true,
+      "invariants": {
+        "components": 1,
+        "cycle_rank": 2,
+        "edges": 6,
+        "incidence_rank": 4,
+        "vertices": 5
+      },
+      "ledger_match": true,
+      "liveness_status": "live_refutation_observed",
+      "name": "fresh_complete_2_by_3",
+      "pass": true
+    },
+    {
+      "factorization_consistent": true,
+      "invariants": {
+        "components": 2,
+        "cycle_rank": 1,
+        "edges": 6,
+        "incidence_rank": 5,
+        "vertices": 7
+      },
+      "ledger_match": true,
+      "liveness_status": "live_refutation_observed",
+      "name": "fresh_disconnected_square_and_path",
+      "pass": true
+    },
+    {
+      "factorization_consistent": true,
+      "invariants": {
+        "components": 1,
+        "cycle_rank": 0,
+        "edges": 6,
+        "incidence_rank": 6,
+        "vertices": 7
+      },
+      "ledger_match": true,
+      "liveness_status": "factorization_unavailable_by_design",
+      "name": "fresh_bipartite_chain",
+      "pass": true
+    }
+  ],
+  "protocol_id": "ASMP-9-HETEROGENEOUS-MIDPOINT-v0.27",
+  "registration_sha256": "706764883d5b65398850f61982a10e8d7a7d4b14d1c60afd2ca6e2864aaa22a5",
+  "robust_rows": [
+    {
+      "graph_name": "fresh_hexagon_with_leaf",
+      "noise_norm": 0.09566085928947114,
+      "pass": true,
+      "quotient_error": 0.06762290398124761,
+      "registered_bound": 0.12498693593587334
+    },
+    {
+      "graph_name": "fresh_complete_2_by_3",
+      "noise_norm": 0.09607288899580359,
+      "pass": true,
+      "quotient_error": 0.050962731480955654,
+      "registered_bound": 0.06793379129711515
+    }
+  ],
+  "verdict": "heterogeneous_midpoint_boundary_established_v0_27"
+}

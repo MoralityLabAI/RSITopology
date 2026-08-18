@@ -1,0 +1,71 @@
+{
+  "protocol_id": "qwen08_controller_task_capture_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_not_run",
+  "registered_on": "2026-07-19",
+  "purpose": "Capture outcome-blind Qwen3.5-0.8B layer-19 and layer-23 final-token representations on the controller gym's fresh calibration prompts for a separately gated typed-sheaf prediction study.",
+  "claim_boundary": "This capture can supply measured task-aligned stalks and replayable provenance. It cannot establish semantic validity, controller utility, causal oversight, neural safety, VPD efficacy, recursive improvement, or RSI. Behavioral outcomes and held-out controller results are prohibited inputs.",
+  "parent_model_protocol": {
+    "path": "protocols/qwen_holonomy_causal_transfer_v0_1.json",
+    "sha256": "a56473f6628887fb7dc7df43dc7660010be4f95a526d6587d0d6ec95ebabe872",
+    "model_key": "development_model",
+    "state_id": "base"
+  },
+  "controller_study": {
+    "root": "C:/projects/HybridTRMLDT/ldt_trm_research_gym_v0_0_2/ldt_trm_research_gym",
+    "config_path": "configs/controller_mesh_task_aligned_sheaf_v2.json",
+    "config_sha256": "025a4db42bb127bd351f351c62a6d497bebfca844873323ac55b1e5afa6f2614",
+    "config_file_sha256": "e3449f0f8b90e6a8c0cd8d6530977dac790f9476d1165a9797f0cd4b3929dad2",
+    "study_id": "controller_mesh_task_aligned_sheaf_v2",
+    "prompt_manifest_schema": "qwen08_controller_task_prompt_manifest_v0_1",
+    "prompt_manifest_path": "data/bridge/qwen08_controller_task_prompt_manifest_v0_1.json",
+    "prompt_manifest_file_sha256": "fd77eadebd0f9d4a1874b3bcee6a86563eaa7777487ff687ba9e1dee762f6f11",
+    "prompt_manifest_semantic_sha256": "bed1d70a568b0b74351e9846206394ee3cedfbc23ffd9fa332b623843768f296",
+    "expected_prompt_count": 576,
+    "applications": ["secret_route", "moral_story", "diplomacy_orders", "oracle_control", "bitvm_profile", "prisoner_dilemma", "memetic_treaty", "strategic_tick", "studio_skill_route"],
+    "halves": ["construction", "validation"],
+    "prompts_per_application_half": 32
+  },
+  "capture_contract": {
+    "model_id": "Qwen/Qwen3.5-0.8B-Base",
+    "state_id": "base",
+    "quantization": "4bit",
+    "compute_dtype": "float16",
+    "activation_storage_dtype": "float32",
+    "sites": ["model.layers.19", "model.layers.23"],
+    "token_position": "final_non_padding_token",
+    "maximum_input_tokens": 512,
+    "chunks": "one write-once NPZ per application x geometry half x site",
+    "expected_chunk_count": 36,
+    "index_schema": "qwen08_controller_task_stalk_index_v0_1",
+    "outcomes_read": false,
+    "generation": false,
+    "logits_materialized": false,
+    "gradients": false,
+    "weight_mutation": false
+  },
+  "resource_contract": {
+    "memory_mb": 6144,
+    "host_reserve_mb": 2048,
+    "minimum_free_memory_mb": 8192,
+    "cpu_percent": 50,
+    "io_mb_s": 750,
+    "timeout_seconds": 3600,
+    "gpu_allowance_mb": 3440,
+    "checkpoint_every_seconds": 600,
+    "swap_bytes": 0,
+    "batch_size": 4,
+    "abort_is_valid": true,
+    "local_uncapped_execution_prohibited": true
+  },
+  "fixed_result_categories": {
+    "capture_complete": "Every registered prompt/site chunk and its hash are present in the sealed index.",
+    "capture_incomplete": "A bounded abort or missing chunk is retained and no typed-sheaf analysis is authorized.",
+    "invalid_provenance": "Any protocol, config, manifest, model, wrapper, environment, or chunk binding differs."
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}

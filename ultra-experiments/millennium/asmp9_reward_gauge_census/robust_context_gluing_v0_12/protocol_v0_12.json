@@ -1,0 +1,43 @@
+{
+  "protocol_id": "ASMP-9-ROBUST-CONTEXT-GLUING-v0.12",
+  "status": "prospective",
+  "exact_witness": {
+    "item_count": 4,
+    "context_count": 2,
+    "expected_obstruction_dimension": 2,
+    "expected_short_amplification_squared": "3/2",
+    "expected_robust_amplification_squared": "1"
+  },
+  "fresh_cells": {
+    "seed": 1201201,
+    "count": 512,
+    "item_count": 5,
+    "context_count": 2,
+    "edges_per_context": 4,
+    "tolerance": 1e-8,
+    "expected_obstruction_dimensions": [
+      2,
+      3,
+      4
+    ]
+  },
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_ram_gib": 2,
+    "maximum_wall_seconds": 120
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_exact_counterexample",
+    "G2_nested_geometry",
+    "G3_exact_repair_radius",
+    "G4_query_count_lower_bound",
+    "G5_orthonormal_optimum",
+    "G6_fresh_coverage",
+    "G7_simple_cycle_basis",
+    "G8_conditioning_separation_liveness",
+    "G9_resource_envelope"
+  ],
+  "success_verdict": "robust_context_gluing_geometry_verified_v0_12",
+  "claim_boundary": "Finite Euclidean nested-subspace and normalized linear-query theorem with a synthetic graph census; not finite-sample preference estimation, norm selection, latent-context inference, human/model evidence, or ASMP-9 resolution."
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "asmp11_covering_frontier_prior_anchor_v0_2_1",
+  "status": "sealed_v0_2_prior_information_not_v0_2_1_claim_grid",
+  "source_frontier": "../covering_frontier_v0_2/artifacts_v0_2/frontier.csv",
+  "source_frontier_sha256": "2551f33e8de92f720e25006c843306c65dcf06d78053d052a68a7412812c10f3",
+  "source_registration": "../covering_frontier_v0_2/registration_v0_2.json",
+  "source_registration_sha256": "e96b3651005ccab9b921ba0da11c6f6409f54a30924aaf114678db632b09d713",
+  "rows": [
+    {
+      "n": 13,
+      "k": 3,
+      "block_size": 10,
+      "query_count": 4,
+      "total_samples": {
+        "1/20": 60,
+        "3/20": 104,
+        "1/4": 224
+      }
+    },
+    {
+      "n": 13,
+      "k": 4,
+      "block_size": 11,
+      "query_count": 5,
+      "total_samples": {
+        "1/20": 75,
+        "3/20": 130,
+        "1/4": 285
+      }
+    },
+    {
+      "n": 15,
+      "k": 3,
+      "block_size": 12,
+      "query_count": 4,
+      "total_samples": {
+        "1/20": 60,
+        "3/20": 104,
+        "1/4": 224
+      }
+    },
+    {
+      "n": 15,
+      "k": 4,
+      "block_size": 13,
+      "query_count": 5,
+      "total_samples": {
+        "1/20": 75,
+        "3/20": 130,
+        "1/4": 285
+      }
+    },
+    {
+      "n": 17,
+      "k": 3,
+      "block_size": 14,
+      "query_count": 4,
+      "total_samples": {
+        "1/20": 60,
+        "3/20": 104,
+        "1/4": 224
+      }
+    },
+    {
+      "n": 17,
+      "k": 4,
+      "block_size": 15,
+      "query_count": 5,
+      "total_samples": {
+        "1/20": 75,
+        "3/20": 130,
+        "1/4": 285
+      }
+    }
+  ]
+}

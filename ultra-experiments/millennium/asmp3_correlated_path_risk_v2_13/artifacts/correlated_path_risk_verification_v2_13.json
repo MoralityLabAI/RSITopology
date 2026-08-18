@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_common_conditional_exchangeable_selection_persistent_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status": true,
+    "V1_all_24_common_mode_rows_reconstructed": true,
+    "V2_all_20_conditional_chain_rows_reconstructed": true,
+    "V3_all_18012_exchangeable_cases_reconstructed": true,
+    "V4_controller_comparisons_and_selection_firewall_reconstructed": true,
+    "V5_all_12_persistent_online_compositions_reconstructed": true,
+    "V6_v1_8_persistent_parent_receipt_reconstructed": true,
+    "V7_marginal_only_selection_bias_is_exact": true,
+    "V8_all_10_producer_gates_true": true,
+    "V9_claim_boundary_requires_path_control_and_forbids_false_amplification": true
+  },
+  "claim_boundary": "This checker certifies dependent-noise composition only through a controlled selected-path error event. It does not infer path control from fixed-class marginals or claim common-mode amplification.",
+  "passed": true,
+  "schema_version": "asmp3_correlated_path_risk_verification_v2_13"
+}

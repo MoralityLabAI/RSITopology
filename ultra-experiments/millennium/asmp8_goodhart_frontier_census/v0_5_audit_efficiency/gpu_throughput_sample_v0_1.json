@@ -1,0 +1,70 @@
+{
+  "schema_version": "asmp8_gpu_throughput_sample_v0_1",
+  "status": "completed_single_stream_batch_sweep_stopped",
+  "scientific_gate": false,
+  "measurement": {
+    "model_type": "qwen35 0.8B Q4_K_M",
+    "parameter_count": 752393024,
+    "backend": "llama.cpp CUDA",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "prompt_tokens_per_trial": 128,
+    "manifest_mean_tokens_per_audit": 127.16840277777777,
+    "trials": 10,
+    "mean_trial_seconds": 0.04196475,
+    "trial_sd_seconds": 0.007789712,
+    "mean_seconds_per_audit": 0.04169211117553711,
+    "mean_audits_per_second": 23.985352907404483,
+    "descriptive_t95_seconds_per_audit": [
+      0.03615589052226424,
+      0.04722833182880998
+    ],
+    "descriptive_t95_audits_per_second": [
+      21.17373113292952,
+      27.658010508252186
+    ],
+    "speedup_over_cpu_q4": 22.834240165853483
+  },
+  "steady_state_eta": {
+    "8192": {
+      "minutes": 5.6923629125,
+      "descriptive_t95_minutes": [
+        4.936484252639811,
+        6.448241572360189
+      ]
+    },
+    "500000": {
+      "hours": 5.790570996602376,
+      "descriptive_t95_hours": [
+        5.02165146142559,
+        6.559490531779163
+      ]
+    },
+    "524288": {
+      "hours": 6.071853773333333,
+      "descriptive_t95_hours": [
+        5.265583202815798,
+        6.878124343850868
+      ]
+    }
+  },
+  "resource_receipt": {
+    "peak_host_ram_mb": 1317.469,
+    "average_host_ram_mb": 653.777,
+    "peak_io_mb_s": 7.03,
+    "average_cpu_percent": 1.779,
+    "cleanup_passed": true,
+    "per_process_vram_telemetry_valid": false
+  },
+  "batch_sweep": {
+    "requested_parallel_prompts": [1, 2, 4, 8],
+    "status": "not_run_system_stability",
+    "reason": "Unexpected Windows restart during the surrounding batch-test window; no causal attribution is made."
+  },
+  "hashes": {
+    "run_specification_sha256": "918580772f022e1d509dd6f54e5a6750b529ce2effb189d000a75fe960e834ac",
+    "raw_benchmark_sha256": "322587090c2378e90817b24fcefb1bdc854f3463b1368f69fe23e33ff03915fc",
+    "wrapper_summary_sha256": "c7a50cca244b7ed35b18c96fc0d078472ec015c3fc57f91c528013e6b44b9665",
+    "cleanup_summary_sha256": "1adb9dcd8bce0ed14faf7c2969d67dddd6475313ec134eadce3c60fe5e628c45"
+  },
+  "claim_boundary": "Q4_K_M CUDA single-prompt timing only. Not NF4, human-audit throughput, a completed batching sweep, or an ASMP-8 scientific result."
+}

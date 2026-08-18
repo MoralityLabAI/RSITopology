@@ -1,0 +1,133 @@
+{
+  "affine": {
+    "columns": 130,
+    "modular_rank": 130,
+    "prime": 1000003,
+    "rankings": 720
+  },
+  "binary_sharpness": {
+    "failures": [],
+    "luce_fiber_dimension": 1,
+    "rum_fiber_dimension": 1
+  },
+  "claim_boundary": "Candidate finite exact full-kernel tier-identification theorem under unrestricted positive completion. Classical limited-domain RUM and arbitrary-menu Luce ingredients; no novelty, sampling, endogenous/strategic/dynamic, human/model-value, welfare, physical-channel, or full ASMP-9 resolution claim.",
+  "formula_rows": {
+    "10": {
+      "closed": 4097,
+      "direct": 4097
+    },
+    "11": {
+      "closed": 9217,
+      "direct": 9217
+    },
+    "12": {
+      "closed": 20481,
+      "direct": 20481
+    },
+    "13": {
+      "closed": 45057,
+      "direct": 45057
+    },
+    "14": {
+      "closed": 98305,
+      "direct": 98305
+    },
+    "15": {
+      "closed": 212993,
+      "direct": 212993
+    },
+    "16": {
+      "closed": 458753,
+      "direct": 458753
+    },
+    "17": {
+      "closed": 983041,
+      "direct": 983041
+    },
+    "18": {
+      "closed": 2097153,
+      "direct": 2097153
+    },
+    "19": {
+      "closed": 4456449,
+      "direct": 4456449
+    },
+    "20": {
+      "closed": 9437185,
+      "direct": 9437185
+    },
+    "3": {
+      "closed": 5,
+      "direct": 5
+    },
+    "4": {
+      "closed": 17,
+      "direct": 17
+    },
+    "5": {
+      "closed": 49,
+      "direct": 49
+    },
+    "6": {
+      "closed": 129,
+      "direct": 129
+    },
+    "7": {
+      "closed": 321,
+      "direct": 321
+    },
+    "8": {
+      "closed": 769,
+      "direct": 769
+    },
+    "9": {
+      "closed": 1793,
+      "direct": 1793
+    }
+  },
+  "gates": {
+    "A6": true,
+    "F0": true,
+    "G0": true,
+    "H0": true,
+    "N0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "T0": true,
+    "Z0": true
+  },
+  "partition": {
+    "checks": 2692,
+    "failures": []
+  },
+  "registration_sha256": "16046963b9e7fa6db585ec63f68e09b685927ebcf0bea65ea1bcf4d3a001ad65",
+  "resource": {
+    "elapsed_seconds": 7.283694100013236,
+    "resident_bytes": 24109056,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.56-verification-result-v1",
+  "source_mismatches": {},
+  "status": "general_incomplete_menu_theorem_verified",
+  "tests": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "...........                                                              [100%]\n11 passed in 1.67s\n"
+  },
+  "witnesses": {
+    "cases": 312,
+    "domain_count": 156,
+    "failures": []
+  },
+  "zeta_ranks": {
+    "0": 1,
+    "1": 2,
+    "2": 4,
+    "3": 8,
+    "4": 16,
+    "5": 32,
+    "6": 64,
+    "7": 128,
+    "8": 256
+  }
+}

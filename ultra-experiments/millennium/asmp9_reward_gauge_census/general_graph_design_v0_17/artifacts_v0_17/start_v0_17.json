@@ -1,0 +1,11 @@
+{
+  "protocol_id": "ASMP-9-GENERAL-GRAPH-ALLOCATION-v0.17",
+  "registration_sha256": "fc0931d34707dad22481e34c3fb50b686978e444828adbd1fd9686b599813b1b",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "started_at_utc": "2026-07-29T00:03:45Z",
+  "status": "started"
+}

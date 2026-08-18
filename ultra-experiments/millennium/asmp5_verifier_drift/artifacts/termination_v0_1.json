@@ -1,0 +1,24 @@
+{
+  "schema_version": "asmp5_verifier_drift_termination_v0_1",
+  "protocol_id": "asmp5-verifier-drift-v0.1",
+  "preregistered_commit": "ba4ba496af2c98b3e95c133abf2c07c2e506cbe2",
+  "instrument_status": "unavailable",
+  "stage_decision": "unavailable_resource_cap_stop_sequence",
+  "registered_wall_ceiling_seconds": 180,
+  "external_wrapper_observed_timeout_seconds": 184.1,
+  "process_termination": {
+    "required": true,
+    "remaining_matching_processes_after_termination": 0
+  },
+  "registered_output_state": {
+    "result_v0_1_json_exists": false,
+    "receipt_v0_1_json_exists": false,
+    "partial_scientific_outcome_read": false
+  },
+  "sealed_input_sha256": {
+    "protocol_v0_1.json": "2d284469dd886dde49b8e4682920c93bd3931f36c4fa8f099a03e9339664178f",
+    "CLAIM_PACKET.md": "894e97919b31a59a166d71fcd8dbe289d03aa761775e322e28e3a91336578753",
+    "run.py": "5b2232c89fdff81cd11bff711379d122427aadac8d6329b9ca58073da01ddb9b"
+  },
+  "interpretation": "The registered exact census did not complete within its resource ceiling. This is an availability result, not support for or against verifier-drift separation. The frozen sequence stops before ASMP-3."
+}

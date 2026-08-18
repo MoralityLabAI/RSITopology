@@ -1,0 +1,6 @@
+__pycache__/
+pilot_artifacts_v*/runs/*/checkpoint.pt
+pilot_wrapper_v*/cleanup_summary.json
+pilot_wrapper_v*/owned_pids.json
+pilot_wrapper_v*/wrapper_stdout.txt
+

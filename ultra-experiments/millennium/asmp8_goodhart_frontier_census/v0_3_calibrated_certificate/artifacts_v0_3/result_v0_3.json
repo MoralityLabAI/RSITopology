@@ -1,0 +1,109 @@
+{
+  "claim_boundary": "Synthetic finite-population calibration of a classical robust lower bound; no learned reward model, no real human-preference uncertainty set, no RL trajectory, and no ASMP-8 resolution.",
+  "condition_count": 9,
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "0df8935e6fef5b2637bd38f6208fb3a7939ea2b97f8a59007cae907f25de94b4"
+    },
+    "G1_calibration_coverage": {
+      "maximum_cp_upper": 0.0007311125564754342,
+      "pass": true
+    },
+    "G2_certificate_soundness": {
+      "conditional_false_safe_count": 0,
+      "pass": true
+    },
+    "G3_nonvacuity": {
+      "minimum": 0.1,
+      "pass": true,
+      "registered_fraction": 0.44766845703125
+    },
+    "G4_stronger_than_pinsker": {
+      "difference": 0.44766845703125,
+      "pass": true,
+      "pinsker_fraction": 0.0,
+      "registered_fraction": 0.44766845703125
+    },
+    "G5_optimizer_transfer": {
+      "families": {
+        "best_of_n": {
+          "best_certified_fraction": 1.0,
+          "best_policy_id": "best_of_n:n=2",
+          "pass": true
+        },
+        "gibbs": {
+          "best_certified_fraction": 1.0,
+          "best_policy_id": "gibbs:beta=0.25",
+          "pass": true
+        },
+        "scrambled_gibbs": {
+          "best_certified_fraction": 1.0,
+          "best_policy_id": "scrambled_gibbs:beta=2",
+          "pass": true
+        },
+        "top_spike": {
+          "best_certified_fraction": 0.0,
+          "best_policy_id": "top_spike:alpha=0.1",
+          "pass": false
+        }
+      },
+      "pass": false
+    },
+    "G6_rare_tail_liveness": {
+      "pass": true,
+      "proxy_only_false_safe_cells": 73728,
+      "rmse_only_false_safe_cells": 22847
+    },
+    "G7_sample_size_ordering": {
+      "families": {
+        "diffuse_low_error": {
+          "coverages": [
+            0.0,
+            0.15047607421875,
+            0.44766845703125
+          ],
+          "pass": true
+        },
+        "heteroskedastic_proxy_coupled": {
+          "coverages": [
+            0.0,
+            0.0,
+            0.2442626953125
+          ],
+          "pass": true
+        },
+        "rare_top_tail": {
+          "coverages": [
+            0.0,
+            0.13853759765625,
+            0.3301025390625
+          ],
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "G8_resources_and_receipts": {
+      "elapsed_seconds": 0.7036087000001316,
+      "pass": true,
+      "process_peak_rss_bytes": 169529344
+    }
+  },
+  "instrument_status": "valid",
+  "policy_count": 20,
+  "policy_family_count": 4,
+  "protocol_sha256": "b556b5e98eeba8a213d2ecd677cea5485a6b649d498ee4d5f42530c57bedc6fe",
+  "registration_sha256": "0df8935e6fef5b2637bd38f6208fb3a7939ea2b97f8a59007cae907f25de94b4",
+  "replicates_per_condition": 4096,
+  "schema_version": "asmp8_calibrated_certificate_result_v0_3",
+  "source_commit": "dae6ba3b3441572c56e16e184826fa5132b3b7c2",
+  "summary": {
+    "conditional_false_safe_count": 0,
+    "pinsker_diffuse_m512_nonvacuity": 0.0,
+    "rare_proxy_only_false_safe_cells": 73728,
+    "rare_rmse_only_false_safe_cells": 22847,
+    "registered_diffuse_m512_nonvacuity": 0.44766845703125
+  },
+  "verdict": "calibrated_certificate_valid_but_vacuous"
+}
