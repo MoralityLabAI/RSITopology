@@ -16,6 +16,7 @@
       this.edgePickMap = [];
       this.loopPickMap = [];
       this.lineMaterials = [];
+      this.selectedAxes = [];
       this.selectedLoop = null;
       this.hoverRaf = 0;
       this.pendingPointer = null;
@@ -120,6 +121,7 @@
       this.data = data;
       const states = Array.from(new Set(data.nodes.map((node) => node.state))).sort();
       this.stateRadii = new Map(states.map((state, index) => [state, 9.4 + index * 1.75]));
+      this.selectedAxes = data.mode === "sae_paths" ? [...data.defaultAxes] : [];
       this.createShells();
       this.computeNodePositions();
       this.createSwirls();
@@ -127,6 +129,21 @@
       this.computeEdgePaths();
       this.rebuildVisibleGeometry();
       this.fitCamera();
+    }
+
+    setAxes(axes) {
+      if (!this.data || this.data.mode !== "sae_paths") return false;
+      if (!Array.isArray(axes) || axes.length !== 3 || new Set(axes).size !== 3) return false;
+      if (!axes.every((axis) => this.data.dimensionIds.includes(axis))) return false;
+      this.selectedAxes = [...axes];
+      this.nodePositions.clear();
+      this.edgePaths.clear();
+      this.loopPaths.clear();
+      this.computeNodePositions();
+      this.computeEdgePaths();
+      this.updateNodeInstances();
+      this.rebuildVisibleGeometry();
+      return true;
     }
 
     setFilters(filters) {
@@ -139,7 +156,8 @@
 
     shellRadius(state) {
       if (state === "base") return 9.4;
-      if (state === "insecure") return 11.15;
+      if (state === "jinn" || state === "insecure") return 11.15;
+      if (state === "beast") return 12.9;
       return this.stateRadii.get(state) || 10.15;
     }
 
@@ -148,7 +166,8 @@
       const states = new Set(this.data.nodes.map((node) => node.state));
       let stateIndex = 0;
       for (const state of states) {
-        const hue = (0.54 + stateIndex * 0.14) % 1;
+        const stateHues = { base: 0.54, jinn: 0.10, beast: 0.94, insecure: 0.68 };
+        const hue = stateHues[state] ?? (0.54 + stateIndex * 0.14) % 1;
         const shellColor = new THREE.Color().setHSL(hue, 0.55, 0.42);
         const emissiveColor = new THREE.Color().setHSL(hue, 0.65, 0.10);
         const geometry = new THREE.SphereGeometry(this.shellRadius(state), 48, 32);
@@ -156,7 +175,7 @@
           color: shellColor,
           emissive: emissiveColor,
           transparent: true,
-          opacity: state === "insecure" ? 0.035 : 0.05,
+          opacity: state === "beast" || state === "insecure" ? 0.035 : 0.05,
           roughness: 0.8,
           metalness: 0.05,
           depthWrite: false,
@@ -178,6 +197,10 @@
 
     computeNodePositions() {
       const THREE = this.THREE;
+      if (this.data.mode === "sae_paths") {
+        this.computeSaeNodePositions();
+        return;
+      }
       const numericLayers = this.data.nodes.map((node) => node.layer).filter(Number.isFinite);
       const minLayer = numericLayers.length ? Math.min(...numericLayers) : 0;
       const maxLayer = numericLayers.length ? Math.max(...numericLayers) : 1;
@@ -204,6 +227,34 @@
       }
     }
 
+    computeSaeNodePositions() {
+      const THREE = this.THREE;
+      const axisIndices = this.selectedAxes.map((axis) => this.data.dimensionIds.indexOf(axis));
+      const ranges = axisIndices.map((dimensionIndex) => {
+        const values = this.data.nodes.map((node) => Number(node.sae_coordinates[dimensionIndex]));
+        return { min: Math.min(...values), max: Math.max(...values) };
+      });
+      for (const node of this.data.nodes) {
+        const projected = axisIndices.map((dimensionIndex, axisIndex) => {
+          const value = Number(node.sae_coordinates[dimensionIndex]);
+          const range = ranges[axisIndex];
+          return range.max > range.min ? ((value - range.min) / (range.max - range.min)) * 2 - 1 : 0;
+        });
+        let direction = new THREE.Vector3(projected[0], projected[1], projected[2]);
+        if (direction.lengthSq() < 1e-8) {
+          const hash = node.stable_hash;
+          direction.set(
+            ((hash & 0xff) / 127.5) - 1,
+            (((hash >>> 8) & 0xff) / 127.5) - 1,
+            (((hash >>> 16) & 0xff) / 127.5) - 1
+          );
+        }
+        direction.normalize().multiplyScalar(this.shellRadius(node.state) + 0.12);
+        this.nodePositions.set(node.id, direction);
+        node.position = direction;
+      }
+    }
+
     createSwirls() {
       const THREE = this.THREE;
       const positions = [];
@@ -213,7 +264,8 @@
       const steps = 180;
       for (let line = 0; line < count; line += 1) {
         const phase = (line / count) * Math.PI * 2;
-        const radius = 11.55 + (line % 3) * 0.08;
+        const outerRadius = Math.max(...this.data.nodes.map((node) => this.shellRadius(node.state)), 11.15);
+        const radius = outerRadius + 0.4 + (line % 3) * 0.08;
         for (let i = 0; i < steps - 1; i += 1) {
           const a = i / (steps - 1);
           const b = (i + 1) / (steps - 1);
@@ -246,6 +298,14 @@
       return target.setHex(0x7d8ba5);
     }
 
+    nodeColor(node, target) {
+      if (this.data.mode !== "sae_paths") return this.certificationColor(node.certification, target);
+      if (node.behavioral_hard_failure) return target.setHex(0xff435f);
+      if (node.state === "jinn") return target.setHex(0xffbd59);
+      if (node.state === "beast") return target.setHex(0xf06fff);
+      return target.setHex(0x7ce2ff);
+    }
+
     createNodes() {
       const THREE = this.THREE;
       const geometry = new THREE.IcosahedronGeometry(0.13, 1);
@@ -264,7 +324,7 @@
 
       this.data.nodes.forEach((node, index) => {
         node.instanceId = index;
-        this.certificationColor(node.certification, this.scratch.color);
+        this.nodeColor(node, this.scratch.color);
         this.nodeMesh.setColorAt(index, this.scratch.color);
         this.nodeHaloMesh.setColorAt(index, this.scratch.color);
       });
@@ -356,7 +416,7 @@
         if (points.length) points.push(...oriented.slice(1));
         else points.push(...oriented);
       }
-      if (points.length > 2 && !points[0].equals(points[points.length - 1])) points.push(points[0].clone());
+      if (!loop.is_sae_path && points.length > 2 && !points[0].equals(points[points.length - 1])) points.push(points[0].clone());
       return points;
     }
 
@@ -436,7 +496,11 @@
         const path = this.edgePaths.get(edge.edge_id);
         if (!path) continue;
         const bin = Math.max(0, Math.min(4, Math.floor(edge.worst_direction_retention * 5)));
-        this.lineageColor(edge.mean_chordal_lineage, this.scratch.color);
+        if (this.data.mode === "sae_paths") {
+          this.nodeColor(this.data.nodeMap.get(edge.target_node), this.scratch.color);
+        } else {
+          this.lineageColor(edge.mean_chordal_lineage, this.scratch.color);
+        }
         for (let i = 0; i < path.length - 1; i += 1) {
           const a = path[i];
           const b = path[i + 1];
@@ -582,7 +646,7 @@
 
     playLoop(loop) {
       const floor = Number(this.data.calibration.bias_floor_degrees || 0);
-      if (loop.orientation_flag || loop.max_angle === null || loop.max_angle < floor) return false;
+      if (loop.is_sae_path || loop.orientation_flag || loop.max_angle === null || loop.max_angle < floor) return false;
       const path = this.loopPaths.get(loop.loop_id) || [];
       if (path.length < 2) return false;
       const lengths = new Float32Array(path.length);

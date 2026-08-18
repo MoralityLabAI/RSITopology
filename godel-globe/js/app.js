@@ -10,7 +10,9 @@
     [
       "load-status", "file-picker", "family-filter", "rank-filter", "state-filter", "node-search",
       "loop-list", "loop-count", "loop-details", "loop-badge", "dataset-name", "dataset-stats",
-      "legend-min", "legend-mid", "legend-max", "drop-zone", "tooltip", "about-dialog", "about-button", "about-close"
+      "legend-min", "legend-mid", "legend-max", "drop-zone", "tooltip", "about-dialog", "about-button", "about-close",
+      "axis-controls", "axis-x", "axis-y", "axis-z", "rank-control", "browser-heading", "details-heading",
+      "lineage-legend", "cert-legend", "drop-formats"
     ].forEach((id) => { elements[id] = document.getElementById(id); });
   }
 
@@ -24,6 +26,7 @@
       ? nextData
       : window.GodelData.compile(nextData.raw || nextData);
     selectedLoop = null;
+    updateModeUi();
     populateFilters();
     globe.setData(data);
     updateLegend();
@@ -31,7 +34,26 @@
     applyFilters();
     renderLoopDetails(null);
     const warningText = data.warnings.length ? ` · ${data.warnings.length} warning${data.warnings.length === 1 ? "" : "s"}` : "";
-    setStatus(`Loaded ${data.nodes.length} nodes · ${data.edges.length} edges · ${data.loops.length} loops${warningText}`, false);
+    const collection = data.mode === "sae_paths" ? "paths" : "loops";
+    setStatus(`Loaded ${data.nodes.length} nodes · ${data.edges.length} edges · ${data.loops.length} ${collection}${warningText}`, false);
+  }
+
+  function updateModeUi() {
+    const isSae = data.mode === "sae_paths";
+    elements["axis-controls"].hidden = !isSae;
+    elements["rank-control"].hidden = isSae;
+    elements["lineage-legend"].hidden = isSae;
+    elements["browser-heading"].textContent = isSae ? "SAE paths" : "Measured loops";
+    elements["details-heading"].textContent = isSae ? "Path receipt" : "Loop receipt";
+    elements["loop-list"].setAttribute("aria-label", isSae ? "SAE activation paths" : "Measured loops");
+    elements["drop-formats"].textContent = isSae
+      ? "one godel_sae_path_bundle_v1 JSON file"
+      : "edge, loop, anchor, certificate JSONL + optional calibration JSON";
+    elements["node-search"].placeholder = isSae ? "actor / item / layer" : "L40 / graph_reachability";
+    elements["cert-legend"].setAttribute("aria-label", isSae ? "Model state and failure legend" : "Node certification legend");
+    elements["cert-legend"].innerHTML = isSae
+      ? '<span><i class="dot dot-base"></i>Base</span><span><i class="dot dot-jinn"></i>Jinn</span><span><i class="dot dot-beast"></i>Beast</span><span><i class="dot dot-failure"></i>Hard failure</span>'
+      : '<span><i class="dot dot-gray"></i>Engineering</span><span><i class="dot dot-amber"></i>Lineage</span><span><i class="dot dot-green"></i>Holonomy clean</span>';
   }
 
   function populateFilters() {
@@ -41,6 +63,24 @@
     fillSelect(elements["family-filter"], [{ value: "all", label: "All families" }, ...families.map((family) => ({ value: family, label: humanize(family) }))]);
     fillSelect(elements["rank-filter"], [{ value: "all", label: "All ranks" }, ...ranks.map((rank) => ({ value: String(rank), label: `Rank ${rank}` }))]);
     fillSelect(elements["state-filter"], [{ value: "both", label: "All runtime states" }, ...states.map((state) => ({ value: state, label: humanize(state) }))]);
+    if (data.mode === "sae_paths") populateAxisControls();
+  }
+
+  function populateAxisControls() {
+    const labels = new Map(data.dimensions.map((dimension) => [dimension.dimension_id, dimension.label || dimension.dimension_id]));
+    ["axis-x", "axis-y", "axis-z"].forEach((id, index) => {
+      fillSelect(elements[id], data.dimensionIds.map((dimensionId) => ({ value: dimensionId, label: labels.get(dimensionId) })));
+      elements[id].value = data.defaultAxes[index];
+    });
+  }
+
+  function applyAxes() {
+    const axes = [elements["axis-x"].value, elements["axis-y"].value, elements["axis-z"].value];
+    if (!globe.setAxes(axes)) {
+      setStatus("Choose three distinct SAE dimensions.", true);
+      return;
+    }
+    setStatus(`Projected on ${axes.join(" / ")}`, false);
   }
 
   function fillSelect(select, options) {
@@ -111,11 +151,17 @@
       label.textContent = loop.loop_id;
       const sub = document.createElement("span");
       sub.className = "loop-sub";
-      sub.textContent = `${humanize(loop.family)} · ${loop.rank ? `rank ${loop.rank}` : "mixed rank"}`;
+      sub.textContent = data.mode === "sae_paths"
+        ? `${humanize(loop.model_state || "unknown")} · ${humanize(loop.family)}`
+        : `${humanize(loop.family)} · ${loop.rank ? `rank ${loop.rank}` : "mixed rank"}`;
       label.appendChild(sub);
       const angle = document.createElement("span");
       angle.className = "loop-angle";
-      if (loop.orientation_flag) {
+      if (data.mode === "sae_paths") {
+        const finalNode = data.nodeMap.get(loop.node_order?.[loop.node_order.length - 1]);
+        if (loop.behavioral_hard_failure) angle.classList.add("reversal");
+        angle.textContent = loop.behavioral_hard_failure ? "FAIL" : finalNode?.selected_action_alias || "PATH";
+      } else if (loop.orientation_flag) {
         angle.classList.add("reversal");
         angle.textContent = "det<0";
       } else if (loop.max_angle < floor) {
@@ -145,7 +191,14 @@
       badge.className = "badge badge-neutral";
       badge.textContent = "No selection";
       container.className = "details empty-details";
-      container.textContent = "Select a measured loop to inspect its closure receipt and play the measured transport.";
+      container.textContent = data?.mode === "sae_paths"
+        ? "Select an SAE path to inspect its projected coordinates, behavioral result, and evidence receipts."
+        : "Select a measured loop to inspect its closure receipt and play the measured transport.";
+      return;
+    }
+
+    if (data.mode === "sae_paths") {
+      renderSaePathDetails(loop);
       return;
     }
 
@@ -202,6 +255,55 @@
     });
   }
 
+  function renderSaePathDetails(path) {
+    const container = elements["loop-details"];
+    const badge = elements["loop-badge"];
+    const nodes = (path.node_order || []).map((nodeId) => data.nodeMap.get(nodeId)).filter(Boolean);
+    const finalNode = nodes[nodes.length - 1];
+    const causal = nodes.filter((node) => node.causal_effect !== null && node.causal_effect !== undefined);
+    badge.className = path.behavioral_hard_failure ? "badge badge-danger" : "badge badge-clean";
+    badge.textContent = path.behavioral_hard_failure ? "Behavioral hard failure" : causal.length ? "Causally screened" : "Provisional path";
+    container.className = "details";
+    const hashes = [];
+    nodes.forEach((node) => {
+      if (node.activation_sha256 && node.activation_sha256 !== "unavailable") hashes.push({ label: `${node.id} activation`, hash: node.activation_sha256 });
+      if (node.sae_sha256 && node.sae_sha256 !== "unavailable") hashes.push({ label: `${node.id} SAE`, hash: node.sae_sha256 });
+    });
+    const coordinates = data.dimensions.map((_, index) => {
+      const values = nodes.map((node) => Number(node.sae_coordinates[index] || 0));
+      return values.reduce((best, value) => Math.abs(value) > Math.abs(best) ? value : best, 0);
+    });
+    const maxMagnitude = Math.max(1e-9, ...coordinates.map((value) => Math.abs(value)));
+    const coordinateRows = data.dimensions.map((dimension, index) => {
+      const value = Number(coordinates[index] || 0);
+      const width = Math.max(1.5, Math.abs(value) / maxMagnitude * 100);
+      return `<div class="angle-row"><span title="${escapeHtml(dimension.dimension_id)}">${escapeHtml(dimension.label || dimension.dimension_id)}</span><div class="angle-track"><div class="angle-fill" style="width:${width}%"></div></div><span class="angle-value">${format(value, 3)}</span></div>`;
+    }).join("");
+    container.innerHTML = `
+      <div class="detail-title">${escapeHtml(path.loop_id)}</div>
+      <div class="detail-root">${escapeHtml(path.family)} · ${escapeHtml(path.model_state || "unknown")}</div>
+      <div class="detail-grid">
+        <div class="metric"><span class="metric-label">State</span><span class="metric-value">${escapeHtml(humanize(path.model_state || "unknown"))}</span></div>
+        <div class="metric"><span class="metric-label">Layer steps</span><span class="metric-value">${nodes.length}</span></div>
+        <div class="metric"><span class="metric-label">Action alias</span><span class="metric-value">${escapeHtml(finalNode?.selected_action_alias || "--")}</span></div>
+        <div class="metric"><span class="metric-label">Behavior</span><span class="metric-value">${path.behavioral_hard_failure ? "hard failure" : "passed"}</span></div>
+      </div>
+      <div class="${causal.length ? "flat-notice" : "reversal-notice"}">${causal.length
+        ? "Held-out causal-effect fields are present; interpret only with the matched-random intervention receipt."
+        : "Projection only: no causal intervention receipt is attached, so this path is descriptive rather than explanatory."}</div>
+      <div class="detail-section"><h3>Path coordinate peaks (layer-local)</h3><div class="angle-chart">${coordinateRows}</div></div>
+      <div class="detail-section"><h3>Layer path</h3><ol class="edge-order">${nodes.map((node) => `<li>L${escapeHtml(node.layer)} · ${escapeHtml(node.id)}</li>`).join("")}</ol></div>
+      <div class="detail-section"><h3>Artifact hashes</h3><div class="hash-list">${hashes.map((item, index) => hashRow(item, index)).join("") || "<span>No hashes supplied.</span>"}</div></div>
+    `;
+    container.querySelectorAll("[data-copy-hash]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        await copyText(button.dataset.copyHash);
+        button.textContent = "Copied";
+        setTimeout(() => { button.textContent = "Copy"; }, 1100);
+      });
+    });
+  }
+
   function angleChart(angles) {
     if (!angles.length) return "<span>No canonical angles supplied.</span>";
     const max = Math.max(1, ...angles);
@@ -235,6 +337,7 @@
   }
 
   function updateLegend() {
+    if (data.mode === "sae_paths") return;
     const min = data.ranges.lineageMin;
     const max = data.ranges.lineageMax;
     elements["legend-min"].textContent = format(min, 3);
@@ -244,6 +347,10 @@
 
   function updateDatasetSummary() {
     elements["dataset-name"].textContent = data.name;
+    if (data.mode === "sae_paths") {
+      elements["dataset-stats"].textContent = `${data.nodes.length} nodes · ${data.paths.length} paths · ${data.dimensions.length} dimensions · 3 state shells`;
+      return;
+    }
     const floor = Number(data.calibration.bias_floor_degrees || 0);
     elements["dataset-stats"].textContent = `${data.nodes.length} nodes · ${data.edges.length} edges · ${data.loops.length} loops · floor ${format(floor, 2)}°`;
   }
@@ -255,12 +362,20 @@
       return;
     }
     if (kind === "node") {
-      const margins = Object.entries(value.margins || {}).map(([key, margin]) => `${escapeHtml(key)}: ${format(Number(margin), 4)}`).join(" · ");
-      tooltip.innerHTML = `<strong>${escapeHtml(value.id)}</strong><span>${humanize(value.certification)}</span>${margins ? `<span>${margins}</span>` : ""}`;
+      if (data.mode === "sae_paths") {
+        tooltip.innerHTML = `<strong>${escapeHtml(value.id)}</strong><span>${humanize(value.state)} · layer ${escapeHtml(value.layer)} · action ${escapeHtml(value.selected_action_alias || "--")}</span><span>${value.behavioral_hard_failure ? "behavioral hard failure" : "behavior passed"}</span>`;
+      } else {
+        const margins = Object.entries(value.margins || {}).map(([key, margin]) => `${escapeHtml(key)}: ${format(Number(margin), 4)}`).join(" · ");
+        tooltip.innerHTML = `<strong>${escapeHtml(value.id)}</strong><span>${humanize(value.certification)}</span>${margins ? `<span>${margins}</span>` : ""}`;
+      }
     } else if (kind === "edge") {
-      tooltip.innerHTML = `<strong>${escapeHtml(value.edge_id)}</strong><span>lineage ${format(value.mean_chordal_lineage, 4)} · worst retention ${format(value.worst_direction_retention, 4)} · rank ${value.rank}</span>`;
+      tooltip.innerHTML = data.mode === "sae_paths"
+        ? `<strong>${escapeHtml(value.edge_id)}</strong><span>SAE layer transition · ${escapeHtml(value.path_id || "unknown path")}</span>`
+        : `<strong>${escapeHtml(value.edge_id)}</strong><span>lineage ${format(value.mean_chordal_lineage, 4)} · worst retention ${format(value.worst_direction_retention, 4)} · rank ${value.rank}</span>`;
     } else {
-      tooltip.innerHTML = `<strong>${escapeHtml(value.loop_id)}</strong><span>${value.orientation_flag ? "orientation reversal" : `max angle ${format(value.max_angle, 3)}°`} · identity loss ${format(value.identity_loss, 5)}</span>`;
+      tooltip.innerHTML = data.mode === "sae_paths"
+        ? `<strong>${escapeHtml(value.loop_id)}</strong><span>${humanize(value.model_state || "unknown")} · ${value.behavioral_hard_failure ? "behavioral hard failure" : "behavior passed"}</span>`
+        : `<strong>${escapeHtml(value.loop_id)}</strong><span>${value.orientation_flag ? "orientation reversal" : `max angle ${format(value.max_angle, 3)}°`} · identity loss ${format(value.identity_loss, 5)}</span>`;
     }
     tooltip.hidden = false;
     const wrap = elements["drop-zone"].getBoundingClientRect();
@@ -288,6 +403,7 @@
   function bindUi() {
     elements["file-picker"].addEventListener("change", (event) => handleFiles(event.target.files));
     ["family-filter", "rank-filter", "state-filter"].forEach((id) => elements[id].addEventListener("change", applyFilters));
+    ["axis-x", "axis-y", "axis-z"].forEach((id) => elements[id].addEventListener("change", applyAxes));
     let searchTimer = 0;
     elements["node-search"].addEventListener("input", () => {
       clearTimeout(searchTimer);

@@ -1,0 +1,30 @@
+{
+  "schema_version": "godel_sae_path_bundle_v1",
+  "name": "Temptation SAE path demo",
+  "claim_lane": "synthetic_fixture_only",
+  "model_states": ["base", "jinn", "beast"],
+  "hook_layers": [15, 19, 23, 27, 31],
+  "default_axes": ["feature_01", "feature_02", "feature_03"],
+  "dimensions": [
+    {"dimension_id": "feature_01", "label": "procedural bypass"},
+    {"dimension_id": "feature_02", "label": "coalition loyalty"},
+    {"dimension_id": "feature_03", "label": "rule legibility"},
+    {"dimension_id": "feature_04", "label": "status reward"},
+    {"dimension_id": "feature_05", "label": "harm aversion"}
+  ],
+  "nodes": [
+    {"node_id":"base/L15/civic_pluralist--srt/demo/control","path_id":"path-base","model_state":"base","layer":15,"actor_id":"civic_pluralist","route_id":"srt","item_id":"demo","variant":"control","coordinates":[0.1,0.4,0.8,0.2,0.9],"selected_action_alias":"A","behavioral_hard_failure":false,"activation_sha256":"base15","sae_sha256":"sae-base"},
+    {"node_id":"base/L31/civic_pluralist--srt/demo/control","path_id":"path-base","model_state":"base","layer":31,"actor_id":"civic_pluralist","route_id":"srt","item_id":"demo","variant":"control","coordinates":[0.2,0.5,0.7,0.3,0.8],"selected_action_alias":"A","behavioral_hard_failure":false,"activation_sha256":"base31","sae_sha256":"sae-base"},
+    {"node_id":"jinn/L15/civic_pluralist--srt/demo/control","path_id":"path-jinn","model_state":"jinn","layer":15,"actor_id":"civic_pluralist","route_id":"srt","item_id":"demo","variant":"control","coordinates":[0.4,0.7,0.5,0.6,0.5],"selected_action_alias":"B","behavioral_hard_failure":false,"activation_sha256":"jinn15","sae_sha256":"sae-jinn"},
+    {"node_id":"jinn/L31/civic_pluralist--srt/demo/control","path_id":"path-jinn","model_state":"jinn","layer":31,"actor_id":"civic_pluralist","route_id":"srt","item_id":"demo","variant":"control","coordinates":[0.6,0.8,0.4,0.7,0.4],"selected_action_alias":"B","behavioral_hard_failure":false,"activation_sha256":"jinn31","sae_sha256":"sae-jinn"},
+    {"node_id":"beast/L15/civic_pluralist--srt/demo/control","path_id":"path-beast","model_state":"beast","layer":15,"actor_id":"civic_pluralist","route_id":"srt","item_id":"demo","variant":"control","coordinates":[0.8,0.2,0.3,0.9,0.2],"selected_action_alias":"C","behavioral_hard_failure":true,"activation_sha256":"beast15","sae_sha256":"sae-beast"},
+    {"node_id":"beast/L31/civic_pluralist--srt/demo/control","path_id":"path-beast","model_state":"beast","layer":31,"actor_id":"civic_pluralist","route_id":"srt","item_id":"demo","variant":"control","coordinates":[0.9,0.1,0.2,1.0,0.1],"selected_action_alias":"C","behavioral_hard_failure":true,"activation_sha256":"beast31","sae_sha256":"sae-beast"}
+  ],
+  "paths": [
+    {"path_id":"path-base","model_state":"base","node_order":["base/L15/civic_pluralist--srt/demo/control","base/L31/civic_pluralist--srt/demo/control"],"behavioral_hard_failure":false},
+    {"path_id":"path-jinn","model_state":"jinn","node_order":["jinn/L15/civic_pluralist--srt/demo/control","jinn/L31/civic_pluralist--srt/demo/control"],"behavioral_hard_failure":false},
+    {"path_id":"path-beast","model_state":"beast","node_order":["beast/L15/civic_pluralist--srt/demo/control","beast/L31/civic_pluralist--srt/demo/control"],"behavioral_hard_failure":true}
+  ],
+  "calibration": {"matched_random_intervention_required": true, "behavioral_hard_failures_override_mechanistic_evidence": true},
+  "source": {"path": "synthetic fixture", "sha256": "not-an-experimental-receipt"}
+}

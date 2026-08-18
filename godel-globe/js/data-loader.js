@@ -67,6 +67,8 @@
       worst_direction_retention: finite(raw.worst_direction_retention ?? raw.minimum_edge_worst_direction_retention, 0),
       rank: Math.max(1, Math.round(finite(raw.rank, 1))),
       transport_hash: text(raw.transport_hash ?? raw.transport_sha256, "unavailable"),
+      is_sae_path: Boolean(raw.is_sae_path),
+      path_id: raw.path_id ? String(raw.path_id) : null,
       raw
     };
   }
@@ -90,6 +92,10 @@
       orientation_flag: reversal,
       basis_hashes: Array.isArray(raw.basis_hashes) ? raw.basis_hashes.map(String) : raw.basis_hashes ? [String(raw.basis_hashes)] : [],
       max_angle: angles && angles.length ? Math.max(...angles) : null,
+      is_sae_path: Boolean(raw.is_sae_path),
+      model_state: raw.model_state ? String(raw.model_state) : null,
+      node_order: Array.isArray(raw.node_order) ? raw.node_order.map(String) : null,
+      behavioral_hard_failure: Boolean(raw.behavioral_hard_failure),
       raw
     };
   }
@@ -135,10 +141,152 @@
     return "unknown";
   }
 
+  function normalizeSaeBundle(raw, filename) {
+    if (!raw || raw.schema_version !== "godel_sae_path_bundle_v1") {
+      throw new Error(`${filename}: unsupported SAE path bundle schema.`);
+    }
+    const dimensions = Array.isArray(raw.dimensions) ? raw.dimensions : [];
+    if (dimensions.length < 5 || dimensions.length > 15) {
+      throw new Error(`${filename}: SAE path bundle requires 5-15 dimensions.`);
+    }
+    const dimensionIds = dimensions.map((row) => text(row.dimension_id, null));
+    if (dimensionIds.some((value) => !value) || new Set(dimensionIds).size !== dimensionIds.length) {
+      throw new Error(`${filename}: dimension ids must be non-empty and unique.`);
+    }
+    const rawNodes = Array.isArray(raw.nodes) ? raw.nodes : [];
+    const rawPaths = Array.isArray(raw.paths) ? raw.paths : [];
+    if (!rawNodes.length || !rawPaths.length) {
+      throw new Error(`${filename}: SAE path bundle has no nodes or paths.`);
+    }
+    const nodeMetadata = new Map();
+    rawNodes.forEach((node, index) => {
+      const nodeId = text(node.node_id, null);
+      const coordinates = Array.isArray(node.coordinates) ? node.coordinates.map((value) => finite(value, 0)) : [];
+      if (!nodeId || coordinates.length !== dimensionIds.length) {
+        throw new Error(`${filename}: SAE node ${index + 1} has an invalid id or coordinate vector.`);
+      }
+      if (nodeMetadata.has(nodeId)) throw new Error(`${filename}: duplicate SAE node ${nodeId}.`);
+      nodeMetadata.set(nodeId, {
+        state: text(node.model_state, "unknown"),
+        layer: finite(node.layer, null),
+        family: `${text(node.actor_id, "unknown")}--${text(node.route_id, "unknown")}`,
+        sae_coordinates: coordinates,
+        selected_action_alias: node.selected_action_alias ?? null,
+        behavioral_hard_failure: Boolean(node.behavioral_hard_failure),
+        causal_effect: node.causal_effect ?? null,
+        activation_sha256: text(node.activation_sha256, "unavailable"),
+        sae_sha256: text(node.sae_sha256, "unavailable"),
+        variant: text(node.variant, "unknown"),
+        item_id: text(node.item_id, "unknown"),
+        path_id: text(node.path_id, "unknown"),
+        raw: node
+      });
+    });
+
+    const edges = [];
+    const loops = [];
+    rawPaths.forEach((path, pathIndex) => {
+      const pathId = text(path.path_id, null);
+      const nodeOrder = Array.isArray(path.node_order) ? path.node_order.map(String) : [];
+      if (!pathId || nodeOrder.length < 2 || nodeOrder.some((id) => !nodeMetadata.has(id))) {
+        throw new Error(`${filename}: SAE path ${pathIndex + 1} has invalid node_order.`);
+      }
+      const edgeOrder = [];
+      for (let index = 0; index < nodeOrder.length - 1; index += 1) {
+        const edgeId = `${pathId}::step-${index + 1}`;
+        edgeOrder.push(edgeId);
+        edges.push({
+          edge_id: edgeId,
+          source_node: nodeOrder[index],
+          target_node: nodeOrder[index + 1],
+          mean_chordal_lineage: 0.5,
+          worst_direction_retention: 1,
+          rank: 1,
+          transport_hash: text(nodeMetadata.get(nodeOrder[index + 1]).activation_sha256, "unavailable"),
+          is_sae_path: true,
+          path_id: pathId,
+          raw: {
+            edge_id: edgeId,
+            source_node: nodeOrder[index],
+            target_node: nodeOrder[index + 1],
+            mean_chordal_lineage: 0.5,
+            worst_direction_retention: 1,
+            rank: 1,
+            transport_hash: text(nodeMetadata.get(nodeOrder[index + 1]).activation_sha256, "unavailable"),
+            is_sae_path: true,
+            path_id: pathId
+          }
+        });
+      }
+      const rootMetadata = nodeMetadata.get(nodeOrder[0]);
+      loops.push({
+        loop_id: pathId,
+        root_node: nodeOrder[0],
+        edge_order: edgeOrder,
+        det_h: 1,
+        canonical_angles_degrees: [],
+        identity_loss: 0,
+        orientation_flag: false,
+        basis_hashes: nodeOrder.map((id) => nodeMetadata.get(id).sae_sha256),
+        is_sae_path: true,
+        model_state: text(path.model_state, rootMetadata.state),
+        node_order: nodeOrder,
+        behavioral_hard_failure: Boolean(path.behavioral_hard_failure),
+        raw: {
+          ...path,
+          loop_id: pathId,
+          root_node: nodeOrder[0],
+          edge_order: edgeOrder,
+          det_h: 1,
+          canonical_angles_degrees: [],
+          identity_loss: 0,
+          orientation_flag: false,
+          basis_hashes: nodeOrder.map((id) => nodeMetadata.get(id).sae_sha256),
+          is_sae_path: true,
+          model_state: text(path.model_state, rootMetadata.state),
+          node_order: nodeOrder,
+          behavioral_hard_failure: Boolean(path.behavioral_hard_failure)
+        }
+      });
+    });
+    const compiled = compile({
+      name: text(raw.name, "SAE path bundle"),
+      filenames: [filename],
+      edges,
+      loops,
+      anchors: [],
+      certificates: [],
+      calibration: raw.calibration || {}
+    });
+    compiled.mode = "sae_paths";
+    compiled.dimensions = dimensions;
+    compiled.dimensionIds = dimensionIds;
+    const proposedAxes = Array.isArray(raw.default_axes) ? raw.default_axes.map(String) : [];
+    compiled.defaultAxes = proposedAxes.length === 3 && proposedAxes.every((id) => dimensionIds.includes(id))
+      ? proposedAxes
+      : dimensionIds.slice(0, 3);
+    compiled.modelStates = Array.isArray(raw.model_states) ? raw.model_states.map(String) : [];
+    compiled.paths = compiled.loops;
+    compiled.source = raw.source || {};
+    for (const node of compiled.nodes) Object.assign(node, nodeMetadata.get(node.id) || {});
+    for (const path of compiled.paths) path.is_sae_path = true;
+    return compiled;
+  }
+
   async function readFiles(files) {
     const result = { name: "Loaded receipt bundle", edges: [], loops: [], anchors: [], certificates: [], calibration: {}, filenames: [] };
     for (const file of Array.from(files)) {
       const content = await file.text();
+      let whole = null;
+      try {
+        whole = JSON.parse(content);
+      } catch (_) {
+        whole = null;
+      }
+      if (whole?.schema_version === "godel_sae_path_bundle_v1") {
+        if (files.length !== 1) throw new Error("Load an SAE path bundle by itself.");
+        return normalizeSaeBundle(whole, file.name);
+      }
       let sample = null;
       try {
         sample = JSON.parse(content.trim().split(/\r?\n/)[0]);
@@ -222,6 +370,7 @@
     const lineageMax = edgeValues.length ? Math.max(...edgeValues) : 1;
 
     return {
+      mode: "holonomy",
       name: input.name || "Receipt bundle",
       filenames: input.filenames || [],
       edges: Array.from(edgeMap.values()),
@@ -254,5 +403,5 @@
     return Array.from(states);
   }
 
-  window.GodelData = { compile, readFiles, parseNodeId, stableHash, LEVELS };
+  window.GodelData = { compile, normalizeSaeBundle, readFiles, parseNodeId, stableHash, LEVELS };
 }());
