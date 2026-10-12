@@ -354,17 +354,27 @@ v0.24–v0.35 chain (support functionals, cycle polytopes, bisimulation
 transfer, Kraft rounding, mean-payoff games) is competent finite-automata
 theory, but the statement is about nonlinear uncertain control with a
 normally hyperbolic invariant manifold, and no smooth plant was ever treated
-beyond a one-dimensional rational fixture. *Move it:* take the computed-sensor
-reading and do the linear case first. For `x' = Ax + Bu + w` with evaluator
-`y = Cx`, full observability and controllability of the `y`-relevant unstable
-modes, I expect both thresholds to equal `sum log2|lambda|` over those modes
-and the region to be the quadrant (the volume argument applies at either
-interface). If that is right, ASMP-4's content is entirely in the quotient,
-partial-information, and finite-authority cases, and the first theorem to
-write is "rectangularity for LTI, and a smallest non-rectangular witness".
-The repo's v0.7 wedge (non-unique safe actions, finite alphabet) is a
-candidate witness; it should be stated as a theorem about the linear-with-
-constraints class rather than as an ASMP-4 "boundary result".
+beyond a one-dimensional rational fixture. *Move it:* the collapse of the
+two-port region to a quadrant with equal thresholds is already the repo's own
+v0.2/v0.3 bilateral relay theorem, proved under its assumption that the
+sensor may compute any causal function of its observations. The canonical
+text grants that assumption (§2.1), so for the canonical architecture the
+Two-Port Capacity Conjecture's "possibly different quantities" and
+"not rectangular in general" clauses are false, and the common threshold is
+the one-port invariance data rate (invariance entropy; invariance feedback
+entropy for uncertain plants). A continuous uncertain example, `x' = ax + u + w`,
+`|w| <= delta`, `K = [-1,1]`, is worked in
+`ultra-experiments/millennium/asmp4_two_port_scalar_uncertain_20261012/NOTE.md`:
+the corner lies in `[log2(a/(1-delta)), log2 ceil(a/(1-delta))]`, equals the
+lower end exactly when `a/(1-delta)` is an integer or `delta = 0`, and is
+otherwise a quantized combinatorial quantity (numerically bounded there).
+So the threshold depends on `(K, W)` jointly and is not a closed-form
+entropy of the spectrum; the repo's non-integer finite-plant corners are the
+same phenomenon.
+What remains of ASMP-4 is either the invariance-entropy program for nonlinear
+evaluator-relative plants, which has owners, or explicitly asymmetric
+component classes, which v0.2 must freeze; the v0.6–v0.31 chain is correct
+as theorems about such classes.
 
 **ASMP-5 (reflective safety).** The dichotomy's negative half is Rice. The
 positive half is proof-carrying code with an assumed-sound kernel, which is
@@ -490,11 +500,15 @@ open questions.
 3. **Close the prior-art gaps in §2.4** before any external review request.
 4. **Add the holonomy liveness precondition** (§3.3) to the dense-local
    protocol and drop its rank-1 `w1` channel.
-5. **Pick one problem and do mathematics on it.** My recommendation is
-   ASMP-4's linear two-port case (rectangularity or a smallest
-   non-rectangular witness), because it is the only entry where the repo's
-   tools meet the statement's actual object and where I do not already know
-   the answer. Second choice: the ASMP-12 modal-agent census.
+5. **Pick one problem and do mathematics on it.** ASMP-4's canonical
+   two-port question is settled by the repo's own v0.3 theorem plus the
+   quantifier reading (§4), and the scalar uncertain example in the new note
+   bounds its corner and settles it in two parameter families. Next
+   candidates: the ASMP-12 modal-agent
+   proof-budget census (finite, decidable, tied to the literature's open
+   questions); the ASMP-8 finite-sample proxy-training frontier; or an
+   invariance-feedback-entropy computation for a nonlinear evaluator-relative
+   plant.
 6. **Repo hygiene** (§5), in one PR.
 
 I am starting on items 1 and 4 now; see the repairs draft.

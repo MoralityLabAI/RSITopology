@@ -133,20 +133,37 @@ withdrawn as stop conditions, though their mathematics stands.
 > admissible `C`. Theorems for restricted encoder classes `C_Gamma` are
 > partial results and must name `Gamma`.
 
-### First milestone under this reading (not yet done)
+### Consequence under this reading (2026-10-12)
 
-Linear case. `x_(t+1) = A x_t + B u_t + w_t`, evaluator `y = C x`, bounded
-disturbance, `K` a compact evaluator-safe set, full observability and
-controllability of the `y`-relevant unstable modes. Conjecture: the closure
-of `R_K` is the quadrant with corner `(h, h)`, `h = sum log2 |lambda|` over
-those modes, so the region is rectangular and both thresholds coincide. The
-read bound is the data-rate theorem; the write bound should follow from the
-same volume argument applied at the actuator interface (the actuator alphabet
-per step must cover the expansion of the reachable set). If this holds, all
-of ASMP-4's content is in the partial-information, finite-authority, and
-nonlinear-quotient cases, and the v0.7 wedge (non-unique safe actions,
-finite actuator alphabet) is the smallest non-rectangular witness. This is
-the first thing to prove or refute.
+The repository's own `asmp4_serial_collapse_theorem_v0_2` and
+`asmp4_metric_robust_collapse_v0_3` prove, under exactly the item-5
+assumption that the text grants, that the two single-port thresholds
+coincide and `closure(R_K)` is the quadrant `[h, inf)^2` for every symmetric
+transcript cost. So under the canonical text the Two-Port Capacity
+Conjecture's "two possibly different quantities" and "not rectangular in
+general" clauses are false, there are no architecture-dependent tradeoff
+inequalities, and `h` is the one-port invariance data rate (invariance
+entropy; invariance feedback entropy for uncertain plants). Unequal or
+non-rectangular regions require asymmetric component classes, which v0.2
+must freeze explicitly if it wants them.
+
+A continuous uncertain example is worked in
+[`asmp4_two_port_scalar_uncertain_20261012/NOTE.md`](asmp4_two_port_scalar_uncertain_20261012/NOTE.md):
+for `x' = a x + u + w`, `|w| <= delta < 1`, `K = K_0 = [-1, 1]`, with
+`rho = a / (1 - delta)`, the common corner `h*` satisfies
+
+```text
+log2 rho <= h* <= log2 ceil(rho),
+```
+
+with `h* = log2 rho` exactly when `rho` is an integer or `delta = 0`, and in
+general a quantized combinatorial value strictly inside the bracket
+(numerically bounded in the note). The threshold therefore depends on
+`(K, W)` jointly, recovers `log2 a` only as `delta -> 0`, and is not a
+closed-form entropy; v0.2 should name the invariance (feedback) entropy, not a
+sum of Lyapunov exponents, as the read-only specialization target, and should
+expect quantization effects of the kind the finite ASMP-4 censuses already
+exhibit.
 
 ---
 
