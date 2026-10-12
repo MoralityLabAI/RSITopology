@@ -481,14 +481,20 @@ modal-agent census (Barasz et al. agents, GL on the frame ω, 2,220 distinct
 agents, all 24 strict symmetric 2×2 orderings) in
 `ultra-experiments/millennium/asmp12_modal_agent_census_20261012/NOTE.md`.
 Findings: the top-level equilibrium payoff set equals the pure
-individually-rational set in all 24 orderings at two provability atoms;
-mutual cooperation is a Prisoner's Dilemma equilibrium outcome from FairBot
-on and is never destroyed; births and deaths depend on the resource measure
-(none under formula size, 200 under the lexicographic atom order, none in
-the five canonical games under either), so ASMP-12's encoding-invariance
-obligation already fails on a tiny family; and Harmony has a non-Nash
-program equilibrium `(Box(~p), DefectBot)`. The proof-length version the
-draft asks for stays uncomputed.
+individually-rational set in all 24 orderings at two provability atoms, in
+every family tried; mutual cooperation is a Prisoner's Dilemma equilibrium
+outcome from FairBot on and FairBot itself is never exploited;
+births and deaths depend on the resource measure (in the 3-input family:
+none under formula size, 200 under the lexicographic atom order), so
+ASMP-12's encoding-invariance obligation already fails on a tiny family; and
+Harmony has a non-Nash program equilibrium `(Box(~p), DefectBot)`. A second
+engine (§7 of the note) lets agents condition on the opponent's treatment of
+FairBot and PrudentBot (rank 2 in the Barasz et al. sense): "JustBot" merges
+into FairBot, the Prisoner's Dilemma equilibrium count collapses to a few
+hundred pairs that are mostly cooperative, and deaths become generic, in all
+five canonical games under both resource measures, many of them
+"improving" deaths in which a new agent offers the victim's partner mutual
+cooperation. The proof-length version the draft asks for stays uncomputed.
 
 ## 5. Process and engineering
 

@@ -77,10 +77,18 @@ level at most `L`.
 
 | size | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| new agents | 2 | 2 | 10 | 62 | 108 | 520 | 1,516 |
+| new agents | 2 | 2 | 10 | 62 | 108 | 620 | 1,416 |
 
 From 6,736 syntactically distinct formulas, 2,220 semantically distinct
-agents remain.
+agents remain. (Correction, same day: the size of a deduplicated agent is the
+*minimum* formula size over its equivalence class. The first version of
+`modal_census.py` took the size of whichever equal formula was enumerated
+first, which put 100 size-5 agents at size 6; `census_pqDb.json` still
+carries that assignment. The canonical table above comes from the v2 engine's
+regression run, `census_v2_regression_pqDb.json`, which reproduces every other
+number of this note exactly. No equilibrium count, death count, or
+conclusion changes; only the size-5 and size-6 row counts and the per-level
+pair counts at size 5 do.)
 
 ## 3. Semantics and self-test
 
@@ -227,16 +235,21 @@ equilibrium made concrete with a two-symbol formula.
 2. Births and deaths are not invariant to the resource measure. ASMP-12 v0.2
    should state the measure (or demand measure-invariant statements), and
    the existing lookup-table result should be read with the same caveat.
-3. In the five canonical games, growing the family never destroys an
-   equilibrium under either measure. The deaths found by the lookup-table
-   census arise from trust in source labels, which sound provability tests
-   do not extend; this supports the v0.2 package's own reading that
-   extensionality, not resource, is the operative variable, and sharpens it:
-   with sound extensional tests the record is monotone in these games.
-4. Robust cooperation has a one-atom threshold and is permanent, consistent
-   with Barasz et al. and with Critch's bounded version; a modal census
-   cannot say anything about proof-length thresholds, which remain the
-   draft's stated but uncomputed target.
+3. In the 3-input family, growing it never destroys an equilibrium in the
+   five canonical games under either measure; in the families of §7, which
+   can consult the opponent's treatment of FairBot and PrudentBot, deaths
+   occur in all five canonical games under both measures. So the monotone
+   record is a small-family artifact, not a property of provability-
+   conditioned agents. What does hold throughout is that no admitted agent
+   ever exploits an unexploitable cooperator; deaths hit pairs whose other
+   member relies on a gameable condition (a PA+1 test, a non-provability
+   test), and many deaths are improvements, replacing defection or
+   exploitation equilibria by mutual cooperation.
+4. Robust cooperation has a one-atom threshold and FairBot's
+   unexploitability is permanent, consistent with Barasz et al. and with
+   Critch's bounded version; a modal census cannot say anything about
+   proof-length thresholds, which remain the draft's stated but uncomputed
+   target.
 
 ## 6. Claim boundary
 
@@ -247,4 +260,158 @@ equilibria, rank ≥ 2 agents (references to FairBot or others), PA+n for
 n ≥ 2, more than two atoms, the `qC` input, bounded proof search, any
 selection dynamic, and any claim about language models or deployed agents.
 The semantic correspondence in §3 is cited, not reproved. The absence of
-deaths under the size order is a census fact for this family, not a theorem.
+deaths under the size order is a census fact for this family, not a theorem
+(and §7 shows it fails in a larger family).
+
+## 7. Extension: references to FairBot and PrudentBot
+
+Same day, second engine: `modal_census_v2.py`. Agents may now condition on
+the opponent's behaviour against any of four fixed test agents, DefectBot,
+CooperateBot, FairBot `Box(p)`, and PrudentBot `Box(p) & Box(b | ~qDB)`.
+Since PrudentBot itself references DefectBot, agents referencing it have
+rank 2 in the sense of Barasz et al. The engine evaluates the test agents'
+own matches first (DefectBot and CooperateBot are constants, FairBot
+references nothing, PrudentBot references DefectBot), then each agent against
+each test, then the full outcome matrix; the equilibrium pass is vectorised
+with numpy. Deduplication is exact (signature over the full behaviour-input
+space) when the family has at most three behaviour inputs; otherwise agents
+are deduplicated by signature over their own inputs and then merged whenever
+two agents have identical rows and columns in the outcome matrix, which is
+the only equivalence that matters for equilibria inside the family. Resource
+levels are the minimum over each equivalence class. A regression run on the
+§2 family reproduces every number in §4 exactly (2,220 agents; 54,478
+Prisoner's Dilemma equilibrium pairs with 1,578 cooperative; 200 deaths in 7
+orderings under the atoms order, none under size; 344 unexploitable agents,
+40 self-cooperating).
+
+### 7.1 Families
+
+| family | inputs | atoms per agent | formulas | by signature | after behavioural merge |
+|---|---|---|---:|---:|---:|
+| broad | p, qDB, qCB, qFB, qPB, b | ≤ 2, at most one with two inputs | 20,608 | 12,268 | 4,953 |
+| rank-2 core | p, qFB, qPB, b | ≤ 2, each ≤ 2 inputs | see 7.6 | | |
+
+The broad family's outcome matrix took 64 minutes (75 million matches in
+pure Python); the behavioural merge removed 7,315 agents that were
+syntactically distinct but indistinguishable inside the family.
+
+### 7.2 JustBot is FairBot
+
+"JustBot", cooperate iff the opponent provably cooperates with FairBot, is
+`Box(qFB)`. In this semantics it is behaviourally identical to FairBot: both
+cooperate with `X` exactly when `X` provably cooperates with FairBot, and
+every agent's behaviour against the two is the same because every input an
+agent can consult (their actions, and their actions against the four tests)
+coincides. The merge confirms it: `Box(qFB)` does not survive as a separate
+agent in the broad family. FairBot's condition already *is* "you cooperate
+with FairBot".
+
+### 7.3 Equilibria in the five named games (broad family, 4,953 agents)
+
+| game | equilibrium pairs at top | of which mutual cooperation | first size with a cooperative equilibrium |
+|---|---:|---:|---:|
+| Prisoner's Dilemma | 395 | 331 | 2 (FairBot) |
+| Chicken | 40,591 | 331 | 2 |
+| Stag Hunt | 6,182,866 | 6,182,802 | 0 |
+| Deadlock | 7,950 | 0 | never |
+| Harmony | 6,183,104 | 6,182,802 | 0 |
+
+Two things changed against the 3-input family. The Prisoner's Dilemma
+equilibrium count fell from 54,478 pairs to 395, because agents that can
+consult the opponent's treatment of four tests find profitable deviations
+against almost every non-cooperative partner; 331 of the 395 surviving pairs
+are mutual cooperation, and the 64 others are mutual defection. And the
+top-level equilibrium payoff set still equals the pure individually-rational
+set in all 24 orderings.
+
+### 7.4 Deaths now occur in canonical games, and under both orders
+
+| order | total deaths | orderings with deaths | canonical games with deaths |
+|---|---:|---:|---|
+| (atoms, inputs) | 5,632 | 16 of 24 | Deadlock 75, Harmony 12, both at `(1,2) -> (2,1)` |
+| size | 5,460 | 6 of 24 (the six orderings ranking `S` first) | none |
+
+So the §4 finding "no deaths under size" was a property of the small family,
+not of provability-conditioned agents in general; the measure-dependence
+finding stands and is stronger (16 versus 6 orderings, different canonical
+games affected). Two worked deaths:
+
+- Harmony, atoms order: the pair `(Box(F), Box((qCB xor b) negated))` had
+  payoffs (3, 3), one player exploiting; the newly admitted two-atom agent
+  `(~Box(F) & ~Box(qDB)) | (Box(F) & Box(qDB))` reaches mutual cooperation
+  (4, 4) with the second agent, so the exploiter's partner now has a better
+  option and the exploitation equilibrium dies. A death can be an
+  improvement.
+- Deadlock, atoms order: `(DefectBot, Box(qCB xor b))` played mutual
+  defection for (3, 3); the new agent `~Box(F) & Box(qDB)` makes the second
+  agent cooperate while it defects, worth 4 in Deadlock. The victim
+  conditions on behaviour against CooperateBot at world 0 versus later worlds,
+  a non-provability test that two-atom agents can game.
+
+Under the size order the same agents enter together with their killers, so no
+canonical-game death is recorded; the `S`-first orderings lose equilibria
+either way.
+
+### 7.5 Robust cooperation
+
+91 agents are unexploitable (nobody obtains D-against-C versus them) and 23
+of those cooperate with themselves. Beyond the FairBot-with-guards family of
+§4.3 the list now contains `Box(qPB)`, cooperate iff the opponent provably
+cooperates with PrudentBot, and `Box(p & qCB)`, cooperate iff the opponent
+provably cooperates both with me and with CooperateBot, plus several
+`Box(p) & Box(...)` agents that add a test-behaviour guard to FairBot. All
+are FairBot-like in the sense that cooperation is granted only on a provable
+cooperation condition, which soundness makes unexploitable.
+
+### 7.6 Rank-2 core family: deaths in every canonical game, under both orders
+
+Inputs `p, qFB, qPB, b`, two atoms of up to two inputs each (the shape of
+§2): 23,600 formulas, 11,108 by signature, **1,680** after the behavioural
+merge (9,428 agents indistinguishable inside the family; `Box(qFB)` again
+merges into FairBot). Levels: 2, 2, 11, 52, 88, 1,525 by (atoms, inputs);
+sizes 2, 2, 11, 63, 122, 478, 1,002. Outcome matrix: 69 minutes.
+
+| game | PE pairs at top | mutual cooperation | deaths, atoms order | deaths, size order |
+|---|---:|---:|---:|---:|
+| Prisoner's Dilemma | 391 | 310 | 35 | 27 |
+| Chicken | 15,266 | 310 | 96 | 98 |
+| Stag Hunt | 682,118 | 682,037 | 11 | 13 |
+| Deadlock | 4,314 | 0 | 130 | 138 |
+| Harmony | 682,269 | 682,037 | 10 | 8 |
+| all 24 orderings | | | 1,952 in 20 | 2,552 in 20 |
+
+Top-level equilibrium payoffs equal the pure individually-rational set in
+24 of 24 orderings. 68 agents are unexploitable, 20 of them self-cooperating
+(`Box(p)`, `Box(qPB)`, and FairBot-with-guards; the list is in the JSON).
+
+Two kinds of death occur in the Prisoner's Dilemma:
+
+- *improving*: `(DefectBot, X)` with `X = ~Box(qFB | ~qPB)` played mutual
+  defection; the new agent `~Box(p) | Box(b)` reaches mutual cooperation
+  with `X`, worth 3 against the 2 DefectBot obtained, so the defection
+  equilibrium dies because `X`'s partner can now do better by cooperating;
+- *exploitative*: `(FairBot, Y)` with `Y = Box(qFB | b)`, i.e. "cooperate
+  iff PA+1 proves you cooperate with FairBot", played mutual cooperation;
+  the new agent `~Box(F) & Box(p <-> b)` obtains D-against-C versus `Y` (4
+  against FairBot's 3), so the pair dies. FairBot itself is still never
+  exploited; what dies is a pair whose *other* member used a PA+1 condition
+  that a two-atom agent can satisfy without actually cooperating.
+
+So the §4 picture must be corrected in two places. First, deaths are not
+confined to exotic orderings: with references to FairBot and PrudentBot they
+occur in all five canonical games and under both resource measures, from the
+first level where two-atom agents appear. Second, "FairBot's equilibria are
+never destroyed" is true only of FairBot's own unexploitability; equilibria
+in which FairBot's partner relies on a weaker provability condition can die.
+What survives every expansion is the set of pairs of unexploitable mutual
+cooperators, which by definition no admitted agent can improve on.
+
+### 7.7 Claim boundary for §7
+
+Exact for the two families as enumerated, pure program equilibria, strict
+symmetric orderings with payoffs 4, 3, 2, 1, and the two resource measures.
+The behavioural merge is exact for equilibrium questions inside each family
+but makes "number of agents" family-relative. Deaths are classified only by
+the printed examples, not by a full census of killer outcomes. Not covered:
+rank 3 and above, more than two atoms, two two-input atoms in the six-input
+family, mixed equilibria, selection dynamics, bounded proof search.
