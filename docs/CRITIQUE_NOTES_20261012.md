@@ -378,8 +378,9 @@ entropy for uncertain plants). A continuous uncertain example, `x' = ax + u + w`
 `ultra-experiments/millennium/asmp4_two_port_scalar_uncertain_20261012/NOTE.md`:
 the corner lies in `[log2(a/(1-delta)), log2 ceil(a/(1-delta))]`, equals the
 lower end exactly when `a/(1-delta)` is an integer or `delta = 0`, and is
-otherwise a quantized combinatorial quantity (numerically bounded there).
-So the threshold depends on `(K, W)` jointly and is not a closed-form
+otherwise strictly above it (proved), with its exact value the growth rate
+of a one-dimensional fullness dynamic program, bracketed numerically in the
+note. So the threshold depends on `(K, W)` jointly and is not a closed-form
 entropy of the spectrum; the repo's non-integer finite-plant corners are the
 same phenomenon.
 What remains of ASMP-4 is either the invariance-entropy program for nonlinear

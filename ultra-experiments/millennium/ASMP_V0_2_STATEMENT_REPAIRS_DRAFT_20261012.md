@@ -156,14 +156,17 @@ for `x' = a x + u + w`, `|w| <= delta < 1`, `K = K_0 = [-1, 1]`, with
 log2 rho <= h* <= log2 ceil(rho),
 ```
 
-with `h* = log2 rho` exactly when `rho` is an integer or `delta = 0`, and in
-general a quantized combinatorial value strictly inside the bracket
-(numerically bounded in the note). The threshold therefore depends on
-`(K, W)` jointly, recovers `log2 a` only as `delta -> 0`, and is not a
-closed-form entropy; v0.2 should name the invariance (feedback) entropy, not a
-sum of Lyapunov exponents, as the read-only specialization target, and should
-expect quantization effects of the kind the finite ASMP-4 censuses already
-exhibit.
+with `h* = log2 rho` exactly when `rho` is an integer or `delta = 0`, and
+`h* > log2 rho` strictly otherwise (proved in the note by a potential
+argument that charges for the integrality of the child count). The exact
+value is the growth rate of a one-dimensional dynamic program over cell
+fullness, bracketed rigorously by two grid computations (see the note's
+numbers). The threshold therefore depends on `(K, W)` jointly, recovers
+`log2 a` only as `delta -> 0`, and is a quantized quantity rather than a
+closed-form entropy; v0.2 should name the invariance (feedback) entropy, not
+a sum of Lyapunov exponents, as the read-only specialization target, and
+should expect quantization effects of the kind the finite ASMP-4 censuses
+already exhibit.
 
 ---
 

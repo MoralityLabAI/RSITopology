@@ -73,6 +73,76 @@ def dp_upper_bound(a: Fraction, delta: Fraction, G: int, T: int) -> list[tuple[i
     return out
 
 
+def dp_lower_bound(a: Fraction, delta: Fraction, G: int, T: int) -> list[tuple[int, float]]:
+    """Rigorous lower bound on the minimal leaf count of ANY safe code (NOTE.md 4.7).
+
+    Every realised node has fullness f in [0,1]; its children have fullnesses f_i in [0,1]
+    with sum f_i >= a f + rho delta.  Rounding children DOWN to the grid (g_i = floor(G f_i)/G)
+    and crediting each child 1/G of mass (g_i + 1/G > f_i) relaxes the constraint, and the
+    cost of a child only decreases by monotonicity, so the resulting knapsack value is a lower
+    bound on the true DP value V_T(1), hence on |L(T)| for every safe code.
+    """
+    rho = a / (1 - delta)
+    fidx = [0] * (G + 1)
+    for i in range(0, G + 1):
+        fidx[i] = ceil_frac(a * i + G * rho * delta)
+    jmax = fidx[G]
+    V = [1] * (G + 1)
+    out = []
+    for level in range(1, T + 1):
+        W = [0] * (jmax + 1)
+        for j in range(1, jmax + 1):
+            best = None
+            for g in range(0, min(G, j - 1) + 1):   # item weight g+1 <= j
+                c = V[g] + W[j - (g + 1)]
+                if best is None or c < best:
+                    best = c
+            W[j] = best
+        V = [W[fidx[i]] for i in range(G + 1)]
+        out.append((level, math.log2(V[G]) / level))
+    return out
+
+
+def potential_lower_bound(a: Fraction, delta: Fraction) -> tuple[float, float]:
+    """Explicit strict lower bound rho* > rho via the potential f + c (NOTE.md 4.7).
+
+    For c > 0 the growth factor rho'(c) is the minimum over the critical fullness values of
+    L_c(f) / (f + c), L_c(f) = a f + rho delta + c ceil(a f + rho delta).  Returns (rho*, c*).
+    """
+    rho = a / (1 - delta)
+    m0 = rho * delta
+    thresholds = [k for k in range(1, int(math.ceil(float(rho))) + 1) if m0 < k < rho]
+
+    def factor(c: float) -> float:
+        # L_c(f) is linear with slope a between jump points; the ratio L_c/(f+c) is monotone on
+        # each piece, so the minimum over [0,1] is attained at an endpoint of a piece: f = 0,
+        # f = 1, or either side of a jump f_k = (k - rho delta)/a.
+        vals = []
+        m0f = float(m0)
+        vals.append((m0f + c * math.ceil(m0f - 1e-15)) / c)                       # f = 0 exactly
+        vals.append((m0f + c * (math.floor(m0f + 1e-15) + 1)) / c)                # f = 0+, ceiling may step up
+        for k in thresholds:
+            fk = float(k - m0) / float(a)
+            vals.append((k + c * k) / (fk + c))                                   # f_k-: mass k, ceiling k
+            vals.append((k + c * (k + 1)) / (fk + c))                             # f_k+: mass k, ceiling k+1
+        vals.append((float(rho) + c * math.ceil(float(rho) - 1e-15)) / (1 + c))  # f = 1
+        # cross-check on a fine grid
+        for i in range(1, 2000):
+            f = i / 2000.0
+            m = float(a) * f + m0f
+            vals.append((m + c * math.ceil(m - 1e-12)) / (f + c))
+        return min(vals)
+
+    best_c, best = 0.0, float(rho)
+    c = 1e-4
+    while c < 10.0:
+        v = factor(c)
+        if v > best:
+            best, best_c = v, c
+        c *= 1.01
+    return best, best_c
+
+
 def main() -> int:
     G = int(sys.argv[1]) if len(sys.argv) > 1 else 240
     T = int(sys.argv[2]) if len(sys.argv) > 2 else 80
@@ -93,7 +163,15 @@ def main() -> int:
             print(f"  DP interval-cell scheme, horizon {lvl:3d}: upper bound {r:.6f}")
     best = min(r for _, r in dp)
     assert best >= lower - 1e-12, "DP upper bound fell below the proved lower bound"
-    print(f"  best DP upper bound over horizons <= {T}: {best:.6f}  (gap to lower bound {best - lower:.4f})")
+    print(f"  best DP upper bound over horizons <= {T}: {best:.6f}  (gap to mass bound {best - lower:.4f})")
+    rstar, cstar = potential_lower_bound(a, delta)
+    print(f"  potential lower bound: rho* = {rstar:.6f} at c = {cstar:.4f}, log2(rho*) = {math.log2(rstar):.6f} > log2(rho) = {lower:.6f}")
+    assert rstar > float(rho), "strictness failed"
+    dplo = dp_lower_bound(a, delta, G, T)
+    lo_T = dplo[-1][1]
+    print(f"  floor-relaxed DP lower bound at horizon {T}: {lo_T:.6f}  (valid for every safe code)")
+    assert lo_T >= lower - 1e-12 and lo_T <= best + 1e-12
+    print(f"  bracket for h*: [{max(lo_T, math.log2(rstar)):.6f}, {best:.6f}] bits per step")
 
     # Case 2: rho integer (a = 2, delta = 1/3, rho = 3): DP must return exactly 3^T leaves.
     a2, d2 = Fraction(2), Fraction(1, 3)

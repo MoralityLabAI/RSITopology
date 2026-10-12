@@ -11,7 +11,10 @@ schedule attains the lower bound `log2(a/(1-delta))`. Its telescoping step
 used an inequality in the wrong direction; the exact replay in
 `scalar_uncertain_check.py` caught the error (the greedy schedule runs at
 about 1.512 bits per step against a 1.474 lower bound). The corrected
-statement is a two-sided bound with two exact families and an open gap.
+statement was a two-sided bound with two exact families and an open gap; a
+second pass closed the gap with a strictness theorem and an exact
+characterization of the threshold as the growth rate of a one-dimensional
+dynamic program (§4.6–4.7).
 
 ## 1. What the repository already proved
 
@@ -135,14 +138,24 @@ Let `h*` be the infimum of the rates of safe codes. By §1–§2,
 log2 rho  <=  h*  <=  log2 ceil(rho).
 ```
 
-Moreover `h* = log2 rho` in each of the following cases:
+Moreover:
 
-1. `rho = a / (1 - delta)` is an integer (then the uniform `rho`-cell scheme
-   attains it);
-2. `delta = 0` (then `h* = log2 a` for every `a > 1`, attained by a
-   time-varying schedule).
+1. `h* = log2 rho` if `rho = a / (1 - delta)` is an integer (the uniform
+   `rho`-cell scheme attains it) or if `delta = 0` (then `h* = log2 a` for
+   every `a > 1`, attained by a time-varying schedule);
+2. if `delta > 0` and `rho` is not an integer, then `h* >= log2 rho* > log2 rho`,
+   where, with `L_c(f) = a f + rho delta + c ceil(a f + rho delta)`,
 
-For every `T`, every safe code has `|L(T)| >= rho^T`.
+   ```text
+   rho* = sup_(c > 0)  min_(f in [0,1])  L_c(f) / (f + c);
+   ```
+
+3. in every case `h* = lim_T (1/T) log2 V_T(1)`, the growth rate of the
+   fullness dynamic program of §4.6, and for every grid size `G` and horizon
+   `T` the two grid programs of §4.7 give `(1/T) log2 V^lo_T(1) <= h* <=
+   (1/T) log2 V^hi_T(1)`.
+
+For every `T`, every safe code has `|L(T)| >= rho^T` and `|L(T)| >= V_T(1)`.
 
 Sanity limits: at `delta = 0` the value is the classical data-rate
 threshold; as `delta -> 1`, `log2 rho -> infinity`, matching the fact that
@@ -255,65 +268,158 @@ map `theta -> a theta + rho delta` modulo the integer parts removed as full
 cells: a beta-expansion-like recursion whose growth rate equals `rho`
 exactly when the orbit stays on integers.
 
-### 4.5 Numeric bounds
+### 4.5 Upper bounds by computation
 
-`scalar_uncertain_check.py` computes `V_T(1)` by dynamic programming on a
-fullness grid of `1/G` (continuation masses rounded *up* to the grid, so
-every scheme the program finds is a genuine safe scheme and every printed
-rate is a valid upper bound on `h*`), replays the greedy per-step schedule
-`m_t = ceil(rho ell_t)`, and checks the two exact cases. With `G = 240`,
-`T = 80`:
+`scalar_uncertain_check.py` computes `V^hi_T(1)`, the minimal leaf count of
+an interval-cell scheme on a fullness grid of `1/G` with continuation masses
+rounded *up* to the grid, so every scheme the program finds is a genuine safe
+scheme and every printed rate is a valid upper bound on `h*`. It also replays
+the greedy per-step schedule `m_t = ceil(rho ell_t)` and checks the two exact
+cases: for `a = 2`, `delta = 1/3` (`rho = 3`) the program returns exactly
+`3^T` leaves, rate `log2 3`; for `a = 5/2`, `delta = 0` it returns 1.3220 at
+horizon 60 against `log2 a = 1.3219`. The numbers for the running example
+are collected in §4.7.
 
-| `a = 5/2`, `delta = 1/10`, `rho = 25/9` | bits per step |
+### 4.6 Strictness and the exact value
+
+**Fullness.** For a realized node `tau` at depth `t` put
+`f(tau) = (rho/2) lambda(S_t(tau)) in [0, 1]`. By §4.3 (i)–(ii), the
+children `tau s` of `tau` have fullnesses `f_i in [0, 1]` with
+
+```text
+sum_i f_i  >=  a f(tau) + rho delta.                                   (*)
+```
+
+(Every child has measure at most `2/rho`, and together they cover the
+continuation set, whose measure is at least `a lambda(S) + 2 delta`.) The
+number `n` of children is an integer with `n >= sum_i f_i`, hence
+`n >= ceil(a f + rho delta)`.
+
+**Lemma P (potential).** Fix `c > 0` and let
+`rho'(c) = min_(f in [0,1]) L_c(f) / (f + c)`. For every safe code, the
+potential `Phi_t = sum_tau (f(tau) + c)` over the realized nodes at depth `t`
+satisfies `Phi_(t+1) >= rho'(c) Phi_t`. Consequently
+`|L(T)| >= Phi_(T-1) / (1 + c) >= rho rho'(c)^(T-1) / (1 + c)` and
+`h* >= log2 rho'(c)`.
+
+*Proof.* For a node of fullness `f` with children `f_1, …, f_n`, write
+`x = sum_i f_i >= a f + rho delta`. Then
+`sum_i (f_i + c) = x + c n >= x + c ceil(x) >= L_c(f)`, because
+`x -> x + c ceil(x)` is nondecreasing. By definition of `rho'(c)`,
+`L_c(f) >= rho'(c) (f + c)`. Summing over the nodes at depth `t` gives the
+recursion. The depth-0 cells partition `K_0`, so `Phi_0 >= rho`; each node
+contributes at most `1 + c`, so the node count is at least `Phi / (1 + c)`. ∎
+
+*Evaluation of `rho'(c)`.* `L_c` is linear with slope `a` between the jump
+points `f_k = (k - rho delta) / a` (integers `k` with
+`rho delta < k < rho`), where its ceiling steps up by one. On each piece the
+ratio `L_c(f) / (f + c)` is monotone, so the minimum over `[0, 1]` is
+attained at an endpoint of a piece: at `f = 0`, at `f = 1`, or on either side
+of a jump. The script evaluates these points (and a fine grid as a
+cross-check) and maximizes over `c`.
+
+**Strictness.** Let `delta > 0` and `rho` not an integer. At `c -> 0` the
+candidate values are: at `f = 1`, `(rho + c ceil(rho)) / (1 + c)`, which
+exceeds `rho` for every `c > 0` because `ceil(rho) > rho`; at the jumps,
+`k (1 + c) / (f_k + c) -> a k / (k - rho delta)`, which exceeds `rho` because
+`k < rho` (`a k > rho k - rho rho delta` is `k (rho - a) < rho rho delta`,
+i.e. `k < rho`, using `rho - a = rho delta`); at `f = 0`,
+`(rho delta + c ceil(rho delta)) / c -> infinity`. Hence for all small
+`c > 0` every candidate exceeds `rho`, so `rho'(c) > rho` and
+`rho* = sup_c rho'(c) > rho`. This proves part 2 of §4.2.
+
+The two exact families are consistent with the lemma: if `delta = 0` the
+`f = 0` candidate is `c ceil(0) / c = 0`, so no `c` certifies anything above
+`a`, matching `h* = log2 a`; if `rho` is an integer the `f = 1` candidate
+equals `rho` for every `c`, matching `h* = log2 rho`.
+
+**Theorem (exact characterization).** Define `V_0 = 1` on `[0, 1]` and
+
+```text
+V_d(f) = inf { sum_(i=1)^n V_(d-1)(f_i) : n >= 1, f_i in [0,1], sum_i f_i >= a f + rho delta }.
+```
+
+Then every safe code has `|L(T)| >= V_T(1)`, interval-cell schemes attain
+`V_T(1)` (or any value above it), and `h* = lim_T (1/T) log2 V_T(1)`.
+
+*Proof.* `V_d` is nondecreasing in `f` since the constraint set shrinks as
+`f` grows. Lower bound, by induction on `d`: a node of fullness `f` has at
+least `V_d(f)` descendants `d` levels down, because its children satisfy (*)
+and, by the induction hypothesis, child `i` has at least `V_(d-1)(f_i)`
+descendants. The depth-0 cells have fullnesses summing to at least
+`rho = a · 1 + rho delta`, so the number of depth-`(T-1)` nodes, which is
+`|L(T)|`, is at least `V_T(1)`. Upper bound: a cell of fullness `f` is an
+interval of half-length `f / rho`; its continuation is an interval of
+fullness-mass exactly `a f + rho delta`, which can be partitioned into
+interval cells of any prescribed fullnesses summing to that mass, so every
+configuration in the infimum is realizable and an interval scheme achieves
+`V_T(1)` up to any prescribed slack. The limit exists because restarting
+after `T` steps and treating every leaf as full gives
+`V_(T+S)(1) <= V_T(1) V_S(1)`. ∎
+
+So the threshold is the growth rate of a one-dimensional dynamic program
+over fullness, driven by the affine map `f -> a f + rho delta` and the
+integrality of cell counts: a beta-expansion-like object whose rate equals
+`rho` exactly when the dynamics stay on integers (`rho` integral), or when
+`delta = 0` removes the forcing term.
+
+### 4.7 Rigorous numeric bracket
+
+Two grid programs on fullness `i/G`, `i = 0, …, G`, both with continuation
+mass `a i / G + rho delta` rounded up to the grid:
+
+- `V^hi`: children take exact grid fullnesses and must cover the rounded-up
+  mass. Every configuration is a genuine interval scheme, so
+  `(1/T) log2 V^hi_T(1) >= h*`.
+- `V^lo`: children are rounded *down* to the grid, and each child is credited
+  `1/G` of mass (its true fullness is below the rounded value plus `1/G`), so
+  the constraint becomes `sum_i (g_i + 1/G) >= mass`. Every true configuration
+  maps to a feasible relaxed one with no larger cost (by monotonicity of
+  `V`), so `V^lo_T(1) <= V_T(1) <= |L(T)|` for every safe code and
+  `(1/T) log2 V^lo_T(1) <= h*`.
+
+Results for `a = 5/2`, `delta = 1/10`, `rho = 25/9`:
+
+| bound | bits per step |
 |---|---:|
-| proved lower bound `log2 rho` | 1.473931 |
-| best interval-cell scheme found (DP, horizon 80) | 1.490482 |
-| greedy per-step schedule (T = 2000) | 1.511842 |
+| mass lower bound `log2 rho` (§4.3) | 1.473931 |
+| potential lower bound `log2 rho*` (Lemma P; `rho* = 2.796526` at `c = 0.0921`) | 1.483636 |
+| `V^lo`, `G = 240`, `T = 80` | 1.483952 |
+| `V^lo`, `G = 720`, `T = 150` | 1.487110 |
+| `V^hi`, `G = 720`, `T = 150` | 1.489055 |
+| `V^hi`, `G = 240`, `T = 80` | 1.490482 |
+| greedy per-step schedule, `T = 2000` | 1.511842 |
 | uniform scheme `log2 ceil(rho)` | 1.584963 |
 
-The DP bound decreases slowly with the horizon (1.4948 at 10, 1.4923 at 20,
-1.4911 at 40, 1.4905 at 80) and appears to converge well above the lower
-bound. Checks: for `a = 2`, `delta = 1/3` (`rho = 3`) the DP returns exactly
-`3^T` leaves, rate `log2 3`; for `a = 5/2`, `delta = 0` it returns 1.3220 at
-horizon 60 against `log2 a = 1.3219`.
+So `h* in [1.48711, 1.48906]` for this plant: strictly above the mass bound
+by about 0.014 bits per step, and about 0.10 bits below the uniform
+`ceil(rho)` scheme. The gap between the two grid programs is 0.002 bits at
+`G = 720` and shrinks as the grid is refined; no convergence rate is claimed.
 
-### 4.6 What is open
-
-For non-integer `rho` with `delta > 0`, the exact value of `h*` is open. The
-proved bracket for the example is `[1.4739, 1.4905]`. Two remarks bound the
-question:
-
-- Any scheme attaining `log2 rho` must have negligible total emptiness
-  (`N_t - (rho/2) M_t = o(rho^t)` in the notation of §4.3), so almost all of
-  its cells must be nearly full intervals whose continuations partition
-  almost exactly into further nearly full intervals. Interval schemes cannot
-  do this when `rho` is not an integer; non-interval cells have measure
-  strictly below their diameter and lose at step (i). I expect
-  `h* > log2 rho` for every non-integer `rho` with `delta > 0`, but have not
-  proved it.
-- The invariance feedback entropy of Tomar–Rungger–Zamani is defined through
-  finite invariant covers and is exactly this kind of combinatorial growth
-  rate; they prove it is a tight lower bound on the data rate for the
-  history-dependent branching cost [cited]. If the terminal-language and
-  branching rates coincide on this plant, `h*` equals their quantity and is
-  computable by their cover recursion; v0.3 §4 shows the two rates can differ
-  on other uncertain plants, so this is not automatic.
-
-Either way the conclusion for ASMP-4 stands: the canonical threshold of the
-simplest uncertain continuous plant is a quantized combinatorial number that
-depends on `(K, W)` and on the arithmetic of `a / (1 - delta)`, not a
-Lyapunov-exponent sum. The repository's finite-plant corners such as
-`2 + log2 phi` (v0.18) are the same phenomenon on finite alphabets.
+For ASMP-4 the conclusion stands and is now sharp: the canonical threshold of
+the simplest uncertain continuous plant is a quantized number that depends on
+`(K, W)` and on the arithmetic of `a / (1 - delta)`, not a Lyapunov-exponent
+sum, and it is computable to any precision by the two programs above. The
+repository's finite-plant corners such as `2 + log2 phi` (v0.18) are the same
+phenomenon on finite alphabets. Whether the invariance feedback entropy of
+Tomar–Rungger–Zamani (defined through invariant covers for the
+history-dependent branching cost) coincides with `h*` on this plant is not
+settled here; v0.3 §4 shows the two costs can differ on other uncertain
+plants.
 
 ## 5. Claim boundary
 
 Proved here: §4.3 (lower bound for all Borel codes), §4.4 (two upper bounds
-and the two exact families), and the validity of the DP rates in §4.5 as
-upper bounds. Argued here: §2 (a reading of the canonical text; a reader who
-holds that "registered" licenses restricted encoder classes gets a parametric
-problem instead, which the v0.6–v0.31 chain studies). Cited, not reproved:
-the v0.2/v0.3 collapse theorems and the invariance-entropy values in §3. Open:
-§4.6. Not claimed: any result for nonlinear, partially observed, or
+and the two exact families), §4.6 (Lemma P, strictness for non-integer `rho`
+with `delta > 0`, and the exact characterization of `h*` as the growth rate
+of the fullness program), and the validity of both grid bounds in §4.7.
+Argued here: §2 (a reading of the canonical text; a reader who holds that
+"registered" licenses restricted encoder classes gets a parametric problem
+instead, which the v0.6–v0.31 chain studies). Cited, not reproved: the
+v0.2/v0.3 collapse theorems and the invariance-entropy values in §3. Open:
+whether `h*` coincides with the Tomar–Rungger–Zamani invariance feedback
+entropy on this plant, and the convergence rate of the grid bounds. Not
+claimed: any result for nonlinear, partially observed, or
 evaluator-quotient plants beyond what the cited theorems state. Novelty is
 not claimed for the lower bound: Tomar, Rungger, and Zamani (IEEE TAC 66(12),
 2021, doi 10.1109/TAC.2020.3038702; arXiv 1706.05242) give, for uncertain
