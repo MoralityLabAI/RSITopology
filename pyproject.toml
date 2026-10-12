@@ -10,7 +10,10 @@ requires-python = ">=3.11"
 dependencies = ["numpy", "scipy", "scikit-learn"]
 
 [project.optional-dependencies]
-test = ["pytest", "hypothesis"]
+# Used by the repository's scripts and tests but not by the core package.
+test = ["pytest", "hypothesis", "matplotlib", "sympy", "networkx", "psutil"]
+# Model-bearing captures and replays (Qwen); not needed for the CPU controls.
+model = ["torch", "transformers", "bitsandbytes", "safetensors"]
 
 [tool.setuptools.packages.find]
 include = ["rsi_topology*"]

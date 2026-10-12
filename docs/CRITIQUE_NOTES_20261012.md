@@ -521,7 +521,14 @@ cooperation. The proof-length version the draft asks for stays uncomputed.
 - Seal hashes on canonical bytes. `.gitattributes` mandates LF, but at least
   one sealed anchor (ASMP-11 `prior_anchor_v0_2.json`) was computed on a CRLF
   working copy and fails on every compliant checkout (§7). A sealing script
-  should normalize or refuse CR bytes.
+  should normalize or refuse CR bytes. A repository-wide audit
+  (`scripts/audit_receipts.py`, summarized in `docs/REPO_HYGIENE_20261012.md`)
+  finds 3,421 file bindings: 2,798 verify, 36 are CRLF-sealed across 19
+  receipts, 76 no longer match the file (44 of them seals of living summary
+  documents such as the ASMP-9 README, 32 package-level seals of source,
+  protocol and test files that changed after registration, chiefly ASMP-11
+  v0.2.1 and ASMP-9 v0.34), and 489 bind absolute paths on machines other
+  than the reader's.
 
 ## 6. Recommendations, in order
 
