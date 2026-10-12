@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 import pytest
 
@@ -47,10 +47,17 @@ def test_pair_protocol_exposes_exactly_two_states_and_existing_levels():
         pair_analysis_protocol(value, ("naive_qlora", "base"))
 
 
+def _is_absolute_on_any_platform(path: str) -> bool:
+    # The registration binds captures by the absolute path of the machine that
+    # produced them (a Windows drive path). ``Path(...)`` is the host flavour,
+    # so a POSIX test runner would call ``D:\...`` relative; check both flavours.
+    return PurePosixPath(path).is_absolute() or PureWindowsPath(path).is_absolute()
+
+
 def test_bound_paths_and_hashes_have_canonical_shape():
     value = json.loads(REGISTRATION.read_text(encoding="utf-8"))
     for entry in value["state_capture_indices"].values():
-        assert Path(entry["path"]).is_absolute()
+        assert _is_absolute_on_any_platform(entry["path"]), entry["path"]
         assert len(entry["sha256"]) == 64
 
 

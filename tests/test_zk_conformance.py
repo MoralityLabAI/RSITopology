@@ -49,6 +49,11 @@ from rsi_topology.zk.gate_reference import (
 ROOT = Path(__file__).resolve().parents[1]
 GOLDEN_PATH = ROOT / "rsi_topology" / "zk" / "golden_vectors.jsonl"
 DECISION_SEPARATION = 2**-20
+# The float path calls the platform libm (``np.sin``/``np.sqrt``). glibc and the
+# MSVC runtime round a few of the recorded sines differently in the last bit
+# (both within 1 ulp of the true value), so the float replay is compared to a
+# few ulps; the fixed-point path and its canonical hash stay bit-exact.
+FLOAT_REPLAY_REL_TOL = 1e-14
 
 
 def _q_floor(value: float) -> int:
@@ -91,6 +96,29 @@ def _fixed_measurement(raw: dict[str, object]) -> ControlRiskMeasurementFP:
             measured=loop["measured"],
         ),
     )
+
+
+def _assert_float_replay_matches(
+    actual: dict[str, object], expected: dict[str, object], case_id: str
+) -> None:
+    assert actual["ok"] == expected["ok"], case_id
+    if not actual["ok"]:
+        assert actual == expected, case_id
+        return
+    actual_output = actual["output"]
+    expected_output = expected["output"]
+    assert actual_output.keys() == expected_output.keys(), case_id
+    for key, expected_value in expected_output.items():
+        actual_value = actual_output[key]
+        if isinstance(expected_value, float):
+            assert math.isclose(
+                actual_value,
+                expected_value,
+                rel_tol=FLOAT_REPLAY_REL_TOL,
+                abs_tol=FLOAT_REPLAY_REL_TOL,
+            ), (case_id, key, actual_value, expected_value)
+        else:
+            assert actual_value == expected_value, (case_id, key)
 
 
 def _capture(call):
@@ -139,7 +167,7 @@ def test_replay_all_golden_vectors() -> None:
         fixed_path = _capture(
             lambda: predict_control_gate_fp(fixed_measurement, fixed_budget)
         )
-        assert float_path == row["float_path"], row["case_id"]
+        _assert_float_replay_matches(float_path, row["float_path"], row["case_id"])
         assert fixed_path == row["fixed_point"], row["case_id"]
 
         if fixed_path["ok"]:
