@@ -454,11 +454,19 @@ on that question before any new census.
 **ASMP-12 (program equilibrium under resource bounds).** Well posed after the
 Tennenholtz correction; the selection-dynamic question is the good one;
 safety relevance is indirect. Work: finite survival correspondences over a
-three-program universe, an inertial selector. *Move it:* do the modal-agent
-proof-budget census the v0.2 draft proposes (Barasz et al. agents, GL
-provability logic is decidable) for all 2×2 games; that is finite, exact,
-and would be the first ASMP artifact with a direct line to the literature's
-open questions.
+three-program universe, an inertial selector. *Done 2026-10-12:* an exact
+modal-agent census (Barasz et al. agents, GL on the frame ω, 2,220 distinct
+agents, all 24 strict symmetric 2×2 orderings) in
+`ultra-experiments/millennium/asmp12_modal_agent_census_20261012/NOTE.md`.
+Findings: the top-level equilibrium payoff set equals the pure
+individually-rational set in all 24 orderings at two provability atoms;
+mutual cooperation is a Prisoner's Dilemma equilibrium outcome from FairBot
+on and is never destroyed; births and deaths depend on the resource measure
+(none under formula size, 200 under the lexicographic atom order, none in
+the five canonical games under either), so ASMP-12's encoding-invariance
+obligation already fails on a tiny family; and Harmony has a non-Nash
+program equilibrium `(Box(~p), DefectBot)`. The proof-length version the
+draft asks for stays uncomputed.
 
 ## 5. Process and engineering
 
@@ -503,12 +511,12 @@ open questions.
 5. **Pick one problem and do mathematics on it.** ASMP-4's canonical
    two-port question is settled by the repo's own v0.3 theorem plus the
    quantifier reading (§4), and the scalar uncertain example in the new note
-   bounds its corner and settles it in two parameter families. Next
-   candidates: the ASMP-12 modal-agent
-   proof-budget census (finite, decidable, tied to the literature's open
-   questions); the ASMP-8 finite-sample proxy-training frontier; or an
-   invariance-feedback-entropy computation for a nonlinear evaluator-relative
-   plant.
+   bounds its corner and settles it in two parameter families. The ASMP-12
+   modal-agent census is also done (§4). Next candidates: the ASMP-8
+   finite-sample proxy-training frontier; the open ASMP-4 gap; an
+   invariance-feedback-entropy computation for a nonlinear
+   evaluator-relative plant; or extending the ASMP-12 census to rank-2
+   agents and the `qC` input.
 6. **Repo hygiene** (§5), in one PR.
 
 I am starting on items 1 and 4 now; see the repairs draft.
