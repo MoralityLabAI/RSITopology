@@ -222,9 +222,19 @@ problems or three.
 The prior-art-before-freeze standard and the universal "classical" labelling
 are good practice. Two problems remain. First, a reader cannot find the two
 `candidate_new` items among 1,203 files; the repository needs a single
-page listing every claim the authors believe is new, with its package. Second,
-the prior-art lists in the canonical statements miss work that bears directly
-on the frontier being claimed:
+page listing every claim the authors believe is new, with its package. That
+page now exists as a generated ledger,
+`ultra-experiments/millennium/NOVELTY_LEDGER_20261012.md` (built by
+`build_novelty_ledger.py`; regenerate after changes). Its mechanical census
+of 198 packages finds that of the 113 packages with their own prior-art file,
+only 4 carry the novelty sentence the standard requires under a recognizable
+heading and only 2 carry the required conservative external description;
+241 sentences mention novelty, 226 of them to disclaim it, and the
+candidate-new claims the corpus actually makes reduce to a handful (an
+ASMP-1 labelled-versus-signed-gauge threshold lemma, an ASMP-2 "exact
+assembly", two ASMP-9 elementary statements, and the ASMP-1 representation
+boundary). Second, the prior-art lists in the canonical statements miss work
+that bears directly on the frontier being claimed:
 
 | Problem | Missing reference | Why it matters |
 |---|---|---|
