@@ -307,6 +307,17 @@ the regime where identity is good it cannot add information beyond lineage.
 The graded "frustration margin" is the right replacement, but its claim
 boundary should say this.
 
+The obstruction is not special to rank one. For rank `r`, `det H` is the
+holonomy of the induced line bundle `Lambda^r U`, whose edge angle is
+`arccos(prod_i cos alpha_i)`, so orientation reversal needs those angles to
+sum to at least 180°; under floor `tau` each edge contributes at most
+`arccos(tau^(r/2))`. At floor 0.9 the dense-local protocol's 4-edge
+rectangles cannot reverse orientation for any rank up to 6, and its 8-edge
+cycle cannot at rank 1; yet the protocol treats reversal as a categorical
+denial at every rank. A proposed additive amendment and the full table are
+in `protocols/qwen08_dense_local_holonomy_v0_1_1_amendment.json` and
+`reports/holonomy_orientation_liveness_amendment_20261012.md`.
+
 ## 4. Problem-by-problem notes
 
 Format: statement issue; work done; what would move it. "Classical" means the

@@ -314,7 +314,13 @@ holds that "registered" licenses restricted encoder classes gets a parametric
 problem instead, which the v0.6–v0.31 chain studies). Cited, not reproved:
 the v0.2/v0.3 collapse theorems and the invariance-entropy values in §3. Open:
 §4.6. Not claimed: any result for nonlinear, partially observed, or
-evaluator-quotient plants beyond what the cited theorems state; novelty for
-the lower bound, which may well appear in the invariance-feedback-entropy
-literature (not checked). Nothing here is evidence about recursive
-self-improvement.
+evaluator-quotient plants beyond what the cited theorems state. Novelty is
+not claimed for the lower bound: Tomar, Rungger, and Zamani (IEEE TAC 66(12),
+2021, doi 10.1109/TAC.2020.3038702; arXiv 1706.05242) give, for uncertain
+linear systems, a lower bound on invariance feedback entropy in terms of
+`|det A|` and the ratio of the volumes of the invariant set and the
+uncertainty set, of which §4.3 is the scalar case (`a` and `2/(2-2delta)`)
+with a self-contained proof; they also show that static memoryless
+coder-controllers can lose up to one bit per step against the entropy, which
+is why the schedules in §4.4 carry memory. Nothing here is evidence about
+recursive self-improvement.

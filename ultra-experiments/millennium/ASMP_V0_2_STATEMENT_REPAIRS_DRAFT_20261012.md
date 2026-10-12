@@ -239,13 +239,44 @@ of arbitrarily small magnitude anti-aligned with the true reward attains it.
 If `delta` has only polynomial tails under `p_0`
 (`p_0(delta > a) ~ a^(-p)`), concentrate `pi` on `{delta > a}`:
 `KL = -log p_0(delta > a) ~ p log a`, so within budget `lambda` one reaches
-`a ~ exp(lambda / p)` and `E_pi[delta]` of that order. Regret is then
-exponential in `lambda` rather than `sqrt(lambda)`. Kwa et al. (2024) show
-the operational consequence: under heavy-tailed proxy error, KL regularization
-does not prevent the proxy-optimal policy from achieving no true-reward gain.
+`a ~ exp(lambda / p)` and `E_pi[delta]` of that order; the bound
+`2 sup E_pi|delta|` is then exponential in `lambda` and vacuous. What this
+means for regret depends on whether the true reward is bounded:
+
+- unbounded rewards: with `R = -x` and `R_hat = +x` for a heavy-tailed `x`
+  (error `-2x`), the proxy maximiser chases the tail and the true loss itself
+  grows geometrically in `lambda`, about `exp(lambda / p)` per unit
+  (replayed in `asmp8_kl_goodhart_slice_20261012/`);
+- bounded rewards: regret is at most the range, but the proxy maximiser
+  captures none of the available true gain. This is the form proved by Kwa,
+  Thomas, and Garriga-Alonso, *Catastrophic Goodhart: regularizing RLHF with
+  KL divergence does not mitigate heavy-tailed reward misspecification* (arXiv
+  2407.14503, ICML/NeurIPS 2024): light-tailed error lets looser KL penalties
+  reach arbitrarily high true utility, heavy-tailed error lets policies reach
+  arbitrarily high proxy reward with no true gain over the base.
+
 So in the KL slice, the Goodhart frontier is the tail class of the proxy error
 under the base distribution: sub-Gaussian gives `Theta(sigma sqrt(lambda))`
-regret with sharp constant; polynomial tails give exponential regret.
+regret with sharp constant; polynomial tails give either exponential true loss
+(unbounded rewards) or zero captured gain (bounded rewards).
+
+### Finite-sample corollary
+
+If the proxy is learned from `n` samples with a *sup-norm* guarantee
+`sup_omega |delta| <= eps_n` (uniform convergence over a bounded class), then
+`Regret(lambda) <= 2 eps_n` for every `lambda`, with no KL dependence at all:
+the triangle inequality of the proof applies pointwise. If the guarantee is
+only in `L^2(p_0)` (or any moment norm), no bound uniform over the KL ball
+follows, because a KL ball does not bound density ratios (chi-square can be
+unbounded at fixed KL) and an `L^2`-small error can be heavy-tailed. The
+finite-sample frontier is therefore the *type of learning guarantee*, not
+the sample size: uniform-convergence classes are safe at any pressure, moment
+guarantees are not safe at any sample size without a separate tail
+assumption. Beirami et al. (*Theoretical guarantees on the best-of-n
+alignment policy*, arXiv 2401.01879, ICML 2025) show the common formula
+`log n - (n-1)/n` is an upper bound on the best-of-`n` KL, not an identity,
+so best-of-`n` sits inside the KL ball of that radius and inherits these
+bounds.
 
 ### Proposed v0.2 statement
 
@@ -437,8 +468,15 @@ live only when lineage is already degraded or cycles are long.
   ASMP-7 for the known constructions. Proving or refuting these is cheap and
   decides whether there are twelve problems or six.
 - **Prior-art additions** before any external review: van der Vaart ch. 25
-  (ASMP-2); prover–estimator debate (ASMP-3; verify citation); Jia et al.
-  2021, Shavit 2023, Choi et al. 2023 (ASMP-7); Beirami et al. 2024, Kwa et
-  al. 2024 (ASMP-8); natural-distribution undetectability follow-ups
-  (ASMP-11); Barasz et al. 2014, Oesterheld 2019 (ASMP-12); Cachin 1998
-  (ASMP-6).
+  (ASMP-2); Brown-Cohen, Irving, Piliouras, *Avoiding obfuscation with
+  prover-estimator debate*, arXiv 2506.13609, June 2025 (ASMP-3: directly
+  addresses the obfuscated-arguments frontier the statement names); Jia et
+  al. 2021, Shavit 2023, Choi et al. 2023 (ASMP-7); Beirami et al., arXiv
+  2401.01879, ICML 2025, and Kwa, Thomas, Garriga-Alonso, arXiv 2407.14503,
+  2024 (ASMP-8); Kalavasis, Karbasi, Oikonomou, Sotiraki, Velegkas,
+  Zampetakis, *Injecting undetectable backdoors in obfuscated neural networks
+  and language models*, arXiv 2406.05660, NeurIPS 2024, plus
+  natural-distribution undetectability follow-ups (ASMP-11); Barasz et al.
+  2014, Oesterheld 2019 (ASMP-12); Cachin 1998 (ASMP-6); Tomar, Rungger,
+  Zamani, IEEE TAC 2021 (ASMP-4). All of these were checked against their
+  arXiv or publisher pages on 2026-10-12.
