@@ -562,7 +562,9 @@ def main() -> int:
     print(f"unexploitable agents in the top family ({len(unexploitable)}):", ", ".join(unexploitable[:12]), "..." if len(unexploitable) > 12 else "")
     print(f"unexploitable and self-cooperating ({len(coop_unexploitable)}):", ", ".join(coop_unexploitable[:12]), "..." if len(coop_unexploitable) > 12 else "")
     if args.out:
-        with open(args.out, "w", encoding="utf-8") as f:
+        # newline="\n": the repository mandates LF (.gitattributes); a CRLF receipt
+        # would hash differently from its committed blob.
+        with open(args.out, "w", encoding="utf-8", newline="\n") as f:
             json.dump(summary, f, indent=1, sort_keys=True)
         print("wrote", args.out)
     print(f"total {time.time()-t0:.1f}s")
