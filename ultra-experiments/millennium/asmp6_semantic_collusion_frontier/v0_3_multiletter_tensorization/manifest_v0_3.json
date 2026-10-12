@@ -1,0 +1,285 @@
+{
+  "algorithms": {
+    "independent_unrestricted_certificate": "quotient-remainder upper bound plus independently reconstructed uniform-coupling witness",
+    "primary_unrestricted_solver": "exact dynamic program over integer decoder-assignment occupancies, checked against an explicit rational joint witness",
+    "product_solver": "exact tensor product of independently optimized v0.2 single-letter binary couplings",
+    "scalar_type": "fractions.Fraction only; binary floating point is forbidden"
+  },
+  "analysis": {
+    "multiple_comparisons": "none; all twelve prospectively registered cells and all controls are jointly required",
+    "ood_conditions": [
+      "n=1 simple-limit reproduction of the v0.2 one-shot frontier",
+      "m=2,n=2 global-only parity pathology fixture",
+      "full per-message transcript-cover zero-payload control"
+    ],
+    "primary_outcomes": [
+      "unrestricted_block_bayes_error",
+      "product_memoryless_bayes_error",
+      "strict_unrestricted_advantage"
+    ],
+    "stopping_rule": "process registered cells in frozen order and stop before the next cell on any binding failure, exact-feasibility failure, 60-second wall limit, 1008-state bound violation, or one-mebibyte artifact bound; write at most one immutable result containing every completed cell and the deterministic stop reason",
+    "uncertainty": "none; the registered finite optimizations use exact rational arithmetic and exhaustive finite occupancy optimization"
+  },
+  "artifacts": {
+    "raw_rows": "../artifacts_v0_3_multiletter_tensorization/result_v0_3.json#cells",
+    "replay_command": "python -I run.py --source-commit <40-hex-source-commit>",
+    "seed_manifest": "manifest_v0_3.json#seed_plan",
+    "summary": "../artifacts_v0_3_multiletter_tensorization/result_v0_3.json#conclusion_layers",
+    "verification": "../artifacts_v0_3_multiletter_tensorization/verification_v0_3.json"
+  },
+  "benefit": "robustness",
+  "budget": {
+    "execution": "strictly sequential; no subprocess workers and no RNG",
+    "max_cells_per_world": 1000,
+    "max_episodes": 12,
+    "max_traced_python_mib": 64,
+    "max_result_bytes": 1048576,
+    "max_steps_per_episode": 125,
+    "max_wall_seconds": 60
+  },
+  "claim_boundary": [
+    "finite opaque-symbol probability models only",
+    "uniform iid benign transcript cover only",
+    "payload alphabet exactly {0,1}^n with uniform prior",
+    "exact globally message-averaged full-transcript cover only",
+    "product comparator exactly factors one payload bit and one transcript symbol per coordinate",
+    "passive transcript-only decoder with no key, side information, active auditor, or shared latent variable",
+    "no prefix-conditional, adaptive-audit, learned, linguistic, or semantic channel claim",
+    "no asymptotic capacity, square-root law, tensorization theorem beyond the registered grid, or ASMP-6 resolution claim"
+  ],
+  "claim_scope": "model_only",
+  "conclusion_layer_names": [
+    "metric_robustness",
+    "task_result",
+    "measurement_reliability",
+    "claim_support",
+    "operational_decision"
+  ],
+  "controls": [
+    {
+      "name": "n1_reproduction",
+      "type": "simple_limit"
+    },
+    {
+      "name": "per_message_full_transcript_cover",
+      "type": "null"
+    },
+    {
+      "name": "global_only_parity_pathology",
+      "type": "simple_limit"
+    }
+  ],
+  "experimental_unit": "one prospectively registered exact (alphabet_size, block_length) optimization cell",
+  "grid": {
+    "cell_order": "alphabet_size_major_then_block_length",
+    "registered_cells": [
+      {
+        "alphabet_size": 2,
+        "block_length": 1
+      },
+      {
+        "alphabet_size": 2,
+        "block_length": 2
+      },
+      {
+        "alphabet_size": 2,
+        "block_length": 3
+      },
+      {
+        "alphabet_size": 3,
+        "block_length": 1
+      },
+      {
+        "alphabet_size": 3,
+        "block_length": 2
+      },
+      {
+        "alphabet_size": 3,
+        "block_length": 3
+      },
+      {
+        "alphabet_size": 4,
+        "block_length": 1
+      },
+      {
+        "alphabet_size": 4,
+        "block_length": 2
+      },
+      {
+        "alphabet_size": 4,
+        "block_length": 3
+      },
+      {
+        "alphabet_size": 5,
+        "block_length": 1
+      },
+      {
+        "alphabet_size": 5,
+        "block_length": 2
+      },
+      {
+        "alphabet_size": 5,
+        "block_length": 3
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "falsifier": "any registered cell disagrees with the exact occupancy bound or its explicit feasible witness",
+      "id": "H1_unrestricted_finite_frontier",
+      "prediction": "for K=2^n payloads and M=m^n transcripts, unrestricted optimal Bayes error is r(K-r)/(KM), where r=M mod K"
+    },
+    {
+      "falsifier": "any registered product witness violates global cover or any product optimum differs from 1-(1-e_m)^n",
+      "id": "H2_product_comparator",
+      "prediction": "the registered coordinatewise product/memoryless subclass has Bayes error 1-(1-e_m)^n, with e_m=0 for even m and 1/(2m) for odd m"
+    },
+    {
+      "falsifier": "a registered n=1 cell fails to reproduce v0.2 exactly, or full per-message cover beats uniform guessing",
+      "id": "H3_controls",
+      "prediction": "n=1 reproduces v0.2 and exact full per-message transcript cover has zero payload with error 1-1/K"
+    },
+    {
+      "falsifier": "the frozen m=2,n=2 parity fixture fails global cover, fails uniform per-message coordinate marginals, or carries no information",
+      "id": "H4_global_only_pathology",
+      "prediction": "global averaged cover permits correlation-coded information even when every message law has benign single-coordinate marginals"
+    }
+  ],
+  "interventions": [
+    {
+      "changes": {
+        "encoder_class": "all joint conditional laws from {0,1}^n to A_m^n satisfying exact global averaged cover"
+      },
+      "name": "unrestricted_block_encoder"
+    },
+    {
+      "changes": {
+        "encoder_class": "coordinatewise product laws with coordinate t depending only on payload bit t and satisfying the single-letter averaged cover"
+      },
+      "name": "product_memoryless_subclass"
+    }
+  ],
+  "metric_robustness_probes": [
+    {
+      "criterion": "reverse message labels and transcript labels for both reported joint witnesses in every cell; feasibility and Bayes error must be invariant",
+      "family": "invariance",
+      "id": "P1_message_and_transcript_relabeling"
+    },
+    {
+      "criterion": "for odd m in {3,5}, unrestricted and product errors are equal at n=1 and strictly separated at n in {2,3}",
+      "family": "sensitivity",
+      "id": "P2_odd_alphabet_block_sensitivity"
+    },
+    {
+      "criterion": "unrestricted Bayes error is no greater than product-subclass Bayes error in every registered cell",
+      "family": "monotonicity",
+      "id": "P3_encoder_class_inclusion"
+    },
+    {
+      "criterion": "the m=2,n=2 parity fixture passes exact global cover and per-message coordinate marginals while retaining information",
+      "family": "anti_gaming",
+      "id": "P4_global_only_parity_pathology"
+    },
+    {
+      "criterion": "full per-message transcript cover has blind-guess Bayes error 1-1/K in every registered cell",
+      "family": "clean_control",
+      "id": "P5_per_message_cover_blind_control"
+    }
+  ],
+  "metrics": {
+    "denominators": {
+      "cell": "one exact registered (m,n) pair",
+      "decoder_success": "total joint probability mass"
+    },
+    "evidence": [
+      "unrestricted_block_bayes_error",
+      "product_memoryless_bayes_error",
+      "strict_unrestricted_advantage"
+    ],
+    "exposure": {
+      "activation": "both encoder classes are optimized for every registered cell",
+      "balance_tolerance": 0,
+      "eligibility": "manifest-bound cell has K=2^n and M=m^n inside the frozen resource envelope",
+      "minimum_per_condition": 1,
+      "state_change": "both exact joint witnesses are materialized and checked against uniform row and column marginals"
+    },
+    "hazard": [
+      "manifest_binding_failure",
+      "joint_dimension_or_normalization_failure",
+      "float_or_rng_use",
+      "resource_stop",
+      "artifact_overwrite_attempt"
+    ],
+    "selection": []
+  },
+  "model": {
+    "code_hash": "the required --source-commit must contain byte-identical copies of every source-freeze file",
+    "config_paths": [
+      "manifest_v0_3.json",
+      "PROTOCOL_v0_3.md"
+    ],
+    "entrypoint": "run.py",
+    "rng": "none; symbolic split labels below never enter computation",
+    "update_order": "none; each cell is a static finite transportation-polytope optimization"
+  },
+  "protocol_id": "ASMP6-MULTILETTER-TENSORIZATION-v0.3",
+  "question": "On a frozen finite grid, does exact globally averaged transcript cover tensorize the v0.2 binary one-shot optimum, or can unrestricted multiletter couplings outperform the registered coordinatewise product code?",
+  "registration_status": "source_candidate_not_executed_requires_commit_before_run",
+  "resource_guard": {
+    "max_exact_dp_states": 1008,
+    "max_joint_entries_per_cell": 1000,
+    "max_registered_cells": 12,
+    "max_transcript_count": 125,
+    "memory_measurement": "tracemalloc peak Python allocation only; process RSS and native allocator memory are not measured",
+    "on_algorithm_wall_or_traced_memory_stop": "emit one incomplete write-once result with completed prefix only and downgrade every conclusion layer",
+    "on_artifact_byte_stop": "fail closed before exclusive path creation and emit no artifact"
+  },
+  "schema": "alife.experiment.v1",
+  "schema_version": "asmp6_multiletter_tensorization_manifest_v0_3",
+  "seed_plan": {
+    "confirmatory": [
+      "C0-frozen-twelve-cell-grid"
+    ],
+    "discovery": [
+      "D0-source-tests-only-no-grid"
+    ],
+    "holdout": [
+      "H0-import-independent-closed-form-replay"
+    ],
+    "pairing": "symbolic audit partitions only; there is no RNG, stochastic pairing, or adaptive selection"
+  },
+  "semantics": {
+    "benign_cover": "Q_m^n(x)=1/m^n for every x in A_m^n",
+    "decoder": "MAP decoder observes the full transcript and no other variable",
+    "global_cover_constraint": "for every transcript x, (1/K) sum_u P(x|u)=1/M, equivalently the joint column mass is 1/M",
+    "message_count": "K=2^n",
+    "message_prior": "uniform on {0,1}^n",
+    "per_message_control": "P(x|u)=1/M for every u,x",
+    "product_subclass": "P(x|u)=product_t p_t(x_t|u_t), with (p_t(.|0)+p_t(.|1))/2=Q_m at each coordinate",
+    "score": "block MAP Bayes error 1-sum_x max_u J(u,x), where J(u,x)=P(u)P(x|u)",
+    "transcript_count": "M=m^n",
+    "unrestricted_class": "all K by M nonnegative rational joint matrices with row sums 1/K and column sums 1/M"
+  },
+  "source_freeze": {
+    "artifact_execution_before_commit": "forbidden",
+    "files": [
+      "PROTOCOL_v0_3.md",
+      "README.md",
+      "SOURCE_FREEZE.md",
+      "manifest_v0_3.json",
+      "multiletter_tensorization.py",
+      "run.py",
+      "test_multiletter_tensorization.py",
+      "verify_independent.py"
+    ],
+    "ignored_live_cache_policy": "none; __pycache__ is unexpected and scientific launch fails closed",
+    "import_safe_launch": "run.py and verify_independent.py require Python isolated safe-path mode (-I) before any non-builtin import",
+    "live_directory_policy": "exactly the eight frozen regular non-reparse source files and no other live entry",
+    "required": true
+  },
+  "write_once_artifacts": {
+    "primary": "../artifacts_v0_3_multiletter_tensorization/result_v0_3.json",
+    "refuse_existing_paths": true,
+    "verification": "../artifacts_v0_3_multiletter_tensorization/verification_v0_3.json"
+  }
+}

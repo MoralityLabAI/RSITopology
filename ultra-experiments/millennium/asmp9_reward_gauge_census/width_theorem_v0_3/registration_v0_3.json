@@ -1,0 +1,17 @@
+{
+  "registration_id": "ASMP-9-SHARP-WIDTH-v0.3-registration",
+  "registered_at_utc": "2026-07-28T00:00:00Z",
+  "implementation_commit": "e324c726911f0768f4fc3c18cc8fbcc23c5b36c0",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/protocol_v0_3.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/PRIOR_ART_v0_3.md": "61a0c73eb9739022f957d94306735de708de3366dc9e77e15c7f3ca7e811cd1d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/THEOREM_DRAFT_v0_3.md": "8b3e3e9190c02d01ee11f9c52738c12182a3379547a1cb4ef94655a240388592",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/width_theorem.py": "9a644b40086ea80e1898eb30ff337d233f34619758f00cf3c02c82b61383b27c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/test_width_theorem.py": "62978efad1af2212389db390fb5379e82ef28e8ac8e9ef2392a82e9b5ca0dd1a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/PROTOCOL_v0_3.md": "efa6ea00ae3f760f971e907b48b81b37ffc4541950d0c77d1e0028341e4d56cd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/README.md": "e2481ed8bef524a4b334278393b083aa5abfb9ab9981a2b9d6238202bc159f4f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/protocol_v0_3.json": "a5ea2f9491024bc74abf23bfba39b03e4f1dbe9ef75eda7e221df3e52d5e1e0d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/run_verification.py": "e3fc4efca7485703b2a822cdea1bfecc46bb83576586949141723e4a96a7d8f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/width_theorem_v0_3/verify_result.py": "991e76196cb0bf314af7f04b9807f17faa539437664f3e69f3ff09ac3e8afd3a"
+  }
+}

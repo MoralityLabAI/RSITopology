@@ -1,0 +1,468 @@
+{
+  "case_rows": [
+    {
+      "audit": {
+        "claimed_gap": "3/5",
+        "exact": true,
+        "false_closest_witness_valid": true,
+        "false_maximum_dual": {
+          "bound_valid": true,
+          "claimed_upper_bound": "1/5",
+          "coefficient_match": true,
+          "dual_objective": "1/5",
+          "valid": true
+        },
+        "honest_closest_witness_valid": true,
+        "honest_minimum_dual": {
+          "bound_valid": true,
+          "claimed_upper_bound": "-4/5",
+          "coefficient_match": true,
+          "dual_objective": "-4/5",
+          "valid": true
+        },
+        "lower_gap": "3/5",
+        "upper_tv_witness": "3/5"
+      },
+      "case_id": "interval_noise_bands",
+      "certificate": {
+        "acceptance": [
+          "1",
+          "0"
+        ],
+        "claimed_gap": "3/5",
+        "closest_false": [
+          "1/5",
+          "4/5"
+        ],
+        "closest_honest": [
+          "4/5",
+          "1/5"
+        ],
+        "false_dual_y": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "false_dual_z": [
+          "0"
+        ],
+        "false_upper": "1/5",
+        "honest_dual_y": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "honest_dual_z": [
+          "0"
+        ],
+        "honest_lower": "4/5"
+      },
+      "false_polytope": {
+        "A": [
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        "E": [
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "b": [
+          "-1/10",
+          "1/5",
+          "0",
+          "0"
+        ],
+        "dimension": 2,
+        "e": [
+          "1"
+        ]
+      },
+      "honest_polytope": {
+        "A": [
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        "E": [
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "b": [
+          "-4/5",
+          "9/10",
+          "0",
+          "0"
+        ],
+        "dimension": 2,
+        "e": [
+          "1"
+        ]
+      },
+      "interpretation": "continuum law bands retain a constant robust terminal gap"
+    },
+    {
+      "audit": {
+        "claimed_gap": "0",
+        "exact": true,
+        "false_closest_witness_valid": true,
+        "false_maximum_dual": {
+          "bound_valid": true,
+          "claimed_upper_bound": "0",
+          "coefficient_match": true,
+          "dual_objective": "0",
+          "valid": true
+        },
+        "honest_closest_witness_valid": true,
+        "honest_minimum_dual": {
+          "bound_valid": true,
+          "claimed_upper_bound": "0",
+          "coefficient_match": true,
+          "dual_objective": "0",
+          "valid": true
+        },
+        "lower_gap": "0",
+        "upper_tv_witness": "0"
+      },
+      "case_id": "polyhedral_hull_collision",
+      "certificate": {
+        "acceptance": [
+          "0",
+          "0"
+        ],
+        "claimed_gap": "0",
+        "closest_false": [
+          "1/2",
+          "1/2"
+        ],
+        "closest_honest": [
+          "1/2",
+          "1/2"
+        ],
+        "false_dual_y": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "false_dual_z": [
+          "0"
+        ],
+        "false_upper": "0",
+        "honest_dual_y": [
+          "0",
+          "0"
+        ],
+        "honest_dual_z": [
+          "0"
+        ],
+        "honest_lower": "0"
+      },
+      "false_polytope": {
+        "A": [
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        "E": [
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "b": [
+          "-1/2",
+          "1/2",
+          "0",
+          "0"
+        ],
+        "dimension": 2,
+        "e": [
+          "1"
+        ]
+      },
+      "honest_polytope": {
+        "A": [
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        "E": [
+          [
+            "1",
+            "1"
+          ]
+        ],
+        "b": [
+          "0",
+          "0"
+        ],
+        "dimension": 2,
+        "e": [
+          "1"
+        ]
+      },
+      "interpretation": "a false law inside the honest law polytope forces zero gap"
+    },
+    {
+      "audit": {
+        "claimed_gap": "3/5",
+        "exact": true,
+        "false_closest_witness_valid": true,
+        "false_maximum_dual": {
+          "bound_valid": true,
+          "claimed_upper_bound": "1/5",
+          "coefficient_match": true,
+          "dual_objective": "1/5",
+          "valid": true
+        },
+        "honest_closest_witness_valid": true,
+        "honest_minimum_dual": {
+          "bound_valid": true,
+          "claimed_upper_bound": "-4/5",
+          "coefficient_match": true,
+          "dual_objective": "-4/5",
+          "valid": true
+        },
+        "lower_gap": "3/5",
+        "upper_tv_witness": "3/5"
+      },
+      "case_id": "joint_event_robust_bands",
+      "certificate": {
+        "acceptance": [
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        "claimed_gap": "3/5",
+        "closest_false": [
+          "1/5",
+          "4/5",
+          "0",
+          "0"
+        ],
+        "closest_honest": [
+          "4/5",
+          "1/5",
+          "0",
+          "0"
+        ],
+        "false_dual_y": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "false_dual_z": [
+          "0"
+        ],
+        "false_upper": "1/5",
+        "honest_dual_y": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "honest_dual_z": [
+          "0"
+        ],
+        "honest_lower": "4/5"
+      },
+      "equal_marginal_witness": {
+        "false": [
+          "0",
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        "honest": [
+          "1/2",
+          "0",
+          "0",
+          "1/2"
+        ]
+      },
+      "false_polytope": {
+        "A": [
+          [
+            "1",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "E": [
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        ],
+        "b": [
+          "1/5",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "dimension": 4,
+        "e": [
+          "1"
+        ]
+      },
+      "honest_polytope": {
+        "A": [
+          [
+            "-1",
+            "0",
+            "0",
+            "-1"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "E": [
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ]
+        ],
+        "b": [
+          "-4/5",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "dimension": 4,
+        "e": [
+          "1"
+        ]
+      },
+      "interpretation": "a joint event separates large law polytopes despite overlapping coordinate marginals"
+    }
+  ],
+  "certified": true,
+  "claim_boundary": "This removes explicit law enumeration when the induced truthful and false law sets already have polynomial-size rational H-representations. It does not prove that arbitrary interactive ASMP-3 strategy/noise sets admit such representations.",
+  "experiment_id": "ASMP-3-POLYHEDRAL-TV-FRONTIER-v0.9",
+  "gates": {
+    "C0_hull_collision_gap_is_zero": true,
+    "I0_interval_band_gap_is_three_fifths": true,
+    "J0_joint_event_band_gap_is_three_fifths": true,
+    "P0_all_farkas_lower_certificates_valid": true,
+    "P1_all_closest_law_witnesses_feasible": true,
+    "P2_all_polyhedral_optima_exact": true
+  },
+  "parent_result": "ASMP-3-FINITE-TV-FRONTIER-v0.8",
+  "schema_version": "asmp3_polyhedral_tv_frontier_v0_9",
+  "status": "exact_rational_polyhedral_subtheorem",
+  "theorem": {
+    "algorithm": "rational linear program in p,q,t with L1 epigraph constraints",
+    "certificate": "Farkas verifier lower bound plus feasible closest-law TV upper bound",
+    "input": "nonempty rational H-polytopes P,Q contained in the terminal-law simplex",
+    "terminal_verifier": "recovered from the LP dual as a bounded separating function",
+    "value": "distance_TV(P,Q)"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-MACHINE-GRAMMAR-v0.3",
+  "file_count": 26,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_standard_encoding_transfer_v2_21/RELEASE_MANIFEST_v2_21.json": {
+      "bytes": 4543,
+      "sha256": "4425333E332E33D92CEED460E1555406581B536DBFB264540430FF74B731ECED"
+    },
+    "../asmp3_standard_encoding_transfer_v2_21/STANDARD_ENCODING_AND_QUANTIFIER_TRANSFER_THEOREM_v2_21.md": {
+      "bytes": 7417,
+      "sha256": "71F25E2A5AB93861F64247FBB5CC5202CF814F8F7ECCFB04B5ADD0BE3059AFB0"
+    },
+    "../asmp3_standard_encoding_transfer_v2_21/artifacts/standard_encoding_transfer_v2_21.json": {
+      "bytes": 1456081,
+      "sha256": "92C2ECB6BF40DDE15FA6C88409555D45F4BF1266009E59C98D1D8E88F8424C79"
+    },
+    "../asmp3_standard_encoding_transfer_v2_21/artifacts/standard_encoding_transfer_verification_v2_21.json": {
+      "bytes": 1175,
+      "sha256": "3AEBD64E5154AC5861CDF368F682D656F50E52846A5CF004D3307FBECECA24B1"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_typed_successor_v0_2/typed_successor_v0_2.json": {
+      "bytes": 2482,
+      "sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "ADOPTION_CHECKLIST_v0_3.md": {
+      "bytes": 1045,
+      "sha256": "072DD42641BE9614A804492D9B667E58679B78476F091AE511D5D07EEB0BCD2C"
+    },
+    "ASMP3_MACHINE_GRAMMAR_REPORT_v0_3.md": {
+      "bytes": 1965,
+      "sha256": "D5F44CC4DCE103F7645ADC9E9BDC3B17EEF9BFC56EDFA7544C7CCF71C6E8F75E"
+    },
+    "ASMP3_MACHINE_GRAMMAR_SPEC_v0_3.md": {
+      "bytes": 9859,
+      "sha256": "74244EC205A10B3EAD40EECE33AB2D0A50217FBB340950D26A9122CA16EA3EBD"
+    },
+    "BUILTIN_SEMANTICS_v0_3.md": {
+      "bytes": 4182,
+      "sha256": "794916A10F99F0449E1F8CDED95531E22D0841BB2A815F835AE5560B2B033078"
+    },
+    "COMPLETION_AUDIT_v0_3.md": {
+      "bytes": 895,
+      "sha256": "7DEC0E07AFF6F4C2B0B3862FAD368F847461E0C69F7E702D2361064491B5B52C"
+    },
+    "README.md": {
+      "bytes": 729,
+      "sha256": "0D811E2F55F2DDFF7297DC40BF560BACA56A85E7EA1C1971342F1ED9FC273BF0"
+    },
+    "RESOLUTION_EFFECT_v0_3.md": {
+      "bytes": 1781,
+      "sha256": "C8135B6EA1C813441074C0AAF623E419542E4BA5F5010480DEE7B24EB7D417DC"
+    },
+    "artifacts/machine_grammar_v0_3.json": {
+      "bytes": 8949,
+      "sha256": "8D00C7B35B9A69FADD55171173F72EF390F126124FF2213C0D3B7296DFAA127D"
+    },
+    "artifacts/machine_grammar_verification_v0_3.json": {
+      "bytes": 1088,
+      "sha256": "BB8B4E10F2B2DB5AE43AA9E2C26BD97C9D51EA4CD6FA216262F8E0EF9F5AF44E"
+    },
+    "artifacts/v2_21_e17_ADM.machine.json": {
+      "bytes": 5125,
+      "sha256": "E487BCAA5FFA02EE240DF7237EBA292EFD43FB8FCFC7595C818C0FE0C2908042"
+    },
+    "artifacts/v2_21_e17_FIX.machine.json": {
+      "bytes": 5089,
+      "sha256": "A55CC24EF298A05FAD6D603AC43E6FDB64B2142F33D2328903D27D61A75D9D1C"
+    },
+    "asmp3_machine_grammar_v0_3.json": {
+      "bytes": 6502,
+      "sha256": "2F808ED1B4CD11018DFF922EBFC19B50F54D4376A37C605DF727A4FEE3EA0A7F"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2937,
+      "sha256": "D9614911DCC0E840E40DB715DE199E20126FBE5E4CC43CE8DFC48C564E40CEC5"
+    },
+    "machine_grammar.py": {
+      "bytes": 52746,
+      "sha256": "B78DA2E62E58E008EA9E0F5C4ECC1DFE37C4E8C5BD0EBC892549960096E70979"
+    },
+    "run_machine_grammar.py": {
+      "bytes": 443,
+      "sha256": "30D756AEC2A92EFAD915A0BBFA3438B65C4D395587AF37B9CA8D35EBBA6198B1"
+    },
+    "test_machine_grammar.py": {
+      "bytes": 8274,
+      "sha256": "77B4EC9A105ECCADD66589A4B9FF6E75000973C58D7D05C4D14621D1E5462250"
+    },
+    "verify_machine_grammar.py": {
+      "bytes": 14487,
+      "sha256": "43185C9C404DF13CF26CF963F37E71546E3F67107E18485304E6A8FBBF49B93D"
+    }
+  },
+  "release_status": "executable_successor_grammar_v2_21_reduction_compiles_adoption_and_external_review_open",
+  "schema_version": "asmp3_machine_grammar_release_v0_3"
+}

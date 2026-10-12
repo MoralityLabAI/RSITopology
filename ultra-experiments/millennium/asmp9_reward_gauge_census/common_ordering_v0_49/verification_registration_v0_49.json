@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "Verification of finite theorem consequences only; not a prospective empirical result, novelty claim, physical preference-channel validation, or ASMP-9 resolution.",
+  "expected_monotone_binary_table_count": 168,
+  "expected_ordered_pair_count": 28224,
+  "expected_test_count": 7,
+  "protocol_id": "asmp9-common-ordering-verification-v0.49",
+  "registered_at": "2026-07-29T10:57:40-04:00",
+  "resource_ceiling": {
+    "peak_aggregate_working_set_bytes": 536870912,
+    "seconds": 120,
+    "worker_processes": 1
+  },
+  "source_commit": "1bd553ebf65feb5671d0e4ca16853c14b7abf91d",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/DEVELOPMENT_RESULT_v0_49.md": "7cc678bc22e9647493cd5132e169f59c13cd2036eabdb3a84ac0dbb1b73126aa",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/PRIOR_ART_GATE_v0_49.md": "7383c892c4600e6de89d2286b0dcb5072f1f9fd975890ba769a48d92de648b0d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/README.md": "ddcea530bd56bbf45974f84fcc780cd4d0adef749c97c79f0a5947747e58dcb7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/THEOREM_DRAFT_v0_49.md": "0c6fcf4d743e065ad57fa0235d309c8ba86e557fc8c209ea2457e3a0b9823e79",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/VERIFICATION_PROTOCOL_v0_49.md": "bb856aadf2e84e23c8bf6888294cd008aab48e400347c3c24d193a974927290a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/common_ordering.py": "576c4911626977d237a0d9e1ee1cff0c9560ec3f0defa75c6a6aa1973ad57d00",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/test_common_ordering.py": "8562b9c5ed3f80e91d1f1f64aad8c13db4ac578679643c63fc103bf1f3f6cf15",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/verify_theorems_v0_49.py": "eec835144f2a571ca4dce58ce51af6dd02bee0f04cee4f0f3370a9c6473978c4"
+  },
+  "status": "registered_before_verification_sweep",
+  "version": "0.49"
+}

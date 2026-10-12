@@ -1,0 +1,23 @@
+{
+  "schema_version": "asmp5a_bounded_tiling_registration_v0_1",
+  "protocol_id": "asmp5a-explicit-conjunction-tiling-v0.1",
+  "registered_at_utc": "2026-07-21T22:47:55.2105002Z",
+  "status": "prospective_registration_before_claim_census",
+  "source_commit_before_registration": "064fb3c3b0a413230e1be496400debdfeefeac5c",
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/CLAIM_PACKET_v0_1.md": "31c45e2637d45b13a031dca546d151b3a134728796eb84f5c3f9eca40b726637",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/PRIOR_ART_v0_1.md": "23fff44c5b7fb4eb399df51da0273bc470ce9b88ec70b2f1a70b22019df7655e",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/README.md": "fd2ea2ea712bd40ce804c7b8da22e318d8bc1fc65ed24f0745afd7ce5c77fc03",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/protocol_v0_1.json": "7fc0988f1a013cd600b21609018c9c5090eae3d58e3396f225d489e10ce2cc55",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/run.py": "23dd24c4f1b6c29e3f177f1472a7dda493d346405fbb9048449b9ac8e044a87a",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/test_bounded_tiling.py": "a7e3783ae3d21fe44180ae16b1826be34fddd723d967e7eb87dcb67b46f7cf23",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/tiling.py": "ce6f9d7e508f730a2306be4f97902a80bbb773acd31d245abc35d29e1fde0ba0",
+    "ultra-experiments/millennium/asmp5a_bounded_tiling/verify_result.py": "72a4c3d6aef63eed92ef9d4d433db0ff3aa40deb8f9d0440b7f6516a51061725"
+  },
+  "claim_grid": {
+    "obligations": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "architectures": ["chain", "balanced", "optimal_over_full_binary_shapes"],
+    "resource_metrics": ["total_nodes", "depth", "horton_strahler"]
+  },
+  "claim_boundary": "Exact explicit binary-conjunction proof-tree enumeration only; no bounded-Lob or open-ended tiling theorem."
+}

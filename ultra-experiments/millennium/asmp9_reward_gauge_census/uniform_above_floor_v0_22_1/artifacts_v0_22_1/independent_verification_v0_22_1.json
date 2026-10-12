@@ -1,0 +1,72 @@
+{
+  "check_count": 17,
+  "checks": {
+    "all_registered_gates_pass": true,
+    "chorded_cycle_7_r2": true,
+    "chorded_cycle_7_r3": true,
+    "chorded_cycle_7_r5": true,
+    "chorded_cycle_8_r2": true,
+    "chorded_cycle_8_r3": true,
+    "chorded_cycle_8_r5": true,
+    "complete_5_r2": true,
+    "complete_5_r3": true,
+    "complete_5_r5": true,
+    "independent_microtrial": true,
+    "predecessor_binding": true,
+    "registration_hash": true,
+    "result_hash": true,
+    "sealed_hashes": true,
+    "structured_attribution": true,
+    "verdict": true
+  },
+  "independent_microtrial": "125867/131072",
+  "independent_results": {
+    "chorded_cycle_7": {
+      "2": {
+        "availability": "300617/524288",
+        "tutte_value": "601234/729"
+      },
+      "3": {
+        "availability": "477281109/536870912",
+        "tutte_value": "954562218/117649"
+      },
+      "5": {
+        "availability": "559451561882397/562949953421312",
+        "tutte_value": "1118903123764794/887503681"
+      }
+    },
+    "chorded_cycle_8": {
+      "2": {
+        "availability": "1220317/2097152",
+        "tutte_value": "2440634/2187"
+      },
+      "3": {
+        "availability": "3877481121/4294967296",
+        "tutte_value": "7754962242/823543"
+      },
+      "5": {
+        "availability": "17932978933739961/18014398509481984",
+        "tutte_value": "35865957867479922/27512614111"
+      }
+    },
+    "complete_5": {
+      "2": {
+        "availability": "125867/131072",
+        "tutte_value": "1006936/81"
+      },
+      "3": {
+        "availability": "133884143/134217728",
+        "tutte_value": "1071073144/2401"
+      },
+      "5": {
+        "availability": "140736143812943/140737488355328",
+        "tutte_value": "1125889150503544/923521"
+      }
+    }
+  },
+  "pass": true,
+  "result_sha256": "a1039daf298ba89e20c7ca8eccfee9f3428a57712de40043184b1824f01afd5b",
+  "verifier_imports_implementation": false,
+  "verifier_imports_runner": false,
+  "verifier_reuses_preoutcome_v0_22_independent_algorithms": true
+}

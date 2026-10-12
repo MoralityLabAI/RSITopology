@@ -1,0 +1,533 @@
+{
+  "claim_boundary": {
+    "establishes": "One exact-rational composition rule for a finite linear reward quotient with registered deterministic source bounds.",
+    "excludes": [
+      "deriving uncertainty widths from human or model responses",
+      "a minimax stochastic sample-complexity theorem",
+      "strategic, non-scalar, or non-expected-utility demonstrators",
+      "a maximal MDP-equivalence theorem",
+      "resolution of ASMP-9"
+    ]
+  },
+  "controls": {
+    "anisotropic": {
+      "context_design": [
+        [],
+        []
+      ],
+      "localization_widths": [
+        "9/10",
+        "1/100"
+      ],
+      "localized_values": [
+        "0",
+        "1/5"
+      ],
+      "mechanical_row_l1_widths": [
+        "0",
+        "0"
+      ],
+      "midpoint_residual_widths": [
+        "0",
+        "0"
+      ],
+      "nominal_design": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "policies": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "semantic_cell_widths": [],
+      "semantic_incidence": [
+        [],
+        []
+      ]
+    },
+    "context_confounding": {
+      "context_design": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "nominal_design": [
+        [
+          "1"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ]
+    },
+    "mechanical_boundary": {
+      "context_design": [
+        []
+      ],
+      "localization_widths": [
+        "0"
+      ],
+      "localized_values": [
+        "0"
+      ],
+      "mechanical_row_l1_widths": [
+        "1"
+      ],
+      "midpoint_residual_widths": [
+        "0"
+      ],
+      "nominal_design": [
+        [
+          "1"
+        ]
+      ],
+      "semantic_cell_widths": [],
+      "semantic_incidence": [
+        []
+      ]
+    },
+    "semantic_cancellation": {
+      "context_design": [
+        [],
+        []
+      ],
+      "localization_widths": [
+        "0",
+        "0"
+      ],
+      "localized_values": [
+        "1",
+        "-1"
+      ],
+      "mechanical_row_l1_widths": [
+        "0",
+        "0"
+      ],
+      "midpoint_residual_widths": [
+        "0",
+        "0"
+      ],
+      "nominal_design": [
+        [
+          "1"
+        ],
+        [
+          "-1"
+        ]
+      ],
+      "semantic_cell_widths": [
+        "1/10",
+        "1/10"
+      ],
+      "semantic_incidence": [
+        [
+          "1",
+          "-1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ]
+    }
+  },
+  "decision_controls": {
+    "equality": {
+      "localization_width": "1",
+      "localized_value": "1"
+    },
+    "risk": {
+      "localization_width": "1",
+      "localized_value": "1/10",
+      "true_theta_witness": "-9/10"
+    }
+  },
+  "gates": {
+    "G0_registration_binding": "Registration, protocol, environment, and every sealed source hash must match.",
+    "G10_prior_art_and_claim_boundary": "Prior-art and claim-boundary tokens must remain present.",
+    "G11_resource_and_scope": "CPU-only runtime <= 30 seconds and peak resident memory <= 268435456 bytes.",
+    "G1_context_projection": "Primary projected rank is three, LA=I, LC=0, and the context-confounded control is unavailable.",
+    "G2_joint_source_coverage": "The planted joint realization is covered in all seven registered directions.",
+    "G3_mechanical_contraction": "The primary gain is strictly below one; gain one abstains and admits an exact erasure witness.",
+    "G4_semantic_incidence": "Shared-cell incidence yields exact cancellation while the independent-row surrogate is strictly positive.",
+    "G5_support_sharpness": "The registered direction has an exact source vertex attaining the reported support.",
+    "G6_policy_handoff": "The primary policy is certified, equality is inconclusive, and the risk-cell regret bound is attained.",
+    "G7_source_ablation": "Mechanical, localization, midpoint-residual, and semantic source cells are covered jointly and fail when their sole source is omitted.",
+    "G8_shape_advantage": "The zonotope certifies the anisotropic policy comparison while its max-coordinate box relaxation cannot.",
+    "G9_context_rank_no_go": "A reward direction inside the context nuisance space is explicitly nonidentifiable."
+  },
+  "primary_fixture": {
+    "context_design": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "context_parameter": [
+      "1/4",
+      "-1/4"
+    ],
+    "directions": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "-3",
+        "1"
+      ]
+    ],
+    "localization_error": [
+      "1/200",
+      "-1/200",
+      "1/200",
+      "-1/200",
+      "1/200",
+      "-1/200",
+      "1/200",
+      "-1/200"
+    ],
+    "localization_widths": [
+      "1/200",
+      "1/200",
+      "1/200",
+      "1/200",
+      "1/200",
+      "1/200",
+      "1/200",
+      "1/200"
+    ],
+    "mechanical_delta": [
+      [
+        "1/100",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1/100",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/100"
+      ],
+      [
+        "-1/100",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/100",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1/100"
+      ],
+      [
+        "1/200",
+        "1/200",
+        "0"
+      ],
+      [
+        "0",
+        "-1/200",
+        "1/200"
+      ]
+    ],
+    "mechanical_row_l1_widths": [
+      "1/100",
+      "1/100",
+      "1/100",
+      "1/100",
+      "1/100",
+      "1/100",
+      "1/100",
+      "1/100"
+    ],
+    "midpoint_residual": [
+      "-1/250",
+      "1/250",
+      "-1/250",
+      "1/250",
+      "-1/250",
+      "1/250",
+      "-1/250",
+      "1/250"
+    ],
+    "midpoint_residual_widths": [
+      "1/250",
+      "1/250",
+      "1/250",
+      "1/250",
+      "1/250",
+      "1/250",
+      "1/250",
+      "1/250"
+    ],
+    "nominal_design": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "2",
+        "-1",
+        "1"
+      ],
+      [
+        "3",
+        "-1",
+        "1"
+      ],
+      [
+        "2",
+        "0",
+        "1"
+      ],
+      [
+        "2",
+        "-1",
+        "2"
+      ]
+    ],
+    "policies": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "2",
+        "-1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "semantic_cell_widths": [
+      "1/300",
+      "1/300",
+      "1/300",
+      "1/300",
+      "1/300"
+    ],
+    "semantic_incidence": [
+      [
+        "1",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "1",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "-1",
+        "0"
+      ]
+    ],
+    "semantic_residual": [
+      "1/300",
+      "-1/300",
+      "1/300",
+      "-1/300",
+      "0"
+    ],
+    "support_direction": [
+      "2",
+      "-3",
+      "1"
+    ],
+    "theta": [
+      "3/2",
+      "-1/2",
+      "3/4"
+    ]
+  },
+  "protocol_id": "ASMP-9-JOINT-APPROXIMATE-v0.31",
+  "references": [
+    "Frisch and Waugh 1933",
+    "El Ghaoui and Lebret 1997",
+    "Milanese and Vicino 1991",
+    "Boyd and Vandenberghe 2004",
+    "Abbeel and Ng 2004",
+    "Iyengar 2005",
+    "Nilim and El Ghaoui 2005",
+    "ASMP-9 v0.27-v0.30"
+  ],
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 268435456,
+    "wall_seconds": 30
+  },
+  "source_ablation_amplitude": "1/10",
+  "version": "0.31"
+}

@@ -1,0 +1,56 @@
+{
+  "files": {
+    "../README.md": {
+      "bytes": 20575,
+      "sha256": "08bd59e0af38ccace155460bf4fbbce49c6d8f925fd272201f382a3203cf0a73"
+    },
+    "../RESOLUTION_OBLIGATION_MATRIX_v0_39.md": {
+      "bytes": 5107,
+      "sha256": "a6e6cb0084d30cb252a8348f58d95e5ad0b1949ecd720a1451cdac776b15d987"
+    },
+    "PRIOR_ART_GATE_v0_39.md": {
+      "bytes": 2100,
+      "sha256": "6537fb421fd08c56480795ea8213df5a360094958df254f592c16217a690fa04"
+    },
+    "PROTOCOL_v0_39.md": {
+      "bytes": 4796,
+      "sha256": "a137eed9d5b82936b695e448810dab4936f793d4850b49d815ffa42b9f4607c1"
+    },
+    "README.md": {
+      "bytes": 905,
+      "sha256": "16824c3e38a006f861bdabff0d8df6a35522f61fc49d4b6a02d09fe9d2586cb9"
+    },
+    "RESULT_v0_39.md": {
+      "bytes": 5759,
+      "sha256": "656907f71c23d972540b2b09e95e91333827a2c81fc4123b9d7b1e2ff837b53c"
+    },
+    "RUN_RECEIPT_v0_39.json": {
+      "bytes": 1723,
+      "sha256": "195b5ef5a0a20372b32b48fe59a4cde1df348cd7c3b841a897512ab01414a60a"
+    },
+    "THEOREM_DRAFT_v0_39.md": {
+      "bytes": 3804,
+      "sha256": "65146ba5479566c6b817868fd88e9ce255f84075b9bfda2c35dd7dfe861bce9a"
+    },
+    "artifacts_v0_39/RESULT_v0_39.json": {
+      "bytes": 9447,
+      "sha256": "6647db080bd772220290b7d46319185004d53c2d4695d4739cced50254e42cbc"
+    },
+    "artifacts_v0_39/VERIFY_v0_39.json": {
+      "bytes": 504,
+      "sha256": "2ee7cd624fd4d1379ee61ef3e7c17a946eab0363247e7919e631fb169906b024"
+    },
+    "registration_v0_39.json": {
+      "bytes": 2526,
+      "sha256": "2aee1094df09a140e1eae28b52c9bf6fd25b3bbecc99682e5f2b049ce8220a90"
+    },
+    "verify_result_v0_39.py": {
+      "bytes": 4871,
+      "sha256": "c6bb3ef972b25b1f4ce8e3cfdde4da20b7a8b0267d3e9ea804e6777719f889f7"
+    }
+  },
+  "protocol_id": "asmp9-correlated-gauge-access-v0.39",
+  "registration_commit": "20c9437804221c1f66fb7cec97ef62e6113fd004",
+  "result_status": "correlated_gauge_access_alignment_established",
+  "version": "0.39"
+}

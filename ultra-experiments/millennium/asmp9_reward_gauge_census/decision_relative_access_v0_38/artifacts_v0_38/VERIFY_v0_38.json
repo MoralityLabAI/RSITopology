@@ -1,0 +1,144 @@
+{
+  "analytic_checks": [
+    {
+      "cell": [
+        "5/7",
+        "2/7",
+        "1/2"
+      ],
+      "checks": {
+        "append_ancillary_zero": true,
+        "boundary_nonvacuous": true,
+        "drop_ancillary_zero": true,
+        "expanded_missing_gauge": true,
+        "gap": true,
+        "gauge_equals_empty": true,
+        "half_gap": true,
+        "posthoc_empty_formula": true,
+        "q0_deletion": true,
+        "q1_deletion": true,
+        "target_pair_zero": true,
+        "value_gap_strictly_coarser_q0": true,
+        "value_gap_strictly_coarser_q1": true
+      }
+    },
+    {
+      "cell": [
+        "5/7",
+        "2/7",
+        "2/3"
+      ],
+      "checks": {
+        "append_ancillary_zero": true,
+        "boundary_nonvacuous": true,
+        "drop_ancillary_zero": true,
+        "expanded_missing_gauge": true,
+        "gap": true,
+        "gauge_equals_empty": true,
+        "half_gap": true,
+        "posthoc_empty_formula": true,
+        "q0_deletion": true,
+        "q1_deletion": true,
+        "target_pair_zero": true,
+        "value_gap_strictly_coarser_q0": true,
+        "value_gap_strictly_coarser_q1": true
+      }
+    },
+    {
+      "cell": [
+        "7/8",
+        "1/8",
+        "1/2"
+      ],
+      "checks": {
+        "append_ancillary_zero": true,
+        "boundary_nonvacuous": true,
+        "drop_ancillary_zero": true,
+        "expanded_missing_gauge": true,
+        "gap": true,
+        "gauge_equals_empty": true,
+        "half_gap": true,
+        "posthoc_empty_formula": true,
+        "q0_deletion": true,
+        "q1_deletion": true,
+        "target_pair_zero": true,
+        "value_gap_strictly_coarser_q0": true,
+        "value_gap_strictly_coarser_q1": true
+      }
+    },
+    {
+      "cell": [
+        "7/8",
+        "1/8",
+        "2/3"
+      ],
+      "checks": {
+        "append_ancillary_zero": true,
+        "boundary_nonvacuous": true,
+        "drop_ancillary_zero": true,
+        "expanded_missing_gauge": true,
+        "gap": true,
+        "gauge_equals_empty": true,
+        "half_gap": true,
+        "posthoc_empty_formula": true,
+        "q0_deletion": true,
+        "q1_deletion": true,
+        "target_pair_zero": true,
+        "value_gap_strictly_coarser_q0": true,
+        "value_gap_strictly_coarser_q1": true
+      }
+    },
+    {
+      "cell": [
+        "5/8",
+        "3/8",
+        "1/2"
+      ],
+      "checks": {
+        "append_ancillary_zero": true,
+        "boundary_nonvacuous": true,
+        "drop_ancillary_zero": true,
+        "expanded_missing_gauge": true,
+        "gap": true,
+        "gauge_equals_empty": true,
+        "half_gap": true,
+        "posthoc_empty_formula": true,
+        "q0_deletion": true,
+        "q1_deletion": true,
+        "target_pair_zero": true,
+        "value_gap_strictly_coarser_q0": true,
+        "value_gap_strictly_coarser_q1": true
+      }
+    },
+    {
+      "cell": [
+        "5/8",
+        "3/8",
+        "2/3"
+      ],
+      "checks": {
+        "append_ancillary_zero": true,
+        "boundary_nonvacuous": true,
+        "drop_ancillary_zero": true,
+        "expanded_missing_gauge": true,
+        "gap": true,
+        "gauge_equals_empty": true,
+        "half_gap": true,
+        "posthoc_empty_formula": true,
+        "q0_deletion": true,
+        "q1_deletion": true,
+        "target_pair_zero": true,
+        "value_gap_strictly_coarser_q0": true,
+        "value_gap_strictly_coarser_q1": true
+      }
+    }
+  ],
+  "exact_replay_match": true,
+  "exact_replay_requested": true,
+  "registered_cells_checked": 6,
+  "registration_file_sha256": "c8d106eb2181ee561c5509f3af8ccf1309cf7aaf9ccb7c9fb8047b88c8f14a99",
+  "result_content_sha256": "c9f2ac95179813f6f416c0b6d7bc1d3ddde339ee94771c80fcfeb7da70a300ba",
+  "result_file_sha256": "a21a102bfede8dba771292520f8c2161ba2479b209d2ae937f606721f5e7689b",
+  "sealed_files_checked": 15,
+  "status": "verified"
+}

@@ -1,0 +1,528 @@
+{
+  "certified": true,
+  "claim_boundary": "The compiler derives efficient ideal replay only for total restartable oracle-parametric runtimes with a callable charged ideal provider. A recorded noisy transcript or an extensional protocol label does not supply an unvisited ideal branch. The typed successor does not yet mandate this operational contract.",
+  "composition_rows": [
+    {
+      "certified": true,
+      "charged_local_strategy_time": 8,
+      "coupling_failure": "8549269/1220703125",
+      "eta": "1/5",
+      "finder_success": "968013231/1220703125",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 3,
+      "maximum_adaptive_queries": 1,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 47,
+      "parent_trace_extractor_time": 33,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 3,
+      "soundness_upper_bound": "1/5"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 23,
+      "coupling_failure": "1334402197282520917485201616351572971860222424289/211758236813575084767080625169910490512847900390625",
+      "eta": "1/5",
+      "finder_success": "168072187253577546896179298519576819438418097888211/211758236813575084767080625169910490512847900390625",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 9,
+      "maximum_adaptive_queries": 4,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 174,
+      "parent_trace_extractor_time": 137,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 5,
+      "soundness_upper_bound": "1/5"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 83,
+      "coupling_failure": "1582695812536785503380243845026009901061514446412984763848565869556836341267466963705282773232935834033958591578302176103209257953263774946585181467174953202057105152309772036876472551148541729494626325837024092180707527837566782374362368054552123631983169/166326556250318387496486473290910501884632684934011000036134769212750344872873130323634253270599878982347298639560762710202913347498385519593436371856666117959759724526678511903221928471314026125128684482119644679463422998200172742144786752760410308837890625",
+      "eta": "1/5",
+      "finder_success": "131478549187717924493808934787702391606644633500795815265059249500643439557031037295202119843246967351843880320070307992059121420045444640728163916018157941165750674469033037485701070225902679170608321259858691651390030870722571411341467034153776123438329331/166326556250318387496486473290910501884632684934011000036134769212750344872873130323634253270599878982347298639560762710202913347498385519593436371856666117959759724526678511903221928471314026125128684482119644679463422998200172742144786752760410308837890625",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 33,
+      "maximum_adaptive_queries": 16,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 700,
+      "parent_trace_extractor_time": 577,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 7,
+      "soundness_upper_bound": "1/5"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 8,
+      "coupling_failure": "8865808572007084657/984770902183611232881",
+      "eta": "1/3",
+      "finder_success": "3894754565874409508239/4923854510918056164405",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 3,
+      "maximum_adaptive_queries": 1,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 47,
+      "parent_trace_extractor_time": 33,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 3,
+      "soundness_upper_bound": "1/5"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 23,
+      "coupling_failure": "8734348844853142985081839168135776267122973793437522027505812208034476696085979462450917114003450062252649672634953814085025/912034456046446591670769941126967809732389880154759674362919253085466672523897586208912607420113148072606337611541329196453281",
+      "eta": "1/3",
+      "finder_success": "3604466079961520651757670568667192357593944651651851087314147951301694306615160447523395844110435341979162102082990547715387999/4560172280232232958353849705634839048661949400773798371814596265427333362619487931044563037100565740363031688057706645982266405",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 9,
+      "maximum_adaptive_queries": 4,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 174,
+      "parent_trace_extractor_time": 137,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 5,
+      "soundness_upper_bound": "1/5"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 83,
+      "coupling_failure": "71295566528683917847867555514301853867306284838903013046970872944396268001388975497201603839876567762107244392547822791794161098248086054638912183545345256373330571143753639377938699081834359293406502527859954232062979714280145342707882925819585344635283817178468969039318936032603903051543279222461770990773222340336191237021861512858734785015837754932450129415232959990186906552078446262078015649403037766027092901181966573504143344635481843136051766252808916435970211489219864563455533668808148098706101973799348884921828164747977446539909896652509392956441266406010819976410464145809038692168733734362750444463733855766151107024876018739419201/7671961570330456337540289308817201888626720435340294117527505224997140464966884607424984276750719853776649384314777817833768291504179829578183938783400318377807337280151249853834352718887996942860384513390794631665829166597809206546534950496521287814497806506485931856717513822569808645807323475088953810964773288143528199180477677353867185275244188525496804806968413131784291982669239176717201578649178245680463107670599562983108862350696575681810107743615364546436303044696526085742466869356277572840477199504240851911215481947187449624834887169958375964744435223294694306679732474426745268805936040017489904415944380348870771282384876018739419201",
+      "eta": "1/3",
+      "finder_success": "30331368448678405760921819457697298285170350317166661404875166535266580519860593552213929087803496576296061315296372157376102360525478888039541194215874547229362696264886231218447717380142815974974505540923878755503001767819836099472600387356987224534814806940051382581673460610116215067971577504243506388905227040872431840536801401851175067175897565327324968580797487727186233397916564475558416236349697793891716966176488419064914732679608893511560172143197413603565361121340005020152589809081069550868378288147966663220252786965009911266639999196570956894195534561148723126836877576977935881762900491398145865441458852116652329594415123981260580799/38359807851652281687701446544086009443133602176701470587637526124985702324834423037124921383753599268883246921573889089168841457520899147890919693917001591889036686400756249269171763594439984714301922566953973158329145832989046032732674752482606439072489032532429659283587569112849043229036617375444769054823866440717640995902388386769335926376220942627484024034842065658921459913346195883586007893245891228402315538352997814915544311753482878409050538718076822732181515223482630428712334346781387864202385997521204259556077409735937248124174435849791879823722176116473471533398662372133726344029680200087449522079721901744353856411924380093697096005",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 33,
+      "maximum_adaptive_queries": 16,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 700,
+      "parent_trace_extractor_time": 577,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 7,
+      "soundness_upper_bound": "1/5"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 8,
+      "coupling_failure": "8549269/1220703125",
+      "eta": "1/5",
+      "finder_success": "2415758443/3662109375",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 3,
+      "maximum_adaptive_queries": 1,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 47,
+      "parent_trace_extractor_time": 33,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 3,
+      "soundness_upper_bound": "1/3"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 23,
+      "coupling_failure": "1334402197282520917485201616351572971860222424289/211758236813575084767080625169910490512847900390625",
+      "eta": "1/5",
+      "finder_success": "419513267035302606781705645490766262110115133508383/635274710440725254301241875509731471538543701171875",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 9,
+      "maximum_adaptive_queries": 4,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 174,
+      "parent_trace_extractor_time": 137,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 5,
+      "soundness_upper_bound": "1/3"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 83,
+      "coupling_failure": "1582695812536785503380243845026009901061514446412984763848565869556836341267466963705282773232935834033958591578302176103209257953263774946585181467174953202057105152309772036876472551148541729494626325837024092180707527837566782374362368054552123631983169/166326556250318387496486473290910501884632684934011000036134769212750344872873130323634253270599878982347298639560762710202913347498385519593436371856666117959759724526678511903221928471314026125128684482119644679463422998200172742144786752760410308837890625",
+      "eta": "1/5",
+      "finder_success": "327905025063026418482832215046742974066080826528783045780723840816830180721943859756152658221500950462592721504386618892096198921136979714347117199311807376313348133596427707695814439289182427061773489986728217082384723412887645137166486401357164246779831743/498979668750955162489459419872731505653898054802033000108404307638251034618619390970902759811799636947041895918682288130608740042495156558780309115569998353879279173580035535709665785413942078375386053446358934038390268994600518226434360258281230926513671875",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 33,
+      "maximum_adaptive_queries": 16,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 700,
+      "parent_trace_extractor_time": 577,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 7,
+      "soundness_upper_bound": "1/3"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 8,
+      "coupling_failure": "8865808572007084657/984770902183611232881",
+      "eta": "1/3",
+      "finder_success": "647648126217067070597/984770902183611232881",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 3,
+      "maximum_adaptive_queries": 1,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 47,
+      "parent_trace_extractor_time": 33,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 3,
+      "soundness_upper_bound": "1/3"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 23,
+      "coupling_failure": "8734348844853142985081839168135776267122973793437522027505812208034476696085979462450917114003450062252649672634953814085025/912034456046446591670769941126967809732389880154759674362919253085466672523897586208912607420113148072606337611541329196453281",
+      "eta": "1/3",
+      "finder_success": "599288621852777918128764788249842763554470279643068927547773689848943304986512411343490821166071981986151575401725932316883829/912034456046446591670769941126967809732389880154759674362919253085466672523897586208912607420113148072606337611541329196453281",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 9,
+      "maximum_adaptive_queries": 4,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 174,
+      "parent_trace_extractor_time": 137,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 5,
+      "soundness_upper_bound": "1/3"
+    },
+    {
+      "certified": true,
+      "charged_local_strategy_time": 83,
+      "coupling_failure": "71295566528683917847867555514301853867306284838903013046970872944396268001388975497201603839876567762107244392547822791794161098248086054638912183545345256373330571143753639377938699081834359293406502527859954232062979714280145342707882925819585344635283817178468969039318936032603903051543279222461770990773222340336191237021861512858734785015837754932450129415232959990186906552078446262078015649403037766027092901181966573504143344635481843136051766252808916435970211489219864563455533668808148098706101973799348884921828164747977446539909896652509392956441266406010819976410464145809038692168733734362750444463733855766151107024876018739419201/7671961570330456337540289308817201888626720435340294117527505224997140464966884607424984276750719853776649384314777817833768291504179829578183938783400318377807337280151249853834352718887996942860384513390794631665829166597809206546534950496521287814497806506485931856717513822569808645807323475088953810964773288143528199180477677353867185275244188525496804806968413131784291982669239176717201578649178245680463107670599562983108862350696575681810107743615364546436303044696526085742466869356277572840477199504240851911215481947187449624834887169958375964744435223294694306679732474426745268805936040017489904415944380348870771282384876018739419201",
+      "eta": "1/3",
+      "finder_success": "5043345480358286973845658650363832738550507338721293065304699277053697375309867429452787913993936668088992345150637389097384699904538466997483713672054866995498227615623746263178296446843496935946849839732669800211823131350925992354982084071861273198363253853812152268772356945680601860820005704170174102985742303088682608216629923389719388731813621262065419741897042461199341081894081004882723036783382459354281645545884408748568431555828901944737353396157434114521565151641797525931522379235376900461612031029027885722555159800043655636683348216653074583539848882457118717810077852138687807178455292943963852499499186376814363081231707993753526933/7671961570330456337540289308817201888626720435340294117527505224997140464966884607424984276750719853776649384314777817833768291504179829578183938783400318377807337280151249853834352718887996942860384513390794631665829166597809206546534950496521287814497806506485931856717513822569808645807323475088953810964773288143528199180477677353867185275244188525496804806968413131784291982669239176717201578649178245680463107670599562983108862350696575681810107743615364546436303044696526085742466869356277572840477199504240851911215481947187449624834887169958375964744435223294694306679732474426745268805936040017489904415944380348870771282384876018739419201",
+      "fresh_seed_is_distributionally_sufficient": true,
+      "kernel_dispatch_time": 33,
+      "maximum_adaptive_queries": 16,
+      "noisy_seed_recovery_required": false,
+      "oracle_compiled_finder_time": 700,
+      "parent_trace_extractor_time": 577,
+      "remaining_contract": "restartable oracle-parametric runtime, callable charged ideal provider, and trace-complete Refute binding",
+      "seed_sampling_time": 7,
+      "soundness_upper_bound": "1/3"
+    }
+  ],
+  "contract_rows": [
+    {
+      "accepted": false,
+      "mutant": "partial_transition",
+      "mutated_field": "transition_total",
+      "rejection_reason": "partial_transition"
+    },
+    {
+      "accepted": false,
+      "mutant": "hidden_semantic_side_channel",
+      "mutated_field": "semantic_access",
+      "rejection_reason": "hidden_semantic_side_channel"
+    },
+    {
+      "accepted": false,
+      "mutant": "missing_ideal_provider",
+      "mutated_field": "ideal_provider",
+      "rejection_reason": "ideal_provider_unavailable_or_uncharged"
+    },
+    {
+      "accepted": false,
+      "mutant": "recorded_transcript_only",
+      "mutated_field": "runtime_access",
+      "rejection_reason": "runtime_not_restartable"
+    },
+    {
+      "accepted": false,
+      "mutant": "opaque_seed_source",
+      "mutated_field": "seed_source",
+      "rejection_reason": "nonsemantic_seed_sampler_unavailable"
+    },
+    {
+      "accepted": false,
+      "mutant": "post_answer_query_choice",
+      "mutated_field": "query_order",
+      "rejection_reason": "query_selected_after_current_answer"
+    },
+    {
+      "accepted": false,
+      "mutant": "uncharged_local_emulation",
+      "mutated_field": "execution_accounting",
+      "rejection_reason": "kernel_execution_uncharged"
+    },
+    {
+      "accepted": false,
+      "mutant": "decision_only_rejection",
+      "mutated_field": "trace_binding",
+      "rejection_reason": "rejection_trace_not_bound"
+    },
+    {
+      "accepted": true,
+      "mutant": "positive_restartable_kernel",
+      "mutated_field": "runtime_access",
+      "rejection_reason": "certified"
+    },
+    {
+      "accepted": true,
+      "mutant": "positive_restartable_live_interaction",
+      "mutated_field": "runtime_access",
+      "rejection_reason": "certified"
+    }
+  ],
+  "exhaustive_replay_audit": {
+    "canonical_execution_digest_sha256": "8F20B51BECAE639A06D31DC90A0B4A58236776CEFFA5784BC49212F5C96F3A05",
+    "certified": true,
+    "class_counts": [
+      2,
+      3
+    ],
+    "compiler_mismatches": 0,
+    "ideal_executions": 144096,
+    "invalid_bound_traces": 0,
+    "maximum_extracted_witness_dimension": 1,
+    "maximum_query_depth": 3,
+    "policy_programs": 2355,
+    "repeated_class_executions": 111552,
+    "semantic_queries_replayed": 429984,
+    "valid_accept_executions": 36368,
+    "valid_reject_executions": 107728
+  },
+  "experiment_id": "ASMP-3-ORACLE-PARAMETRIC-REPLAY-v2.9",
+  "gates": {
+    "C0_exhaustive_oracle_substitution_matches_direct_ideal_execution": true,
+    "C1_every_compiled_rejection_is_trace_bound_and_extractable": true,
+    "C2_fresh_seed_replay_preserves_the_exact_ideal_marginal_law": true,
+    "C3_adaptive_and_repeated_class_paths_are_covered": true,
+    "C4_all_contract_mutants_are_rejected": true,
+    "C5_both_restartable_runtime_modes_are_accepted": true,
+    "C6_transcript_only_firewall_matches_search_bound": true,
+    "C7_all_replay_and_kernel_resources_are_charged": true,
+    "C8_v2_8_success_margins_survive_replay_compilation": true,
+    "C9_replay_contract_is_operational_not_extensional": true
+  },
+  "parent_result": "ASMP-3-TRACE-BINDING-EXTRACTOR-v2.8",
+  "schema_version": "asmp3_oracle_parametric_replay_v2_9",
+  "seed_marginal_audit": {
+    "canonical_seed_law_digest_sha256": "81DBBA318A668B3DD0902AAE792090A433F25D2B95B9015DBAC1E40D43049A9D",
+    "certified": true,
+    "exact_marginal_equalities": 29056,
+    "fresh_seed_marginal_cases": 29056,
+    "marginal_mismatches": 0,
+    "probability_denominators": [
+      1,
+      12
+    ],
+    "seed_support_size": 3
+  },
+  "status": "oracle_parametric_ideal_replay_compiler_with_transcript_firewall",
+  "supporting_results": [
+    "ASMP-3-ADAPTIVE-TRANSCRIPT-COUPLING-v2.7",
+    "ASMP-3-HONEST-SEARCH-BARRIER-v2.1"
+  ],
+  "theorem": {
+    "compiler": "sample a fresh nonsemantic seed and execute the same total restartable runtime with its semantic provider replaced by H",
+    "finder_success": "alpha>=1-s-delta_q after v2.7 and v2.8 composition",
+    "ideal_law": "Law(Replay(H)) equals the ideal protocol law exactly",
+    "pathwise_coupling": "shared seeds may be used in the proof coupling, but the finder needs only an independent seed with the same marginal law",
+    "time": "SeedSample+KernelRun+V+q*Eval_H+TraceWrite+TraceScan+Canonicalize"
+  },
+  "transcript_only_firewall_rows": [
+    {
+      "additional_ideal_probe_budget": 2,
+      "best_transcript_only_worst_world_success": "1/2",
+      "best_transcript_plus_probes_success": "1",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 2,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 2,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/3",
+      "best_transcript_plus_probes_success": "1",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 3,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 3,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/4",
+      "best_transcript_plus_probes_success": "3/4",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 4,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 4,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/5",
+      "best_transcript_plus_probes_success": "3/5",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 5,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 5,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/6",
+      "best_transcript_plus_probes_success": "1/2",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 6,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 6,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/7",
+      "best_transcript_plus_probes_success": "3/7",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 7,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 7,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/8",
+      "best_transcript_plus_probes_success": "3/8",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 8,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 8,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/9",
+      "best_transcript_plus_probes_success": "1/3",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 9,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 9,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/10",
+      "best_transcript_plus_probes_success": "3/10",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 10,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 10,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/11",
+      "best_transcript_plus_probes_success": "3/11",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 11,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 11,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/12",
+      "best_transcript_plus_probes_success": "1/4",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 12,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 12,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/13",
+      "best_transcript_plus_probes_success": "3/13",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 13,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 13,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/14",
+      "best_transcript_plus_probes_success": "3/14",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 14,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 14,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/15",
+      "best_transcript_plus_probes_success": "1/5",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 15,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 15,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/16",
+      "best_transcript_plus_probes_success": "3/16",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 16,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 16,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/17",
+      "best_transcript_plus_probes_success": "3/17",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 17,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 17,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/18",
+      "best_transcript_plus_probes_success": "1/6",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 18,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 18,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/19",
+      "best_transcript_plus_probes_success": "3/19",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 19,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 19,
+      "oracle_parametric_replay_success": "1"
+    },
+    {
+      "additional_ideal_probe_budget": 3,
+      "best_transcript_only_worst_world_success": "1/20",
+      "best_transcript_plus_probes_success": "3/20",
+      "certified": true,
+      "distinct_unvisited_ideal_witnesses": 20,
+      "ideal_runtime_semantic_queries": 2,
+      "identical_recorded_noisy_traces": 1,
+      "marker_count": 20,
+      "oracle_parametric_replay_success": "1"
+    }
+  ]
+}

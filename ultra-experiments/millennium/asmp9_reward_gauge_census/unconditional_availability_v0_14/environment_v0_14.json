@@ -1,0 +1,9 @@
+{
+  "cpu_only": true,
+  "executable": "C:\\Python311\\python.exe",
+  "gpu_prohibited": true,
+  "implementation": "CPython",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.11.4",
+  "third_party_runtime_dependencies": []
+}

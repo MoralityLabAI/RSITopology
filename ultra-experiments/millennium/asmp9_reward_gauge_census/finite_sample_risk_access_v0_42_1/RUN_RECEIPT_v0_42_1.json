@@ -1,0 +1,29 @@
+{
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_risk_access_v0_42_1/execute_confirmation_v0_42_1.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_risk_access_v0_42_1/verify_result_v0_42_1.py"
+  },
+  "elapsed_seconds": 159.2827169999946,
+  "gates": {
+    "A0": true,
+    "C0": true,
+    "D0": true,
+    "H0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "U0": true
+  },
+  "parent_failed_registration_sha256": "689bb44d7bf20b1ff6e9966fcd666a6a3927b64c54ad64eb5471789bb2761ca4",
+  "peak_working_set_bytes": 77377536,
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42.1",
+  "registration_sha256": "0a4c40833c8fe58e8a620a7a6bb7759956c616ab9bc3bd2a0aa9eb55aa3bf6f0",
+  "repair_implementation_commit": "9b2de93a94aa944cc9269c40171f0a88e2cc09c9",
+  "repair_registration_commit": "d522c44be3f57433e2a6d31bb145320fa8bf0f66",
+  "result_content_sha256": "b686c61c830aebb8cfb416e5113758831bc56a34f6d41712a173df6bc2a6ab2c",
+  "result_file_sha256": "2b4a20d7e347e54f5467bd3306202697f9638256c2d1505a1bb741f2bb7aa450",
+  "status": "finite_sample_sequential_risk_access_confirmation_established",
+  "verify_file_sha256": "718edcfed18ac101cc617e83d19ec12dceb25131d07b706eaa7c0d9bb317e710",
+  "version": "0.42.1"
+}

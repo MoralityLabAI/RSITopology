@@ -1,0 +1,53 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-cuda-throughput-single-v0-1-20260723",
+  "purpose": "Non-claim CUDA prompt-processing throughput benchmark at the frozen manifest mean prompt length.",
+  "measurement_contract": {
+    "model": "Qwen3.5 0.8B Q4_K_M",
+    "prompt_tokens": 128,
+    "manifest_mean_tokens": 127.16840277777777,
+    "repetitions": 10,
+    "parallel_prompts": 1,
+    "generation": false,
+    "gradients": false,
+    "weights_modified": false
+  },
+  "resource_caps": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 600,
+    "gpu_allowance_mb": 1600,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_cuda_throughput_single_v0_1"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_cuda_throughput_single_v0_1\\wrapper",
+  "checkpoint_strategy": "llama-bench internal warmup plus ten repeated prompt-processing trials",
+  "exact_inner_command": [
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064-cuda12.4\\payload\\llama-bench.exe",
+    "--model",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--n-prompt",
+    "128",
+    "--n-gen",
+    "0",
+    "--repetitions",
+    "10",
+    "--threads",
+    "6",
+    "--n-gpu-layers",
+    "99",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "128",
+    "--output",
+    "json"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  }
+}

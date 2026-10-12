@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-INDEPENDENT-NOISE-AMPLIFICATION-v1.8",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_expected_weighted_noise_v1_7/EXPECTED_WEIGHTED_NOISE_THEOREM_v1_7.md": {
+      "bytes": 6284,
+      "sha256": "7CBEAAC74A516B5E5CD2C31CDE348897D967094E3FC6BB85F8148F5711DFEB1A"
+    },
+    "../asmp3_expected_weighted_noise_v1_7/RELEASE_MANIFEST_v1_7.json": {
+      "bytes": 2991,
+      "sha256": "B2CA6A88EE59468DD66A342EA1526EC5EA9E12078015EB66A5EDE2548E447E5E"
+    },
+    "../asmp3_expected_weighted_noise_v1_7/artifacts/expected_weighted_noise_v1_7.json": {
+      "bytes": 2695671,
+      "sha256": "C45A16E9836BD422BE69749715B477E50444D979A81371EF2902B2FDB6B5D01C"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_8.md": {
+      "bytes": 2019,
+      "sha256": "CB92B8DA91F1788C36C012F16F4B98E1A27C84AA58A8D42CC45B94C6BAD09EEE"
+    },
+    "INDEPENDENT_NOISE_AMPLIFICATION_THEOREM_v1_8.md": {
+      "bytes": 6330,
+      "sha256": "4E473CC86D470FE0F836D7B060D4BD046BC2B366A2C9F015AF13754AE7F16CF0"
+    },
+    "README.md": {
+      "bytes": 758,
+      "sha256": "8B61715ADC52F26C961A17E0756B93C53937E8D27156B11125AECB88E2A09E68"
+    },
+    "artifacts/independent_noise_amplification_v1_8.json": {
+      "bytes": 634098,
+      "sha256": "937308CDB7F321516B0CFCC76AA7167E5B7542E0812E52BD63D493130D90750B"
+    },
+    "artifacts/independent_noise_amplification_verification_v1_8.json": {
+      "bytes": 830,
+      "sha256": "115689625AA5C09CF5277CF62BFADAB49B2C7F8C78C0B49054B847159A6CB393"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2565,
+      "sha256": "9959768D14D2BCD13F06FAD140E7F24BE7E3270B31DA09B76F4FCBBFF68DF909"
+    },
+    "independent_noise_amplification.py": {
+      "bytes": 10522,
+      "sha256": "89A363596B9D92B8237041F014CE4175CC3CF1C3DA11B5412C03CE927B385D4D"
+    },
+    "run_independent_noise_amplification.py": {
+      "bytes": 906,
+      "sha256": "D4BC4909904F0C871DC675BF31DDA5CB22A6F71DDA002F211D434B67B955B710"
+    },
+    "test_independent_noise_amplification.py": {
+      "bytes": 4397,
+      "sha256": "03E2A7F47EC82FDAA2F806E755F3636109A438FA6272C67D78CDF14B13958347"
+    },
+    "verify_independent_noise_amplification.py": {
+      "bytes": 7779,
+      "sha256": "46D59F190122700262B228CFC35F5B2463270A3D505A3EAB7D3DCC583D373B2C"
+    }
+  },
+  "release_status": "exact_iid_replication_amplification_profile",
+  "schema_version": "asmp3_independent_noise_amplification_release_v1_8"
+}

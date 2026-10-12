@@ -1,0 +1,1190 @@
+{
+  "base_protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13",
+  "binding_checks": {
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/DEVELOPMENT_CENSUS_v0_13.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/DEVELOPMENT_NOTE_v0_13.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/DEVELOPMENT_RECEIPT_v0_13.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/EXECUTION_ATTEMPT_v0_13.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/EXECUTION_ATTEMPT_v0_13_1.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PRIOR_ART_GATE_v0_13.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PROTOCOL_AMENDMENT_v0_13_1.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PROTOCOL_AMENDMENT_v0_13_2.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PROTOCOL_v0_13.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/README.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/REPAIR_NOTE_v0_13_1.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/REPAIR_NOTE_v0_13_2.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/THEOREM_DRAFT_v0_13.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/THEOREM_v0_13.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/conditional_fiber.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/development_census.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/environment_v0_13.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/experiment.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/optimized_experiment_v0_13_1.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/optimized_experiment_v0_13_2.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13_1.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13_2.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/registration_v0_13.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/registration_v0_13_1.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/run_verification_v0_13_1.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/run_verification_v0_13_2.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/streaming_exact_v0_13_1.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_conditional_fiber.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_experiment.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_optimized_experiment_v0_13_1.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_optimized_experiment_v0_13_2.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_run_verification_v0_13_2.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_streaming_exact_v0_13_1.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/verify_result.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/verify_result_v0_13_1.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/verify_result_v0_13_2.py": true,
+    "head_is_registration_commit": true,
+    "implementation_is_ancestor": true,
+    "tracked_tree_clean": true
+  },
+  "claim_boundary": "Exact conditional finite-graph Bradley-Terry quotient and fresh one-cycle calibration; not unconditional goodness-of-fit, positive scalarity certification, dependent or unknown-link behavior, general IRL, or ASMP-9 resolution.",
+  "elapsed_seconds": 11.137200100027258,
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_graph_arithmetic": true,
+    "G2_scalar_nuisance_cancellation": true,
+    "G3_visible_quotient": true,
+    "G4_nonvacuous_statuses": true,
+    "G5_one_cycle_formula": true,
+    "G6_exact_conditional_test": true,
+    "G7_fresh_power_calibration": true,
+    "G8_claim_boundary_telemetry": true,
+    "G9_resource_envelope": true
+  },
+  "liveness": {
+    "cell_count": 15,
+    "gauge_factor_mismatch_count": 0,
+    "graph_arithmetic_mismatch_count": 0,
+    "graph_count": 5,
+    "mass_mismatch_count": 0,
+    "missing_deficient_graph_count": 0,
+    "missing_full_rank_graph_count": 0,
+    "normalized_law_mismatch_count": 0,
+    "rank_upper_mismatch_count": 0,
+    "records": [
+      {
+        "beta1": 1,
+        "deficient_mass": {
+          "decimal": 0.9375,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "15/16",
+          "numerator_bit_length": 4,
+          "numerator_sha256": "70397337def45fdc5cb2b5c077623c1f6698c4f3b4405d3be96b25d218ea34f6"
+        },
+        "edge_count": 5,
+        "fiber_count": 31,
+        "fiber_rank_counts": {
+          "0": 30,
+          "1": 1
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.9375,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "15/16",
+            "numerator_bit_length": 4,
+            "numerator_sha256": "70397337def45fdc5cb2b5c077623c1f6698c4f3b4405d3be96b25d218ea34f6"
+          },
+          "1": {
+            "decimal": 0.0625,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "1/16",
+            "numerator_bit_length": 1,
+            "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.0625,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "1/16",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        },
+        "graph": "cycle_5",
+        "node_count": 5,
+        "trials_per_edge": 1
+      },
+      {
+        "beta1": 1,
+        "deficient_mass": {
+          "decimal": 0.556640625,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "285/512",
+          "numerator_bit_length": 9,
+          "numerator_sha256": "53d0f658f6679a47bd9d055a4d1af96b2a697bb6fe5e6ec8e5bce365a51b3d9b"
+        },
+        "edge_count": 5,
+        "fiber_count": 211,
+        "fiber_rank_counts": {
+          "0": 180,
+          "1": 31
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.556640625,
+            "denominator_bit_length": 10,
+            "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+            "fraction": "285/512",
+            "numerator_bit_length": 9,
+            "numerator_sha256": "53d0f658f6679a47bd9d055a4d1af96b2a697bb6fe5e6ec8e5bce365a51b3d9b"
+          },
+          "1": {
+            "decimal": 0.443359375,
+            "denominator_bit_length": 10,
+            "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+            "fraction": "227/512",
+            "numerator_bit_length": 8,
+            "numerator_sha256": "403ccb353338ae6354249c3a0d0582a9a58b22920ab72cfa5a6562a70b25790d"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.443359375,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "227/512",
+          "numerator_bit_length": 8,
+          "numerator_sha256": "403ccb353338ae6354249c3a0d0582a9a58b22920ab72cfa5a6562a70b25790d"
+        },
+        "graph": "cycle_5",
+        "node_count": 5,
+        "trials_per_edge": 2
+      },
+      {
+        "beta1": 1,
+        "deficient_mass": {
+          "decimal": 0.21148681640625,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "3465/16384",
+          "numerator_bit_length": 12,
+          "numerator_sha256": "4efc6c4f95d3ee3ab1e8cd829b5c0f1ad5b47943f21d136dcf5d9fedd4e6ef34"
+        },
+        "edge_count": 5,
+        "fiber_count": 781,
+        "fiber_rank_counts": {
+          "0": 570,
+          "1": 211
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.21148681640625,
+            "denominator_bit_length": 15,
+            "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+            "fraction": "3465/16384",
+            "numerator_bit_length": 12,
+            "numerator_sha256": "4efc6c4f95d3ee3ab1e8cd829b5c0f1ad5b47943f21d136dcf5d9fedd4e6ef34"
+          },
+          "1": {
+            "decimal": 0.78851318359375,
+            "denominator_bit_length": 15,
+            "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+            "fraction": "12919/16384",
+            "numerator_bit_length": 14,
+            "numerator_sha256": "8093b63c5ab7bf8c469525c904b164c05d0cb88a77aaff19bd828ce99b729510"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.78851318359375,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "12919/16384",
+          "numerator_bit_length": 14,
+          "numerator_sha256": "8093b63c5ab7bf8c469525c904b164c05d0cb88a77aaff19bd828ce99b729510"
+        },
+        "graph": "cycle_5",
+        "node_count": 5,
+        "trials_per_edge": 3
+      },
+      {
+        "beta1": 1,
+        "deficient_mass": {
+          "decimal": 0.984375,
+          "denominator_bit_length": 7,
+          "denominator_sha256": "dd4c4ed8095a5b1bf4ce6899201fb3259385ad7064a566ccf5ed1e1a0fd0bdd7",
+          "fraction": "63/64",
+          "numerator_bit_length": 6,
+          "numerator_sha256": "b4c8f39093eff44cd3fc06f9060119d9f28c71f169a620e6422f4a2ffa7e35bc"
+        },
+        "edge_count": 7,
+        "fiber_count": 127,
+        "fiber_rank_counts": {
+          "0": 126,
+          "1": 1
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.984375,
+            "denominator_bit_length": 7,
+            "denominator_sha256": "dd4c4ed8095a5b1bf4ce6899201fb3259385ad7064a566ccf5ed1e1a0fd0bdd7",
+            "fraction": "63/64",
+            "numerator_bit_length": 6,
+            "numerator_sha256": "b4c8f39093eff44cd3fc06f9060119d9f28c71f169a620e6422f4a2ffa7e35bc"
+          },
+          "1": {
+            "decimal": 0.015625,
+            "denominator_bit_length": 7,
+            "denominator_sha256": "dd4c4ed8095a5b1bf4ce6899201fb3259385ad7064a566ccf5ed1e1a0fd0bdd7",
+            "fraction": "1/64",
+            "numerator_bit_length": 1,
+            "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.015625,
+          "denominator_bit_length": 7,
+          "denominator_sha256": "dd4c4ed8095a5b1bf4ce6899201fb3259385ad7064a566ccf5ed1e1a0fd0bdd7",
+          "fraction": "1/64",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        },
+        "graph": "cycle_7",
+        "node_count": 7,
+        "trials_per_edge": 1
+      },
+      {
+        "beta1": 1,
+        "deficient_mass": {
+          "decimal": 0.7408447265625,
+          "denominator_bit_length": 14,
+          "denominator_sha256": "3f3625d0c26a0daeb6ed013ded89d7072dd8edac0a5b79816e3c333ab163c15d",
+          "fraction": "6069/8192",
+          "numerator_bit_length": 13,
+          "numerator_sha256": "61c21ae069050adbfa7479fa1a815b9505ab08f5d2aa7936058029c6f488944e"
+        },
+        "edge_count": 7,
+        "fiber_count": 2059,
+        "fiber_rank_counts": {
+          "0": 1932,
+          "1": 127
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.7408447265625,
+            "denominator_bit_length": 14,
+            "denominator_sha256": "3f3625d0c26a0daeb6ed013ded89d7072dd8edac0a5b79816e3c333ab163c15d",
+            "fraction": "6069/8192",
+            "numerator_bit_length": 13,
+            "numerator_sha256": "61c21ae069050adbfa7479fa1a815b9505ab08f5d2aa7936058029c6f488944e"
+          },
+          "1": {
+            "decimal": 0.2591552734375,
+            "denominator_bit_length": 14,
+            "denominator_sha256": "3f3625d0c26a0daeb6ed013ded89d7072dd8edac0a5b79816e3c333ab163c15d",
+            "fraction": "2123/8192",
+            "numerator_bit_length": 12,
+            "numerator_sha256": "879f9ca66edd4f5faa7da0397d04ff1a27727e20c7df01810c5c2d072f9ccf3c"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.2591552734375,
+          "denominator_bit_length": 14,
+          "denominator_sha256": "3f3625d0c26a0daeb6ed013ded89d7072dd8edac0a5b79816e3c333ab163c15d",
+          "fraction": "2123/8192",
+          "numerator_bit_length": 12,
+          "numerator_sha256": "879f9ca66edd4f5faa7da0397d04ff1a27727e20c7df01810c5c2d072f9ccf3c"
+        },
+        "graph": "cycle_7",
+        "node_count": 7,
+        "trials_per_edge": 2
+      },
+      {
+        "beta1": 1,
+        "deficient_mass": {
+          "decimal": 0.34809207916259766,
+          "denominator_bit_length": 21,
+          "denominator_sha256": "601b8649b1a0e1729aee3d8a47658a1b30365e5ae337c4e661fd7ab940d6a3fc",
+          "fraction": "365001/1048576",
+          "numerator_bit_length": 19,
+          "numerator_sha256": "ebf753c312f9810b2125abe815e985dcc6147e1834f005f4a93d05aa9855a627"
+        },
+        "edge_count": 7,
+        "fiber_count": 14197,
+        "fiber_rank_counts": {
+          "0": 12138,
+          "1": 2059
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.34809207916259766,
+            "denominator_bit_length": 21,
+            "denominator_sha256": "601b8649b1a0e1729aee3d8a47658a1b30365e5ae337c4e661fd7ab940d6a3fc",
+            "fraction": "365001/1048576",
+            "numerator_bit_length": 19,
+            "numerator_sha256": "ebf753c312f9810b2125abe815e985dcc6147e1834f005f4a93d05aa9855a627"
+          },
+          "1": {
+            "decimal": 0.6519079208374023,
+            "denominator_bit_length": 21,
+            "denominator_sha256": "601b8649b1a0e1729aee3d8a47658a1b30365e5ae337c4e661fd7ab940d6a3fc",
+            "fraction": "683575/1048576",
+            "numerator_bit_length": 20,
+            "numerator_sha256": "e5ca0b30df95b2bafd34bde98260f742633d142c42af1188fbef974f4527f09a"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.6519079208374023,
+          "denominator_bit_length": 21,
+          "denominator_sha256": "601b8649b1a0e1729aee3d8a47658a1b30365e5ae337c4e661fd7ab940d6a3fc",
+          "fraction": "683575/1048576",
+          "numerator_bit_length": 20,
+          "numerator_sha256": "e5ca0b30df95b2bafd34bde98260f742633d142c42af1188fbef974f4527f09a"
+        },
+        "graph": "cycle_7",
+        "node_count": 7,
+        "trials_per_edge": 3
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.90625,
+          "denominator_bit_length": 6,
+          "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+          "fraction": "29/32",
+          "numerator_bit_length": 5,
+          "numerator_sha256": "c7702baf7aa96625e185f0b2e696189f5196170519efc5cf77b2baea91e80d3d"
+        },
+        "edge_count": 6,
+        "fiber_count": 54,
+        "fiber_rank_counts": {
+          "0": 46,
+          "1": 6,
+          "2": 2
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.71875,
+            "denominator_bit_length": 6,
+            "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+            "fraction": "23/32",
+            "numerator_bit_length": 5,
+            "numerator_sha256": "163ee0d46590e3158b82ec38ef7a5851d4c36fdafc63b2bd3d3bc7194e356975"
+          },
+          "1": {
+            "decimal": 0.1875,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "3/16",
+            "numerator_bit_length": 2,
+            "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+          },
+          "2": {
+            "decimal": 0.09375,
+            "denominator_bit_length": 6,
+            "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+            "fraction": "3/32",
+            "numerator_bit_length": 2,
+            "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.09375,
+          "denominator_bit_length": 6,
+          "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+          "fraction": "3/32",
+          "numerator_bit_length": 2,
+          "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+        },
+        "graph": "theta_6",
+        "node_count": 5,
+        "trials_per_edge": 1
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.39111328125,
+          "denominator_bit_length": 12,
+          "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+          "fraction": "801/2048",
+          "numerator_bit_length": 10,
+          "numerator_sha256": "d06108003242adac4da712587c38e2a9336e886d7e4a44a9634b9619597be3c2"
+        },
+        "edge_count": 6,
+        "fiber_count": 425,
+        "fiber_rank_counts": {
+          "0": 254,
+          "1": 90,
+          "2": 81
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.17724609375,
+            "denominator_bit_length": 12,
+            "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+            "fraction": "363/2048",
+            "numerator_bit_length": 9,
+            "numerator_sha256": "d6fe70dcf626b4f09a12848374a4ca956b7c3c7cf80623d1dc7408fad6e8a7ed"
+          },
+          "1": {
+            "decimal": 0.2138671875,
+            "denominator_bit_length": 11,
+            "denominator_sha256": "1934a0783995e9fa1ed2e6259a248c1de5df77e4dc2ea4da41ee68ba7faecc33",
+            "fraction": "219/1024",
+            "numerator_bit_length": 8,
+            "numerator_sha256": "8d8457e4d1c07e1f39b989736956b63f3ac9e6b784b63773479d23e9c5b11ead"
+          },
+          "2": {
+            "decimal": 0.60888671875,
+            "denominator_bit_length": 12,
+            "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+            "fraction": "1247/2048",
+            "numerator_bit_length": 11,
+            "numerator_sha256": "d11a100766e935d2d569032b9631e6f4f0437f6011664c83c3e65bb3c1419b68"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.60888671875,
+          "denominator_bit_length": 12,
+          "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+          "fraction": "1247/2048",
+          "numerator_bit_length": 11,
+          "numerator_sha256": "d11a100766e935d2d569032b9631e6f4f0437f6011664c83c3e65bb3c1419b68"
+        },
+        "graph": "theta_6",
+        "node_count": 5,
+        "trials_per_edge": 2
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.10761260986328125,
+          "denominator_bit_length": 18,
+          "denominator_sha256": "ca20c2ed048dc737e2d9afafe67d0f35cc2370de680f15b34a6996a46c53f53e",
+          "fraction": "14105/131072",
+          "numerator_bit_length": 14,
+          "numerator_sha256": "ea8aa2f817483c63ba1dd30fd3c83e3a04f501291eedfada6d868428772c8c07"
+        },
+        "edge_count": 6,
+        "fiber_count": 1666,
+        "fiber_rank_counts": {
+          "0": 726,
+          "1": 390,
+          "2": 550
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.02736663818359375,
+            "denominator_bit_length": 18,
+            "denominator_sha256": "ca20c2ed048dc737e2d9afafe67d0f35cc2370de680f15b34a6996a46c53f53e",
+            "fraction": "3587/131072",
+            "numerator_bit_length": 12,
+            "numerator_sha256": "840b4211c0d83df1b501e05847637511fa4e589e3962d0a3fdda5866de14a6c0"
+          },
+          "1": {
+            "decimal": 0.0802459716796875,
+            "denominator_bit_length": 17,
+            "denominator_sha256": "e731f334a4bb51f3adfd1d57d561bd2a8af7a9bb8d377e2fcc7924df5326e47a",
+            "fraction": "5259/65536",
+            "numerator_bit_length": 13,
+            "numerator_sha256": "329de903f661d36d41ca55d91a20f81a8285f7a59749e8c980fcc40daf463565"
+          },
+          "2": {
+            "decimal": 0.8923873901367188,
+            "denominator_bit_length": 18,
+            "denominator_sha256": "ca20c2ed048dc737e2d9afafe67d0f35cc2370de680f15b34a6996a46c53f53e",
+            "fraction": "116967/131072",
+            "numerator_bit_length": 17,
+            "numerator_sha256": "5034c5f2aab51a3944f8a99ca19ceb45ebe69fd9bc89d786ec75878e1064c45f"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.8923873901367188,
+          "denominator_bit_length": 18,
+          "denominator_sha256": "ca20c2ed048dc737e2d9afafe67d0f35cc2370de680f15b34a6996a46c53f53e",
+          "fraction": "116967/131072",
+          "numerator_bit_length": 17,
+          "numerator_sha256": "5034c5f2aab51a3944f8a99ca19ceb45ebe69fd9bc89d786ec75878e1064c45f"
+        },
+        "graph": "theta_6",
+        "node_count": 5,
+        "trials_per_edge": 3
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.8125,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "13/16",
+          "numerator_bit_length": 4,
+          "numerator_sha256": "2a11615238843e3d80591f87c79db80974c89879bec02f14ef08c44773cf2664"
+        },
+        "edge_count": 5,
+        "fiber_count": 24,
+        "fiber_rank_counts": {
+          "0": 18,
+          "1": 4,
+          "2": 2
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.5625,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "9/16",
+            "numerator_bit_length": 4,
+            "numerator_sha256": "7ad1ac4193e2879655f135a0c236366ac9fa325666ac85fd058f2473b7618a71"
+          },
+          "1": {
+            "decimal": 0.25,
+            "denominator_bit_length": 3,
+            "denominator_sha256": "6894b87e4d7693fac623a0f133ca4ef5e01677700e0784d2c370028c29a16863",
+            "fraction": "1/4",
+            "numerator_bit_length": 1,
+            "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+          },
+          "2": {
+            "decimal": 0.1875,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "3/16",
+            "numerator_bit_length": 2,
+            "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.1875,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "3/16",
+          "numerator_bit_length": 2,
+          "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+        },
+        "graph": "square_diagonal",
+        "node_count": 4,
+        "trials_per_edge": 1
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.283203125,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "145/512",
+          "numerator_bit_length": 8,
+          "numerator_sha256": "8b051c5b104fdcd8ae333de77e9869300bc997d61969641fd36040600e6559ca"
+        },
+        "edge_count": 5,
+        "fiber_count": 115,
+        "fiber_rank_counts": {
+          "0": 54,
+          "1": 28,
+          "2": 33
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.103515625,
+            "denominator_bit_length": 10,
+            "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+            "fraction": "53/512",
+            "numerator_bit_length": 6,
+            "numerator_sha256": "03dec1b6379a35cbe10edb6ca30cf987b00116202c3825dece1d98c7a0718a09"
+          },
+          "1": {
+            "decimal": 0.1796875,
+            "denominator_bit_length": 8,
+            "denominator_sha256": "bbb14f87a48bdfde2231c950291770ad68c1a56b6119e0c8fc192bf66ad371e2",
+            "fraction": "23/128",
+            "numerator_bit_length": 5,
+            "numerator_sha256": "163ee0d46590e3158b82ec38ef7a5851d4c36fdafc63b2bd3d3bc7194e356975"
+          },
+          "2": {
+            "decimal": 0.716796875,
+            "denominator_bit_length": 10,
+            "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+            "fraction": "367/512",
+            "numerator_bit_length": 9,
+            "numerator_sha256": "468d5a4bd4a8613a262dee8b4f721d2734a906bfb64e290826093d1134fe5cfe"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.716796875,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "367/512",
+          "numerator_bit_length": 9,
+          "numerator_sha256": "468d5a4bd4a8613a262dee8b4f721d2734a906bfb64e290826093d1134fe5cfe"
+        },
+        "graph": "square_diagonal",
+        "node_count": 4,
+        "trials_per_edge": 2
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.07183837890625,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "1177/16384",
+          "numerator_bit_length": 11,
+          "numerator_sha256": "6d279f0a986a5dee0386816fe69e1570b94aba3f6f0afbe6498c85ab6be049f0"
+        },
+        "edge_count": 5,
+        "fiber_count": 322,
+        "fiber_rank_counts": {
+          "0": 106,
+          "1": 76,
+          "2": 140
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.01446533203125,
+            "denominator_bit_length": 15,
+            "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+            "fraction": "237/16384",
+            "numerator_bit_length": 8,
+            "numerator_sha256": "c957875e944bdb5996444aa0fceee5ff2029d584e801d58ab3cf42b8b0d1e222"
+          },
+          "1": {
+            "decimal": 0.057373046875,
+            "denominator_bit_length": 13,
+            "denominator_sha256": "679d690e571cafcbd7ed3f1272bf45e242ccac7d7dee06567520a7cb96de0bbf",
+            "fraction": "235/4096",
+            "numerator_bit_length": 8,
+            "numerator_sha256": "6d6baf8ce98479ae176aa4ecc3d5001dd776a8025814b271b9e995ea168fcc67"
+          },
+          "2": {
+            "decimal": 0.92816162109375,
+            "denominator_bit_length": 15,
+            "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+            "fraction": "15207/16384",
+            "numerator_bit_length": 14,
+            "numerator_sha256": "5bac5d95c3cc923247502c6ec54e5fa1ff58f5af45ffe954af3598890b1defc2"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.92816162109375,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "15207/16384",
+          "numerator_bit_length": 14,
+          "numerator_sha256": "5bac5d95c3cc923247502c6ec54e5fa1ff58f5af45ffe954af3598890b1defc2"
+        },
+        "graph": "square_diagonal",
+        "node_count": 4,
+        "trials_per_edge": 3
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.9375,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "15/16",
+          "numerator_bit_length": 4,
+          "numerator_sha256": "70397337def45fdc5cb2b5c077623c1f6698c4f3b4405d3be96b25d218ea34f6"
+        },
+        "edge_count": 6,
+        "fiber_count": 49,
+        "fiber_rank_counts": {
+          "0": 36,
+          "1": 12,
+          "2": 1
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.5625,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "9/16",
+            "numerator_bit_length": 4,
+            "numerator_sha256": "7ad1ac4193e2879655f135a0c236366ac9fa325666ac85fd058f2473b7618a71"
+          },
+          "1": {
+            "decimal": 0.375,
+            "denominator_bit_length": 4,
+            "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+            "fraction": "3/8",
+            "numerator_bit_length": 2,
+            "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+          },
+          "2": {
+            "decimal": 0.0625,
+            "denominator_bit_length": 5,
+            "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+            "fraction": "1/16",
+            "numerator_bit_length": 1,
+            "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.0625,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "1/16",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        },
+        "graph": "bowtie_6",
+        "node_count": 5,
+        "trials_per_edge": 1
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.4833984375,
+          "denominator_bit_length": 11,
+          "denominator_sha256": "1934a0783995e9fa1ed2e6259a248c1de5df77e4dc2ea4da41ee68ba7faecc33",
+          "fraction": "495/1024",
+          "numerator_bit_length": 9,
+          "numerator_sha256": "3533207f6f7e0192307bca4c5621c3056e7c5f5642b89f52e3f7401e395b1723"
+        },
+        "edge_count": 6,
+        "fiber_count": 361,
+        "fiber_rank_counts": {
+          "0": 144,
+          "1": 168,
+          "2": 49
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.0791015625,
+            "denominator_bit_length": 11,
+            "denominator_sha256": "1934a0783995e9fa1ed2e6259a248c1de5df77e4dc2ea4da41ee68ba7faecc33",
+            "fraction": "81/1024",
+            "numerator_bit_length": 7,
+            "numerator_sha256": "645a094d022ac3585b0c61b1baaca7a0f7535551cc6edbfba49cf707b82fc3db"
+          },
+          "1": {
+            "decimal": 0.404296875,
+            "denominator_bit_length": 10,
+            "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+            "fraction": "207/512",
+            "numerator_bit_length": 8,
+            "numerator_sha256": "970b7169f3c195f2126c806c859771bf69e0a3af373d4f8ea7c9dc61c019e1b3"
+          },
+          "2": {
+            "decimal": 0.5166015625,
+            "denominator_bit_length": 11,
+            "denominator_sha256": "1934a0783995e9fa1ed2e6259a248c1de5df77e4dc2ea4da41ee68ba7faecc33",
+            "fraction": "529/1024",
+            "numerator_bit_length": 10,
+            "numerator_sha256": "cf008f6ce9bab26b31191dbd637e1b85418636187d9d7a18976843fc06705bc6"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.5166015625,
+          "denominator_bit_length": 11,
+          "denominator_sha256": "1934a0783995e9fa1ed2e6259a248c1de5df77e4dc2ea4da41ee68ba7faecc33",
+          "fraction": "529/1024",
+          "numerator_bit_length": 10,
+          "numerator_sha256": "cf008f6ce9bab26b31191dbd637e1b85418636187d9d7a18976843fc06705bc6"
+        },
+        "graph": "bowtie_6",
+        "node_count": 5,
+        "trials_per_edge": 2
+      },
+      {
+        "beta1": 2,
+        "deficient_mass": {
+          "decimal": 0.1573333740234375,
+          "denominator_bit_length": 17,
+          "denominator_sha256": "e731f334a4bb51f3adfd1d57d561bd2a8af7a9bb8d377e2fcc7924df5326e47a",
+          "fraction": "10311/65536",
+          "numerator_bit_length": 14,
+          "numerator_sha256": "bfff6f6c2d0e0d034dbbf8d1946348af1945003799309dcd0ef931e2ff58a331"
+        },
+        "edge_count": 6,
+        "fiber_count": 1369,
+        "fiber_rank_counts": {
+          "0": 324,
+          "1": 684,
+          "2": 361
+        },
+        "flat_null_rank_mass": {
+          "0": {
+            "decimal": 0.0067291259765625,
+            "denominator_bit_length": 17,
+            "denominator_sha256": "e731f334a4bb51f3adfd1d57d561bd2a8af7a9bb8d377e2fcc7924df5326e47a",
+            "fraction": "441/65536",
+            "numerator_bit_length": 9,
+            "numerator_sha256": "58114676c328c40a979f2a8991ad21b59b5fdce3f961516c6f51c3704b766b42"
+          },
+          "1": {
+            "decimal": 0.150604248046875,
+            "denominator_bit_length": 16,
+            "denominator_sha256": "8895210a82bf4f438c1b35f86dcc122222368bef934d76e85c6a6c6d1a5eae2c",
+            "fraction": "4935/32768",
+            "numerator_bit_length": 13,
+            "numerator_sha256": "3145197a7ffc39809e3508df37797116ee549db57a20fcdd28c01b9bd51e4e8c"
+          },
+          "2": {
+            "decimal": 0.8426666259765625,
+            "denominator_bit_length": 17,
+            "denominator_sha256": "e731f334a4bb51f3adfd1d57d561bd2a8af7a9bb8d377e2fcc7924df5326e47a",
+            "fraction": "55225/65536",
+            "numerator_bit_length": 16,
+            "numerator_sha256": "fb127ff02d611c8fe79fb8b5813f5ef05c60973c7266e71b11ce924a8c3cebec"
+          }
+        },
+        "full_quotient_mass": {
+          "decimal": 0.8426666259765625,
+          "denominator_bit_length": 17,
+          "denominator_sha256": "e731f334a4bb51f3adfd1d57d561bd2a8af7a9bb8d377e2fcc7924df5326e47a",
+          "fraction": "55225/65536",
+          "numerator_bit_length": 16,
+          "numerator_sha256": "fb127ff02d611c8fe79fb8b5813f5ef05c60973c7266e71b11ce924a8c3cebec"
+        },
+        "graph": "bowtie_6",
+        "node_count": 5,
+        "trials_per_edge": 3
+      }
+    ],
+    "zero_deficient_mass_graph_count": 0,
+    "zero_full_mass_graph_count": 0
+  },
+  "power_calibration": {
+    "alpha": "1/20",
+    "cell_count": 9,
+    "exact_representation": "streamed_unreduced_integer_ratios_with_direct_cycle_fiber",
+    "formula_mismatch_count": 0,
+    "likelihood_ratio_mismatch_count": 0,
+    "nonmonotonicity_warning": "Exact-size conditional power need not increase between adjacent per-edge sample counts; registered n values are calibration points, not critical thresholds.",
+    "nonpositive_power_gain_count": 0,
+    "power_band": [
+      "39/50",
+      "41/50"
+    ],
+    "power_band_mismatch_count": 0,
+    "records": [
+      {
+        "alternative_total_bit_length": 27693,
+        "boundary": 1116,
+        "cycle_length": 10,
+        "exact_power": {
+          "decimal": 0.8031249741813509,
+          "decimal_30": "0.803124974181350854256316813691",
+          "denominator_bit_length": 49717,
+          "denominator_sha256": "7af43736a04d2669dca9e987f431f0975885c84be4fbbd7f2e3ccdf96cdf4186",
+          "numerator_bit_length": 49716,
+          "numerator_sha256": "2a858cc94ff8f0dd489bac46bcb62c4c62a3af14b782f4af17feb6827d8bf5b8",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 22026,
+        "odds_ratio": "7/5",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.26402483818041805,
+          "decimal_30": "0.264024838180418032706523179107",
+          "denominator_bit_length": 22024,
+          "denominator_sha256": "278e5a746d82136218abade657650639bbd6055d7e3d7b0884004ef1a27b3d0a",
+          "numerator_bit_length": 22022,
+          "numerator_sha256": "5089e1940d4760b6245ef16f138d5aeb3d49df18b3fadaffe3549cd38f50759c",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 2208
+      },
+      {
+        "alternative_total_bit_length": 44616,
+        "boundary": 1448,
+        "cycle_length": 13,
+        "exact_power": {
+          "decimal": 0.8033163658423778,
+          "decimal_30": "0.803316365842377739246413604833",
+          "denominator_bit_length": 81863,
+          "denominator_sha256": "386840cb50b55016649fa681fa8033e97048bfd2561a6aed0fbc8d0e75906a8b",
+          "numerator_bit_length": 81862,
+          "numerator_sha256": "05f22c9e964e7bd8e0a047934cd6c25f26c62eef0006221d635a4ac5c6a417a8",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 37249,
+        "odds_ratio": "7/5",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.7659063168421536,
+          "decimal_30": "0.765906316842153636485563944642",
+          "denominator_bit_length": 37247,
+          "denominator_sha256": "3948b06d0e6b6b3d20bd089c95763547cd50a2c50a4bf8c567cb6c09ce158098",
+          "numerator_bit_length": 37246,
+          "numerator_sha256": "7719366dc695d6c342b71b92f5c22502ae0af1b632d30eaad5222a4c0bb065b8",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 2871
+      },
+      {
+        "alternative_total_bit_length": 81640,
+        "boundary": 2000,
+        "cycle_length": 18,
+        "exact_power": {
+          "decimal": 0.803279187807099,
+          "decimal_30": "0.803279187807098984439170413944",
+          "denominator_bit_length": 153079,
+          "denominator_sha256": "d5d527ab0d8a1d74fea459d640412063f32b6ad0635a8e6c0ad704743072f828",
+          "numerator_bit_length": 153079,
+          "numerator_sha256": "ef92dc75fe58e28caa2fe5561bbc6328f77e968eb995864c5d11c81755b3f921",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 71441,
+        "odds_ratio": "7/5",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.7668320790755304,
+          "decimal_30": "0.766832079075530380418023903098",
+          "denominator_bit_length": 71439,
+          "denominator_sha256": "b9ce05bb165f29980275d114cf3538a96df1955a09ad21bb0931cfb91222f018",
+          "numerator_bit_length": 71439,
+          "numerator_sha256": "7f908a18e997e65d3f6f130d4339c3433b0eaed15af64bde5660fc36f42a7d5c",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 3975
+      },
+      {
+        "alternative_total_bit_length": 9855,
+        "boundary": 406,
+        "cycle_length": 10,
+        "exact_power": {
+          "decimal": 0.8032040152727863,
+          "decimal_30": "0.803204015272786286509064756557",
+          "denominator_bit_length": 17786,
+          "denominator_sha256": "3e283458f85cabf548cff4783e9e70c8f65f9026312bf380e5553a6dd314383a",
+          "numerator_bit_length": 17786,
+          "numerator_sha256": "92b9dce9138d12dfe1ea9c1bf437c8a92716d59d3c522a2b608f865564033139",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 7933,
+        "odds_ratio": "7/4",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.14086263217213096,
+          "decimal_30": "0.140862632172130973834865123592",
+          "denominator_bit_length": 7932,
+          "denominator_sha256": "50df87f2ae75c279ccfbb395155418119f2f2d964dae964b20d2091aab297ca0",
+          "numerator_bit_length": 7929,
+          "numerator_sha256": "daf1387df049061519d2e766852f27a2a2ae976364781e3adb2561c308dc13dd",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 798
+      },
+      {
+        "alternative_total_bit_length": 15928,
+        "boundary": 526,
+        "cycle_length": 13,
+        "exact_power": {
+          "decimal": 0.8033715462244241,
+          "decimal_30": "0.803371546224424059961817019089",
+          "denominator_bit_length": 29355,
+          "denominator_sha256": "28acc542ff7ae8409b37f31fa80fc5ad1e318555c6f060db85f0a092549f419c",
+          "numerator_bit_length": 29355,
+          "numerator_sha256": "b0832c877d0b86c8fea30d4ae37b99578d41e1e45178367cc103a11217acad3a",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 13429,
+        "odds_ratio": "7/4",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.13977317782794024,
+          "decimal_30": "0.139773177827940242892530015671",
+          "denominator_bit_length": 13428,
+          "denominator_sha256": "ab4c3271517eeae19b0091860a47fc772e3b8ef6b5b3acb1cb14f4a933b96ca8",
+          "numerator_bit_length": 13425,
+          "numerator_sha256": "64b04bc8c915b97323d4e56f924b56a07d85b1fdbd63bed34a22397d12c5554a",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 1038
+      },
+      {
+        "alternative_total_bit_length": 29228,
+        "boundary": 726,
+        "cycle_length": 18,
+        "exact_power": {
+          "decimal": 0.801414409782796,
+          "decimal_30": "0.801414409782796028638256845735",
+          "denominator_bit_length": 54996,
+          "denominator_sha256": "71228c94b0a46939ddde871f138f6158e20f98ec7e8fd641e71bdb5eee30430d",
+          "numerator_bit_length": 54996,
+          "numerator_sha256": "2dd7b6066b2d0c99a454cbbe5efd95a6964c80dbc4c2017fe5352d5011b02abd",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 25770,
+        "odds_ratio": "7/4",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.6221684001907901,
+          "decimal_30": "0.622168400190790166087587074714",
+          "denominator_bit_length": 25769,
+          "denominator_sha256": "e77ac1f53dcc29eca674ab7154f57b7b9d2b66c579dc70b59659910558a4f5a7",
+          "numerator_bit_length": 25768,
+          "numerator_sha256": "6c444178d5fc2c9099406d3f64df4d3640033b8ae926e33f493d5b30a5b1fea5",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 1437
+      },
+      {
+        "alternative_total_bit_length": 3160,
+        "boundary": 134,
+        "cycle_length": 10,
+        "exact_power": {
+          "decimal": 0.7985739806949474,
+          "decimal_30": "0.798573980694947417647764601387",
+          "denominator_bit_length": 5720,
+          "denominator_sha256": "71fe2d4454ce215e782753cd310a44028f06891c4a448e59c9db2dc07aa693d7",
+          "numerator_bit_length": 5719,
+          "numerator_sha256": "a98e769038d9d6de5052ed18b5221142fe64929b13a7c54aca759af5575db9c4",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 2560,
+        "odds_ratio": "8/3",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.2600245171148201,
+          "decimal_30": "0.260024517114820093249227190086",
+          "denominator_bit_length": 2560,
+          "denominator_sha256": "74764c6c0d674133c87e603a2c508d497d759250eb31a76d53b612384de22973",
+          "numerator_bit_length": 2558,
+          "numerator_sha256": "2e70823eeeec44221cb7284e6db79efd50299ee166f7280b133f09b4d3442018",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 260
+      },
+      {
+        "alternative_total_bit_length": 5118,
+        "boundary": 173,
+        "cycle_length": 13,
+        "exact_power": {
+          "decimal": 0.7983933608008437,
+          "decimal_30": "0.798393360800843677437925621055",
+          "denominator_bit_length": 9455,
+          "denominator_sha256": "278d79099257839ad1beb2da29547fc757ac1a192fa41240c1c5970c26abedb9",
+          "numerator_bit_length": 9455,
+          "numerator_sha256": "ff633a851a7ba7712fde942b6ce3185afc4eacae6bfce66c62e07e00ed8ff405",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 4338,
+        "odds_ratio": "8/3",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.2613610713717084,
+          "decimal_30": "0.261361071371708384165155412099",
+          "denominator_bit_length": 4338,
+          "denominator_sha256": "51a773f9f44b8b9c4821a7b9a41aa54f92fdba6623cb67379445ab54c9b4b9c8",
+          "numerator_bit_length": 4336,
+          "numerator_sha256": "6778ecd9f959f31a89b26570fcd7d3f33804643acd4b1e379c803aaf1595ebf5",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 338
+      },
+      {
+        "alternative_total_bit_length": 9419,
+        "boundary": 238,
+        "cycle_length": 18,
+        "exact_power": {
+          "decimal": 0.7981854972781603,
+          "decimal_30": "0.798185497278160338353896751089",
+          "denominator_bit_length": 17760,
+          "denominator_sha256": "68a0c31c33eab913c925fabe9fa6b47151a2887e3d5fa39c25ac6af28f937d0b",
+          "numerator_bit_length": 17759,
+          "numerator_sha256": "6e729c9e45e81c99a4727794fe165ee9eac2f70327b565253204ff62d317b664",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "exact_size": {
+          "construction_verified": true,
+          "fraction": "1/20"
+        },
+        "formula_exact": true,
+        "likelihood_ratio_exact": true,
+        "null_total_bit_length": 8341,
+        "odds_ratio": "8/3",
+        "power_above_size": true,
+        "power_in_registered_band": true,
+        "randomization": {
+          "decimal": 0.26266225343941635,
+          "decimal_30": "0.262662253439416321241607352894",
+          "denominator_bit_length": 8341,
+          "denominator_sha256": "1d825468f43b2a6f89d48a859399bbdff127f442b7c5a89d0d5998f9e5358f7f",
+          "numerator_bit_length": 8339,
+          "numerator_sha256": "37b228f2d7c3a5b4d83b3a8aac08a60d77f9693b057ad683491768dbcda897fe",
+          "representation": "unreduced_exact_integer_ratio"
+        },
+        "scope": "conditional_on_zero_vertex_balance",
+        "trials_per_edge": 468
+      }
+    ],
+    "size_mismatch_count": 0
+  },
+  "protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13.2",
+  "registration_commit": "b11ddca5743378165879ae7ebefd5b01e9d78954",
+  "registration_sha256": "67f6bcc4bafca09d9f3e799d5b125d88daaccd1dfea2618326925d11b7eb603e",
+  "resource_observation": {
+    "gpu_used": false,
+    "maximum_ram_bytes": 2147483648,
+    "maximum_wall_seconds": 180,
+    "peak_resident_bytes": 28110848
+  },
+  "scientific_specification_unchanged": true,
+  "verdict": "conditional_fiber_cycle_quotient_verified_v0_13_2"
+}

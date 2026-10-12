@@ -1,0 +1,70 @@
+{
+  "claim_boundary": "Exact finite composition of policy-specific information occupancy, rational chi-square KL upper bounds, outward Pinsker radii, and generator-wise robust deficiency containment. Not an optimal statistical confidence construction, a sharp modulus for every finite library, efficient policy search, nonrectangular or strategic robustness, real behavioral evidence, or an ASMP-9 resolution.",
+  "expected_status": "policy_specific_information_containment_established",
+  "expected_test_count": 20,
+  "frozen_universes": {
+    "decision_problems": [
+      "4_class_identification",
+      "root_group"
+    ],
+    "horizon": 2,
+    "perturbation_eta": [
+      "1/100",
+      "1/50",
+      "1/20",
+      "1/10"
+    ],
+    "query_budget_control": {
+      "expected_one_use": "1/19",
+      "expected_repeatable": "2/19",
+      "query": "left"
+    },
+    "query_signatures": {
+      "left": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "root": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "robust_box_rows": {
+      "selected_source_vertices": 8,
+      "source_reference_vertices": 64
+    },
+    "sqrt_decimal_digits": 12
+  },
+  "implementation_commit": "d87e78026c26b1cf50de96d79a3568324432569a",
+  "protocol_id": "asmp9-policy-specific-information-v0.44",
+  "registered_at": "2026-07-29T08:02:43-04:00",
+  "resource_ceiling": {
+    "peak_working_set_bytes": 805306368,
+    "seconds": 120
+  },
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PRIOR_ART_GATE_v0_44.md": "2e200e9eb98e32916453b1deb35366f30740435df09a713cc9f197343d0f5e19",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PROTOCOL_v0_44.md": "1cee808700925cc90c47846ceef09a5467bb8f62024e26b9c5a84f312b5cecab",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/THEOREM_DRAFT_v0_44.md": "1b20710fe54c48b784fb30e78e7311147d4317e610303dde8d0b22ca080b5649",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/environment_lock_v0_44.json": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/run_confirmation_v0_44.py": "719c407da887b101dab1a531859121a9ab287139d01c79e3cd2d3e8294cc9595",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/test_occupancy_information.py": "6956b3b2475e90b863be35221cd1a6806e7e443d829371c421bd7df9b002394e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/verify_result_v0_44.py": "d31543398dcd5e0fce77bf6d7c52fbf95a4e86ca5608eeb40ffbbed7e8babb03",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d"
+  },
+  "status": "registered_before_confirmation",
+  "test_command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/test_occupancy_information.py",
+  "version": "0.44"
+}

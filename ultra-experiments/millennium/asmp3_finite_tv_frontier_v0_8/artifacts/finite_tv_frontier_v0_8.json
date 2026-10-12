@@ -1,0 +1,396 @@
+{
+  "alias_refinement_rows": [
+    {
+      "alias_count_per_semantic_outcome": 1,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 2
+    },
+    {
+      "alias_count_per_semantic_outcome": 2,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 4
+    },
+    {
+      "alias_count_per_semantic_outcome": 3,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 6
+    },
+    {
+      "alias_count_per_semantic_outcome": 4,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 8
+    },
+    {
+      "alias_count_per_semantic_outcome": 5,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 10
+    },
+    {
+      "alias_count_per_semantic_outcome": 6,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 12
+    },
+    {
+      "alias_count_per_semantic_outcome": 7,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 14
+    },
+    {
+      "alias_count_per_semantic_outcome": 8,
+      "certificate_exact": true,
+      "dual_upper_bound": "3/5",
+      "gap": "3/5",
+      "quotient_outcome_count": 2,
+      "raw_outcome_count": 16
+    }
+  ],
+  "certified": true,
+  "claim_boundary": "This is an exact characterization of the finite post-transcript decision lane for a fixed interface. It does not choose the v0.1 interface quantifier, construct efficient interactive protocols in general, or resolve WV-ADM.",
+  "experiment_id": "ASMP-3-FINITE-TV-FRONTIER-v0.8",
+  "explicit_cases": [
+    {
+      "acceptance_certificate": [
+        "1",
+        "0"
+      ],
+      "case_id": "single_bit_bsc",
+      "certificate_audit": {
+        "claimed_gap": "3/5",
+        "dual_coordinate_bounds_valid": true,
+        "dual_upper_bound": "3/5",
+        "exact": true,
+        "lower_certificate_valid": true,
+        "minimum_pair_gap": "3/5",
+        "mixture_difference": [
+          "3/5",
+          "-3/5"
+        ]
+      },
+      "claimed_gap": "3/5",
+      "dual_positive_part": [
+        "3/5",
+        "0"
+      ],
+      "false_laws": [
+        [
+          "1/5",
+          "4/5"
+        ]
+      ],
+      "honest_laws": [
+        [
+          "4/5",
+          "1/5"
+        ]
+      ],
+      "interpretation": "one noisy semantic bit has constant gap",
+      "joint_dual_weights": [
+        "1"
+      ],
+      "outcomes": 2,
+      "vertex_solver_acceptance": [
+        "1",
+        "0"
+      ],
+      "vertex_solver_gap": "3/5",
+      "vertex_solver_matches": true
+    },
+    {
+      "acceptance_certificate": [
+        "0",
+        "0"
+      ],
+      "case_id": "convex_hull_collision",
+      "certificate_audit": {
+        "claimed_gap": "0",
+        "dual_coordinate_bounds_valid": true,
+        "dual_upper_bound": "0",
+        "exact": true,
+        "lower_certificate_valid": true,
+        "minimum_pair_gap": "0",
+        "mixture_difference": [
+          "0",
+          "0"
+        ]
+      },
+      "claimed_gap": "0",
+      "dual_positive_part": [
+        "0",
+        "0"
+      ],
+      "false_laws": [
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "honest_laws": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "interpretation": "pairwise-looking cases fail when the transcript-law hulls meet",
+      "joint_dual_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "outcomes": 2,
+      "vertex_solver_acceptance": [
+        "1",
+        "1"
+      ],
+      "vertex_solver_gap": "0",
+      "vertex_solver_matches": true
+    },
+    {
+      "acceptance_certificate": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "case_id": "joint_correlation_signal",
+      "certificate_audit": {
+        "claimed_gap": "1",
+        "dual_coordinate_bounds_valid": true,
+        "dual_upper_bound": "1",
+        "exact": true,
+        "lower_certificate_valid": true,
+        "minimum_pair_gap": "1",
+        "mixture_difference": [
+          "1/2",
+          "-1/2",
+          "-1/2",
+          "1/2"
+        ]
+      },
+      "claimed_gap": "1",
+      "dual_positive_part": [
+        "1/2",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "false_laws": [
+        [
+          "0",
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      ],
+      "honest_laws": [
+        [
+          "1/2",
+          "0",
+          "0",
+          "1/2"
+        ]
+      ],
+      "interpretation": "identical one-coordinate marginals can hide perfect joint signal",
+      "joint_dual_weights": [
+        "1"
+      ],
+      "outcomes": 4,
+      "vertex_solver_acceptance": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "vertex_solver_gap": "1",
+      "vertex_solver_matches": true
+    }
+  ],
+  "gates": {
+    "C0_convex_hull_collision_has_zero_gap": true,
+    "E0_all_explicit_certificates_exact": true,
+    "E1_vertex_solver_matches_explicit_certificates": true,
+    "J0_joint_case_has_zero_marginal_signal_and_unit_joint_gap": true,
+    "P0_parity_gap_is_three_fifths_to_depth": true,
+    "P1_parity_primal_dual_certificates_exact": true,
+    "P2_parity_mixture_formula_enumerated": true,
+    "R0_alias_refinement_preserves_gap": true
+  },
+  "parity_bsc_rows": [
+    {
+      "all_pair_gaps": [
+        "3/5"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "3/5",
+      "contraction": "3/5",
+      "depth": 1,
+      "dual_positive_sum": "3/5",
+      "dual_positive_value_per_even_outcome": "3/5",
+      "error": "1/5",
+      "false_acceptance": "1/5",
+      "false_world_count": 1,
+      "honest_acceptance": "4/5",
+      "honest_world_count": 1,
+      "mixture_formula_matches": true,
+      "outcome_count": 2
+    },
+    {
+      "all_pair_gaps": [
+        "9/25"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "9/25",
+      "contraction": "3/5",
+      "depth": 2,
+      "dual_positive_sum": "9/25",
+      "dual_positive_value_per_even_outcome": "9/50",
+      "error": "1/5",
+      "false_acceptance": "8/25",
+      "false_world_count": 2,
+      "honest_acceptance": "17/25",
+      "honest_world_count": 2,
+      "mixture_formula_matches": true,
+      "outcome_count": 4
+    },
+    {
+      "all_pair_gaps": [
+        "27/125"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "27/125",
+      "contraction": "3/5",
+      "depth": 3,
+      "dual_positive_sum": "27/125",
+      "dual_positive_value_per_even_outcome": "27/500",
+      "error": "1/5",
+      "false_acceptance": "49/125",
+      "false_world_count": 4,
+      "honest_acceptance": "76/125",
+      "honest_world_count": 4,
+      "mixture_formula_matches": true,
+      "outcome_count": 8
+    },
+    {
+      "all_pair_gaps": [
+        "81/625"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "81/625",
+      "contraction": "3/5",
+      "depth": 4,
+      "dual_positive_sum": "81/625",
+      "dual_positive_value_per_even_outcome": "81/5000",
+      "error": "1/5",
+      "false_acceptance": "272/625",
+      "false_world_count": 8,
+      "honest_acceptance": "353/625",
+      "honest_world_count": 8,
+      "mixture_formula_matches": true,
+      "outcome_count": 16
+    },
+    {
+      "all_pair_gaps": [
+        "243/3125"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "243/3125",
+      "contraction": "3/5",
+      "depth": 5,
+      "dual_positive_sum": "243/3125",
+      "dual_positive_value_per_even_outcome": "243/50000",
+      "error": "1/5",
+      "false_acceptance": "1441/3125",
+      "false_world_count": 16,
+      "honest_acceptance": "1684/3125",
+      "honest_world_count": 16,
+      "mixture_formula_matches": true,
+      "outcome_count": 32
+    },
+    {
+      "all_pair_gaps": [
+        "729/15625"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "729/15625",
+      "contraction": "3/5",
+      "depth": 6,
+      "dual_positive_sum": "729/15625",
+      "dual_positive_value_per_even_outcome": "729/500000",
+      "error": "1/5",
+      "false_acceptance": "7448/15625",
+      "false_world_count": 32,
+      "honest_acceptance": "8177/15625",
+      "honest_world_count": 32,
+      "mixture_formula_matches": true,
+      "outcome_count": 64
+    },
+    {
+      "all_pair_gaps": [
+        "2187/78125"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "2187/78125",
+      "contraction": "3/5",
+      "depth": 7,
+      "dual_positive_sum": "2187/78125",
+      "dual_positive_value_per_even_outcome": "2187/5000000",
+      "error": "1/5",
+      "false_acceptance": "37969/78125",
+      "false_world_count": 64,
+      "honest_acceptance": "40156/78125",
+      "honest_world_count": 64,
+      "mixture_formula_matches": true,
+      "outcome_count": 128
+    },
+    {
+      "all_pair_gaps": [
+        "6561/390625"
+      ],
+      "certificate_exact": true,
+      "closed_form_gap": "6561/390625",
+      "contraction": "3/5",
+      "depth": 8,
+      "dual_positive_sum": "6561/390625",
+      "dual_positive_value_per_even_outcome": "6561/50000000",
+      "error": "1/5",
+      "false_acceptance": "192032/390625",
+      "false_world_count": 128,
+      "honest_acceptance": "198593/390625",
+      "honest_world_count": 128,
+      "mixture_formula_matches": true,
+      "outcome_count": 256
+    }
+  ],
+  "schema_version": "asmp3_finite_tv_frontier_v0_8",
+  "status": "exact_finite_typed_subtheorem",
+  "theorem": {
+    "asymptotic_constant_gap_criterion": "inf_n distance_TV(conv(H_n),conv(F_n)) > 0",
+    "dual": "min_(p in conv(H),q in conv(F)) TV(p,q)",
+    "positive_gap_criterion": "conv(H) and conv(F) are disjoint",
+    "primal": "max_a min_(p in H,q in F) <p-q,a>, 0<=a<=1",
+    "setting": "finite fixed transcript alphabet with finite honest and false transcript-law classes"
+  }
+}

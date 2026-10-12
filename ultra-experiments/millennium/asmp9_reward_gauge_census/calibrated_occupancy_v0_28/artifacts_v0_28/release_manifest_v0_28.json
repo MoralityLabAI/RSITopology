@@ -1,0 +1,33 @@
+{
+  "artifact_count": 24,
+  "artifacts": {
+    "ILIAD_FELLOWSHIP_RESEARCH_LINKS_20260729.md": "b94a85268383b611260a5ae8059917949d2fa30f757dbb7ce02c849f50a498ac",
+    "ultra-experiments/millennium/V0_2_EXPERIMENT_PROGRESS_v0_1.md": "930bd341ed3d63506447e568b778d0ef11bb3b55c5c6bdb000b8129d98035f11",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": "755c49e0d9177f3855123b751671bf0b3e408f0a9fb19a4845812225ec53f48d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_28.md": "d3e29962b087d696dc5a9cd90b84924e4d67f7dd73056d5ca11e2e027df6d960",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/DEVELOPMENT_NOTE_v0_28.md": "e582d426353388d8470c652202815763ded7b0938f08c1b39dfc705ae93e5a26",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/PRIOR_ART_GATE_v0_28.md": "912f791102a55d61d9df8ecd0beccb467caee9175205a800ed5981235c4d612a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/PUBLIC_SUMMARY_v0_28.md": "874b27b0dbe4834d29dbea27f3fa03c4487526ea68b871886513a13c30185ca9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/README.md": "ea44f896aad3a5e9675e5e2358751591f8a483c537ddd2829a988342e0185b4a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/THEOREM_DRAFT_v0_28.md": "aa2b78c7cbc6911692e2f2a93c8d8e75bae3820a0590a3cb0f6cb0fed787e519",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/THEOREM_v0_28.md": "794031da344518047bab46850315055f047336fe99338935ee614cb9b6b63d37",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/artifacts_v0_28/RESULT_v0_28.md": "024807247d40fbf70d67cba959a410d7815bb41c7f919ff88891e0838993ed87",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/artifacts_v0_28/independent_verification_v0_28.json": "f8336fb7b93724e34cc183b9d42c2fe7c97ed699d8d0b88b3195ef1343e6d2e3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/artifacts_v0_28/result_v0_28.json": "0f7b5bb876f8b7b6d58f7b891ed6e54b69f0c7168db5eb379ea8c21d675fad14",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/artifacts_v0_28/run_receipt_v0_28.json": "97b152cf7ab380823ecd33b89969dbb49e67bc30be6a1e1018ec92051f8996f6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/environment_lock_v0_28.json": "922f797639f4fc2a3e8587665f1f1d452865377132110daf407549b1e13f0b46",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/linear_access.py": "c97a55eac86b04372d94bfdc6f12450e358c571fe2ab413f3f29a9c2e45a9385",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/make_release_manifest_v0_28.py": "4a182c47818c7157350242597acd16b74ab760f7c115fb4126ceb285abfa1a81",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/protocol_v0_28.json": "17e73352b9b04fdc7f96652ada56166c68da88ba1b4e11ef522fbe33c969299e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/register_v0_28.py": "bd3520a3e77d46245d3063f8c0a35642b8d370c6e23c97ac7e8c21c49d38f49b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/registration_v0_28.json": "a8cd1d8633c2e4017889dbd06ddb90db1c9d1799432deb09a8e593da38d466af",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/run_verification_v0_28.py": "dab5740b5d670bfae968359a6746d295f907eec0ec81ca808f5b574fab05319a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/test_linear_access.py": "edf8ac280cb69d0b0ef28061d0bd4e1819dd09823b84fb3f97042e4865ebddcc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/test_protocol_v0_28.py": "d35a5026007f396a80bd9bc790961424be285f4757fcf7787a4d947ba958edaf",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/calibrated_occupancy_v0_28/verify_result_v0_28.py": "975a618f3b1083e2aa154ef7b7c1384c9624e7fad8903b843bb760ae8fc12152"
+  },
+  "implementation_commit": "fcab52dd08ff88f382d3a33d585bd439bfa3c99d",
+  "manifest_id": "ASMP-9-CALIBRATED-OCCUPANCY-v0.28-release",
+  "registration_commit": "9fdeaca64da1e59c13ca24e00f54bf2fe0022eeb",
+  "verdict": "calibrated_occupancy_boundary_established_v0_28"
+}

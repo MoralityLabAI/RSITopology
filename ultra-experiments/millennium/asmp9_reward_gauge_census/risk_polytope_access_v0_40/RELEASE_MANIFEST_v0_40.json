@@ -1,0 +1,56 @@
+{
+  "files": {
+    "../README.md": {
+      "bytes": 21420,
+      "sha256": "72ef007f9f1a3b2826745757ece06382cba8fd96f4bc0d7d498267a2d72463c9"
+    },
+    "../RESOLUTION_OBLIGATION_MATRIX_v0_40.md": {
+      "bytes": 4907,
+      "sha256": "e6a2fb0311a0db1dfa1c45407353c8d2130458f85b2b7881f8aece25ec6d4a4e"
+    },
+    "PRIOR_ART_GATE_v0_40.md": {
+      "bytes": 1585,
+      "sha256": "271e33c876556cecd9164cac67295f0c3a738597b7549172972e62297d584b23"
+    },
+    "PROTOCOL_v0_40.md": {
+      "bytes": 3745,
+      "sha256": "209611059239a8b6800139045581596e161356ef50f71817a23771eac57b3ac8"
+    },
+    "README.md": {
+      "bytes": 736,
+      "sha256": "774989d2ec0e3f4f378c1dab5af77dfe01860882a3ebd5f3c2c660fb5718e937"
+    },
+    "RESULT_v0_40.md": {
+      "bytes": 6036,
+      "sha256": "450fdad6ff8c49d52db383f56f16ce2c2a3c1590b6c3147c1d6c7f2bb7de70c0"
+    },
+    "RUN_RECEIPT_v0_40.json": {
+      "bytes": 1733,
+      "sha256": "899cbdc73a91946fece6f5531ad0e69dd427c3a0d5249cbb7ac3e4e12f44424d"
+    },
+    "THEOREM_DRAFT_v0_40.md": {
+      "bytes": 4749,
+      "sha256": "e0589625409777fb733f4a4d1e1be8085f16fc5cd769818787c9f58d2e975ce6"
+    },
+    "artifacts_v0_40/RESULT_v0_40.json": {
+      "bytes": 21274,
+      "sha256": "2b073646d43595fc0f0c4cb06eabfe215fa102695f7bdf67a4ed409900e5f3b2"
+    },
+    "artifacts_v0_40/VERIFY_v0_40.json": {
+      "bytes": 511,
+      "sha256": "d6b8f1cfa3a8117ee67d230c4e7814bd36327d9f1aab8edbbb508b3af3b3fece"
+    },
+    "registration_v0_40.json": {
+      "bytes": 2627,
+      "sha256": "166ad20ba6b95a23f736310373a8de6b07a7c44f37d423d419101e619e7c6128"
+    },
+    "verify_result_v0_40.py": {
+      "bytes": 4787,
+      "sha256": "48ca220cc2141a588192f1bf6793248beb3cc0a23c6d047a5023c4cac748182a"
+    }
+  },
+  "protocol_id": "asmp9-risk-polytope-access-v0.40",
+  "registration_commit": "f9ce6c33926435144e944e4439acb33911b0e50d",
+  "result_status": "finite_risk_polytope_access_characterization_established",
+  "version": "0.40"
+}

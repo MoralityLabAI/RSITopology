@@ -1,0 +1,22 @@
+{
+  "registration_id": "ASMP-9-CONTEXT-GLUING-v0.11-registration",
+  "registered_at_utc": "2026-07-28T20:07:12Z",
+  "implementation_commit": "110609c569a2ccc35388c857d01ca39e7d5a0f0a",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/protocol_v0_11.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/THEOREM_DRAFT_v0_11.md": "fb5f2487c7737a5e6de97ae64fef4b5f7741fa157fb7bb9f5227c23b7024f044",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/PRIOR_ART_v0_11.md": "dd70df6804b3f894242a948d02fd077374ffab0e49673ca7c728c3cbe4804db9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/DEVELOPMENT_NOTE_v0_11.md": "4899a3e035083cc8d72d6f02bf318efce0c083efb02ef347021d4cceda3d51d1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/context_gluing.py": "79e368f21d2dd1a066dbe1d1fc94e13deb5aeb4d58755079028e488c5d6404eb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/experiment.py": "f707bfce00003806f9e0eb534c31c5a2b368fbe715e9974f0b18a5ac15950c88",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/test_context_gluing.py": "132844f4e917ec97c1f89d1ee7b99a2f19583f5900f1b8e94ba818b699e07129",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/test_experiment.py": "6a77337eff14106ea50db7c3258c27953e5833814f2228792b9e39fa58cd8d3e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/test_run_verification.py": "da7a53434f18d31163482fed1392316fab7c40d7a0e55150511bb38f716985f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/PROTOCOL_v0_11.md": "8745ac6a6d4496c903b5285f88fd0788b4b3dc14aafb93bcd0c867b256312920",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/protocol_v0_11.json": "7e3f902499c66cfb8619e993eb1af13f2db356b7312b8a8a67af59e27b37c6a8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/environment_v0_11.json": "471ccb6d64cd83e9192d003deb17f174fe6cf03f4105cc0b417e90fc9f4ee519",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/run_verification.py": "0daf6964158b49276f3faa86c0586fb09e2dcd70ab332c86c01caabdf0aeab79",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/verify_result.py": "3c798a45e51bc9c1d38831f182be6d4171e5c95d6001fafe02aaf4cb01c6c432",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/context_gluing_v0_11/README.md": "61b2c82568fce21d795e9e5cfdd888c09e56eb8b51e61e61eb02a7b95b399ba3"
+  }
+}

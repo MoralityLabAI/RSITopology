@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "confinement-width-cpu-validation-v0.1",
+  "registered_before_pilot": true,
+  "claim_boundary": "Numerical checks of classical data-rate and invariance-entropy consequences in frozen synthetic systems; no new theorem, trained-model, or recursive-improvement claim.",
+  "interfaces": {
+    "path": "plant state -> sensor encoder -> finite read symbol -> controller -> finite write symbol -> actuator decoder -> plant",
+    "prohibited": [
+      "analog state passed to controller",
+      "shared plant or sensor reference in controller",
+      "continuous write command crossing the finite interface",
+      "shared mutable RNG or callback carrying plant information"
+    ],
+    "fractional_rate_rule": "Over a length-L block, at most 2**floor(L*R) messages are available."
+  },
+  "statistics": {
+    "unstable_entropy_ascii": "h2(A_u) = sum_{abs(lambda_i)>1} log2(abs(lambda_i))",
+    "finite_lower_ascii": "B_lower(T) = ceil(max(0, T*h2(A_u) + log2(vol(K0_u)/vol(Ksafe_u))))",
+    "cap_detection_ascii": "P_detect(k) = 1 - (1-p)**k",
+    "cap_budget_ascii": "k95 = ceil(log(0.05)/log(1-p))"
+  },
+  "frozen_configs": {
+    "smoke": "configs/smoke",
+    "pilot": "configs/pilot",
+    "full": "configs/full"
+  },
+  "gates": {
+    "01_split_rate": {
+      "instrument_valid": "stable_zero_rate, analog_side_channel, and full_state_full_action controls all pass",
+      "primary": "asymmetric_rate_compensation_violations == 0",
+      "escalation": "Any constructive cell below its own read or write finite-horizon requirement triggers a leakage and assumption audit before interpretation."
+    },
+    "02_spectral_entropy": {
+      "primary": "R-squared against h2(A_u) exceeds R-squared against unstable index by at least 0.20",
+      "calibration": "Constructive-rate slope against h2 lies in [0.8, 1.2] on pilot."
+    },
+    "03_finite_horizon": {
+      "primary": "For every active universal bound, scaled correction minus registered log-volume ratio lies in [0,1) up to 1e-10 integer-rounding tolerance.",
+      "construction": "Aligned-box construction gap is reported in bits and never treated as a universal lower bound."
+    },
+    "04_transversal_index": {
+      "zero_coupling": "Evaluator-relevant unstable index equals one.",
+      "nonzero_coupling": "Asymptotic PBH index includes every unstable tangent mode above frozen tolerance.",
+      "finite_horizon": "Partial visibility is reported rather than coerced to the asymptotic index."
+    },
+    "05_sufficiency_audit": {
+      "random_baseline": "Empirical random detection is compared to 1-(1-p)**k in every cell.",
+      "instrument_gate": "The maximum absolute binomial-standardized error across registered cells is at most 4.5.",
+      "structured": "Sparse coordinate and oracle results remain separate from random probing.",
+      "adversary": "Post-design choice of w is reported separately and cannot count as a precommitted-auditor result."
+    },
+    "06_spin_glass": {
+      "instrument": "Analytic derivatives pass finite-difference tests; every smoke/pilot cell must recover at least one critical point and report convergence and rediscovery counts.",
+      "scientific": "Index-fraction robustness is descriptive until each registered sampler has adequate unique critical points; basin-weighted samples cannot establish a Kac-Rice claim."
+    }
+  },
+  "evidence_labels": [
+    "certified_infeasible",
+    "constructive_feasible",
+    "undetermined",
+    "spectral_pbh_estimator",
+    "monte_carlo_empirical",
+    "basin_weighted_newton_empirical"
+  ],
+  "execution_policy": "Smoke first. Pilot only after tests and smoke gates pass. Full configurations never run automatically."
+}

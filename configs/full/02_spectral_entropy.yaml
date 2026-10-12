@@ -1,0 +1,19 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2; never launched automatically",
+  "experiment": "02_spectral_entropy",
+  "run_id": "full_v1",
+  "seed": 2026071622,
+  "parameters": {
+    "horizon": 500,
+    "block_length": 128,
+    "collar_ratio": 0.5,
+    "family_a_index": 4,
+    "family_a_values": [1.01, 1.05, 1.2, 1.5, 2.0],
+    "family_b_entropy": 1.0,
+    "family_b_indices": [1, 2, 4, 8],
+    "family_c_delta": 0.05,
+    "family_c_indices": [1, 2, 3, 4, 8, 16, 32],
+    "precision_bits": [1, 2, 4, 8, 16]
+  }
+}

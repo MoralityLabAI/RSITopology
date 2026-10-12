@@ -1,0 +1,20 @@
+{
+  "schema_version": "asmp_resolution_claim_v0_3",
+  "problem_id": "ASMP-4",
+  "resolution_type": "metric_robust_negative_premise_with_positive_replacement",
+  "claim": "For deterministic noiseless serial sensor-controller-actuator codes with no controller or actuator side information, fixed authority, timing-compatible delivery, arbitrary registered component computation, and one shared nonnegative transcript-tree cost on both ports that is invariant under symbol relabeling and deterministic fixed-prefix insertion/deletion, the closed read/write safety-capacity region is a diagonal quadrant. This holds for whole-language cardinality growth, minimax worst-case binary prefix-code length, and history-dependent causal branching cost, although their scalar entropy values can differ.",
+  "positive_obligation_evidence": {
+    "coordinate_invariant_entropies": "THEOREM.md#3-complete-region-for-every-symmetric-tree-cost",
+    "full_capacity_region": "THEOREM.md#3-complete-region-for-every-symmetric-tree-cost",
+    "converse": "THEOREM.md#3-complete-region-for-every-symmetric-tree-cost",
+    "constructive_coder_controller": "THEOREM.md#2-bilateral-relay-normal-forms",
+    "finite_horizon_correction": "../asmp4_serial_collapse_theorem_v0_2/THEOREM.md#7-exact-initial-margin-correction",
+    "boundary_counterexamples": "THEOREM.md#4-exact-causal-metric-separation and THEOREM.md#5-boundaries"
+  },
+  "negative_obligation_evidence": {
+    "counterexample_or_impossibility_uses_the_registered_no_side_channel_architecture": "THEOREM.md#2-bilateral-relay-normal-forms",
+    "read_and_write_rates_and_control_authority_remain_frozen": "THEOREM.md#3-complete-region-for-every-symmetric-tree-cost"
+  },
+  "empirical_resolution": false,
+  "external_peer_review_complete": false
+}

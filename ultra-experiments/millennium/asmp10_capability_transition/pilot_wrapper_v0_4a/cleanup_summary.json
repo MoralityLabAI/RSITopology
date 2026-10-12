@@ -1,0 +1,363 @@
+﻿{
+    "run_id":  "asmp10-grokking-liveness-v0-4a-continuation",
+    "ts_utc":  "2026-07-21T23:34:58.6399082Z",
+    "stop_owned_processes":  true,
+    "owned_pids":  [
+                       34212
+                   ],
+    "owned_process_tree":  [
+                               34212
+                           ],
+    "stopped":  [
+
+                ],
+    "wsl_action":  "skipped",
+    "standby_action":  "skipped",
+    "memory_before":  {
+                          "total_gb":  23.784,
+                          "free_gb":  11.577,
+                          "used_gb":  12.208,
+                          "pct_used":  51.3,
+                          "available_mb":  11857,
+                          "committed_gb":  17.857,
+                          "commit_limit_gb":  68.784,
+                          "cache_gb":  0.37,
+                          "standby_gb":  8.625,
+                          "modified_page_list_gb":  0.17,
+                          "pool_nonpaged_gb":  1.109,
+                          "pool_paged_gb":  0.92,
+                          "page_reads_per_sec":  0,
+                          "pages_input_per_sec":  0
+                      },
+    "memory_after":  {
+                         "total_gb":  23.784,
+                         "free_gb":  11.561,
+                         "used_gb":  12.223,
+                         "pct_used":  51.4,
+                         "available_mb":  11839,
+                         "committed_gb":  17.864,
+                         "commit_limit_gb":  68.784,
+                         "cache_gb":  0.369,
+                         "standby_gb":  8.618,
+                         "modified_page_list_gb":  0.168,
+                         "pool_nonpaged_gb":  1.107,
+                         "pool_paged_gb":  0.919,
+                         "page_reads_per_sec":  0,
+                         "pages_input_per_sec":  0
+                     },
+    "gpu_before":  {
+                       "available":  true,
+                       "gpu":  [
+                                   "NVIDIA GeForce RTX 3050 Laptop GPU, 0, 0, 3964"
+                               ],
+                       "compute_apps":  [
+
+                                        ]
+                   },
+    "gpu_after":  {
+                      "available":  true,
+                      "gpu":  [
+                                  "NVIDIA GeForce RTX 3050 Laptop GPU, 0, 0, 3964"
+                              ],
+                      "compute_apps":  [
+
+                                       ]
+                  },
+    "lingering_owned_pids":  [
+
+                             ],
+    "suspect_training_processes":  [
+
+                                   ],
+    "process_memory":  {
+                           "totals":  {
+                                          "working_set_gb":  16.323,
+                                          "private_commit_gb":  13.245
+                                      },
+                           "top_by_private_commit":  [
+                                                         {
+                                                             "Id":  22512,
+                                                             "ProcessName":  "WindowsTerminal",
+                                                             "private_gb":  0.94,
+                                                             "working_set_gb":  0.246,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11911.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe"
+                                                         },
+                                                         {
+                                                             "Id":  4760,
+                                                             "ProcessName":  "MsMpEng",
+                                                             "private_gb":  0.44,
+                                                             "working_set_gb":  0.423,
+                                                             "Path":  null
+                                                         },
+                                                         {
+                                                             "Id":  11596,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.391,
+                                                             "working_set_gb":  0.173,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  15652,
+                                                             "ProcessName":  "GalaxyClient",
+                                                             "private_gb":  0.38,
+                                                             "working_set_gb":  0.321,
+                                                             "Path":  "C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"
+                                                         },
+                                                         {
+                                                             "Id":  6516,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.355,
+                                                             "working_set_gb":  0.361,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  9976,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.291,
+                                                             "working_set_gb":  0.295,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  24316,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.259,
+                                                             "working_set_gb":  0.253,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  23352,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.256,
+                                                             "working_set_gb":  0.263,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  10620,
+                                                             "ProcessName":  "explorer",
+                                                             "private_gb":  0.243,
+                                                             "working_set_gb":  0.276,
+                                                             "Path":  "C:\\WINDOWS\\Explorer.EXE"
+                                                         },
+                                                         {
+                                                             "Id":  5148,
+                                                             "ProcessName":  "KillerNetworkService",
+                                                             "private_gb":  0.222,
+                                                             "working_set_gb":  0.032,
+                                                             "Path":  null
+                                                         },
+                                                         {
+                                                             "Id":  25660,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.22,
+                                                             "working_set_gb":  0.226,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  4772,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.21,
+                                                             "working_set_gb":  0.185,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  27092,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.205,
+                                                             "working_set_gb":  0.108,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  22700,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.189,
+                                                             "working_set_gb":  0.21,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  4308,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.181,
+                                                             "working_set_gb":  0.206,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  27116,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.181,
+                                                             "working_set_gb":  0.181,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  19292,
+                                                             "ProcessName":  "msedgewebview2",
+                                                             "private_gb":  0.173,
+                                                             "working_set_gb":  0.083,
+                                                             "Path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\150.0.4078.83\\msedgewebview2.exe"
+                                                         },
+                                                         {
+                                                             "Id":  23672,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.172,
+                                                             "working_set_gb":  0.17,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  1220,
+                                                             "ProcessName":  "dwm",
+                                                             "private_gb":  0.156,
+                                                             "working_set_gb":  0.1,
+                                                             "Path":  null
+                                                         },
+                                                         {
+                                                             "Id":  17972,
+                                                             "ProcessName":  "msedgewebview2",
+                                                             "private_gb":  0.151,
+                                                             "working_set_gb":  0.006,
+                                                             "Path":  "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\150.0.4078.83\\msedgewebview2.exe"
+                                                         }
+                                                     ],
+                           "top_by_working_set":  [
+                                                      {
+                                                          "Id":  3180,
+                                                          "ProcessName":  "Memory Compression",
+                                                          "working_set_gb":  1.393,
+                                                          "private_gb":  0.003,
+                                                          "Path":  null
+                                                      },
+                                                      {
+                                                          "Id":  4760,
+                                                          "ProcessName":  "MsMpEng",
+                                                          "working_set_gb":  0.423,
+                                                          "private_gb":  0.44,
+                                                          "Path":  null
+                                                      },
+                                                      {
+                                                          "Id":  6516,
+                                                          "ProcessName":  "ChatGPT",
+                                                          "working_set_gb":  0.361,
+                                                          "private_gb":  0.355,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                      },
+                                                      {
+                                                          "Id":  15652,
+                                                          "ProcessName":  "GalaxyClient",
+                                                          "working_set_gb":  0.321,
+                                                          "private_gb":  0.38,
+                                                          "Path":  "C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"
+                                                      },
+                                                      {
+                                                          "Id":  9976,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.295,
+                                                          "private_gb":  0.291,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  10620,
+                                                          "ProcessName":  "explorer",
+                                                          "working_set_gb":  0.276,
+                                                          "private_gb":  0.243,
+                                                          "Path":  "C:\\WINDOWS\\Explorer.EXE"
+                                                      },
+                                                      {
+                                                          "Id":  23352,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.263,
+                                                          "private_gb":  0.256,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  24316,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.253,
+                                                          "private_gb":  0.259,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  22512,
+                                                          "ProcessName":  "WindowsTerminal",
+                                                          "working_set_gb":  0.246,
+                                                          "private_gb":  0.94,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11911.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe"
+                                                      },
+                                                      {
+                                                          "Id":  25660,
+                                                          "ProcessName":  "ChatGPT",
+                                                          "working_set_gb":  0.226,
+                                                          "private_gb":  0.22,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                      },
+                                                      {
+                                                          "Id":  22700,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.21,
+                                                          "private_gb":  0.189,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  4308,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.206,
+                                                          "private_gb":  0.181,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  2224,
+                                                          "ProcessName":  "WhatsApp.Root",
+                                                          "working_set_gb":  0.201,
+                                                          "private_gb":  0.083,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\5319275A.WhatsAppDesktop_2.2627.101.0_x64__cv1g1gvanyjgm\\WhatsApp.Root.exe"
+                                                      },
+                                                      {
+                                                          "Id":  4772,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.185,
+                                                          "private_gb":  0.21,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  27116,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.181,
+                                                          "private_gb":  0.181,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  21424,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.175,
+                                                          "private_gb":  0.134,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  11596,
+                                                          "ProcessName":  "ChatGPT",
+                                                          "working_set_gb":  0.173,
+                                                          "private_gb":  0.391,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                      },
+                                                      {
+                                                          "Id":  23672,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.17,
+                                                          "private_gb":  0.172,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  30388,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.163,
+                                                          "private_gb":  0.128,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  13468,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.158,
+                                                          "private_gb":  0.127,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      }
+                                                  ]
+                       },
+    "cleanup_passed":  true
+}

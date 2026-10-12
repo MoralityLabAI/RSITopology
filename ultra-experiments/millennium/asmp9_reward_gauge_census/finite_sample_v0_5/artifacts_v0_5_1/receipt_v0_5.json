@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 199.30899900000077,
+  "implementation_commit": "55098112b87e100ec20c5bfd75f13c7bffdc3900",
+  "output_hashes": {
+    "RESULT_v0_5.md": "bd3fdbe2edc6193feea9b28322e8ea432b28f289e7ac125840f06e2d4cf719d7",
+    "result_v0_5.json": "ae0453757494022d7cc353ab9fbcdaece9b344e93f7421a89fc603ce382c9634"
+  },
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-v0.5.1",
+  "registration_commit": "e640043e0cdebbcce274de587da29c1bf483964c",
+  "registration_sha256": "4e08112ea684c419d358fabe740e4ddb18779a4183ebada34dc2e66189ca62d0"
+}

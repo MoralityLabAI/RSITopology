@@ -1,0 +1,22 @@
+{
+  "amendment_sha256": "bb5e02e295a745b211f4644b894c5a9a35ef5414dd4230124138d219f43bded2",
+  "artifacts": {
+    "per_coupling.csv": "b6a1bff2021b0eaed0f967d22bf8735575b64bb3867dc03ad205c8a3fb9cc94f",
+    "reframe_manifest.json": "d3d9ac9d3962a33a02b52edf33b85a7a3995e1018a258b8f59562bd6618908e6",
+    "summary.json": "ebc25c52f206a4e7811c327125418cee9da83ce2d2173a04c7d8e65980c83317",
+    "transient_phase.png": "9cf73cca117cc7a31c7b3f4a23e26d5194a2779be97962402f6529bf0e934c83"
+  },
+  "environment": {
+    "matplotlib": "3.10.6",
+    "numpy": "2.4.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "git_commit_at_run": "d9873d3766c0a9c3dbbb71c88b3fb4260ebf8037",
+  "git_tracked_diff_sha256_at_run": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "overall_gate_pass": true,
+  "protocol_sha256": "df739432c88acfbd0eb9e5db5a91b03f268bdf955e3e80d1235f3337054b37f5",
+  "receipt_schema": "ultra_transient_amplification_receipt_v0_1",
+  "runner_sha256": "1d4858ebff726728a5c463e4615e23844ced99868bf2fc2688ef746dc8e5949c",
+  "source_module_sha256": "2f17e259698268c9eb8f22397ef90558ee43c88ad2319ed011c91bfe60c16579"
+}

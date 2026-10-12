@@ -1,0 +1,27 @@
+{
+  "registration_id": "ASMP-9-ROBUST-CONTEXT-GLUING-v0.12-registration",
+  "registered_at_utc": "2026-07-28T21:03:13Z",
+  "implementation_commit": "04e75e331af7453cfe170c58b4e968046247d08d",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/protocol_v0_12.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/PRIOR_ART_GATE_v0_12.md": "75f98a69bce949a210e9713c28bb5e331034e7999e41d3feeaf214e8fe607d18",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/THEOREM_DRAFT_v0_12.md": "3678f764b6a667db492effd94e32bf8176ddf58db34ddca86d642ec128d13f5a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/THEOREM_v0_12.md": "a400ba8d291b9f38401aaf0fb7d6cac43dc9d2bf8ee657d6f8b4393ca336732e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/CONDITIONING_COUNTEREXAMPLE_v0_12.md": "0d0cb3c14f05b963975d8b2e5e4ac68791a9bbe65100037e900222adf9ad6f1d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/DEVELOPMENT_NOTE_v0_12.md": "594cb0771eed6b394556db2db8b042b7d6ce200c630902cc5dc8de32671c8cb9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/DEVELOPMENT_CENSUS_v0_12.json": "980d983d302d4c456ecf9802ad208378fdda5a258e43260068f8a9ab4f7cfc5d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/DEVELOPMENT_RECEIPT_v0_12.json": "829d182d2b2b004f5d260eb09a7d39aaa2d92e66dfc979d8335d9bb1dfa36fec",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/robust_gluing.py": "8ba8222801d2fe08037239ece92554b8578144b6329d676091ccbb5912d9f63c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/exact_certificate.py": "2362d095ad38a8be256ff6b6b069c165f3d7912cd879ae5c1a14e7153adfee11",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/development_census.py": "099c03c9509c45b45302d3d62e3e37e83b44cc027ea902344c31be6bee880bc8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/experiment.py": "d793429628be35ff46531aef8d31cba9a528e111930a08fbbb2ea1b3e1d7d560",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/test_robust_gluing.py": "c3a9dcbcb76703071eb8286d5843dabd9655b241bd0adb887dcdfb35aa16c6d7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/test_experiment.py": "f7d0142fed9ac077fd762eeec7bcf4e884d6827dfea314b1ee6c00a52532f5d8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/PROTOCOL_v0_12.md": "7cf9b59adc9d7ba4abff8dda178506089df328305bc8bdf615eebb2e85113c44",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/protocol_v0_12.json": "14759d1704d02cd5e5a9c24c83bbb20b78cbf3b296c38f92296805817448cb27",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/environment_v0_12.json": "8ec921b8bb3a34fc9042d236b3fa8599fb9e1b9aaff49d71cfbc02cc2deb1e74",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/run_verification.py": "88d1b4c82541f39800a54e90da6285fdc18873446273777b013c02a201ef1f34",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/test_run_verification.py": "ac54b5866e962a6446de1e034877d2312eae290184addcf450758c811b3d1598",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/robust_context_gluing_v0_12/verify_result.py": "e1a43c8c2fa0e1c2575fdd41abb468dcf60da41ecb2c171c7604f54bac02c638"
+  }
+}

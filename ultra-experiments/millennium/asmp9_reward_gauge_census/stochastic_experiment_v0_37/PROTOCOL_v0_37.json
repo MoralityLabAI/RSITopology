@@ -1,0 +1,97 @@
+{
+  "schema_version": "asmp9_stochastic_experiment_protocol_v0_37",
+  "status": "prospective_protocol_not_run",
+  "outcomes_consumed": false,
+  "prior_art_disposition": "subsumed_instrument_consolidation",
+  "scientific_question": "Do zero-error component quotients determine bounded target-only decision risk, and when is full expanded-parameter deficiency conservative because it prices nuisance information irrelevant to the target?",
+  "experiment_class": {
+    "targets": 3,
+    "nuisance_states": 2,
+    "response": "one Bernoulli observation",
+    "confirmation_probability_grid": [
+      "1/4",
+      "1/3",
+      "2/3",
+      "3/4"
+    ],
+    "experiments": 4096,
+    "burned_development_grid_excluded": [
+      "0",
+      "1/2",
+      "1"
+    ],
+    "observation_semantics": [
+      "one_sampled_transcript",
+      "exact_population_law"
+    ],
+    "decisions": {
+      "cut_01_vs_2": [
+        0,
+        0,
+        1
+      ],
+      "cut_02_vs_1": [
+        0,
+        1,
+        0
+      ],
+      "cut_0_vs_12": [
+        0,
+        1,
+        1
+      ],
+      "identity": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "estimands": {
+    "zero_error_object": "connected components of the registered confusability graph",
+    "target_only_risk": "exact minimax 0-1 risk over the registered nuisance states",
+    "expanded_parameter_deficiency": "inf_K sup_(theta,xi) TV(K P_A(theta,xi), P_B(theta,xi))",
+    "deficiency_conservatism_gap": "expanded-parameter deficiency minus the maximum positive target-only minimax-risk gap over the four registered decisions"
+  },
+  "solver_contract": {
+    "floating_point_role": "SciPy HiGHS may propose active constraints only",
+    "accepted_optimum": "Every accepted value must have matching exact rational primal and dual certificates.",
+    "failure_rule": "Failure to construct an exact certificate stops execution; a floating optimum is never an outcome."
+  },
+  "fixed_gates": [
+    {
+      "gate": "E0",
+      "condition": "Exactly 4,096 confirmation experiments, four decisions, and both frozen observation semantics are evaluated.",
+      "failure": "enumeration_incomplete"
+    },
+    {
+      "gate": "B0",
+      "condition": "The classical finite anchor has deficiency 0 from informative to uninformative and 1/4 in the reverse direction.",
+      "failure": "blackwell_anchor_failed"
+    },
+    {
+      "gate": "R0",
+      "condition": "All 100 frozen anchor experiment/decision comparisons satisfy target-risk gap <= directional deficiency.",
+      "failure": "risk_transfer_failed"
+    },
+    {
+      "gate": "S0",
+      "condition": "Under each observation semantic, at least one connected-component quotient contains multiple exact risk profiles with strictly positive within-quotient spread.",
+      "failure": "quotient_insufficiency_not_live"
+    },
+    {
+      "gate": "C0",
+      "condition": "The nuisance-only witness has expanded-parameter deficiency 1/2, maximum registered target-only risk gap 0, and therefore strict conservatism.",
+      "failure": "deficiency_conservatism_witness_failed"
+    }
+  ],
+  "decision_rule": "All five gates must pass. Any failure yields not_established for the bounded instrument without changing the grid, decisions, semantics, or thresholds.",
+  "resource_envelope": {
+    "execution": "cpu_only",
+    "maximum_wall_seconds": 900,
+    "maximum_python_rss_bytes": 1073741824,
+    "note": "The release receipt reports resources. These are validity ceilings, not theorem assumptions."
+  },
+  "claim_boundary": "This is an exact finite instrument consolidation. Blackwell comparison, Le Cam deficiency, nuisance-parameter comparison, zero-error confusability, and the risk-transfer inequality are classical. A passing result would show only that the registered finite ASMP-9 ledger separates quotient, risk, and nuisance-sensitive deficiency. It would not establish a new comparison theorem, characterize general demonstrators, identify a real reward, or resolve ASMP-9."
+}
+

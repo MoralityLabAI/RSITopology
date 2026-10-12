@@ -1,0 +1,101 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-TRACE-BINDING-EXTRACTOR-v2.8",
+  "file_count": 23,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/ADAPTIVE_TRANSCRIPT_COUPLING_THEOREM_v2_7.md": {
+      "bytes": 6261,
+      "sha256": "EA1A586422602D4706DB5DAACA2389E7316213D9327745950988FA47ECA674D3"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/RELEASE_MANIFEST_v2_7.json": {
+      "bytes": 4272,
+      "sha256": "569445CD8CCB363C60A325AED48ACE59924E5707EF0805F1414C2A50D240ED9E"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/artifacts/adaptive_transcript_coupling_v2_7.json": {
+      "bytes": 642958,
+      "sha256": "F7FF271E1CB9B3F56184C2FE8006F49D7248136A1ACBFE347EEDF436D64AFC4C"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/RELEASE_MANIFEST_v2_5.json": {
+      "bytes": 4267,
+      "sha256": "0FC5C8234BFC7BACCE1A1DB9E5B947C43F206E8552BA347A90F317D6D08004CA"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/WITNESS_TRANSPARENT_NORMAL_FORM_THEOREM_v2_5.md": {
+      "bytes": 8540,
+      "sha256": "44E1936EF0A36E605311BD1A5977D3D555AE4CDE7F60D16D4FA4CAE73EFDB27B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/artifacts/witness_transparent_normal_form_v2_5.json": {
+      "bytes": 84594,
+      "sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_8.md": {
+      "bytes": 1357,
+      "sha256": "16016BD0443003178B1A1E5A2F54EDBF8071B7885176F91C4012AC0B5F990FF7"
+    },
+    "README.md": {
+      "bytes": 662,
+      "sha256": "97C0199DDDDE9B585C3C0F7A5C04F496BE0F94F8F0BD27A1BDB36C43C9791F7F"
+    },
+    "TRACE_BINDING_EXTRACTOR_THEOREM_v2_8.md": {
+      "bytes": 5585,
+      "sha256": "23F0A53232A92B2201F22390F4AC1F0B0316A29F6B0854E18A8D348178FFF54B"
+    },
+    "artifacts/trace_binding_extractor_v2_8.json": {
+      "bytes": 31115,
+      "sha256": "C84B77E18639AC6F509EAA50C807E060E96B863F7E7603E9B04F30480E773206"
+    },
+    "artifacts/trace_binding_extractor_verification_v2_8.json": {
+      "bytes": 921,
+      "sha256": "B0EB551CDFAFF585654B008A71B84C0357001B5E65CBB5B8C226E8E1D1272401"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2787,
+      "sha256": "D754A5235E49F8FF255752C0262DEB5691FA85B37A382CBF87CDA2AEAA4675FD"
+    },
+    "run_trace_binding_extractor.py": {
+      "bytes": 727,
+      "sha256": "BD4E21362FF63E6B94705D74266F9DB0916B8A0FAE5B1590BF67A7109E7986C9"
+    },
+    "test_trace_binding_extractor.py": {
+      "bytes": 3578,
+      "sha256": "178D4DFAE6B0223C410DC35F84E8E53BD019022C8C0D272DD43CEFB247D9F145"
+    },
+    "trace_binding_extractor.py": {
+      "bytes": 21970,
+      "sha256": "046A6984A673F3B48489696CF3D784502CAC797888D237094E35143E2919C316"
+    },
+    "verify_trace_binding_extractor.py": {
+      "bytes": 12676,
+      "sha256": "E0A784C348A09801DA18616631ED27E79EBC068F8DD1F88C1AD32F43D7373066"
+    }
+  },
+  "release_status": "operational_refute_binding_compiler_and_finder_extractor",
+  "schema_version": "asmp3_trace_binding_extractor_release_v2_8"
+}

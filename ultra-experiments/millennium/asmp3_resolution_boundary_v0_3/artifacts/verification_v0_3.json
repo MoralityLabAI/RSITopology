@@ -1,0 +1,24 @@
+{
+  "check_count": 15,
+  "checks": {
+    "adequacy_axiom_absent": true,
+    "binding_axiom_absent": true,
+    "binomial_identity": true,
+    "canonical_conjecture_present": true,
+    "formal_xor_cross_examination": true,
+    "gap_identity": true,
+    "independent_refutation_dimension": true,
+    "independent_tv_enumeration": true,
+    "joint_gap_tends_toward_zero": true,
+    "message_grammar_is_frozen": true,
+    "producer_gates": true,
+    "refute_and_atom_bounds_are_explicit": true,
+    "replica_dimensions": true,
+    "schema": true,
+    "single_atom_error": true
+  },
+  "method": "Independent JSON consumer with separate binomial, total-variation, powerset, and canonical-text computations; does not import the producer module.",
+  "passed": true,
+  "schema_version": "asmp3_resolution_boundary_verification_v0_3",
+  "verified_experiment_id": "ASMP-3-REFUTE-INTERFACE-DICHOTOMY-v0.3"
+}

@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "cdf": {
+      "path": "empirical_bernstein_cdf_v0_5.csv",
+      "sha256": "c67cfe4c8cd7e393009b30fd973025ebea2664d6f6d244372ebe4c09e0479ad9"
+    },
+    "conditions": {
+      "path": "condition_summary_v0_5.csv",
+      "sha256": "6a9aa804ac05c207cbed5349bb39452e0614de51245e6c5e791244970954b387"
+    },
+    "figure": {
+      "path": "audit_efficiency_v0_5.svg",
+      "sha256": "5dfc74184195fef421edf9f0e483a7505b9d9840efd2fd6358e49d22840ca12e"
+    },
+    "policies": {
+      "path": "policy_efficiency_v0_5.csv",
+      "sha256": "307f30259eba8115d4daddc4c3b60d45ad1eae2ec6270172b16c0e49a9d5dc84"
+    },
+    "report": {
+      "path": "RESULT_v0_5.md",
+      "sha256": "1dc150b6de2ac583497485c9db5fdc8d044991db0a24f8a2182f5410579ec267"
+    },
+    "result": {
+      "path": "result_v0_5.json",
+      "sha256": "3e009b1c5af619c0e02aadd97087a86545867ff45af4b3f4926607bf2577cfd7"
+    }
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "protocol_sha256": "ecbad60b1d2ba9c7310ae0dbc8503740701b660a4c9f9868604c17f33e0c33bb",
+  "registration_sha256": "3f9d9241588fd062b553e43dc2c8c53f4efb375edc51bf54b1829d5dcb0d3244",
+  "resource": {
+    "elapsed_seconds": 0.4999087000005602,
+    "pass": true,
+    "process_peak_rss_bytes": 118505472
+  },
+  "schema_version": "asmp8_audit_efficiency_receipt_v0_5",
+  "source_commit": "d762f62fd3da20bda12c402d3fbee507a0a3c814"
+}

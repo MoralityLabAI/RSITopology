@@ -1,0 +1,341 @@
+{
+  "claim_boundary": "For a finite linear-reward policy family, a declared linear reward gauge supports quotient-level policy claims only if every policy occupancy difference annihilates that gauge. Under that condition, plug-in policy regret is bounded by quotient reward error times policy-occupancy diameter; a strict estimated-margin condition certifies policy identity; and the regret bound is exactly sharp on a registered two-policy witness. Composing with ASMP-9 v0.28 yields a measurement-to-decision factorization through the quotient spectral floor. Positive reward scale is irrelevant to fixed-MDP argmax but remains necessary for fixed-unit regret thresholds. These are classical feature-expectation, downstream-invariance, robust-optimization, and plug-in argmax ingredients; no novelty is claimed. The result does not show that a reward estimate is correct, that a registered policy is safe, that reward regret captures all safety loss, or that ASMP-9 is resolved.",
+  "fresh_validation": {
+    "composition_cell": {
+      "estimated_reward": [
+        "1/4",
+        "-1/4",
+        "-2"
+      ],
+      "gauge_basis": [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "measurement_error": [
+        "5/4",
+        "-5/4"
+      ],
+      "measurement_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "name": "fresh_measurement_to_policy",
+      "policy_occupancies": [
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          0,
+          4,
+          2
+        ]
+      ],
+      "quotient_basis": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "sigma_min_squared": "1",
+      "true_reward": [
+        -1,
+        1,
+        5
+      ]
+    },
+    "equality_margin_cell": {
+      "estimated_reward": [
+        "5/17",
+        "-5/17"
+      ],
+      "gauge_basis": [
+        [
+          1,
+          1
+        ]
+      ],
+      "name": "fresh_margin_equality",
+      "policy_occupancies": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "true_reward": [
+        0,
+        0
+      ]
+    },
+    "invalid_gauge_cell": {
+      "estimated_reward": [
+        2,
+        -1
+      ],
+      "gauge_basis": [
+        [
+          1,
+          1
+        ]
+      ],
+      "name": "fresh_invalid_constant_gauge",
+      "policy_occupancies": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "true_reward": [
+        2,
+        -1
+      ]
+    },
+    "nonzero_regret_cell": {
+      "estimated_reward": [
+        "1/4",
+        "-1/4"
+      ],
+      "gauge_basis": [
+        [
+          1,
+          1
+        ]
+      ],
+      "name": "fresh_nonzero_regret",
+      "policy_occupancies": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "true_reward": [
+        -1,
+        1
+      ]
+    },
+    "scale_cell": {
+      "evaluated_policy": 0,
+      "fixed_regret_threshold": 4,
+      "name": "fresh_scale_target_fork",
+      "policy_occupancies": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "reward": [
+        -3,
+        3
+      ],
+      "scale_factors": [
+        "1/5",
+        "7/3"
+      ]
+    },
+    "sharp_cell": {
+      "estimated_reward": [
+        0,
+        0
+      ],
+      "gauge_basis": [
+        [
+          1,
+          1
+        ]
+      ],
+      "magnitude": "11/13",
+      "name": "fresh_sharp_two_policy",
+      "policy_occupancies": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "true_reward": [
+        "-11/13",
+        "11/13"
+      ]
+    },
+    "strict_margin_cell": {
+      "estimated_reward": [
+        "23/6",
+        "7/6",
+        0
+      ],
+      "gauge_basis": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "name": "fresh_strict_margin",
+      "policy_occupancies": [
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "true_reward": [
+        4,
+        1,
+        0
+      ]
+    },
+    "zero_regret_cell": {
+      "estimated_reward": [
+        "23/6",
+        "7/6",
+        0
+      ],
+      "gauge_basis": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "name": "fresh_zero_regret",
+      "policy_occupancies": [
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "true_reward": [
+        4,
+        1,
+        0
+      ]
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_decision_gauge_precondition",
+    "G2_quotient_regret_bound",
+    "G3_sharpness_witness",
+    "G4_policy_identity_margin",
+    "G5_invalid_gauge_abstention",
+    "G6_scale_target_bifurcation",
+    "G7_measurement_to_decision_composition",
+    "G8_prior_art_and_claim_boundary",
+    "G9_resource_and_scope"
+  ],
+  "prior_art": [
+    {
+      "identifier": "ICML-2004-Abbeel-Ng",
+      "role": "feature-expectation policy-performance bounds"
+    },
+    {
+      "identifier": "PMLR:202:32033-32058",
+      "role": "data-source and downstream-task invariances"
+    },
+    {
+      "identifier": "PMLR:139:5496-5505",
+      "role": "finite deterministic MDP reward identification"
+    },
+    {
+      "identifier": "PMLR:162:4618-4629",
+      "role": "reward estimation and downstream policy suboptimality"
+    },
+    {
+      "identifier": "PMLR:235:60957-61020",
+      "role": "finite-sample inverse reinforcement learning metrics"
+    },
+    {
+      "identifier": "ASMP-9-v0.28",
+      "role": "calibrated occupancy quotient and spectral-floor handoff"
+    }
+  ],
+  "protocol_id": "ASMP-9-DECISION-RELEVANCE-v0.29",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 536870912,
+    "wall_seconds": 120
+  },
+  "structured_claims": {
+    "allowed": [
+      "A declared linear reward gauge is suitable for policy decisions only when every registered policy-occupancy difference annihilates it.",
+      "Under a decision-null gauge, plug-in policy regret is bounded by quotient reward error times occupancy diameter.",
+      "The finite Euclidean regret bound is exactly sharp on the registered two-policy witness.",
+      "A strict estimated-margin inequality certifies policy identity; equality is inconclusive.",
+      "The v0.28 quotient spectral bound composes multiplicatively with policy occupancy diameter.",
+      "Positive reward scale preserves fixed-MDP argmax while changing fixed-unit regret thresholds."
+    ],
+    "forbidden": [
+      "Every reward-learning gauge is decision-null.",
+      "Small reward regret proves broad AI safety.",
+      "The learned reward estimate is correct.",
+      "The registered policy family contains a safe policy.",
+      "Positive reward scale is irrelevant to every downstream target.",
+      "Classical feature-expectation, robust-optimization, or downstream-invariance mathematics is new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.29",
+  "verdict_map": {
+    "all_gates_pass": "decision_relevance_boundary_established_v0_29",
+    "any_substantive_gate_fails": "decision_relevance_boundary_not_established_v0_29",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_29"
+  }
+}

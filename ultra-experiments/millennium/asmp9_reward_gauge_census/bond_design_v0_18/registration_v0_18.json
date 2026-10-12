@@ -1,0 +1,26 @@
+{
+  "implementation_commit": "e063a7707b3203e21442c4a77330f72596260a57",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/protocol_v0_18.json",
+  "registered_at_utc": "2026-07-29T00:28:22Z",
+  "registration_id": "ASMP-9-BOND-DESIGN-v0.18-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": "892e4754540673c56ee0b4d7ee5ba2b249b21080a8aadae80440b6256ee51c8f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/DEVELOPMENT_NOTE_v0_18.md": "29a9ed95b164ae3cc544e023ea56f83d4a8a2c3961203532e3773498bfa57ed0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/FORMULATION_DRAFT_v0_18.md": "a55f910347f20613eb445506f3b3cc3677d325fb7a37137ee25acd83b069f092",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/PRIOR_ART_GATE_v0_18.md": "101bc351b6a2123f7a229d6ed859d5ccdd33fda7c2f70719006b048d59ca6c19",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/PROTOCOL_v0_18.md": "1bdfd619530867ae1bd2547a2f100abe98f61c8d46f7632f87600675d830a545",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/README.md": "e352e39cd923e5ee4315fd47e56174e81cea735f654ca18d94af9fb6c01a9b46",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/bond_design.py": "4346d1b643171485f809d997b9067083f22c1b414757881cc6f2d3d5313b0edf",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/development_check.py": "6014457ca74ca5e4b5e39d139ec2dcd9633000551960e3b80dbb601005a9c67b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/protocol_v0_18.json": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/register.py": "e28a2fdf3facb7c6b9c660c861c41f1c67c18e5b5cfd2870093c850ba8e81e53",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/run_verification.py": "8dddd19997220decd94268176c6bdd4c7ede3e58b9b76816caa271ab9d2aaba9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/test_bond_design.py": "307718fd1d1006ca0f2a9a4ea0ab191ae9f304f2c063af0e117e93337d0ed991",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/test_protocol.py": "9e817ba31d338ab49cd47979efbe582f4024059a0b04684a0ffceb37a03af74a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bond_design_v0_18/verify_result.py": "f1b6760a753264b1cc4d28038c7d4b207df4415e72976463f63e0c02ab5be0f2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/PUBLIC_SUMMARY_v0_17.md": "6d5266c793d77f7498228c392dfd485af9d3691d8a0106f0e4c034221e27b677",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/protocol_v0_17.json": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/release_manifest_v0_17.json": "3b77d59b6db648a5dc3fbdf1a62cba417320a0885a73d4451d68fe5e7cf19d7f"
+  }
+}

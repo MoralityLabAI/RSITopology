@@ -1,0 +1,10 @@
+{
+  "all_boundary_inversions_absent": true,
+  "all_containment_inversions_exist": true,
+  "cells": 720,
+  "conditions": 48,
+  "interpretation": "Sample-cost inversion exists only after purchasing additional intervention width; no r+s=k boundary plan beats pure observation in this pilot.",
+  "maximum_inversion_width_fraction": "9/10",
+  "minimum_inversion_width_fraction": "7/12",
+  "status": "construction_only_non_claim_eligible_pilot"
+}

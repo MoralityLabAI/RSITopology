@@ -1,0 +1,55 @@
+{
+  "schema_version": "asmp4_nonfinite_safe_closing_v0_33",
+  "theorem": {
+    "component_region": "R_q=closure(upward(conv(P_q)))",
+    "support_formula": "R_q=intersection_lambda {(r,w): lambda*r+(1-lambda)*w >= h_q(lambda)}",
+    "global_region": "closure(R)=closure(union_q R_q)",
+    "finite_correction": "closed weighted rate <= prefix weighted rate plus weighted closing overhead/T",
+    "coordinate_invariance": "cost-preserving causal conjugacies transport components, blocks, h_q, and R"
+  },
+  "hypotheses": {
+    "component_indexed": true,
+    "safe_reset_concatenation": true,
+    "cofinal_sublinear_cost_closing": true,
+    "sublinear_time_for_rate_preservation": true,
+    "shadow_error_below_registered_margin": true
+  },
+  "nonfinite_fixture": {
+    "sequence": "Thue-Morse",
+    "finite_exact_stationary_quotient": false,
+    "balanced_corner": [
+      "1/2",
+      "1/2"
+    ],
+    "closing_time_overhead": 1,
+    "closing_cost_overhead": [
+      1,
+      1
+    ]
+  },
+  "nonconvex_boundary": {
+    "component_corners": [
+      [
+        "1/2",
+        "3/2"
+      ],
+      [
+        "3/2",
+        "1/2"
+      ]
+    ],
+    "false_collapsed_midpoint": [
+      1,
+      1
+    ]
+  },
+  "evidence": {
+    "aperiodicity_candidates_rejected": 8320,
+    "prefix_horizons": 4096,
+    "finite_correction_rows": 26112,
+    "mutations_rejected": 8,
+    "predecessor_packages": 33,
+    "predecessor_tests": 364
+  },
+  "disposition": "nonfinite variational replacement proved under an explicit safe-closing property; arbitrary nonlinear safe-closing remains open"
+}

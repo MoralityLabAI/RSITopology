@@ -1,0 +1,1118 @@
+{
+  "decision_types": {
+    "classification": {
+      "persistence_curve": [
+        {
+          "minimal_access_sets": [
+            [
+              "q0",
+              "q1"
+            ],
+            [
+              "q0",
+              "q2"
+            ],
+            [
+              "q1",
+              "q2"
+            ]
+          ],
+          "tolerance": "0"
+        },
+        {
+          "minimal_access_sets": [
+            [
+              "q0"
+            ],
+            [
+              "q1"
+            ],
+            [
+              "q2"
+            ]
+          ],
+          "tolerance": "1/2"
+        },
+        {
+          "minimal_access_sets": [
+            []
+          ],
+          "tolerance": "2/3"
+        }
+      ],
+      "rows": [
+        {
+          "epsilon": "2/3",
+          "source_observations": 1,
+          "subset": [],
+          "subset_size": 0,
+          "witness_reference_rule": [
+            0,
+            1,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "1/2",
+          "source_observations": 2,
+          "subset": [
+            "q0"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            1,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "1/2",
+          "source_observations": 2,
+          "subset": [
+            "q1"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "1/2",
+          "source_observations": 2,
+          "subset": [
+            "q2"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            2,
+            1,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "2/3",
+          "source_observations": 1,
+          "subset": [
+            "q_const"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            1,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "1/2",
+          "source_observations": 2,
+          "subset": [
+            "q0",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            0,
+            1,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "1/2",
+          "source_observations": 2,
+          "subset": [
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            0,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "1/2",
+          "source_observations": 2,
+          "subset": [
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            2,
+            1,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 4,
+          "witness_reference_rule": [
+            2,
+            2,
+            2
+          ],
+          "worst_problem": "three_class_identification"
+        }
+      ]
+    },
+    "combined_groups": {
+      "persistence_curve": [
+        {
+          "minimal_access_sets": [
+            [
+              "q0",
+              "q1"
+            ],
+            [
+              "q0",
+              "q2"
+            ],
+            [
+              "q1",
+              "q2"
+            ]
+          ],
+          "tolerance": "0"
+        },
+        {
+          "minimal_access_sets": [
+            [
+              "q1"
+            ],
+            [
+              "q0",
+              "q2"
+            ]
+          ],
+          "tolerance": "1/4"
+        },
+        {
+          "minimal_access_sets": [
+            []
+          ],
+          "tolerance": "2/7"
+        }
+      ],
+      "rows": [
+        {
+          "epsilon": "2/7",
+          "source_observations": 1,
+          "subset": [],
+          "subset_size": 0,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q0"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 2,
+          "subset": [
+            "q1"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q2"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 1,
+          "subset": [
+            "q_const"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q0",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 2,
+          "subset": [
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 4,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        }
+      ]
+    },
+    "q0_asymmetric": {
+      "persistence_curve": [
+        {
+          "minimal_access_sets": [
+            [
+              "q0"
+            ],
+            [
+              "q1",
+              "q2"
+            ]
+          ],
+          "tolerance": "0"
+        },
+        {
+          "minimal_access_sets": [
+            []
+          ],
+          "tolerance": "1/4"
+        }
+      ],
+      "rows": [
+        {
+          "epsilon": "1/4",
+          "source_observations": 1,
+          "subset": [],
+          "subset_size": 0,
+          "witness_reference_rule": [
+            1,
+            0,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 2,
+          "subset": [
+            "q0"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 2,
+          "subset": [
+            "q1"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 2,
+          "subset": [
+            "q2"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            0,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 1,
+          "subset": [
+            "q_const"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            0,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 2,
+          "subset": [
+            "q0",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 2,
+          "subset": [
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "1/4",
+          "source_observations": 2,
+          "subset": [
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            0,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 4,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q0_asymmetric_group"
+        }
+      ]
+    },
+    "q1_asymmetric": {
+      "persistence_curve": [
+        {
+          "minimal_access_sets": [
+            [
+              "q1"
+            ],
+            [
+              "q0",
+              "q2"
+            ]
+          ],
+          "tolerance": "0"
+        },
+        {
+          "minimal_access_sets": [
+            []
+          ],
+          "tolerance": "2/7"
+        }
+      ],
+      "rows": [
+        {
+          "epsilon": "2/7",
+          "source_observations": 1,
+          "subset": [],
+          "subset_size": 0,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q0"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 2,
+          "subset": [
+            "q1"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q2"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 1,
+          "subset": [
+            "q_const"
+          ],
+          "subset_size": 1,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q0",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            0,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 2,
+          "subset": [
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "2/7",
+          "source_observations": 2,
+          "subset": [
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 2,
+          "witness_reference_rule": [
+            1,
+            1,
+            0
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 3,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        },
+        {
+          "epsilon": "0",
+          "source_observations": 3,
+          "subset": [
+            "q0",
+            "q1",
+            "q2",
+            "q_const"
+          ],
+          "subset_size": 4,
+          "witness_reference_rule": [
+            1,
+            1,
+            1
+          ],
+          "worst_problem": "q1_asymmetric_group"
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 3.7833358999923803,
+  "phase": "burned_development",
+  "queries": {
+    "q0": [
+      "0",
+      "0",
+      "1"
+    ],
+    "q1": [
+      "0",
+      "1",
+      "0"
+    ],
+    "q2": [
+      "0",
+      "1",
+      "1"
+    ],
+    "q_const": [
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "scientific_content_sha256": "7e1b7c623d78cd3780df70f79e51e4edc95b42526e467ea6cf27a38d02669e9c",
+  "working_set_bytes_at_completion": 71905280
+}

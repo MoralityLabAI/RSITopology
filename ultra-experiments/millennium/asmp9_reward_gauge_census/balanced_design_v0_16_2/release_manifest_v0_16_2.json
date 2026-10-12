@@ -1,0 +1,41 @@
+{
+  "artifact_hashes": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_16.md": "80f252dd44ccb26a42160731bcca8f49289c4642f70faf0626099826b4248213",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/PRIOR_ART_GATE_v0_16.md": "536c0dc9483234520ce0433f9cacaf542e71e0761208ef6ac94a7853c4d16fc7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/RUN_ABORT_v0_16.json": "5fa9fd7532b7f43b1e15ce1ad9cf54c3804ca5fdd4367138e315aaa66310a7d1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/THEOREM_v0_16.md": "d387a0ae9009b06a4080698d92beb97dbdcb9b4a0c4e0a40d83e8b4e5c8580d0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/RUN_ABORT_v0_16_1.json": "c732dd8550b5cc1cd82d1afb18f01c7db084fd7e90882b75670c699c18b632f2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/PROTOCOL_v0_16_2.md": "991744ca1d11ee52ae631bc622606f2e7ddd160a09e04ce4e51acec30939af88",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/PUBLIC_SUMMARY_v0_16_2.md": "3da3c7714f41cc63c951ff6c8b070cd391d07afa58510b14899b34a86bd50d51",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/artifacts_v0_16_2/RESULT_v0_16_2.md": "ff17ec42976506b1014fcafec564b311c5449da21cf016740bc9bf51fe58ab36",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/artifacts_v0_16_2/progress_v0_16_2.json": "b964f4ccbd80cdfc7e2b2f5ee26163f406e994d25a9e6bd4efea29df9ae9e47c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/artifacts_v0_16_2/receipt_v0_16_2.json": "233979a6cdcb5dc219d0c4f134ede9ebec6f72e0ee2202a7347ab9bcb7c6adad",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/artifacts_v0_16_2/result_v0_16_2.json": "9159f59ee97350f96fbbb94131eee02a43b788837337d93b4046277f18d8464a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/artifacts_v0_16_2/start_v0_16_2.json": "9ae89bc766e5b3ac7ba0ef82438a0db31b558154f7a9fe2f0128e7f4e472257e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/artifacts_v0_16_2/verification_v0_16_2.json": "302ada88b0eb4dbda15ed50ebd3a3e063149a19436417540290ddad12579ef11",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/protocol_v0_16_2.json": "506a0a539c50378dca9b4d53d94f2ac3a79039cc8627099cdf49af8f65092845",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/registration_v0_16_2.json": "14ad8dbecd19af0b679a706d18c81eaad1c7136d679aa0de65869a7dfff2c095",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/run_verification.py": "85c072c2da77b20b9b7d9ea2c6cf5c7ba303725f9252b836dc63ed4c65aad633",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/threshold_search.py": "3473ea17de49def607dbce4913e9bfd29077acf21d056453b690aaf0f27c3b26",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/verify_result.py": "3f615d6acd578b5ce5ce1674bf11417d407ea0916ea1507ad8831b0a414972e0"
+  },
+  "clean_replay": {
+    "all_scientific_fields_equal": true,
+    "focused_tests_passed": 19,
+    "independent_check_count": 46,
+    "independent_status": "pass",
+    "replay_commit": "72884b1a2ac1f5f7e15f817627d473ee8e264d90"
+  },
+  "implementation_commit": "af94d8db0fd4164e94a116487894459a79972f35",
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.2",
+  "registration_commit": "c139fa3363763de6ab52b8727f0ff3e4a3545654",
+  "registration_sha256": "14ad8dbecd19af0b679a706d18c81eaad1c7136d679aa0de65869a7dfff2c095",
+  "resource_envelope": {
+    "gpu_used": false,
+    "observed_elapsed_seconds": 41.89900820000912,
+    "observed_peak_resident_bytes": 34738176,
+    "registered_peak_resident_bytes": 1073741824,
+    "registered_wall_seconds": 120
+  },
+  "result_commit": "72884b1a2ac1f5f7e15f817627d473ee8e264d90"
+}

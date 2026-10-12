@@ -1,0 +1,51 @@
+{
+  "commits": {
+    "development": "73efe22a8b1db29b7031c57b87840347552fcb08",
+    "registration": "c753a80e4fdcd524851271b6fdc3577cac6f0a0d",
+    "verification_result": "a312a4b88166e790ba1d4a9910b39ba88752f4d5",
+    "verification_source": "78c5cf47245ff82980cf8cca0befd88a0283fb39"
+  },
+  "commands": {
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/test_reference_weight.py ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/test_verifier_v0_50.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/verify_theorems_v0_50.py"
+  },
+  "gates": {
+    "B0": true,
+    "D0": true,
+    "H0": true,
+    "M0": true,
+    "Q0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "V0": true
+  },
+  "protocol_id": "asmp9-reference-weight-robustness-verification-v0.50",
+  "registration_sha256": "262b271bd87e393c6ff939e7d8a012fb9c7d7d642a0f39741fa2936a98fd2962",
+  "resource": {
+    "elapsed_seconds": 8.537865099991905,
+    "peak_working_set_bytes": 27660288,
+    "worker_processes": 1
+  },
+  "result": {
+    "interpolation_checks": 790,
+    "interpolation_mismatches": 0,
+    "no_robust_pair_count": 282,
+    "ordered_pair_count": 361,
+    "region_checks": 1140,
+    "region_mismatches": 0,
+    "regret_equivalence_mismatches": 0,
+    "robust_chain_mismatches": 0,
+    "robust_pair_count": 79,
+    "table_count": 19,
+    "v0_48_robust_optimizer_count": 1451520
+  },
+  "schema": "asmp9-v0.50-run-receipt-v1",
+  "status": "finite_reference_weight_theorem_verified",
+  "tests": {
+    "expected": 11,
+    "passed": 11
+  },
+  "verification_sha256": "c47e0dbd193b4e1b0a58a86dfadb2b33e0cb9699f93736d207fdd5c8adf4772a",
+  "version": "0.50"
+}

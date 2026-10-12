@@ -1,0 +1,19 @@
+{
+  "schema_version": "asmp4_zero_error_sensor_kernel_contract_v0_17",
+  "base_plant": "v0.13 positive-volume collar with q classes (0,0,8,8)",
+  "kernel": {
+    "parameter": "finite output alphabet Y and nonempty support S_z subseteq Y for each mode z",
+    "probabilities": "arbitrary rational values strictly positive on S_z and zero outside, summing to one",
+    "charging": "each realized raw output y must remain injectively recoverable from the read transcript; normal information is additionally charged",
+    "safety_quantifier": "for every disturbance word and every sensor-output word in support"
+  },
+  "theorem": {
+    "feasibility": "union(S_z:q=0) is disjoint from union(S_z:q=8)",
+    "active_outputs": "a=cardinality of union_z S_z",
+    "feasible_region": "[1+log2(a),infinity) x [2,infinity)",
+    "infeasible_region": "empty",
+    "finite_read_words": "a^T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "margin_range": "0<rho<=1"
+  }
+}

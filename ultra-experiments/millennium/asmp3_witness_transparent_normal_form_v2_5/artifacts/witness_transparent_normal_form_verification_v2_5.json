@@ -1,0 +1,18 @@
+{
+  "check_count": 9,
+  "checker": "clean_room_extraction_coupling_nonbinding_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_36_extraction_rows_reconstructed": true,
+    "V2_all_10625_coupling_tables_reconstructed": true,
+    "V3_sharpness_witnesses_reconstructed": true,
+    "V4_nonbinding_refute_variants_reconstructed": true,
+    "V5_extraction_resources_and_restart_minimality": true,
+    "V6_v0_7_literal_sufficiency_and_necessity_fork_matches": true,
+    "V7_v2_0_and_v2_4_parent_contracts_match": true,
+    "V8_all_11_producer_gates_true": true
+  },
+  "claim_boundary": "This checker certifies the witness-transparent extraction theorem and literal nonbinding-Refute separation. It does not extend the normal form to protocols lacking ideal simulation or rejection witnesses.",
+  "passed": true,
+  "schema_version": "asmp3_witness_transparent_normal_form_verification_v2_5"
+}

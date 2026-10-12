@@ -1,0 +1,1907 @@
+{
+  "availability_records": [
+    {
+      "counts": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "exact_match": true,
+      "graph": "wheel5",
+      "probabilities": [
+        {
+          "decimal": 0.2222222222222222,
+          "fraction": "2/9"
+        },
+        {
+          "decimal": 0.5555555555555556,
+          "fraction": "5/9"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.7777777777777778,
+          "fraction": "7/9"
+        },
+        {
+          "decimal": 0.4444444444444444,
+          "fraction": "4/9"
+        },
+        {
+          "decimal": 0.6666666666666666,
+          "fraction": "2/3"
+        },
+        {
+          "decimal": 0.1111111111111111,
+          "fraction": "1/9"
+        },
+        {
+          "decimal": 0.8888888888888888,
+          "fraction": "8/9"
+        }
+      ],
+      "raw_full_rank_probability": {
+        "decimal": 0.6871528946019281,
+        "fraction": "2395953994/3486784401"
+      },
+      "raw_state_count": 1296,
+      "ternary_full_rank_probability": {
+        "decimal": 0.6871528946019281,
+        "fraction": "2395953994/3486784401"
+      }
+    },
+    {
+      "counts": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "exact_match": true,
+      "graph": "theta133",
+      "probabilities": [
+        {
+          "decimal": 0.2857142857142857,
+          "fraction": "2/7"
+        },
+        {
+          "decimal": 0.42857142857142855,
+          "fraction": "3/7"
+        },
+        {
+          "decimal": 0.7142857142857143,
+          "fraction": "5/7"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5714285714285714,
+          "fraction": "4/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "fraction": "2/7"
+        },
+        {
+          "decimal": 0.7142857142857143,
+          "fraction": "5/7"
+        }
+      ],
+      "raw_full_rank_probability": {
+        "decimal": 0.132682377067309,
+        "fraction": "1529775/11529602"
+      },
+      "raw_state_count": 432,
+      "ternary_full_rank_probability": {
+        "decimal": 0.132682377067309,
+        "fraction": "1529775/11529602"
+      }
+    },
+    {
+      "counts": [
+        2,
+        1,
+        2,
+        1,
+        3
+      ],
+      "exact_match": true,
+      "graph": "cycle4_tail",
+      "probabilities": [
+        {
+          "decimal": 0.3,
+          "fraction": "3/10"
+        },
+        {
+          "decimal": 0.4,
+          "fraction": "2/5"
+        },
+        {
+          "decimal": 0.7,
+          "fraction": "7/10"
+        },
+        {
+          "decimal": 0.6,
+          "fraction": "3/5"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        }
+      ],
+      "raw_full_rank_probability": {
+        "decimal": 0.222768,
+        "fraction": "13923/62500"
+      },
+      "raw_state_count": 144,
+      "ternary_full_rank_probability": {
+        "decimal": 0.222768,
+        "fraction": "13923/62500"
+      }
+    }
+  ],
+  "bad_support_records": [
+    {
+      "actual_supports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "all_have_bad_orientation": true,
+      "all_proper_subsets_live": true,
+      "exact_support_match": true,
+      "expected_supports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "graph": "cycle4_tail",
+      "minimality_records": [
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            1
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            2
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            2
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            2,
+            3
+          ]
+        }
+      ],
+      "support_count": 6
+    },
+    {
+      "actual_supports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "all_have_bad_orientation": true,
+      "all_proper_subsets_live": true,
+      "exact_support_match": true,
+      "expected_supports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "graph": "cycle6",
+      "minimality_records": [
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            1
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            2
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            2
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            2,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            2,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            2,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            3,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            3,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            4,
+            5
+          ]
+        }
+      ],
+      "support_count": 15
+    },
+    {
+      "actual_supports": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          6
+        ]
+      ],
+      "all_have_bad_orientation": true,
+      "all_proper_subsets_live": true,
+      "exact_support_match": true,
+      "expected_supports": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          3,
+          6
+        ]
+      ],
+      "graph": "theta133",
+      "minimality_records": [
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            2
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            1,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            2,
+            3
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            4,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            4,
+            6
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            2
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            5,
+            6
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            1,
+            6
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            2,
+            6
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            3,
+            5
+          ]
+        },
+        {
+          "bad_orientation_count": 2,
+          "first_bad_orientation": [
+            0,
+            0,
+            0
+          ],
+          "proper_subset_bad_count": 0,
+          "support": [
+            0,
+            3,
+            6
+          ]
+        }
+      ],
+      "support_count": 15
+    }
+  ],
+  "binding_checks": {
+    "hash:ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/THEOREM_v0_16.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/PUBLIC_SUMMARY_v0_16_2.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_2/release_manifest_v0_16_2.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/conditional_fiber.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/DEVELOPMENT_CENSUS_v0_17.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/DEVELOPMENT_NOTE_v0_17.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/DEVELOPMENT_RECEIPT_v0_17.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/FORMULATION_DRAFT_v0_17.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/PRIOR_ART_GATE_v0_17.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/PROTOCOL_v0_17.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/README.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/THEOREM_DRAFT_v0_17.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/development_census.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/environment_v0_17.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/general_graph.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/protocol_v0_17.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/register.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/test_general_graph.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/test_protocol.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/verify_result.py": true,
+    "head_is_registration_commit": true,
+    "implementation_is_ancestor": true,
+    "tracked_tree_clean": true
+  },
+  "claim_boundary": "Fresh exact verification of residual-cycle fiber rank, ternary status compression, coordinatewise endpoint reduction, minimal-bad-support exponent certificates, and one finite nonuniform-allocation counterexample for independent Bernoulli comparison graphs; not an every-budget optimum theorem, adaptive allocation, dependent or unknown-link behavior, downstream test-power theorem, general IRL identification, or ASMP-9 resolution.",
+  "endpoint_monotonicity_records": [
+    {
+      "coefficients_nonnegative": true,
+      "comparison_count": 810,
+      "graph": "cycle4_tail",
+      "violation_count": 0,
+      "violation_examples": []
+    },
+    {
+      "coefficients_nonnegative": true,
+      "comparison_count": 2916,
+      "graph": "cycle6",
+      "violation_count": 0,
+      "violation_examples": []
+    },
+    {
+      "coefficients_nonnegative": true,
+      "comparison_count": 10206,
+      "graph": "theta133",
+      "violation_count": 0,
+      "violation_examples": []
+    },
+    {
+      "coefficients_nonnegative": true,
+      "comparison_count": 34992,
+      "graph": "wheel5",
+      "violation_count": 0,
+      "violation_examples": []
+    }
+  ],
+  "exponent_certificate_records": [
+    {
+      "dual_distribution": [
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            0,
+            1
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            0,
+            2
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            0,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            1,
+            2
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            1,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dual_edge_loads": [
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.0,
+          "fraction": "0/1"
+        }
+      ],
+      "dual_feasible": true,
+      "graph": "cycle4_tail",
+      "matching_value": true,
+      "primal_feasible": true,
+      "primal_support_sums": [
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "fraction": "1/2"
+        }
+      ],
+      "primal_weights": [
+        {
+          "decimal": 0.25,
+          "fraction": "1/4"
+        },
+        {
+          "decimal": 0.25,
+          "fraction": "1/4"
+        },
+        {
+          "decimal": 0.25,
+          "fraction": "1/4"
+        },
+        {
+          "decimal": 0.25,
+          "fraction": "1/4"
+        },
+        {
+          "decimal": 0.0,
+          "fraction": "0/1"
+        }
+      ],
+      "threshold": {
+        "decimal": 0.5,
+        "fraction": "1/2"
+      }
+    },
+    {
+      "dual_distribution": [
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            0,
+            1
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            0,
+            2
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            0,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            0,
+            4
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            0,
+            5
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            1,
+            2
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            1,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            1,
+            4
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            1,
+            5
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            2,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            2,
+            4
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            2,
+            5
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            3,
+            4
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            3,
+            5
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.06666666666666667,
+            "fraction": "1/15"
+          },
+          "support": [
+            4,
+            5
+          ]
+        }
+      ],
+      "dual_edge_loads": [
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        }
+      ],
+      "dual_feasible": true,
+      "graph": "cycle6",
+      "matching_value": true,
+      "primal_feasible": true,
+      "primal_support_sums": [
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        }
+      ],
+      "primal_weights": [
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        }
+      ],
+      "threshold": {
+        "decimal": 0.3333333333333333,
+        "fraction": "1/3"
+      }
+    },
+    {
+      "dual_distribution": [
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            1,
+            2
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            1,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            2,
+            3
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            4,
+            5
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            4,
+            6
+          ]
+        },
+        {
+          "mass": {
+            "decimal": 0.16666666666666666,
+            "fraction": "1/6"
+          },
+          "support": [
+            5,
+            6
+          ]
+        }
+      ],
+      "dual_edge_loads": [
+        {
+          "decimal": 0.0,
+          "fraction": "0/1"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        }
+      ],
+      "dual_feasible": true,
+      "graph": "theta133",
+      "matching_value": true,
+      "primal_feasible": true,
+      "primal_support_sums": [
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "fraction": "1/3"
+        }
+      ],
+      "primal_weights": [
+        {
+          "decimal": 0.0,
+          "fraction": "0/1"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "fraction": "1/6"
+        }
+      ],
+      "threshold": {
+        "decimal": 0.3333333333333333,
+        "fraction": "1/3"
+      }
+    }
+  ],
+  "finite_counterexample": {
+    "allocation_count": 1716,
+    "allocation_value_digest_sha256": "a3c94450494846776f047780a5711a0b2d07f3acbe8a98f3e4d92ef5389f3fa3",
+    "balanced_optimizer_count": 0,
+    "epsilon": {
+      "decimal": 0.2857142857142857,
+      "fraction": "2/7"
+    },
+    "graph": "theta133",
+    "optimizer_count": 6,
+    "optimizers": [
+      [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "optimum": {
+      "decimal": 0.26121798430682985,
+      "fraction": "25309152000/96889010407"
+    },
+    "paths": [
+      [
+        0
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6
+      ]
+    ],
+    "strictly_beats_uniform": true,
+    "total_trials": 14,
+    "uniform_allocation": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "uniform_value": {
+      "decimal": 0.2570350537732477,
+      "fraction": "3557696000/13841287201"
+    },
+    "uniform_witness_count": 18
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_registry_completeness": true,
+    "G2_residual_rank_identity": true,
+    "G3_representative_invariance": true,
+    "G4_three_state_exactness": true,
+    "G5_endpoint_reduction": true,
+    "G6_bad_support_completeness": true,
+    "G7_primal_dual_exponent_certificates": true,
+    "G8_finite_nonuniform_counterexample": true,
+    "G9_resource_and_scope": true
+  },
+  "implementation_commit": "f6bb525ff62aea1c9d2c3c1674090063c819a65b",
+  "protocol_id": "ASMP-9-GENERAL-GRAPH-ALLOCATION-v0.17",
+  "registration_commit": "0297fcddbe34ea028597fe60b0d3cb849deabfaf",
+  "registration_sha256": "fc0931d34707dad22481e34c3fb50b686978e444828adbd1fd9686b599813b1b",
+  "registry_record": {
+    "availability_cell_count": 3,
+    "availability_unique_count": 3,
+    "bad_support_cell_count": 3,
+    "bad_support_unique_count": 3,
+    "burned_graph_count": 5,
+    "finite_counterexample_count": 1,
+    "fresh_graph_count": 4,
+    "isomorphic_fresh_burned_collisions": [],
+    "residual_cell_count": 6,
+    "residual_unique_count": 6
+  },
+  "residual_rank_records": [
+    {
+      "capacities": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "fiber_count": 452,
+      "graph": "wheel5",
+      "graph_beta1": 4,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "rank_histogram": {
+        "0": 184,
+        "1": 96,
+        "2": 80,
+        "4": 92
+      },
+      "representative_invariance_failure_count": 0,
+      "state_count": 1296
+    },
+    {
+      "capacities": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "fiber_count": 452,
+      "graph": "wheel5",
+      "graph_beta1": 4,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "rank_histogram": {
+        "0": 184,
+        "1": 96,
+        "2": 80,
+        "4": 92
+      },
+      "representative_invariance_failure_count": 0,
+      "state_count": 1296
+    },
+    {
+      "capacities": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "fiber_count": 348,
+      "graph": "theta133",
+      "graph_beta1": 2,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "rank_histogram": {
+        "0": 280,
+        "1": 52,
+        "2": 16
+      },
+      "representative_invariance_failure_count": 0,
+      "state_count": 432
+    },
+    {
+      "capacities": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "fiber_count": 488,
+      "graph": "theta133",
+      "graph_beta1": 2,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "rank_histogram": {
+        "0": 360,
+        "1": 104,
+        "2": 24
+      },
+      "representative_invariance_failure_count": 0,
+      "state_count": 648
+    },
+    {
+      "capacities": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "fiber_count": 64,
+      "graph": "cycle4_tail",
+      "graph_beta1": 1,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "rank_histogram": {
+        "0": 56,
+        "1": 8
+      },
+      "representative_invariance_failure_count": 0,
+      "state_count": 72
+    },
+    {
+      "capacities": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "fiber_count": 96,
+      "graph": "cycle4_tail",
+      "graph_beta1": 1,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "rank_histogram": {
+        "0": 84,
+        "1": 12
+      },
+      "representative_invariance_failure_count": 0,
+      "state_count": 108
+    }
+  ],
+  "resources": {
+    "elapsed_seconds": 81.55042170002707,
+    "gpu_used": false,
+    "peak_resident_bytes": 23855104
+  },
+  "summary": {
+    "bad_support_count": 36,
+    "endpoint_comparison_count": 48924,
+    "representative_failure_count": 0,
+    "residual_fiber_count": 1900,
+    "residual_mismatch_count": 0,
+    "residual_state_count": 3852
+  },
+  "verdict": "registered_exact_result_passed"
+}

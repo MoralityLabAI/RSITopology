@@ -1,0 +1,44 @@
+{
+  "schema_version": "asmp9_out_of_family_transport_protocol_v0_82",
+  "status": "frozen_prereveal",
+  "date": "2026-08-01",
+  "estimand": "transport of a construction-fitted nuisance-quotiented content-versus-label response contrast to behavior families absent from the calibration registry",
+  "calibration": {
+    "source_analysis_path": "../context_quotient_response_v0_68/artifacts_v0_68_1_construction/analysis_v0_68_1.json",
+    "source_analysis_sha256": "05de98008345c00e5f7e352ff6eb75f34282912503672b59d2856fc75e7cd880",
+    "scenario_mean_center": 0.9381510370100538,
+    "maximum_construction_residual": 0.4173176869129162,
+    "prediction_envelope_lower": 0.5208333500971378,
+    "prediction_envelope_upper": 1.3554687239229698,
+    "common_coefficient_interval_lower": 0.7343614199407966,
+    "common_coefficient_interval_upper": 0.750013550256881,
+    "construction_endpoint_epsilon": 0.01563855025688099,
+    "calibration_rule": "The center is the mean of the 12 construction scenario means. The radius is the maximum absolute construction-scenario residual from that center. The common coefficient interval is the exact intersection already sealed by v0.68 construction. None is refit on v0.82."
+  },
+  "universe": {
+    "model": "Qwen3.5-0.8B-Instruct",
+    "executed_split": "confirmation",
+    "new_family_count": 12,
+    "scenarios": 12,
+    "semantic_inputs_per_scenario": 22,
+    "exact_repeats": 2,
+    "records": 528,
+    "old_family_overlap_allowed": 0,
+    "schema_padding_rows_executed": false
+  },
+  "gates": {
+    "N0": "The manifest has exactly 12 new family labels disjoint from v0.68, exactly one executed holdout per family, and an exact registered 528-record universe.",
+    "I0": "Exact repeats, rendered inputs, answer-token boundaries, and zero-sum quotient coefficient controls pass.",
+    "L0": "At least 10 of 12 new scenarios have all four target-by-order specificity contrasts above the v0.82 endpoint epsilon, and the median scenario minimum and mean scenario mean also exceed epsilon.",
+    "T0": "At least 10 of 12 new scenario-mean specificity values lie in the frozen construction prediction envelope [0.5208333500971378, 1.3554687239229698].",
+    "G0": "All 24 target-specific new-family intervals, formed from their two display orders plus the v0.82 endpoint epsilon, intersect the frozen construction common-coefficient interval [0.7343614199407966, 0.750013550256881].",
+    "R0": "The hard-capped runner completes all registered work units and emits a cleanup receipt; process-owned resource violations invalidate execution. System-wide page-file movement is reported but is not attributed to the owned process and is not a scientific gate."
+  },
+  "decision": {
+    "pass": "out_of_family_response_transport_established_on_frozen_registry",
+    "otherwise": "out_of_family_response_transport_not_established",
+    "fixed_sequence": ["N0", "I0", "L0", "T0", "G0", "R0"],
+    "equality": "does_not_pass"
+  },
+  "claim_boundary": "This can establish transport of one expressed-response contrast across 12 prospectively frozen, previously absent behavior families in one model. It cannot identify human or model values, show that prompt content supplies naturally known intervention offsets, identify a reward orbit, establish population generalization, authorize self-modification, or resolve ASMP-9."
+}

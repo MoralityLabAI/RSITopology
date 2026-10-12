@@ -1,0 +1,1693 @@
+{
+  "alternating_game": {
+    "audit": {
+      "action_rows": [
+        {
+          "action_values": {
+            "left": "2/3",
+            "right": "7/10"
+          },
+          "owner": "max",
+          "selected_action": "right",
+          "state": "root",
+          "state_value": "7/10"
+        },
+        {
+          "action_values": {
+            "x": "2/3",
+            "y": "3/4"
+          },
+          "owner": "min",
+          "selected_action": "x",
+          "state": "left_min",
+          "state_value": "2/3"
+        },
+        {
+          "action_values": {
+            "x": "4/5",
+            "y": "7/10"
+          },
+          "owner": "min",
+          "selected_action": "y",
+          "state": "right_min",
+          "state_value": "7/10"
+        },
+        {
+          "action_values": {
+            "u": "1/2",
+            "v": "2/3"
+          },
+          "owner": "max",
+          "selected_action": "v",
+          "state": "left_x_max",
+          "state_value": "2/3"
+        },
+        {
+          "action_values": {
+            "u": "1/3",
+            "v": "3/4"
+          },
+          "owner": "max",
+          "selected_action": "v",
+          "state": "left_y_max",
+          "state_value": "3/4"
+        },
+        {
+          "action_values": {
+            "u": "4/5",
+            "v": "1/5"
+          },
+          "owner": "max",
+          "selected_action": "u",
+          "state": "right_x_max",
+          "state_value": "4/5"
+        },
+        {
+          "action_values": {
+            "u": "3/5",
+            "v": "7/10"
+          },
+          "owner": "max",
+          "selected_action": "v",
+          "state": "right_y_max",
+          "state_value": "7/10"
+        }
+      ],
+      "backward_pair_matches": true,
+      "backward_value": "7/10",
+      "certified": true,
+      "exhaustive": true,
+      "max_guarantee_holds": true,
+      "max_strategy": {
+        "left_x_max": "v",
+        "left_y_max": "v",
+        "right_x_max": "u",
+        "right_y_max": "v",
+        "root": "right"
+      },
+      "max_strategy_count": 32,
+      "maximum_against_backward_min": "7/10",
+      "min_cap_holds": true,
+      "min_strategy": {
+        "left_min": "x",
+        "right_min": "y"
+      },
+      "min_strategy_count": 4,
+      "minimum_against_backward_max": "7/10",
+      "saddle_pair_value": "7/10"
+    },
+    "game": {
+      "actions": {
+        "left_min": [
+          "x",
+          "y"
+        ],
+        "left_x_max": [
+          "u",
+          "v"
+        ],
+        "left_y_max": [
+          "u",
+          "v"
+        ],
+        "right_min": [
+          "x",
+          "y"
+        ],
+        "right_x_max": [
+          "u",
+          "v"
+        ],
+        "right_y_max": [
+          "u",
+          "v"
+        ],
+        "root": [
+          "left",
+          "right"
+        ]
+      },
+      "initial": {
+        "root": "1"
+      },
+      "owner": {
+        "left_min": "min",
+        "left_x_max": "max",
+        "left_y_max": "max",
+        "right_min": "min",
+        "right_x_max": "max",
+        "right_y_max": "max",
+        "root": "max"
+      },
+      "states": [
+        "root",
+        "left_min",
+        "right_min",
+        "left_x_max",
+        "left_y_max",
+        "right_x_max",
+        "right_y_max"
+      ],
+      "terminal_payoff": {
+        "lose": "0",
+        "win": "1"
+      },
+      "terminals": [
+        "win",
+        "lose"
+      ],
+      "transitions": {
+        "left_min|x": {
+          "left_x_max": "1"
+        },
+        "left_min|y": {
+          "left_y_max": "1"
+        },
+        "left_x_max|u": {
+          "lose": "1/2",
+          "win": "1/2"
+        },
+        "left_x_max|v": {
+          "lose": "1/3",
+          "win": "2/3"
+        },
+        "left_y_max|u": {
+          "lose": "2/3",
+          "win": "1/3"
+        },
+        "left_y_max|v": {
+          "lose": "1/4",
+          "win": "3/4"
+        },
+        "right_min|x": {
+          "right_x_max": "1"
+        },
+        "right_min|y": {
+          "right_y_max": "1"
+        },
+        "right_x_max|u": {
+          "lose": "1/5",
+          "win": "4/5"
+        },
+        "right_x_max|v": {
+          "lose": "4/5",
+          "win": "1/5"
+        },
+        "right_y_max|u": {
+          "lose": "2/5",
+          "win": "3/5"
+        },
+        "right_y_max|v": {
+          "lose": "3/10",
+          "win": "7/10"
+        },
+        "root|left": {
+          "left_min": "1"
+        },
+        "root|right": {
+          "right_min": "1"
+        }
+      }
+    }
+  },
+  "certified": true,
+  "claim_boundary": "Backward induction relies on public perfect information and turn-based actions. Simultaneous or hidden actions, imperfect recall, general message information sets, and interface choice are outside the theorem.",
+  "experiment_id": "ASMP-3-TWO-ROLE-BACKWARD-BRIDGE-v1.1",
+  "family_rows": [
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_0",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_0"
+        },
+        "max_strategy_count": 1,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a"
+        },
+        "min_strategy_count": 2,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 3,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 1,
+      "min_pure_strategy_count": 2,
+      "selected_test": "test_0",
+      "state_count": 2,
+      "test_count": 1
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/20",
+              "test_1": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_1",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/20",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/20"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_1"
+        },
+        "max_strategy_count": 2,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a"
+        },
+        "min_strategy_count": 4,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 6,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 2,
+      "min_pure_strategy_count": 4,
+      "selected_test": "test_1",
+      "state_count": 3,
+      "test_count": 2
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/30",
+              "test_1": "1/15",
+              "test_2": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_2",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/30",
+              "attack_b": "1/15"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/30"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/15",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/15"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_2"
+        },
+        "max_strategy_count": 3,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a"
+        },
+        "min_strategy_count": 8,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 9,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 3,
+      "min_pure_strategy_count": 8,
+      "selected_test": "test_2",
+      "state_count": 4,
+      "test_count": 3
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/40",
+              "test_1": "1/20",
+              "test_2": "3/40",
+              "test_3": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_3",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/40",
+              "attack_b": "1/20"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/40"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/20",
+              "attack_b": "3/40"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/20"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/40",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/40"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_3"
+        },
+        "max_strategy_count": 4,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a"
+        },
+        "min_strategy_count": 16,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 12,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 4,
+      "min_pure_strategy_count": 16,
+      "selected_test": "test_3",
+      "state_count": 5,
+      "test_count": 4
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/50",
+              "test_1": "1/25",
+              "test_2": "3/50",
+              "test_3": "2/25",
+              "test_4": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_4",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/50",
+              "attack_b": "1/25"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/50"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/25",
+              "attack_b": "3/50"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/25"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/50",
+              "attack_b": "2/25"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/50"
+          },
+          {
+            "action_values": {
+              "attack_a": "2/25",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "2/25"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_4"
+        },
+        "max_strategy_count": 5,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a"
+        },
+        "min_strategy_count": 32,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 15,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 5,
+      "min_pure_strategy_count": 32,
+      "selected_test": "test_4",
+      "state_count": 6,
+      "test_count": 5
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/60",
+              "test_1": "1/30",
+              "test_2": "1/20",
+              "test_3": "1/15",
+              "test_4": "1/12",
+              "test_5": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_5",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/60",
+              "attack_b": "1/30"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/60"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/30",
+              "attack_b": "1/20"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/30"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/20",
+              "attack_b": "1/15"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "1/20"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/15",
+              "attack_b": "1/12"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "1/15"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/12",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/12"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_5"
+        },
+        "max_strategy_count": 6,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a"
+        },
+        "min_strategy_count": 64,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 18,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 6,
+      "min_pure_strategy_count": 64,
+      "selected_test": "test_5",
+      "state_count": 7,
+      "test_count": 6
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/70",
+              "test_1": "1/35",
+              "test_2": "3/70",
+              "test_3": "2/35",
+              "test_4": "1/14",
+              "test_5": "3/35",
+              "test_6": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_6",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/70",
+              "attack_b": "1/35"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/70"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/35",
+              "attack_b": "3/70"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/35"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/70",
+              "attack_b": "2/35"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/70"
+          },
+          {
+            "action_values": {
+              "attack_a": "2/35",
+              "attack_b": "1/14"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "2/35"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/14",
+              "attack_b": "3/35"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/14"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/35",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "3/35"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_6",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_6"
+        },
+        "max_strategy_count": 7,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a",
+          "challenge_6": "attack_a"
+        },
+        "min_strategy_count": 128,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 21,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 7,
+      "min_pure_strategy_count": 128,
+      "selected_test": "test_6",
+      "state_count": 8,
+      "test_count": 7
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/80",
+              "test_1": "1/40",
+              "test_2": "3/80",
+              "test_3": "1/20",
+              "test_4": "1/16",
+              "test_5": "3/40",
+              "test_6": "7/80",
+              "test_7": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_7",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/80",
+              "attack_b": "1/40"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/80"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/40",
+              "attack_b": "3/80"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/40"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/80",
+              "attack_b": "1/20"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/80"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/20",
+              "attack_b": "1/16"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "1/20"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/16",
+              "attack_b": "3/40"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/16"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/40",
+              "attack_b": "7/80"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "3/40"
+          },
+          {
+            "action_values": {
+              "attack_a": "7/80",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_6",
+            "state_value": "7/80"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_7",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": true,
+        "max_guarantee_holds": true,
+        "max_strategy": {
+          "verifier": "test_7"
+        },
+        "max_strategy_count": 8,
+        "maximum_against_backward_min": "3/5",
+        "min_cap_holds": true,
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a",
+          "challenge_6": "attack_a",
+          "challenge_7": "attack_a"
+        },
+        "min_strategy_count": 256,
+        "minimum_against_backward_max": "3/5",
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 24,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": true,
+      "max_pure_strategy_count": 8,
+      "min_pure_strategy_count": 256,
+      "selected_test": "test_7",
+      "state_count": 9,
+      "test_count": 8
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/90",
+              "test_1": "1/45",
+              "test_2": "1/30",
+              "test_3": "2/45",
+              "test_4": "1/18",
+              "test_5": "1/15",
+              "test_6": "7/90",
+              "test_7": "4/45",
+              "test_8": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_8",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/90",
+              "attack_b": "1/45"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/90"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/45",
+              "attack_b": "1/30"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/45"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/30",
+              "attack_b": "2/45"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "1/30"
+          },
+          {
+            "action_values": {
+              "attack_a": "2/45",
+              "attack_b": "1/18"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "2/45"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/18",
+              "attack_b": "1/15"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/18"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/15",
+              "attack_b": "7/90"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "1/15"
+          },
+          {
+            "action_values": {
+              "attack_a": "7/90",
+              "attack_b": "4/45"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_6",
+            "state_value": "7/90"
+          },
+          {
+            "action_values": {
+              "attack_a": "4/45",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_7",
+            "state_value": "4/45"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_8",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": false,
+        "max_strategy": {
+          "verifier": "test_8"
+        },
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a",
+          "challenge_6": "attack_a",
+          "challenge_7": "attack_a",
+          "challenge_8": "attack_a"
+        },
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 27,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": false,
+      "max_pure_strategy_count": 9,
+      "min_pure_strategy_count": 512,
+      "selected_test": "test_8",
+      "state_count": 10,
+      "test_count": 9
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/100",
+              "test_1": "1/50",
+              "test_2": "3/100",
+              "test_3": "1/25",
+              "test_4": "1/20",
+              "test_5": "3/50",
+              "test_6": "7/100",
+              "test_7": "2/25",
+              "test_8": "9/100",
+              "test_9": "3/5"
+            },
+            "owner": "max",
+            "selected_action": "test_9",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/100",
+              "attack_b": "1/50"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/100"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/50",
+              "attack_b": "3/100"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/50"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/100",
+              "attack_b": "1/25"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/100"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/25",
+              "attack_b": "1/20"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "1/25"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/20",
+              "attack_b": "3/50"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/20"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/50",
+              "attack_b": "7/100"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "3/50"
+          },
+          {
+            "action_values": {
+              "attack_a": "7/100",
+              "attack_b": "2/25"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_6",
+            "state_value": "7/100"
+          },
+          {
+            "action_values": {
+              "attack_a": "2/25",
+              "attack_b": "9/100"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_7",
+            "state_value": "2/25"
+          },
+          {
+            "action_values": {
+              "attack_a": "9/100",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_8",
+            "state_value": "9/100"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_9",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": false,
+        "max_strategy": {
+          "verifier": "test_9"
+        },
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a",
+          "challenge_6": "attack_a",
+          "challenge_7": "attack_a",
+          "challenge_8": "attack_a",
+          "challenge_9": "attack_a"
+        },
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 30,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": false,
+      "max_pure_strategy_count": 10,
+      "min_pure_strategy_count": 1024,
+      "selected_test": "test_9",
+      "state_count": 11,
+      "test_count": 10
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/110",
+              "test_1": "1/55",
+              "test_10": "3/5",
+              "test_2": "3/110",
+              "test_3": "2/55",
+              "test_4": "1/22",
+              "test_5": "3/55",
+              "test_6": "7/110",
+              "test_7": "4/55",
+              "test_8": "9/110",
+              "test_9": "1/11"
+            },
+            "owner": "max",
+            "selected_action": "test_10",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/110",
+              "attack_b": "1/55"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/110"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/55",
+              "attack_b": "3/110"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/55"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/110",
+              "attack_b": "2/55"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "3/110"
+          },
+          {
+            "action_values": {
+              "attack_a": "2/55",
+              "attack_b": "1/22"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "2/55"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/22",
+              "attack_b": "3/55"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/22"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/55",
+              "attack_b": "7/110"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "3/55"
+          },
+          {
+            "action_values": {
+              "attack_a": "7/110",
+              "attack_b": "4/55"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_6",
+            "state_value": "7/110"
+          },
+          {
+            "action_values": {
+              "attack_a": "4/55",
+              "attack_b": "9/110"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_7",
+            "state_value": "4/55"
+          },
+          {
+            "action_values": {
+              "attack_a": "9/110",
+              "attack_b": "1/11"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_8",
+            "state_value": "9/110"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/11",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_9",
+            "state_value": "1/11"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_10",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": false,
+        "max_strategy": {
+          "verifier": "test_10"
+        },
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_10": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a",
+          "challenge_6": "attack_a",
+          "challenge_7": "attack_a",
+          "challenge_8": "attack_a",
+          "challenge_9": "attack_a"
+        },
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 33,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": false,
+      "max_pure_strategy_count": 11,
+      "min_pure_strategy_count": 2048,
+      "selected_test": "test_10",
+      "state_count": 12,
+      "test_count": 11
+    },
+    {
+      "audit": {
+        "action_rows": [
+          {
+            "action_values": {
+              "test_0": "1/120",
+              "test_1": "1/60",
+              "test_10": "11/120",
+              "test_11": "3/5",
+              "test_2": "1/40",
+              "test_3": "1/30",
+              "test_4": "1/24",
+              "test_5": "1/20",
+              "test_6": "7/120",
+              "test_7": "1/15",
+              "test_8": "3/40",
+              "test_9": "1/12"
+            },
+            "owner": "max",
+            "selected_action": "test_11",
+            "state": "verifier",
+            "state_value": "3/5"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/120",
+              "attack_b": "1/60"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_0",
+            "state_value": "1/120"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/60",
+              "attack_b": "1/40"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_1",
+            "state_value": "1/60"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/40",
+              "attack_b": "1/30"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_2",
+            "state_value": "1/40"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/30",
+              "attack_b": "1/24"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_3",
+            "state_value": "1/30"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/24",
+              "attack_b": "1/20"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_4",
+            "state_value": "1/24"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/20",
+              "attack_b": "7/120"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_5",
+            "state_value": "1/20"
+          },
+          {
+            "action_values": {
+              "attack_a": "7/120",
+              "attack_b": "1/15"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_6",
+            "state_value": "7/120"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/15",
+              "attack_b": "3/40"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_7",
+            "state_value": "1/15"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/40",
+              "attack_b": "1/12"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_8",
+            "state_value": "3/40"
+          },
+          {
+            "action_values": {
+              "attack_a": "1/12",
+              "attack_b": "11/120"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_9",
+            "state_value": "1/12"
+          },
+          {
+            "action_values": {
+              "attack_a": "11/120",
+              "attack_b": "1/10"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_10",
+            "state_value": "11/120"
+          },
+          {
+            "action_values": {
+              "attack_a": "3/5",
+              "attack_b": "4/5"
+            },
+            "owner": "min",
+            "selected_action": "attack_a",
+            "state": "challenge_11",
+            "state_value": "3/5"
+          }
+        ],
+        "backward_pair_matches": true,
+        "backward_value": "3/5",
+        "certified": true,
+        "exhaustive": false,
+        "max_strategy": {
+          "verifier": "test_11"
+        },
+        "min_strategy": {
+          "challenge_0": "attack_a",
+          "challenge_1": "attack_a",
+          "challenge_10": "attack_a",
+          "challenge_11": "attack_a",
+          "challenge_2": "attack_a",
+          "challenge_3": "attack_a",
+          "challenge_4": "attack_a",
+          "challenge_5": "attack_a",
+          "challenge_6": "attack_a",
+          "challenge_7": "attack_a",
+          "challenge_8": "attack_a",
+          "challenge_9": "attack_a"
+        },
+        "saddle_pair_value": "3/5"
+      },
+      "backward_action_evaluations": 36,
+      "certified": true,
+      "exact_value": "3/5",
+      "exhaustive_saddle_audit": false,
+      "max_pure_strategy_count": 12,
+      "min_pure_strategy_count": 4096,
+      "selected_test": "test_11",
+      "state_count": 13,
+      "test_count": 12
+    }
+  ],
+  "gates": {
+    "A0_alternating_game_saddle_exact": true,
+    "B0_all_family_backward_values_exact": true,
+    "B1_challenger_strategy_count_is_exponential": true,
+    "B2_backward_work_is_linear": true,
+    "B3_exhaustive_family_saddles_hold": true,
+    "M0_matching_information_boundary_exact": true
+  },
+  "matching_boundary": {
+    "information_structure_changes_strategy_class": true,
+    "revealed_saddle_audit": {
+      "action_rows": [
+        {
+          "action_values": {
+            "H": "-1",
+            "T": "-1"
+          },
+          "owner": "max",
+          "selected_action": "H",
+          "state": "max_choice",
+          "state_value": "-1"
+        },
+        {
+          "action_values": {
+            "H": "1",
+            "T": "-1"
+          },
+          "owner": "min",
+          "selected_action": "T",
+          "state": "after_h",
+          "state_value": "-1"
+        },
+        {
+          "action_values": {
+            "H": "-1",
+            "T": "1"
+          },
+          "owner": "min",
+          "selected_action": "H",
+          "state": "after_t",
+          "state_value": "-1"
+        }
+      ],
+      "backward_pair_matches": true,
+      "backward_value": "-1",
+      "certified": true,
+      "exhaustive": true,
+      "max_guarantee_holds": true,
+      "max_strategy": {
+        "max_choice": "H"
+      },
+      "max_strategy_count": 2,
+      "maximum_against_backward_min": "-1",
+      "min_cap_holds": true,
+      "min_strategy": {
+        "after_h": "T",
+        "after_t": "H"
+      },
+      "min_strategy_count": 4,
+      "minimum_against_backward_max": "-1",
+      "saddle_pair_value": "-1"
+    },
+    "revealed_sequential_value": "-1",
+    "simultaneous_max_half_mix_column_values": [
+      "0",
+      "0"
+    ],
+    "simultaneous_min_half_mix_row_values": [
+      "0",
+      "0"
+    ],
+    "simultaneous_mixed_lower": "0",
+    "simultaneous_mixed_upper": "0",
+    "simultaneous_mixed_value": "0",
+    "simultaneous_payoff_matrix": [
+      [
+        "1",
+        "-1"
+      ],
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "simultaneous_pure_maximin": "-1"
+  },
+  "parent_result": "ASMP-3-REALIZATION-FLOW-BRIDGE-v1.0",
+  "schema_version": "asmp3_two_role_backward_bridge_v1_1",
+  "status": "exact_perfect_information_two_role_bridge",
+  "theorem": {
+    "algorithm": "rational backward induction",
+    "certificate": "deterministic max/min strategies with reciprocal deviation bounds",
+    "consequence": "two independently strategic roles can be handled without convexifying them into one controller in this lane",
+    "input": "finite acyclic perfect-information zero-sum stochastic game with rational transitions and payoff"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "completed_at_utc": "2026-07-29T03:47:50Z",
+  "formula_rows": [
+    {
+      "closed_form": {
+        "denominator": 524288,
+        "numerator": 205065
+      },
+      "equal": true,
+      "name": "theta_134_heterogeneous",
+      "path_lengths": [
+        1,
+        3,
+        4
+      ],
+      "predecessor": {
+        "denominator": 524288,
+        "numerator": 205065
+      },
+      "total_trials": 20
+    },
+    {
+      "closed_form": {
+        "denominator": 33554432,
+        "numerator": 15555645
+      },
+      "equal": true,
+      "name": "theta_234_heterogeneous",
+      "path_lengths": [
+        2,
+        3,
+        4
+      ],
+      "predecessor": {
+        "denominator": 33554432,
+        "numerator": 15555645
+      },
+      "total_trials": 26
+    },
+    {
+      "closed_form": {
+        "denominator": 16777216,
+        "numerator": 8817795
+      },
+      "equal": true,
+      "name": "theta_1224_four_path",
+      "path_lengths": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "predecessor": {
+        "denominator": 16777216,
+        "numerator": 8817795
+      },
+      "total_trials": 25
+    }
+  ],
+  "gate_passes": {
+    "G0_registration_binding": true,
+    "G1_freshness_and_structure": true,
+    "G2_path_state_formula": true,
+    "G3_strict_path_smoothing": true,
+    "G4_reduced_optimizer_exactness": true,
+    "G5_composition_count": true,
+    "G6_optimizer_path_balance": true,
+    "G7_prior_art_and_claim_boundary": true,
+    "G8_resource_and_scope": true
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "6b839a8ac1bfbf46b28a016061e243f3e8d0c8e4385c69c802d26168b25a83fd",
+      "sealed_file_count": 15
+    },
+    "G1_freshness_and_structure": {
+      "burned_overlap": [],
+      "fresh_formula_cell_count": 3,
+      "fresh_optimizer_cell_count": 3,
+      "pass": true
+    },
+    "G2_path_state_formula": {
+      "cell_count": 3,
+      "pass": true
+    },
+    "G3_strict_path_smoothing": {
+      "comparison_count": 43740,
+      "minimum_improvement": 4,
+      "pass": true
+    },
+    "G4_reduced_optimizer_exactness": {
+      "cell_count": 3,
+      "pass": true
+    },
+    "G5_composition_count": {
+      "cell_count": 3,
+      "pass": true
+    },
+    "G6_optimizer_path_balance": {
+      "cell_count": 3,
+      "pass": true
+    },
+    "G7_prior_art_and_claim_boundary": {
+      "allowed_exact": true,
+      "forbidden_exact": true,
+      "no_novelty_claim": true,
+      "pass": true
+    },
+    "G8_resource_and_scope": {
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 21598208,
+      "wall_seconds": 0.44438940001418814
+    }
+  },
+  "optimizer_rows": [
+    {
+      "composition_count": 21,
+      "composition_count_exact": true,
+      "expected_composition_count": 21,
+      "full_cell_count": 462,
+      "full_cell_count_expected": 462,
+      "full_maximum_numerator": 1362,
+      "full_optimizer_count": 2,
+      "full_optimizers_path_balanced": true,
+      "name": "theta_124_budget12",
+      "path_lengths": [
+        1,
+        2,
+        4
+      ],
+      "reduced_exact": true,
+      "reduced_maximum_numerator": 1362,
+      "reduced_path_totals": [
+        [
+          1,
+          3,
+          8
+        ]
+      ],
+      "total_budget": 12
+    },
+    {
+      "composition_count": 21,
+      "composition_count_exact": true,
+      "expected_composition_count": 21,
+      "full_cell_count": 792,
+      "full_cell_count_expected": 792,
+      "full_maximum_numerator": 1458,
+      "full_optimizer_count": 18,
+      "full_optimizers_path_balanced": true,
+      "name": "theta_233_budget13",
+      "path_lengths": [
+        2,
+        3,
+        3
+      ],
+      "reduced_exact": true,
+      "reduced_maximum_numerator": 1458,
+      "reduced_path_totals": [
+        [
+          3,
+          5,
+          5
+        ]
+      ],
+      "total_budget": 13
+    },
+    {
+      "composition_count": 56,
+      "composition_count_exact": true,
+      "expected_composition_count": 56,
+      "full_cell_count": 792,
+      "full_cell_count_expected": 792,
+      "full_maximum_numerator": 2970,
+      "full_optimizer_count": 4,
+      "full_optimizers_path_balanced": true,
+      "name": "theta_1223_four_path_budget13",
+      "path_lengths": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "reduced_exact": true,
+      "reduced_maximum_numerator": 2970,
+      "reduced_path_totals": [
+        [
+          1,
+          3,
+          3,
+          6
+        ]
+      ],
+      "total_budget": 13
+    }
+  ],
+  "protocol_id": "ASMP-9-THETA-OPTIMIZER-v0.25",
+  "registration_sha256": "6b839a8ac1bfbf46b28a016061e243f3e8d0c8e4385c69c802d26168b25a83fd",
+  "verdict": "generalized_theta_reduction_established_v0_25"
+}

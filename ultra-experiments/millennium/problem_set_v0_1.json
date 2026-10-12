@@ -1,0 +1,115 @@
+{
+  "schema_version": "ai_safety_millennium_problem_set_v0_1",
+  "set_id": "ASMP-CANDIDATE-SET-v0.1",
+  "date": "2026-07-18",
+  "status": "proposed_candidate_definition_draft",
+  "graduation_standard_satisfied": false,
+  "foundational_base": "ZFC with standard encodings of computation, probability, and analysis unless a problem version declares otherwise",
+  "normative_statement_file": "AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md",
+  "registry_scope": "machine-readable index of resolution obligations; the normative typed statements remain in the Markdown definition",
+  "registry_is_normative": false,
+  "actual_prize_announced": false,
+  "affiliated_with_clay_mathematics_institute": false,
+  "problem_count": 7,
+  "graduation_requirements": [
+    "closed_formal_core",
+    "benchmark_independence",
+    "two_sided_liveness",
+    "computability_boundary",
+    "nonzero_performance_floor_where_needed",
+    "coordinate_and_encoding_invariance",
+    "robust_or_finite_precision_form",
+    "proved_safety_reduction",
+    "empirical_firewall",
+    "two_sided_resolution_rule",
+    "classical_novelty_boundary",
+    "independent_checkability"
+  ],
+  "problems": [
+    {
+      "id": "ASMP-1",
+      "slug": "mechanistic_identifiability_modulo_functional_symmetry",
+      "title": "Mechanistic Identifiability Modulo Functional Symmetry",
+      "domains": ["causal_inference", "mechanistic_interpretability", "algebraic_statistics"],
+      "canonical_target": "Characterize exactly when a quantitatively bounded causal abstraction of a computation is identifiable under a declared group action from a frozen environment and intervention family.",
+      "positive_resolution_requires": ["necessary_and_sufficient_conditions", "constructive_recovery", "finite_sample_stability", "matching_indistinguishability_lower_bound"],
+      "negative_resolution_requires": ["counterexample_to_the_complete_frozen_conjecture_or_sharp_impossibility", "broader_program_requires_replacement_criterion_or_no_criterion_theorem"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    },
+    {
+      "id": "ASMP-2",
+      "slug": "shift_spanning_safety_certification",
+      "title": "Shift-Spanning Safety Certification",
+      "domains": ["learning_theory", "causal_generalization", "robust_statistics"],
+      "canonical_target": "Give a local semiparametric identifiability theorem and a separate local-to-global continuation theorem under which finitely many environments certify safety and nonzero utility over a declared deployment-shift family.",
+      "positive_resolution_requires": ["local_semiparametric_characterization", "separate_local_to_global_theorem", "minimax_sample_bounds", "active_environment_design", "no_free_lunch_converse"],
+      "negative_resolution_requires": ["counterexample_respects_the_frozen_qmd_model_and_utility_floor", "or_sharp_impossibility_for_local_identification_or_global_continuation"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    },
+    {
+      "id": "ASMP-3",
+      "slug": "weak_verifier_soundness_frontier",
+      "title": "The Weak-Verifier Soundness Frontier",
+      "domains": ["complexity_theory", "interactive_proofs", "scalable_oversight"],
+      "canonical_target": "Characterize tasks admitting polylog-cost sound verification in a frozen atomic-query game by a weaker verifier using noisy correlated semantic judgments against adaptive obfuscating provers with an efficient honest strategy.",
+      "positive_resolution_requires": ["formal_complexity_class", "constructive_protocol", "soundness_and_completeness", "matching_communication_semantic_query_and_honest_prover_lower_bounds", "robust_noise_theorem", "benign_encoding_invariance_and_no_full_answer_atomic_query"],
+      "negative_resolution_requires": ["separation_or_impossibility_in_the_frozen_message_game", "efficient_honest_prover_and_noise_model_must_remain_in_scope"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    },
+    {
+      "id": "ASMP-4",
+      "slug": "two_port_evaluator_relative_confinement",
+      "title": "Two-Port Evaluator-Relative Confinement",
+      "domains": ["control_theory", "information_theory", "dynamical_systems"],
+      "canonical_target": "Characterize the complete read-rate/write-rate capacity region for nonlinear uncertain evaluator-relative confinement with no side channels, including transversal and finite-horizon terms.",
+      "positive_resolution_requires": ["coordinate_invariant_entropies", "full_capacity_region", "converse", "constructive_coder_controller", "finite_horizon_correction", "boundary_counterexamples"],
+      "negative_resolution_requires": ["counterexample_or_impossibility_uses_the_registered_no_side_channel_architecture", "read_and_write_rates_and_control_authority_remain_frozen"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    },
+    {
+      "id": "ASMP-5",
+      "slug": "reflective_safety_open_ended_self_modification",
+      "title": "Reflective Safety under Open-Ended Self-Modification",
+      "domains": ["proof_theory", "computability", "formal_verification", "adaptive_dynamics"],
+      "canonical_target": "Locate the effective reduction frontier where computable local certificates compose through adaptive self-modification of behavior, proposer, evaluator, or verifier while permitting uniform non-Zeno open-ended progress.",
+      "positive_resolution_requires": ["unrestricted_impossibility_boundary", "effective_frontier_under_registered_reduction_order", "compositional_soundness", "nontrivial_non_zeno_progress", "robust_counterpart"],
+      "negative_resolution_requires": ["sharp_frontier_or_no_greatest_class_theorem_in_the_frozen_language_and_update_grammar", "hard_coded_chain_and_inert_solutions_excluded"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    },
+    {
+      "id": "ASMP-6",
+      "slug": "adaptive_semantic_collusion_capacity",
+      "title": "Adaptive Semantic Collusion Capacity",
+      "domains": ["information_theory", "game_theory", "steganography", "multi_agent_systems"],
+      "canonical_target": "Derive the covert coordination capacity, a tensorizing quantitative resolving criterion, and the zero/square-root/positive-rate phase boundary for strategic learned agents under task constraints, shared side information, restricted monitors, and active audits.",
+      "positive_resolution_requires": ["achievability", "converse", "single_letter_tensorizing_quantitative_resolving_modulus", "key_regime_characterization", "exact_zero_square_root_positive_rate_phase_boundary", "adaptive_monitor_extension", "active_zero_capacity_or_residual_bound", "composition_over_tools_timing_code_and_public_artifacts"],
+      "negative_resolution_requires": ["sharp_capacity_or_tensorization_impossibility_in_the_frozen_reliability_and_covertness_regime", "finite_ambiguity_does_not_count_as_positive_rate"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    },
+    {
+      "id": "ASMP-7",
+      "slug": "capability_attestability_compression_decomposition",
+      "title": "Capability Attestability under Compression and Decomposition",
+      "domains": ["statistical_decision_theory", "cryptography", "rate_distortion", "governance_verification"],
+      "canonical_target": "Characterize the infimum-cost non-oracular physically admissible telemetry experiment that uniformly separates compliant from forbidden composite execution laws under compression, distillation, decomposition, offloading, and bounded algorithmic substitution.",
+      "positive_resolution_requires": ["orbit_separation_characterization", "minimum_cost_telemetry", "composition_theorem", "privacy_soundness_efficiency_tradeoff", "trace_equivalence_impossibility"],
+      "negative_resolution_requires": ["sharp_impossibility_over_the_frozen_non_oracular_telemetry_access_class", "uniform_composite_testing_not_only_pairwise_orbit_separation"],
+      "negative_resolution_allowed": true,
+      "empirical_resolution_allowed": false
+    }
+  ],
+  "resolution_policy": {
+    "exact_problem_version_required": true,
+    "narrow_subclass_counts_as_full_resolution": false,
+    "counterexample_or_impossibility_can_resolve": true,
+    "computer_assistance_requires_certified_arithmetic": true,
+    "independent_expert_checks_minimum": 2,
+    "benchmark_or_simulation_alone_can_resolve": false
+  }
+}

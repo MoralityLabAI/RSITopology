@@ -1,0 +1,27 @@
+{
+  "schema_version": "asmp10_reversion_diagnostics_receipt_v0_4_1",
+  "status": "posthoc_additive_correction_layer",
+  "created_utc": "2026-07-22T02:01:12Z",
+  "parent_receipt": {
+    "path": "ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/receipt_v0_4.json",
+    "sha256": "bfbd69f0020749eb5f7ae6a41050160f217e581b791338eed69d760d512d5870"
+  },
+  "source_v0_4_decision_unchanged": true,
+  "manifest": {
+    "ultra-experiments/millennium/asmp10_capability_transition/PREDICTOR_PROTOCOL_DRAFT_v0_5_1.md": "538fa495f51ebb872528e7aadc9c5463c1535a7c6b4becbdedc0a24762134398",
+    "ultra-experiments/millennium/asmp10_capability_transition/PRIOR_ART_AND_BASELINES_v0_5_1.md": "7531ed2dedc47aca8c67a526c101816f74dae359dcb488868e78e9784f053510",
+    "ultra-experiments/millennium/asmp10_capability_transition/REVERSION_DIAGNOSTIC_v0_4_1.md": "6735a57cf13386b985ed8fbd0228c1a114bb588007d6497b5ccf1e70e7a9bf29",
+    "ultra-experiments/millennium/asmp10_capability_transition/analyze_reversion_diagnostics_v0_4_1.py": "a52167cbaab78189c81e85b16897682d42118cbc93f144290b7ab7be9f379771",
+    "ultra-experiments/millennium/asmp10_capability_transition/capability_state_v0_5_1.py": "e91228eb28205a1e059a54c6aa18f27668ae80514061cddbe857ef820483e4c6",
+    "ultra-experiments/millennium/asmp10_capability_transition/pilot_artifacts_v0_4/reversion_diagnostics_v0_4_1.json": "e768e3fccb863a1277b21e640b7ee2f74458dbdc8436a1003eeb85333856c74d",
+    "ultra-experiments/millennium/asmp10_capability_transition/predictor_protocol_draft_v0_5_1.json": "892e57e7cab5df760b22c4cf2b6eace3b175729542dd942cdfd621d1045b1a96",
+    "ultra-experiments/millennium/asmp10_capability_transition/test_analyze_reversion_diagnostics_v0_4_1.py": "52bb9689d74210839a9aacbe24ecece5ce4cdd28c6e6f90a0b491401c3fce770",
+    "ultra-experiments/millennium/asmp10_capability_transition/test_capability_state_v0_5_1.py": "88be5670cfdd4e12b56523e2e53ad1f7b18be35b2f3f066e85b30fd08e6a0686"
+  },
+  "verification": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp10_capability_transition/test_analyze_reversion_diagnostics_v0_4_1.py ultra-experiments/millennium/asmp10_capability_transition/test_capability_state_v0_5_1.py",
+    "tests_passed": 7,
+    "tests_failed": 0
+  },
+  "claim_boundary": "Post-hoc diagnostic and unregistered successor design; no new transition-prediction evidence."
+}

@@ -1,0 +1,79 @@
+{
+  "file_count": 14,
+  "files": [
+    {
+      "bytes": 3718,
+      "path": "DEVELOPMENT_RESULT_v0_50.md",
+      "sha256": "5f490ceaf4839052622c272bd4e889734af63cb3cce2bb0a6f6da8c559e4f747"
+    },
+    {
+      "bytes": 3877,
+      "path": "PRIOR_ART_GATE_v0_50.md",
+      "sha256": "414fb2a2750f9d5bbf178e93852b93a6fdfdae063a5b92d7d0c5e5d03b0cb4d1"
+    },
+    {
+      "bytes": 859,
+      "path": "README.md",
+      "sha256": "bb0d97e63c8cdc6736cdab25a0e13e4a9e01670b589a108209d99153b2b785da"
+    },
+    {
+      "bytes": 13615,
+      "path": "reference_weight.py",
+      "sha256": "cc7a2fa9340525d1b249c58aaba446470747193a8709e9c4d75b0de7160b2123"
+    },
+    {
+      "bytes": 3734,
+      "path": "register_verification_v0_50.py",
+      "sha256": "5f3bebf7eabcb690a3fc3e6caabad0d7409cc2c2af02ceed1ca99d3805a2a71f"
+    },
+    {
+      "bytes": 6508,
+      "path": "RESULT_v0_50.md",
+      "sha256": "d4c7524d83c7c6e0d8e67602a4fcd49db7913e608b18fd576a1132d9c5232909"
+    },
+    {
+      "bytes": 1803,
+      "path": "RUN_RECEIPT_v0_50.json",
+      "sha256": "79e16130f9d66ed5356874758e33cf34cac2bdfb346ad4453d1891cd9581ae69"
+    },
+    {
+      "bytes": 5294,
+      "path": "test_reference_weight.py",
+      "sha256": "9f8d33a31ad0102f5e2b6bb33d6a56968fa2f689600781f31d71ec3bdc18c649"
+    },
+    {
+      "bytes": 793,
+      "path": "test_verifier_v0_50.py",
+      "sha256": "70cb32ed0942447dc1d9f154e0abaad3b35b32190fc696228d9ac26f290bf459"
+    },
+    {
+      "bytes": 4771,
+      "path": "THEOREM_DRAFT_v0_50.md",
+      "sha256": "8e080efe34cce9a88519952d0c356dbe393368de87c003592609bc08f999a2a2"
+    },
+    {
+      "bytes": 3107,
+      "path": "VERIFICATION_PROTOCOL_v0_50.md",
+      "sha256": "4cfd7623b4295506fdb7dda41c080fd075104bf3e417ad8dabeb238c6d31f78b"
+    },
+    {
+      "bytes": 2560,
+      "path": "verification_registration_v0_50.json",
+      "sha256": "262b271bd87e393c6ff939e7d8a012fb9c7d7d642a0f39741fa2936a98fd2962"
+    },
+    {
+      "bytes": 4610,
+      "path": "VERIFY_RESULT_v0_50.json",
+      "sha256": "c47e0dbd193b4e1b0a58a86dfadb2b33e0cb9699f93736d207fdd5c8adf4772a"
+    },
+    {
+      "bytes": 11896,
+      "path": "verify_theorems_v0_50.py",
+      "sha256": "46cb44d64970743f83a89afe0f7df67633adec1d3a71f2ed3f244b653f75844d"
+    }
+  ],
+  "manifest_excludes": [
+    "RELEASE_MANIFEST_v0_50.json"
+  ],
+  "schema": "asmp9-v0.50-release-manifest-v1"
+}

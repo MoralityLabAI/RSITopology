@@ -1,0 +1,67 @@
+{
+  "schema_version": "asmp9_physical_dynamic_bridge_prime_launch_intent_v0_67",
+  "status": "prepared_not_launched",
+  "prepared_utc": "2026-07-29T19:21:41.5001664Z",
+  "account": {
+    "username": "moralitylab",
+    "user_id": "cmbqxo1kc0020eppjy9mnws3d"
+  },
+  "protected_run": {
+    "id": "e2s64hw5ywag1d8hgwfef6jd",
+    "status_at_preflight": "COMPLETED",
+    "must_not_mutate": true
+  },
+  "task": {
+    "id": "asmp9-physical-dynamic-bridge-v0.67-construction",
+    "description": "Execute only the 240-record construction split, derive the frozen construction calibration, copy and hash artifacts, and terminate. Confirmation inference is forbidden.",
+    "pod_name": "jinn-paper-20260725-asmp9-v067-construct",
+    "spot_interruption_acceptable": true,
+    "interruption_reason": "Each prompt is an atomic write-once resumable work unit; an interruption cannot authorize threshold or protocol changes.",
+    "source_commit": "56e394e48d2ce2054a6cd132cf27768f8ce16d80",
+    "source_freeze_commit": "172586046324cb8ed9d35c8703c6c77e0e0ea69b"
+  },
+  "selected_availability": {
+    "id": "0ca953",
+    "cloud_id": "1A100.22V_SPOT",
+    "provider": "datacrunch",
+    "region": "FI",
+    "gpu_type": "A100_80GB",
+    "gpu_count": 1,
+    "socket": "PCIe",
+    "listed_hourly_usd": 0.6265,
+    "spot": true,
+    "stock_status_at_preflight": "Available"
+  },
+  "launch": {
+    "image": "ubuntu_22_cuda_12",
+    "disk_size_gb": 200,
+    "maximum_planned_lifetime_seconds": 7200,
+    "maximum_estimated_cost_usd": 1.253,
+    "additional_hosted_rl_run": false,
+    "local_gpu_workload": false,
+    "secrets_in_environment": false
+  },
+  "expected_output": {
+    "remote_root": "/workspace/asmp9_dynamic_v067/construction",
+    "local_root": "D:\\Research_Engine\\runs\\asmp9_physical_dynamic_bridge_v0_67\\prime_construction",
+    "required": [
+      "registration.json",
+      "authorization.json",
+      "result/completion_summary.json",
+      "analysis/records.jsonl",
+      "analysis/calibration.json",
+      "analysis/analysis.json",
+      "analysis/analysis_receipt.json",
+      "_wrapper/attempts/*/wrapper_summary.json",
+      "_wrapper/attempts/*/cleanup_summary.json"
+    ]
+  },
+  "preflight": {
+    "active_pods": 0,
+    "account_match": true,
+    "availability_within_price_cap": true,
+    "source_prereveal_validation_status": "passed",
+    "source_model_forward_passes": 0,
+    "confirmation_authorized": false
+  }
+}

@@ -1,0 +1,1858 @@
+{
+  "claim_boundary": "Exact finite composition of policy-specific information occupancy, rational chi-square KL upper bounds, outward Pinsker radii, and generator-wise robust deficiency containment. Not an optimal statistical confidence construction, a sharp modulus for every finite library, efficient policy search, nonrectangular or strategic robustness, real behavioral evidence, or an ASMP-9 resolution.",
+  "gates": {
+    "B0": true,
+    "C0": true,
+    "D0": true,
+    "I0": true,
+    "P0": true,
+    "Q0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "X0": true
+  },
+  "protocol_id": "asmp9-policy-specific-information-v0.44",
+  "provenance": {
+    "source_checks": [
+      {
+        "actual_sha256": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+        "expected_sha256": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+      },
+      {
+        "actual_sha256": "2e200e9eb98e32916453b1deb35366f30740435df09a713cc9f197343d0f5e19",
+        "expected_sha256": "2e200e9eb98e32916453b1deb35366f30740435df09a713cc9f197343d0f5e19",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PRIOR_ART_GATE_v0_44.md"
+      },
+      {
+        "actual_sha256": "1cee808700925cc90c47846ceef09a5467bb8f62024e26b9c5a84f312b5cecab",
+        "expected_sha256": "1cee808700925cc90c47846ceef09a5467bb8f62024e26b9c5a84f312b5cecab",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PROTOCOL_v0_44.md"
+      },
+      {
+        "actual_sha256": "1b20710fe54c48b784fb30e78e7311147d4317e610303dde8d0b22ca080b5649",
+        "expected_sha256": "1b20710fe54c48b784fb30e78e7311147d4317e610303dde8d0b22ca080b5649",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/THEOREM_DRAFT_v0_44.md"
+      },
+      {
+        "actual_sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+        "expected_sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/environment_lock_v0_44.json"
+      },
+      {
+        "actual_sha256": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+        "expected_sha256": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py"
+      },
+      {
+        "actual_sha256": "719c407da887b101dab1a531859121a9ab287139d01c79e3cd2d3e8294cc9595",
+        "expected_sha256": "719c407da887b101dab1a531859121a9ab287139d01c79e3cd2d3e8294cc9595",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/run_confirmation_v0_44.py"
+      },
+      {
+        "actual_sha256": "6956b3b2475e90b863be35221cd1a6806e7e443d829371c421bd7df9b002394e",
+        "expected_sha256": "6956b3b2475e90b863be35221cd1a6806e7e443d829371c421bd7df9b002394e",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/test_occupancy_information.py"
+      },
+      {
+        "actual_sha256": "d31543398dcd5e0fce77bf6d7c52fbf95a4e86ca5608eeb40ffbbed7e8babb03",
+        "expected_sha256": "d31543398dcd5e0fce77bf6d7c52fbf95a4e86ca5608eeb40ffbbed7e8babb03",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/verify_result_v0_44.py"
+      },
+      {
+        "actual_sha256": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+        "expected_sha256": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+        "match": true,
+        "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+      }
+    ],
+    "tests": {
+      "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/test_occupancy_information.py",
+      "expected_passed": 20,
+      "match": true,
+      "passed": 20,
+      "returncode": 0,
+      "stdout_tail": "....................                                                     [100%]\n20 passed in 4.62s\n"
+    }
+  },
+  "registration_sha256": "067690ee28cc38f69b70d8581f12fafaf1194a66b6b0b82d1af5854f774746e5",
+  "resource": {
+    "ceiling": {
+      "peak_working_set_bytes": 805306368,
+      "seconds": 120
+    },
+    "elapsed_seconds": 12.657392300025094,
+    "peak_working_set_bytes": 276942848
+  },
+  "scientific": {
+    "center_controls": [
+      {
+        "center_equivalent": true,
+        "compiler_generators": 1,
+        "compiler_to_envelopes_deficiency": "0",
+        "envelopes": 109,
+        "envelopes_to_compiler_deficiency": "0",
+        "h_max_information": [
+          "2/19",
+          "2/19",
+          "2/19",
+          "2/19"
+        ],
+        "information_supremum": [
+          "2/19",
+          "2/19",
+          "2/19",
+          "2/19"
+        ],
+        "problem": "4_class_identification",
+        "supremum_collapse_exact": true,
+        "unique_risks": 16
+      },
+      {
+        "center_equivalent": true,
+        "compiler_generators": 1,
+        "compiler_to_envelopes_deficiency": "0",
+        "envelopes": 76,
+        "envelopes_to_compiler_deficiency": "0",
+        "h_max_information": [
+          "2/19",
+          "2/19",
+          "2/19",
+          "2/19"
+        ],
+        "information_supremum": [
+          "2/19",
+          "2/19",
+          "2/19",
+          "2/19"
+        ],
+        "problem": "root_group",
+        "supremum_collapse_exact": true,
+        "unique_risks": 16
+      }
+    ],
+    "classification": [
+      {
+        "actual_contained": true,
+        "actual_deficiency": "1/100",
+        "chi_square_cost": "1/99",
+        "envelopes": 109,
+        "eta": "1/100",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "17766726363/250000000000",
+          "width": "17766726363/250000000000"
+        },
+        "problem": "4_class_identification",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "50251890763/500000000000",
+          "width": "50251890763/500000000000"
+        },
+        "zero_risk_policy_max_information": "1/99"
+      },
+      {
+        "actual_contained": true,
+        "actual_deficiency": "1/50",
+        "chi_square_cost": "1/49",
+        "envelopes": 109,
+        "eta": "1/50",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "12626906807/125000000000",
+          "width": "12626906807/125000000000"
+        },
+        "problem": "4_class_identification",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "71428571429/500000000000",
+          "width": "71428571429/500000000000"
+        },
+        "zero_risk_policy_max_information": "1/49"
+      },
+      {
+        "actual_contained": true,
+        "actual_deficiency": "1/20",
+        "chi_square_cost": "1/19",
+        "envelopes": 109,
+        "eta": "1/20",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "162221421131/1000000000000",
+          "width": "162221421131/1000000000000"
+        },
+        "problem": "4_class_identification",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "229415733871/1000000000000",
+          "width": "229415733871/1000000000000"
+        },
+        "zero_risk_policy_max_information": "1/19"
+      },
+      {
+        "actual_contained": true,
+        "actual_deficiency": "1/10",
+        "chi_square_cost": "1/9",
+        "envelopes": 109,
+        "eta": "1/10",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "58925565099/250000000000",
+          "width": "58925565099/250000000000"
+        },
+        "problem": "4_class_identification",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 109,
+          "upper": "166666666667/500000000000",
+          "width": "166666666667/500000000000"
+        },
+        "zero_risk_policy_max_information": "1/9"
+      }
+    ],
+    "query_budget": {
+      "exact_match": true,
+      "expected_one_use": "1/19",
+      "expected_repeatable": "2/19",
+      "one_use_max_information": "1/19",
+      "repeatable_max_information": "2/19"
+    },
+    "root_group": [
+      {
+        "actual_contained": true,
+        "actual_deficiency": "0",
+        "chi_square_cost": "1/99",
+        "envelopes": 76,
+        "eta": "1/100",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "0",
+          "width": "0"
+        },
+        "problem": "root_group",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "50251890763/500000000000",
+          "width": "50251890763/500000000000"
+        },
+        "zero_risk_policy_max_information": "0"
+      },
+      {
+        "actual_contained": true,
+        "actual_deficiency": "0",
+        "chi_square_cost": "1/49",
+        "envelopes": 76,
+        "eta": "1/50",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "0",
+          "width": "0"
+        },
+        "problem": "root_group",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "71428571429/500000000000",
+          "width": "71428571429/500000000000"
+        },
+        "zero_risk_policy_max_information": "0"
+      },
+      {
+        "actual_contained": true,
+        "actual_deficiency": "0",
+        "chi_square_cost": "1/19",
+        "envelopes": 76,
+        "eta": "1/20",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "0",
+          "width": "0"
+        },
+        "problem": "root_group",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "229415733871/1000000000000",
+          "width": "229415733871/1000000000000"
+        },
+        "zero_risk_policy_max_information": "0"
+      },
+      {
+        "actual_contained": true,
+        "actual_deficiency": "0",
+        "chi_square_cost": "1/9",
+        "envelopes": 76,
+        "eta": "1/10",
+        "policy_specific": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "0",
+          "width": "0"
+        },
+        "problem": "root_group",
+        "strictly_sharper": true,
+        "uniform": {
+          "lower": "0",
+          "point": "0",
+          "reference_generators": 1,
+          "source_generators": 76,
+          "upper": "166666666667/500000000000",
+          "width": "166666666667/500000000000"
+        },
+        "zero_risk_policy_max_information": "0"
+      }
+    ],
+    "selected_source_box_vertices": [
+      {
+        "contained": true,
+        "deficiency": "17/40",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "197/400",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "197/400",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "21/40",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          -1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "19/40",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "197/400",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "197/400",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "23/40",
+        "interval": {
+          "lower": "17/40",
+          "point": "1/2",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "23/40",
+          "width": "3/20"
+        },
+        "signs": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "source_reference_box_vertices": [
+      {
+        "contained": true,
+        "deficiency": "39/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 0,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "167/400",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 1,
+        "signs": [
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "43/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 2,
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "57/125",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 3,
+        "signs": [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "19/44",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 4,
+        "signs": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "229/500",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 5,
+        "signs": [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "49/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 6,
+        "signs": [
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "31/60",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 7,
+        "signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "67/160",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 8,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "11/25",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 9,
+        "signs": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "457/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 10,
+        "signs": [
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "43/90",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 11,
+        "signs": [
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "459/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 12,
+        "signs": [
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "12/25",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 13,
+        "signs": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "207/400",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 14,
+        "signs": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "27/50",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 15,
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "19/50",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 16,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "13/32",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 17,
+        "signs": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "23/55",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 18,
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "443/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 19,
+        "signs": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "233/550",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 20,
+        "signs": [
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "449/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 21,
+        "signs": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "12/25",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 22,
+        "signs": [
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "607/1200",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 23,
+        "signs": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "41/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 24,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "43/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 25,
+        "signs": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "223/500",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 26,
+        "signs": [
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "419/900",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 27,
+        "signs": [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "113/250",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 28,
+        "signs": [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "17/36",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 29,
+        "signs": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "61/120",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 30,
+        "signs": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "53/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 31,
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "37/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 32,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "2/5",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 33,
+        "signs": [
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "91/220",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 34,
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "221/500",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 35,
+        "signs": [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "449/1100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 36,
+        "signs": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "109/250",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 37,
+        "signs": [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "47/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 38,
+        "signs": [
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "299/600",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 39,
+        "signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "317/800",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 40,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "21/50",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 41,
+        "signs": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "439/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 42,
+        "signs": [
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "104/225",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 43,
+        "signs": [
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "433/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 44,
+        "signs": [
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "41/90",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 45,
+        "signs": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "119/240",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 46,
+        "signs": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "13/25",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 47,
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "9/25",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 48,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "311/800",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 49,
+        "signs": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "221/550",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 50,
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "429/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 51,
+        "signs": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "2/5",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 52,
+        "signs": [
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "427/1000",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 53,
+        "signs": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "23/50",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 54,
+        "signs": [
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "39/80",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 55,
+        "signs": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "31/80",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 56,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "41/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 57,
+        "signs": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "107/250",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 58,
+        "signs": [
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "9/20",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 59,
+        "signs": [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "213/500",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 60,
+        "signs": [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "403/900",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 61,
+        "signs": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "73/150",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 62,
+        "signs": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "contained": true,
+        "deficiency": "51/100",
+        "interval": {
+          "lower": "9/25",
+          "point": "9/20",
+          "reference_generators": 1,
+          "source_generators": 2,
+          "upper": "27/50",
+          "width": "9/50"
+        },
+        "mask": 63,
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "status": "policy_specific_information_containment_established",
+  "version": "0.44"
+}

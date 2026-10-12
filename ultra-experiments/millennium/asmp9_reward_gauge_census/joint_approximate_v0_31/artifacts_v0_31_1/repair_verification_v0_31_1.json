@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checks": {
+    "all_scientific_gates": true,
+    "failure_preserved": true,
+    "independent_pass": true,
+    "original_registration_binding": true,
+    "original_science_sealed": true,
+    "repair_registration_binding": true,
+    "repair_scope": true,
+    "resource_live": true,
+    "result_hash": true,
+    "scientific_verdict": true
+  },
+  "pass": true,
+  "repair_registration_sha256": "d9c044c9b477478a54b55c79d2111d1efca4b7ee2932190dbe718259ef54310c",
+  "result_sha256": "f07ee0b7ef11339f97b2862987495a9d4088e44f55b58c7d708ba9ee0d578e94",
+  "verifier_sha256": "ab497895bfb9f44eb35670f2506f9febf34d6445017b602bf2f1dfc290a5d0f2"
+}

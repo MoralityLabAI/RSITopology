@@ -1,0 +1,88 @@
+{
+  "schema_version": "asmp4_external_prior_art_scope_receipt_v0_10",
+  "audit_scope": "the four control-under-information-constraints works cited by the canonical ASMP-4 source",
+  "sources": [
+    {
+      "id": "tatikonda_mitter_2004",
+      "title": "Control Under Communication Constraints",
+      "canonical_citation_url": "https://doi.org/10.1109/TAC.2004.831187",
+      "primary_full_text_url": "https://mitter.lids.mit.edu/publications/106_control_under_comm_IEEEAC.pdf",
+      "local_pdf_sha256": "dd2f26f1d85d513f911181ce5a7ba0ca463fe38bb8ad922188628587597a3e0d",
+      "checked_pages": [
+        "PDF 2 / printed 1057",
+        "PDF 3 / printed 1058",
+        "PDF 5 / printed 1060"
+      ],
+      "charged_information_resource": "one noiseless digital sensor-to-controller alphabet with rate R",
+      "single_charged_resource": true,
+      "separate_controller_to_actuator_write_port_charged": false,
+      "selects_asmp4_read_write_registry": false,
+      "explicit_information_pattern_sensitivity": true
+    },
+    {
+      "id": "colonius_kawan_control_2009",
+      "title": "Invariance Entropy for Control Systems",
+      "canonical_citation_url": "https://doi.org/10.1137/080713902",
+      "primary_full_text_url": "https://scwww.math.uni-augsburg.de/~colonius/downloads/2009_SICON_ColoniusKawan.pdf",
+      "local_pdf_sha256": "85ba9c3d018919bd50536ebfeed990f34eb826c30eea2b107ed19ba31f80ed69",
+      "checked_pages": [
+        "PDF 1 / printed 1701",
+        "PDF 5 / printed 1705"
+      ],
+      "charged_information_resource": "one spanning-set cardinality of open-loop control functions",
+      "single_charged_resource": true,
+      "separate_controller_to_actuator_write_port_charged": false,
+      "selects_asmp4_read_write_registry": false,
+      "explicit_information_pattern_sensitivity": false
+    },
+    {
+      "id": "colonius_kawan_outputs_2011",
+      "title": "Invariance Entropy for Outputs",
+      "canonical_citation_url": "https://doi.org/10.1007/s00498-011-0056-9",
+      "primary_full_text_url": "https://opus.bibliothek.uni-augsburg.de/opus4/files/1326/mpreprint_09_029.pdf",
+      "local_pdf_sha256": "d97dfdbf2b5a148c36ec4c47fffefb310d8b4a37770ee2ca7bc6e35bb2a9e5e3",
+      "checked_pages": [
+        "PDF 4",
+        "PDF 8 / printed 5",
+        "PDF 9 / printed 6"
+      ],
+      "charged_information_resource": "one spanning-set cardinality of open-loop control functions for an output-space target",
+      "single_charged_resource": true,
+      "separate_controller_to_actuator_write_port_charged": false,
+      "selects_asmp4_read_write_registry": false,
+      "explicit_information_pattern_sensitivity": false
+    },
+    {
+      "id": "tomar_rungger_zamani_2019",
+      "title": "Invariance Feedback Entropy of Uncertain Control Systems",
+      "canonical_citation_url": "https://arxiv.org/abs/1706.05242",
+      "primary_full_text_url": "https://arxiv.org/pdf/1706.05242",
+      "local_pdf_sha256": "3e60ac22b48e7aaf175369a986d6218fabc5378a1a22fd320cb38a42fc69b01b",
+      "checked_pages": [
+        "PDF 1 / printed 1",
+        "PDF 2 / printed 2",
+        "PDF 11 / printed 11",
+        "PDF 12 / printed 12"
+      ],
+      "charged_information_resource": "one finite sensor/coder-to-controller alphabet S with data rate R(H)",
+      "single_charged_resource": true,
+      "separate_controller_to_actuator_write_port_charged": false,
+      "selects_asmp4_read_write_registry": false,
+      "explicit_information_pattern_sensitivity": false
+    }
+  ],
+  "totals": {
+    "canonical_primary_sources": 4,
+    "single_charged_information_resources": 4,
+    "separate_write_ports_charged": 0,
+    "asmp4_two_port_registry_selectors": 0,
+    "explicit_information_pattern_sensitivity_sources": 1,
+    "external_expert_review": false
+  },
+  "bounded_inference": "None of the four cited works supplies a default selector for ASMP-4's separate read/write transcript registries; Tatikonda and Mitter instead show directly that an encoder information pattern can change the required rate.",
+  "nonclaims": [
+    "This is not an exhaustive search of the control or invariance-entropy literature.",
+    "This is not external expert review.",
+    "The audit does not show that no later theorem could add a selector; it shows only that the four works cited by ASMP-4 do not do so."
+  ]
+}

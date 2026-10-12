@@ -1,0 +1,144 @@
+{
+  "checks": {
+    "all_13_finite_prefixes_have_delayed_witness": true,
+    "all_256_two_state_machines_checked": true,
+    "all_32896_two_state_pairs_checked": true,
+    "all_46656_three_state_machines_checked": true,
+    "k_minus_one_bound_holds": true,
+    "product_bound_holds": true
+  },
+  "claim_boundary": "Classical deterministic reward-machine equivalence and finite-prefix impossibility. No empirical human/model memory bound, stochastic process theorem, moral-value claim, or ASMP-9 resolution.",
+  "delayed_prefix_census": {
+    "all_delayed_witnesses_nonstationary": true,
+    "all_prefixes_indistinguishable": true,
+    "maximum_horizon": 12,
+    "records": [
+      {
+        "delayed_minimum_unary_states": 2,
+        "delayed_stationary": false,
+        "horizon": 0,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 3,
+        "delayed_stationary": false,
+        "horizon": 1,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 4,
+        "delayed_stationary": false,
+        "horizon": 2,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 5,
+        "delayed_stationary": false,
+        "horizon": 3,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 6,
+        "delayed_stationary": false,
+        "horizon": 4,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 7,
+        "delayed_stationary": false,
+        "horizon": 5,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 8,
+        "delayed_stationary": false,
+        "horizon": 6,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 9,
+        "delayed_stationary": false,
+        "horizon": 7,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 10,
+        "delayed_stationary": false,
+        "horizon": 8,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 11,
+        "delayed_stationary": false,
+        "horizon": 9,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 12,
+        "delayed_stationary": false,
+        "horizon": 10,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 13,
+        "delayed_stationary": false,
+        "horizon": 11,
+        "prefix_equal": true,
+        "zero_stationary": true
+      },
+      {
+        "delayed_minimum_unary_states": 14,
+        "delayed_stationary": false,
+        "horizon": 12,
+        "prefix_equal": true,
+        "zero_stationary": true
+      }
+    ]
+  },
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_73.md": "08c751e2fe1459dae24550993d2f83b597e8d01406f7ce11d5aa21afea40a695",
+    "THEOREM_DRAFT_v0_73.md": "bd7d7abcbb651991f84b1b566cdab2efabe6ac83b603fc7bebdcf7ddf1cfda4d",
+    "history_stabilization.py": "9af381fa65118547199722f2ed905ea5f96118a2fff35e810b3782a32cd2afa9",
+    "test_history_stabilization.py": "00733def3bd30c19d7cf960883f50276e78f15b882832aa0dd4d48ed4c0f00c4"
+  },
+  "status": "development_only_not_preregistered",
+  "three_state_machine_census": {
+    "bound": 2,
+    "depth_counts": {
+      "0": 2916,
+      "1": 25596,
+      "2": 18144
+    },
+    "machine_count": 46656,
+    "maximum_depth": 2,
+    "state_count": 3
+  },
+  "two_state_machine_census": {
+    "bound": 1,
+    "depth_counts": {
+      "0": 64,
+      "1": 192
+    },
+    "machine_count": 256,
+    "maximum_depth": 1,
+    "state_count": 2
+  },
+  "two_state_pair_census": {
+    "distinguishable": 31128,
+    "equivalent": 1768,
+    "maximum_word_length": 3,
+    "product_bound": 4,
+    "unordered_pairs_with_repetition": 32896
+  }
+}

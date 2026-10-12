@@ -1,0 +1,42 @@
+{
+  "check_count": 29,
+  "checks": {
+    "claim_boundary_exact": true,
+    "gate_universe": true,
+    "independent_allocation_replay": true,
+    "independent_theorem_replay": true,
+    "independent_threshold_replay": true,
+    "independent_zero_interior_replay": true,
+    "protocol_id": true,
+    "receipt_report_hash": true,
+    "receipt_result_hash": true,
+    "registration_hash": true,
+    "reported_pass": true,
+    "resource_caps": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/DEVELOPMENT_CENSUS_v0_15.json": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/DEVELOPMENT_NOTE_v0_15.md": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/DEVELOPMENT_RECEIPT_v0_15.json": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/PRIOR_ART_GATE_v0_15.md": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/PROTOCOL_v0_15.md": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/README.md": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/THEOREM_DRAFT_v0_15.md": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/THEOREM_v0_15.md": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/development_census.py": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/environment_v0_15.json": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/experiment.py": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/protocol_v0_15.json": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/register.py": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/run_verification.py": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/test_experiment.py": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/test_run_verification.py": true,
+    "sealed:ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_availability_v0_15/verify_result.py": true
+  },
+  "failed_checks": [],
+  "status": "pass",
+  "verified_artifacts": {
+    "receipt": "receipt_v0_15.json",
+    "registration": "registration_v0_15.json",
+    "report": "RESULT_v0_15.md",
+    "result": "result_v0_15.json"
+  }
+}

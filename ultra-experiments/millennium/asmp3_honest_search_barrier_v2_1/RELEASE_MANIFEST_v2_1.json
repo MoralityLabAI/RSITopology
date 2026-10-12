@@ -1,0 +1,89 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-HONEST-SEARCH-BARRIER-v2.1",
+  "file_count": 20,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_encoding_invariance_v2_0/ENCODING_INVARIANCE_THEOREM_v2_0.md": {
+      "bytes": 6929,
+      "sha256": "149B10B278FE41C9EDB8D37A9CAF5719C48A14E66F85570F54A6A8C23CAE0E82"
+    },
+    "../asmp3_encoding_invariance_v2_0/RELEASE_MANIFEST_v2_0.json": {
+      "bytes": 3620,
+      "sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075"
+    },
+    "../asmp3_encoding_invariance_v2_0/artifacts/encoding_invariance_v2_0.json": {
+      "bytes": 34866,
+      "sha256": "0EFF1BB9F80AE281EFA29E151FD87FA0200CC62A651F1B5E5E777BED5A44C191"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/INDEPENDENT_NOISE_AMPLIFICATION_THEOREM_v1_8.md": {
+      "bytes": 6330,
+      "sha256": "4E473CC86D470FE0F836D7B060D4BD046BC2B366A2C9F015AF13754AE7F16CF0"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/RELEASE_MANIFEST_v1_8.json": {
+      "bytes": 3064,
+      "sha256": "FF45BCAA2873A03E967F20EE934A6AB1F326FF35E8FB92FCD1F2845E00D8D27C"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/artifacts/independent_noise_amplification_v1_8.json": {
+      "bytes": 634098,
+      "sha256": "937308CDB7F321516B0CFCC76AA7167E5B7542E0812E52BD63D493130D90750B"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v2_1.md": {
+      "bytes": 1899,
+      "sha256": "353B431F6017B2462316EFA36AB7C67B9C08B9A378A850EABAC13026F6C75CD0"
+    },
+    "HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "README.md": {
+      "bytes": 745,
+      "sha256": "2397729EF8CE19593FE2AB90CD5C5106E6382FA65100B1AE140DE20FD4A6430C"
+    },
+    "artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "artifacts/honest_search_barrier_verification_v2_1.json": {
+      "bytes": 861,
+      "sha256": "01F05CF39E9DDFB36A2B871DCA09DFAFD443BB98D4B88A0A2A46ED88E916748D"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2749,
+      "sha256": "3C97C8274FA0543DCD16CB92E00FE13175A23824DC46A04AF3EC4C3C766AD670"
+    },
+    "honest_search_barrier.py": {
+      "bytes": 9492,
+      "sha256": "C6ACDB5EFA7A93C08C252DE6603E8411B1D007C3F9B01535F6E9D463CD383505"
+    },
+    "run_honest_search_barrier.py": {
+      "bytes": 818,
+      "sha256": "C077020F6C232913CD59A5A1B8013A89505CC781468197359706F2478EAC1D8A"
+    },
+    "test_honest_search_barrier.py": {
+      "bytes": 3910,
+      "sha256": "0F1EA8930DAFDC4B6C319564F43BE81443C45750E95CAD50C560BD413F84E5D0"
+    },
+    "verify_honest_search_barrier.py": {
+      "bytes": 7298,
+      "sha256": "AA20F1A2A049781931C7D4E2B870263E90AD64CBDCC0F31F1B5AEA660A309269"
+    }
+  },
+  "release_status": "exact_dimension_one_unique_marker_search_separation",
+  "schema_version": "asmp3_honest_search_barrier_release_v2_1"
+}

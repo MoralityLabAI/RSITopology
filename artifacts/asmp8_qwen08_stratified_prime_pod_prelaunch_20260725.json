@@ -1,0 +1,120 @@
+{
+  "schema_version": "prime_pod_launch_intent_v1",
+  "status": "complete_artifacts_recovered_pod_terminated",
+  "prepared_utc": "2026-07-25T19:49:40.3368126Z",
+  "task": {
+    "id": "asmp8-qwen08-stratified-completion-measurement-prime-spot-v0-1",
+    "description": "Execute the frozen 3,456-request target-blind Qwen0.8B completion-probability reliability study on a separate Prime GPU surface.",
+    "protocol": "protocols/asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1.json",
+    "pod_name": "jinn-paper-20260725-asmp8-stratified"
+  },
+  "account": {
+    "username": "moralitylab",
+    "user_id": "cmbqxo1kc0020eppjy9mnws3d",
+    "identity_check": "PASS"
+  },
+  "selected_availability": {
+    "id": "724407",
+    "cloud_id": "1A100.40S.22V_SPOT",
+    "provider": "datacrunch",
+    "region": "FI",
+    "listed_hourly_usd": 0.4515,
+    "gpu_type": "A100 40GB (Spot)",
+    "gpu_count": 1,
+    "vcpus": 22,
+    "ram_gb": 120,
+    "image": "ubuntu_22_cuda_12",
+    "disk_gb": 256,
+    "spot": true,
+    "stock_status_at_preflight": "Available"
+  },
+  "limits": {
+    "maximum_planned_lifetime_seconds": 3600,
+    "maximum_estimated_cost_usd": 0.4515,
+    "workload_ram_mb": 4096,
+    "workload_cpu_percent": 50,
+    "workload_io_mb_s": 50,
+    "workload_timeout_seconds": 7200,
+    "workload_gpu_allowance_mb": 1600,
+    "hard_abort_temperature_c": 88
+  },
+  "expected_output_path": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1",
+  "spot_consequence": "An unplanned interruption invalidates the registered P0 full-pass state. Completed prefix receipts remain engineering evidence only.",
+  "protected_jinn_run": {
+    "run_id": "e2s64hw5ywag1d8hgwfef6jd",
+    "status_at_preflight": "COMPLETED",
+    "action": "NONE"
+  },
+  "active_pods_at_preflight": 0,
+  "pod_id": "6808a1ec8cde4c1d8e09e34180e95f74",
+  "creation_utc": "2026-07-25T19:51:21Z",
+  "ready_utc": "2026-07-25T19:52:25Z",
+  "runtime": {
+    "llama_cpp_tag": "b10064",
+    "llama_cpp_commit": "86d86ed4396b4130922f7b9af26e3d9fc11a591b",
+    "llama_server_sha256": "ea573b00c3510d2316c52f001b63f13b98a295c5e273c2a06323e02bb1c27a0f",
+    "llama_cuda_library_sha256": "fb219ab718254becd5074b3f1077686803ffc0411c41bf31b6fa634a5bd438b3",
+    "llama_server_version": "1 (86d86ed)",
+    "cuda_toolkit": "12.8.93",
+    "cuda_architectures": "80-real",
+    "compiler": "GNU 11.4.0",
+    "guard_script": "scripts/run_prime_asmp8_guarded.sh",
+    "superseded_virtual_arch_binary_sha256": "d6e833688c7fc0ef78d3f6d48523bbf8b1e8f18469ba6545b97f55ffdacf52cb",
+    "preoutcome_operational_attempts": [
+      {
+        "attempt": 0,
+        "completed_records": 0,
+        "failure": "first_request_timeout_during_virtual_compute_80_runtime_preparation"
+      },
+      {
+        "attempt": 1,
+        "completed_records": 0,
+        "failure": "same_failure_reproduced_before_native_sm80_rebuild"
+      }
+    ]
+  },
+  "workload_started_utc": "2026-07-25T20:28:21Z",
+  "workload_ended_utc": "2026-07-25T20:35:07Z",
+  "termination_utc": "2026-07-25T20:38:31Z",
+  "execution": {
+    "record_count": 3456,
+    "record_target": 3456,
+    "unique_prompt_count": 576,
+    "planned_server_epochs": 4,
+    "observed_server_sessions": 4,
+    "runner_exit_code": 0,
+    "thermal_pause_count": 0,
+    "maximum_temperature_c": 29,
+    "maximum_gpu_memory_used_mb": 1046,
+    "maximum_power_w": 77.5,
+    "telemetry_sample_count": 752
+  },
+  "result": {
+    "status": "measurement_instrument_pass",
+    "P0_plan_and_session_integrity": "pass",
+    "C0_full_census_and_cache_order_invariance": "pass",
+    "C0_maximum_probability_range": 0.0,
+    "R0_restart_and_repeat_stability": "pass",
+    "R0_maximum_probability_range": 0.0,
+    "L0_proxy_liveness": "pass",
+    "claim_boundary": "Target-blind measurement reliability and cross-runtime replication only. No outcome labels were consumed."
+  },
+  "artifact_index": {
+    "local_root": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1",
+    "archive": "asmp8_qwen08_stratified_prime_spot_v0_1_20260725.tar.gz",
+    "archive_sha256": "99f937107b34722ecbf734371308b29c2ef9919c05a43e7d18508c39693370da",
+    "archive_bytes": 2328362,
+    "manifest_sha256": "af579d746a8d73eb587fe47712effcde8b37baa921cb8d4fc8a848a8be8d7f55",
+    "manifest_entry_count": 3512,
+    "manifest_verification_failures": 0,
+    "analysis_sha256": "9e20b36f05a1dbdb175ec565de5b4b54f175deb37a430e08557af4de00977913",
+    "report_sha256": "a61808b1ddbb48798e09282a44a67fabbf27e11442bdf347545272cd9813d070",
+    "summary_sha256": "4c64a6020ac0f70f84c508c68eeecf8dde9979c1f15b1d3bea19feb11079a9d2",
+    "measurement_plan_sha256": "97702d5f13dc6344de5612642a25d356fe367530ee9240167fcc258e1b49385d",
+    "records_jsonl_sha256": "b8ac2277546120208ffea67af484b145d61c56d3e867de7bf4cbff2f674fb362",
+    "gpu_telemetry_sha256": "05fe6e19d65202f5451ea4c5cbbc9d77a677ee90cc7b95eabec10f82c8d56142"
+  },
+  "active_pods_at_closeout": 0,
+  "estimated_total_cost_usd": 0.355,
+  "cost_estimate_basis": "Upper bound from pod creation to confirmed termination check at the frozen listed rate; provider history reports a 46-minute duration."
+}

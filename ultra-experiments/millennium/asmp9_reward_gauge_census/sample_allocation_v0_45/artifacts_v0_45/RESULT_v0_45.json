@@ -1,0 +1,454 @@
+{
+  "gates": {
+    "A0": true,
+    "B0": true,
+    "C0": true,
+    "D0": true,
+    "E0": true,
+    "K0": true,
+    "L0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "U0": true
+  },
+  "protocol_id": "asmp9-decision-directed-sample-allocation-v0.45",
+  "registration_sha256": "74cb1dcc643f1a3a2b44b440bd11bb9ae50658fdede061a2226fb0fcfe6ff8a4",
+  "resource": {
+    "bytes_ceiling": 1342177280,
+    "elapsed_seconds": 265.7014468999987,
+    "peak_aggregate_working_set_bytes": 395005952,
+    "seconds_ceiling": 420,
+    "worker_processes": 4
+  },
+  "scientific": {
+    "allocation_universe_per_problem": 1711,
+    "allocations": {
+      "branch_classification": {
+        "absolute_improvement": "989025033/125000000000",
+        "constructive_best_upper": "589535161433/1000000000000",
+        "constructive_mismatch_count": 1325,
+        "constructive_optima": [
+          [
+            26,
+            17,
+            17
+          ]
+        ],
+        "constructive_underbound_count": 0,
+        "exact_best_upper": "589535161433/1000000000000",
+        "exact_optima": [
+          [
+            26,
+            17,
+            17
+          ]
+        ],
+        "exact_uniform_upper": "597447361697/1000000000000",
+        "maximum_constructive_excess": "214694472059/2861025485404",
+        "relative_improvement": 0.013243342880494186,
+        "row_universe_sha256": "4a72696cd42b0e5307190a964cf010cdee0166cd72ba338560c336208b02ce41",
+        "uniform_allocation": [
+          20,
+          20,
+          20
+        ]
+      },
+      "root_group": {
+        "absolute_improvement": "31408011231/200000000000",
+        "constructive_best_upper": "265419024703/1000000000000",
+        "constructive_mismatch_count": 0,
+        "constructive_optima": [
+          [
+            58,
+            1,
+            1
+          ]
+        ],
+        "constructive_underbound_count": 0,
+        "exact_best_upper": "265419024703/1000000000000",
+        "exact_optima": [
+          [
+            58,
+            1,
+            1
+          ]
+        ],
+        "exact_uniform_upper": "211229540429/500000000000",
+        "maximum_constructive_excess": "0",
+        "relative_improvement": 0.3717284425181653,
+        "row_universe_sha256": "9c95770c2cfe5b9aae6a7ecee8ae0475be676150d178bfe3e915baeeafa9cf52",
+        "uniform_allocation": [
+          20,
+          20,
+          20
+        ]
+      }
+    },
+    "alpha": "1/20",
+    "audits": {
+      "branch_classification": {
+        "allocations": 1711,
+        "constructive_underbound_count": 0,
+        "exact_best_upper": "589535161433/1000000000000",
+        "exact_optima": [
+          [
+            26,
+            17,
+            17
+          ]
+        ],
+        "exact_uniform_upper": "597447361697/1000000000000",
+        "first_mismatches": [
+          {
+            "allocation": [
+              1,
+              15,
+              44
+            ],
+            "exact_upper": "2094277514896/2794637445737",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              16,
+              43
+            ],
+            "exact_upper": "2059848982621/2757176118383",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              17,
+              42
+            ],
+            "exact_upper": "2028677431304/2722869666485",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              18,
+              41
+            ],
+            "exact_upper": "2000325877769/2691275124566",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              19,
+              40
+            ],
+            "exact_upper": "1974439234021/2662030914890",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              20,
+              39
+            ],
+            "exact_upper": "1950725956733/2634838439906",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              21,
+              38
+            ],
+            "exact_upper": "1928944548306/2609448518177",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              22,
+              37
+            ],
+            "exact_upper": "381778694029/517130244613",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              23,
+              36
+            ],
+            "exact_upper": "1890403502319/2563268156669",
+            "formula_upper": "3/4",
+            "match": false
+          },
+          {
+            "allocation": [
+              1,
+              24,
+              35
+            ],
+            "exact_upper": "267618841168/363163785077",
+            "formula_upper": "3/4",
+            "match": false
+          }
+        ],
+        "formula_best_upper": "589535161433/1000000000000",
+        "formula_optima": [
+          [
+            26,
+            17,
+            17
+          ]
+        ],
+        "formula_uniform_upper": "597447361697/1000000000000",
+        "maximum_formula_excess": "214694472059/2861025485404",
+        "mismatch_count": 1325,
+        "mode": "branch_classification",
+        "rows_sha256": "4a72696cd42b0e5307190a964cf010cdee0166cd72ba338560c336208b02ce41",
+        "total_budget": 60,
+        "uniform_allocation": [
+          20,
+          20,
+          20
+        ]
+      },
+      "root_group": {
+        "allocations": 1711,
+        "constructive_underbound_count": 0,
+        "exact_best_upper": "265419024703/1000000000000",
+        "exact_optima": [
+          [
+            58,
+            1,
+            1
+          ]
+        ],
+        "exact_uniform_upper": "211229540429/500000000000",
+        "first_mismatches": [],
+        "formula_best_upper": "265419024703/1000000000000",
+        "formula_optima": [
+          [
+            58,
+            1,
+            1
+          ]
+        ],
+        "formula_uniform_upper": "211229540429/500000000000",
+        "maximum_formula_excess": "0",
+        "mismatch_count": 0,
+        "mode": "root_group",
+        "rows_sha256": "9c95770c2cfe5b9aae6a7ecee8ae0475be676150d178bfe3e915baeeafa9cf52",
+        "total_budget": 60,
+        "uniform_allocation": [
+          20,
+          20,
+          20
+        ]
+      }
+    },
+    "constructive_predictions": {
+      "branch_classification": {
+        "best_upper": "589535161433/1000000000000",
+        "optimum": [
+          26,
+          17,
+          17
+        ],
+        "uniform": [
+          20,
+          20,
+          20
+        ],
+        "uniform_upper": "597447361697/1000000000000"
+      },
+      "root_group": {
+        "best_upper": "265419024703/1000000000000",
+        "optimum": [
+          58,
+          1,
+          1
+        ],
+        "uniform": [
+          20,
+          20,
+          20
+        ],
+        "uniform_upper": "211229540429/500000000000"
+      }
+    },
+    "method_of_types": {
+      "decimal_digits": 12,
+      "first": "4787491742783/1000000000000",
+      "formula": "log(3*(n+1)/0.05)/n",
+      "last": "3418841011/25000000000",
+      "positive": true,
+      "rows": 60,
+      "strictly_decreasing": true
+    },
+    "query_order": [
+      "root",
+      "left",
+      "right"
+    ],
+    "serial_control": {
+      "best_information": "535415024997/500000000000",
+      "evaluated_allocations": 1711,
+      "optima": [
+        [
+          20,
+          20,
+          20
+        ]
+      ],
+      "uniform": [
+        20,
+        20,
+        20
+      ],
+      "uniform_is_optimal": true
+    },
+    "total_budget": 60,
+    "two_point_lower": [
+      {
+        "alpha": "1/20",
+        "bayes_error": "11/200",
+        "grid_denominator": 200,
+        "next_grid_error": "1/20",
+        "radius_lower": "89/200",
+        "samples": 1
+      },
+      {
+        "alpha": "1/20",
+        "bayes_error": "7099661724538465544515347714134101821/131072000000000000000000000000000000000",
+        "grid_denominator": 200,
+        "next_grid_error": "49199936959704329373523590124507/1000000000000000000000000000000000",
+        "radius_lower": "37/200",
+        "samples": 17
+      },
+      {
+        "alpha": "1/20",
+        "bayes_error": "7580447274820611064252170233/137438953472000000000000000000",
+        "grid_denominator": 200,
+        "next_grid_error": "3631613298348116748009472/72759576141834259033203125",
+        "radius_lower": "7/40",
+        "samples": 20
+      },
+      {
+        "alpha": "1/20",
+        "bayes_error": "45467469003692019719301227961712661814182090465414364711/838860800000000000000000000000000000000000000000000000000",
+        "grid_denominator": 200,
+        "next_grid_error": "4512369779055308574149043975127688310481/93132257461547851562500000000000000000000",
+        "radius_lower": "31/200",
+        "samples": 26
+      },
+      {
+        "alpha": "1/20",
+        "bayes_error": "193294227674826833027208219183753931143331941304742224226323341395301183552717676022439053793948349831323159550221352643635398049/3602879701896396800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "grid_denominator": 200,
+        "next_grid_error": "1140176826351739697969732860198996589475006565943481038948407227257568095106507554334919052822018294415580627119/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "radius_lower": "21/200",
+        "samples": 58
+      }
+    ]
+  },
+  "source_checks": [
+    {
+      "actual": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "expected": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+    },
+    {
+      "actual": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "expected": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py"
+    },
+    {
+      "actual": "33da538babe7903b4e04e752f37bd23b0abcd734db673e1b365fa46891eea9c0",
+      "expected": "33da538babe7903b4e04e752f37bd23b0abcd734db673e1b365fa46891eea9c0",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PRIOR_ART_GATE_v0_45.md"
+    },
+    {
+      "actual": "684b998a2240a20ecb25d187936bbd9ecfae02092bf562a2c3eab2ac213d068a",
+      "expected": "684b998a2240a20ecb25d187936bbd9ecfae02092bf562a2c3eab2ac213d068a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/PROTOCOL_v0_45.md"
+    },
+    {
+      "actual": "7f7e76092ede29ad363a4b430cb661eecd11c23995c48a6c5c8e25a3db520559",
+      "expected": "7f7e76092ede29ad363a4b430cb661eecd11c23995c48a6c5c8e25a3db520559",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/THEOREM_DRAFT_v0_45.md"
+    },
+    {
+      "actual": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "expected": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/allocation_design.py"
+    },
+    {
+      "actual": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "expected": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/audit_formula_universe.py"
+    },
+    {
+      "actual": "09148d5ad2909cdbc36122c838ce2711268c8e34c30adecba8789be95e8b105a",
+      "expected": "09148d5ad2909cdbc36122c838ce2711268c8e34c30adecba8789be95e8b105a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/environment_lock_v0_45.json"
+    },
+    {
+      "actual": "67aec056b492249c0c43fd1926ff34ee8685aa67a23d9c53d477a328b0f7c875",
+      "expected": "67aec056b492249c0c43fd1926ff34ee8685aa67a23d9c53d477a328b0f7c875",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/run_confirmation_v0_45.py"
+    },
+    {
+      "actual": "bbc59ae9fc1f05c5933cd8f365ca7c1b8919f6f0eccb5f30ab0f62947934ad4f",
+      "expected": "bbc59ae9fc1f05c5933cd8f365ca7c1b8919f6f0eccb5f30ab0f62947934ad4f",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/test_allocation_design.py"
+    },
+    {
+      "actual": "ad61d4d3c897376cc23914a990c6fb615122a66aac3ad89feae7216b2dad15fc",
+      "expected": "ad61d4d3c897376cc23914a990c6fb615122a66aac3ad89feae7216b2dad15fc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/verify_result_v0_45.py"
+    },
+    {
+      "actual": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "expected": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+    }
+  ],
+  "status": "decision_directed_sample_allocation_established",
+  "tests": {
+    "command": [
+      "C:\\Python311\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp9_reward_gauge_census\\sample_allocation_v0_45\\test_allocation_design.py"
+    ],
+    "expected": 21,
+    "ok": true,
+    "output": ".....................                                                    [100%]\n21 passed in 7.15s",
+    "passed": 21,
+    "returncode": 0
+  },
+  "version": "0.45"
+}

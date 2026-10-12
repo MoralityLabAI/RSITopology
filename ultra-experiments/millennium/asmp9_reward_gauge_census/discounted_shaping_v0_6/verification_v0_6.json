@@ -1,0 +1,29 @@
+{
+  "protocol_id": "ASMP-9-DISCOUNTED-SHAPING-v0.6",
+  "registration_commit": "0cc1bb992acb16500fa0afaadec16f2cc47257d3",
+  "registration_sha256": "bbbe18a9ce7735ef53c3694e7ec518dd4d4d4d8538e9f8f11297c944ca472345",
+  "implementation_commit": "9802c0595746a2ba3afe3bf283268bd358586df1",
+  "sealed_run_verdict": "discounted_shaping_gain_quotient_implementation_verified",
+  "artifact_verifier_verdict": "verified",
+  "runtime_gate_count": 8,
+  "runtime_gates_passed": 8,
+  "unit_test_count": 16,
+  "unit_tests_passed": 16,
+  "fresh_simple_graph_count": 32768,
+  "fresh_multigraph_count": 8192,
+  "fresh_graph_count_total": 40960,
+  "random_trajectory_count": 16384,
+  "matched_boundary_pair_count": 4096,
+  "unequal_horizon_pair_count": 4096,
+  "rational_rank_mismatch_count": 0,
+  "endpoint_mismatch_count": 0,
+  "telescoping_mismatch_count": 0,
+  "matched_boundary_mismatch_count": 0,
+  "unequal_horizon_missing_witness_count": 0,
+  "elapsed_seconds": 191.7089369999885,
+  "output_hashes": {
+    "RESULT_v0_6.md": "7ee004ea4adc4c5a73bf052df3fb1709ca3fe2b61abe97882c2213eb458bc1f4",
+    "result_v0_6.json": "3b3dde1fd271341f4a04e7897cf1e0524b5af657e8f20f78f7f8d47bd49cf637"
+  },
+  "claim_boundary": "Classical gain-graph and discounted-potential specialization over finite edge rewards; not policy-based IRL, all reward invariances, a human model, or a complete ASMP-9 resolution."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "asmp4_registered_sensor_classification_claim_v0_16",
+  "status": "all four-mode registered sensor partitions classified on positive-volume collar",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_15_semantic_audit_claim_sha256": "5ec0c615f72435da81e066f707293f85dd7b3fac93dab60c166f02cf649dbdc6"
+  },
+  "partition_census": {
+    "all": 15,
+    "q_refining_feasible": 4,
+    "nonrefining_infeasible": 11,
+    "feasible_block_histogram": {
+      "2": 1,
+      "3": 2,
+      "4": 1
+    }
+  },
+  "exact_regions": {
+    "two_blocks": "[2,infinity) x [2,infinity)",
+    "three_blocks": "[log2(6),infinity) x [2,infinity)",
+    "four_blocks": "[3,infinity) x [2,infinity)",
+    "nonrefining": "empty"
+  },
+  "finite_margin": {
+    "normal_words": "ceil(rho*2^T)",
+    "read_words": "k^T ceil(rho*2^T)",
+    "write_words": "2^T ceil(rho*2^T)"
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 16,
+    "tests": 194
+  },
+  "decision": "registered_sensor_parameter_resolves_local_selector_ambiguity",
+  "nonclaim": "This theorem classifies every mode partition for one positive-volume collar plant. It does not define the universal ASMP-4 registered-class grammar or prove the requested nonlinear variational theorem."
+}

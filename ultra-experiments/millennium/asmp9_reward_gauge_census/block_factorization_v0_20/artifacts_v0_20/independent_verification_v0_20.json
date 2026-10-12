@@ -1,0 +1,21 @@
+{
+  "check_count": 14,
+  "checks": {
+    "all_recomputed_substance": true,
+    "block_partitions": true,
+    "bridge_irrelevance": true,
+    "claim_boundary": true,
+    "design": true,
+    "gate_mapping": true,
+    "gate_universe": true,
+    "hash_chain": true,
+    "one_block_control": true,
+    "probability_products": true,
+    "sealed_files": true,
+    "status_equivalence": true,
+    "verdict_mapping": true,
+    "worst_label_product": true
+  },
+  "pass": true,
+  "pass_count": 14
+}

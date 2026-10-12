@@ -1,0 +1,402 @@
+{
+  "binding_refute_branch": {
+    "asymptotic_identity": {
+      "best_joint_decision_gap": "(3/5)^d",
+      "in_terms_of_T": "T^log2(3/5)",
+      "limit": "0",
+      "refuting_atoms": "d=log2(T)",
+      "single_atom_error": "1/5"
+    },
+    "asymptotic_rows": [
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.36,
+          "exact": "9/25"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.32,
+          "exact": "8/25"
+        },
+        "computation_budget_T": 4,
+        "depth": 2,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 2,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.216,
+          "exact": "27/125"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.392,
+          "exact": "49/125"
+        },
+        "computation_budget_T": 8,
+        "depth": 3,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 3,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.1296,
+          "exact": "81/625"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.4352,
+          "exact": "272/625"
+        },
+        "computation_budget_T": 16,
+        "depth": 4,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 4,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.07776,
+          "exact": "243/3125"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.46112,
+          "exact": "1441/3125"
+        },
+        "computation_budget_T": 32,
+        "depth": 5,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 5,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.046656,
+          "exact": "729/15625"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.476672,
+          "exact": "7448/15625"
+        },
+        "computation_budget_T": 64,
+        "depth": 6,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 6,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.0279936,
+          "exact": "2187/78125"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.4860032,
+          "exact": "37969/78125"
+        },
+        "computation_budget_T": 128,
+        "depth": 7,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 7,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.01679616,
+          "exact": "6561/390625"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.49160192,
+          "exact": "192032/390625"
+        },
+        "computation_budget_T": 256,
+        "depth": 8,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 8,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.010077696,
+          "exact": "19683/1953125"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.494961152,
+          "exact": "966721/1953125"
+        },
+        "computation_budget_T": 512,
+        "depth": 9,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 9,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.0060466176,
+          "exact": "59049/9765625"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.4969766912,
+          "exact": "4853288/9765625"
+        },
+        "computation_budget_T": 1024,
+        "depth": 10,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 10,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.00362797056,
+          "exact": "177147/48828125"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.49818601472,
+          "exact": "24325489/48828125"
+        },
+        "computation_budget_T": 2048,
+        "depth": 11,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 11,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      },
+      {
+        "best_joint_decision_gap": {
+          "decimal": 0.002176782336,
+          "exact": "531441/244140625"
+        },
+        "best_joint_parity_error": {
+          "decimal": 0.498911608832,
+          "exact": "121804592/244140625"
+        },
+        "computation_budget_T": 4096,
+        "depth": 12,
+        "r_is_log2_T": true,
+        "refutation_dimension_r": 12,
+        "single_atom_amplification_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        }
+      }
+    ],
+    "conclusion": "If Refute binds the verifier, constant single-atom advantage does not imply a constant gap for growing joint refutations.",
+    "exhaustive_rows": [
+      {
+        "closed_form_gap": "9/25",
+        "enumerated_refutation_dimension": 2,
+        "enumerated_total_variation": "9/25",
+        "match": true,
+        "refuting_atom_count": 2
+      },
+      {
+        "closed_form_gap": "27/125",
+        "enumerated_refutation_dimension": 3,
+        "enumerated_total_variation": "27/125",
+        "match": true,
+        "refuting_atom_count": 3
+      },
+      {
+        "closed_form_gap": "81/625",
+        "enumerated_refutation_dimension": 4,
+        "enumerated_total_variation": "81/625",
+        "match": true,
+        "refuting_atom_count": 4
+      },
+      {
+        "closed_form_gap": "243/3125",
+        "enumerated_refutation_dimension": 5,
+        "enumerated_total_variation": "243/3125",
+        "match": true,
+        "refuting_atom_count": 5
+      },
+      {
+        "closed_form_gap": "729/15625",
+        "enumerated_refutation_dimension": 6,
+        "enumerated_total_variation": "729/15625",
+        "match": true,
+        "refuting_atom_count": 6
+      },
+      {
+        "closed_form_gap": "2187/78125",
+        "enumerated_refutation_dimension": 7,
+        "enumerated_total_variation": "2187/78125",
+        "match": true,
+        "refuting_atom_count": 7
+      },
+      {
+        "closed_form_gap": "6561/390625",
+        "enumerated_refutation_dimension": null,
+        "enumerated_total_variation": "6561/390625",
+        "match": true,
+        "refuting_atom_count": 8
+      },
+      {
+        "closed_form_gap": "19683/1953125",
+        "enumerated_refutation_dimension": null,
+        "enumerated_total_variation": "19683/1953125",
+        "match": true,
+        "refuting_atom_count": 9
+      }
+    ],
+    "frozen_message_game": {
+      "formal_component": "Both advocates report locally consistent XOR-tree values; a disagreement is cross-examined to one formal leaf in O(log T) messages.",
+      "honest_runtime": "Theta(T) for the formal trace plus O(log T log log T) bit time (O(log T) word operations) for the explicit semantic refuting set",
+      "least_favourable_pair": "Formal roots and formal messages agree; advocates differ only on semantic parity, so all verifier information about that dispute is the persistent-noise answer vector.",
+      "refute_relation": "Refute(tau,S,b) holds for a formal local inconsistency, or when S is all d semantic indices and parity(b) contradicts tau's semantic-parity claim.",
+      "semantic_atom_bounds": "Each atom is one indexed semantic bit with O(log d) description, radius-one locality, and O(1) ideal evaluation; for d>=2, no atom contains the parity or full task answer.",
+      "semantic_component": "Each advocate sends one parity claim and the fixed refuting set of all d semantic atom indices. Per-atom value claims are not messages in the frozen grammar.",
+      "task_output": "XOR of a T-leaf formal computation root and the parity of d=log2(T) semantic atoms, with d>=2",
+      "verifier_resources": "O(log T) formal messages, d=log2(T) semantic atoms, and arbitrarily many registered within-atom replications"
+    },
+    "single_atom_rows": [
+      {
+        "first_answer_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        },
+        "queries": 1
+      },
+      {
+        "first_answer_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        },
+        "queries": 3
+      },
+      {
+        "first_answer_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        },
+        "queries": 9
+      },
+      {
+        "first_answer_error": {
+          "decimal": 0.2,
+          "exact": "1/5"
+        },
+        "queries": 81
+      }
+    ]
+  },
+  "canonical_source": "ultra-experiments/millennium/AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md",
+  "certified": true,
+  "claim_boundary": "This certificate proves the parity-channel obstruction inside the stipulated binding grammar. It does not settle whether canonical protocol admission permits richer transcript encodings, prove a complete interactive-game reduction, rule out a repaired dynamic-refutation characterization, or provide empirical evidence about human or model judges.",
+  "closure_audit": {
+    "adequacy_markers_checked": [
+      "maximal sound refutation relation",
+      "sound and complete refutation relation",
+      "all semantically valid refutations"
+    ],
+    "binding_markers_checked": [
+      "verifier may reject only if Refute",
+      "verifier may accept only if Refute",
+      "verifier's semantic decisions must use Refute"
+    ],
+    "canonical_section_found": true,
+    "refute_adequacy_axiom_present": false,
+    "refute_binding_axiom_present": false
+  },
+  "experiment_id": "ASMP-3-REFUTE-INTERFACE-DICHOTOMY-v0.3",
+  "gates": {
+    "A0_single_atom_amplification_condition_passes": true,
+    "C0_canonical_objects_and_conjecture_found": true,
+    "C1_refute_to_verifier_binding_axiom_absent": true,
+    "C2_refute_adequacy_axiom_absent": true,
+    "E0_exhaustive_parity_channels_match_closed_form": true,
+    "E1_exhaustive_refutation_dimension_is_d": true,
+    "F0_formal_xor_trace_cross_examination_step": true,
+    "I0_replication_rescales_dimension_without_protocol_change": true,
+    "J0_joint_gap_strictly_decreases": true,
+    "J1_joint_gap_below_one_percent_on_grid": true
+  },
+  "noise_model": {
+    "adaptive_component": "none",
+    "between_atom_dependence": "independent latent flips",
+    "class_is_complete": true,
+    "constructive_single_atom_aggregator": "return the first answer",
+    "marginal_error_eta": "1/5",
+    "within_atom_replication": "one persistent latent flip per atom"
+  },
+  "nonbinding_refute_branch": {
+    "conclusion": "If Refute is metadata rather than a verifier constraint, its dimension is not a necessary protocol invariant.",
+    "replica_rows": [
+      {
+        "all_copies_dimension": 1,
+        "any_copy_dimension": 1,
+        "atom_answer_changed": false,
+        "exhaustive_all_copies_dimension": 1,
+        "exhaustive_any_copy_dimension": 1,
+        "meaning_preserving_replicas": 1,
+        "underlying_protocol_changed": false
+      },
+      {
+        "all_copies_dimension": 2,
+        "any_copy_dimension": 1,
+        "atom_answer_changed": false,
+        "exhaustive_all_copies_dimension": 2,
+        "exhaustive_any_copy_dimension": 1,
+        "meaning_preserving_replicas": 2,
+        "underlying_protocol_changed": false
+      },
+      {
+        "all_copies_dimension": 4,
+        "any_copy_dimension": 1,
+        "atom_answer_changed": false,
+        "exhaustive_all_copies_dimension": 4,
+        "exhaustive_any_copy_dimension": 1,
+        "meaning_preserving_replicas": 4,
+        "underlying_protocol_changed": false
+      },
+      {
+        "all_copies_dimension": 8,
+        "any_copy_dimension": 1,
+        "atom_answer_changed": false,
+        "exhaustive_all_copies_dimension": 8,
+        "exhaustive_any_copy_dimension": 1,
+        "meaning_preserving_replicas": 8,
+        "underlying_protocol_changed": false
+      },
+      {
+        "all_copies_dimension": 16,
+        "any_copy_dimension": 1,
+        "atom_answer_changed": false,
+        "exhaustive_all_copies_dimension": 16,
+        "exhaustive_any_copy_dimension": 1,
+        "meaning_preserving_replicas": 16,
+        "underlying_protocol_changed": false
+      }
+    ]
+  },
+  "required_repair": "Bind an adequate Refute relation to verifier decisions and replace the single-atom profile by a joint, selection-conditional amplification invariant for the full refutation game.",
+  "schema_version": "asmp3_resolution_boundary_v0_3",
+  "status": "exact_conditional_obstruction_major_revision"
+}

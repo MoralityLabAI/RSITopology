@@ -1,0 +1,129 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-ONLINE-NOISY-TRACE-EXTRACTOR-v2.10",
+  "file_count": 30,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/ADAPTIVE_TRANSCRIPT_COUPLING_THEOREM_v2_7.md": {
+      "bytes": 6261,
+      "sha256": "EA1A586422602D4706DB5DAACA2389E7316213D9327745950988FA47ECA674D3"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/RELEASE_MANIFEST_v2_7.json": {
+      "bytes": 4272,
+      "sha256": "569445CD8CCB363C60A325AED48ACE59924E5707EF0805F1414C2A50D240ED9E"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/artifacts/adaptive_transcript_coupling_v2_7.json": {
+      "bytes": 642958,
+      "sha256": "F7FF271E1CB9B3F56184C2FE8006F49D7248136A1ACBFE347EEDF436D64AFC4C"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/ORACLE_PARAMETRIC_REPLAY_THEOREM_v2_9.md": {
+      "bytes": 8507,
+      "sha256": "989A09018D20889B002151BEE76E2892DA4899D57A93E236AB45C6294E56F2C9"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/RELEASE_MANIFEST_v2_9.json": {
+      "bytes": 5048,
+      "sha256": "497EB96B03B88A53B1B4FDD2761264E16F39136A07B90E0EA4B5109DD809EFCB"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/artifacts/oracle_parametric_replay_v2_9.json": {
+      "bytes": 28585,
+      "sha256": "343B0CDBC36E889AE34005B838E56B3A804B00944586BB1FFE78D8A4032F5B70"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/artifacts/oracle_parametric_replay_verification_v2_9.json": {
+      "bytes": 995,
+      "sha256": "34F4030F4CB4608FF0E371E249DDE0FEC605A9543C272C39540D730F5592F7AA"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/RELEASE_MANIFEST_v2_8.json": {
+      "bytes": 4231,
+      "sha256": "8E29A8441E591966B6DF36AD1634C6041EFF8C37AA4197B0C25ABC5A3F323FA9"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/TRACE_BINDING_EXTRACTOR_THEOREM_v2_8.md": {
+      "bytes": 5585,
+      "sha256": "23F0A53232A92B2201F22390F4AC1F0B0316A29F6B0854E18A8D348178FFF54B"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/artifacts/trace_binding_extractor_v2_8.json": {
+      "bytes": 31115,
+      "sha256": "C84B77E18639AC6F509EAA50C807E060E96B863F7E7603E9B04F30480E773206"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/artifacts/trace_binding_extractor_verification_v2_8.json": {
+      "bytes": 921,
+      "sha256": "B0EB551CDFAFF585654B008A71B84C0357001B5E65CBB5B8C226E8E1D1272401"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/WITNESS_TRANSPARENT_NORMAL_FORM_THEOREM_v2_5.md": {
+      "bytes": 8540,
+      "sha256": "44E1936EF0A36E605311BD1A5977D3D555AE4CDE7F60D16D4FA4CAE73EFDB27B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/artifacts/witness_transparent_normal_form_v2_5.json": {
+      "bytes": 84594,
+      "sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_10.md": {
+      "bytes": 2097,
+      "sha256": "743E72B2BE77A9CA28C3591E45DD2EB8BA8488F89512D87DD69E6E3F782E882B"
+    },
+    "ONLINE_NOISY_TRACE_EXTRACTOR_THEOREM_v2_10.md": {
+      "bytes": 9014,
+      "sha256": "8F1A8BB73EDA568B6701678961B8F46DE85072FDF189B95E20779837B2508CD5"
+    },
+    "README.md": {
+      "bytes": 668,
+      "sha256": "A15F7BE23782E1168E646CB69E27E6937769980764FA65961980CFCEBE8C1386"
+    },
+    "artifacts/online_noisy_trace_extractor_v2_10.json": {
+      "bytes": 29273,
+      "sha256": "67E0D89F118260C189CDF0FCE71FA47DCB5FF61F1E4BF0F6669A527E2AE04851"
+    },
+    "artifacts/online_noisy_trace_extractor_verification_v2_10.json": {
+      "bytes": 1053,
+      "sha256": "DE90C56F709821BCB9F36FEC1D31CB039BE264D9AE54D925E1BA1454970B6D53"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3704,
+      "sha256": "D5AF4D90374DC690199840AF2683B9E119D99AE5220BDB430253317E721EAEBF"
+    },
+    "online_noisy_trace_extractor.py": {
+      "bytes": 23128,
+      "sha256": "D83EC3FE023E0AC1FB47AB0D0B411878215D47D318DF0EE24C450DA51ECF5FF3"
+    },
+    "run_online_noisy_trace_extractor.py": {
+      "bytes": 488,
+      "sha256": "FF26FA01078592CC0286BC6503FD74BFB094263C5AEF461992C3B79C431F620E"
+    },
+    "test_online_noisy_trace_extractor.py": {
+      "bytes": 4078,
+      "sha256": "C894D094ACA4482AC82978DE8A5A8FB3CD226FF0CC0DDF611819DDB44BE0C018"
+    },
+    "verify_online_noisy_trace_extractor.py": {
+      "bytes": 17878,
+      "sha256": "96A8552CB1AEDF71D18A365A766F6DF10BE6B49360DE59D88015CAF8E6E15CE2"
+    }
+  },
+  "release_status": "one_shot_online_noisy_trace_finder_without_restart",
+  "schema_version": "asmp3_online_noisy_trace_extractor_release_v2_10"
+}

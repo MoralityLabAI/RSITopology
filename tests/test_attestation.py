@@ -16,12 +16,26 @@ from rsi_topology.attestation import (
 )
 
 
-def make_record(*, mean=0.99, worst=0.98, angle=1.0, loss=0.01, det=-1.0 + 2.0):
+def make_record(
+    *,
+    mean=0.99,
+    worst=0.98,
+    angle=1.0,
+    loss=0.01,
+    det=-1.0 + 2.0,
+    metadata=None,
+):
     reference = np.eye(4, 2)
     current = np.linalg.qr(np.array([[1.0, 0.0], [0.0, 1.0], [0.02, 0.0], [0.0, 0.02]]))[0]
     ref_hash = array_sha256(reference)
     current_hash = array_sha256(current)
     reversal = det < 0
+    passing_control = {
+        "matched_random_label_negative_control": {
+            "random_family_retention_lower_95": 0.96,
+            "permutation_null_retention_upper_95": 0.90,
+        }
+    }
     return AnchorRecord(
         site_id="layer.12.mlp",
         consumer="vpd_edit_program",
@@ -68,6 +82,7 @@ def make_record(*, mean=0.99, worst=0.98, angle=1.0, loss=0.01, det=-1.0 + 2.0):
         ),
         holonomy_budget=HolonomyBudget(5.0, 0.05),
         det_h_flag=reversal,
+        metadata=passing_control if metadata is None else metadata,
     )
 
 
@@ -113,3 +128,28 @@ def test_forged_scalar_receipts_are_rejected():
     forged = make_record(mean=2.0, worst=2.0, angle=-10.0, loss=-1.0)
     with pytest.raises(ValueError, match="metric_out_of_range"):
         AnchorRegistry(records=[forged])
+
+
+def test_missing_negative_control_caps_certification_at_engineering_evidence():
+    registry = AnchorRegistry(records=[make_record(metadata={})])
+    certificate = registry.certify(
+        "layer.12.mlp", requested_use="disparate_weight_edit"
+    )
+
+    assert certificate.certification_level == ENGINEERING_EVIDENCE
+    assert not certificate.authorized
+    assert "negative_control_not_passed" in certificate.failures
+
+
+def test_negative_control_margin_is_strictly_greater_than_point_zero_two():
+    boundary = {
+        "matched_random_label_negative_control": {
+            "random_family_retention_lower_95": 0.92,
+            "permutation_null_retention_upper_95": 0.90,
+        }
+    }
+    record = make_record(metadata=boundary)
+    certificate = AnchorRegistry(records=[record]).certify(record.site_id)
+
+    assert certificate.certification_level == ENGINEERING_EVIDENCE
+    assert "negative_control_not_passed" in certificate.failures

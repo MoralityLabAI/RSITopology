@@ -1,0 +1,23 @@
+{
+  "alpha": 0.05,
+  "claim_status": "burned_centered_calibration_only",
+  "decision_rule": {
+    "fail": "lower > 1/2",
+    "inconclusive": "otherwise, including equality",
+    "pass": "upper < 1/2"
+  },
+  "horizon": 2,
+  "model": "three symmetric binary flip channels, each shared over four targets",
+  "predicted_states": {
+    "480": ["inconclusive", "inconclusive"],
+    "4800": ["pass", "inconclusive"],
+    "48000": ["pass", "fail"]
+  },
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42-development",
+  "sample_counts_per_target_query": [480, 4800, 48000],
+  "true_deficiencies": {
+    "adaptive": "61/135",
+    "open_loop": "13/25"
+  },
+  "version": "0.42-development"
+}

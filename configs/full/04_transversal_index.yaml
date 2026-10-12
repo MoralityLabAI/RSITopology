@@ -1,0 +1,16 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2; never launched automatically",
+  "experiment": "04_transversal_index",
+  "run_id": "full_v1",
+  "seed": 2026071624,
+  "parameters": {
+    "normal_value": 1.2,
+    "tangent_dimensions": [1, 2, 4, 8, 16],
+    "tangent_values": [1.01, 1.05, 1.2, 1.5, 2.0],
+    "couplings": [0.0, 1e-8, 1e-6, 0.0001, 0.001, 0.01, 0.1, 0.5, 1.0],
+    "horizons": [5, 10, 20, 50, 100, 250, 500],
+    "sensitivity_floor": 0.05,
+    "pbh_tolerance": 1e-12
+  }
+}

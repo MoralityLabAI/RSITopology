@@ -1,0 +1,4954 @@
+{
+  "all_gates_pass": true,
+  "argv": [
+    "--protocol",
+    "protocol_v0_1.json",
+    "--output",
+    "artifacts/result_v0_1.json"
+  ],
+  "boolean_census_count": 3,
+  "boolean_censuses": [
+    {
+      "conditional_walsh_identity_mismatch_count": 0,
+      "function_count": 16,
+      "group_size": 8,
+      "labelled_identifiability_threshold": 2,
+      "n": 2,
+      "orbit_count": 6,
+      "orbit_seed_transformations": 48,
+      "order_summaries": [
+        {
+          "labelled_ambiguous_signature_count": 3,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 2,
+          "maximum_tables_per_signature": 6,
+          "order": 0,
+          "quotient_ambiguous_signature_count": 1,
+          "quotient_identifiable": false,
+          "signature_count": 5
+        },
+        {
+          "labelled_ambiguous_signature_count": 1,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 1,
+          "maximum_tables_per_signature": 2,
+          "order": 1,
+          "quotient_ambiguous_signature_count": 0,
+          "quotient_identifiable": true,
+          "signature_count": 15
+        },
+        {
+          "labelled_ambiguous_signature_count": 0,
+          "labelled_identifiable": true,
+          "maximum_gauge_orbits_per_signature": 1,
+          "maximum_tables_per_signature": 1,
+          "order": 2,
+          "quotient_ambiguous_signature_count": 0,
+          "quotient_identifiable": true,
+          "signature_count": 16
+        }
+      ],
+      "parity_fixtures": [
+        {
+          "checks": {
+            "degrees_are_r_plus_one_and_two": true,
+            "distinct_parent_gauge_orbits": true,
+            "same_observed_signature": true
+          },
+          "first_truth_mask": 5,
+          "fixture_type": "distinct_degree_parity_obstruction",
+          "n": 2,
+          "order": 0,
+          "passed": true,
+          "second_truth_mask": 9
+        },
+        {
+          "checks": {
+            "labelled_tables_are_distinct": true,
+            "same_observed_signature": true,
+            "same_parent_gauge_orbit": true
+          },
+          "first_truth_mask": 9,
+          "fixture_type": "top_parity_gauge_collapse",
+          "n": 2,
+          "order": 1,
+          "passed": true,
+          "second_truth_mask": 6
+        }
+      ],
+      "quotient_identifiability_threshold": 1
+    },
+    {
+      "conditional_walsh_identity_mismatch_count": 0,
+      "function_count": 256,
+      "group_size": 48,
+      "labelled_identifiability_threshold": 3,
+      "n": 3,
+      "orbit_count": 22,
+      "orbit_seed_transformations": 1056,
+      "order_summaries": [
+        {
+          "labelled_ambiguous_signature_count": 7,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 6,
+          "maximum_tables_per_signature": 70,
+          "order": 0,
+          "quotient_ambiguous_signature_count": 5,
+          "quotient_identifiable": false,
+          "signature_count": 9
+        },
+        {
+          "labelled_ambiguous_signature_count": 49,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 2,
+          "maximum_tables_per_signature": 8,
+          "order": 1,
+          "quotient_ambiguous_signature_count": 17,
+          "quotient_identifiable": false,
+          "signature_count": 153
+        },
+        {
+          "labelled_ambiguous_signature_count": 1,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 1,
+          "maximum_tables_per_signature": 2,
+          "order": 2,
+          "quotient_ambiguous_signature_count": 0,
+          "quotient_identifiable": true,
+          "signature_count": 255
+        },
+        {
+          "labelled_ambiguous_signature_count": 0,
+          "labelled_identifiable": true,
+          "maximum_gauge_orbits_per_signature": 1,
+          "maximum_tables_per_signature": 1,
+          "order": 3,
+          "quotient_ambiguous_signature_count": 0,
+          "quotient_identifiable": true,
+          "signature_count": 256
+        }
+      ],
+      "parity_fixtures": [
+        {
+          "checks": {
+            "degrees_are_r_plus_one_and_two": true,
+            "distinct_parent_gauge_orbits": true,
+            "same_observed_signature": true
+          },
+          "first_truth_mask": 85,
+          "fixture_type": "distinct_degree_parity_obstruction",
+          "n": 3,
+          "order": 0,
+          "passed": true,
+          "second_truth_mask": 153
+        },
+        {
+          "checks": {
+            "degrees_are_r_plus_one_and_two": true,
+            "distinct_parent_gauge_orbits": true,
+            "same_observed_signature": true
+          },
+          "first_truth_mask": 153,
+          "fixture_type": "distinct_degree_parity_obstruction",
+          "n": 3,
+          "order": 1,
+          "passed": true,
+          "second_truth_mask": 105
+        },
+        {
+          "checks": {
+            "labelled_tables_are_distinct": true,
+            "same_observed_signature": true,
+            "same_parent_gauge_orbit": true
+          },
+          "first_truth_mask": 105,
+          "fixture_type": "top_parity_gauge_collapse",
+          "n": 3,
+          "order": 2,
+          "passed": true,
+          "second_truth_mask": 150
+        }
+      ],
+      "quotient_identifiability_threshold": 2
+    },
+    {
+      "conditional_walsh_identity_mismatch_count": 0,
+      "function_count": 65536,
+      "group_size": 384,
+      "labelled_identifiability_threshold": 4,
+      "n": 4,
+      "orbit_count": 402,
+      "orbit_seed_transformations": 154368,
+      "order_summaries": [
+        {
+          "labelled_ambiguous_signature_count": 15,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 74,
+          "maximum_tables_per_signature": 12870,
+          "order": 0,
+          "quotient_ambiguous_signature_count": 13,
+          "quotient_identifiable": false,
+          "signature_count": 17
+        },
+        {
+          "labelled_ambiguous_signature_count": 3935,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 17,
+          "maximum_tables_per_signature": 222,
+          "order": 1,
+          "quotient_ambiguous_signature_count": 2725,
+          "quotient_identifiable": false,
+          "signature_count": 5817
+        },
+        {
+          "labelled_ambiguous_signature_count": 3333,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 2,
+          "maximum_tables_per_signature": 10,
+          "order": 2,
+          "quotient_ambiguous_signature_count": 961,
+          "quotient_identifiable": false,
+          "signature_count": 61419
+        },
+        {
+          "labelled_ambiguous_signature_count": 1,
+          "labelled_identifiable": false,
+          "maximum_gauge_orbits_per_signature": 1,
+          "maximum_tables_per_signature": 2,
+          "order": 3,
+          "quotient_ambiguous_signature_count": 0,
+          "quotient_identifiable": true,
+          "signature_count": 65535
+        },
+        {
+          "labelled_ambiguous_signature_count": 0,
+          "labelled_identifiable": true,
+          "maximum_gauge_orbits_per_signature": 1,
+          "maximum_tables_per_signature": 1,
+          "order": 4,
+          "quotient_ambiguous_signature_count": 0,
+          "quotient_identifiable": true,
+          "signature_count": 65536
+        }
+      ],
+      "parity_fixtures": [
+        {
+          "checks": {
+            "degrees_are_r_plus_one_and_two": true,
+            "distinct_parent_gauge_orbits": true,
+            "same_observed_signature": true
+          },
+          "first_truth_mask": 21845,
+          "fixture_type": "distinct_degree_parity_obstruction",
+          "n": 4,
+          "order": 0,
+          "passed": true,
+          "second_truth_mask": 39321
+        },
+        {
+          "checks": {
+            "degrees_are_r_plus_one_and_two": true,
+            "distinct_parent_gauge_orbits": true,
+            "same_observed_signature": true
+          },
+          "first_truth_mask": 39321,
+          "fixture_type": "distinct_degree_parity_obstruction",
+          "n": 4,
+          "order": 1,
+          "passed": true,
+          "second_truth_mask": 26985
+        },
+        {
+          "checks": {
+            "degrees_are_r_plus_one_and_two": true,
+            "distinct_parent_gauge_orbits": true,
+            "same_observed_signature": true
+          },
+          "first_truth_mask": 26985,
+          "fixture_type": "distinct_degree_parity_obstruction",
+          "n": 4,
+          "order": 2,
+          "passed": true,
+          "second_truth_mask": 38505
+        },
+        {
+          "checks": {
+            "labelled_tables_are_distinct": true,
+            "same_observed_signature": true,
+            "same_parent_gauge_orbit": true
+          },
+          "first_truth_mask": 38505,
+          "fixture_type": "top_parity_gauge_collapse",
+          "n": 4,
+          "order": 3,
+          "passed": true,
+          "second_truth_mask": 27030
+        }
+      ],
+      "quotient_identifiability_threshold": 3
+    }
+  ],
+  "environment": {
+    "implementation": "CPython",
+    "numpy": "2.4.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4",
+    "working_directory": "C:\\projects\\RSITopology\\ultra-experiments\\millennium\\asmp1_interaction_tomography"
+  },
+  "gates": {
+    "G1_all_registered_design_ranks_exact": true,
+    "G2_conditional_sum_walsh_identity_exact": true,
+    "G3_labelled_threshold_equals_n": true,
+    "G4_parent_gauge_quotient_threshold_equals_n_minus_one": true,
+    "G5_registered_parity_fixtures_pass": true,
+    "G6_minimum_weight_bases_match_analytic_cost": true,
+    "G7_write_once_non_aliasing_output_policy": true,
+    "G8_committed_registration_and_pre_post_hashes_bound": true,
+    "G9_protocol_fields_match_executed_universe": true
+  },
+  "protocol_registration_checks": {
+    "boolean_function_universe_matches": true,
+    "boolean_n_grid_matches": true,
+    "boolean_order_grid_matches": true,
+    "gate_universe_matches": true,
+    "gauge_matches": true,
+    "integer_measurement_semantics_match": true,
+    "rank_n_grid_matches": true,
+    "rank_order_grid_matches": true,
+    "semantic_outputs_match": true,
+    "status_registered_before_full_enumeration": true
+  },
+  "protocol_sha256": "B91B9E09815530E72BCB81397DF9BD9CE149547DA82473EF735A3E3C8EB629D7",
+  "rank_basis_cell_count": 34,
+  "rank_basis_cells": [
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 1,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 3,
+      "expected_minimum_cost": 1,
+      "expected_rank": 2,
+      "full_design_condition_number": 1.224744871392,
+      "minimum_basis": {
+        "all_positive_assignment_count": 2,
+        "row_count": 2,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          }
+        ],
+        "total_cost": 1
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 2.61803398875,
+      "n": 1,
+      "observed_modular_rank": 2,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 2,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 5,
+      "expected_minimum_cost": 2,
+      "expected_rank": 3,
+      "full_design_condition_number": 1.581138830084,
+      "minimum_basis": {
+        "all_positive_assignment_count": 3,
+        "row_count": 3,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          }
+        ],
+        "total_cost": 2
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 3.732050807569,
+      "n": 2,
+      "observed_modular_rank": 3,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 9,
+      "expected_minimum_cost": 4,
+      "expected_rank": 4,
+      "full_design_condition_number": 1.5,
+      "minimum_basis": {
+        "all_positive_assignment_count": 4,
+        "row_count": 4,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          }
+        ],
+        "total_cost": 4
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 6.85410196625,
+      "n": 2,
+      "observed_modular_rank": 4,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 3,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 7,
+      "expected_minimum_cost": 3,
+      "expected_rank": 4,
+      "full_design_condition_number": 1.870828693387,
+      "minimum_basis": {
+        "all_positive_assignment_count": 4,
+        "row_count": 4,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          }
+        ],
+        "total_cost": 3
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 4.791287847478,
+      "n": 3,
+      "observed_modular_rank": 4,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 19,
+      "expected_minimum_cost": 9,
+      "expected_rank": 7,
+      "full_design_condition_number": 2.17944947177,
+      "minimum_basis": {
+        "all_positive_assignment_count": 7,
+        "row_count": 7,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          }
+        ],
+        "total_cost": 9
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 11.9160797831,
+      "n": 3,
+      "observed_modular_rank": 7,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 27,
+      "expected_minimum_cost": 12,
+      "expected_rank": 8,
+      "full_design_condition_number": 1.837117307087,
+      "minimum_basis": {
+        "all_positive_assignment_count": 8,
+        "row_count": 8,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          }
+        ],
+        "total_cost": 12
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 17.944271909999,
+      "n": 3,
+      "observed_modular_rank": 8,
+      "order": 3,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 4,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 9,
+      "expected_minimum_cost": 4,
+      "expected_rank": 5,
+      "full_design_condition_number": 2.12132034356,
+      "minimum_basis": {
+        "all_positive_assignment_count": 5,
+        "row_count": 5,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          }
+        ],
+        "total_cost": 4
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 5.828427124746,
+      "n": 4,
+      "observed_modular_rank": 5,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 33,
+      "expected_minimum_cost": 16,
+      "expected_rank": 11,
+      "full_design_condition_number": 2.872281323269,
+      "minimum_basis": {
+        "all_positive_assignment_count": 11,
+        "row_count": 11,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          }
+        ],
+        "total_cost": 16
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 17.944271909999,
+      "n": 4,
+      "observed_modular_rank": 11,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 65,
+      "expected_minimum_cost": 28,
+      "expected_rank": 15,
+      "full_design_condition_number": 2.850438562748,
+      "minimum_basis": {
+        "all_positive_assignment_count": 15,
+        "row_count": 15,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          }
+        ],
+        "total_cost": 28
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 35.354094907665,
+      "n": 4,
+      "observed_modular_rank": 15,
+      "order": 3,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 81,
+      "expected_minimum_cost": 32,
+      "expected_rank": 16,
+      "full_design_condition_number": 2.25,
+      "minimum_basis": {
+        "all_positive_assignment_count": 16,
+        "row_count": 16,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 15
+          }
+        ],
+        "total_cost": 32
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 46.978713763748,
+      "n": 4,
+      "observed_modular_rank": 16,
+      "order": 4,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 5,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 11,
+      "expected_minimum_cost": 5,
+      "expected_rank": 6,
+      "full_design_condition_number": 2.345207879912,
+      "minimum_basis": {
+        "all_positive_assignment_count": 6,
+        "row_count": 6,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          }
+        ],
+        "total_cost": 5
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 6.85410196625,
+      "n": 5,
+      "observed_modular_rank": 6,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 51,
+      "expected_minimum_cost": 25,
+      "expected_rank": 16,
+      "full_design_condition_number": 3.570714214271,
+      "minimum_basis": {
+        "all_positive_assignment_count": 16,
+        "row_count": 16,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          }
+        ],
+        "total_cost": 25
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 24.959935794377,
+      "n": 5,
+      "observed_modular_rank": 16,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 131,
+      "expected_minimum_cost": 55,
+      "expected_rank": 26,
+      "full_design_condition_number": 4.04660351406,
+      "minimum_basis": {
+        "all_positive_assignment_count": 26,
+        "row_count": 26,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          }
+        ],
+        "total_cost": 55
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 59.822105585421,
+      "n": 5,
+      "observed_modular_rank": 26,
+      "order": 3,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 211,
+      "expected_minimum_cost": 75,
+      "expected_rank": 31,
+      "full_design_condition_number": 3.631459761583,
+      "minimum_basis": {
+        "all_positive_assignment_count": 31,
+        "row_count": 31,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 15
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 23
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 27
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 29
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 30
+          }
+        ],
+        "total_cost": 75
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 100.614887982496,
+      "n": 5,
+      "observed_modular_rank": 31,
+      "order": 4,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 6,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 13,
+      "expected_minimum_cost": 6,
+      "expected_rank": 7,
+      "full_design_condition_number": 2.549509756796,
+      "minimum_basis": {
+        "all_positive_assignment_count": 7,
+        "row_count": 7,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          }
+        ],
+        "total_cost": 6
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 7.872983346207,
+      "n": 6,
+      "observed_modular_rank": 7,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 73,
+      "expected_minimum_cost": 36,
+      "expected_rank": 22,
+      "full_design_condition_number": 4.272001872659,
+      "minimum_basis": {
+        "all_positive_assignment_count": 22,
+        "row_count": 22,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          }
+        ],
+        "total_cost": 36
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 32.969669092001,
+      "n": 6,
+      "observed_modular_rank": 22,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 233,
+      "expected_minimum_cost": 96,
+      "expected_rank": 42,
+      "full_design_condition_number": 5.396758286231,
+      "minimum_basis": {
+        "all_positive_assignment_count": 42,
+        "row_count": 42,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 35
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 37
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 38
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 41
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 42
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 44
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 49
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 50
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 52
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 56
+          }
+        ],
+        "total_cost": 96
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 92.309824146067,
+      "n": 6,
+      "observed_modular_rank": 42,
+      "order": 3,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 473,
+      "expected_minimum_cost": 156,
+      "expected_rank": 57,
+      "full_design_condition_number": 5.437140792733,
+      "minimum_basis": {
+        "all_positive_assignment_count": 57,
+        "row_count": 57,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 35
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 37
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 38
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 41
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 42
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 44
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 49
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 50
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 52
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 56
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 15
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 23
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 27
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 29
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 30
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 39
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 43
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 45
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 46
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 51
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 53
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 54
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 57
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 58
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 60
+          }
+        ],
+        "total_cost": 156
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 186.215277050519,
+      "n": 6,
+      "observed_modular_rank": 57,
+      "order": 4,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 7,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 15,
+      "expected_minimum_cost": 7,
+      "expected_rank": 8,
+      "full_design_condition_number": 2.738612787526,
+      "minimum_basis": {
+        "all_positive_assignment_count": 8,
+        "row_count": 8,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          }
+        ],
+        "total_cost": 7
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 8.887482193696,
+      "n": 7,
+      "observed_modular_rank": 8,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 99,
+      "expected_minimum_cost": 49,
+      "expected_rank": 29,
+      "full_design_condition_number": 4.974937185533,
+      "minimum_basis": {
+        "all_positive_assignment_count": 29,
+        "row_count": 29,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 65
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 66
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 68
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 72
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 80
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 96
+          }
+        ],
+        "total_cost": 49
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 41.976176963403,
+      "n": 7,
+      "observed_modular_rank": 29,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 379,
+      "expected_minimum_cost": 154,
+      "expected_rank": 64,
+      "full_design_condition_number": 6.882949948968,
+      "minimum_basis": {
+        "all_positive_assignment_count": 64,
+        "row_count": 64,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 65
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 66
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 68
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 72
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 80
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 96
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 35
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 37
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 38
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 41
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 42
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 44
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 49
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 50
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 52
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 56
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 67
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 69
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 70
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 73
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 74
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 76
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 81
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 82
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 84
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 88
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 97
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 98
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 100
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 104
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 112
+          }
+        ],
+        "total_cost": 154
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 133.806210896785,
+      "n": 7,
+      "observed_modular_rank": 64,
+      "order": 3,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 939,
+      "expected_minimum_cost": 294,
+      "expected_rank": 99,
+      "full_design_condition_number": 7.660776723022,
+      "minimum_basis": {
+        "all_positive_assignment_count": 99,
+        "row_count": 99,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 65
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 66
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 68
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 72
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 80
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 96
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 35
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 37
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 38
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 41
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 42
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 44
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 49
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 50
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 52
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 56
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 67
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 69
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 70
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 73
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 74
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 76
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 81
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 82
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 84
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 88
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 97
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 98
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 100
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 104
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 112
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 15
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 23
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 27
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 29
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 30
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 39
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 43
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 45
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 46
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 51
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 53
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 54
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 57
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 58
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 60
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 71
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 75
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 77
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 78
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 83
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 85
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 86
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 89
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 90
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 92
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 99
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 101
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 102
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 105
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 106
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 108
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 113
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 114
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 116
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 120
+          }
+        ],
+        "total_cost": 294
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 312.607776304958,
+      "n": 7,
+      "observed_modular_rank": 99,
+      "order": 4,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1,
+      "expected_minimum_cost": 0,
+      "expected_rank": 1,
+      "full_design_condition_number": 1.0,
+      "minimum_basis": {
+        "all_positive_assignment_count": 1,
+        "row_count": 1,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          }
+        ],
+        "total_cost": 0
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 1.0,
+      "n": 8,
+      "observed_modular_rank": 1,
+      "order": 0,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 17,
+      "expected_minimum_cost": 8,
+      "expected_rank": 9,
+      "full_design_condition_number": 2.915475947423,
+      "minimum_basis": {
+        "all_positive_assignment_count": 9,
+        "row_count": 9,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 128
+          }
+        ],
+        "total_cost": 8
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 9.898979485566,
+      "n": 8,
+      "observed_modular_rank": 9,
+      "order": 1,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 129,
+      "expected_minimum_cost": 64,
+      "expected_rank": 37,
+      "full_design_condition_number": 5.6789083458,
+      "minimum_basis": {
+        "all_positive_assignment_count": 37,
+        "row_count": 37,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 128
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 65
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 66
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 68
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 72
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 80
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 96
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 129
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 130
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 132
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 136
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 144
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 160
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 192
+          }
+        ],
+        "total_cost": 64
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 51.980762113533,
+      "n": 8,
+      "observed_modular_rank": 37,
+      "order": 2,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 577,
+      "expected_minimum_cost": 232,
+      "expected_rank": 93,
+      "full_design_condition_number": 8.492643875732,
+      "minimum_basis": {
+        "all_positive_assignment_count": 93,
+        "row_count": 93,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 128
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 65
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 66
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 68
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 72
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 80
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 96
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 129
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 130
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 132
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 136
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 144
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 160
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 192
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 35
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 37
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 38
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 41
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 42
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 44
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 49
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 50
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 52
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 56
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 67
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 69
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 70
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 73
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 74
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 76
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 81
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 82
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 84
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 88
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 97
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 98
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 100
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 104
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 112
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 131
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 133
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 134
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 137
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 138
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 140
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 145
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 146
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 148
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 152
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 161
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 162
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 164
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 168
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 176
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 193
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 194
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 196
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 200
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 208
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 224
+          }
+        ],
+        "total_cost": 232
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 185.306907826638,
+      "n": 8,
+      "observed_modular_rank": 93,
+      "order": 3,
+      "rank_exact": true
+    },
+    {
+      "candidate_row_count": 1697,
+      "expected_minimum_cost": 512,
+      "expected_rank": 163,
+      "full_design_condition_number": 10.298664962023,
+      "minimum_basis": {
+        "all_positive_assignment_count": 163,
+        "row_count": 163,
+        "selected_rows": [
+          {
+            "assignment_mask": 0,
+            "cost": 0,
+            "fixed_mask": 0
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 1
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 2
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 4
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 8
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 16
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 32
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 64
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 1,
+            "fixed_mask": 128
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 3
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 5
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 6
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 9
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 10
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 12
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 17
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 18
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 20
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 24
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 33
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 34
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 36
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 40
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 48
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 65
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 66
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 68
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 72
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 80
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 96
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 129
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 130
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 132
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 136
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 144
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 160
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 2,
+            "fixed_mask": 192
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 7
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 11
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 13
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 14
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 19
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 21
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 22
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 25
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 26
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 28
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 35
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 37
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 38
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 41
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 42
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 44
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 49
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 50
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 52
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 56
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 67
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 69
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 70
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 73
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 74
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 76
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 81
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 82
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 84
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 88
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 97
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 98
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 100
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 104
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 112
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 131
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 133
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 134
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 137
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 138
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 140
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 145
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 146
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 148
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 152
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 161
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 162
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 164
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 168
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 176
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 193
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 194
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 196
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 200
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 208
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 3,
+            "fixed_mask": 224
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 15
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 23
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 27
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 29
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 30
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 39
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 43
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 45
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 46
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 51
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 53
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 54
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 57
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 58
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 60
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 71
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 75
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 77
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 78
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 83
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 85
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 86
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 89
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 90
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 92
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 99
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 101
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 102
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 105
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 106
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 108
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 113
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 114
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 116
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 120
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 135
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 139
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 141
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 142
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 147
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 149
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 150
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 153
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 154
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 156
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 163
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 165
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 166
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 169
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 170
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 172
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 177
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 178
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 180
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 184
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 195
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 197
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 198
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 201
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 202
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 204
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 209
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 210
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 212
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 216
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 225
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 226
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 228
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 232
+          },
+          {
+            "assignment_mask": 0,
+            "cost": 4,
+            "fixed_mask": 240
+          }
+        ],
+        "total_cost": 512
+      },
+      "minimum_basis_exact": true,
+      "minimum_cost_basis_condition_number": 489.733416532822,
+      "n": 8,
+      "observed_modular_rank": 163,
+      "order": 4,
+      "rank_exact": true
+    }
+  ],
+  "registration": {
+    "registration_commit": "7ca4eb8a9a91e229544579f071a906eb0513bf39",
+    "repository_root": "C:\\projects\\RSITopology",
+    "sealed_inputs": {
+      "ultra-experiments/millennium/asmp1_interaction_tomography/THEOREM_v0_1.md": {
+        "committed_blob_sha256": "845DDD561616D86E4ED9C0F8E80F17BB30B3EB6CA8A112A281D7F1E84C6AFA8B",
+        "working_sha256": "845DDD561616D86E4ED9C0F8E80F17BB30B3EB6CA8A112A281D7F1E84C6AFA8B"
+      },
+      "ultra-experiments/millennium/asmp1_interaction_tomography/interaction_tomography.py": {
+        "committed_blob_sha256": "3F0A883BB3C7A58E3318CFF32EA30FE9E50A1B21521C9241C09E42FE86FAF6E5",
+        "working_sha256": "3F0A883BB3C7A58E3318CFF32EA30FE9E50A1B21521C9241C09E42FE86FAF6E5"
+      },
+      "ultra-experiments/millennium/asmp1_interaction_tomography/protocol_v0_1.json": {
+        "committed_blob_sha256": "B91B9E09815530E72BCB81397DF9BD9CE149547DA82473EF735A3E3C8EB629D7",
+        "working_sha256": "B91B9E09815530E72BCB81397DF9BD9CE149547DA82473EF735A3E3C8EB629D7"
+      }
+    }
+  },
+  "schema_version": "asmp1_interaction_tomography_result_v0_1",
+  "source_sha256": "3F0A883BB3C7A58E3318CFF32EA30FE9E50A1B21521C9241C09E42FE86FAF6E5",
+  "theorem_sha256": "845DDD561616D86E4ED9C0F8E80F17BB30B3EB6CA8A112A281D7F1E84C6AFA8B",
+  "total_boolean_functions_censused": 65808,
+  "total_conditional_walsh_identity_mismatches": 0
+}

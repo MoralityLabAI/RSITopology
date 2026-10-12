@@ -1,0 +1,32 @@
+{
+  "environment": {
+    "arithmetic": "fractions.Fraction",
+    "gpu": "not used",
+    "implementation": "CPython",
+    "python": "3.11.4"
+  },
+  "executed_utc": "2026-08-03T22:28:14.235552+00:00",
+  "protocol_binding": {
+    "exact_field_set": true,
+    "field_alphabet_size": true,
+    "field_claim_boundary": true,
+    "field_error_alphabet": true,
+    "field_error_cap": true,
+    "field_policy_mass_move": true,
+    "field_protocol_id": true,
+    "field_schema_version": true
+  },
+  "protocol_id": "ASMP8-ADAPTIVE-REUSE-v0.6",
+  "protocol_sha256": "252586b1f4a39cef263a03c4fb8fa338cbd3a9f272b09c3ec9d4cfec9109ddab",
+  "result_sha256": "2d5a83acf7cd0fcb5964a5040ca695eff0444a3e625173b7f9750b75740787d4",
+  "schema_version": "asmp8_adaptive_reuse_run_receipt_v0_6_1",
+  "source_hashes": {
+    "PROTOCOL_v0_6.md": "202a1b972e1f4fc2f6910394b34e9f30806c000d7da2ee9d47bafa18e62410e9",
+    "README.md": "ef2ff5611f2f66d18f8ec5226bb584499ad55aaf4283c9778e75c606cca23573",
+    "adaptive_reuse.py": "374c75be9313d48441f136c822b54114758c63110f2d8123714280afd697dffd",
+    "protocol_v0_6.json": "252586b1f4a39cef263a03c4fb8fa338cbd3a9f272b09c3ec9d4cfec9109ddab",
+    "run.py": "95bb2772c533ce58eb2ba8fbe6153cabd03f1064b14aa83ea102dd68024856c2",
+    "test_adaptive_reuse.py": "b9603621e90064a798dc5e8928b9d81b8fd80873a5cf60beb5c0d84414bd34d8",
+    "verify_independent.py": "d83aac9648992a52ab7044c03238ce6283639754cc8bd5876d39fdf7c7e962fe"
+  }
+}

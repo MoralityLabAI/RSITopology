@@ -1,0 +1,40 @@
+{
+  "allocation_registry": {
+    "cycle_lengths": [6, 7],
+    "epsilon": ["1/8", "5/16"],
+    "extra_total_trials": [0, 1, 2, 3, 4, 5, 6, 7]
+  },
+  "claim_boundary": "Fresh exact verification of the equal-count minimax identity and threshold, plus a finite unequal-allocation falsification registry; not a general allocation theorem, behavioral result, general IRL result, or ASMP-9 resolution.",
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_registry_completeness",
+    "G2_exact_minimax_formula",
+    "G3_balanced_endpoint_witness",
+    "G4_bound_and_drift_controls",
+    "G5_exact_trial_threshold",
+    "G6_zero_interior_control",
+    "G7_finite_allocation_falsification",
+    "G8_resource_and_scope"
+  ],
+  "protocol_id": "ASMP-9-SHARP-INTERIOR-AVAILABILITY-v0.15",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "theorem_registry": {
+    "cycle_lengths": [11, 13, 16],
+    "epsilon": ["1/16", "3/20", "3/10", "7/20"],
+    "trials_per_edge": [9, 11, 14]
+  },
+  "threshold_registry": {
+    "cycle_lengths": [11, 13, 16],
+    "delta": ["1/8", "1/16", "1/40", "1/200"],
+    "epsilon": ["1/16", "3/20", "3/10", "7/20"]
+  },
+  "version": "0.15",
+  "zero_interior_registry": {
+    "cycle_lengths": [11, 13, 16],
+    "trials_per_edge": [9, 14]
+  }
+}

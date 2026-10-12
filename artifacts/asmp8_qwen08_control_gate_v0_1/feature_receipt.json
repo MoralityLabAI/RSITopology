@@ -1,0 +1,14 @@
+{
+  "application_count": 9,
+  "feature_table_sha256": "0a26ec884c72c758d0cdf82f2792cd1266b370f1b383bc66418f88d9c8aa058b",
+  "geometry_halves": [
+    "construction",
+    "validation"
+  ],
+  "manifest_sha256": "fd77eadebd0f9d4a1874b3bcee6a86563eaa7777487ff687ba9e1dee762f6f11",
+  "outcomes_consumed": false,
+  "records_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1\\release_v0_1\\output\\records",
+  "row_count": 576,
+  "schema_version": "asmp8_qwen08_control_gate_feature_receipt_v0_1",
+  "status": "outcome_blind_features_sealed"
+}

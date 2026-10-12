@@ -1,0 +1,35 @@
+{
+  "protocol_id": "ASMP-9-EXACT-TIE-WIDTH-v0.4",
+  "status": "prospective",
+  "delta": "0",
+  "full_pair_cells": [
+    [2, 9],
+    [2, 10],
+    [2, 11],
+    [2, 12],
+    [2, 13],
+    [2, 14],
+    [2, 15],
+    [2, 16],
+    [3, 7],
+    [6, 1]
+  ],
+  "lower_witness_bounds": {
+    "dimension": 2,
+    "minimum_bound": 129,
+    "maximum_bound": 160
+  },
+  "random_cells": [
+    [8, 4, 90410],
+    [16, 8, 90411],
+    [32, 16, 90412]
+  ],
+  "random_pairs_per_cell": 4096,
+  "resource_limits": {
+    "wall_seconds": 600,
+    "ram_bytes": 4294967296,
+    "gpu_allowed": false
+  },
+  "claim_boundary": "implementation verification of the exact-tie Farey theorem only"
+}
+

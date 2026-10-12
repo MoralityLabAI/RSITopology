@@ -1,0 +1,191 @@
+{
+  "canonical_events": [
+    {
+      "from_budget": 1,
+      "kind": "payoff_birth",
+      "payoff": [
+        3,
+        3
+      ],
+      "to_budget": 2
+    },
+    {
+      "deviations": [
+        {
+          "gain": 2,
+          "older_equivalent_programs": [
+            0
+          ],
+          "opponent_distinguishes_equivalent": true,
+          "player": 0
+        },
+        {
+          "gain": 2,
+          "older_equivalent_programs": [
+            0
+          ],
+          "opponent_distinguishes_equivalent": true,
+          "player": 1
+        }
+      ],
+      "from_budget": 2,
+      "kind": "cooperative_profile_death",
+      "profile": [
+        1,
+        1
+      ],
+      "syntax_equivalence_exploited": true,
+      "to_budget": 3
+    },
+    {
+      "from_budget": 2,
+      "kind": "payoff_death",
+      "payoff": [
+        3,
+        3
+      ],
+      "to_budget": 3
+    }
+  ],
+  "catalog_count": 512,
+  "catalog_game_cases": 1536,
+  "counts": {
+    "chicken": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 313,
+      "catalogs_with_syntax_equivalence_death": 16,
+      "extensional_catalogs": 374,
+      "extensional_syntax_equivalence_deaths": 0,
+      "source_blind_catalogs": 8,
+      "source_blind_syntax_equivalence_deaths": 0
+    },
+    "prisoners_dilemma": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 234,
+      "catalogs_with_syntax_equivalence_death": 16,
+      "extensional_catalogs": 374,
+      "extensional_syntax_equivalence_deaths": 0,
+      "source_blind_catalogs": 8,
+      "source_blind_syntax_equivalence_deaths": 0
+    },
+    "stag_hunt": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 187,
+      "catalogs_with_syntax_equivalence_death": 0,
+      "extensional_catalogs": 374,
+      "extensional_syntax_equivalence_deaths": 0,
+      "source_blind_catalogs": 8,
+      "source_blind_syntax_equivalence_deaths": 0
+    }
+  },
+  "first_witnesses": {
+    "chicken": {
+      "catalog": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "event": {
+        "deviations": [
+          {
+            "gain": 1,
+            "older_equivalent_programs": [
+              0
+            ],
+            "opponent_distinguishes_equivalent": true,
+            "player": 0
+          },
+          {
+            "gain": 1,
+            "older_equivalent_programs": [
+              0
+            ],
+            "opponent_distinguishes_equivalent": true,
+            "player": 1
+          }
+        ],
+        "from_budget": 2,
+        "kind": "cooperative_profile_death",
+        "profile": [
+          1,
+          1
+        ],
+        "syntax_equivalence_exploited": true,
+        "to_budget": 3
+      }
+    },
+    "prisoners_dilemma": {
+      "catalog": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "event": {
+        "deviations": [
+          {
+            "gain": 2,
+            "older_equivalent_programs": [
+              0
+            ],
+            "opponent_distinguishes_equivalent": true,
+            "player": 0
+          },
+          {
+            "gain": 2,
+            "older_equivalent_programs": [
+              0
+            ],
+            "opponent_distinguishes_equivalent": true,
+            "player": 1
+          }
+        ],
+        "from_budget": 2,
+        "kind": "cooperative_profile_death",
+        "profile": [
+          1,
+          1
+        ],
+        "syntax_equivalence_exploited": true,
+        "to_budget": 3
+      }
+    }
+  },
+  "gates": {
+    "E0_extensional_control": true,
+    "L0_liveness": true,
+    "N0_source_blind_null": true,
+    "P0_padding": true,
+    "U0_universe": true,
+    "W0_witness": true
+  },
+  "repaired_survives": true,
+  "schema_version": "asmp12_finite_program_frontier_result_v0_1",
+  "verdict": "finite_pure_frontier_nonmonotonicity_demonstrated"
+}

@@ -1,0 +1,9 @@
+{
+  "arithmetic": "fractions.Fraction exact rational",
+  "gpu": "forbidden",
+  "numpy": "not used by scientific runner",
+  "os": "Windows",
+  "protocol_id": "ASMP-9-JOINT-APPROXIMATE-v0.31",
+  "pytest": "8.3.3",
+  "python": "3.11.4"
+}

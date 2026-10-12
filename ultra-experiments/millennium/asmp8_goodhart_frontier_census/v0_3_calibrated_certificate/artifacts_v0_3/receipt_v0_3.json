@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "conditions": {
+      "path": "condition_summary_v0_3.csv",
+      "sha256": "d1d7e9bc244d4fd455490f7e305926bbb58e01bc0dec0d008568e933001a8b8a"
+    },
+    "figure": {
+      "path": "risk_coverage_v0_3.svg",
+      "sha256": "30b56cf1e4453ba458bc2bb41099d4334448255bb0dde9db3af84f1fc4ff394b"
+    },
+    "policies": {
+      "path": "policy_summary_v0_3.csv",
+      "sha256": "6b52ad0d9b0634f814a18f8e3fe3f1d7f889398d450cf0aa193b0807e2c403a6"
+    },
+    "report": {
+      "path": "RESULT_v0_3.md",
+      "sha256": "c3fe949791e68535ef38ea1452d7d9435796980a34be06888bf2114c3a6e7736"
+    },
+    "result": {
+      "path": "result_v0_3.json",
+      "sha256": "fc4f12855bbe0910e2ecc05a7771fe07bf4b744c0954b77a1c435d7213e916ca"
+    },
+    "risks": {
+      "path": "risk_coverage_v0_3.csv",
+      "sha256": "7da8f2e10a07a2f667a6d1507704b49244df7c44db8a2fc9faf211dc45c8d124"
+    }
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "protocol_sha256": "b556b5e98eeba8a213d2ecd677cea5485a6b649d498ee4d5f42530c57bedc6fe",
+  "registration_sha256": "0df8935e6fef5b2637bd38f6208fb3a7939ea2b97f8a59007cae907f25de94b4",
+  "resource": {
+    "elapsed_seconds": 0.7036087000001316,
+    "pass": true,
+    "process_peak_rss_bytes": 169529344
+  },
+  "schema_version": "asmp8_calibrated_certificate_receipt_v0_3",
+  "source_commit": "dae6ba3b3441572c56e16e184826fa5132b3b7c2"
+}

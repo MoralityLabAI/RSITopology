@@ -1,0 +1,206 @@
+{
+  "claim_boundary": "For one finite simple biconnected comparison block under the inherited independent-binomial model and epsilon=1/2, arbitrary declared positive integer edge counts n_e admit the exact edge-multivariate representation F_G(n)=-2^(-sum_e n_e) Z_G(-1,{2^(n_e)-1}). This is a direct ASMP specialization of classical multivariate Tutte and weighted partial-orientation theory. On K4, the declared infinite allocation family (s-1,s,s+1,s+1,s,s-1), s>=2, is a strict one-unit-exchange local maximum but is strictly worse than the balanced allocation at the same total count, and it explicitly violates the M-concavity exchange axiom. This does not classify the global maximin optimizer, establish optimizer-search hardness or approximation complexity, cover arbitrary epsilon, adaptive allocation, dependent or misspecified responses, behavioral reward identification, general IRL, or resolve ASMP-9.",
+  "environment_lock_path": "environment_lock_v0_23.json",
+  "fresh_validation": {
+    "coefficient_masks": [
+      0,
+      1,
+      21,
+      341,
+      1365,
+      2047
+    ],
+    "counts": {
+      "heterogeneous_a": [
+        1,
+        4,
+        2,
+        5,
+        3,
+        2,
+        6,
+        1,
+        3,
+        5,
+        4
+      ],
+      "heterogeneous_b": [
+        6,
+        2,
+        5,
+        1,
+        4,
+        3,
+        2,
+        6,
+        1,
+        4,
+        3
+      ],
+      "heterogeneous_c": [
+        3,
+        1,
+        4,
+        2,
+        5,
+        6,
+        2,
+        4,
+        1,
+        3,
+        5
+      ]
+    },
+    "graph": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "name": "c7_four_chords",
+      "node_count": 7
+    },
+    "uniform_counts": [
+      2,
+      4
+    ]
+  },
+  "freshness_rule": {
+    "burned_registry_path": "../uniform_above_floor_v0_22_1/burned_graph_registry_v0_22_1.json",
+    "exact_check": "NetworkX graph isomorphism after matching node and edge counts",
+    "selection_rule": "The graph was selected using structural predicates only: finite, simple, biconnected, bridgeless, seven vertices, eleven edges, and nonisomorphic to every graph in the frozen burned registry. No availability, coefficient, or polynomial outcome on this graph was evaluated before registration."
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_freshness_and_structure",
+    "G2_multivariate_identity",
+    "G3_coefficientwise_identity",
+    "G4_uniform_specialization",
+    "G5_k4_closed_forms",
+    "G6_strict_local_maximum",
+    "G7_strict_suboptimality",
+    "G8_m_concavity_violation",
+    "G9_structured_attribution",
+    "G10_resource_and_scope"
+  ],
+  "k4_family": {
+    "balanced_pattern": [
+      "s",
+      "s",
+      "s",
+      "s",
+      "s",
+      "s"
+    ],
+    "edge_order": [
+      "01",
+      "02",
+      "03",
+      "12",
+      "13",
+      "23"
+    ],
+    "fresh_numeric_checks": [
+      9,
+      11,
+      17
+    ],
+    "local_move": "Transfer one trial from any donor edge remaining at count at least one to any distinct recipient edge.",
+    "trap_pattern": [
+      "s-1",
+      "s",
+      "s+1",
+      "s+1",
+      "s",
+      "s-1"
+    ]
+  },
+  "prior_art": [
+    {
+      "identifier": "arXiv:math/0503607",
+      "role": "definition and calculus of the multivariate Tutte/random-cluster polynomial"
+    },
+    {
+      "identifier": "arXiv:1408.3962",
+      "role": "weighted strongly connected partial-orientation Tutte formula"
+    },
+    {
+      "identifier": "arXiv:1503.05885",
+      "role": "weighted cut/cycle fourientation calculus"
+    },
+    {
+      "identifier": "arXiv:2105.14228",
+      "role": "M-concavity exchange properties and local-to-global theory"
+    }
+  ],
+  "protocol_id": "ASMP-9-NONUNIFORM-MULTIVARIATE-v0.23",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "statistical_policy": "No statistical inference. Every primary quantity is an exact integer, rational, finite graph predicate, symbolic factor certificate, or cryptographic hash.",
+  "structured_claims": {
+    "allowed": [
+      "At epsilon=1/2, arbitrary positive integer edge counts on a finite simple biconnected block have the exact edge-multivariate q=-1 representation stated in the protocol.",
+      "For every integer s>=2, the registered K4 trap is a strict one-unit-exchange local maximum but the balanced allocation at the same total count has strictly greater availability.",
+      "The registered K4 pair gives an explicit violation of the M-concavity exchange axiom, so one-unit exchange ascent has no general global-optimality guarantee for this frozen ASMP objective.",
+      "The multivariate identity is a prior-art-derived ASMP access-model specialization, not a new graph polynomial."
+    ],
+    "forbidden": [
+      "The global maximin optimizer is classified on arbitrary biconnected blocks.",
+      "Exact optimizer search is NP-hard or no polynomial-time optimizer exists.",
+      "The trap gives a global approximation lower bound.",
+      "The result covers arbitrary epsilon, adaptive allocation, dependent responses, response misspecification, behavioral reward identification, or general IRL.",
+      "The multivariate Tutte polynomial, weighted partial-orientation calculus, or M-concavity theory is new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.23",
+  "verdict_map": {
+    "all_gates_pass": "nonuniform_multivariate_and_exchange_obstruction_established_v0_23",
+    "any_substantive_gate_fails": "nonuniform_local_design_structure_not_established_v0_23",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_23"
+  }
+}

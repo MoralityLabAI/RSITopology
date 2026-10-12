@@ -1,0 +1,121 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-CONSOLIDATED-PATH-RISK-DISPOSITION-v2.14",
+  "file_count": 28,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/RELEASE_MANIFEST_v2_12.json": {
+      "bytes": 10726,
+      "sha256": "4F284C5B7242CC6E6FEE64B17BB5F4EC04FFCEA36E43375246881BA77822103D"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/REQUIREMENT_EVIDENCE_MATRIX_v2_12.md": {
+      "bytes": 2196,
+      "sha256": "BBA12A226E9DAF6CEF67615ED3B3C8A4B5234624F6FABC3EA880DA549D6DEE4C"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/RESOLUTION_DISPOSITION_v2_12.md": {
+      "bytes": 5463,
+      "sha256": "052AFC628CCD0FD2C95BAB522566D92C8C87027C6007621BBCBEA8895B1AF21B"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/STOPPING_DECISION_v2_12.md": {
+      "bytes": 1356,
+      "sha256": "3EC2A392214F181419393EB2DE1C87E7CC7F2C8EDE1CBD3CF40A5DEEFF67EF50"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/artifacts/consolidated_resolution_disposition_v2_12.json": {
+      "bytes": 19086,
+      "sha256": "81F434CC6CEA9B83855C28DD850E17866F55852E1D6A89FC2C94FC07478511BA"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/artifacts/consolidated_resolution_disposition_verification_v2_12.json": {
+      "bytes": 962,
+      "sha256": "F3F34518ED9289CAFBCE8E778297D6411522F5CDACDB13D9A55245217C8D64E8"
+    },
+    "../asmp3_correlated_path_risk_v2_13/COMPLETION_AUDIT_v2_13.md": {
+      "bytes": 2811,
+      "sha256": "A596A8FA30F0248936E79B428326D8ECC07956727951838348A1F9F1FE8A9F5A"
+    },
+    "../asmp3_correlated_path_risk_v2_13/CORRELATED_PATH_RISK_THEOREM_v2_13.md": {
+      "bytes": 5140,
+      "sha256": "1A1B4D127658E2B219C4E87B28B61769492AD9DB9883CCA8A8A498E69543D623"
+    },
+    "../asmp3_correlated_path_risk_v2_13/RELEASE_MANIFEST_v2_13.json": {
+      "bytes": 4320,
+      "sha256": "0B3B3F33F2E91F6D0045094D74BF1672AE546F74BC02337165847BEB6FEA4914"
+    },
+    "../asmp3_correlated_path_risk_v2_13/artifacts/correlated_path_risk_v2_13.json": {
+      "bytes": 43783,
+      "sha256": "158B18B549F725D150012593C264F7C3DE9B346C6BB06877A75EEEA09FE05887"
+    },
+    "../asmp3_correlated_path_risk_v2_13/artifacts/correlated_path_risk_verification_v2_13.json": {
+      "bytes": 1053,
+      "sha256": "F89E9C90EE46565157B64753BCCC9F13D9DCAD9EA7A850F95E161D635D4E0BD9"
+    },
+    "../asmp3_resolution_boundary_v0_3/artifacts/expert_review_status_v0_6.json": {
+      "bytes": 746,
+      "sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_14.md": {
+      "bytes": 1789,
+      "sha256": "BEE71AB295D7C9359FFA188A5D2D41D6057662DBB09053C3A54822B95ECBFCC5"
+    },
+    "HARNESS_STOP_CERTIFICATE_v2_14.md": {
+      "bytes": 2668,
+      "sha256": "CC864FFD2430C019552DB2A9BA767558FCBBD8E4246F28BD09E85B036A636B02"
+    },
+    "README.md": {
+      "bytes": 784,
+      "sha256": "7B147CFC09EF77E2A3C66F622C5132F5CD144C6BCA3FE5960A4CAF8BE5C5CA60"
+    },
+    "REQUIREMENT_EVIDENCE_MATRIX_v2_14.md": {
+      "bytes": 2349,
+      "sha256": "66DCF5C0E271090CD799EC95CA6CFDF49E381902F0E3872BCB9C1CB98B576237"
+    },
+    "RESOLUTION_DISPOSITION_v2_14.md": {
+      "bytes": 5869,
+      "sha256": "3C6A5381712E24BC6EAA91BC55A00D54D96CDC4CCE45D008563C061D783E5D19"
+    },
+    "artifacts/consolidated_path_risk_disposition_v2_14.json": {
+      "bytes": 20600,
+      "sha256": "237A020A582D70BABFEF85EFDAB170AB6870656070703351775B4C44E0EB7B7E"
+    },
+    "artifacts/consolidated_path_risk_disposition_verification_v2_14.json": {
+      "bytes": 1014,
+      "sha256": "2E6EEAD18E49C4545F43B2B9A7377F971CD389416A20BAF06FF124E7FEE8BCBA"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3493,
+      "sha256": "5592A647931F734420887EC77D7A8A694F1268A65CF55C8D8A74F4CE0A4ED467"
+    },
+    "consolidated_path_risk_disposition.py": {
+      "bytes": 23040,
+      "sha256": "BE636C5D2A60B4B16C3A567D3615CD66751374EC415E4171E9AE84AB3A2AD618"
+    },
+    "run_consolidated_path_risk_disposition.py": {
+      "bytes": 490,
+      "sha256": "95FFB89CFDAE4F53BBCD375ACFA213FEA7BD759FC6A01E5A9F4C976043A86AA4"
+    },
+    "test_consolidated_path_risk_disposition.py": {
+      "bytes": 3699,
+      "sha256": "DC3E151DEF1B1F039391D0D104901374531D10AF62375BD0915EAC79582AF09A"
+    },
+    "verify_consolidated_path_risk_disposition.py": {
+      "bytes": 12494,
+      "sha256": "683D1F515A8911B4BBE80FA25E9DF7694A22F862A837C4A982DD550D6B525AFE"
+    }
+  },
+  "release_status": "path_risk_correction_four_blocker_stop_disposition",
+  "schema_version": "asmp3_consolidated_path_risk_disposition_release_v2_14"
+}

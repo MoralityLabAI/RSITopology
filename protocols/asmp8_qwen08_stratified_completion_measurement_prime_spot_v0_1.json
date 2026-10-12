@@ -1,0 +1,86 @@
+{
+  "schema_version": "qwen08_stratified_prime_execution_amendment_v0_1",
+  "amendment_id": "asmp8.qwen08.stratified_completion_measurement.prime_spot.v0.1",
+  "status": "prospective_frozen_before_prime_generation",
+  "prepared_utc": "2026-07-25T19:49:40.3368126Z",
+  "amends": {
+    "path": "protocols/asmp8_qwen08_stratified_completion_measurement_v0_1.json",
+    "sha256": "470038eb13b2a3f99036f66263f2c176129fb525381570115ea0f2c2d0ca85bb"
+  },
+  "authorization": {
+    "authorized_by": "user",
+    "authorization_text": "You can just spin up another",
+    "interpretation": "The earlier Prime handoff supplies account and cleanup procedure only; this amendment binds the additional pod to the already registered RSITopology stratified audit."
+  },
+  "unchanged_measurement_contract": {
+    "item_count": 3456,
+    "unique_prompt_count": 576,
+    "application_half_strata": 18,
+    "stability_repeats_per_epoch": 32,
+    "planned_server_epochs": 4,
+    "outcomes_consumed": false,
+    "registered_gates_unchanged": true,
+    "analysis_thresholds_unchanged": true
+  },
+  "frozen_inputs": {
+    "git_commit_before_amendment": "21d73940de720236b23e9ace62bcd44b454d70eb",
+    "model_filename": "Qwen3.5-0.8B-Q4_K_M.gguf",
+    "model_bytes": 532517120,
+    "model_sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517",
+    "prompt_manifest_sha256": "fd77eadebd0f9d4a1874b3bcee6a86563eaa7777487ff687ba9e1dee762f6f11",
+    "runner_sha256": "3e03500848706fa9087279d5c2f30d9d1d96a0882ebbd3aa3968f44baa894bbb",
+    "analyzer_sha256": "067abd2db428569a51e86522008b2c9df9f46df70ded684542e00d8c5255cc14",
+    "base_runner_sha256": "8f5e0f0127e209fc3c6f9e295f16dd000373b610d1ba429b8259a12066aeabdf",
+    "llama_cpp_tag": "b10064",
+    "llama_cpp_commit": "86d86ed4396b4130922f7b9af26e3d9fc11a591b"
+  },
+  "prime_execution": {
+    "account_username": "moralitylab",
+    "account_user_id": "cmbqxo1kc0020eppjy9mnws3d",
+    "availability_id": "724407",
+    "cloud_id": "1A100.40S.22V_SPOT",
+    "provider": "datacrunch",
+    "region": "FI",
+    "gpu_type": "A100 40GB (Spot)",
+    "gpu_count": 1,
+    "listed_hourly_usd": 0.4515,
+    "image": "ubuntu_22_cuda_12",
+    "disk_gb": 256,
+    "pod_name": "jinn-paper-20260725-asmp8-stratified",
+    "maximum_planned_lifetime_seconds": 3600,
+    "maximum_estimated_cost_usd": 0.4515,
+    "local_gpu_used": false
+  },
+  "cross_platform_change": {
+    "windows_llama_server_replaced_by": "Linux CUDA llama-server built from the exact b10064 tag and pinned commit",
+    "model_and_prompt_bytes_unchanged": true,
+    "runner_and_analyzer_bytes_unchanged": true,
+    "expected_consequence": "This is a hardware/runtime replication of the registered instrument; it does not silently pool with Windows receipts.",
+    "reporting": "Prime results are reported as a separate execution surface. Cross-surface differences are findings, not merge errors."
+  },
+  "spot_semantics": {
+    "spot_interruption_accepted_for_cost_bounded_execution": true,
+    "atomic_receipts_preserve_completed_prefix": true,
+    "full_P0_pass_requires_exactly_one_server_session_per_planned_epoch": true,
+    "unplanned_interruption_or_restart": "instrument_invalid_spot_interruption",
+    "partial_receipts_may_be_reported_as_engineering_evidence_only": true,
+    "partial_or_resumed_receipts_cannot_be_upgraded_to_a full instrument pass": true
+  },
+  "resource_caps": {
+    "workload_memory_mb": 4096,
+    "workload_cpu_percent": 50,
+    "workload_io_mb_s": 50,
+    "workload_timeout_seconds": 7200,
+    "gpu_allowance_mb": 1600,
+    "swap_bytes": 0,
+    "hard_abort_temperature_c": 88
+  },
+  "remote_paths": {
+    "workspace": "/workspace/asmp8_stratified_v0_1",
+    "model": "/workspace/asmp8_stratified_v0_1/model/Qwen3.5-0.8B-Q4_K_M.gguf",
+    "prompt_manifest": "/workspace/asmp8_stratified_v0_1/input/qwen08_controller_task_prompt_manifest_v0_1.json",
+    "output_dir": "/workspace/asmp8_stratified_v0_1/output"
+  },
+  "local_recovery_path": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1",
+  "claim_boundary": "Target-blind measurement reliability and cross-runtime replication only. No outcomes are consumed; no correctness, calibration, oversight sufficiency, Goodhart pressure, recursive improvement, or ASMP-8 resolution claim is available."
+}

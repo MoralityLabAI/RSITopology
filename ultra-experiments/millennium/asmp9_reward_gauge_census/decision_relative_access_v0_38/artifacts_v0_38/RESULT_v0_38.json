@@ -1,0 +1,165 @@
+{
+  "elapsed_seconds": 88.93502689999877,
+  "gates": {
+    "A0_boundary_nonvacuity": true,
+    "E0_expanded_separation": true,
+    "G0_target_gauge_null": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "T0_deletion_formula": true
+  },
+  "peak_working_set_bytes": 75509760,
+  "protocol_id": "asmp9-decision-relative-access-v0.38",
+  "registration_file_sha256": "c8d106eb2181ee561c5509f3af8ccf1309cf7aaf9ccb7c9fb8047b88c8f14a99",
+  "registration_implementation_commit": "551f9b4addc90709718a358a4f76965673e14cdc",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "result_content_sha256": "c9f2ac95179813f6f416c0b6d7bc1d3ddde339ee94771c80fcfeb7da70a300ba",
+  "rows": [
+    {
+      "append_ancillary_deficiency": "0",
+      "drop_ancillary_deficiency": "0",
+      "empty_relative_deficiency": "12/49",
+      "expanded_missing_gauge_deficiency": "1/2",
+      "gap": "3/7",
+      "gates": {
+        "A0_boundary_nonvacuity": true,
+        "E0_expanded_separation": true,
+        "G0_target_gauge_null": true,
+        "T0_deletion_formula": true
+      },
+      "gauge_relative_deficiency": "12/49",
+      "half_gap": "3/14",
+      "high": "5/7",
+      "low": "2/7",
+      "nuisance_one_probability": "1/2",
+      "q0_relative_deficiency": "3/14",
+      "q0_value_gap": "5/36",
+      "q1_relative_deficiency": "3/14",
+      "q1_value_gap": "5/36",
+      "target_pair_relative_deficiency": "0"
+    },
+    {
+      "append_ancillary_deficiency": "0",
+      "drop_ancillary_deficiency": "0",
+      "empty_relative_deficiency": "12/49",
+      "expanded_missing_gauge_deficiency": "1/2",
+      "gap": "3/7",
+      "gates": {
+        "A0_boundary_nonvacuity": true,
+        "E0_expanded_separation": true,
+        "G0_target_gauge_null": true,
+        "T0_deletion_formula": true
+      },
+      "gauge_relative_deficiency": "12/49",
+      "half_gap": "3/14",
+      "high": "5/7",
+      "low": "2/7",
+      "nuisance_one_probability": "2/3",
+      "q0_relative_deficiency": "3/14",
+      "q0_value_gap": "5/36",
+      "q1_relative_deficiency": "3/14",
+      "q1_value_gap": "5/36",
+      "target_pair_relative_deficiency": "0"
+    },
+    {
+      "append_ancillary_deficiency": "0",
+      "drop_ancillary_deficiency": "0",
+      "empty_relative_deficiency": "15/32",
+      "expanded_missing_gauge_deficiency": "1/2",
+      "gap": "3/4",
+      "gates": {
+        "A0_boundary_nonvacuity": true,
+        "E0_expanded_separation": true,
+        "G0_target_gauge_null": true,
+        "T0_deletion_formula": true
+      },
+      "gauge_relative_deficiency": "15/32",
+      "half_gap": "3/8",
+      "high": "7/8",
+      "low": "1/8",
+      "nuisance_one_probability": "1/2",
+      "q0_relative_deficiency": "3/8",
+      "q0_value_gap": "14/45",
+      "q1_relative_deficiency": "3/8",
+      "q1_value_gap": "14/45",
+      "target_pair_relative_deficiency": "0"
+    },
+    {
+      "append_ancillary_deficiency": "0",
+      "drop_ancillary_deficiency": "0",
+      "empty_relative_deficiency": "15/32",
+      "expanded_missing_gauge_deficiency": "1/2",
+      "gap": "3/4",
+      "gates": {
+        "A0_boundary_nonvacuity": true,
+        "E0_expanded_separation": true,
+        "G0_target_gauge_null": true,
+        "T0_deletion_formula": true
+      },
+      "gauge_relative_deficiency": "15/32",
+      "half_gap": "3/8",
+      "high": "7/8",
+      "low": "1/8",
+      "nuisance_one_probability": "2/3",
+      "q0_relative_deficiency": "3/8",
+      "q0_value_gap": "14/45",
+      "q1_relative_deficiency": "3/8",
+      "q1_value_gap": "14/45",
+      "target_pair_relative_deficiency": "0"
+    },
+    {
+      "append_ancillary_deficiency": "0",
+      "drop_ancillary_deficiency": "0",
+      "empty_relative_deficiency": "13/96",
+      "expanded_missing_gauge_deficiency": "1/2",
+      "gap": "1/4",
+      "gates": {
+        "A0_boundary_nonvacuity": true,
+        "E0_expanded_separation": true,
+        "G0_target_gauge_null": true,
+        "T0_deletion_formula": true
+      },
+      "gauge_relative_deficiency": "13/96",
+      "half_gap": "1/8",
+      "high": "5/8",
+      "low": "3/8",
+      "nuisance_one_probability": "1/2",
+      "q0_relative_deficiency": "1/8",
+      "q0_value_gap": "10/143",
+      "q1_relative_deficiency": "1/8",
+      "q1_value_gap": "10/143",
+      "target_pair_relative_deficiency": "0"
+    },
+    {
+      "append_ancillary_deficiency": "0",
+      "drop_ancillary_deficiency": "0",
+      "empty_relative_deficiency": "13/96",
+      "expanded_missing_gauge_deficiency": "1/2",
+      "gap": "1/4",
+      "gates": {
+        "A0_boundary_nonvacuity": true,
+        "E0_expanded_separation": true,
+        "G0_target_gauge_null": true,
+        "T0_deletion_formula": true
+      },
+      "gauge_relative_deficiency": "13/96",
+      "half_gap": "1/8",
+      "high": "5/8",
+      "low": "3/8",
+      "nuisance_one_probability": "2/3",
+      "q0_relative_deficiency": "1/8",
+      "q0_value_gap": "10/143",
+      "q1_relative_deficiency": "1/8",
+      "q1_value_gap": "10/143",
+      "target_pair_relative_deficiency": "0"
+    }
+  ],
+  "status": "finite_decision_relative_access_threshold_established"
+}

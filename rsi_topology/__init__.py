@@ -2,11 +2,23 @@
 
 from .discovery import (
     ConsensusBand,
+    CrossFittedLineageObject,
+    CrossFittedRankFiltration,
     DiscoveryConfig,
     DiscoveryResult,
+    PhaseOneLineageObjectsV03,
+    discover_between_class_scatter_object,
+    discover_between_class_rank_filtration,
     discover_consensus_bands,
+    discover_lineage_objects_v03,
     evaluate_discovery,
     subspace_lineage,
+)
+from .bifiltration import (
+    BifiltrationEdge,
+    BifiltrationLoop,
+    LineageHolonomyBifiltration,
+    build_lineage_holonomy_bifiltration,
 )
 from .jspace_bridge import load_operator_bundle, write_operator_bundle
 from .attestation import (
@@ -77,14 +89,48 @@ from .risk_gate import (
 from .risk_redteam import run_control_risk_redteam
 from .risk_analysis import summarize_boundary_surface
 from .sectioning_crossover import run_sectioning_crossover_v03
+from .godel_capture import (
+    CAPTURE_SCHEMA,
+    PROMPT_SCHEMA,
+    CaptureStore,
+    audit_prompt_answer_keys,
+    build_synthetic_capture,
+    generate_prompt_manifest,
+    runtime_environment,
+    validate_capture_index,
+    validate_prompt_manifest,
+)
+from .godel_analysis import (
+    ANALYSIS_SCHEMA,
+    analyze_godel_capture,
+    classify_runtime_support,
+    node_id,
+    write_analysis_bundle,
+)
+from .holonomy_causal import (
+    build_rank_four_loop,
+    evaluate_causal_transfer,
+    generate_causal_transfer_rows,
+    two_path_transports,
+)
 
 __all__ = [
     "ConsensusBand",
+    "CrossFittedLineageObject",
+    "CrossFittedRankFiltration",
     "DiscoveryConfig",
     "DiscoveryResult",
+    "PhaseOneLineageObjectsV03",
+    "discover_between_class_scatter_object",
+    "discover_between_class_rank_filtration",
     "discover_consensus_bands",
+    "discover_lineage_objects_v03",
     "evaluate_discovery",
     "subspace_lineage",
+    "BifiltrationEdge",
+    "BifiltrationLoop",
+    "LineageHolonomyBifiltration",
+    "build_lineage_holonomy_bifiltration",
     "load_operator_bundle",
     "write_operator_bundle",
     "ENGINEERING_EVIDENCE",
@@ -144,4 +190,22 @@ __all__ = [
     "run_control_risk_redteam",
     "summarize_boundary_surface",
     "run_sectioning_crossover_v03",
+    "PROMPT_SCHEMA",
+    "CAPTURE_SCHEMA",
+    "ANALYSIS_SCHEMA",
+    "CaptureStore",
+    "audit_prompt_answer_keys",
+    "generate_prompt_manifest",
+    "runtime_environment",
+    "validate_prompt_manifest",
+    "validate_capture_index",
+    "build_synthetic_capture",
+    "analyze_godel_capture",
+    "classify_runtime_support",
+    "node_id",
+    "write_analysis_bundle",
+    "build_rank_four_loop",
+    "evaluate_causal_transfer",
+    "generate_causal_transfer_rows",
+    "two_path_transports",
 ]

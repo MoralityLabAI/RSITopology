@@ -1,0 +1,30 @@
+{
+  "check_count": 21,
+  "checks": {
+    "all_gates_pass": true,
+    "coefficient_direct_0": true,
+    "coefficient_direct_1": true,
+    "coefficient_direct_1365": true,
+    "coefficient_direct_2047": true,
+    "coefficient_direct_21": true,
+    "coefficient_direct_341": true,
+    "coefficient_result_rows": true,
+    "k4_rows": true,
+    "primary_direct_heterogeneous_a": true,
+    "primary_direct_heterogeneous_b": true,
+    "primary_direct_heterogeneous_c": true,
+    "primary_result_heterogeneous_a": true,
+    "primary_result_heterogeneous_b": true,
+    "primary_result_heterogeneous_c": true,
+    "protocol_hash": true,
+    "registration_hash": true,
+    "resource_caps": true,
+    "result_hash": true,
+    "sealed_files": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "186f817a885dd695e5e226fa6be7ebc28d60f9f773fc94a93647ed6c5d067e90",
+  "result_sha256": "3733e73324905fbb7b1d44817a46607539409126c39a0120c73e372d8a4eae92",
+  "verifier_sha256": "dc0fd2e4377d4ea09c20b437a64aefe40ee6ef40845d5d3cfafd74ed090ef532"
+}

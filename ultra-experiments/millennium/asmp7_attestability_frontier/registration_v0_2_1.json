@@ -1,0 +1,57 @@
+{
+  "amendment": "Serialization-only repair of v0.2; no mathematical, grid, gate, decision-rule, or claim-boundary change.",
+  "asmp_problem": "ASMP-7 Capability Attestability under Compression and Decomposition",
+  "claim_boundary": "This exact result concerns only the frozen 16-point Boolean registry, independent with-replacement challenges, fresh randomized response, and assumed meter coverage. It does not establish real-model capability attestability, a universal compression theorem, an asymptotic sample-complexity theorem, or the adequacy of the omitted policy band. The normal curve is descriptive.",
+  "command": "python ultra-experiments/millennium/asmp7_attestability_frontier/run_boundary_frontier_v0_2_1.py --registration ultra-experiments/millennium/asmp7_attestability_frontier/registration_v0_2_1.json --output-dir ultra-experiments/millennium/asmp7_attestability_frontier/artifacts_v0_2_1",
+  "error_limits": {
+    "false_negative": "1/20",
+    "false_positive": "1/20"
+  },
+  "experiment_id": "ASMP-7-EXCLUDED-BAND-DEGRADATION-v0.2.1",
+  "forbidden_boundary_grid": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "gates": [
+    "E0_exact_adjacency",
+    "R0_v0_1_reproduction",
+    "C0_class_census",
+    "O0_order",
+    "S0_surface_liveness",
+    "B0_boundary_label"
+  ],
+  "maximum_challenges": 32768,
+  "prereveal_source_commit": "afcb2c9e22e4bba306eb1839bd4d9ef3a27e7cc5",
+  "prior_art_disposition": "classical_exact_testing_and_asymptotics_application_specific_surface",
+  "registered_utc": "2026-07-21T16:01:37Z",
+  "sealed_files": {
+    "PRIOR_ART_v0_2.md": "848d607f2185ed0034a9a19f06171a0009f2da6f5918e79a9e7a65957ba6a8b5",
+    "PROTOCOL_v0_2.md": "8b628b1a439e41a93640a2eed069477362a36fa3725e1a46504800cd6a5c2eeb",
+    "PROTOCOL_v0_2_1.md": "d4e08682f5a4e685c1e4c600508785bb3e5c117a1ae9ad22172baee46a782dd9",
+    "README_v0_2_1.md": "917e9466176321127ba4c6dd80b9c82d7a9eb5be1cc8052b5e0cddb67278be19",
+    "artifacts_v0_2/failure_receipt.json": "3acdb71746288f62ff6888dcf361524824a7a095e273ac75f6a10044625d1bc0",
+    "boundary_frontier.py": "ff2e17872c6f19c28d1a9d4d565855c7c2ee12f60a7d04a3cb00b0393c57736a",
+    "registration_v0_2.json": "ceaea8469a1341a33408f96d75a03b492140adbe9cb3369a419998b34db2ba92",
+    "run_boundary_frontier.py": "f9d3d2f2aaa95447c1f0abbc1a78496c95cabaffd70c149393cf3955de79b602",
+    "run_boundary_frontier_v0_2_1.py": "01e3667284234ce465697b012b5b6863779e81bb557f7771d6c61c4b79d71918",
+    "test_boundary_frontier.py": "f16acff2aa54e349c567529119e44fd92b9f3c7d9dcb89638b7e0dffcc6813e6",
+    "test_boundary_serialization_v0_2_1.py": "6a2a9d9b21c33c594a1b8eda3a9d681be9378869b371dd29e028bba35da6844f"
+  },
+  "singleton_boundary_control": 16,
+  "stop_rule": "Run once after registration. Any exactness, reproduction, census, order, or boundary-label failure yields invalid_instrument. Surface-liveness failure is reported without changing the cap or grid.",
+  "theta_grid": [
+    "1/2",
+    "3/5",
+    "2/3",
+    "3/4",
+    "4/5",
+    "1/1"
+  ],
+  "version": "0.2.1"
+}

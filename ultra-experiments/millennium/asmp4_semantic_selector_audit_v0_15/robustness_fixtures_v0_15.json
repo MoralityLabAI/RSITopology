@@ -1,0 +1,33 @@
+{
+  "schema_version": "asmp4_selector_robustness_fixtures_v0_15",
+  "fixtures": [
+    {
+      "probe_id": "invariant-reflow-01",
+      "baseline": "The plant, sensor, controller, and actuator are separate components.",
+      "staged": "The plant, sensor, controller,\nand actuator are separate components.",
+      "oracle": "stable"
+    },
+    {
+      "probe_id": "sensitivity-raw-selector-01",
+      "baseline": "The read transcript crosses the observation interface.",
+      "staged": "The sensor report must be injective in the four raw modes.",
+      "oracle": "increase_by_1"
+    },
+    {
+      "probe_id": "monotonicity-explicitness-01",
+      "baseline": "A registered sensor is part of the architecture.",
+      "staged": "The sensor must quotient raw modes by the coarsest control-sufficient statistic.",
+      "oracle": "increase_by_at_least_0.5"
+    },
+    {
+      "probe_id": "anti-gaming-paraphrase-01",
+      "staged": "Each of the four physical modes must retain a different read symbol even when two modes require the same control.",
+      "oracle": "detect_selector"
+    },
+    {
+      "probe_id": "clean-control-architecture-01",
+      "staged": "Decoder memory, predictive control, and block coding can change the write-side frontier.",
+      "oracle": "no_selector"
+    }
+  ]
+}

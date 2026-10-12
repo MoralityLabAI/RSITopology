@@ -1,0 +1,25 @@
+{
+  "device": "cuda",
+  "final_metrics": {
+    "gradient_norm": 0.0005239129751665802,
+    "step": 4000,
+    "test_accuracy": 0.40727904438972473,
+    "test_loss": 4.561127185821533,
+    "train_accuracy": 1.0,
+    "train_loss": 6.218057387741283e-05
+  },
+  "geometry": {
+    "feature_step": 500,
+    "output_weight_stable_rank": 14.883841781992043,
+    "parameter_l2": 16.530244044950578,
+    "representation_effective_rank": 21.857398624105656,
+    "token_embedding_stable_rank": 9.092773559471508
+  },
+  "metric_count": 81,
+  "run_id": "seed00_wd100",
+  "seed": 0,
+  "status": "completed",
+  "steps_completed": 4000,
+  "transition_step": null,
+  "weight_decay": 1.0
+}

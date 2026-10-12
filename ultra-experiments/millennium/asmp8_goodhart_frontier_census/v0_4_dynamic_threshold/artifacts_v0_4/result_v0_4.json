@@ -1,0 +1,168 @@
+{
+  "checkpoints": [
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072,
+    262144,
+    524288,
+    1048576
+  ],
+  "claim_boundary": "Synthetic finite-population first-passage audit thresholds under a finite-grid simultaneous Hoeffding instrument; no learned reward model, no universal sequential-optimality claim, and no ASMP-8 resolution.",
+  "condition_count": 3,
+  "focus": {
+    "diffuse_top_spike": [
+      {
+        "cap": 1048576,
+        "censored_streams": 0,
+        "crossed_streams": 1024,
+        "crossing_fraction_descriptive": 1.0,
+        "error_family": "diffuse_low_error",
+        "maximum": 524288,
+        "median": 524288.0,
+        "minimum": 524288,
+        "optimizer_family": "top_spike",
+        "oracle_class": "oracle_certifiable",
+        "oracle_margin": 0.040156250000000004,
+        "policy_id": "top_spike:alpha=0.1",
+        "predicted_crossing_checkpoint": 524288,
+        "proxy_gain": 0.05,
+        "q25": 524288.0,
+        "q75": 524288.0,
+        "true_gain": 0.05257812500000002
+      },
+      {
+        "cap": 1048576,
+        "censored_streams": 0,
+        "crossed_streams": 1024,
+        "crossing_fraction_descriptive": 1.0,
+        "error_family": "diffuse_low_error",
+        "maximum": 524288,
+        "median": 524288.0,
+        "minimum": 524288,
+        "optimizer_family": "top_spike",
+        "oracle_class": "oracle_certifiable",
+        "oracle_margin": 0.100390625,
+        "policy_id": "top_spike:alpha=0.25",
+        "predicted_crossing_checkpoint": 524288,
+        "proxy_gain": 0.125,
+        "q25": 524288.0,
+        "q75": 524288.0,
+        "true_gain": 0.1314453125
+      },
+      {
+        "cap": 1048576,
+        "censored_streams": 0,
+        "crossed_streams": 1024,
+        "crossing_fraction_descriptive": 1.0,
+        "error_family": "diffuse_low_error",
+        "maximum": 524288,
+        "median": 524288.0,
+        "minimum": 524288,
+        "optimizer_family": "top_spike",
+        "oracle_class": "oracle_certifiable",
+        "oracle_margin": 0.20078125,
+        "policy_id": "top_spike:alpha=0.5",
+        "predicted_crossing_checkpoint": 524288,
+        "proxy_gain": 0.25,
+        "q25": 524288.0,
+        "q75": 524288.0,
+        "true_gain": 0.262890625
+      },
+      {
+        "cap": 1048576,
+        "censored_streams": 0,
+        "crossed_streams": 1024,
+        "crossing_fraction_descriptive": 1.0,
+        "error_family": "diffuse_low_error",
+        "maximum": 524288,
+        "median": 524288.0,
+        "minimum": 524288,
+        "optimizer_family": "top_spike",
+        "oracle_class": "oracle_certifiable",
+        "oracle_margin": 0.3011718749999999,
+        "policy_id": "top_spike:alpha=0.75",
+        "predicted_crossing_checkpoint": 524288,
+        "proxy_gain": 0.37499999999999994,
+        "q25": 524288.0,
+        "q75": 524288.0,
+        "true_gain": 0.39433593750000007
+      },
+      {
+        "cap": 1048576,
+        "censored_streams": 0,
+        "crossed_streams": 1024,
+        "crossing_fraction_descriptive": 1.0,
+        "error_family": "diffuse_low_error",
+        "maximum": 524288,
+        "median": 524288.0,
+        "minimum": 524288,
+        "optimizer_family": "top_spike",
+        "oracle_class": "oracle_certifiable",
+        "oracle_margin": 0.4015625,
+        "policy_id": "top_spike:alpha=1",
+        "predicted_crossing_checkpoint": 524288,
+        "proxy_gain": 0.5,
+        "q25": 524288.0,
+        "q75": 524288.0,
+        "true_gain": 0.52578125
+      }
+    ]
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "87f671def5b7907ec4905fbcbea684dc45e1154cf46249023b5dcd07a45ea5b6"
+    },
+    "G1_simultaneous_instrument": {
+      "instrument_failure_streams_total": 0,
+      "maximum_cp_upper": 0.0029212446353880273,
+      "pass": true
+    },
+    "G2_monotone_dynamics": {
+      "pass": true,
+      "violations": 0
+    },
+    "G3_conditional_soundness": {
+      "conditional_false_crossings": 0,
+      "pass": true
+    },
+    "G4_oracle_consistency": {
+      "oracle_certifiable_policies": 47,
+      "pass": true,
+      "structurally_uncertifiable_policies": 13
+    },
+    "G5_top_spike_liveness": {
+      "crossed_streams_across_five_policies": 5120,
+      "note": "Crossing count is a liveness check only; no fraction is a pass threshold.",
+      "pass": true,
+      "possible_streams": 5120
+    },
+    "G6_no_reversion": {
+      "pass": true,
+      "reversions": 0
+    },
+    "G7_resources_and_receipts": {
+      "elapsed_seconds": 0.45951810000042315,
+      "pass": true,
+      "process_peak_rss_bytes": 118951936
+    }
+  },
+  "instrument_status": "valid",
+  "policy_condition_count": 60,
+  "protocol_sha256": "f0539de78b3cab962173dc59447b9ce10f9d9d11b85530db4c29180ae01bee70",
+  "registration_sha256": "87f671def5b7907ec4905fbcbea684dc45e1154cf46249023b5dcd07a45ea5b6",
+  "schema_version": "asmp8_dynamic_threshold_result_v0_4",
+  "source_commit": "88c4bcf8e75974a358b55cdf104c95dbc6a8036d",
+  "streams_per_error_family": 1024,
+  "verdict": "dynamic_threshold_measured"
+}

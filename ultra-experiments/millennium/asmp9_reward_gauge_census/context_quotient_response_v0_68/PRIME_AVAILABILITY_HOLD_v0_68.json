@@ -1,0 +1,50 @@
+{
+  "schema_version": "asmp9_context_quotient_prime_availability_hold_v0_68",
+  "checked_at_utc": "2026-07-29T22:01:31Z",
+  "account": {
+    "username": "moralitylab",
+    "user_id": "cmbqxo1kc0020eppjy9mnws3d",
+    "identity_check_passed": true
+  },
+  "protected_run": {
+    "id": "e2s64hw5ywag1d8hgwfef6jd",
+    "status": "COMPLETED",
+    "mutated": false
+  },
+  "active_pods_before_decision": 0,
+  "delegated_envelope": {
+    "gpu_type": "A100_80GB",
+    "gpu_count": 1,
+    "maximum_price_usd_per_gpu_hour": 0.7,
+    "maximum_planned_hours": 2,
+    "substitution_allowed": false
+  },
+  "available_offers": [
+    {
+      "availability_id": "f5f6fe",
+      "gpu_type": "A100 80GB",
+      "gpu_count": 1,
+      "provider": "massedcompute",
+      "location": "US",
+      "listed_price_usd_per_hour": 1.23,
+      "stock_status": "Available",
+      "within_delegated_envelope": false
+    },
+    {
+      "availability_id": "5b514b",
+      "gpu_type": "A100 80GB",
+      "gpu_count": 1,
+      "provider": "datacrunch",
+      "location": "FI",
+      "listed_price_usd_per_hour": 1.79,
+      "stock_status": "Available",
+      "within_delegated_envelope": false
+    }
+  ],
+  "decision": "no_launch_price_ceiling",
+  "pod_created": false,
+  "model_forward_passes": 0,
+  "outcomes_read": false,
+  "next_authorized_action": "Recheck availability under the unchanged envelope. A different GPU type or higher price requires explicit new authorization.",
+  "claim_boundary": "This is an infrastructure availability receipt. It contains no model outcome and changes no scientific gate."
+}

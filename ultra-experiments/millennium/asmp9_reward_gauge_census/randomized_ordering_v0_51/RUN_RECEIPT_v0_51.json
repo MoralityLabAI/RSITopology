@@ -1,0 +1,50 @@
+{
+  "commits": {
+    "development": "20e2e943706d60f4c9a0d881cc0a62d1019e92cb",
+    "registration": "d66df77ac156c536c60547b038c5cc4d84f3279d",
+    "verification_result": "c3e1e660349bda230b6a113af33ead75e6c9b926",
+    "verification_source": "b5c6b9b2303e208b2d2056b2a617a43d31f86f85"
+  },
+  "commands": {
+    "tests": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/test_randomized_ordering.py ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/test_verifier_v0_51.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/verify_theorems_v0_51.py"
+  },
+  "gates": {
+    "B0": true,
+    "C0": true,
+    "H0": true,
+    "M0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "U0": true,
+    "Z0": true
+  },
+  "protocol_id": "asmp9-randomized-ordering-verification-v0.51",
+  "registration_sha256": "e9c7ef6ff7b649bb816d589801fa9caeb9bf20e20e053716dd7ffd5dfeb6a539",
+  "resource": {
+    "elapsed_seconds": 105.27067450000322,
+    "peak_working_set_bytes": 25767936,
+    "worker_processes": 1
+  },
+  "result": {
+    "maximum_gain": "1/4",
+    "maximum_gain_pair_count": 16,
+    "mean_gain": "35489/454860",
+    "no_robust_zero_pair_count": 282,
+    "no_strict_gain_pair_count": 127,
+    "ordered_pair_count": 361,
+    "robust_zero_pair_count": 79,
+    "strict_gain_pair_count": 234,
+    "table_count": 19
+  },
+  "schema": "asmp9-v0.51-run-receipt-v1",
+  "status": "randomization_improves_regret_not_certification",
+  "tests": {
+    "expected": 10,
+    "passed": 10
+  },
+  "verification_sha256": "03c1e42a3b452200b3955f34a15626f8f9d09da75d045e1ac1d1c454a30aecfa",
+  "version": "0.51"
+}

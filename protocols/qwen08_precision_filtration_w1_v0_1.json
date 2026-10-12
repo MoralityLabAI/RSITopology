@@ -1,0 +1,114 @@
+{
+  "protocol_id": "qwen08_precision_filtration_w1_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_not_run",
+  "registered_on": "2026-07-17",
+  "purpose": "Outcome-free analysis of lineage percolation and rank-one sign holonomy under four-bit NF4 versus unquantized float16 weights, using only the completed Qwen0.8B precision/context captures.",
+  "parent": {
+    "scientific_protocol_id": "qwen08_l19_precision_context_v0_1",
+    "scientific_protocol_sha256": "6437d637d6a25efe47c462a0cadeb9aa2dd18a018a794f9e688befa4adb5ef8b",
+    "completed_analysis_result_sha256": "e5a69132845996cb1598b5cfcd991dcbd9c885877f02d76fecd5d911c748482b",
+    "completed_run_receipt_sha256": "7c20df76cae824eea163135561ba43c04ca0943625bedb297d74fc6d823c1aa3",
+    "prompt_manifest_sha256": "9315073ff8db07fb258563957b509cdbe6ecfdc80ab0a12b869fe614077e88db",
+    "prompt_payload_sha256": "87d2f05eb24e7074943b6625c907bf08362db5ffa5ac24f6a313f7d75806c14e"
+  },
+  "capture_universe": {
+    "precisions": ["4bit", "float16"],
+    "states": ["base", "naive_qlora"],
+    "sites": ["model.layers.19", "model.layers.23"],
+    "context_shards": ["shard-00", "shard-01", "shard-02", "shard-03"],
+    "behavior_family": "graph_reachability",
+    "rank": 1,
+    "new_capture_prohibited": true,
+    "generation_prohibited": true,
+    "outcomes_consumed": false
+  },
+  "primary_object": {
+    "kind": "cross_fitted_rank_one_between_class_scatter",
+    "basis_rule": "For every precision x state x site x shard x half cell, use the top right singular direction of the equally weighted centered class-mean matrix.",
+    "support_status_rule": "Carry forward the parent 256-replicate matched-random-label gate. Unsupported rank-one objects may be measured only as diagnostic engineering evidence and cannot certify a consumer.",
+    "edge_weight": "minimum across construction and geometry-validation halves of squared rank-one subspace overlap",
+    "edge_sign": "sign of the rank-one orthogonal Procrustes transport; zero inner products are invalid",
+    "covariance_gram_status": "reported_ungated"
+  },
+  "graph": {
+    "per_precision_site_nodes": "2 states x 4 context shards = 8",
+    "edges": "Three adjacent-context edges within each state plus four cross-state edges at matched shards = 10",
+    "frozen_lineage_floor": 0.9,
+    "diagnostic_floor": 0.5,
+    "filtration": "Descending exact sweep over every distinct observed edge weight, union {1.0, 0.9, 0.5, 0.0}; an edge is admitted iff weight >= tau.",
+    "tau_conn": "maximum tau at which the eight-node graph is connected",
+    "tau_cycle": "maximum tau at which beta_1 = |E_tau| - |V| + c(G_tau) is positive",
+    "tau_loop": "maximum tau at which at least one registered connected simple loop has every boundary edge admitted",
+    "fragility_margin": "absolute value of frozen_lineage_floor minus tau_cycle"
+  },
+  "cycle_space": {
+    "generator_order": ["plaquette-00", "plaquette-01", "plaquette-02"],
+    "complete_nonzero_gf2_combinations": 7,
+    "connected_simple_loops": [
+      ["plaquette-00"],
+      ["plaquette-01"],
+      ["plaquette-02"],
+      ["plaquette-00", "plaquette-01"],
+      ["plaquette-01", "plaquette-02"],
+      ["plaquette-00", "plaquette-01", "plaquette-02"]
+    ],
+    "disconnected_cycle_chain": ["plaquette-00", "plaquette-02"],
+    "maximum_simple_cycle_edge_count": 8,
+    "structural_note": "A ten-edge simple cycle is impossible on the frozen 2 x 4 grid. Repeated-edge walks are prohibited. The analysis therefore uses all six connected simple cycles, the remaining nonzero GF(2) cycle-chain, and the registered tau <= 0.5 alternative.",
+    "w1_evaluation": "Product of rank-one edge-transport signs on the GF(2) boundary; -1 is orientation reversing and +1 is orientable on that cycle class.",
+    "canonical_angles": "suppressed at rank one"
+  },
+  "resampling": {
+    "replicates": 256,
+    "seed": 2026071719,
+    "rule": "Jointly resample prompt IDs with replacement within every frozen half x subcondition stratum. Reuse each draw across precision, state, site, and shard so precision and site comparisons are paired.",
+    "reported_intervals": "empirical 0.05 and 0.95 quantiles, including the observed point",
+    "w1_reproducibility": "For each cycle class, report the fraction of resampled signs equal to the observed geometry-validation sign.",
+    "reproducible_sign_gate": 0.95,
+    "fragility_classification": {
+      "critical_surface_overlap": "the 90% tau_cycle interval contains 0.9",
+      "robustly_below_floor": "the 90% tau_cycle upper bound is below 0.9",
+      "robustly_above_floor": "the 90% tau_cycle lower bound is above 0.9"
+    }
+  },
+  "gauge_preflight": {
+    "reframings": 384,
+    "seed": 2026071723,
+    "operation": "Independently flip every node basis sign, recompute all edge signs and cycle-class products, and compare gauge-invariant cycle decisions.",
+    "gate": "zero determinant-decision mismatches; otherwise the w1 instrument is invalid"
+  },
+  "registered_interpretations": {
+    "quantization_sensitive_w1": "At least one connected simple-loop class has reproducible sign -1 in 4bit and reproducible sign +1 in float16 at the same site, with construction/validation agreement in each precision.",
+    "precision_stable_diagnostically_thin": "Every connected simple-loop class surviving to tau >= 0.5 is reproducibly +1 in both precisions, with construction/validation agreement.",
+    "percolation_shift": "The paired 90% interval for tau_cycle(float16) - tau_cycle(4bit) excludes zero at a site.",
+    "inconclusive": "Any other result, including gauge failure, non-reproducible signs, or insufficient loop support."
+  },
+  "figures": [
+    "paired complete-margin deltas with 90% intervals for eight L19 cells plus the registered sentinel interaction",
+    "lineage-filtration curves and tau_conn/tau_cycle/tau_loop for precision x site",
+    "support heatmap over precision x state x site x context shard"
+  ],
+  "evidence_discipline": {
+    "precision_label": "four-bit NF4 double-quant with float16 compute versus unquantized float16 weights; this is not an fp32 arithmetic comparison",
+    "multiplicity": "No multiplicity correction was registered. Report aggregate sign patterns descriptively and do not promote individual cell intervals to multiplicity-controlled claims.",
+    "external_context": "Stage B and 1.7B results may be cited as context but must never be pooled because their protocols and objects differ.",
+    "claim_boundary": "This is an outcome-free measurement study. It can establish or falsify precision-conditioned reproducibility of a rank-one between-class identity object on the frozen Qwen development model, fresh prompts, sites, states, and runtime precisions. It cannot establish causal edit value, VPD efficacy, monitor sufficiency, capability preservation, compactification, recursive self-improvement, or RSI. Holonomy remains a downstream diagnostic only and cannot produce a new attestation level or reopen a closed causal/VPD stage."
+  },
+  "resource_contract": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 250,
+    "timeout_seconds": 14400,
+    "gpu_allowance_mb": 1,
+    "checkpoint_every_seconds": 600,
+    "swap_bytes": 0,
+    "hard_capped_job_object_required": true,
+    "abort_is_valid": true
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}

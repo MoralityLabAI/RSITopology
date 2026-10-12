@@ -1,0 +1,10 @@
+{
+  "gpu_allowed": false,
+  "implementation": "CPython standard library exact Fraction arithmetic",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.4",
+  "resource_caps": {
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  }
+}

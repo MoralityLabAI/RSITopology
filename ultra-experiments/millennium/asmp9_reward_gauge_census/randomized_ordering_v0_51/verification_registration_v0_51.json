@@ -1,0 +1,41 @@
+{
+  "claim_boundary": "Finite Buehler specialization of established randomized minmax regret; not novelty, operational authorization, physical preference evidence, or an ASMP-9 resolution.",
+  "expected_ordered_pair_count": 361,
+  "expected_ordering_count": 6,
+  "expected_scenario_count": 4,
+  "expected_table_count": 19,
+  "expected_test_count": 10,
+  "protocol_id": "asmp9-randomized-ordering-verification-v0.51",
+  "reference_vertices": [
+    [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    [
+      "1/6",
+      "1/3",
+      "1/2"
+    ]
+  ],
+  "registered_at": "2026-07-29T11:23:39-04:00",
+  "resource_ceiling": {
+    "peak_aggregate_working_set_bytes": 536870912,
+    "seconds": 180,
+    "worker_processes": 1
+  },
+  "source_commit": "b5c6b9b2303e208b2d2056b2a617a43d31f86f85",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/DEVELOPMENT_RESULT_v0_51.md": "441558dc770524aac112545a71e1a6853d0f7d77fada421dd7a32f18cd805a99",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/PRIOR_ART_GATE_v0_51.md": "b46b0055edaa909699472c98e439e842917d70796de90b9519ea67b8704fb911",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/README.md": "4a6ac91c736bd58aa9c428e4f22d1dacc20d845f3ffe310078245a0b05a9d361",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/THEOREM_DRAFT_v0_51.md": "45e19789b3173d9ae48e80f85fbe69b74b3eba542f6c7338a42c5b3e653f9e70",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/VERIFICATION_PROTOCOL_v0_51.md": "7fdae2292d8cc4e16997d9587c43c329a8088d10c228d1797aba70ac92722b49",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/randomized_ordering.py": "2c4c633f983d0d6fe3ca0527e30ff8557868ad9b1620c5c9105dbe3f0559e477",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/test_randomized_ordering.py": "ed5cc8c6631473b538999c072c1c53499f248813985d211b405fa64f39bc8a7a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/test_verifier_v0_51.py": "60d35f453f4bd3938ab6394e3f8600234c0b4c2f1db18f2a4a4f03fd0729f36d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/randomized_ordering_v0_51/verify_theorems_v0_51.py": "881c3a3030a62c93fc4b20ce1c5f57e66c49ab50b2cbc4401b1edc0b5b9ccb70"
+  },
+  "status": "registered_before_exhaustive_verification",
+  "version": "0.51"
+}

@@ -1,0 +1,89 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-RANDOMIZED-FINDER-AMPLIFICATION-v2.4",
+  "file_count": 20,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_constructive_refutation_protocol_v2_3/CONSTRUCTIVE_REFUTATION_PROTOCOL_THEOREM_v2_3.md": {
+      "bytes": 7668,
+      "sha256": "F917A462E418018FF289A1891C7978299077B4AA14AD412660C46960B86C018C"
+    },
+    "../asmp3_constructive_refutation_protocol_v2_3/RELEASE_MANIFEST_v2_3.json": {
+      "bytes": 4814,
+      "sha256": "3F46B4CC8B44DF9B5600C5A17A71E22EE91936D1522C1DF5D0970B5885EA7896"
+    },
+    "../asmp3_constructive_refutation_protocol_v2_3/artifacts/constructive_refutation_protocol_v2_3.json": {
+      "bytes": 620625,
+      "sha256": "A437C1BD67171B4DB07D32D53B96A5D6DE79D25AC11E9B498BD817EFD0C72781"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_4.md": {
+      "bytes": 1726,
+      "sha256": "54AD919E032AC5E795BA3283D7A18F65A4FF80DBE597A73BD96B88A0AB15012E"
+    },
+    "RANDOMIZED_FINDER_AMPLIFICATION_THEOREM_v2_4.md": {
+      "bytes": 6965,
+      "sha256": "E97F1F96590DA68F1606392918966E16E6653E473CDC9CB7A7F81D4FBCDF9A7F"
+    },
+    "README.md": {
+      "bytes": 771,
+      "sha256": "9748601BFEB7CB3E82CD39B94C925D1302C5D6E020DBEC5FE5709F0CB046830B"
+    },
+    "artifacts/randomized_finder_amplification_v2_4.json": {
+      "bytes": 451719,
+      "sha256": "F1FA19490327833AFDA5A877D4B2161D5C6517ADC9D99136BADF3A1F772C7821"
+    },
+    "artifacts/randomized_finder_amplification_verification_v2_4.json": {
+      "bytes": 928,
+      "sha256": "631AF5C93F00EA4BC8E091D512A92D846D9F5E2274D914D5411155EFB8A0090F"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2836,
+      "sha256": "2723F0D64C41933F9DD0056EF63F5CD35A8D28EF0CA4E3D842E98D0BC86CC979"
+    },
+    "randomized_finder_amplification.py": {
+      "bytes": 17153,
+      "sha256": "1BEBAB360E9347683F7379DB072B5EDB68FA4E926CA5596E43798D0FDEBFBA37"
+    },
+    "run_randomized_finder_amplification.py": {
+      "bytes": 866,
+      "sha256": "1E74BDF5C9F2A3F8E1A3C937F973AFADB08B121F433CA1C137D8E88AD2E09762"
+    },
+    "test_randomized_finder_amplification.py": {
+      "bytes": 4606,
+      "sha256": "44613F77A41F19D0588A3B045F979E84F3947FC6D510FB5C0D13E36EAB86CAEF"
+    },
+    "verify_randomized_finder_amplification.py": {
+      "bytes": 13379,
+      "sha256": "B9661002CFF0CA19D4841220CC1C329B7C732BAB078C65D95300085F1C79BA6D"
+    }
+  },
+  "release_status": "exact_randomized_finder_restart_noise_and_budget_frontier",
+  "schema_version": "asmp3_randomized_finder_amplification_release_v2_4"
+}

@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_interactive_compression_adaptive_tree_codebook_rotation_round_and_bit_frontier_audit",
+  "checks": {
+    "V0_schema_parent_and_status": true,
+    "V1_parent_contracts_reconstructed": true,
+    "V2_all_13413_frontier_rows_reconstructed": true,
+    "V3_all_97062_adaptive_trees_reconstructed": true,
+    "V4_all_49_small_codebook_frontiers_reconstructed": true,
+    "V5_all_738_public_coin_attainments_reconstructed": true,
+    "V6_all_round_schedules_and_bit_frontiers_reconstructed": true,
+    "V7_exact_interactive_theorem_fields_match": true,
+    "V8_interface_and_claim_firewalls_are_explicit": true,
+    "V9_all_ten_producer_gates_pass": true
+  },
+  "claim_boundary": "This checker certifies the declared unique-marker interactive interface, not a universal ASMP-3 resource theorem.",
+  "passed": true,
+  "schema_version": "asmp3_interactive_covering_frontier_verification_v2_15"
+}

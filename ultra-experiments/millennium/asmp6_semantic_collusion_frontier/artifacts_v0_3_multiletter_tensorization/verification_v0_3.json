@@ -1,0 +1,308 @@
+{
+  "bindings": {
+    "manifest_v0_3.json": "49c6cd4a00da73744b0e1d5a9c45941fd1a4aa2cca6c1d5f1b3af8cb9a37447e",
+    "result_v0_3.json": "fad139727d9fc50c864daf50f8f080acd28e196068c78e8bfbb8d31c9af78d29"
+  },
+  "cell_mismatches": [],
+  "claim_boundary": [
+    "finite opaque-symbol probability models only",
+    "uniform iid benign transcript cover only",
+    "payload alphabet exactly {0,1}^n with uniform prior",
+    "exact globally message-averaged full-transcript cover only",
+    "product comparator exactly factors one payload bit and one transcript symbol per coordinate",
+    "passive transcript-only decoder with no key, side information, active auditor, or shared latent variable",
+    "no prefix-conditional, adaptive-audit, learned, linguistic, or semantic channel claim",
+    "no asymptotic capacity, square-root law, tensorization theorem beyond the registered grid, or ASMP-6 resolution claim"
+  ],
+  "controls_match": true,
+  "final_conclusion_layers": {
+    "claim_support": "finite_exact_m2to5_n1to3_uniform_global_transcript_cover_model_only",
+    "measurement_reliability": "independent_closed_form_joint_control_and_source_replay_passed",
+    "metric_robustness": "five_frozen_probe_families_independently_replayed",
+    "operational_decision": "retain_finite_boundary_and_register_stronger_cover_or_active_audit_successor",
+    "task_result": "finite_global_cover_block_advantage_over_registered_product_subclass"
+  },
+  "independent_gates": {
+    "V0_frozen_manifest_binding": true,
+    "V10_resource_observations_within_frozen_limits": true,
+    "V1_exact_source_commit_tree_and_ancestry": true,
+    "V2_result_identity_and_exact_json": true,
+    "V3_registered_cells_reconstructed": true,
+    "V4_joint_rows_columns_and_map_scores_replayed": true,
+    "V5_occupancy_upper_bound_independently_established": true,
+    "V6_product_tensor_formula_replayed": true,
+    "V7_five_metric_probe_families_replayed": true,
+    "V8_n1_and_control_records_replayed": true,
+    "V9_primary_gates_and_preverification_layers_match": true
+  },
+  "joint_replay_failures": [],
+  "manifest_binding": {
+    "canonical_manifest_hash_is_frozen": true,
+    "claim_boundary_is_exact": true,
+    "conclusion_layers_are_exact": true,
+    "identity_is_frozen": true,
+    "probe_ids_are_exact": true,
+    "registered_cells_are_exact": true,
+    "replay_command_is_exact": true,
+    "resource_envelope_is_exact": true,
+    "semantic_core_is_exact": true,
+    "source_set_is_exact": true,
+    "write_once_policy_is_exact": true
+  },
+  "metric_probe_ids": [
+    "P1_message_and_transcript_relabeling",
+    "P2_odd_alphabet_block_sensitivity",
+    "P3_encoder_class_inclusion",
+    "P4_global_only_parity_pathology",
+    "P5_per_message_cover_blind_control"
+  ],
+  "metric_probes_match": true,
+  "occupancy_certificates": [
+    {
+      "balanced_counts": [
+        1,
+        1
+      ],
+      "balanced_success": "1/1",
+      "cell_id": "m2_n1",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "1/1",
+      "marginal_gain_success": "1/1",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "balanced_success": "1/1",
+      "cell_id": "m2_n2",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "1/1",
+      "marginal_gain_success": "1/1",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "balanced_success": "1/1",
+      "cell_id": "m2_n3",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "1/1",
+      "marginal_gain_success": "1/1",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        2,
+        1
+      ],
+      "balanced_success": "5/6",
+      "cell_id": "m3_n1",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "5/6",
+      "marginal_gain_success": "5/6",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "balanced_success": "11/12",
+      "cell_id": "m3_n2",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "11/12",
+      "marginal_gain_success": "11/12",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "balanced_success": "67/72",
+      "cell_id": "m3_n3",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "67/72",
+      "marginal_gain_success": "67/72",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        2,
+        2
+      ],
+      "balanced_success": "1/1",
+      "cell_id": "m4_n1",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "1/1",
+      "marginal_gain_success": "1/1",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "balanced_success": "1/1",
+      "cell_id": "m4_n2",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "1/1",
+      "marginal_gain_success": "1/1",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "balanced_success": "1/1",
+      "cell_id": "m4_n3",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "1/1",
+      "marginal_gain_success": "1/1",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        3,
+        2
+      ],
+      "balanced_success": "9/10",
+      "cell_id": "m5_n1",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "9/10",
+      "marginal_gain_success": "9/10",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        7,
+        6,
+        6,
+        6
+      ],
+      "balanced_success": "97/100",
+      "cell_id": "m5_n2",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "97/100",
+      "marginal_gain_success": "97/100",
+      "pass": true
+    },
+    {
+      "balanced_counts": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        15,
+        15,
+        15
+      ],
+      "balanced_success": "197/200",
+      "cell_id": "m5_n3",
+      "discrete_concavity": true,
+      "exchange_violations": [],
+      "formula_success": "197/200",
+      "marginal_gain_success": "197/200",
+      "pass": true
+    }
+  ],
+  "occupancy_upper_bound_failures": [],
+  "pass": true,
+  "preverification_layers_match": true,
+  "primary_gates_valid": true,
+  "product_formula_failures": [],
+  "protocol_id": "ASMP6-MULTILETTER-TENSORIZATION-v0.3",
+  "resource_observations_valid": true,
+  "result_semantic_checks": {
+    "claim_boundary_is_exact": true,
+    "exact_json_firewall": true,
+    "preverification_layers_are_exact": true,
+    "primary_gates_are_exact_and_true": true,
+    "result_fields_are_exact": true,
+    "result_identity_is_exact": true,
+    "source_binding_shape_is_valid": true
+  },
+  "schema_version": "asmp6_multiletter_tensorization_verification_v0_3",
+  "source_binding_error": "",
+  "source_binding_replay": {
+    "repo_relative_directory": "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_3_multiletter_tensorization",
+    "source_commit": "f27a7baf710c25629212c74713a96b4c781a4463",
+    "source_commit_is_ancestor_of_head": true,
+    "source_commit_type": "commit",
+    "source_files": {
+      "PROTOCOL_v0_3.md": {
+        "git_blob_oid": "31ba4444e3c1a1207438d6a7368a54a690f77e48",
+        "sha256": "4f7823f71b506d6c011b063e4a4cda3d6e4dd7512f763fb556eaddd922648b5b"
+      },
+      "README.md": {
+        "git_blob_oid": "12b7f929826a2e21c3fa30cc6cff7ad1f8a19401",
+        "sha256": "322ed44427870e82faaa92759a76cccb1849697ee26c22240811196bcc562641"
+      },
+      "SOURCE_FREEZE.md": {
+        "git_blob_oid": "95359ebc7d97af72f8ff5b5f1a0eea244d6798f4",
+        "sha256": "ee3df1d6da81b8e4419b0ba06dadfc81339ce7f5229cc4702282ce11870c3893"
+      },
+      "manifest_v0_3.json": {
+        "git_blob_oid": "ba628b6c0f602a5a51fef9f1d686bbe75f0a933e",
+        "sha256": "49c6cd4a00da73744b0e1d5a9c45941fd1a4aa2cca6c1d5f1b3af8cb9a37447e"
+      },
+      "multiletter_tensorization.py": {
+        "git_blob_oid": "b6eda5166c8133a9212aede659f684c5ecfb1f35",
+        "sha256": "a97e4b5124bf5929369e12e8a09172bb3006ceb9b323f79feb836e8eb2a8c2d9"
+      },
+      "run.py": {
+        "git_blob_oid": "ec88aae3a2a082057e5b3683f66599d4027e1863",
+        "sha256": "9846ac2d9fc163f9954587211aafe1dab1aaf0cc3d77e651876f47b06b964153"
+      },
+      "test_multiletter_tensorization.py": {
+        "git_blob_oid": "079b78e926fda6592e3e7f7f15b6f74fcf107cf5",
+        "sha256": "6aa228e5c37648aae56586eccdbc7c3ee930a6731b3d07f25c1529a4bf49cdc2"
+      },
+      "verify_independent.py": {
+        "git_blob_oid": "016d0af11da32b112ebd86b98a714e773c563b43",
+        "sha256": "4a3f3ccacab6f7bb98103b5869037367e603621269124a6aceda0715caa3f7a8"
+      }
+    }
+  }
+}

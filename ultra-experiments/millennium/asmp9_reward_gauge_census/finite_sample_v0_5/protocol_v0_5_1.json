@@ -1,0 +1,39 @@
+{
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-v0.5.1",
+  "status": "prospective_execution_amendment",
+  "supersedes_execution_protocol": "ASMP-9-FINITE-SAMPLE-v0.5",
+  "scientific_changes_from_v0_5": [],
+  "burned_development": {
+    "exact_cells": ["d2_B1_to_B6", "d3_B3_to_B4"],
+    "adjacency_bounds": [3, 32],
+    "information_design_bounds": [3, 6]
+  },
+  "exact_cells": [
+    {"dimension": 2, "bounds": [7, 8, 9, 10, 11, 12]},
+    {"dimension": 3, "bounds": [5]}
+  ],
+  "random_cells": [
+    {"dimension": 4, "bound": 8, "count": 2048, "seed": 95041},
+    {"dimension": 8, "bound": 16, "count": 2048, "seed": 95042},
+    {"dimension": 16, "bound": 32, "count": 2048, "seed": 95043}
+  ],
+  "noisy_cells": [
+    {"dimension": 2, "bound": 7, "eta": 0.1, "alpha": 0.01, "count": 512, "seed": 95101},
+    {"dimension": 3, "bound": 5, "eta": 0.25, "alpha": 0.01, "count": 512, "seed": 95102},
+    {"dimension": 4, "bound": 8, "eta": 0.4, "alpha": 0.01, "count": 256, "seed": 95103}
+  ],
+  "information_design": {
+    "dimension": 2,
+    "bounds": [7, 8],
+    "etas": [0.1, 0.25],
+    "zero_tolerance": 1e-10,
+    "positive_tolerance": 1e-10
+  },
+  "farey_adjacency_bounds": {"minimum": 33, "maximum": 64},
+  "resources": {
+    "cpu_seconds": 600,
+    "ram_bytes": 4294967296,
+    "gpu": false
+  },
+  "success_verdict": "finite_sample_width_and_adaptivity_theorem_implementation_verified"
+}

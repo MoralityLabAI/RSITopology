@@ -1,0 +1,30 @@
+{
+  "schema_version": "asmp4_positive_dimensional_nhim_definition_receipt_v0_12",
+  "audit_scope": "Classical diffeomorphism NHIM definition applied to the positive-dimensional cylinder extension",
+  "source": {
+    "id": "berger_bounemoura_2011",
+    "title": "A geometrical proof of the persistence of normally hyperbolic submanifolds",
+    "authors": ["Pierre Berger", "Abed Bounemoura"],
+    "primary_pdf_url": "https://arxiv.org/pdf/1109.3280",
+    "doi_url": "https://doi.org/10.48550/arXiv.1109.3280",
+    "local_pdf_sha256": "3823c4041158eac0b4d587327b1895321f857512bb2a64ff83e2c036089b7f02",
+    "checked_pdf_pages": [3, 4],
+    "visual_review": true,
+    "checked_items": ["Definition 1", "Theorem 2.1"]
+  },
+  "mapped_conditions": {
+    "smooth_ambient_manifold": true,
+    "C1_diffeomorphism": true,
+    "closed_compact_connected_positive_dimensional_submanifold": true,
+    "invariance": true,
+    "invariant_bundle_splitting": true,
+    "normal_hyperbolicity": true,
+    "tangent_domination": true
+  },
+  "bounded_inference": "The cylinder map is classically normally expanded at the invariant circle under Definition 1, with Es=0, unstable inverse norm 2/3, tangent norm 1, and lambda 3/4.",
+  "nonclaims": [
+    "The positive-dimensional circle still has zero ambient volume and does not prove positive-volume confinement.",
+    "ASMP-4 does not itself select this classical diffeomorphism definition or the cylinder class.",
+    "The definition audit is not external expert review and does not prove the full variational conjecture."
+  ]
+}

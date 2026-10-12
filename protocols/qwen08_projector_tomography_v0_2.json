@@ -1,0 +1,130 @@
+{
+  "protocol_id": "qwen08_projector_tomography_v0_2",
+  "schema_version": "2.0.0-draft",
+  "status": "draft_for_external_review_not_frozen",
+  "drafted_on": "2026-07-19",
+  "amends": "qwen08_projector_tomography_v0_1",
+  "motivation": "Remove the v0.1 S0 scale confound, make the fold-sign result primary rather than rhetorical, and separate alpha calibration from untouched confirmation outcomes.",
+  "claim_boundary": "This successor can test whether magnitude-matched, identity-selected local projectors exhibit a context-stable and geometry-specific interaction algebra on frozen Qwen-0.8B graph tasks. It cannot authorize signed or disparate weight edits, establish a global high-rank fiber, demonstrate compactification, or provide evidence of recursive self-improvement.",
+  "invariant_levels": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "new_invariant_levels": false,
+  "frozen_sources": {
+    "parent_protocol": "protocols/qwen08_projector_tomography_v0_1.json",
+    "parent_registration_sha256": "f6b106ba2329255ed69e51a50af19519688c425e60d1220df93118ab5891618b",
+    "parent_analysis_sha256": "49edd321d9879d624ae151ae700f98c4bee302a89bb13cd4fa0c94fe26d58d55",
+    "prompt_manifest": "protocols/qwen08_dense_local_prompt_manifest_v0_1.json",
+    "projectors": "Reuse the exact selected and orthogonal matched-random directions from the v0.1 registration; no basis refit is permitted.",
+    "model_and_runtime": "Identical model bytes, NF4 runtime, hooks, layers, centering, and final-prompt-token intervention as v0.1."
+  },
+  "two_stage_design": {
+    "stage_C0_scale_calibration": {
+      "prompt_universe": "The 72 v0.1 evaluation prompts, geometry_validation rows with within_half_index 0 through 7. These outcomes are already revealed and may never enter confirmation gates.",
+      "selected_arm": {
+        "alpha": 1.0,
+        "source": "Rerun the complete selected-arm cube using the v0.2 primary answer-margin score. The v0.1 log-probability cube is planning evidence only and cannot enter calibration arithmetic."
+      },
+      "matched_random_alpha_grid": [
+        0.5,
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "matched_random_measurement": "Run the complete 16-mask cube at every registered alpha using the v0.2 primary answer-margin score. No v0.1 outcome is reused in scale matching.",
+      "scale_statistic_formula_ascii": "scale(arm, alpha) = sqrt(mean_{prompt, mask != 0}((score(prompt, mask) - score(prompt, 0))^2))",
+      "selection_rule": "Choose the random alpha minimizing abs(log(scale_random(alpha) / scale_selected(1.0))). Break exact ties toward the smaller alpha.",
+      "calibration_validity": {
+        "minimum_ratio": 0.8,
+        "maximum_ratio": 1.25,
+        "rule": "The selected/random scale ratio at the chosen alpha must lie in [0.8, 1.25].",
+        "failure_state": "not_evaluated_scale_match_failed"
+      },
+      "seal_before_confirmation": [
+        "all calibration work-unit hashes",
+        "scale statistic for every alpha",
+        "chosen alpha and deterministic tie-break receipt",
+        "chosen-alpha cube hash",
+        "confirmation prompt IDs",
+        "confirmation runner and analyzer hashes",
+        "exact grouped folds and gate table"
+      ]
+    },
+    "stage_C1_untouched_confirmation": {
+      "prompt_universe": "The 72 previously unused graph_reachability geometry_validation prompts with within_half_index 8 through 15, eight prompts in each of nine frozen subconditions.",
+      "outcome_separation": "No C1 prompt score, logit, generation, or causal delta may be read before the C0 selection receipt is hashed and committed.",
+      "arms": {
+        "selected": "Complete 16-mask cube at alpha 1.0.",
+        "matched_random": "Complete 16-mask cube at the sealed C0 alpha."
+      },
+      "primary_score": {
+        "name": "correct_vs_incorrect_teacher_forced_answer_log_likelihood_margin",
+        "definition": "For expected YES, score = log P(ANSWER=YES | prompt) - log P(ANSWER=NO | prompt); reverse the terms for expected NO. Use identical prefix handling and completion-token aggregation in both terms.",
+        "reason": "A paired answer margin reduces dependence on a single probability-floor scale while remaining behaviorally interpretable."
+      },
+      "continuity_score": "The v0.1 mean log probability of the correct registered completion is reported secondary and cannot replace the primary margin."
+    }
+  },
+  "analysis": {
+    "complete_design": "All 16 masks identify the full Boolean multilinear response through order four; no lower-order truncation is used to estimate the exact per-prompt coefficients.",
+    "cluster_unit": "subcondition_id",
+    "folds": "Nine leave-one-subcondition-out folds, sealed before C1 outcomes.",
+    "degree2_increment": "For each fold, fit global degree<=1 and degree<=2 response models on the other eight subconditions and compare prediction SSE on the held-out subcondition.",
+    "fold_sign_test": {
+      "success_rule": "At least 8 of 9 folds have strictly positive degree-2 SSE reduction; the exact one-sided sign-test p-value is at most 10/512 = 0.01953125.",
+      "failure_rule": "At least 8 of 9 folds have strictly negative degree-2 SSE reduction.",
+      "ties": "Exactly zero counts as neither sign and cannot help either boundary."
+    },
+    "aggregate_increment_gate": {
+      "minimum_relative_sse_reduction": 0.02,
+      "role": "A success must clear both the fold-sign gate and this minimum practical effect. Bootstrap intervals are descriptive because nine clusters are thin."
+    },
+    "absolute_higher_order_energy": {
+      "formula_ascii": "E_ge2(prompt) = sum_{S subset {1,2,3,4}, |S| >= 2} coefficient_S(prompt)^2",
+      "specificity_estimand": "Within each subcondition, mean E_ge2(selected) minus mean E_ge2(magnitude_matched_random).",
+      "success_sign_rule": "At least 8 of 9 subcondition differences are strictly positive.",
+      "practical_ratio_rule": "The geometric-mean selected/random E_ge2 ratio must exceed 1.5625, the square of the maximum permitted 1.25 residual scale mismatch.",
+      "zero_handling": "Use a preregistered numerical epsilon equal to machine epsilon times the squared median absolute baseline score; report every epsilon-affected cell."
+    },
+    "forbidden_primary_statistics": [
+      "degree>=2 energy fraction as a selected-vs-random specificity gate",
+      "unmatched-alpha selected-vs-random higher-order energy",
+      "prompt-level bootstrap treating 72 prompts as independent clusters"
+    ]
+  },
+  "gate_sequence": {
+    "C0_scale_match": "Pass only when the frozen alpha-selection rule produces a ratio inside [0.8, 1.25].",
+    "N0_replay": "The no-intervention baseline and duplicate replay must agree within 0.0001 on both registered scores.",
+    "L0_liveness": "Both arms must have full-cube scale at least 0.001 on the primary score; otherwise interaction specificity is not evaluated.",
+    "I1_context_stable_nonadditivity": "Pass only when the 8-of-9 positive fold-sign rule and the 2% aggregate practical margin both pass.",
+    "S0_geometry_specific_absolute_energy": "Pass only when the 8-of-9 paired sign rule and the derived 1.5625 practical ratio both pass.",
+    "full_success": "Requires C0, N0, L0, I1, and S0 all to pass in order.",
+    "stop_rule": "Any failed, invalid, unavailable, or inconclusive upstream gate stops downstream interpretation; no near-enough override."
+  },
+  "resource_contract": {
+    "memory_mb": 6144,
+    "cpu_percent": 50,
+    "io_mb_s": 750,
+    "timeout_seconds_per_stage": 7200,
+    "gpu_allowance_mb": 3440,
+    "checkpoint_every_seconds": 60,
+    "swap_bytes": 0,
+    "batch_size": 8,
+    "resumable_work_unit": "arm x alpha x mask"
+  },
+  "test_receipt_requirement": {
+    "rule": "Every release receipt records the literal pytest command, repository commit, test collection count, pass count, fail count, and exit code.",
+    "minimum_tests": [
+      "alpha selection and tie break",
+      "calibration/confirmation prompt disjointness",
+      "scale-match boundary equality",
+      "8-of-9 fold-sign success and failure boundaries",
+      "absolute-energy computation",
+      "1.5625 derived practical ratio boundary",
+      "outcome seal prevents C1 read before C0 commit"
+    ]
+  }
+}

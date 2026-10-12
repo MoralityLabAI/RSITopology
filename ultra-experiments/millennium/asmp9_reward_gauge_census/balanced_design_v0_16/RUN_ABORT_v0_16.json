@@ -1,0 +1,15 @@
+{
+  "claim_status": "not_evaluated_resource_abort",
+  "execution_head": "b62d61d",
+  "observations": {
+    "output_directory_created": false,
+    "outer_timeout_seconds": 184.04,
+    "process_survived_outer_shell_timeout": true,
+    "process_terminated_after_cap_breach": true
+  },
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16",
+  "registered_wall_cap_seconds": 120,
+  "registration_sha256": "7cbc64758308538ec8572ec0cdd3385bbabc8d41a81be5b0b69193240ccc5e8f",
+  "scientific_gates": "not_evaluated",
+  "stop_reason": "G9_resource_and_scope_failed_before_atomic_output"
+}

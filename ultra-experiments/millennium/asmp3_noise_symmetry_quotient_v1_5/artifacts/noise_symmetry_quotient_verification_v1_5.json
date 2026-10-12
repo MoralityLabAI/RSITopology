@@ -1,0 +1,16 @@
+{
+  "check_count": 7,
+  "checker": "clean_room_orbit_formula_and_small_rule_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_560_quotient_cases_present_in_order": true,
+    "V2_all_formulas_and_saddles_reconstructed": true,
+    "V3_symmetrization_exhaustion_independently_replayed": true,
+    "V4_parent_cross_checks_complete": true,
+    "V5_exponential_compression_witness_reconstructed": true,
+    "V6_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker establishes the coordinate-permutation quotient for the registered hard Hamming-budget game only; it does not certify position-dependent observations, costs, or noise constraints.",
+  "passed": true,
+  "schema_version": "asmp3_noise_symmetry_quotient_verification_v1_5"
+}

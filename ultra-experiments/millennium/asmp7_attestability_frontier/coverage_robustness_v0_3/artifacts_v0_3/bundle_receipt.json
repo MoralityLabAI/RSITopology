@@ -1,0 +1,44 @@
+{
+  "bindings": {
+    "protocol_v0_3.json": "76dbefedfa09c56ed3c50212fcb647f73ffceabb901ce83d43a485e5d1cc3660",
+    "receipt.json": "f22d5e493028c6ec7c5679fb53f9d41fd94296c23c8a23b5c09e817dbf294c70",
+    "result.json": "8277b755f4ee26cfb1df48b9986d252a8102a2f92eb6a6a7afa6d2d3b7134ffa",
+    "source_files": {
+      "PROTOCOL_v0_3.md": "9a09574cd32b4f9522082eec33e1c480bca66c031ff77f259a039028a6e43e41",
+      "README.md": "ed39cc818b49026bd2e38d4b0571aec5c0b923eeb5b3d6b250df80d612ee3445",
+      "coverage_robustness.py": "1b0b3f60e812c4b0a66e7492847494284d00258837555bbaf61860914a498e5d",
+      "protocol_v0_3.json": "76dbefedfa09c56ed3c50212fcb647f73ffceabb901ce83d43a485e5d1cc3660",
+      "run.py": "8c35a5ee4f9363d9d88d8ee177bbcaee19bbc7d880e0b601331101971756d3e3",
+      "test_coverage_robustness.py": "5c7d90f50b728a7271a065bb461974f11d309c714b6965bc94c88cc6e6e8ffc3",
+      "verify_result.py": "264311a8372b71bf93ed53789c15e710c2112889f87ebb7b8924104e492cbbc2"
+    },
+    "verification.json": "e741bf99191e4de1f77ac25ebb170efb9b357659e6c424afd3839751450bf07a"
+  },
+  "derived_conclusion_layers": {
+    "claim_boundary": "This result concerns a 16-point Boolean registry, fresh per-challenge policy-independent coverage events, an execution-dependent exact-c-point selective mask fixed across challenges, fresh fair fallback bits, and independent challenges. It does not cover an execution-fixed random independent mask, establish real meter coverage, identify a deployment threshold, characterize adaptive history-dependent suppression, prove transformation-universal attestability, or resolve ASMP-7.",
+    "claim_support": {
+      "all_pass": true,
+      "claim": "On the frozen Boolean grid, selective suppression can create an exact common-law region and otherwise weakly increases audit burden relative to policy-independent coverage.",
+      "status": "registered_finite_claim_supported"
+    },
+    "measurement_reliability": {
+      "all_pass": true,
+      "gate_names": [
+        "E0_exact_adjacency",
+        "R0_full_coverage_reproduction",
+        "B0_bruteforce_small_cases"
+      ],
+      "status": "reliable_exact_finite_measurement"
+    },
+    "operational_decision": {
+      "reason": "synthetic finite registry with no validated real-meter or deployment bridge",
+      "status": "no_deployment_decision_authorized"
+    },
+    "task_result": {
+      "basis": "exact comparison of policy-independent coverage and adversarial selective suppression",
+      "status": "selective_suppression_weakens_registered_attestability"
+    }
+  },
+  "pass": true,
+  "schema_version": "asmp7_coverage_robustness_bundle_receipt_v0_3_1"
+}

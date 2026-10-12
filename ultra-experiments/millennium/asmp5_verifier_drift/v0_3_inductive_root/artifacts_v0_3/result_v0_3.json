@@ -1,0 +1,1183 @@
+{
+  "cells": [
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "self_endorsement",
+      "unsafe_depth": null,
+      "width": 2,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": null,
+      "width": 2,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 0,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 2
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 2,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 2,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 1,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 2
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 2,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 2,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 2,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 2
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "self_endorsement",
+      "unsafe_depth": null,
+      "width": 3,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": null,
+      "width": 3,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 0,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 3
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 3,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 3,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 1,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 3
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 3,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 3,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 2,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 3
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "self_endorsement",
+      "unsafe_depth": null,
+      "width": 4,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": null,
+      "width": 4,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 0,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 4
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 4,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 4,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 1,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 4
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 4,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 4,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 2,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 4
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "self_endorsement",
+      "unsafe_depth": null,
+      "width": 6,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": null,
+      "width": 6,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 0,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 6
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 6,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 6,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 1,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 6
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 6,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 6,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 2,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 6
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "self_endorsement",
+      "unsafe_depth": null,
+      "width": 8,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": null,
+      "radius": 0,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": null,
+      "width": 8,
+      "witness": null
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 6,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 0,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 0,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 8
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 8,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 1,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 8,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 18,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 1,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 1,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 8
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "self_endorsement",
+      "unsafe_depth": 2,
+      "width": 8,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": false,
+      "arbitrary_time_liveness": null,
+      "radius": 2,
+      "rule": "pairwise_agreement",
+      "unsafe_depth": 2,
+      "width": 8,
+      "witness": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 7
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 7,
+          "to_behavior": 3,
+          "to_checker": 7
+        }
+      ]
+    },
+    {
+      "all_depth_safety": true,
+      "arbitrary_time_liveness": true,
+      "certificate": {
+        "base": "initial_checker_subset_of_root",
+        "consequence": "root_subsets_reject_both_hazard_proof_classes",
+        "one_step_closure": {
+          "accepted_edges": 24,
+          "base_case": true,
+          "checked_edges": 256,
+          "pass": true,
+          "radius": 2,
+          "violations": []
+        },
+        "step": "accepted_successor_checker_subset_of_root"
+      },
+      "liveness_cycle": [
+        {
+          "from_behavior": 0,
+          "from_checker": 3,
+          "to_behavior": 2,
+          "to_checker": 3
+        },
+        {
+          "from_behavior": 2,
+          "from_checker": 3,
+          "to_behavior": 0,
+          "to_checker": 3
+        }
+      ],
+      "radius": 2,
+      "rule": "root_refinement",
+      "unsafe_depth": null,
+      "width": 8
+    }
+  ],
+  "claim_boundary": [
+    "no claim about replaceable or learned root checkers",
+    "no claim of infinitely many distinct behavior states",
+    "no ASMP-5 resolution claim"
+  ],
+  "claim_support": "bounded_exact_grammar_only",
+  "gates": {
+    "G0_root_table": true,
+    "G1_inductive_safety": true,
+    "G2_arbitrary_time_liveness": true,
+    "G3_unrooted_separation": true,
+    "G4_metric_robustness": true
+  },
+  "induction_certificate": {
+    "closures": [
+      {
+        "accepted_edges": 6,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 0,
+        "violations": []
+      },
+      {
+        "accepted_edges": 18,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 1,
+        "violations": []
+      },
+      {
+        "accepted_edges": 24,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 2,
+        "violations": []
+      },
+      {
+        "accepted_edges": 24,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 3,
+        "violations": []
+      },
+      {
+        "accepted_edges": 24,
+        "base_case": true,
+        "checked_edges": 256,
+        "pass": true,
+        "radius": 4,
+        "violations": []
+      }
+    ],
+    "pass": true,
+    "radii_complete": "radii_0_through_4_cover_all_four_bit_checker_distances",
+    "transition_truth_table": {
+      "allowed_count": 1088,
+      "checker_count": 16,
+      "radii": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "row_count": 10240,
+      "schema": "root_refinement_transition_truth_table_v1",
+      "sha256": "fecf0df05e101c21713118b32901810c2bccb639d390c188eacd3ba1d19ca925",
+      "template_width": 2
+    }
+  },
+  "measurement_reliability": "pending_independent_replay",
+  "metric_robustness": {
+    "anti_gaming": {
+      "pass": true,
+      "probe": "matched_unrooted_failure_remains_live"
+    },
+    "clean_control": {
+      "pass": true,
+      "probe": "safe_certificate_is_not_deadlock"
+    },
+    "invariance": {
+      "checked_edges": 30720,
+      "pass": true,
+      "probe": "permute_representative_nonhazard_coordinates"
+    },
+    "monotonicity": {
+      "pass": true,
+      "probe": "all_horizons_and_checker_radii",
+      "radii": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "sensitivity": {
+      "pass": true,
+      "probe": "root_hazard_acceptance_mutation_yields_depth_one_failure"
+    }
+  },
+  "operational_decision": "run_independent_replay",
+  "protocol_id": "ASMP5-INDUCTIVE-ROOT-v0.3",
+  "schema_version": "asmp5_inductive_root_result_v0_3",
+  "task_result": "all_depth_rooted_safety_with_arbitrary_time_liveness",
+  "transition_relation": {
+    "allowed_count": 1088,
+    "checker_count": 16,
+    "radii": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "row_count": 10240,
+    "schema": "root_refinement_transition_truth_table_v1",
+    "sha256": "fecf0df05e101c21713118b32901810c2bccb639d390c188eacd3ba1d19ca925",
+    "template_width": 2
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "confirmation_grid": {
+    "nuisance_one_probabilities": ["1/2", "2/3"],
+    "strengths": [
+      ["5/7", "2/7"],
+      ["7/8", "1/8"],
+      ["5/8", "3/8"]
+    ]
+  },
+  "implementation_commit": "551f9b4addc90709718a358a4f76965673e14cdc",
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38",
+    "elapsed_seconds": 65.89,
+    "status": "pass",
+    "tests_passed": 16
+  },
+  "protocol_id": "asmp9-decision-relative-access-v0.38",
+  "registered_at_utc": "2026-07-29T09:54:46Z",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "sealed_files": {
+    "DEFINITION_AUDIT_v0_38.md": "8a5cb65f2f6d23a8b386c6d17e1d8851a84471efc702f4ef32fee3244510f040",
+    "PRIOR_ART_GATE_v0_38.md": "a9aed59e6316d0568adb9cc9c4fa7a8ffef01e5713eb50520102210786138a33",
+    "PROTOCOL_v0_38.md": "337183191ff82fe57e76a1679ef3cc057ca828bd3e5b0f581c20f80c96ea9bf9",
+    "THEOREM_DRAFT_v0_38.md": "3a250336be8d5a17688fde34d8bc8e192d7fe0d56a17c2c53606c5296bc221ca",
+    "confirmation.py": "5604d00c4785bfd31bb7848afc1554f418bf0c5ac0b5c1a8d7050b79035823a7",
+    "environment_lock_v0_38.json": "1c241c9dcd1983d085238eb874e08508161c6317ea5a645a35263d792ce8b851",
+    "execute_confirmation.py": "684dd273a859d66c27b2c8acc4f77a522ed90a6a45d920501ef434226833f10b",
+    "protocol_v0_38.json": "bb73641a9154e5698b045cc8ba502b92f28a124d81ae56b53ae3ccda9a4b7542",
+    "relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "test_confirmation_structure.py": "e8a0b84edece8aad4ab1c22146938e78fe3e0b26bbcb49ed7ef099dcf1bc30c4",
+    "test_execute_confirmation.py": "589d5ed3a04edd16a71b9d01e7365139085ef4eca071a71c5034d28577beba2d",
+    "test_relative_deficiency.py": "caee515db496a2d453eeca378336998e68425027e568c1930bd9dcf7052e3c7a",
+    "test_reward_fixture.py": "8e0205bf0bcc9c39a491a7962d5e3e13892e5a94e9f7bf701aecd8d49ece4751",
+    "test_strength_family.py": "e87eff2baea1fa80b7c866865316f21a8cb2526d200aed674901fc658fa95d66",
+    "test_value_gap_witness.py": "e2f7489d884d10b5de18d62deebe13af336da7f1b0bb5daafcc5b2fc7946c5be"
+  },
+  "status": "registered_prereveal",
+  "version": "0.38"
+}

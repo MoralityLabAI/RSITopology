@@ -1,5 +1,14 @@
 # Silico execution brief: patchwise behavioral identity in Qwen3-1.7B
 
+> **v0.3/Gödel Globes amendment (2026-07-16).** For the fresh identity-geometry
+> capture, use `protocols/godel_globes_falsification_v0_1.json` and its sealed
+> 1,152-prompt manifest. The primary object is now cross-fitted between-class
+> scatter; covariance/Gram output is reported-ungated. The mandatory instrument
+> calibration and lineage-first `beta_1` gate are enforced by the repository,
+> and the loop axes are runtime precision × context shard rather than adjacent
+> depth. This older brief remains the causal-handoff contract; it does not
+> override the new discovery object, negative-control cap, or bifiltration.
+
 ## Role
 
 Act as a target-blind mechanistic-interpretability executor. Determine whether the failed global edit-atlas hypothesis has a narrower, measurable successor: behavior-family-local high-dimensional structures whose identity persists across prompts and model sites well enough to define causally useful edit coordinates.

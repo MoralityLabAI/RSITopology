@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-NOISE-SYMMETRY-QUOTIENT-v1.5",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_adaptive_noise_sequence_v1_4/ADAPTIVE_NOISE_THEOREM_v1_4.md": {
+      "bytes": 5931,
+      "sha256": "299EF04D9E99C7E2B5DF118F3FD039BE2B018BE39C2005C03E1B378406C187EA"
+    },
+    "../asmp3_adaptive_noise_sequence_v1_4/RELEASE_MANIFEST_v1_4.json": {
+      "bytes": 2946,
+      "sha256": "C54BE6A0E332EAE0D91963853D2F1141C018CE99160C589246B12FF456A4C077"
+    },
+    "../asmp3_adaptive_noise_sequence_v1_4/artifacts/adaptive_noise_sequence_v1_4.json": {
+      "bytes": 204580,
+      "sha256": "ED54D40E3892B96EAF8B94960A7ABD99742F3AA6DC6ECC528A865DADADE6EC47"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_5.md": {
+      "bytes": 1472,
+      "sha256": "12651FFB1328D0929DEF549EB97368FC90C23944EFF8E6DD505EAE9D88871CCF"
+    },
+    "NOISE_SYMMETRY_QUOTIENT_THEOREM_v1_5.md": {
+      "bytes": 5691,
+      "sha256": "CBDCF897CC47CDC62FCA88E06466208DEEB4AF16432B34ABF29CE9CC03BD8C92"
+    },
+    "README.md": {
+      "bytes": 783,
+      "sha256": "C8155C4FA41DA85C5217BBDB483CA1333AF12F60BC7DF13ED692519EC449756C"
+    },
+    "artifacts/noise_symmetry_quotient_v1_5.json": {
+      "bytes": 583183,
+      "sha256": "408CBB65CD2D41DDB411927204A38872BDA1450B8D03FE90306D72F857BB33CF"
+    },
+    "artifacts/noise_symmetry_quotient_verification_v1_5.json": {
+      "bytes": 786,
+      "sha256": "9A5333C5715877E1A758B2B663320DCB607853CA260DAFAB0FB93BCB25EFB51B"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2473,
+      "sha256": "50541EFB30BF5F7FC96536E41A892F8AEB77C40CDD6D10F37ECA641EB44DE749"
+    },
+    "noise_symmetry_quotient.py": {
+      "bytes": 9399,
+      "sha256": "DA817D6AA492B25C7654A93024D2FA4B486D550FD7DDC3152C4BE96FD8453848"
+    },
+    "run_noise_symmetry_quotient.py": {
+      "bytes": 834,
+      "sha256": "CBCE9CDCB9B1C99B90F621EEDE9FB1B9BC3CC04B5A5B7C1AC801B3DA0E275247"
+    },
+    "test_noise_symmetry_quotient.py": {
+      "bytes": 4633,
+      "sha256": "8B608BB140C7D3D7858F5E9CDC4C482C5B76A7206E348FCA9542E52B0F783614"
+    },
+    "verify_noise_symmetry_quotient.py": {
+      "bytes": 8540,
+      "sha256": "487E78832763B3514275E9D7F95E64422D3FB80AA47719C7EBAF0F591B612A06"
+    }
+  },
+  "release_status": "exact_permutation_quotient_phase",
+  "schema_version": "asmp3_noise_symmetry_quotient_release_v1_5"
+}

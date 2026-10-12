@@ -1,0 +1,109 @@
+{
+  "adaptive_h2": {
+    "deficiency_to_full": {
+      "epsilon": "0",
+      "reference_vector": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_risk": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_weights": [
+        "1"
+      ]
+    },
+    "upper_generators": 1,
+    "zero_risk": true
+  },
+  "fixture": "four_target_branching_identification",
+  "frozen_development_prediction": {
+    "adaptive_h2_deficiency": "0",
+    "nonadaptive_h2_deficiency": "1/2",
+    "nonadaptive_h3_deficiency": "0"
+  },
+  "nonadaptive_h2": {
+    "deficiency_to_full": {
+      "epsilon": "1/4",
+      "reference_vector": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_risk": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "source_weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ]
+    },
+    "upper_generators": 4,
+    "zero_risk": false
+  },
+  "nonadaptive_h3": {
+    "deficiency_to_full": {
+      "epsilon": "0",
+      "reference_vector": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_risk": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_weights": [
+        "1"
+      ]
+    },
+    "upper_generators": 1,
+    "zero_risk": true
+  },
+  "phase": "burned_development",
+  "prediction_match": {
+    "adaptive_h2": true,
+    "nonadaptive_h2": false,
+    "nonadaptive_h3": true
+  },
+  "query_signatures": {
+    "left": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "right": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "root": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "witness_policy": {
+    "if_0": "left",
+    "if_1": "right",
+    "step_1": "root",
+    "worst_case_queries": 2
+  }
+}

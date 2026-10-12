@@ -1,0 +1,86 @@
+{
+  "claim_boundary": "Finite bounds-aware crossover surface for the transparent parity oracle only.",
+  "claim_grid": {
+    "alpha": "1/20",
+    "degrees": [
+      3,
+      4
+    ],
+    "dimensions": [
+      13,
+      15,
+      17
+    ],
+    "expected_counts": {
+      "brackets": 18,
+      "cost_cells": 144,
+      "covering_cells": 48,
+      "metric_records_per_cost_cell": 5,
+      "robustness_probes_per_cost_cell": 4
+    },
+    "flip_rates": [
+      "1/20",
+      "3/20",
+      "1/4"
+    ],
+    "protocol_id": "asmp11.intermediate_width_crossover.v0.2.1",
+    "release_id": "asmp11.intermediate_width_crossover.v0.2.1.2",
+    "resource_policy": {
+      "execution": "sequential_cpu_only",
+      "hard_wall_seconds_per_cell": 15,
+      "max_candidate_blocks_per_cell": 30000,
+      "max_greedy_rounds_per_cell": 4096,
+      "max_ram_bytes": 4294967296,
+      "max_total_wall_seconds": 900
+    },
+    "sample_cap": 4096,
+    "status": "registration_required_before_execution",
+    "target_power": "9/10",
+    "width_rule": {
+      "3": "every integer s with 3 < s < n-3",
+      "4": "every integer s with 4 < s < n-2"
+    }
+  },
+  "manifest_path": "experiment_v0_2_1.json",
+  "manifest_sha256": "79accaecfcb2d807c8b2873aefb709f2cbabb539c2c5378194142ecc5108e3f9",
+  "output_policy": "write_once_non_aliasing",
+  "prior_anchor_path": "prior_anchor_v0_2.json",
+  "prior_anchor_sha256": "0731492d15a21d99b721e4d6d434b1f874019973bf2901b14efd1f5f9c683d07",
+  "proposed_asmp_id": "ASMP-11",
+  "protocol_id": "asmp11.intermediate_width_crossover.v0.2.1",
+  "registered_at_utc": "2026-08-03T22:58:02.928579+00:00",
+  "release_id": "asmp11.intermediate_width_crossover.v0.2.1.2",
+  "schema_version": "asmp11_intermediate_crossover_registration_v0_2_1_2",
+  "source_commit": "1b1bcd80af3880e5165176cf12af3e1e2e109873",
+  "source_git_blob_oids": {
+    "PROTOCOL_v0_2_1.md": "19eedca05e7bca2c61544d1bbfb80cc1cbba14d4",
+    "README.md": "c563048ab532f988f5fcd0a238387b22c31dd002",
+    "SERIALIZATION_REPAIR_v0_2_1_1.md": "778a355f7a35defe89049addb642fc5b63729a61",
+    "SOURCE_HARDENING_v0_2_1_2.md": "ac8f5f824b295b774bc2286704c0bbdcfa9e9dea",
+    "build_registration.py": "686d76c719f1822e3ae8918c11576005c4808023",
+    "crossover_frontier.py": "a53a37997786a8d6c97c7a6553681c064778b969",
+    "experiment_v0_2_1.json": "5acf5ee2032eba86f7cb3e4c81e40db59f55466c",
+    "prior_anchor_v0_2.json": "9968c45c7d75d37ff1e8de907ea20c6e196d0987",
+    "release_contract.py": "2092030c7446db475dbed307e10ac61bdb988590",
+    "run.py": "7498fb92a454f3383f27014c8897f9b54b051c70",
+    "synthesize_receipt.py": "7e632868bc20ce5394eae3a800ced5fde3fccb41",
+    "test_crossover_frontier.py": "5928b34fd75fe6fb0e5c7da6b24e6075926790cd",
+    "verify_result.py": "03c32d665c0d4b0689c6f38e082a3ed875204167"
+  },
+  "source_hashes": {
+    "PROTOCOL_v0_2_1.md": "823a7066f2a68de1b651fcab73a3badd80905a269009b914856c8d0c779fca3e",
+    "README.md": "b6d766f186b41cf405257c1bb4832248c333299cb22d8feae5e5c79235ace8ec",
+    "SERIALIZATION_REPAIR_v0_2_1_1.md": "2a3495106369b3d711a4d550cac7cc66d862e9dec618e8cfa4ab698281394a37",
+    "SOURCE_HARDENING_v0_2_1_2.md": "ed7843ccdf8f22c12b22241b6b379b5d70287b0d71354267f555e255a463da3b",
+    "build_registration.py": "59da05743bfb50ec781be0bca74cc5cf8fdb7ef7192df332c2c4c81b2a687f07",
+    "crossover_frontier.py": "be34db336bcd378a2c5bd0e729891a418cc3eda390aa427e071530752f69b95a",
+    "experiment_v0_2_1.json": "79accaecfcb2d807c8b2873aefb709f2cbabb539c2c5378194142ecc5108e3f9",
+    "prior_anchor_v0_2.json": "0731492d15a21d99b721e4d6d434b1f874019973bf2901b14efd1f5f9c683d07",
+    "release_contract.py": "d2b5882498022b85146098b0fd7451d78ddc9ce01ba830283bf8fec534d718ed",
+    "run.py": "4ace9d8c1019f7087731acf112f3188c41d2b264187c1749354e4f82c0a1f0f0",
+    "synthesize_receipt.py": "6a3a8a0eef204d6a7d4f18e40a914534e47a671e058d14045b6c0b5293d06bb0",
+    "test_crossover_frontier.py": "6483fedd2adb6b6b9bff2125589aaf57f7bbd68e577031048640d8ecda5098fb",
+    "verify_result.py": "90a6538a02e76f906f80b134e9f441ad401dd4c43980bdafc2a49474ae62a818"
+  },
+  "status": "prospective_registration_before_claim_grid_execution"
+}

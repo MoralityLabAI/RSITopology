@@ -1,0 +1,69 @@
+{
+  "check_count": 15,
+  "checks": {
+    "all_registered_gates_pass": false,
+    "independent_microtrial": true,
+    "octahedral_r2": true,
+    "octahedral_r3": true,
+    "octahedral_r5": true,
+    "registration_hash": true,
+    "result_hash": true,
+    "sealed_hashes": true,
+    "verdict": false,
+    "wagner_r2": true,
+    "wagner_r3": true,
+    "wagner_r5": true,
+    "wheel_6_r2": true,
+    "wheel_6_r3": true,
+    "wheel_6_r5": true
+  },
+  "independent_microtrial": "13727/16384",
+  "independent_results": {
+    "octahedral": {
+      "2": {
+        "availability": "7980043/8388608",
+        "tutte_value": "15960086/243"
+      },
+      "3": {
+        "availability": "34256330923/34359738368",
+        "tutte_value": "68512661846/16807"
+      },
+      "5": {
+        "availability": "576454139336802091/576460752303423488",
+        "tutte_value": "1152908278673604182/28629151"
+      }
+    },
+    "wagner": {
+      "2": {
+        "availability": "388753/524288",
+        "tutte_value": "12440096/2187"
+      },
+      "3": {
+        "availability": "1035352359/1073741824",
+        "tutte_value": "66262550976/823543"
+      },
+      "5": {
+        "availability": "9002570981268699/9007199254740992",
+        "tutte_value": "1152329085602393472/27512614111"
+      }
+    },
+    "wheel_6": {
+      "2": {
+        "availability": "13727/16384",
+        "tutte_value": "878528/243"
+      },
+      "3": {
+        "availability": "65689683/67108864",
+        "tutte_value": "1051034928/16807"
+      },
+      "5": {
+        "availability": "70346640717465/70368744177664",
+        "tutte_value": "1125546251479440/28629151"
+      }
+    }
+  },
+  "pass": false,
+  "result_sha256": "15dd7308e561853bcf655f7a3cd9b97344342d1af347fa5c0efdab2464b6cb48",
+  "verifier_imports_implementation": false,
+  "verifier_imports_runner": false
+}

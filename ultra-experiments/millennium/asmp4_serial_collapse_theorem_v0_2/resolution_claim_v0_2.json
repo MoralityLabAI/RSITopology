@@ -1,0 +1,20 @@
+{
+  "schema_version": "asmp_resolution_claim_v0_2",
+  "problem_id": "ASMP-4",
+  "resolution_type": "negative_premise_with_positive_replacement_characterization",
+  "claim": "For deterministic noiseless serial sensor-controller-actuator codes with realized transcript cardinality, relabelable port alphabets, fixed control authority, timing-compatible zero-delay or fixed public FIFO delivery, uniform zero-error safety, and no controller or actuator side information, the exact finite and closed asymptotic read/write regions for arbitrary nonempty K_0 contained in K are diagonal quadrants governed by one evaluator-transversal control-language entropy.",
+  "positive_obligation_evidence": {
+    "coordinate_invariant_entropies": "THEOREM.md#6-coordinate-invariance-and-evaluator-quotient",
+    "full_capacity_region": "THEOREM.md#4-exact-finite-horizon-region and THEOREM.md#5-asymptotic-variational-formula",
+    "converse": "THEOREM.md#2-causal-data-processing-lemma and Theorems 2-3",
+    "constructive_coder_controller": "THEOREM.md#3-relay-normal-form",
+    "finite_horizon_correction": "THEOREM.md#7-exact-initial-margin-correction",
+    "boundary_counterexamples": "THEOREM.md#8-boundary-counterexamples"
+  },
+  "negative_obligation_evidence": {
+    "counterexample_or_impossibility_uses_the_registered_no_side_channel_architecture": "THEOREM.md#3-relay-normal-form",
+    "read_and_write_rates_and_control_authority_remain_frozen": "RESOLUTION_AUDIT.md#normative-negative-resolution-requirements"
+  },
+  "empirical_resolution": false,
+  "external_peer_review_complete": false
+}

@@ -1,0 +1,18 @@
+{
+  "implementation_commit": "af94d8db0fd4164e94a116487894459a79972f35",
+  "output_hashes": {
+    "RESULT_v0_16_2.md": "ff17ec42976506b1014fcafec564b311c5449da21cf016740bc9bf51fe58ab36",
+    "progress_v0_16_2.json": "b964f4ccbd80cdfc7e2b2f5ee26163f406e994d25a9e6bd4efea29df9ae9e47c",
+    "result_v0_16_2.json": "9159f59ee97350f96fbbb94131eee02a43b788837337d93b4046277f18d8464a",
+    "start_v0_16_2.json": "9ae89bc766e5b3ac7ba0ef82438a0db31b558154f7a9fe2f0128e7f4e472257e"
+  },
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.2",
+  "registration_commit": "c139fa3363763de6ab52b8727f0ff3e4a3545654",
+  "registration_sha256": "14ad8dbecd19af0b679a706d18c81eaad1c7136d679aa0de65869a7dfff2c095",
+  "resources": {
+    "elapsed_seconds": 41.89900820000912,
+    "gpu_used": false,
+    "peak_resident_bytes": 34738176
+  },
+  "verdict": "registered_exact_result_passed"
+}

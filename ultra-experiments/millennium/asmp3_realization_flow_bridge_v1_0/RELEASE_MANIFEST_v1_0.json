@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-REALIZATION-FLOW-BRIDGE-v1.0",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_polyhedral_tv_frontier_v0_9/POLYHEDRAL_TV_FRONTIER_THEOREM_v0_9.md": {
+      "bytes": 6361,
+      "sha256": "0C7BC7591A4278531CCF8E41EFA3B35C3B81FA54A7C16A04DBBB950151C1C291"
+    },
+    "../asmp3_polyhedral_tv_frontier_v0_9/RELEASE_MANIFEST_v0_9.json": {
+      "bytes": 2947,
+      "sha256": "DA932A6B4D3736F914D9977ED097E1B48DCFB0AF1A967B3B465EE4C27C612AE1"
+    },
+    "../asmp3_polyhedral_tv_frontier_v0_9/artifacts/polyhedral_tv_frontier_v0_9.json": {
+      "bytes": 9418,
+      "sha256": "CA780DC1B4531DB1A1D6B6CDA960987B8A7016440C87DF920B8D0D64E5E52627"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_0.md": {
+      "bytes": 1384,
+      "sha256": "56385C1C8724467B325CC63411FEC771F2B70C2B83D4AAC17D64F427CB374759"
+    },
+    "README.md": {
+      "bytes": 661,
+      "sha256": "6FBB80DF38751F1A68339E6A58619BADFF0BBB1F1DFBA986E63BA9813CCB6152"
+    },
+    "REALIZATION_FLOW_THEOREM_v1_0.md": {
+      "bytes": 6727,
+      "sha256": "9E46C35B136ACEB2D127AE31F6A4F570F4383CBAB8048E811679D6CA32CE4E56"
+    },
+    "artifacts/realization_flow_bridge_v1_0.json": {
+      "bytes": 133684,
+      "sha256": "F324E07E4685A18091CB170B44AFC59831A1F641789647F1DCA8C03CBB7BA4DE"
+    },
+    "artifacts/realization_flow_bridge_verification_v1_0.json": {
+      "bytes": 653,
+      "sha256": "3BD02D49487881DF4E7925D4F3FBB66261FAEB41775BEDA0FDEBADAF3AEA1C23"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2511,
+      "sha256": "F49421C0BF000DC66F3F3968A24D2F67AFE2D1400CC7AE5EFE3F138083AF70F9"
+    },
+    "realization_flow_bridge.py": {
+      "bytes": 17747,
+      "sha256": "97550B9F63A2FF598FF78BD82C4CB867DA0C8CE7BA1E358AB49B753F3B4B965F"
+    },
+    "run_realization_flow_bridge.py": {
+      "bytes": 827,
+      "sha256": "4917E8160E5E7AEEA3A7A29335B91A7EBFB8436E230FDED7B0DE6A18A926E1AB"
+    },
+    "test_realization_flow_bridge.py": {
+      "bytes": 4607,
+      "sha256": "FF034460045ED50E5D59C16FA7FD2D0C00395A42EA10E616DF4085F0B1418252"
+    },
+    "verify_realization_flow_bridge.py": {
+      "bytes": 9168,
+      "sha256": "6FB40C0E11191F5CE7B32444CCF4533BC59D12EAC24C34BDA39F3AFBCB077A5E"
+    }
+  },
+  "release_status": "exact_acyclic_single_controller_bridge",
+  "schema_version": "asmp3_realization_flow_bridge_release_v1_0"
+}

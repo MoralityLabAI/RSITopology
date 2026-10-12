@@ -1,0 +1,154 @@
+{
+  "availability_registry": [
+    {
+      "counts": [2, 1, 2, 1, 2, 1, 2, 1],
+      "graph": "wheel5",
+      "probabilities": ["2/9", "5/9", "1/3", "7/9", "4/9", "2/3", "1/9", "8/9"]
+    },
+    {
+      "counts": [1, 2, 1, 2, 1, 2, 1],
+      "graph": "theta133",
+      "probabilities": ["2/7", "3/7", "5/7", "1/2", "4/7", "2/7", "5/7"]
+    },
+    {
+      "counts": [2, 1, 2, 1, 3],
+      "graph": "cycle4_tail",
+      "probabilities": ["3/10", "2/5", "7/10", "3/5", "1/2"]
+    }
+  ],
+  "bad_support_certificates": {
+    "cycle4_tail": {
+      "dual_distribution": [
+        {"mass": "1/6", "support": [0, 1]},
+        {"mass": "1/6", "support": [0, 2]},
+        {"mass": "1/6", "support": [0, 3]},
+        {"mass": "1/6", "support": [1, 2]},
+        {"mass": "1/6", "support": [1, 3]},
+        {"mass": "1/6", "support": [2, 3]}
+      ],
+      "expected_supports": [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]],
+      "primal_weights": ["1/4", "1/4", "1/4", "1/4", "0/1"],
+      "threshold": "1/2"
+    },
+    "cycle6": {
+      "dual_distribution": [
+        {"mass": "1/15", "support": [0, 1]},
+        {"mass": "1/15", "support": [0, 2]},
+        {"mass": "1/15", "support": [0, 3]},
+        {"mass": "1/15", "support": [0, 4]},
+        {"mass": "1/15", "support": [0, 5]},
+        {"mass": "1/15", "support": [1, 2]},
+        {"mass": "1/15", "support": [1, 3]},
+        {"mass": "1/15", "support": [1, 4]},
+        {"mass": "1/15", "support": [1, 5]},
+        {"mass": "1/15", "support": [2, 3]},
+        {"mass": "1/15", "support": [2, 4]},
+        {"mass": "1/15", "support": [2, 5]},
+        {"mass": "1/15", "support": [3, 4]},
+        {"mass": "1/15", "support": [3, 5]},
+        {"mass": "1/15", "support": [4, 5]}
+      ],
+      "expected_supports": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 2], [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5], [3, 4], [3, 5], [4, 5]],
+      "primal_weights": ["1/6", "1/6", "1/6", "1/6", "1/6", "1/6"],
+      "threshold": "1/3"
+    },
+    "theta133": {
+      "dual_distribution": [
+        {"mass": "1/6", "support": [1, 2]},
+        {"mass": "1/6", "support": [1, 3]},
+        {"mass": "1/6", "support": [2, 3]},
+        {"mass": "1/6", "support": [4, 5]},
+        {"mass": "1/6", "support": [4, 6]},
+        {"mass": "1/6", "support": [5, 6]}
+      ],
+      "expected_supports": [[1, 2], [1, 3], [2, 3], [4, 5], [4, 6], [5, 6], [0, 1, 4], [0, 1, 5], [0, 1, 6], [0, 2, 4], [0, 2, 5], [0, 2, 6], [0, 3, 4], [0, 3, 5], [0, 3, 6]],
+      "primal_weights": ["0/1", "1/6", "1/6", "1/6", "1/6", "1/6", "1/6"],
+      "threshold": "1/3"
+    }
+  },
+  "burned_graph_registry": {
+    "bowtie": {
+      "edges": [[0, 1], [1, 2], [2, 0], [0, 3], [3, 4], [4, 0]],
+      "node_count": 5
+    },
+    "cycle4": {
+      "edges": [[0, 1], [1, 2], [2, 3], [3, 0]],
+      "node_count": 4
+    },
+    "cycle5_plus_chord": {
+      "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0], [0, 2]],
+      "node_count": 5
+    },
+    "theta122": {
+      "edges": [[0, 2], [0, 1], [1, 2], [0, 3], [3, 2]],
+      "node_count": 4
+    },
+    "theta123": {
+      "edges": [[0, 1], [0, 2], [2, 1], [0, 3], [3, 4], [4, 1]],
+      "node_count": 5
+    }
+  },
+  "claim_boundary": "Fresh exact verification of residual-cycle fiber rank, ternary status compression, coordinatewise endpoint reduction, minimal-bad-support exponent certificates, and one finite nonuniform-allocation counterexample for independent Bernoulli comparison graphs; not an every-budget optimum theorem, adaptive allocation, dependent or unknown-link behavior, downstream test-power theorem, general IRL identification, or ASMP-9 resolution.",
+  "finite_counterexample": {
+    "epsilon": "2/7",
+    "graph": "theta133",
+    "paths": [[0], [1, 2, 3], [4, 5, 6]],
+    "total_trials": 14,
+    "uniform_allocation": [2, 2, 2, 2, 2, 2, 2]
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_registry_completeness",
+    "G2_residual_rank_identity",
+    "G3_representative_invariance",
+    "G4_three_state_exactness",
+    "G5_endpoint_reduction",
+    "G6_bad_support_completeness",
+    "G7_primal_dual_exponent_certificates",
+    "G8_finite_nonuniform_counterexample",
+    "G9_resource_and_scope"
+  ],
+  "graphs": {
+    "cycle4_tail": {
+      "edges": [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4]],
+      "expected_beta1": 1,
+      "node_count": 5
+    },
+    "cycle6": {
+      "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 0]],
+      "expected_beta1": 1,
+      "node_count": 6
+    },
+    "theta133": {
+      "edges": [[0, 1], [0, 2], [2, 3], [3, 1], [0, 4], [4, 5], [5, 1]],
+      "expected_beta1": 2,
+      "node_count": 6
+    },
+    "wheel5": {
+      "edges": [[0, 1], [1, 2], [2, 3], [3, 0], [4, 0], [4, 1], [4, 2], [4, 3]],
+      "expected_beta1": 4,
+      "node_count": 5
+    }
+  },
+  "protocol_id": "ASMP-9-GENERAL-GRAPH-ALLOCATION-v0.17",
+  "residual_rank_registry": [
+    {
+      "capacity_vectors": [[1, 2, 1, 2, 1, 2, 1, 2], [2, 1, 2, 1, 2, 1, 2, 1]],
+      "graph": "wheel5"
+    },
+    {
+      "capacity_vectors": [[1, 2, 1, 2, 1, 2, 1], [2, 1, 2, 1, 2, 1, 2]],
+      "graph": "theta133"
+    },
+    {
+      "capacity_vectors": [[1, 2, 1, 2, 1], [2, 1, 2, 1, 2]],
+      "graph": "cycle4_tail"
+    }
+  ],
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "version": "0.17"
+}

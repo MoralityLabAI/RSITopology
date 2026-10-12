@@ -1,0 +1,92 @@
+{
+  "analysis_registration": {
+    "path": "C:\\projects\\RSITopology\\protocols\\qwen08_holonomy_geometry_analysis_v0_1.json",
+    "sha256": "6412ddada05a7dae95466247b926a49d82c5c3bcfebc5f56f174496bbd3d8983"
+  },
+  "checkpoint_strategy": "one independently replayable state-pair analysis",
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+    "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+  },
+  "environment_lock": {
+    "packages": {
+      "numpy": "2.4.4",
+      "scikit-learn": "1.7.1",
+      "scipy": "1.16.2"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_executable": "C:\\Python311\\python.exe",
+    "python_version": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "thread_environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "exact_inner_command": [
+    "C:\\Python311\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\analyze_qwen08_holonomy_geometry.py",
+    "--registration",
+    "C:\\projects\\RSITopology\\protocols\\qwen08_holonomy_geometry_analysis_v0_1.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\qwen08_holonomy_geometry_analysis_v0_1",
+    "--seed",
+    "2026071605",
+    "--pair",
+    "base",
+    "naive_qlora"
+  ],
+  "hard_cap_validation_receipt": {
+    "path": "C:\\projects\\RSITopology\\artifacts\\hard_cap_validation\\qwen_holonomy_jobobject_v0_2\\hard_cap_validation_receipt.json",
+    "sha256": "044965134be9249480d72cb3134b5ab7c7f11d4bbf69eaa6aa71ce1300f1b9a4"
+  },
+  "hard_cap_wrapper": {
+    "path": "C:\\projects\\RSITopology\\scripts\\run_qwen_holonomy_jobobject.ps1",
+    "sha256": "e84854969b030b1a2fb0a8e4423058720876c3e71555dba97ab2ac279dda6fed"
+  },
+  "implementation_commit": "633112fcc8cd4f73894b90845a763dd27760c800",
+  "outcomes_consumed": false,
+  "remote_refs_containing_commit": [
+    "origin/feat/spectral-bundle-v0.3-bifiltration"
+  ],
+  "resource_caps": {
+    "checkpoint_every_seconds": 7200,
+    "cpu_percent": 50,
+    "gpu_allowance_mb": 1,
+    "io_mb_s": 100,
+    "memory_mb": 4096,
+    "swap_bytes": 0,
+    "timeout_seconds": 7200
+  },
+  "run_id": "qwen08-holonomy-geometry-base--vs--naive_qlora-v01",
+  "schema_version": "qwen_holonomy_geometry_analysis_authorization_v0_1",
+  "source_paths": {
+    "attestation": "C:\\projects\\RSITopology\\rsi_topology\\attestation.py",
+    "bifiltration": "C:\\projects\\RSITopology\\rsi_topology\\bifiltration.py",
+    "discovery": "C:\\projects\\RSITopology\\rsi_topology\\discovery.py",
+    "entrypoint": "C:\\projects\\RSITopology\\scripts\\analyze_qwen08_holonomy_geometry.py",
+    "godel_analysis": "C:\\projects\\RSITopology\\rsi_topology\\godel_analysis.py",
+    "holonomy": "C:\\projects\\RSITopology\\rsi_topology\\holonomy.py",
+    "pair_analysis": "C:\\projects\\RSITopology\\rsi_topology\\qwen_geometry_analysis.py",
+    "sectioning": "C:\\projects\\RSITopology\\rsi_topology\\sectioning.py"
+  },
+  "source_sha256": {
+    "attestation": "fb89d96267e6ca4286d1440706cc413d7b6c81c101250ed55e0126681c98030e",
+    "bifiltration": "a62489897ecc2d16b0f51aa28a95e197e567ceba02fbd01cbebec653fbaec6ae",
+    "discovery": "decfa2cc078591d1964c3aaf615015a1c24df1ffbcea848f7ba3e0bb0be73ea0",
+    "entrypoint": "5db4b9799008bfe236fd1c93fb3f01069bad62452899d0d9104da6359ab2ae04",
+    "godel_analysis": "415cc3452918f3b60d60971af40ec55a75a8894d7817a749c42519357c31fb48",
+    "holonomy": "96b7d48228282fc96d0783080d01c317d29f68e64530802e39349d9f7c952dd8",
+    "pair_analysis": "6a0e040427d43b643d3163f7716e72214c45ac466c40b95472dbe6c83fe15a1c",
+    "sectioning": "ade0701ae2a755667fed98b11e488382c8d118c02d7ad0341c99c893af02ff91"
+  },
+  "state_pair": [
+    "base",
+    "naive_qlora"
+  ],
+  "status": "authorized_for_target_blind_cpu_geometry_analysis",
+  "weight_mutation_performed": false,
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\qwen08_holonomy_geometry_analysis_v0_1\\base--vs--naive_qlora\\_wrapper"
+}

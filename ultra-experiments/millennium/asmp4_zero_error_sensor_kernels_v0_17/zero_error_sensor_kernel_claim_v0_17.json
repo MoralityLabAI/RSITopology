@@ -1,0 +1,41 @@
+{
+  "schema_version": "asmp4_zero_error_sensor_kernel_claim_v0_17",
+  "status": "complete support classification through four registered output symbols",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_16_partition_claim_sha256": "f9d9922f8ab33a04987b35b46ddb6d37672b4e341d46a1995b1d74e46c21f9e2"
+  },
+  "support_census": {
+    "relations": 53108,
+    "feasible": 724,
+    "infeasible": 52384,
+    "feasible_active_histogram": {
+      "2": 20,
+      "3": 210,
+      "4": 494
+    },
+    "genuinely_randomized_feasible": 620
+  },
+  "theorem": {
+    "feasibility": "cross-q output supports are disjoint",
+    "active_support_region": "[1+log2(a),infinity) x [2,infinity)",
+    "finite_read_words": "a^T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)"
+  },
+  "deterministic_embedding": {
+    "labeled_relations": 104,
+    "unlabeled_partitions": 4,
+    "v0_16_recovered": true
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 17,
+    "tests": 204
+  },
+  "decision": "sensor_randomness_changes_support_refinement_not_zero_error_formula",
+  "nonclaim": "The theorem uses a finite memoryless kernel with raw-output charging and support-zero-error safety. It does not classify noisy channels with block error, expected length, hidden state, memory, or asymptotically vanishing failure probability."
+}

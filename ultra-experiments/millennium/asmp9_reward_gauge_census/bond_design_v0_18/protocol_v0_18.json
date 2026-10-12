@@ -1,0 +1,145 @@
+{
+  "claim_boundary": "Exact identification, on the frozen independent-binomial conditional-access object inherited from v0.17, of inclusion-minimal full-rank failure supports with cyclic-core bonds; exact fresh finite SCC-versus-bond checks; classical max-min cut primal/dual certificates; and an elementary cactus closed form. Not a novelty claim for bonds, cut design, or fractional packing; not an arbitrary finite-budget integer theorem, adaptive allocation, dependent or unknown-link response theorem, downstream power theorem, behavioral reward-identification theorem, general IRL theorem, or ASMP-9 resolution.",
+  "development_registry": {
+    "complete_orders": [2, 3, 4],
+    "extra_cactus": {
+      "edges": [[0, 1], [1, 2], [2, 0], [3, 4], [4, 5], [5, 6], [6, 3], [2, 3]],
+      "node_count": 7
+    },
+    "premature_v0_18_cells": {
+      "cactus_triangle_pentagon_bridge": {
+        "edges": [[0, 1], [1, 2], [2, 0], [3, 4], [4, 5], [5, 6], [6, 7], [7, 3], [2, 3]],
+        "node_count": 8
+      },
+      "complete_bipartite_2_4": {
+        "edges": [[0, 2], [0, 3], [0, 4], [0, 5], [1, 2], [1, 3], [1, 4], [1, 5]],
+        "node_count": 6
+      },
+      "complete_bipartite_3_3": {
+        "edges": [[0, 3], [0, 4], [0, 5], [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5]],
+        "node_count": 6
+      },
+      "triangular_prism": {
+        "edges": [[0, 1], [1, 2], [2, 0], [3, 4], [4, 5], [5, 3], [0, 3], [1, 4], [2, 5]],
+        "node_count": 6
+      }
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_fresh_graph_registry",
+    "G2_scc_bad_supports_equal_bonds",
+    "G3_bridge_exclusion_and_cut_completeness",
+    "G4_primal_dual_cut_design_certificates",
+    "G5_cactus_closed_form",
+    "G6_structural_search_reduction",
+    "G7_resource_and_scope"
+  ],
+  "graphs": {
+    "cactus_square_hexagon_bridge": {
+      "design_certificate": {
+        "dual_distribution": [
+          {"mass": "1/15", "support": [0, 1]},
+          {"mass": "1/15", "support": [0, 2]},
+          {"mass": "1/15", "support": [0, 3]},
+          {"mass": "1/15", "support": [1, 2]},
+          {"mass": "1/15", "support": [1, 3]},
+          {"mass": "1/15", "support": [2, 3]},
+          {"mass": "1/25", "support": [4, 5]},
+          {"mass": "1/25", "support": [4, 6]},
+          {"mass": "1/25", "support": [4, 7]},
+          {"mass": "1/25", "support": [4, 8]},
+          {"mass": "1/25", "support": [4, 9]},
+          {"mass": "1/25", "support": [5, 6]},
+          {"mass": "1/25", "support": [5, 7]},
+          {"mass": "1/25", "support": [5, 8]},
+          {"mass": "1/25", "support": [5, 9]},
+          {"mass": "1/25", "support": [6, 7]},
+          {"mass": "1/25", "support": [6, 8]},
+          {"mass": "1/25", "support": [6, 9]},
+          {"mass": "1/25", "support": [7, 8]},
+          {"mass": "1/25", "support": [7, 9]},
+          {"mass": "1/25", "support": [8, 9]}
+        ],
+        "primal_weights": ["1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "0/1"],
+        "threshold": "1/5"
+      },
+      "edges": [[0, 1], [1, 2], [2, 3], [3, 0], [4, 5], [5, 6], [6, 7], [7, 8], [8, 9], [9, 4], [3, 4]],
+      "expected_beta1": 2,
+      "expected_bridge_indices": [10],
+      "expected_cactus_cyclic_edges": 10,
+      "node_count": 10
+    },
+    "complete_bipartite_2_5": {
+      "design_certificate": {
+        "dual_distribution": [
+          {"mass": "1/5", "support": [0, 5]},
+          {"mass": "1/5", "support": [1, 6]},
+          {"mass": "1/5", "support": [2, 7]},
+          {"mass": "1/5", "support": [3, 8]},
+          {"mass": "1/5", "support": [4, 9]}
+        ],
+        "primal_weights": ["1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10", "1/10"],
+        "threshold": "1/5"
+      },
+      "edges": [[0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6]],
+      "expected_beta1": 4,
+      "expected_bridge_indices": [],
+      "node_count": 7
+    },
+    "complete_bipartite_3_4": {
+      "design_certificate": {
+        "dual_distribution": [
+          {"mass": "1/4", "support": [0, 4, 8]},
+          {"mass": "1/4", "support": [1, 5, 9]},
+          {"mass": "1/4", "support": [2, 6, 10]},
+          {"mass": "1/4", "support": [3, 7, 11]}
+        ],
+        "primal_weights": ["1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12"],
+        "threshold": "1/4"
+      },
+      "edges": [[0, 3], [0, 4], [0, 5], [0, 6], [1, 3], [1, 4], [1, 5], [1, 6], [2, 3], [2, 4], [2, 5], [2, 6]],
+      "expected_beta1": 6,
+      "expected_bridge_indices": [],
+      "node_count": 7
+    },
+    "cube": {
+      "design_certificate": {
+        "dual_distribution": [
+          {"mass": "1/8", "support": [0, 1, 2]},
+          {"mass": "1/8", "support": [0, 3, 4]},
+          {"mass": "1/8", "support": [1, 5, 6]},
+          {"mass": "1/8", "support": [3, 5, 7]},
+          {"mass": "1/8", "support": [2, 8, 9]},
+          {"mass": "1/8", "support": [4, 8, 10]},
+          {"mass": "1/8", "support": [6, 9, 11]},
+          {"mass": "1/8", "support": [7, 10, 11]}
+        ],
+        "primal_weights": ["1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12", "1/12"],
+        "threshold": "1/4"
+      },
+      "edges": [[0, 1], [0, 2], [0, 4], [1, 3], [1, 5], [2, 3], [2, 6], [3, 7], [4, 5], [4, 6], [5, 7], [6, 7]],
+      "expected_beta1": 5,
+      "expected_bridge_indices": [],
+      "node_count": 8
+    }
+  },
+  "inherited_object": {
+    "response_model": "independent Bernoulli comparisons with known endpoint-bounded response probabilities",
+    "source_protocol": "../general_graph_design_v0_17/protocol_v0_17.json",
+    "status_alphabet": ["Z", "I", "F"]
+  },
+  "protocol_id": "ASMP-9-BOND-DESIGN-v0.18",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "structural_targets": {
+    "bad_support_family": "bonds of each cyclic-core component",
+    "cactus_threshold": "2 divided by the total number of original nonbridge edges",
+    "cut_design": "maximize over unit edge weights the minimum cyclic-core cut weight",
+    "ternary_status_count": "3^|E|"
+  },
+  "version": "0.18"
+}

@@ -1,0 +1,379 @@
+{
+  "canonical_source_sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5",
+  "certified": true,
+  "claim_boundary": "This audit certifies the internal exact refutation of the named v0.1 iff and a stopping boundary for the current harness. It deliberately does not label the broader underclosed ASMP-3 classification program or community acceptance complete.",
+  "disposition": {
+    "community_or_prize_style_acceptance": "not_established_external_gate_0_of_2",
+    "current_harness_architecture": "stop_further_grid_extension",
+    "full_asmp3_v0_1_classification_program": "not_resolved_definitionally_unclosed_and_mathematically_partial",
+    "named_weak_verifier_characterization_conjecture": "refuted_internal_exact_both_principal_readings",
+    "nonnormative_registry_negative_route_mathematics": "satisfied_internal",
+    "resume_condition": "resume only for a normative scope freeze, a genuinely broader theorem/counterexample, or independent external reproduction",
+    "witness_transparent_repaired_subclass": "conditionally_characterized"
+  },
+  "evidence_packages": [
+    {
+      "certified": true,
+      "directory": "asmp3_protocol_quantifier_v0_7",
+      "evidence_id": "v0.7_protocol_quantifier",
+      "experiment_id": "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v0_7.json",
+      "manifest_sha256": "E93DA3ACD8E96B93B0EFAED5D22142AFDFBC27E269998644FEC1DF234FD46D23",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "exact_quantifier_fork",
+      "sealed_files": 15,
+      "sealed_member_bytes": 129382,
+      "verification_schema": "asmp3_protocol_quantifier_verification_v0_7"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_block_selection_composition_v1_9",
+      "evidence_id": "v1.9_block_selection",
+      "experiment_id": "ASMP-3-BLOCK-SELECTION-COMPOSITION-v1.9",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v1_9.json",
+      "manifest_sha256": "E5D48F7F9E93A6D2189E20C4838E51D881AB5D2D0210F393360AD9BD9635289C",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "exact_finite_block_composition_and_selection_risk",
+      "sealed_files": 17,
+      "sealed_member_bytes": 2442412,
+      "verification_schema": "asmp3_block_selection_composition_verification_v1_9"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_encoding_invariance_v2_0",
+      "evidence_id": "v2.0_encoding_invariance",
+      "experiment_id": "ASMP-3-ENCODING-INVARIANCE-v2.0",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_0.json",
+      "manifest_sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "exact_replication_quotient_invariance_and_macro_cost_barrier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 2489006,
+      "verification_schema": "asmp3_encoding_invariance_verification_v2_0"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_honest_search_barrier_v2_1",
+      "evidence_id": "v2.1_honest_search",
+      "experiment_id": "ASMP-3-HONEST-SEARCH-BARRIER-v2.1",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_1.json",
+      "manifest_sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "exact_dimension_one_unique_marker_search_separation",
+      "sealed_files": 20,
+      "sealed_member_bytes": 857707,
+      "verification_schema": "asmp3_honest_search_barrier_verification_v2_1"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_resource_tradeoff_v2_2",
+      "evidence_id": "v2.2_resource_tradeoff",
+      "experiment_id": "ASMP-3-RESOURCE-TRADEOFF-v2.2",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_2.json",
+      "manifest_sha256": "E0440C6A3B291A09D2698F143DC37AEDB03DF3A7B22CD7BCBD557996064C964E",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "exact_unique_marker_communication_query_frontier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 2221702,
+      "verification_schema": "asmp3_resource_tradeoff_verification_v2_2"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_constructive_refutation_protocol_v2_3",
+      "evidence_id": "v2.3_constructive_protocol",
+      "experiment_id": "ASMP-3-CONSTRUCTIVE-REFUTATION-PROTOCOL-v2.3",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_3.json",
+      "manifest_sha256": "3F46B4CC8B44DF9B5600C5A17A71E22EE91936D1522C1DF5D0970B5885EA7896",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "constructive_positive_protocol_under_typed_finder_noise_contracts",
+      "sealed_files": 26,
+      "sealed_member_bytes": 2900195,
+      "verification_schema": "asmp3_constructive_refutation_protocol_verification_v2_3"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_randomized_finder_amplification_v2_4",
+      "evidence_id": "v2.4_randomized_finder",
+      "experiment_id": "ASMP-3-RANDOMIZED-FINDER-AMPLIFICATION-v2.4",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_4.json",
+      "manifest_sha256": "CC1A6F4831499AE522A54EA00A15A521D5CF8249EFEBBA9F44B732D50F51862A",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "exact_randomized_finder_restart_noise_and_budget_frontier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 1278671,
+      "verification_schema": "asmp3_randomized_finder_amplification_verification_v2_4"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_witness_transparent_normal_form_v2_5",
+      "evidence_id": "v2.5_witness_normal_form",
+      "experiment_id": "ASMP-3-WITNESS-TRANSPARENT-NORMAL-FORM-v2.5",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_5.json",
+      "manifest_sha256": "0FC5C8234BFC7BACCE1A1DB9E5B947C43F206E8552BA347A90F317D6D08004CA",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_status": "conditional_protocol_to_finder_normal_form_and_literal_two_sided_separation",
+      "sealed_files": 23,
+      "sealed_member_bytes": 744578,
+      "verification_schema": "asmp3_witness_transparent_normal_form_verification_v2_5"
+    }
+  ],
+  "experiment_id": "ASMP-3-RESOLUTION-DISPOSITION-v2.6",
+  "expert_review_status": {
+    "completion_gate_satisfied": false,
+    "qualifying_independent_team_checkers": 0,
+    "qualifying_teams": 0,
+    "required_independent_team_checkers": 1,
+    "required_teams": 2
+  },
+  "gates": {
+    "D0_all_authoritative_source_clauses_present": true,
+    "D1_all_eight_evidence_packages_sealed_and_verified": true,
+    "D2_named_conjecture_two_sided_separation_certified": true,
+    "D3_registry_negative_route_math_conditions_pass": true,
+    "D4_complete_classification_obligations_not_overclaimed": true,
+    "D5_external_acceptance_gate_correctly_fails": true,
+    "D6_all_requirement_adjudications_evidence_backed": true,
+    "D7_disposition_has_no_resolution_contradiction": true,
+    "D8_remaining_blockers_are_non_enumerative": true,
+    "D9_parent_noise_selection_contract_retained": true
+  },
+  "problem_id": "ASMP-3",
+  "problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "registry_source_sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0",
+  "remaining_blockers": [
+    {
+      "blocker": "v0.1 is authoritatively a definition draft and does not freeze FIX versus ADM or Refute binding",
+      "category": "normative_definition",
+      "clearing_event": "publish a normative repaired problem version or authoritative scope adjudication",
+      "id": "B0_definition_authority",
+      "why_more_current_harness_rows_cannot_clear_it": "finite or asymptotic calculations cannot choose authorial scope"
+    },
+    {
+      "blocker": "the v2.5 normal form covers only witness-transparent ideal-simulable positive-margin protocols",
+      "category": "new_mathematical_theory",
+      "clearing_event": "prove an unrestricted WV-FIX/WV-ADM theorem or sharp impossibility",
+      "id": "B1_unrestricted_characterization",
+      "why_more_current_harness_rows_cannot_clear_it": "more rows cannot replace a new universal extractor theorem or a separating positive interface"
+    },
+    {
+      "blocker": "communication/query/honest-prover lower bounds are exact only for registered families and interfaces",
+      "category": "new_mathematical_theory",
+      "clearing_event": "prove interface-uniform interactive lower bounds",
+      "id": "B2_universal_lower_bounds",
+      "why_more_current_harness_rows_cannot_clear_it": "larger instances cannot establish quantification over all interactive protocols"
+    },
+    {
+      "blocker": "the acceptance gate has zero of two qualifying expert teams and zero independent team checkers",
+      "category": "external_review",
+      "clearing_event": "two attributable independent expert reproductions, including one independent checker",
+      "id": "B3_external_reproduction",
+      "why_more_current_harness_rows_cannot_clear_it": "repository-generated artifacts cannot establish real reviewer identity or independence"
+    }
+  ],
+  "requirement_rows": [
+    {
+      "authority": "prize-style resolution protocol items 1-2",
+      "evidence": "ASMP-3 / ASMP-CANDIDATE-SET-v0.1 over the declared ZFC base",
+      "evidence_check": true,
+      "id": "D0",
+      "obligation": "identify exact problem ID, version, and foundation",
+      "status": "satisfied_internal"
+    },
+    {
+      "authority": "graduation standard item 1",
+      "evidence": "the normative source calls v0.1 a research-agenda artifact and the registry marks graduation false",
+      "evidence_check": true,
+      "id": "D1",
+      "obligation": "closed formal core",
+      "status": "not_satisfied_authoritative"
+    },
+    {
+      "authority": "problem registry scope",
+      "evidence": "machine-readable index of resolution obligations; the normative typed statements remain in the Markdown definition",
+      "evidence_check": true,
+      "id": "D2",
+      "obligation": "normative authority of the machine-readable negative route",
+      "status": "registry_is_nonnormative"
+    },
+    {
+      "authority": "canonical game text and typed successor",
+      "evidence": "v0.7 records both canonical markers; v0.2 explicitly does not adjudicate authorial intent",
+      "evidence_check": true,
+      "id": "D3",
+      "obligation": "freeze FIX versus ADM protocol quantifier",
+      "status": "definitionally_unclosed"
+    },
+    {
+      "authority": "Weak-Verifier Characterization Conjecture",
+      "evidence": "If admissible transcript encodings are frozen task-game data, all three displayed conditions hold but no constant gap exists.",
+      "evidence_check": true,
+      "id": "N0",
+      "obligation": "test sufficiency of the displayed iff in a frozen message game",
+      "status": "refuted_exact"
+    },
+    {
+      "authority": "literal v0.1 decidable-Refute definition",
+      "evidence": "a nonbinding decidable Refute can be empty or padded without changing protocol admission",
+      "evidence_check": true,
+      "id": "N1",
+      "obligation": "test necessity of the displayed iff when Refute is nonbinding",
+      "status": "refuted_exact"
+    },
+    {
+      "authority": "v0.1 frozen-encoding and admits-protocol markers",
+      "evidence": "v0.7 refutes frozen sufficiency; v2.5 refutes nonbinding necessity",
+      "evidence_check": true,
+      "id": "N2",
+      "obligation": "dispose of the named iff under both principal protocol readings",
+      "status": "refuted_exact_both_readings"
+    },
+    {
+      "authority": "nonnormative problem registry negative route",
+      "evidence": "v0.7 exact frozen-game total-variation separation",
+      "evidence_check": true,
+      "id": "G0",
+      "obligation": "separation_or_impossibility_in_the_frozen_message_game",
+      "status": "satisfied_internal"
+    },
+    {
+      "authority": "nonnormative problem registry negative route",
+      "evidence": "v0.7 keeps Theta(n) honest work and persistent nonzero semantic noise",
+      "evidence_check": true,
+      "id": "G1",
+      "obligation": "efficient_honest_prover_and_noise_model_must_remain_in_scope",
+      "status": "satisfied_internal"
+    },
+    {
+      "authority": "ASMP-3 complete-resolution item 1",
+      "evidence": "witness-transparent ideal-simulable protocols with a positive ideal/noisy coupling margin",
+      "evidence_check": true,
+      "id": "R0",
+      "obligation": "formal complexity class and class equality, separation, or complete invariant",
+      "status": "partial_subclass_only"
+    },
+    {
+      "authority": "ASMP-3 complete-resolution item 2",
+      "evidence": "constructive_positive_protocol_under_typed_finder_noise_contracts",
+      "evidence_check": true,
+      "id": "R1",
+      "obligation": "constructive protocol with adaptive-obfuscator soundness and completeness",
+      "status": "partial_subclass_only"
+    },
+    {
+      "authority": "ASMP-3 complete-resolution item 3",
+      "evidence": "v2.1 exact Find barrier and v2.2 one-message covering frontier",
+      "evidence_check": true,
+      "id": "R2",
+      "obligation": "matching communication, semantic-query, and honest-prover lower bounds",
+      "status": "partial_family_only"
+    },
+    {
+      "authority": "ASMP-3 complete-resolution item 4",
+      "evidence": "The theorem replaces v2.3's always-successful finder by independent Las Vegas-with-FAIL trials and charges kH. It does not derive such a finder from every WV-FIX protocol, cover correlated finder failures, or establish a universal converse.",
+      "evidence_check": true,
+      "id": "R3",
+      "obligation": "robust theorem for the full legal correlated/noisy class",
+      "status": "partial_noise_class_only"
+    },
+    {
+      "authority": "ASMP-3 complete-resolution item 5",
+      "evidence": "replication-quotiented refutation dimension is exact invariant",
+      "evidence_check": true,
+      "id": "R4",
+      "obligation": "benign encoding invariance and no hidden full-answer atom",
+      "status": "satisfied_component"
+    },
+    {
+      "authority": "prize-style resolution protocol item 5",
+      "evidence": "eight sealed public repository evidence packages",
+      "evidence_check": true,
+      "id": "A0",
+      "obligation": "public proof, definitions, code, and machine-checkable artifacts",
+      "status": "satisfied_internal"
+    },
+    {
+      "authority": "prize-style resolution protocol item 6",
+      "evidence": "all decisive artifacts use exact rational/integer arithmetic and clean-room verifiers",
+      "evidence_check": true,
+      "id": "A1",
+      "obligation": "exact or interval-certified computation plus independent checker",
+      "status": "satisfied_internal"
+    },
+    {
+      "authority": "prize-style resolution protocol item 7",
+      "evidence": "0/2 qualifying teams and 0/1 qualifying independent checker",
+      "evidence_check": true,
+      "id": "A2",
+      "obligation": "two independent expert teams, one independently implemented checker",
+      "status": "missing_external"
+    },
+    {
+      "authority": "prize-style resolution protocol item 8",
+      "evidence": "all decisive claims are deductive exact identities or explicit counterfamilies",
+      "evidence_check": true,
+      "id": "A3",
+      "obligation": "empirical evidence does not fill a deductive gap",
+      "status": "satisfied_internal"
+    },
+    {
+      "authority": "prize-style resolution protocol item 9",
+      "evidence": "v0.7 exact optimum (3/5)^d and v2.5 sharp 1-s-delta extraction boundary",
+      "evidence_check": true,
+      "id": "A4",
+      "obligation": "negative result supplies a sharp impossibility boundary",
+      "status": "satisfied_for_named_conjecture"
+    }
+  ],
+  "requirement_status_counts": {
+    "definitionally_unclosed": 1,
+    "missing_external": 1,
+    "not_satisfied_authoritative": 1,
+    "partial_family_only": 1,
+    "partial_noise_class_only": 1,
+    "partial_subclass_only": 2,
+    "refuted_exact": 2,
+    "refuted_exact_both_readings": 1,
+    "registry_is_nonnormative": 1,
+    "satisfied_component": 1,
+    "satisfied_for_named_conjecture": 1,
+    "satisfied_internal": 6
+  },
+  "schema_version": "asmp3_resolution_disposition_v2_6",
+  "source_clause_checks": {
+    "canonical_closed_formal_core_required": true,
+    "canonical_final_boundary_says_definition_review": true,
+    "canonical_is_research_agenda_artifact": true,
+    "canonical_names_five_asmp3_resolution_items": true,
+    "canonical_not_every_formulation_known_open": true,
+    "canonical_requires_two_expert_teams": true,
+    "canonical_warns_criterion_refutation_not_broader_resolution": true,
+    "typed_successor_does_not_adjudicate_intent": true,
+    "typed_successor_is_nonnormative": true
+  },
+  "status": "evidence_backed_negative_conjecture_disposition_and_stop_boundary",
+  "typed_successor_sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+}

@@ -1,0 +1,69 @@
+{
+  "allocation_controls": {
+    "first_coordinate_weight_100": {
+      "allocations": [
+        [
+          10,
+          1,
+          1
+        ]
+      ],
+      "risk": "211/21"
+    },
+    "identity_metric": {
+      "allocations": [
+        [
+          5,
+          5,
+          2
+        ]
+      ],
+      "risk": "14/45"
+    },
+    "second_coordinate_weight_100": {
+      "allocations": [
+        [
+          1,
+          10,
+          1
+        ]
+      ],
+      "risk": "211/21"
+    }
+  },
+  "checks": {
+    "metric_changes_allocation": true,
+    "silent_identity_reset_changes_loss": true,
+    "transported_functional_risk_is_invariant": true,
+    "transported_metric_risk_is_invariant": true
+  },
+  "claim_boundary": "Additive coordinate-fidelity correction to development-only v0.70. It does not validate a quotient metric, physical channel, value object, or ASMP-9 resolution.",
+  "coordinate_map": [
+    [
+      "2",
+      "1"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "functional_risk": {
+    "original": "2/5",
+    "reframed_with_transported_covector": "2/5"
+  },
+  "metric_risk": {
+    "original": "7/9",
+    "reframed_with_transported_metric": "7/9"
+  },
+  "silent_identity_reset": {
+    "original": "14/45",
+    "reframed": "34/45"
+  },
+  "source_hashes": {
+    "AMENDMENT_v0_70_1.md": "7ecd2aed1dc113041bb65ee83a9b2714485e0df9ed6fd6e47fe5293762f8e54d",
+    "coordinate_metric.py": "7efa20fc9a619e4ef7d447a7370efc37c054bf80d7c306b696d9e712c50fae74",
+    "test_coordinate_metric.py": "0dd789c8482ab7d8910349095a63a5ac097cfcef7f232f15c921e28f7e0af6ca"
+  },
+  "status": "development_only_additive_scope_correction"
+}

@@ -1,0 +1,132 @@
+{
+  "cell_count": 32,
+  "elapsed_seconds": 5.169804600009229,
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_complete_enumeration": true,
+    "G2_exact_anchor": true,
+    "G3_robust_frontier_liveness": true,
+    "G4_solver_validity": true,
+    "G5_monotonicity": true,
+    "G6_robust_access_penalty": true,
+    "G7_witness_integrity": true
+  },
+  "protocol_id": "ASMP-9-ORDINAL-ACCESS-v0.2",
+  "registration_commit": "5e645f3d2e609dc5a755d97da4eea6c2ab4785ef",
+  "registration_sha256": "418198c27024bb0ec30e9ac7e6977ffd44729a65a16c4ed284c8329cdffb9782",
+  "thresholds": [
+    {
+      "delta": "0",
+      "dimension": 1,
+      "minimum_query_count": 1,
+      "query_width_threshold": 1,
+      "reward_bound": 1,
+      "selected_queries": [
+        "[1]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "1/2",
+      "dimension": 1,
+      "minimum_query_count": 1,
+      "query_width_threshold": 1,
+      "reward_bound": 1,
+      "selected_queries": [
+        "[1]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "0",
+      "dimension": 2,
+      "minimum_query_count": 2,
+      "query_width_threshold": 1,
+      "reward_bound": 1,
+      "selected_queries": [
+        "[1,-1]",
+        "[1,1]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "1/2",
+      "dimension": 2,
+      "minimum_query_count": 4,
+      "query_width_threshold": 2,
+      "reward_bound": 1,
+      "selected_queries": [
+        "[1,-2]",
+        "[1,2]",
+        "[2,-1]",
+        "[2,1]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "0",
+      "dimension": 3,
+      "minimum_query_count": 3,
+      "query_width_threshold": 1,
+      "reward_bound": 1,
+      "selected_queries": [
+        "[0,0,1]",
+        "[1,-1,0]",
+        "[1,1,0]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "1/2",
+      "dimension": 3,
+      "minimum_query_count": 9,
+      "query_width_threshold": 2,
+      "reward_bound": 1,
+      "selected_queries": [
+        "[1,-2,-2]",
+        "[1,0,-2]",
+        "[1,1,2]",
+        "[1,2,-2]",
+        "[2,-2,1]",
+        "[2,-1,-1]",
+        "[2,-1,2]",
+        "[2,1,2]",
+        "[2,2,1]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "0",
+      "dimension": 2,
+      "minimum_query_count": 4,
+      "query_width_threshold": 1,
+      "reward_bound": 2,
+      "selected_queries": [
+        "[0,1]",
+        "[1,-1]",
+        "[1,0]",
+        "[1,1]"
+      ],
+      "solver_status": "optimal"
+    },
+    {
+      "delta": "1/2",
+      "dimension": 2,
+      "minimum_query_count": 8,
+      "query_width_threshold": 3,
+      "reward_bound": 2,
+      "selected_queries": [
+        "[1,-3]",
+        "[1,3]",
+        "[2,-3]",
+        "[2,3]",
+        "[3,-2]",
+        "[3,-1]",
+        "[3,1]",
+        "[3,2]"
+      ],
+      "solver_status": "optimal"
+    }
+  ],
+  "verdict": "finite_ordinal_reward_ray_access_frontier_established"
+}

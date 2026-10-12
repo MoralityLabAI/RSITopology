@@ -1,0 +1,43 @@
+{
+  "schema_version": "asmp4_single_root_stop_v0_36",
+  "canonical": {
+    "completion_requirements": 5,
+    "explicit_architecture_clauses": 6,
+    "missing_domain_selectors": [
+      "sensor_grammar",
+      "randomness_disturbance_order",
+      "normally_hyperbolic_predicate",
+      "local_controllability_predicate",
+      "public_belief_semantics",
+      "safe_closing_or_reset_semantics",
+      "actuator_dictionary_domain"
+    ],
+    "formal_normative_registry_selected": false
+  },
+  "material_forks": {
+    "computed_sensor_region": "[1,infinity) x [1,infinity)",
+    "forced_raw_sensor_region": "[2,infinity) x [1,infinity)",
+    "probability_disturbance_order_selected": false,
+    "per_disturbance_and_uniform_feasibility_differ": true
+  },
+  "conditional_chain": {
+    "requirements_with_conditional_evidence": 5,
+    "nonfinite_region": "v0.33",
+    "compact_public_connector": "v0.34",
+    "robust_public_atlas": "v0.35",
+    "unresolved_root": "formal normative registry or attributable semantic adjudication"
+  },
+  "stopping_logic": {
+    "truth_table_rows": 32,
+    "stop_rows": 1,
+    "reopening_conditions": 4
+  },
+  "evidence": {
+    "sealed_resources": 6,
+    "mutations_rejected": 8,
+    "predecessor_packages": 36,
+    "predecessor_tests": 394
+  },
+  "decision": "stop autonomous ASMP-4 work pending a formal registry, attributable semantic adjudication, a sealed error, or a registry-independence theorem",
+  "nonclaim": "ASMP-4 is not mathematically resolved; this is a harness-backed operational stopping argument"
+}

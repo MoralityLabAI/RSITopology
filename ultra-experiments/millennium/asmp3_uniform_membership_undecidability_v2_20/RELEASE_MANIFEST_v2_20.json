@@ -1,0 +1,121 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-UNIFORM-MEMBERSHIP-UNDECIDABILITY-v2.20",
+  "file_count": 28,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_consolidated_resource_scope_v2_17/artifacts/consolidated_resource_scope_v2_17.json": {
+      "bytes": 22695,
+      "sha256": "563809EE38E11AEB1599CF655FCA2D4966D0AE4ABFC48F16C2C742D4822E64BE"
+    },
+    "../asmp3_encoding_invariance_v2_0/artifacts/encoding_invariance_v2_0.json": {
+      "bytes": 34866,
+      "sha256": "0EFF1BB9F80AE281EFA29E151FD87FA0200CC62A651F1B5E5E777BED5A44C191"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/FINITE_TV_FRONTIER_THEOREM_v0_8.md": {
+      "bytes": 7277,
+      "sha256": "0811DAB26F29F0B2BCD4AB19A2A3EF3908758BA915A8D895F02AF841729796A5"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/artifacts/finite_tv_frontier_v0_8.json": {
+      "bytes": 10257,
+      "sha256": "BFB6CF9ADC9500B22B774628C632EE0575CE13C9085BF1BBFD931ABE3C14DF08"
+    },
+    "../asmp3_normative_closure_reassessment_v2_19/artifacts/normative_closure_reassessment_v2_19.json": {
+      "bytes": 9529,
+      "sha256": "2AA99EA20E1BC878460407611951D70502D6126090757EFD105352D3F54FD1A4"
+    },
+    "../asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md": {
+      "bytes": 4301,
+      "sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "../asmp3_sequence_form_bridge_v1_3/SEQUENCE_FORM_THEOREM_v1_3.md": {
+      "bytes": 8002,
+      "sha256": "A77E19066470028E7F23906E2506E9C1C35BEB265C1812C1DFD5642281800E8A"
+    },
+    "../asmp3_sequence_form_bridge_v1_3/artifacts/sequence_form_bridge_v1_3.json": {
+      "bytes": 117318,
+      "sha256": "45025B0091D1898BCB9883A28F85A55FA321ABD035C449AE389F04720855D99C"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_typed_successor_v0_2/typed_successor_v0_2.json": {
+      "bytes": 2482,
+      "sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "ASMP3_RESEARCH_REPORT_v2_20.md": {
+      "bytes": 9224,
+      "sha256": "6DD64BF34E29AEC3C4FB70F6D976E1F6D60C3D437540545F7202CA0D0A20AF24"
+    },
+    "COMPLETION_AUDIT_v2_20.md": {
+      "bytes": 1013,
+      "sha256": "652BF419B0762EC87E05C4509243581C0EB6F04D63BAD4675944519FF2B05901"
+    },
+    "PRIOR_ART_BOUNDARY_v2_20.md": {
+      "bytes": 1949,
+      "sha256": "9F9C1F5D68AD8E49A72726CF5E14059928FE0FAA2B924D756A3B0A0A0E31F923"
+    },
+    "README.md": {
+      "bytes": 1077,
+      "sha256": "59965760585B7A6DDF0C594D9FD4A9D7AD350F06DA7E5CF1BAA999F0958107B5"
+    },
+    "REQUIREMENT_AUDIT_v2_20.md": {
+      "bytes": 3070,
+      "sha256": "6D0A7F1ECCCA268DD703623A3FD96CA6E76369A8C39714822CF00C309E779515"
+    },
+    "RESOLUTION_DISPOSITION_v2_20.md": {
+      "bytes": 2435,
+      "sha256": "8AF388C452A540592D69D98AC278BD26779F83B621731F2842EF43C2C4F864FC"
+    },
+    "UNIFORM_MEMBERSHIP_UNDECIDABILITY_THEOREM_v2_20.md": {
+      "bytes": 7898,
+      "sha256": "C8E5B671248C272D37E192CFFD8A3F2CD3BA28C4C159791503C28067773A1685"
+    },
+    "artifacts/uniform_membership_undecidability_v2_20.json": {
+      "bytes": 156615,
+      "sha256": "D7D429C4C0E4143DA8703C738479009C6BC6AD1FB984D0E105E88EEABD881DE3"
+    },
+    "artifacts/uniform_membership_undecidability_verification_v2_20.json": {
+      "bytes": 1080,
+      "sha256": "E93EBEDBDF65857842B5566CEE4DA64736C1371412F447EE34BFFE2A3BF70F7D"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3350,
+      "sha256": "060FBBDBA080BFEB6C753E085AA31CF7EE3113A8D811E0C268D0E8AD2E4255EC"
+    },
+    "run_uniform_membership_undecidability.py": {
+      "bytes": 469,
+      "sha256": "87925B57451EA419C79829B3F1EC698550038B84BA441DB3CB755AB37CB01DF6"
+    },
+    "test_uniform_membership_undecidability.py": {
+      "bytes": 3935,
+      "sha256": "8464BD6CC7D47D3993172408081289C86ECE0AC4770F6DD63752E5DA0C395205"
+    },
+    "uniform_membership_undecidability.py": {
+      "bytes": 21395,
+      "sha256": "A88A7E01497531E0140EA586F1AF0A9D5393FE7E7B4D1B85DA8BE7FDDA579892"
+    },
+    "verify_uniform_membership_undecidability.py": {
+      "bytes": 13235,
+      "sha256": "89BBE985BAD1DFF06186C81E1F56E539698C3BE9FB6B04100353A2790878A91D"
+    }
+  },
+  "release_status": "strict_FIX_arbitrary_computable_uniform_membership_undecidable_parent_resolution_conditional_on_representation",
+  "schema_version": "asmp3_uniform_membership_undecidability_release_v2_20"
+}

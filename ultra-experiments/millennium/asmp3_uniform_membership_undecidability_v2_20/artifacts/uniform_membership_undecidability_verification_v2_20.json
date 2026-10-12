@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_source_fixed_game_pair_TV_resource_macro_transition_NONHALT_and_parent_boundary_audit",
+  "checks": {
+    "V0_schema_parent_status_and_thirteen_hashes": true,
+    "V1_source_computability_and_strict_FIX_markers_reconstructed": true,
+    "V2_fixed_vector_interface_and_local_atom_firewall_reconstructed": true,
+    "V3_all_resource_ledgers_reconstructed": true,
+    "V4_active_exact_gap_reconstructed_for_every_vector_pair": true,
+    "V5_inactive_zero_gap_reconstructed_for_every_vector_pair": true,
+    "V6_all_halting_transition_rows_and_fixtures_reconstructed": true,
+    "V7_NONHALT_reduction_implications_are_complete": true,
+    "V8_exact_finite_parent_boundary_preserved": true,
+    "V9_claim_boundary_does_not_overpromote": true
+  },
+  "claim_boundary": "Finite enumeration validates the reduction mechanics; the universal undecidability conclusion rests on the separately written NONHALT proof, not on fixture coverage.",
+  "passed": true,
+  "schema_version": "asmp3_uniform_membership_undecidability_verification_v2_20"
+}

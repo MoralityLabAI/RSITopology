@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "artifact_hashes_match": true,
+    "claim_boundary_present": true,
+    "conditions_replay_byte_exact": true,
+    "gate_count": true,
+    "policies_replay_byte_exact": true,
+    "protocol_hash_matches": true,
+    "registered_sources_match": true,
+    "registration_hash_matches": true,
+    "risks_replay_byte_exact": true,
+    "scientific_core_replays": true,
+    "scientific_gates_replay": true
+  },
+  "claim_boundary": "Synthetic finite-population calibration of a classical robust lower bound; no learned reward model, no real human-preference uncertainty set, no RL trajectory, and no ASMP-8 resolution.",
+  "decision": "pass",
+  "instrument_status": "valid",
+  "schema_version": "asmp8_calibrated_certificate_verification_v0_3"
+}

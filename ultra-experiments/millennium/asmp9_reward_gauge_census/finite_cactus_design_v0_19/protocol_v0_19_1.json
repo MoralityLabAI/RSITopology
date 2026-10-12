@@ -1,0 +1,125 @@
+{
+  "burned_cache_regression": {
+    "protocol_path": "protocol_v0_19.json",
+    "result_path": "artifacts_v0_19/result_v0_19.json"
+  },
+  "claim_boundary": "Exact finite-budget maximin allocation on cactus cyclic cores inside the frozen independent-binomial, known symmetric-interior, positive-count conditional-access model inherited from ASMP-9 v0.16-v0.18. Version 0.19.1 is a computation-only successor to the v0.19 wall-time failure: it caches graph liveness by ternary residual state and contracts exact integer status numerators, while using wholly new scientific cells. The ASMP-9-specific result is the reduction to a classical series-product integer resource-allocation problem. Dynamic programming, redundancy allocation, and greedy criteria are not claimed as new. This is not an arbitrary-graph every-budget theorem, adaptive allocation theorem, dependent-response theorem, unknown-link theorem, downstream policy-estimation theorem, behavioral reward-identification theorem, general IRL theorem, or ASMP-9 resolution.",
+  "comparator_cells": {
+    "fresh_19_1_equal_six_cycles": {
+      "bridge_count": 0,
+      "cycle_lengths": [6, 6, 6],
+      "epsilon": "7/24",
+      "total_budget": 26
+    },
+    "fresh_19_1_pair_4_5": {
+      "bridge_count": 0,
+      "cycle_lengths": [4, 5],
+      "epsilon": "4/17",
+      "total_budget": 15
+    },
+    "fresh_19_1_pair_6_9": {
+      "bridge_count": 0,
+      "cycle_lengths": [6, 9],
+      "epsilon": "5/19",
+      "total_budget": 24
+    }
+  },
+  "development_registry": {
+    "burned_epsilon_values": [
+      "1/100",
+      "1/50",
+      "1/20",
+      "1/10",
+      "1/5",
+      "1/4",
+      "1/3",
+      "2/5",
+      "49/100",
+      "1/2",
+      "3/11",
+      "5/17",
+      "4/15",
+      "5/18",
+      "3/14",
+      "7/20"
+    ],
+    "v0_19_status": "all mathematical gates passed; resource gate failed at 261.413 seconds; every v0.19 cell is burned"
+  },
+  "dp_cells": {
+    "fresh_19_1_quad_4_6_8_11": {
+      "bridge_count": 2,
+      "cycle_lengths": [4, 6, 8, 11],
+      "epsilon": "4/17",
+      "total_budget": 46
+    },
+    "fresh_19_1_triple_5_7_9": {
+      "bridge_count": 2,
+      "cycle_lengths": [5, 7, 9],
+      "epsilon": "7/24",
+      "total_budget": 35
+    },
+    "fresh_19_1_triple_7_8_10": {
+      "bridge_count": 1,
+      "cycle_lengths": [7, 8, 10],
+      "epsilon": "5/19",
+      "total_budget": 39
+    }
+  },
+  "factorization_cells": {
+    "fresh_19_1_figure_4_4": {
+      "bridge_count": 0,
+      "counts": [1, 2, 3, 2, 2, 1, 3, 2],
+      "cycle_lengths": [4, 4],
+      "epsilon": "7/23",
+      "label_mode": "all"
+    },
+    "fresh_19_1_figure_3_6_bridge": {
+      "bridge_count": 1,
+      "counts_a": [2, 1, 3, 1, 2, 1, 3, 2, 1, 1],
+      "counts_b": [2, 1, 3, 1, 2, 1, 3, 2, 1, 9],
+      "cycle_lengths": [3, 6],
+      "epsilon": "4/19",
+      "label_vectors": [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0, 1, 0],
+        [0, 0, 1, 1, 0, 0, 1, 1, 0, 0],
+        [1, 1, 0, 0, 1, 1, 0, 0, 1, 1],
+        [0, 1, 1, 0, 1, 0, 0, 1, 1, 0],
+        [1, 0, 0, 1, 0, 1, 1, 0, 0, 1]
+      ]
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_fresh_registry",
+    "G2_cached_engine_reproduces_burned_v0_19",
+    "G3_exact_cactus_factorization",
+    "G4_bridge_irrelevance_and_floor",
+    "G5_dp_equals_independent_exhaustive_totals",
+    "G6_dp_equals_all_edge_census",
+    "G7_nonconcavity_and_comparator_certificates",
+    "G8_fresh_comparator_classification",
+    "G9_resource_and_scope"
+  ],
+  "global_edge_census": {
+    "bridge_count": 1,
+    "cycle_lengths": [3, 5],
+    "epsilon": "4/19",
+    "total_budget": 13
+  },
+  "inherited_object": {
+    "availability_event": "full conditional-fiber reward-gauge quotient rank",
+    "finite_algorithm": "v0.19 Bellman recursion over balanced cycle totals",
+    "response_model": "independent Bernoulli comparisons with known symmetric endpoint-bounded response probabilities",
+    "structural_source": "v0.18 cyclic-core bond characterization"
+  },
+  "protocol_id": "ASMP-9-FINITE-CACTUS-DESIGN-v0.19.1",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "version": "0.19.1"
+}
