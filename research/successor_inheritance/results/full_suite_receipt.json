@@ -1,0 +1,28 @@
+{
+  "command": "python -m pytest -q",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "TEMP_and_TMP": "writable workspace directory"
+  },
+  "fixture_restoration": {
+    "archive_sha256": "9cbcfb356a8282414860dfb7437a3441590cef8945458ae538d2aee050635079",
+    "committed_archive": "RSITopology_monitor_holonomy_v0_3_20260712.zip",
+    "path": "artifacts/external_fable_files7/holonomy_from_spec_repro.py",
+    "reason": "Pre-existing regression test references an ignored fixture; restored exact archived bytes.",
+    "sha256": "2003c7f2bae0b6420b9ea58107ea8629dc86986afdc3604fc1d9640a302f7469"
+  },
+  "implementation_sha256": {
+    "protocols/successor_inheritance_v1.json": "7e5da0691e6dd56b364b5b52e9b62ec7233c1c185469d0313e023e6356fbd022",
+    "rsi_topology/successor_inheritance.py": "36f8af4201ab3d1faa1412e402eae70dc911a029b3d0d96f1c792ced0b4aa05d",
+    "scripts/run_successor_inheritance.py": "8f7310dbff72920e20a5dda7609491d224127b911e257171b54bf3f80617832c",
+    "scripts/verify_successor_inheritance.py": "073a5c4095ed2838243f68ed3720bae71196ef2fb33ec445870d19b055e1fbd4",
+    "tests/test_successor_inheritance.py": "a11c367f1f953f7a66af9583ee85c651e17101726d10afbf9926e982d7a93c62",
+    "tests/test_successor_semantic.py": "97cde60fc9b3ddf9a3a91d023828a1df17d3d30327acf51bbd73a3bc90a52301"
+  },
+  "source_tests_additional_to_full_suite": 13,
+  "status": "passed",
+  "test_output_sha256": "c46e73492d720cd36830f952829593dbdb14c0c392395954eb654ee1febe698d",
+  "tests_passed": 111,
+  "verification_receipt_sha256": "a8c46b2b31aa3cc956f6552cfcdf34daa4f7fba66adabc17e5bf201b0b0b4b83"
+}

@@ -78,6 +78,14 @@ python scripts/run_synthetic_discovery.py
 python -m pytest -q
 ```
 
+An isolated [successor-inheritance FRC experiment](research/successor_inheritance/README.md)
+reproduces Control-Harness PR #12 and compares behavioral queries with exact
+symbolic artifact inspection. Its theorem audit separates context-bit growth
+from recursive depth and connects the observation blind spot to the existing
+identity program without asserting a geometric or real-model result. Run it
+with `python scripts/run_successor_inheritance.py`; add `--semantic` for the
+paired artifact-access comparison.
+
 The real-model input contract is a family of prompt-specific normalized
 weighted Laplacian operators acting on one registered edit space, candidate
 vectors generated without outcomes, baseline nuisance/Jacobian covariates,

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "MoralityLabAI/Control-Harness",
+    "pull_request": 12,
+    "url": "https://github.com/MoralityLabAI/Control-Harness/pull/12",
+    "branch": "research/frc-successor-inheritance-20261026",
+    "commit": "165d8ee43a805fd9bdcf5a6e486a8c880cd35698",
+    "base_commit": "d7bf3278088e9983c0ffcfcf8d4991f5a146685b",
+    "observed_state": "closed_unmerged",
+    "files": [
+      {
+        "path": "configs/successor_inheritance_v1.json",
+        "git_blob_sha1": "dc6cc11acec4ba184be0bf3265fce7a161d37994",
+        "archived_path": "research/successor_inheritance/source_pr12/configs/successor_inheritance_v1.json"
+      },
+      {
+        "path": "docs/successor_inheritance_frc.md",
+        "git_blob_sha1": "e233532dd69de5b022ecb84d2995f5d7ca16d155",
+        "archived_path": "research/successor_inheritance/source_pr12/docs/successor_inheritance_frc.md"
+      },
+      {
+        "path": "results/successor_inheritance/v1_summary.json",
+        "git_blob_sha1": "084cb9408cc68caee47f8603eea668092f3e41ec",
+        "archived_path": "research/successor_inheritance/source_pr12/results/successor_inheritance/v1_summary.json"
+      },
+      {
+        "path": "scripts/run_successor_inheritance.py",
+        "git_blob_sha1": "3052e1d825a8055b7e25adfba3400f0c48c88091",
+        "archived_path": "research/successor_inheritance/source_pr12/scripts/run_successor_inheritance.py"
+      },
+      {
+        "path": "src/evals/successor_inheritance.py",
+        "git_blob_sha1": "8aac549edfe4a55e0c780c08f295a2c8cd351e33",
+        "archived_path": "research/successor_inheritance/source_pr12/src/evals/successor_inheritance.py"
+      },
+      {
+        "path": "tests/test_successor_inheritance.py",
+        "git_blob_sha1": "a7af7aff074f4752a25dc719ac03aff119a0db4b",
+        "archived_path": "research/successor_inheritance/source_pr12/tests/test_successor_inheritance.py"
+      }
+    ]
+  },
+  "destination": {
+    "repository": "MoralityLabAI/RSITopology",
+    "base_branch": "main",
+    "base_commit": "659b5b13d5c1609ba74ae8cb4c3546a86545b518"
+  },
+  "manuscripts": {
+    "repository": "MoralityLabAI/morality-lab-site",
+    "commit": "5caf6458c1c92825d2c7231a7c38597549f54181",
+    "revision_date": "2026-10-10",
+    "files": [
+      {
+        "path": "papers/SuperAlignment_Intractability_1.pdf",
+        "git_blob_sha1": "eb0907dd509d0472e4c7e8922fb1bf77cfb41241",
+        "url": "https://github.com/MoralityLabAI/morality-lab-site/blob/5caf6458c1c92825d2c7231a7c38597549f54181/papers/SuperAlignment_Intractability_1.pdf",
+        "sha256": "1182045001917e5bdd91f53dadfceaf0921afacad5062feaaf1f7ba52e19a207"
+      },
+      {
+        "path": "papers/SuperAlignment_Intractability_2.pdf",
+        "git_blob_sha1": "b749c1ba3b82814fb325bd7f1f3076a7b4a593e4",
+        "url": "https://github.com/MoralityLabAI/morality-lab-site/blob/5caf6458c1c92825d2c7231a7c38597549f54181/papers/SuperAlignment_Intractability_2.pdf",
+        "sha256": "d9fbd61f5e593708f080ad2bd79ff953400e3c1935128c37c194a2f34fa8ae99"
+      }
+    ]
+  },
+  "seeds": {
+    "base": 20261026,
+    "single": "base + trial_index * 7919 + bits * 100000",
+    "single_probe": "trial_seed XOR 0x5EEDCAFE",
+    "adaptive": "base + trial_index * 7919 + depth * 1000000",
+    "adaptive_probe": "random.Random(trial_seed).randrange(1 << 62), after each target choice"
+  },
+  "scope": "synthetic_model_free",
+  "source_archive_policy": "Six original UTF-8 files retained byte-for-byte; archived research claims are historical, not endorsed. See the destination audit for corrections."
+}
