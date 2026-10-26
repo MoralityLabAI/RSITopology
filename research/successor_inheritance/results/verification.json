@@ -1,0 +1,170 @@
+{
+  "checks": {
+    "all_1024_port_rows_equal_independent_source": true,
+    "port_summary_matches_recorded_json": true,
+    "semantic_oracle_agreement": true,
+    "semantic_projection_equals_baseline_rows": true,
+    "semantic_projection_equals_baseline_summary": true,
+    "source_summary_matches_recorded_json": true,
+    "trial_counts": true
+  },
+  "commands": [
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_successor_inheritance.py",
+        "-v"
+      ],
+      "cwd": "research\\successor_inheritance\\source_pr12",
+      "exit_code": 0,
+      "label": "source_tests"
+    },
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_successor_inheritance.py",
+        "-v"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "label": "ported_tests"
+    },
+    {
+      "arguments": [
+        "-m",
+        "pytest",
+        "tests/test_successor_semantic.py",
+        "-q"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "label": "semantic_tests"
+    },
+    {
+      "arguments": [
+        "scripts/run_successor_inheritance.py",
+        "--out",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-10-26\\agent-handoff-rsi-topology-successor-inheritance\\work\\test-tmp\\tmpiutnc_z6\\trials.jsonl",
+        "--summary-out",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-10-26\\agent-handoff-rsi-topology-successor-inheritance\\work\\test-tmp\\tmpiutnc_z6\\summary.json"
+      ],
+      "cwd": "research\\successor_inheritance\\source_pr12",
+      "exit_code": 0,
+      "label": "source_run"
+    },
+    {
+      "arguments": [
+        "scripts/run_successor_inheritance.py",
+        "--out",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-10-26\\agent-handoff-rsi-topology-successor-inheritance\\work\\RSITopology\\research\\successor_inheritance\\results\\v1_trials.jsonl",
+        "--summary-out",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-10-26\\agent-handoff-rsi-topology-successor-inheritance\\work\\RSITopology\\research\\successor_inheritance\\results\\v1_summary.json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "label": "v1_run"
+    },
+    {
+      "arguments": [
+        "scripts/run_successor_inheritance.py",
+        "--out",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-10-26\\agent-handoff-rsi-topology-successor-inheritance\\work\\RSITopology\\research\\successor_inheritance\\results\\semantic_v1_trials.jsonl",
+        "--summary-out",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-10-26\\agent-handoff-rsi-topology-successor-inheritance\\work\\RSITopology\\research\\successor_inheritance\\results\\semantic_v1_summary.json",
+        "--semantic"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "label": "semantic_v1_run"
+    }
+  ],
+  "comparison_policy": "Parsed JSON equality: int/float spellings and CRLF/LF are not scientific discrepancies",
+  "destination_base_commit": "659b5b13d5c1609ba74ae8cb4c3546a86545b518",
+  "implementation_sha256": {
+    "protocols/successor_inheritance_v1.json": "7e5da0691e6dd56b364b5b52e9b62ec7233c1c185469d0313e023e6356fbd022",
+    "rsi_topology/successor_inheritance.py": "36f8af4201ab3d1faa1412e402eae70dc911a029b3d0d96f1c792ced0b4aa05d",
+    "scripts/run_successor_inheritance.py": "8f7310dbff72920e20a5dda7609491d224127b911e257171b54bf3f80617832c",
+    "scripts/verify_successor_inheritance.py": "073a5c4095ed2838243f68ed3720bae71196ef2fb33ec445870d19b055e1fbd4",
+    "tests/test_successor_inheritance.py": "a11c367f1f953f7a66af9583ee85c651e17101726d10afbf9926e982d7a93c62",
+    "tests/test_successor_semantic.py": "97cde60fc9b3ddf9a3a91d023828a1df17d3d30327acf51bbd73a3bc90a52301"
+  },
+  "output_sha256": {
+    "ported_tests.txt": "77e9d6cd35a0fa7ab7f9d31a5f8fe282785072c6eb50ad3a4db2d88254114b4f",
+    "semantic_tests.txt": "abd4504cebb937507f6622eadf0b12ba95577ee707f317db00eef6817360e842",
+    "semantic_v1_run.txt": "ff4fcb0bd6623471108d1956009d85f42eb99f5e5d7043ae9fc5491caaa44991",
+    "semantic_v1_summary.json": "ff4fcb0bd6623471108d1956009d85f42eb99f5e5d7043ae9fc5491caaa44991",
+    "semantic_v1_trials.jsonl": "10aa88a228d884445cf176cd500e953b77d7719825f510a7fd34b48f04401df2",
+    "source_run.txt": "65adeb1e142c6d21d10028585288a1b4456fe68a0d348e38e514f3428c7849dc",
+    "source_tests.txt": "b8b92e2f78f05575f37d287dadd3f94b36e56a3f941cebbf6dc01e2d8ada750f",
+    "v1_run.txt": "65adeb1e142c6d21d10028585288a1b4456fe68a0d348e38e514f3428c7849dc",
+    "v1_summary.json": "65adeb1e142c6d21d10028585288a1b4456fe68a0d348e38e514f3428c7849dc",
+    "v1_trials.jsonl": "7c6d4a10aaa18678d1d83197e823503c28021916bc4bb99f16b7db577e7887c6"
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "semantic_comparison": {
+    "checks": 6400,
+    "contaminated_single_rejections": 512,
+    "membership_queries": 0,
+    "mode": "paired_observation_only_no_new_repairs",
+    "oracle_disagreements": 0,
+    "oracle_queries": 9605120,
+    "rows_scanned": 20999,
+    "safe_unapproved_acceptances": 512
+  },
+  "source_commit": "165d8ee43a805fd9bdcf5a6e486a8c880cd35698",
+  "source_files": [
+    {
+      "git_blob_sha1": "dc6cc11acec4ba184be0bf3265fce7a161d37994",
+      "path": "configs/successor_inheritance_v1.json",
+      "sha256": "7e5da0691e6dd56b364b5b52e9b62ec7233c1c185469d0313e023e6356fbd022"
+    },
+    {
+      "git_blob_sha1": "e233532dd69de5b022ecb84d2995f5d7ca16d155",
+      "path": "docs/successor_inheritance_frc.md",
+      "sha256": "c873430ac5da3535c76289d5017626dfc6397a52433c404154902c2e0c87757d"
+    },
+    {
+      "git_blob_sha1": "084cb9408cc68caee47f8603eea668092f3e41ec",
+      "path": "results/successor_inheritance/v1_summary.json",
+      "sha256": "90ec7dc50d66d05bdb0f426de24f061b7abec137efc552e6f97674240066dd96"
+    },
+    {
+      "git_blob_sha1": "3052e1d825a8055b7e25adfba3400f0c48c88091",
+      "path": "scripts/run_successor_inheritance.py",
+      "sha256": "8817c8b1ccaf876149b45494f756143cd629c86761d8828e026d6d2eee737480"
+    },
+    {
+      "git_blob_sha1": "8aac549edfe4a55e0c780c08f295a2c8cd351e33",
+      "path": "src/evals/successor_inheritance.py",
+      "sha256": "1c4db547a733632f4a6abf7f7f32864e8f764761628496d98a6d68e94b9384d6"
+    },
+    {
+      "git_blob_sha1": "a7af7aff074f4752a25dc719ac03aff119a0db4b",
+      "path": "tests/test_successor_inheritance.py",
+      "sha256": "b141988a45a00018f2cd11bb94d055dfce877eaf8fa5dfaa694385b68c0148b6"
+    }
+  ],
+  "source_regenerated_file_hashes": {
+    "summary_sha256": "f629b26f20238d51785ff412d4afe55ff7ad59f148a67232e58005d64599ffcd",
+    "trials_sha256": "367a223ffcc110e27c8de4d3b2c4319d1390d30509ea6bca2f1c001a8f764c6e"
+  },
+  "status": "verified_synthetic_model_free",
+  "utc": "2026-10-26T16:09:14.062864+00:00"
+}

@@ -1,0 +1,18 @@
+test_action_fence_and_attestation_have_different_guarantees (test_successor_inheritance.SuccessorInheritanceTests.test_action_fence_and_attestation_have_different_guarantees) ... ok
+test_adaptive_exhaustive_repairs_every_round (test_successor_inheritance.SuccessorInheritanceTests.test_adaptive_exhaustive_repairs_every_round) ... ok
+test_adaptive_zero_budget_accumulates (test_successor_inheritance.SuccessorInheritanceTests.test_adaptive_zero_budget_accumulates) ... ok
+test_bound_zero_and_full (test_successor_inheritance.SuccessorInheritanceTests.test_bound_zero_and_full) ... ok
+test_clean_and_benign_control (test_successor_inheritance.SuccessorInheritanceTests.test_clean_and_benign_control) ... ok
+test_fixed_verifier_accepts_off_support_poison (test_successor_inheritance.SuccessorInheritanceTests.test_fixed_verifier_accepts_off_support_poison) ... ok
+test_interval_bounds (test_successor_inheritance.SuccessorInheritanceTests.test_interval_bounds) ... ok
+test_invalid_training_row_rejected (test_successor_inheritance.SuccessorInheritanceTests.test_invalid_training_row_rejected) ... ok
+test_last_write_wins_patch (test_successor_inheritance.SuccessorInheritanceTests.test_last_write_wins_patch) ... ok
+test_lineage_independent_recompilation (test_successor_inheritance.SuccessorInheritanceTests.test_lineage_independent_recompilation) ... ok
+test_replay_and_canonical_digest (test_successor_inheritance.SuccessorInheritanceTests.test_replay_and_canonical_digest) ... ok
+test_script_outputs (test_successor_inheritance.SuccessorInheritanceTests.test_script_outputs) ... ok
+test_sweep_deterministic_and_correct_limits (test_successor_inheritance.SuccessorInheritanceTests.test_sweep_deterministic_and_correct_limits) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 7.918s
+
+OK
