@@ -1,0 +1,26 @@
+name: Catastrophic-risk comparison audit
+on:
+  pull_request:
+    paths:
+      - 'rsi_topology/catastrophe_decision.py'
+      - 'tests/test_catastrophe_decision.py'
+      - 'scripts/run_catastrophe_comparison.py'
+      - 'docs/CATASTROPHE_COMPARISON.md'
+      - '.github/workflows/catastrophe-comparison.yml'
+  workflow_dispatch:
+
+jobs:
+  comparison-fixture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package and tests
+        run: python -m pip install -e . pytest
+      - name: Run evidence, governance, and finite-FRC audit
+        run: python -m pytest -q tests/test_catastrophe_decision.py
+      - name: Produce synthetic receipt
+        run: python -m scripts.run_catastrophe_comparison
