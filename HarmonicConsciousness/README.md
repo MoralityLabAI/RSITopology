@@ -2,6 +2,10 @@
 
 **Status:** CPU-only, model-free synthetic controls. The outputs are measurements of dynamical structure and a delayed-recall task, with no measurement or attribution of subjective consciousness. The constructed XOR circuits are *inspired by* Scott Aaronson's IIT counterexample. **They are not exact implementations of Tononi's IIT Phi** in any version.
 
+## v0.2 same-size dormant-gate control
+
+[DORMANT_GATE_STUDY.md](DORMANT_GATE_STUDY.md) proves exact finite-state observational equivalence: two 16-bit registers agree on every reachable full-state trace, while a dormant XOR path changes their transition matrices. GF(2) cross-partition ranks are 1 and 2, and a registered intervention distinguishes them in one step. Controllability ranks are both 15. Results and replication receipts appear under results/dormant_gate_*. Neither study computes IIT Phi, consciousness or asymptotic FRC.
+
 ## Why this test exists
 
 Aaronson's [*Unconscious Expander* critique (2014)](https://scottaaronson.blog/?p=1799) asks whether simple XOR networks can receive high information-integration scores despite lacking the capabilities normally associated with cognition. The [October 2026 conversation with Curt Jaimungal](https://www.youtube.com/@TheoriesofEverything) revisited this. RSI Topology also studies spectral bundles, identity geometry, holonomy and Fidelity Recursive Complexity (FRC). This experiment tests a bounded warning: **a high structural, spectral or synchronization statistic is insufficient evidence for a distinct cognitive capability**, let alone phenomenal consciousness.

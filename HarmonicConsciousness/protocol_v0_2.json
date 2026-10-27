@@ -1,0 +1,59 @@
+{
+  "schema": "harmonic_consciousness_dormant_gate_v0.2",
+  "status": "model_free_finite_state_causal_identifiability_only",
+  "registered_before_v0_2_evaluation": true,
+  "development_seed": 20261027,
+  "replication_seed": 44178013,
+  "trials_per_seed": 24,
+  "state_dimension": 16,
+  "cue_alphabet": [
+    0,
+    1
+  ],
+  "length": 256,
+  "delayed_recall": 12,
+  "gate_coordinate": 15,
+  "gate_target_coordinate": 7,
+  "intervention_time": "length//2, after update",
+  "ordinary_initial_state": "all_zero",
+  "perturbation": "toggle coordinate 15 once in each model",
+  "partition": {
+    "left": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "right": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "registered_exact_predictions": {
+    "passive_full_trace_and_predictions": "identical for any cue stream from all_zero",
+    "passive_spectral_and_covariance_metrics": "identical",
+    "ordinary_delayed_recall_accuracy": 1,
+    "gf2_cross_partition_rank_plain": 1,
+    "gf2_cross_partition_rank_dormant_gate": 2,
+    "controllability_rank_both": 15,
+    "post_lesion_between_model_difference_lag0": 0,
+    "post_lesion_between_model_difference_lag1": 1,
+    "post_lesion_between_model_difference_lag6": 1,
+    "post_lesion_delay12_readouts_disagree_at_lag6": true
+  },
+  "scope": {
+    "IIT_Phi": "not_computed",
+    "FRC_lim_inf": "not_estimated",
+    "consciousness_ground_truth": null
+  }
+}

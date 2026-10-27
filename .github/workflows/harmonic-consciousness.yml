@@ -3,14 +3,14 @@ on:
   pull_request:
     paths:
       - 'HarmonicConsciousness/**'
-      - 'tests/test_harmonic_consciousness.py'
-      - 'scripts/run_harmonic_consciousness.py'
+      - 'tests/test_harmonic_*.py'
+      - 'scripts/run_harmonic_*.py'
       - '.github/workflows/harmonic-consciousness.yml'
   push:
     paths:
       - 'HarmonicConsciousness/**'
-      - 'tests/test_harmonic_consciousness.py'
-      - 'scripts/run_harmonic_consciousness.py'
+      - 'tests/test_harmonic_*.py'
+      - 'scripts/run_harmonic_*.py'
       - '.github/workflows/harmonic-consciousness.yml'
 jobs:
   toy-benchmark:
@@ -24,7 +24,7 @@ jobs:
       - name: Install local dependencies
         run: python -m pip install numpy
       - name: Run isolated deterministic toy tests
-        run: python -m unittest discover -s tests -p 'test_harmonic_consciousness.py' -v
+        run: python -m unittest discover -s tests -p 'test_harmonic_*.py' -v
       - name: Replay held-out flags
         run: |
           python scripts/run_harmonic_consciousness.py --seed 7810427 --trials 24 --out /tmp/hc-holdout.json
@@ -39,4 +39,20 @@ jobs:
               'xor_lag8_spread_at_least_tenth': False,
               'xor_structural_coupling_without_task_gain': True,
           }
+          PY
+      - name: Replay exact dormant-gate causal certificates
+        run: |
+          python scripts/run_harmonic_dormant_gate.py --seed 44178013 --trials 24 --out /tmp/hc-dormant.json
+          python - <<'PY'
+          import json
+          with open('/tmp/hc-dormant.json', encoding='utf-8') as f:
+              r = json.load(f)
+          assert all(r['diagnostics'].values())
+          assert r['exact_structure']['cross_partition_rank'] == {
+              'dormant_gate': 2, 'plain': 1,
+          }
+          assert r['exact_structure']['input_controllability_rank'] == {
+              'dormant_gate': 15, 'plain': 15,
+          }
+          assert len(r['trials']) == 24
           PY
