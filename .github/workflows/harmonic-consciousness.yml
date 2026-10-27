@@ -1,0 +1,42 @@
+name: HarmonicConsciousness synthetic controls
+on:
+  pull_request:
+    paths:
+      - 'HarmonicConsciousness/**'
+      - 'tests/test_harmonic_consciousness.py'
+      - 'scripts/run_harmonic_consciousness.py'
+      - '.github/workflows/harmonic-consciousness.yml'
+  push:
+    paths:
+      - 'HarmonicConsciousness/**'
+      - 'tests/test_harmonic_consciousness.py'
+      - 'scripts/run_harmonic_consciousness.py'
+      - '.github/workflows/harmonic-consciousness.yml'
+jobs:
+  toy-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install local dependencies
+        run: python -m pip install numpy
+      - name: Run isolated deterministic toy tests
+        run: python -m unittest discover -s tests -p 'test_harmonic_consciousness.py' -v
+      - name: Replay held-out flags
+        run: |
+          python scripts/run_harmonic_consciousness.py --seed 7810427 --trials 24 --out /tmp/hc-holdout.json
+          python - <<'PY'
+          import json
+          with open('/tmp/hc-holdout.json', encoding='utf-8') as f:
+              r = json.load(f)
+          assert r['protocol_flags'] == {
+              'channel_psd_surrogate_same_peak_lower_corr': True,
+              'locked_phase_high_order_low_task_gain': True,
+              'memory_cut_degrades_task': True,
+              'xor_lag8_spread_at_least_tenth': False,
+              'xor_structural_coupling_without_task_gain': True,
+          }
+          PY
