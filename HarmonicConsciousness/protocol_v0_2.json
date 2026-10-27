@@ -1,0 +1,78 @@
+{
+  "id": "HRC-FRC-01-v0.2",
+  "created": "2026-10-27",
+  "status": "candidate_pre_registration_not_sealed",
+  "family": "self_designing_evaluations_and_fidelity_recursive_complexity",
+  "evidence_ceiling": "engineering_evidence",
+  "models_trained": false,
+  "consciousness_established": false,
+  "frc_target": {
+    "definition": "liminf_{k -> infinity} log(1 + FRC_P(k;delta))/k",
+    "exact_model": "restricted equality oracle in MoralityLabAI/EvalMath",
+    "access_modes_not_equivalent": [
+      "equality_single_context",
+      "spectral_coefficient_per_mode"
+    ],
+    "original_frc_lower_bound_proven": false
+  },
+  "registered_synthetic_case": {
+    "graph": "undirected_cycle_12_nodes",
+    "laplacian": "degree_minus_adjacency_symmetric",
+    "initial_error": "unit_alternating_sign_high_frequency_mode",
+    "training_rule": "e_next = (I - eta * spectral_projector) e",
+    "training_rate": 0.25,
+    "generations": 12,
+    "initial_roughness_budget_squared": 4.0,
+    "tail_tolerance_squared_error": 0.05,
+    "smoothness_order": 1.0,
+    "blind_band_rank": 3,
+    "bands_must_include_complete_eigenspaces": true,
+    "modal_query_unit": "one_independent_measured_coefficient",
+    "measurement_vs_training_roles": "geometry_and_global_bound_select_band; selected_coefficients_drive_error_update; complete_error_readout_is_independent_post_update",
+    "random_subspace_replicates": 256,
+    "random_subspace_seed": 20261027
+  },
+  "arms": [
+    "self_confirming_low_band",
+    "fixed_full_band",
+    "adaptive_certified_band",
+    "fresh_isotropic_random_equal_cost"
+  ],
+  "negative_controls": [
+    "alternating_high_frequency_trigger",
+    "invalid_roughness_bound",
+    "isospectral_wrong_operator_substitution",
+    "degenerate_mode_split_rejection",
+    "orthogonal_reframe_invariance",
+    "low_eigenspace_supported_target_vs_high_frequency_adversarial_target",
+    "random_matched_linear_queries"
+  ],
+  "metrics": [
+    "external_squared_error",
+    "self_predicted_remaining_error",
+    "predicted_vs_actual_training_reduction",
+    "total_modal_queries",
+    "band_rank_by_generation",
+    "remaining_roughness_budget",
+    "heldout_assumption_validity",
+    "seeded_random_mean_and_analytic_expectation",
+    "query_count_matched_onband_vs_offband"
+  ],
+  "claims_permitted": [
+    "exact_spectral_recurrence_math",
+    "finite_synthetic_mechanism_result"
+  ],
+  "claims_not_permitted": [
+    "general_frc_exponential_lower_bound",
+    "real_ai_training_gain",
+    "evidence_of_subjective_consciousness",
+    "local_smoothing_continuum_theorem"
+  ],
+  "existing_certification_levels_unchanged": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "signed_model_edits_require": "holonomy_clean",
+  "float64_receipts_are_formal_certificates": false
+}
