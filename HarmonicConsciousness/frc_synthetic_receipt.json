@@ -1,0 +1,119 @@
+{
+  "adaptive_spectral_self_design": {
+    "all_budget_checks_passed": true,
+    "final_external_squared_error": 0.03167635202407844,
+    "final_roughness_budget": 0.1267054080963141,
+    "initial_roughness_budget": 4.0,
+    "ranks": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "strategy": "adaptive_spectral_self_design",
+    "total_modal_queries": 114
+  },
+  "all_passed": true,
+  "checks": {
+    "adaptive_band_budget_valid": true,
+    "adaptive_band_cost_saving": true,
+    "adaptive_band_reaches_external_threshold": true,
+    "blind_self_prediction_zero": true,
+    "certified_band_query_budget_higher": true,
+    "external_error_reduced_when_full_band_audited": true,
+    "false_smoothness_assumption_detected": true,
+    "hidden_tail_bound_covers_when_assumption_true": true,
+    "low_band_invisible_high_error": true,
+    "one_step_predictions_valid_within_band": true,
+    "random_cost_matched_detects_high_mode": true,
+    "random_isotropic_exact_expectation": true,
+    "spectral_lowband_wins_when_error_in_band": true
+  },
+  "consciousness_claim": false,
+  "controls": {
+    "cycle_size": 12,
+    "generations": 12,
+    "low_rank": 3,
+    "roughness_budget": 4,
+    "tail_tolerance": 0.05,
+    "training_rate": 0.25
+  },
+  "evidence": "synthetic_only",
+  "random_equal_cost_control": {
+    "analytic_isotropic_expected_squared_error": 0.24907984125549468,
+    "independent_tail_certificate": false,
+    "mean_final_squared_error": 0.249176660387968,
+    "rank": 3,
+    "replicates": 256,
+    "scalar_linear_queries_per_replica": 36,
+    "seed": 20261027
+  },
+  "real_models_run": 0,
+  "schema": "hrc-frc-spectral-v0.2",
+  "self_confirming": {
+    "assumption_verified_ex_post": true,
+    "band_rank": 3,
+    "final_external_squared_error": 1.0000000000000002,
+    "final_invisible_tail_squared_error": 1.0000000000000002,
+    "initial_external_squared_error": 1.0000000000000002,
+    "registered_tail_upper": 4.000000000000003,
+    "strategy": "self_confirming",
+    "total_modal_queries": 36
+  },
+  "smooth_low_mode_target": {
+    "low_band": {
+      "assumption_verified_ex_post": true,
+      "band_rank": 3,
+      "final_external_squared_error": 0.001003391277553334,
+      "final_invisible_tail_squared_error": 3.6908876923728677e-33,
+      "initial_external_squared_error": 0.9999999999999999,
+      "registered_tail_upper": 4.000000000000003,
+      "strategy": "self_confirming",
+      "total_modal_queries": 36
+    },
+    "random_equal_cost": {
+      "analytic_isotropic_expected_squared_error": 0.24907984125549462,
+      "independent_tail_certificate": false,
+      "mean_final_squared_error": 0.24725330632719322,
+      "rank": 3,
+      "replicates": 256,
+      "scalar_linear_queries_per_replica": 36,
+      "seed": 20261027
+    }
+  },
+  "source_sha256": {
+    "HarmonicConsciousness/FRC_CALIBRATION.md": "090228912c9e6e16c9a588e3aad0268c9e561bd0153412e118cb8dd1aca7c92d",
+    "HarmonicConsciousness/frc_calibration.py": "1f35398c5a1cea4f3b32cd68634e8fabaa6015269954ff1859055dc6cc99a33f",
+    "HarmonicConsciousness/protocol_v0_2.json": "3ed46bd84e58ea43c9d3d5abb0c94cf68156fdefb77869f632fcf52cdb365142",
+    "HarmonicConsciousness/verify_frc.py": "a7fe85cbaaf6a4719c518f220810d2a1b4af5ca2e6b84ed2d5a7681c2a523f2a",
+    "tests/test_harmonic_frc.py": "7ca60f7ebbbc68fc1fac92839a31ecc52e1b05738d1f9782de9521315c5214fd"
+  },
+  "spectral_audit": {
+    "assumption_verified_ex_post": true,
+    "band_rank": 12,
+    "final_external_squared_error": 0.0010033912775533383,
+    "final_invisible_tail_squared_error": 9.990761586508786e-34,
+    "initial_external_squared_error": 1.0000000000000002,
+    "registered_tail_upper": 0.0,
+    "strategy": "spectral_audit",
+    "total_modal_queries": 144
+  },
+  "wrong_smoothness_assumption": {
+    "bound_covers_hidden_tail": false,
+    "certified_tail_bound": 0.10000000000000006,
+    "external_squared_error": 1.0000000000000002,
+    "hidden_tail_squared_error": 1.0000000000000002,
+    "observed_band_squared_error": 6.317050217590134e-32,
+    "registered_roughness_budget": 0.1,
+    "smoothness_assumption_verified_by_audit": false,
+    "spectral_roughness": 3.999999999999998
+  }
+}

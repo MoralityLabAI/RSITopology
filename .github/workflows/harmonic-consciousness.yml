@@ -1,0 +1,54 @@
+name: Harmonic Consciousness synthetic verification
+
+on:
+  push:
+    paths:
+      - "HarmonicConsciousness/**"
+      - "tests/test_harmonic*.py"
+      - ".github/workflows/harmonic-consciousness.yml"
+  pull_request:
+    paths:
+      - "HarmonicConsciousness/**"
+      - "tests/test_harmonic*.py"
+      - ".github/workflows/harmonic-consciousness.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  harmonic-frc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install bounded test dependencies
+        run: python -m pip install "numpy>=1.24" "pytest>=7"
+      - name: Run harmonic and FRC synthetic controls
+        run: python -m pytest -q tests/test_harmonic_consciousness.py tests/test_harmonic_frc.py
+      - name: Verify regenerated synthetic receipts and source hashes
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          root = Path("HarmonicConsciousness")
+          foundation = json.loads(subprocess.check_output(
+              [sys.executable, "-m", "HarmonicConsciousness.example_run"], text=True
+          ))
+          assert foundation["status"] == "synthetic_only"
+          assert foundation["awareness_inference"] == "none"
+          assert foundation["finite_wave"]["bound_holds"]
+
+          generated = json.loads(subprocess.check_output(
+              [sys.executable, "-m", "HarmonicConsciousness.verify_frc"], text=True
+          ))
+          committed = json.loads((root / "frc_synthetic_receipt.json").read_text())
+          assert generated["all_passed"]
+          assert all(generated["checks"].values())
+          assert generated["source_sha256"] == committed["source_sha256"]
+          assert generated["schema"] == committed["schema"]
+          PY
