@@ -1,0 +1,35 @@
+{
+  "frc_observed_only": {
+    "future_uniform_bound_required": true,
+    "infinite_liminf_certified": false,
+    "last_observed_fidelity": 0.95,
+    "observed_generations": 4,
+    "observed_suffix_infima": [
+      0.6,
+      0.6,
+      0.6,
+      0.95
+    ]
+  },
+  "synthetic_example": {
+    "asserted_direction": "benefit",
+    "claim_supported_in_stated_scope": true,
+    "decision": "eligible_for_independent_review",
+    "delta_expected_loss": {
+      "lower": -0.7150000000000001,
+      "upper": -0.42999999999999994
+    },
+    "empirical_validity_verified": false,
+    "evidence_grade": "synthetic_assessed",
+    "governance_violations": [],
+    "interval_sign": "benefit",
+    "provenance_roots": [
+      "fixture:A",
+      "fixture:B"
+    ],
+    "schema": "catastrophe_comparison_v1",
+    "scope": "synthetic",
+    "sha256": "e44e5cac13f6be0cebdb8d5cbdd560f818ace74748b38c0089c7701b0bb82b8f",
+    "study_id": "toy-v1"
+  }
+}
