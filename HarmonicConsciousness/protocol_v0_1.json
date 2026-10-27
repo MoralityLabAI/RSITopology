@@ -1,0 +1,33 @@
+{
+  "schema": "harmonic_consciousness_adversarial_v0.1",
+  "status": "synthetic_toy_no_consciousness_claim",
+  "stage": "internal_protocol_after_development_before_holdout",
+  "development_seed": 20261027,
+  "holdout_seed": 7810427,
+  "num_trials_per_seed": 24,
+  "length": 256,
+  "nodes": 16,
+  "delay": 12,
+  "phase_warmup": 128,
+  "families": ["xor_grid", "xor_grid_cut", "phase_locked", "phase_free", "delay_register", "delay_register_cut"],
+  "thresholds": {
+    "phase_locked_min_order": 0.90,
+    "phase_locked_max_gain_over_test_majority": 0.10,
+    "xor_grid_min_cross_rank": 2,
+    "xor_grid_cut_cross_rank": 0,
+    "xor_grid_max_gain_over_test_majority": 0.10,
+    "phase_locked_max_psd_surrogate_delta": 1e-12,
+    "phase_locked_min_surrogate_corr_drop": 0.15,
+    "delay_register_exact_accuracy": 1.0,
+    "delay_register_cut_max_accuracy": 0.65,
+    "xor_grid_lag8_min_response": 0.10,
+    "audit_delta": 0.05
+  },
+  "interpretation": {
+    "IIT_Phi": "not_computed",
+    "FRC_lim_inf": "not_estimated",
+    "state": "toy_deterministic_or_seeded_oscillator",
+    "purpose": "adversarial_falsification_of_metric_sufficiency",
+    "consciousness_truth_label": null
+  }
+}
