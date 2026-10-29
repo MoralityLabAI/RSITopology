@@ -1,0 +1,17 @@
+{
+  "registration_id": "ASMP-9-DISCOUNTED-SHAPING-v0.6-registration",
+  "registered_at_utc": "2026-07-28T18:35:15Z",
+  "implementation_commit": "9802c0595746a2ba3afe3bf283268bd358586df1",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/protocol_v0_6.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/THEOREM_DRAFT_v0_6.md": "7a269954deae7f6fd51ffa241fa6087f7c1247080eca230a1b4b0f4673dd7b92",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/PRIOR_ART_v0_6.md": "79e1d5c64072970bcad2a4b76c420558b656869d0923c4f3821fbc58603cd58c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/discounted_shaping.py": "cabb42d4758ee2bbc6447a9dd1a90c76cddf77111aa9f0c5f0454455c8bd4e88",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/test_discounted_shaping.py": "d3526f18059bd2013bb75cf5ffbc2d2ed01af2089df377e7550241702866fb88",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/PROTOCOL_v0_6.md": "5fb463fafc8ce0b98759a20e4d55c631c8a43f023c503d2a2a4febcbfca56f4b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/protocol_v0_6.json": "666b940408f1fbf00741c02126acf30ad60126b6dcabc86028a638a65cf64238",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/run_verification.py": "c1b1a8164321da8be5573c0e2aff37eb942925121a507bedd43acf712b88646d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/verify_result.py": "dc6bcd6e7226d145fb2f8842eacd301c4696e36b1287d5052a8e603e0b25aec4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/discounted_shaping_v0_6/README.md": "bed3fe3e11aa556972645fe951106712cd75ff6fb5d8ebb7e50408f2ebe4c524"
+  }
+}

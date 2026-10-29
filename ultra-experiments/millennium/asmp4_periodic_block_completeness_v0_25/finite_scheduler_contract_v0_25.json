@@ -1,0 +1,24 @@
+{
+  "schema_version": "asmp4_finite_additive_scheduler_contract_v0_25",
+  "scheduler": {
+    "state": "finite public state set with a nonempty registered initial set",
+    "edges": "finite directed multigraph of safe public block choices",
+    "cost": "each edge carries nonnegative additive read/write log-transcript cost",
+    "selection": "a causal public scheduler chooses an enabled edge"
+  },
+  "rates": {
+    "read": "coordinatewise limsup average read edge cost",
+    "write": "coordinatewise limsup average write edge cost",
+    "budget": "componentwise upper bounds with upward closure"
+  },
+  "safety": {
+    "meaning": "every registered edge is a safe block and only infinite enabled walks are admissible",
+    "transients": "finite initial and inter-component prefixes have zero asymptotic cost"
+  },
+  "theorem": {
+    "component_region": "upward closure of the convex hull of simple-cycle mean vectors in each reachable cyclic SCC",
+    "full_region": "union of the component regions",
+    "strongly_connected_case": "one cycle polytope, periodic walks are complete, and one support family is exact",
+    "general_case": "component-indexed support families remain disjunctive; one global support family may convexify falsely"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": "asmp8_qwen08_control_gate_prediction_protocol_v0_1",
+  "protocol_id": "asmp8.qwen08.control_gate_prediction.v0.1",
+  "status": "registered_not_run_outcomes_unrevealed",
+  "prepared_utc": "2026-07-25T20:45:00Z",
+  "question": "Does the frozen Qwen0.8B first-token probability improve held-out selective-risk gating for proxy-selected controller actions beyond application identity and proposer-score summaries?",
+  "parents": {
+    "measurement_protocol": "protocols/asmp8_qwen08_stratified_completion_measurement_v0_1.json",
+    "prime_execution_protocol": "protocols/asmp8_qwen08_stratified_completion_measurement_prime_spot_v0_1.json",
+    "prime_result_commit": "93b46f7256c91dfdbb8b73ce8b92bb0764c1c8aa",
+    "prime_archive_sha256": "99f937107b34722ecbf734371308b29c2ef9919c05a43e7d18508c39693370da",
+    "measurement_status_required": "measurement_instrument_pass"
+  },
+  "sealed_features": {
+    "path": "artifacts/asmp8_qwen08_control_gate_v0_1/features.jsonl",
+    "sha256": "0a26ec884c72c758d0cdf82f2792cd1266b370f1b383bc66418f88d9c8aa058b",
+    "receipt_path": "artifacts/asmp8_qwen08_control_gate_v0_1/feature_receipt.json",
+    "receipt_sha256": "bb0284b7ee7cd34cca4379551152db1943a901b424456780c02c485afe80eef5",
+    "row_count": 576,
+    "construction_count": 288,
+    "validation_count": 288,
+    "outcomes_consumed": false,
+    "qwen_reference": "The unique planned-epoch-0 uncached census receipt after exact C0 agreement across all four census receipts.",
+    "baseline_continuous_features": [
+      "score_maximum",
+      "score_second",
+      "score_margin",
+      "score_mean",
+      "score_sd",
+      "score_range"
+    ],
+    "baseline_categorical_features": [
+      "application"
+    ],
+    "augmented_feature": "qwen_top_token_probability"
+  },
+  "outcome_reveal": {
+    "generator_module": "research_gym.envs.control_tasks",
+    "generator_source": "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\research_gym\\envs\\control_tasks.py",
+    "generator_source_sha256": "942d4356a3151b27db02e00cc70c51e7ea0a50e83318138e57c6bfa6dd726503",
+    "seed": 20261019,
+    "train_per_application": 64,
+    "eval_per_application": 64,
+    "revealed_split": "train only",
+    "required_exact_row_id_join": true,
+    "proxy_action_rule": "Descending trm score with original action-order tie break.",
+    "outcomes": [
+      "proxy_correct",
+      "proxy_safe",
+      "proxy_regret",
+      "proxy_utility",
+      "optimal_utility"
+    ],
+    "outcome_table_status_at_registration": "not_materialized"
+  },
+  "models": {
+    "estimator": "scikit-learn LogisticRegression",
+    "target": "proxy_selected_action != optimal_action",
+    "regularization_C": 1.0,
+    "solver": "lbfgs",
+    "maximum_iterations": 2000,
+    "random_state": 0,
+    "continuous_standardization": "Construction-half mean and population standard deviation; zero scales map to one.",
+    "fit_split": "geometry_half == construction",
+    "evaluation_split": "geometry_half == validation",
+    "baseline": "Application one-hot plus the six proposer-score summaries.",
+    "augmented": "Baseline plus the frozen Qwen first-token probability."
+  },
+  "primary_estimand": {
+    "name": "application_balanced_selective_risk_auc_improvement",
+    "loss": "proxy_regret",
+    "gate_score": "predicted probability that the proxy-selected action is not optimal",
+    "per_application_curve": "Sort validation rows by decreasing predicted failure probability with row_id tie break. At every positive retained coverage, defer the current highest-risk prefix and record mean regret among retained rows. AURC is the unweighted mean over all positive coverages.",
+    "improvement": "baseline AURC minus augmented AURC; positive favors the Qwen feature",
+    "application_balance": "Unweighted mean of the nine per-application improvements.",
+    "uncertainty": "10,000-replicate percentile bootstrap over the nine application improvements",
+    "bootstrap_seed": 80820260725
+  },
+  "matched_null": {
+    "replicates": 2048,
+    "seed": 80720260725,
+    "permutation": "Independently permute Qwen probabilities within each application-by-geometry-half stratum, then refit and reevaluate the complete augmented model.",
+    "p_value": "(1 + null improvements at least observed) / (replicates + 1)"
+  },
+  "secondary_estimands": [
+    "validation log-loss improvement",
+    "validation average-precision difference",
+    "validation ROC-AUC difference",
+    "per-application selective-risk AURC improvements",
+    "validation proxy-failure rate",
+    "validation mean proxy regret"
+  ],
+  "gates": {
+    "F0_feature_binding": "The sealed feature and receipt hashes match, contain 576 unique rows, and remain outcome blind.",
+    "J0_exact_join_and_outcome_support": "Feature and outcome row_id sets are exactly equal with no duplicates; proxy actions agree; construction and validation each contain both proxy-correctness classes.",
+    "G0_heldout_selective_risk_increment": "Observed application-balanced AURC improvement is strictly positive, its application-bootstrap 95% lower endpoint is strictly positive, and the one-sided matched-null permutation p-value is at most 0.05."
+  },
+  "decision_rule": {
+    "qwen_confidence_control_gate_established": "F0, J0, and G0 pass.",
+    "qwen_confidence_control_gate_not_established": "F0 and J0 pass but G0 fails.",
+    "not_evaluated": "F0 or J0 fails."
+  },
+  "implementation": {
+    "feature_builder": "scripts/build_asmp8_qwen08_control_gate_features.py",
+    "feature_builder_sha256": "f25c000c31a8f2604966920ad4da41c8600b83b93b232bfd1f44e89c1e6f2575",
+    "outcome_materializer": "scripts/materialize_asmp8_control_task_outcomes.py",
+    "outcome_materializer_sha256": "97db0cd685545443f7c065de926b2e6777e8be230e3cc70b816620093258cf7c",
+    "analyzer": "scripts/analyze_asmp8_qwen08_control_gate.py",
+    "analyzer_sha256": "54cd275518010d6913b2f5c766ff75901c7d3e8c2d5fe440f1a3f38cdd9925c2",
+    "tests": "tests/test_asmp8_qwen08_control_gate.py",
+    "tests_sha256": "cd9bb5a38b52e8dcb54726f35999bdd059a92d872f9f6ee83f1a66a019ea6cfc",
+    "registered_test_result": "18 passed",
+    "python": "3.11.4",
+    "numpy": "2.4.4",
+    "scipy": "1.16.2",
+    "scikit_learn": "1.7.1"
+  },
+  "resource_ceiling": {
+    "gpu_hours": 0,
+    "wall_seconds": 600,
+    "peak_rss_bytes": 1073741824
+  },
+  "claim_boundary": "This is a held-out synthetic controller-task test of whether one stable Qwen0.8B formatting-token probability helps rank proxy-action risk beyond visible score summaries. A pass would establish incremental predictive utility only on this frozen panel. A fail would reject this feature, not all model-internal confidence signals. Neither outcome establishes causality, deployment safety, scalable oversight, a Goodhart phase frontier, recursive improvement risk, or ASMP-8 resolution."
+}

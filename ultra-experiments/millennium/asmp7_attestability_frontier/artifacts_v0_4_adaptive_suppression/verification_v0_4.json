@@ -1,0 +1,326 @@
+{
+  "analytic_obligations": {
+    "independent_all_obligations_pass": true,
+    "independent_composite_checks_pass": true,
+    "independent_full_history_checks_pass": true,
+    "independent_reconstruction": {
+      "all_obligations_pass": true,
+      "composite_and_minimality": {
+        "all_48_upstream_status_and_predecessor_certificates_transfer": true,
+        "both_endpoint_laws_are_nondecreasing_in_k": true,
+        "constant_endpoint_masks_supply_the_lower_bound": true,
+        "worst_compliant_boundary_is_k8": true,
+        "worst_forbidden_boundary_is_k1": true
+      },
+      "full_history_induction": {
+        "all_h3_monotone_boolean_terminals_include_nonsymmetric_cases": true,
+        "bellman_action_value_is_affine_in_q": true,
+        "claim_horizon_is_deterministic_finite_0_to_8192": true,
+        "constant_endpoint_masks_exist": true,
+        "continuation_difference_is_nonnegative_by_backward_induction": true,
+        "private_randomized_policies_are_convex_mixtures": true,
+        "q_is_nondecreasing_in_action_for_theta_at_least_half": true,
+        "terminal_coordinatewise_monotonicity_is_the_only_phi_premise": true
+      },
+      "generic_terminal_census": {
+        "all_values_equal": true,
+        "horizon": 3,
+        "monotone_boolean_terminal_count": 20,
+        "nonsymmetric_terminal_count": 15,
+        "registered_action_law_comparisons": 11520
+      }
+    },
+    "reported_matches_independent_reconstruction": true
+  },
+  "bindings": {
+    "manifest_v0_4.json": {
+      "canonical_sha256": "c3c9430257645e5709ce3c838c124e021ad293d750d7bd1afb75c0eaaed4a1d3",
+      "raw_sha256": "8caa7e1b671ff1da470567eccfc3b84a407247a1b8d8b8d9a1648c109ff823b7"
+    },
+    "result_v0_4.json": {
+      "canonical_sha256": "ce249931bf3721bc84014fa34571b2a8a47941b532b2cc0521ae244782040902",
+      "raw_sha256": "ce249931bf3721bc84014fa34571b2a8a47941b532b2cc0521ae244782040902"
+    }
+  },
+  "claim_boundary": [
+    "fixed 16-point Boolean execution known completely to the suppressor",
+    "iid uniform current challenge sampled only after the exact-c mask is frozen and conditionally independent of the frozen filtration",
+    "causal private-randomized mask policies measurable with respect to past X, Y, S and private coins",
+    "fresh randomized-response and fallback coins and post-transcript auditor randomization are hidden from the suppressor",
+    "monitor receives only the report-bit history Y; registered sample minima use the count K",
+    "arbitrary rational coordinatewise-monotone terminal functions are covered; the NP minimum-transfer corollary is for registered count upper-tail tests",
+    "deterministic finite horizons m from 0 through 8192 only",
+    "no current-X-aware mask, nonmonotone audit theorem, random stopping time, infinite horizon, stateful execution, nonuniform or dependent challenge, mask leakage, real meter, deployment, transformation-universal attestability, or ASMP-7 resolution claim"
+  ],
+  "control_mismatches": [],
+  "final_conclusion_layers": {
+    "claim_support": "finite_registered_causal_adaptation_equivalence_supported",
+    "measurement_reliability": "independent_combinatorial_historical_oracle_and_source_replay_passed",
+    "metric_robustness": "five_frozen_probe_families_independently_replayed",
+    "operational_decision": "no_deployment_authorization",
+    "task_result": "finite_causal_endpoint_equivalence_and_v03_minimum_transfer"
+  },
+  "implementation_imported": false,
+  "independent_gates": {
+    "V0_frozen_manifest_binding": true,
+    "V10_primary_gates_and_preverification_layers": true,
+    "V11_resource_observations_within_frozen_limits": true,
+    "V1_exact_live_and_source_commit_binding": true,
+    "V2_exact_historical_upstream_bytes": true,
+    "V3_result_identity_and_canonical_json": true,
+    "V4_complete_72_pair_combinatorial_quotient": true,
+    "V5_complete_48_row_v03_and_minimum_transfer": true,
+    "V6_complete_144_row_independent_oracle": true,
+    "V7_induction_composite_and_scope_obligations": true,
+    "V8_scope_breakers_and_simple_limits": true,
+    "V9_five_metric_probe_families": true
+  },
+  "manifest_binding": {
+    "canonical_manifest_hash_is_frozen": true,
+    "filtration_is_causal_and_monitor_report_only": true,
+    "identity_is_frozen": true,
+    "registry_is_exact": true,
+    "resource_contract_is_exact": true,
+    "source_set_and_replay_are_frozen": true
+  },
+  "metric_probe_ids": [
+    "P1_input_relabeling",
+    "P2_timing_sensitivity",
+    "P3_terminal_monotonicity",
+    "P4_nonmonotone_scope_breaker",
+    "P5_upstream_and_simple_limits"
+  ],
+  "metric_probes_match": true,
+  "oracle_mismatches": [],
+  "pass": true,
+  "preverification_layers_match": true,
+  "primary_gates_valid": true,
+  "protocol_id": "ASMP7-CAUSAL-ADAPTIVE-SUPPRESSION-v0.4",
+  "quotient_mismatches": [],
+  "registry_mismatches": [],
+  "resource_observations_valid": true,
+  "result_semantic_checks": {
+    "claim_boundary_is_exact": true,
+    "exact_json_firewall": true,
+    "preverification_layers_are_exact": true,
+    "primary_gates_are_exact_and_true": true,
+    "raw_result_is_canonical_json": true,
+    "result_fields_are_exact": true,
+    "result_identity_is_exact": true,
+    "source_binding_shape_is_valid": true,
+    "upstream_binding_shape_is_valid": true
+  },
+  "schema_version": "asmp7_causal_adaptive_suppression_verification_v0_4",
+  "source_binding_error": "",
+  "source_binding_replay": {
+    "repo_relative_directory": "ultra-experiments/millennium/asmp7_attestability_frontier/adaptive_suppression_v0_4",
+    "source_commit": "aa04de72bbef401f16637cb78b2f8eac8da0c507",
+    "source_commit_is_ancestor_of_head": true,
+    "source_commit_type": "commit",
+    "source_files": {
+      "PROTOCOL_v0_4.md": {
+        "git_blob_oid": "6e4526f99b085d1d72608292bf6a7e5a663bff6d",
+        "sha256": "fec19138ccb50c6a8052f7eca52672f79db7a6aa9fdb7d051850dc5927fda5dc"
+      },
+      "README.md": {
+        "git_blob_oid": "93461de8314235c073a45e3c189b7e9d64010860",
+        "sha256": "c2a123b7bb1ba2e11964dfd4f2cefe909b1be3d792d22bb65975dd391eb0a841"
+      },
+      "SOURCE_FREEZE.md": {
+        "git_blob_oid": "9dfcb61cc7c632a9fc5295ed78e1dfc75c86ff01",
+        "sha256": "184562543d6cfd1f3b30a262828daf88bb59aba46272aac4a47f7383a19f42bc"
+      },
+      "adaptive_suppression.py": {
+        "git_blob_oid": "5ca90affaf41d9bcafbf19c98bca7adaba2dcb80",
+        "sha256": "278e0660e67b3143589c07586a6d6771228a191faeedcac71246d61e85451ed6"
+      },
+      "manifest_v0_4.json": {
+        "git_blob_oid": "b5df4eb93c17c92bce7b7883ddb30ada23921c1f",
+        "sha256": "8caa7e1b671ff1da470567eccfc3b84a407247a1b8d8b8d9a1648c109ff823b7"
+      },
+      "run.py": {
+        "git_blob_oid": "669af06967a95786eb896354579784b981592eb2",
+        "sha256": "0432e38c618b480bccf6f527ac2272395cdb223672c2d207c8da48e833cac469"
+      },
+      "test_adaptive_suppression.py": {
+        "git_blob_oid": "0a272186fccee303b3868d499c2ecd5b9c2747c2",
+        "sha256": "caf0f6f26dcd341efac391b3df90e4dc238d5c6896680a3212a5ec5bcf612553"
+      },
+      "verify_independent.py": {
+        "git_blob_oid": "83e5e66bb37600e1c598fd2802a8d0bdb8c99672",
+        "sha256": "cd98ede3877ec84c572b1a74b135be667f34716b86ce15f334e5dd7f1081b1f0"
+      }
+    }
+  },
+  "upstream_binding_checks": {
+    "error": "",
+    "replayed_bindings": {
+      "v0_1": {
+        "all_hashes_match": true,
+        "commits": [
+          "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "9a67844b496eff8cfb7bfabbdf1ba923fae0a8a1",
+          "ba9586de4232c53358d44e3f6c5eca4ae45ab383"
+        ],
+        "files": [
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/.gitattributes",
+            "role": "source",
+            "sha256": "6455d23d9d3efaa95bfcd6ff09a568110d840715fef2f2962dd38af3f6a13964"
+          },
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/PRIOR_ART_v0_1.md",
+            "role": "source",
+            "sha256": "a524eb99dd3b6505759ed5ba896f773b8f63dd216e81c31d34635c23f2295aeb"
+          },
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/PROTOCOL_v0_1.md",
+            "role": "source",
+            "sha256": "59817447540f0e95f7352880a710a8c0c87d038a8aa1ca31acda15fda4dfb1fb"
+          },
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/README.md",
+            "role": "source",
+            "sha256": "5c045f5d550061f43d88d0539ab690986522db3e9118cba3e19758d791e5af37"
+          },
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/attestability.py",
+            "role": "source",
+            "sha256": "6a6faf6b1641318a704d63d1081a8589585f21df44fee4d863db1f43484c4cc6"
+          },
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/run_frontier.py",
+            "role": "source",
+            "sha256": "02af3735c47b2225ee8c2fdaae15aa60cdc32637f19ead56dcfaadb9992d736d"
+          },
+          {
+            "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/test_attestability.py",
+            "role": "source",
+            "sha256": "0a488dacb1cc059639b6958011cf299c1d3d16ae95177a3d2cdefb88b18097fd"
+          },
+          {
+            "commit": "9a67844b496eff8cfb7bfabbdf1ba923fae0a8a1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/registration_v0_1.json",
+            "role": "registration",
+            "sha256": "0a5f1ad88e7c66822314e906792f1f9a5a97b4fcf10b13c7488a3cb751b1f234"
+          },
+          {
+            "commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/RESULT_v0_1.md",
+            "role": "artifact",
+            "sha256": "8b3e550a18fa49082e0c2ea467d49bed79599801997b581a4c1d1a0ba1377e7d"
+          },
+          {
+            "commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/artifacts_v0_1/result.json",
+            "role": "artifact",
+            "sha256": "74d8e0d0e4cbc39aa7691e1c40fa7669fda6ae8705773fee2c8db2c6fab52bf4"
+          },
+          {
+            "commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/artifacts_v0_1/receipt.json",
+            "role": "receipt",
+            "sha256": "8a3414dcc3e709f5f17df958a94c6fb988e3b75097df379df09b9e9409b270a1"
+          }
+        ]
+      },
+      "v0_3": {
+        "all_hashes_match": true,
+        "commits": [
+          "d3b61870e63121b61b00a5ee58f6be80686a46d1"
+        ],
+        "files": [
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/PROTOCOL_v0_3.md",
+            "role": "source",
+            "sha256": "9a09574cd32b4f9522082eec33e1c480bca66c031ff77f259a039028a6e43e41"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/README.md",
+            "role": "source",
+            "sha256": "ed39cc818b49026bd2e38d4b0571aec5c0b923eeb5b3d6b250df80d612ee3445"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/protocol_v0_3.json",
+            "role": "registration",
+            "sha256": "76dbefedfa09c56ed3c50212fcb647f73ffceabb901ce83d43a485e5d1cc3660"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/coverage_robustness.py",
+            "role": "source",
+            "sha256": "1b0b3f60e812c4b0a66e7492847494284d00258837555bbaf61860914a498e5d"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/run.py",
+            "role": "source",
+            "sha256": "8c35a5ee4f9363d9d88d8ee177bbcaee19bbc7d880e0b601331101971756d3e3"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/test_coverage_robustness.py",
+            "role": "source",
+            "sha256": "5c7d90f50b728a7271a065bb461974f11d309c714b6965bc94c88cc6e6e8ffc3"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/verify_result.py",
+            "role": "source",
+            "sha256": "264311a8372b71bf93ed53789c15e710c2112889f87ebb7b8924104e492cbbc2"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/RESULT_v0_3.md",
+            "role": "artifact",
+            "sha256": "b2be2624dacf657db49b8b485db284afc6d56d3c941efe581ee4388ec435f569"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/result.json",
+            "role": "artifact",
+            "sha256": "8277b755f4ee26cfb1df48b9986d252a8102a2f92eb6a6a7afa6d2d3b7134ffa"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/receipt.json",
+            "role": "receipt",
+            "sha256": "f22d5e493028c6ec7c5679fb53f9d41fd94296c23c8a23b5c09e817dbf294c70"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/verification.json",
+            "role": "verification",
+            "sha256": "e741bf99191e4de1f77ac25ebb170efb9b357659e6c424afd3839751450bf07a"
+          },
+          {
+            "commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+            "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/bundle_receipt.json",
+            "role": "receipt",
+            "sha256": "b7ddbad42daa8aef0b85a627fac77112961594afaa80352b78be6368354381b6"
+          }
+        ]
+      }
+    },
+    "reported_matches_replay": true
+  },
+  "verification_resource_observations": {
+    "completed_generic_terminal_comparisons": 11520,
+    "elapsed_wall_ns": 16266000000,
+    "memory_measurement": "tracemalloc_peak_python_allocation_only",
+    "process_rss_and_native_memory_measured": false,
+    "traced_python_limit_bytes": 67108864,
+    "traced_python_peak_bytes": 2625076,
+    "wall_limit_ns": 30000000000
+  }
+}

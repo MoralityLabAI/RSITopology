@@ -1,0 +1,34 @@
+{
+  "claim_boundary": "This result concerns a 16-point Boolean registry, fresh per-challenge policy-independent coverage events, an execution-dependent exact-c-point selective mask fixed across challenges, fresh fair fallback bits, and independent challenges. It does not cover an execution-fixed random independent mask, establish real meter coverage, identify a deployment threshold, characterize adaptive history-dependent suppression, prove transformation-universal attestability, or resolve ASMP-7.",
+  "compliant_boundary": 8,
+  "coverage_counts": [
+    0,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "domain_size": 16,
+  "error_limit": "1/20",
+  "fixed_independent_mask_counterfactual": "out_of_scope_sensitivity_only",
+  "forbidden_boundaries": [
+    14,
+    16
+  ],
+  "independent_coverage_semantics": "fresh_per_challenge_event_with_probability_c_over_16",
+  "m_cap": 8192,
+  "models": [
+    "policy_independent",
+    "adversarial_selective"
+  ],
+  "protocol_id": "ASMP-7-METER-COVERAGE-ROBUSTNESS-v0.3",
+  "schema_version": "asmp7_coverage_robustness_protocol_v0_3",
+  "selective_coverage_semantics": "execution_dependent_exact_c_point_mask_fixed_across_challenges",
+  "theta_grid": [
+    "1/2",
+    "3/4",
+    "4/5",
+    "1/1"
+  ]
+}

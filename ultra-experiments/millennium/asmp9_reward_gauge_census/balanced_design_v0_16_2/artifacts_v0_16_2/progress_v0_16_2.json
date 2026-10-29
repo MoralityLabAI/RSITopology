@@ -1,0 +1,16 @@
+{
+  "completed_stages": [
+    "registration_binding",
+    "pair_registry",
+    "global_allocation_registry",
+    "compact_value_registry",
+    "threshold_registry",
+    "negative_boundaries",
+    "result_and_report"
+  ],
+  "elapsed_seconds": 41.89841739999247,
+  "peak_resident_bytes": 34738176,
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.2",
+  "stage": "completed",
+  "status": "completed"
+}

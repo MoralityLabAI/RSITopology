@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_runner_gates_pass": true,
+    "catalan_counts_recomputed": true,
+    "depth_formula_recomputed": true,
+    "instrument_valid": true,
+    "pareto_rows_nondominated": true,
+    "protocol_hash_matches": true,
+    "registered_ranking_reversal": true,
+    "registered_sources_match": true,
+    "registration_hash_matches": true,
+    "resource_pass": true,
+    "result_hash_matches": true,
+    "row_universe_exact": true,
+    "schema_exact": true,
+    "work_formula_recomputed": true
+  },
+  "claim_boundary": "Exact binary-conjunction proof-tree enumeration through twelve obligations; theorem-generator only, not a bounded-Lob or open-ended tiling result.",
+  "decision": "pass",
+  "instrument_status": "valid",
+  "schema_version": "asmp5a_bounded_tiling_verification_v0_1"
+}

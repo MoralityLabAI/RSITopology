@@ -1,0 +1,46 @@
+{
+  "schema_version": "mobius_synergy_identity_registration_v0_1_1",
+  "status": "registered_before_claim_eligible_analysis",
+  "registered_utc": "2026-07-17T15:10:22.735Z",
+  "registration_source_commit": "4c64ea255c9223788db9945470d2789a524a36bc",
+  "remote_ref": "origin/feat/spectral-bundle-v0.3-bifiltration",
+  "remote_commit_at_registration": "4c64ea255c9223788db9945470d2789a524a36bc",
+  "chronology": "provenance_only_amendment_registered_after_disclosed_engineering_smoke_and_before_claim_eligible_analysis",
+  "amendment_sha256": "2502d9de679eaa943aabe23c53d2813fa410a6ef9f8c1d094156d0b4f0019f47",
+  "parent_registration_sha256": "3c4975a260e736d1c548d2aab22336dd70dab0b2410093146e8dd2c3cd5cbdee",
+  "capture_index_sha256": "c1d9a9f177e6c6ce7d3a9174537620816153950e3c1f81d85337ff287025aa06",
+  "prompt_manifest_sha256": "19dc2bbe38ab959036ab1e437e10536e0b4dec12792afccf7134d17ffc865794",
+  "source_sha256": {
+    "mobius.py": "b7d0828d8489b9c618bf52d6618d19670f50bade062d4f0b2ef246d0e7841575",
+    "run.py": "05614eeaa5759b7a7ca3dbfb5518743c5fb9940609726f0745ca9eea30861962",
+    "run_v0_1_1.py": "487f373bb0b411c6eebd41aa9cdb28712a11e97b2e4e7fc5d3cf497938276846"
+  },
+  "environment_lock": {
+    "python": "3.11.4",
+    "python_implementation": "CPython",
+    "numpy": "2.4.4",
+    "scipy": "1.16.2",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "indexed_capture_contract": {
+    "chunk_count": 384,
+    "require_unique_chunk_ids": true,
+    "require_unique_chunk_paths": true,
+    "require_exact_sha256": true,
+    "require_exact_shape_dtype_and_row_count": true,
+    "require_all_finite": true,
+    "require_prompt_row_bijection_within_chunk": true
+  },
+  "release_contract": {
+    "final_output_must_not_exist": true,
+    "staging_output_must_not_exist": true,
+    "atomic_same_volume_rename_after_manifest": true,
+    "overwrite_allowed": false,
+    "failed_staging_requires_audit_before_retry": true
+  },
+  "outcomes_available_at_registration": false,
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "scientific_contract_changed_from_v0_1": false,
+  "claim_boundary": "The v0.1.1 registration adds provenance enforcement only. A supported Mobius interaction subspace would remain representation evidence, not causal evidence, and cannot authorize weight edits, VPD use, recursive improvement, or RSI claims."
+}

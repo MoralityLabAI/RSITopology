@@ -1,0 +1,64 @@
+{
+  "schema_version": "asmp8_qwen08_action_probe_capture_receipt_v0_1",
+  "status": "outcome_blind_capture_and_feature_gates_pass",
+  "protocol": {
+    "path": "protocols/asmp8_qwen08_action_probe_v0_1.json",
+    "sha256": "63c5828c93962f455120e117da2ec56f87f8256997c70a396bd1c5eaeb78a0d2",
+    "prereveal_commit": "cc4fc83f761fbe20090a47eb5a96712942261b0d"
+  },
+  "capture": {
+    "records": 1152,
+    "unique_prompts": 576,
+    "planned_epochs": 2,
+    "server_sessions": 2,
+    "maximum_choice_probability_delta_across_cold_starts": 0.0,
+    "all_vectors_complete": true,
+    "measurement_plan_semantic_sha256": "e8685619e0a2e0c6e70d5604d3ff02ff8e050c7d20b934bc8aa6d6e9c9bd1dba",
+    "measurement_plan_file_sha256": "c0ed780f8c1662ea31431bc38f649179b666c8b6b204d60be782ebba7e739869",
+    "records_jsonl_sha256": "56129e6e5ab96b0e53e048302e6bb073af62b1845d0c6a67871175312caaf812",
+    "summary_sha256": "3b1d5f84141c719ec47ebab70de7f4cda2034e7153379a33d280c8b4cf934d73",
+    "workload_started_utc": "2026-07-25T22:44:24Z",
+    "workload_ended_utc": "2026-07-25T22:48:46Z"
+  },
+  "gates": {
+    "P0_plan_and_session_integrity": "pass",
+    "V0_complete_choice_vectors": "pass",
+    "C0_cold_start_repeatability": "pass",
+    "L0_feature_liveness": "pass"
+  },
+  "features": {
+    "path": "artifacts/asmp8_qwen08_action_probe_v0_1/features.jsonl",
+    "sha256": "22c78ffda464c1202bced0583f6dd5936768a24f7166a3da427e7ebc91d17307",
+    "receipt_path": "artifacts/asmp8_qwen08_action_probe_v0_1/feature_receipt.json",
+    "receipt_sha256": "0c6c7c5ba00168767272c6742b27a34327aab0acb9fb4e44363e367f342e3fe0",
+    "row_count": 576,
+    "observed_maximum_registered_feature_variance": 0.22448881172839505,
+    "registered_variance_floor": 1e-06,
+    "outcomes_consumed": false
+  },
+  "prime": {
+    "pod_id": "9ff09adcbad745dda0f882125a029c20",
+    "pod_name": "asmp8-action-probe-20260725",
+    "status_after_recovery": "TERMINATED",
+    "active_pods_after_termination": 0,
+    "gpu": "A100 40GB",
+    "listed_hourly_usd": 0.4515,
+    "cost_upper_bound_usd": 0.4515,
+    "maximum_temperature_c": 28,
+    "maximum_vram_mb": 1042,
+    "maximum_power_w": 80.24,
+    "telemetry_samples": 489,
+    "thermal_pauses": 0
+  },
+  "recovery": {
+    "archive_path": "D:\\Research_Engine\\runs\\asmp8_qwen08_action_probe_prime_spot_v0_1\\asmp8_qwen08_action_probe_prime_spot_v0_1_20260725.tar.gz",
+    "archive_sha256": "4fda1bc502b5d8e219d22cf36247c529423f439a6c9e255711770ea1c3c605e3",
+    "manifest_files_verified": 1167,
+    "manifest_mismatches": 0
+  },
+  "outcome_reveal": {
+    "status": "not_materialized",
+    "outcomes_consumed": false
+  },
+  "claim_boundary": "Target-blind action-distribution capture and feature liveness only. No correctness, control-gating, scalable-oversight, recursive-improvement, or ASMP-8 conclusion is available before the registered outcome join."
+}

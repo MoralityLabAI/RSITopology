@@ -1,0 +1,34 @@
+{
+  "schema_version": "asmp4_transcript_fiber_entropy_v0_28",
+  "theorem": {
+    "name": "causal transcript-fiber entropy transfer",
+    "finite_horizon": "target log-language cost is at most source cost plus log2 maximum fiber",
+    "asymptotic": "directed port-rate slack is relative fiber entropy",
+    "exact_corollary": "bidirectional subexponential port fibers preserve the complete region"
+  },
+  "sharpness": {
+    "exponential_clone": "M_R(T)=r^T and M_W(T)=w^T attain corner shift (log2 r,log2 w)",
+    "finite_quotient": "one quotient class can hide positive history-fiber entropy",
+    "sparse_branching": "unbounded fibers can still have zero relative entropy",
+    "burst": "limsup cannot be replaced by liminf"
+  },
+  "central_harness": {
+    "clone_rows": 2048,
+    "maximum_joint_raw_states": 256,
+    "explicit_languages": 30,
+    "largest_explicit_language": 15625,
+    "sparse_horizons": 4096
+  },
+  "independent_harness": {
+    "trie_cases": 35,
+    "schedule_cases": 6561,
+    "maximum_horizon": 8,
+    "sparse_horizons": 8192
+  },
+  "mutations_rejected": 8,
+  "predecessor_inventory": {
+    "packages": 28,
+    "tests": 314
+  },
+  "disposition": "nonadditive leaf-language transfer is controlled by port-specific history-fiber entropy, not state-class size"
+}

@@ -1,0 +1,15 @@
+{
+  "burned": {
+    "gamma_cells": ["1/4096", "3/1600", "1/200", "1/50"],
+    "grid_denominators": [20, 40]
+  },
+  "gamma_cells": ["1/3072", "7/5000", "1/256", "3/200"],
+  "grid_denominators": [30, 50],
+  "protocol_id": "asmp9-capped-simplex-modulus-v0.63",
+  "resource_caps": {
+    "resident_bytes": 536870912,
+    "seconds": 180,
+    "workers": 1
+  }
+}
+

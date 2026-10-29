@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "Solver-certified finite covering designs and exact rational power for a transparent parity oracle only.",
+  "counts": {
+    "covering_cells": 21,
+    "crossover_strata": 6,
+    "finite_sample_cells": 63
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_covering_validity": true,
+    "G2_endpoint_controls": true,
+    "G3_lower_bound_and_monotonicity": true,
+    "G4_exact_finite_sample_calibration": true,
+    "G5_all_negative_path_liveness": true,
+    "G6_crossover": true
+  },
+  "registered_probability": {
+    "alpha": {
+      "denominator": 20,
+      "numerator": 1
+    },
+    "target_power": {
+      "denominator": 10,
+      "numerator": 9
+    }
+  },
+  "schema_version": "asmp11_covering_frontier_result_v0_2",
+  "verdict": "finite_covering_frontier_with_sample_crossover_established"
+}

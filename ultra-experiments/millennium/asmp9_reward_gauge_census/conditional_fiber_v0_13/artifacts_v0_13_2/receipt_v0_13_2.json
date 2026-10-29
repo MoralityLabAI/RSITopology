@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 11.137200100027258,
+  "implementation_commit": "f458e81d0745bc981929150d1d2464fa4fff845c",
+  "output_hashes": {
+    "RESULT_v0_13_2.md": "ab8ce6129c75e9b4d4b42750a96a6da0f33145b4b6ce003ae0e9928b9759a892",
+    "result_v0_13_2.json": "2861ac2e2eb7c065c6ea43f77f24407b20e637e5f7c20fd5cbab6f0c11fa9b9c"
+  },
+  "protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13.2",
+  "registration_commit": "b11ddca5743378165879ae7ebefd5b01e9d78954",
+  "registration_sha256": "67f6bcc4bafca09d9f3e799d5b125d88daaccd1dfea2618326925d11b7eb603e"
+}

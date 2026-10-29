@@ -1,0 +1,101 @@
+{
+  "protocol_id": "percolation_phase_v0_1",
+  "schema_version": "1.0.0",
+  "status": "frozen_before_synthetic_smoke_and_pilot_execution",
+  "frozen_on": "2026-07-16",
+  "question": "What disconnected, coherent, and frustrated regimes occur in a finite lineage-threshold and rank-one sign-noise phase map?",
+  "primary_benefit": "phenomenological_and_descriptive_phase_mapping",
+  "secondary_benefits": ["measurement", "robustness_and_theory_stress_test", "operational_safety"],
+  "claim_scope": "model_only",
+  "experimental_unit": "one independently seeded synthetic rectangular transport graph and nested sign-noise realization",
+  "epistemic_status": "synthetic_calibration_and_retrospective_descriptive_machinery",
+  "mathematical_object": {
+    "lineage_filtration": "inhomogeneous finite bond-percolation filtration evaluated only through build_lineage_holonomy_bifiltration",
+    "rank_one_gauge_sector": "O(1)=Z/2 edge-sign cochain modulo node-frame coboundaries",
+    "syndrome": "w1 evaluations on a deterministic fundamental cycle basis",
+    "critical_floors": {
+      "tau_conn": "largest lineage floor at which the complete registered node universe is connected",
+      "tau_cycle": "largest lineage floor at which beta_1 is positive",
+      "tau_loop": "largest lineage floor at which at least one registered loop is admitted",
+      "guaranteed_ordering": "tau_loop <= tau_cycle when both are defined",
+      "non_ordering": "tau_cycle and tau_conn have no universal ordering; a cycle may form inside a disconnected component before global connectivity"
+    }
+  },
+  "phase_rules": {
+    "disconnected": "connected_component_count > 1",
+    "coherent": "connected_component_count == 1 and w1_trivial",
+    "frustrated": "connected_component_count == 1 and not w1_trivial"
+  },
+  "synthetic_family": {
+    "topology": "L by C rectangular transport graph",
+    "checkpoint_edges": {"mean_retention": 0.9958, "pilot_sd": 0.0015},
+    "context_edges": {"mean_retention": 0.9, "pilot_sd": 0.02},
+    "registered_loops": "all elementary rectangular plaquettes",
+    "base_edge_signs": "+1",
+    "sign_intervention": "shared per-edge uniforms thresholded at q, nested across q for each graph replicate"
+  },
+  "nulls": {
+    "pooled_retention_permutation": "shuffle observed retentions over the full fixed edge topology",
+    "within_class_retention_permutation": "shuffle retentions separately within checkpoint and context edge classes",
+    "separation_rule": "null arms are named in every work unit and are never pooled"
+  },
+  "hypotheses": [
+    {
+      "id": "H_instrument",
+      "prediction": "tau_loop never exceeds tau_cycle and phase labels are re-derivable from raw graph quantities",
+      "falsifier": "any work unit violates the loop/cycle implication or cannot reproduce its phase label"
+    },
+    {
+      "id": "H_sign_exposure",
+      "prediction": "at least 95% of maximum-q cells execute one or more sign flips",
+      "falsifier": "maximum-q exposure falls below 95%"
+    },
+    {
+      "id": "H_zero_noise",
+      "prediction": "every connected q=0 graph is coherent",
+      "falsifier": "a connected q=0 graph has nonzero w1"
+    }
+  ],
+  "metric_firewall": {
+    "selection_metrics": [],
+    "evidence_metrics": ["phase_frequency", "largest_component_fraction", "largest_frustrated_cluster_fraction", "coboundary_distance"],
+    "hazard_metrics": ["negative_edge_count", "beta_1", "degenerate_no_cycle", "runtime_and_cap_status"],
+    "note": "No adaptive selection occurs in the synthetic calibration. The ALife extension must register task fitness separately from topology evidence."
+  },
+  "seed_plan": {
+    "smoke_root": 2026071621,
+    "pilot_root": 2026071622,
+    "full_specification_root": 2026071623,
+    "derivation": "NumPy SeedSequence through confinement_experiments.common.derived_seed",
+    "pairing": "graph disorder and sign uniforms are shared across tau and q cells; retention-null permutations are fixed by graph replicate and named arm"
+  },
+  "registered_gates": {
+    "loop_cycle_implication": "zero tau_loop > tau_cycle violations",
+    "zero_noise_coherence": "all connected q=0 cells coherent and at least one connected q=0 cell exists",
+    "treatment_exposure": "at least 95% of maximum-q work units contain one or more negative edges",
+    "named_nulls": "observed, pooled_retention_permutation, and within_class_retention_permutation all present"
+  },
+  "coboundary_distance": {
+    "exact": "enumerate the affine kernel coset when |E|-rank(cycle incidence) <= 20",
+    "large_graph": "report edge-disjoint-frustrated-cycle lower bound and a valid observed-negative-edge correction upper bound; never label bounds exact"
+  },
+  "resource_caps": {
+    "execution": "Windows Job Object for executed smoke/pilot",
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "swap_bytes": 0,
+    "blas_threads": 1,
+    "gpu_used": false,
+    "full_configuration_execution": "prohibited_without_separate_authorization"
+  },
+  "followups": {
+    "stage_a": "separate retrospective protocol over frozen Qwen0.8B receipts",
+    "stage_b": "separate confirmatory protocol on fresh context-restricted geometry",
+    "stage_c_alife": "separate model-only ALife experiment contract with task fitness isolated from topology evidence"
+  },
+  "claim_boundary": "The suite calibrates synthetic finite-graph diagnostics and supports retrospective description. It authorizes no causal model stage, no edit, no VPD reopening, no model training, and no new attestation level.",
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "asmp9_physical_dynamic_bridge_compact_artifact_manifest_v0_67_1",
+  "source_commit": "29a9b707045a7510fea76b30b508ef9e0ffdc292",
+  "execution_pod": "ec7a1d8595a24c6d9d973f7fea958bc4",
+  "full_local_bundle": "D:\\Research_Engine\\runs\\asmp9_physical_dynamic_bridge_v0_67\\prime_construction_v0_67_1_20260729",
+  "full_bundle_manifest_entries_verified": 508,
+  "full_bundle_manifest_failures": 0,
+  "files": [
+    {"path": "analysis.json", "bytes": 7691, "sha256": "dca8a14a7a50bc290bb5b4d66e4e828a7df3686a26fdf8b2773ff2ded1815306"},
+    {"path": "analysis_receipt.json", "bytes": 964, "sha256": "7b8042f62d60988fb278ecdf8094da286417c76e7730734a1d83df2ac7db5361"},
+    {"path": "authorization.json", "bytes": 1919, "sha256": "2ffc02b10a186e05e54cf432405e0cd895eff06d8fec8a18dfb82217fd384be9"},
+    {"path": "calibration.json", "bytes": 1283, "sha256": "25ebea1c930314c4557f8fab713a1ac66d572ae801eadcea656e835f08159895"},
+    {"path": "cleanup_summary.json", "bytes": 275, "sha256": "0524c74d06fdd9a21fdeb50eb962d4647d38a31b6289fc9c582217eb2d2f4bf9"},
+    {"path": "completion_summary.json", "bytes": 326, "sha256": "533d34e87716bc49e69de1ac38879f1fc52995793452c60c18fe6921a0c7da10"},
+    {"path": "gpu_telemetry.csv", "bytes": 8243, "sha256": "4bf3b3793d1f1e03a83375d9edea1d346048c888f51195949dbc28c1458e4a20"},
+    {"path": "pytest_stdout.log", "bytes": 99, "sha256": "505b048eca0d279784a20a5e90abdc0747042c3bbb94819870216bec62b927e6"},
+    {"path": "records.jsonl", "bytes": 134167, "sha256": "207753cd2d047ca8f0ce02c593254cf2031eee960c070c3c837f39327f9886a9"},
+    {"path": "registration.json", "bytes": 2802, "sha256": "c41812d43ccdb2999726352c0600738b6f17c174d91e95be699da6544bfe0ca9"},
+    {"path": "remote_prereveal_validation.json", "bytes": 3851, "sha256": "c995f0f00c680c0d4282733fb39ba437adb28c14a61b97a2a807ab0e87b52102"},
+    {"path": "replay_analysis_receipt.json", "bytes": 946, "sha256": "49208a1e1ca24941fa1035da6487d7c08f51e24d677b4a1e6ebf1ac530215715"},
+    {"path": "RUN_FACTS.txt", "bytes": 566, "sha256": "8f257efd060043a06733bc7abd570d9a91418ffd8e8b0a2ed10944ab5cfdaa05"},
+    {"path": "wrapper_summary.json", "bytes": 341, "sha256": "ce40cd5c8e80abd9f486621e6500402b40f7c39595b9664aa03dfeae9a11c8f2"}
+  ]
+}

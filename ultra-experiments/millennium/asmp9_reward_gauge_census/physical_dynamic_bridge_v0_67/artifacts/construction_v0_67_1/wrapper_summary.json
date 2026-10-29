@@ -1,0 +1,1 @@
+{"abort_reason":null,"analysis_exit_code":0,"analysis_status":"completed","attempt_id":"20260729T211332Z-5793","block_device":"/dev/sda","gpu_baseline_used_mb":1,"peak_gpu_delta_mb":3385,"peak_gpu_temperature_c":31,"peak_gpu_total_used_mb":3386,"runner_exit_code":0,"schema_version":"asmp9_prime_wrapper_summary_v0_67","status":"completed"}

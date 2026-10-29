@@ -1,0 +1,2001 @@
+{
+  "binding_checks": {
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/DEVELOPMENT_NOTE_v0_9.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/PRIOR_ART_v0_9.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/PROTOCOL_v0_9.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/README.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/THEOREM_DRAFT_v0_9.md": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/environment_v0_9.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/experiment.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/finite_sample_coherence.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/protocol_v0_9.json": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/test_experiment.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/test_finite_sample_coherence.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/test_run_verification.py": true,
+    "hash:ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_coherence_v0_9/verify_result.py": true,
+    "head_is_registration_commit": true,
+    "implementation_is_ancestor": true,
+    "tracked_tree_clean": true
+  },
+  "elapsed_seconds": 59.39487969997572,
+  "floor_control": {
+    "event_failure_count": 39,
+    "nonunavailable_on_event": 0,
+    "replicates": 8192,
+    "samples_per_edge": 100000,
+    "status_counts": {
+      "unavailable_probability_floor": 8192
+    }
+  },
+  "forest_control": {
+    "replicates": 8192,
+    "samples_per_edge": 100000,
+    "status_counts": {
+      "unavailable_no_cycles": 8192
+    }
+  },
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_graph_and_bound_arithmetic": true,
+    "G2_forest_nonvacuity": true,
+    "G3_probability_floor_admission": true,
+    "G4_certificate_safety": true,
+    "G5_sufficient_bound_liveness": true,
+    "G6_low_budget_inconclusiveness": true,
+    "G7_high_budget_decisiveness": true,
+    "G8_sign_mirror": true,
+    "G9_status_closure": true
+  },
+  "graphs": [
+    {
+      "cells": [
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 28,
+            "negative": 24,
+            "positive": 24
+          },
+          "example_positive_band": {
+            "chord_index": 2,
+            "coefficients": [
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.1336869244107295,
+            "radius": 0.7070692496845128
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.125,
+          "negative_status_counts": {
+            "certified_incoherent": 75,
+            "inconclusive": 4021
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 75,
+            "inconclusive": 4021
+          },
+          "samples_per_edge": 5320,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 16,
+            "negative": 16,
+            "positive": 16
+          },
+          "example_positive_band": {
+            "chord_index": 2,
+            "coefficients": [
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2063753268259296,
+            "radius": 0.49999695787014337
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.25,
+          "negative_status_counts": {
+            "certified_incoherent": 4086,
+            "inconclusive": 10
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4086,
+            "inconclusive": 10
+          },
+          "samples_per_edge": 10639,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 25,
+            "negative": 11,
+            "positive": 11
+          },
+          "example_positive_band": {
+            "chord_index": 2,
+            "coefficients": [
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.182678859184246,
+            "radius": 0.35355123948262285
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.5,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 21278,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 21,
+            "negative": 19,
+            "positive": 19
+          },
+          "example_positive_band": {
+            "chord_index": 2,
+            "coefficients": [
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.1899000627414402,
+            "radius": 0.24999847893507168
+          },
+          "mirror_status_match": true,
+          "multiplier": 1.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 42556,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 16,
+            "negative": 19,
+            "positive": 19
+          },
+          "example_positive_band": {
+            "chord_index": 2,
+            "coefficients": [
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2015717847180363,
+            "radius": 0.17677561974131142
+          },
+          "mirror_status_match": true,
+          "multiplier": 2.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 85112,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        }
+      ],
+      "graph_name": "cycle_3",
+      "interior_margin": 0.13147521650098248,
+      "metadata": {
+        "beta_1": 1,
+        "chord_indices": [
+          2
+        ],
+        "cycle_lengths": [
+          3
+        ],
+        "edge_count": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "maximum_cycle_length": 3,
+        "vertex_count": 3
+      },
+      "replicates": 4096,
+      "seed": 990901,
+      "sufficient_samples_per_edge": 42556,
+      "true_negative_circulations": [
+        -1.2
+      ],
+      "true_positive_circulations": [
+        1.2
+      ]
+    },
+    {
+      "cells": [
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 22,
+            "negative": 17,
+            "positive": 17
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.1698859548946021,
+            "radius": 0.7071080048419971
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.125,
+          "negative_status_counts": {
+            "certified_incoherent": 33,
+            "inconclusive": 4063
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 33,
+            "inconclusive": 4063
+          },
+          "samples_per_edge": 10025,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 25,
+            "negative": 18,
+            "positive": 18
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2151076919856731,
+            "radius": 0.5000008652550662
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.25,
+          "negative_status_counts": {
+            "certified_incoherent": 4095,
+            "inconclusive": 1
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4095,
+            "inconclusive": 1
+          },
+          "samples_per_edge": 20050,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 24,
+            "negative": 25,
+            "positive": 25
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2415749753453469,
+            "radius": 0.35355400242099855
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.5,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 40100,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 26,
+            "negative": 12,
+            "positive": 12
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2057560304680477,
+            "radius": 0.24999887403591997
+          },
+          "mirror_status_match": true,
+          "multiplier": 1.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 80201,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 30,
+            "negative": 21,
+            "positive": 21
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.188435892675876,
+            "radius": 0.17677589911980052
+          },
+          "mirror_status_match": true,
+          "multiplier": 2.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 160402,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        }
+      ],
+      "graph_name": "cycle_4",
+      "interior_margin": 0.13147521650098248,
+      "metadata": {
+        "beta_1": 1,
+        "chord_indices": [
+          3
+        ],
+        "cycle_lengths": [
+          4
+        ],
+        "edge_count": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "maximum_cycle_length": 4,
+        "vertex_count": 4
+      },
+      "replicates": 4096,
+      "seed": 990902,
+      "sufficient_samples_per_edge": 80201,
+      "true_negative_circulations": [
+        -1.2
+      ],
+      "true_positive_circulations": [
+        1.2
+      ]
+    },
+    {
+      "cells": [
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 22,
+            "negative": 16,
+            "positive": 16
+          },
+          "example_positive_band": {
+            "chord_index": 5,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.1825640459964726,
+            "radius": 0.7071125176585326
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.125,
+          "negative_status_counts": {
+            "certified_incoherent": 1,
+            "inconclusive": 4095
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 1,
+            "inconclusive": 4095
+          },
+          "samples_per_edge": 24358,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 6,
+            "inconclusive": 4090
+          },
+          "event_failure_counts": {
+            "coherent": 29,
+            "negative": 17,
+            "positive": 17
+          },
+          "example_positive_band": {
+            "chord_index": 5,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.170676223239576,
+            "radius": 0.4999989245513947
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.25,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 48717,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 16,
+            "negative": 24,
+            "positive": 24
+          },
+          "example_positive_band": {
+            "chord_index": 5,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.217246446105254,
+            "radius": 0.35355263013627214
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.5,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 97434,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 32,
+            "negative": 21,
+            "positive": 21
+          },
+          "example_positive_band": {
+            "chord_index": 5,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2005632782211764,
+            "radius": 0.24999946227569736
+          },
+          "mirror_status_match": true,
+          "multiplier": 1.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 194868,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 27,
+            "negative": 21,
+            "positive": 21
+          },
+          "example_positive_band": {
+            "chord_index": 5,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2128908690190883,
+            "radius": 0.17677631506813607
+          },
+          "mirror_status_match": true,
+          "multiplier": 2.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 389736,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        }
+      ],
+      "graph_name": "cycle_6",
+      "interior_margin": 0.13147521650098248,
+      "metadata": {
+        "beta_1": 1,
+        "chord_indices": [
+          5
+        ],
+        "cycle_lengths": [
+          6
+        ],
+        "edge_count": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "maximum_cycle_length": 6,
+        "vertex_count": 6
+      },
+      "replicates": 4096,
+      "seed": 990903,
+      "sufficient_samples_per_edge": 194868,
+      "true_negative_circulations": [
+        -1.2
+      ],
+      "true_positive_circulations": [
+        1.2
+      ]
+    },
+    {
+      "cells": [
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 24,
+            "negative": 13,
+            "positive": 13
+          },
+          "example_positive_band": {
+            "chord_index": 7,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2193997466866522,
+            "radius": 0.7071056738400173
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.125,
+          "negative_status_counts": {
+            "certified_incoherent": 1,
+            "inconclusive": 4095
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 1,
+            "inconclusive": 4095
+          },
+          "samples_per_edge": 45577,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 3,
+            "inconclusive": 4093
+          },
+          "event_failure_counts": {
+            "coherent": 24,
+            "negative": 28,
+            "positive": 28
+          },
+          "example_positive_band": {
+            "chord_index": 7,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.1887750883767185,
+            "radius": 0.4999992169877594
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.25,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 91154,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 25,
+            "negative": 22,
+            "positive": 22
+          },
+          "example_positive_band": {
+            "chord_index": 7,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2053893500139499,
+            "radius": 0.35355283692000866
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.5,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 182308,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 20,
+            "negative": 23,
+            "positive": 23
+          },
+          "example_positive_band": {
+            "chord_index": 7,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.2110359150733498,
+            "radius": 0.24999995132047362
+          },
+          "mirror_status_match": true,
+          "multiplier": 1.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 364615,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 27,
+            "negative": 17,
+            "positive": 17
+          },
+          "example_positive_band": {
+            "chord_index": 7,
+            "coefficients": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "estimate": 1.1976296757735756,
+            "radius": 0.17677666087501365
+          },
+          "mirror_status_match": true,
+          "multiplier": 2.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 729230,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        }
+      ],
+      "graph_name": "cycle_8",
+      "interior_margin": 0.13147521650098248,
+      "metadata": {
+        "beta_1": 1,
+        "chord_indices": [
+          7
+        ],
+        "cycle_lengths": [
+          8
+        ],
+        "edge_count": 8,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "maximum_cycle_length": 8,
+        "vertex_count": 8
+      },
+      "replicates": 4096,
+      "seed": 990904,
+      "sufficient_samples_per_edge": 364615,
+      "true_negative_circulations": [
+        -1.2
+      ],
+      "true_positive_circulations": [
+        1.2
+      ]
+    },
+    {
+      "cells": [
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 22,
+            "negative": 13,
+            "positive": 13
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              1,
+              1,
+              0
+            ],
+            "estimate": 1.1583737634482365,
+            "radius": 0.7071004330765275
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.125,
+          "negative_status_counts": {
+            "certified_incoherent": 13,
+            "inconclusive": 4083
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 13,
+            "inconclusive": 4083
+          },
+          "samples_per_edge": 10466,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 8,
+            "inconclusive": 4088
+          },
+          "event_failure_counts": {
+            "coherent": 24,
+            "negative": 18,
+            "positive": 18
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              1,
+              1,
+              0
+            ],
+            "estimate": 1.187841608562288,
+            "radius": 0.4999955112083571
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.25,
+          "negative_status_counts": {
+            "certified_incoherent": 4094,
+            "inconclusive": 2
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4094,
+            "inconclusive": 2
+          },
+          "samples_per_edge": 20932,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 20,
+            "negative": 15,
+            "positive": 15
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              1,
+              1,
+              0
+            ],
+            "estimate": 1.2017005700648231,
+            "radius": 0.35355021653826374
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.5,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 41864,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 9,
+            "negative": 15,
+            "positive": 15
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              1,
+              1,
+              0
+            ],
+            "estimate": 1.2077891748104785,
+            "radius": 0.24999924853363467
+          },
+          "mirror_status_match": true,
+          "multiplier": 1.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 83727,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 33,
+            "negative": 14,
+            "positive": 14
+          },
+          "example_positive_band": {
+            "chord_index": 3,
+            "coefficients": [
+              -1,
+              -1,
+              1,
+              1,
+              0
+            ],
+            "estimate": 1.2102731449430801,
+            "radius": 0.17677616392967416
+          },
+          "mirror_status_match": true,
+          "multiplier": 2.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 167454,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        }
+      ],
+      "graph_name": "theta_4",
+      "interior_margin": 0.13147521650098248,
+      "metadata": {
+        "beta_1": 2,
+        "chord_indices": [
+          3,
+          4
+        ],
+        "cycle_lengths": [
+          4,
+          3
+        ],
+        "edge_count": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "maximum_cycle_length": 4,
+        "vertex_count": 4
+      },
+      "replicates": 4096,
+      "seed": 990905,
+      "sufficient_samples_per_edge": 83727,
+      "true_negative_circulations": [
+        -1.2,
+        0.0
+      ],
+      "true_positive_circulations": [
+        1.2,
+        0.0
+      ]
+    },
+    {
+      "cells": [
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 23,
+            "negative": 17,
+            "positive": 17
+          },
+          "example_positive_band": {
+            "chord_index": 4,
+            "coefficients": [
+              1,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "estimate": 1.1740107160040034,
+            "radius": 0.7071164912308621
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.125,
+          "negative_status_counts": {
+            "certified_incoherent": 30,
+            "inconclusive": 4066
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 30,
+            "inconclusive": 4066
+          },
+          "samples_per_edge": 6657,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "inconclusive": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 19,
+            "negative": 17,
+            "positive": 17
+          },
+          "example_positive_band": {
+            "chord_index": 4,
+            "coefficients": [
+              1,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "estimate": 1.205919501077177,
+            "radius": 0.5000068660381805
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.25,
+          "negative_status_counts": {
+            "certified_incoherent": 4091,
+            "inconclusive": 5
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4091,
+            "inconclusive": 5
+          },
+          "samples_per_edge": 13314,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 23,
+            "negative": 19,
+            "positive": 19
+          },
+          "example_positive_band": {
+            "chord_index": 4,
+            "coefficients": [
+              1,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "estimate": 1.2155714129528685,
+            "radius": 0.35355160695898546
+          },
+          "mirror_status_match": true,
+          "multiplier": 0.5,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 26629,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "negative": 0,
+            "positive": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 20,
+            "negative": 14,
+            "positive": 14
+          },
+          "example_positive_band": {
+            "chord_index": 4,
+            "coefficients": [
+              1,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "estimate": 1.2266839285250168,
+            "radius": 0.24999873878009965
+          },
+          "mirror_status_match": true,
+          "multiplier": 1.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 53258,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        },
+        {
+          "coherent_status_counts": {
+            "certified_coherent_within_tolerance": 4096
+          },
+          "event_failure_counts": {
+            "coherent": 24,
+            "negative": 19,
+            "positive": 19
+          },
+          "example_positive_band": {
+            "chord_index": 4,
+            "coefficients": [
+              1,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "estimate": 1.1950048019690418,
+            "radius": 0.17677580347949273
+          },
+          "mirror_status_match": true,
+          "multiplier": 2.0,
+          "negative_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "positive_status_counts": {
+            "certified_incoherent": 4096
+          },
+          "samples_per_edge": 106516,
+          "unsafe_on_event_counts": {
+            "coherent": 0,
+            "coherent_bound_miss": 0,
+            "negative": 0,
+            "negative_bound_miss": 0,
+            "positive": 0,
+            "positive_bound_miss": 0
+          }
+        }
+      ],
+      "graph_name": "complete_5",
+      "interior_margin": 0.13147521650098248,
+      "metadata": {
+        "beta_1": 6,
+        "chord_indices": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "cycle_lengths": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "edge_count": 10,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "maximum_cycle_length": 3,
+        "vertex_count": 5
+      },
+      "replicates": 4096,
+      "seed": 990906,
+      "sufficient_samples_per_edge": 53258,
+      "true_negative_circulations": [
+        -1.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "true_positive_circulations": [
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "monte_carlo_lcbs": [
+    {
+      "arm": "coherent",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 0.125,
+      "successes": 4096,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_3",
+      "lower_99": 0.9762046344934985,
+      "multiplier": 0.125,
+      "successes": 4021,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_3",
+      "lower_99": 0.9762046344934985,
+      "multiplier": 0.125,
+      "successes": 4021,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_3",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 0.125,
+      "successes": 4096,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_4",
+      "lower_99": 0.9880570494806706,
+      "multiplier": 0.125,
+      "successes": 4063,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_4",
+      "lower_99": 0.9880570494806706,
+      "multiplier": 0.125,
+      "successes": 4063,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 0.125,
+      "successes": 4096,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_6",
+      "lower_99": 0.9983804236075119,
+      "multiplier": 0.125,
+      "successes": 4095,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_6",
+      "lower_99": 0.9983804236075119,
+      "multiplier": 0.125,
+      "successes": 4095,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_6",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 0.125,
+      "successes": 4096,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_8",
+      "lower_99": 0.9983804236075119,
+      "multiplier": 0.125,
+      "successes": 4095,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_8",
+      "lower_99": 0.9983804236075119,
+      "multiplier": 0.125,
+      "successes": 4095,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "cycle_8",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 0.125,
+      "successes": 4096,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "positive",
+      "graph": "theta_4",
+      "lower_99": 0.9941146728912247,
+      "multiplier": 0.125,
+      "successes": 4083,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "negative",
+      "graph": "theta_4",
+      "lower_99": 0.9941146728912247,
+      "multiplier": 0.125,
+      "successes": 4083,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "coherent",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "theta_4",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 0.125,
+      "successes": 4096,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "positive",
+      "graph": "complete_5",
+      "lower_99": 0.9889366770455774,
+      "multiplier": 0.125,
+      "successes": 4066,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "negative",
+      "graph": "complete_5",
+      "lower_99": 0.9889366770455774,
+      "multiplier": 0.125,
+      "successes": 4066,
+      "target": "inconclusive"
+    },
+    {
+      "arm": "coherent",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 1.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "coherent",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_coherent_within_tolerance"
+    },
+    {
+      "arm": "positive",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    },
+    {
+      "arm": "negative",
+      "graph": "complete_5",
+      "lower_99": 0.9988763226712674,
+      "multiplier": 2.0,
+      "successes": 4096,
+      "target": "certified_incoherent"
+    }
+  ],
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-COHERENCE-v0.9",
+  "registration_commit": "0ba56240ccfee7d33b2c3c0135abdeffd370700b",
+  "registration_sha256": "da02bfbf8838062cfc251c994c7eb1c6e23df4c438cdca6c4d3ff304eb94e3a5",
+  "verdict": "finite_sample_cycle_coherence_certificate_verified"
+}

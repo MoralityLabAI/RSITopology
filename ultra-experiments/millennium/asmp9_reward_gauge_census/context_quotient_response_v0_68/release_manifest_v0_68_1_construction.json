@@ -1,0 +1,104 @@
+{
+  "schema_version": "asmp9_context_quotient_release_manifest_v0_68_1",
+  "phase": "construction",
+  "source_commit": "12844c052d7bc2f16167e0b5565297c27c53c8dd",
+  "claim_boundary": "Hash manifest for the v0.68.1 construction release only. Confirmation has not been run.",
+  "files": [
+    {
+      "path": "artifacts_v0_68_1_construction/analysis_receipt_v0_68_1.json",
+      "bytes": 937,
+      "sha256": "545712df5a486ba0082d413be26c8efcaf2b6fd91b5df0b3abe0be7b364de537"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/analysis_v0_68_1.json",
+      "bytes": 29065,
+      "sha256": "05de98008345c00e5f7e352ff6eb75f34282912503672b59d2856fc75e7cd880"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/attempt_1_cleanup_summary_v0_68_1.json",
+      "bytes": 281,
+      "sha256": "1375d4a8cc8eff72dd4fa549459b5b9f30eea91413b4af80988b35b6e1ad5c02"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/attempt_1_gpu_telemetry_v0_68_1.csv",
+      "bytes": 277098,
+      "sha256": "8dad02f465c01dc46888ba10a518c9bb2420e4a4f4257fdb1f7797ab23572a99"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/attempt_1_wrapper_summary_v0_68_1.json",
+      "bytes": 351,
+      "sha256": "87ef5fb1cb350bcee4912ce0a56d1d0b3539fc8a11b66f13b790a8f472d79986"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/attempt_2_cleanup_summary_v0_68_1.json",
+      "bytes": 281,
+      "sha256": "d49b9ce33dfec8bef1cc855d3a2b7db07c2001cce2c225569e9e25cdd00a9b1b"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/attempt_2_gpu_telemetry_v0_68_1.csv",
+      "bytes": 2683,
+      "sha256": "a478b16bfa21bf276fecc5bbc93f2272fe9a9f680714b4efe34b00e9097f623a"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/attempt_2_wrapper_summary_v0_68_1.json",
+      "bytes": 355,
+      "sha256": "44e27dc4541ca2702616d7250506087be0a67c3613bb07d0173e761e16d7df32"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/authorization_v0_68_1.json",
+      "bytes": 1592,
+      "sha256": "b6183d3455a7b9c139bae7ab8852b8162e55da905554efa6e09a607b66737e74"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/completion_summary_v0_68_1.json",
+      "bytes": 329,
+      "sha256": "cc8489a1f73d2d3d50930a3eb2d6e6eb7d5414ab5cba18b9158336d313feefd7"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/decision_v0_68_1.json",
+      "bytes": 759,
+      "sha256": "82cebc6360fc66d9588141e8db2ebfccf1f21673d325739642f10bb03e97641f"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/events_v0_68_1.jsonl",
+      "bytes": 60348,
+      "sha256": "af80fe181999e1db2467f7e9ee926caf2bd96ac65e838d2ae571372a700b3218"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/PREREVEAL_VALIDATION_TARGET_v0_68_1.json",
+      "bytes": 7266,
+      "sha256": "57238af5ac0add5b02d97f8651f6210ea8620b013676ab35e8edc6878378db08"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/records_v0_68_1.jsonl",
+      "bytes": 385788,
+      "sha256": "4d475d063fbf32d320419831df948c5118e682589ed385f602c3e275b5f3fd92"
+    },
+    {
+      "path": "artifacts_v0_68_1_construction/registration_v0_68_1.json",
+      "bytes": 4748,
+      "sha256": "cfda65f75832aaf1f093e0fc5c573b25f5fd5c286125bcc1b8a33bada71857e7"
+    },
+    {
+      "path": "CONSTRUCTION_RESULT_v0_68_1.md",
+      "bytes": 5769,
+      "sha256": "6e1a093a602e127ec6dffce84827cde71efe49e7ba479a40986dc883ef794a4c"
+    },
+    {
+      "path": "PRIME_POD_CLOSEOUT_ASMP9_V0681_20260729.json",
+      "bytes": 5155,
+      "sha256": "a3444536c03b6cc66fbcf3c155c9494110f97cdf262141a1fc1e778039d8fe44"
+    },
+    {
+      "path": "RESOLUTION_STATUS_AFTER_CONSTRUCTION_v0_68_1.md",
+      "bytes": 2853,
+      "sha256": "dc34cbe2d8d1768b88f0909a75aaef1f732f40b4ea6aba4267ac00d77b764f3c"
+    }
+  ],
+  "external_complete_archive": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_1\\asmp9_context_v0681_prime_construction.tgz",
+    "bytes": 291812,
+    "sha256": "e130d1ea0e86707e77caabfdb6b94449a1bc39f5660acdfbe048dcda68514ebb",
+    "files": 1087
+  }
+}

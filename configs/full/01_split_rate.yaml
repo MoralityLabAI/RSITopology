@@ -1,0 +1,16 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2; never launched automatically",
+  "experiment": "01_split_rate",
+  "run_id": "full_v1",
+  "seed": 2026071621,
+  "parameters": {
+    "unstable_dimensions": [1, 2, 3, 4, 8],
+    "unstable_values": [1.01, 1.05, 1.2, 1.5, 2.0],
+    "stable_dimensions": [0, 4],
+    "horizons": [25, 50, 100, 250, 500],
+    "rotations": 16,
+    "rate_offsets": [-1.0, -0.75, -0.5, -0.25, -0.125, 0.0, 0.125, 0.25, 0.5, 0.75, 1.0],
+    "collar_ratio": 0.25
+  }
+}

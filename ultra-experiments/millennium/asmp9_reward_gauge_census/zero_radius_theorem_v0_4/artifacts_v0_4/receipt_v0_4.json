@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-07-28T18:08:03.177093+00:00",
+  "elapsed_seconds": 49.347228099999484,
+  "implementation_commit": "bab45c4cee9c71285ad9c153ef934d2591071b1e",
+  "output_hashes": {
+    "RESULT_v0_4.md": "7bd1488b95028b196ed691a0419bb67983aa2a9fa4c8b6580cd1f9a49f1d5b26",
+    "result_v0_4.json": "c12a137c6c6f9c083d9811ef91ee397e329d8b697a777cdfad430b98a3d40095"
+  },
+  "protocol_id": "ASMP-9-EXACT-TIE-WIDTH-v0.4",
+  "registration_commit": "3924a7f5fe45994a34a42764002f7713de80bde9",
+  "registration_sha256": "0dab8e656324f2d93891959232b4c4e2f84019890bf23fcdf6db5e91e0d61418"
+}

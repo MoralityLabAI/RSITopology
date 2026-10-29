@@ -1,0 +1,292 @@
+{
+  "census": {
+    "construction_failures": 0,
+    "domain_count": 15,
+    "domain_summary_sha256": "a584b8954bc7ddfb8901d7b6907fa90c0b5c0b45eb770de5c8cd30e9e6241e69",
+    "domains": [
+      {
+        "complete": false,
+        "domain": "ab",
+        "menu_count": 1,
+        "observed_dimension": 1,
+        "rum_compatible_count": 5,
+        "scalar_compatible_count": 5,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 5
+        },
+        "unique_projection_count": 5
+      },
+      {
+        "complete": false,
+        "domain": "ac",
+        "menu_count": 1,
+        "observed_dimension": 1,
+        "rum_compatible_count": 5,
+        "scalar_compatible_count": 5,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 5
+        },
+        "unique_projection_count": 5
+      },
+      {
+        "complete": false,
+        "domain": "bc",
+        "menu_count": 1,
+        "observed_dimension": 1,
+        "rum_compatible_count": 5,
+        "scalar_compatible_count": 5,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 5
+        },
+        "unique_projection_count": 5
+      },
+      {
+        "complete": false,
+        "domain": "abc",
+        "menu_count": 1,
+        "observed_dimension": 2,
+        "rum_compatible_count": 10,
+        "scalar_compatible_count": 10,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 10
+        },
+        "unique_projection_count": 10
+      },
+      {
+        "complete": false,
+        "domain": "ab+ac",
+        "menu_count": 2,
+        "observed_dimension": 2,
+        "rum_compatible_count": 25,
+        "scalar_compatible_count": 25,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 25
+        },
+        "unique_projection_count": 25
+      },
+      {
+        "complete": false,
+        "domain": "ab+bc",
+        "menu_count": 2,
+        "observed_dimension": 2,
+        "rum_compatible_count": 25,
+        "scalar_compatible_count": 25,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 25
+        },
+        "unique_projection_count": 25
+      },
+      {
+        "complete": false,
+        "domain": "ab+abc",
+        "menu_count": 2,
+        "observed_dimension": 3,
+        "rum_compatible_count": 30,
+        "scalar_compatible_count": 4,
+        "tier_set_counts": {
+          "no_random_utility_representation": 20,
+          "random_utility_non_luce|no_random_utility_representation": 26,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 4
+        },
+        "unique_projection_count": 50
+      },
+      {
+        "complete": false,
+        "domain": "ac+bc",
+        "menu_count": 2,
+        "observed_dimension": 2,
+        "rum_compatible_count": 25,
+        "scalar_compatible_count": 25,
+        "tier_set_counts": {
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 25
+        },
+        "unique_projection_count": 25
+      },
+      {
+        "complete": false,
+        "domain": "ac+abc",
+        "menu_count": 2,
+        "observed_dimension": 3,
+        "rum_compatible_count": 30,
+        "scalar_compatible_count": 4,
+        "tier_set_counts": {
+          "no_random_utility_representation": 20,
+          "random_utility_non_luce|no_random_utility_representation": 26,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 4
+        },
+        "unique_projection_count": 50
+      },
+      {
+        "complete": false,
+        "domain": "bc+abc",
+        "menu_count": 2,
+        "observed_dimension": 3,
+        "rum_compatible_count": 30,
+        "scalar_compatible_count": 4,
+        "tier_set_counts": {
+          "no_random_utility_representation": 20,
+          "random_utility_non_luce|no_random_utility_representation": 26,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 4
+        },
+        "unique_projection_count": 50
+      },
+      {
+        "complete": false,
+        "domain": "ab+ac+bc",
+        "menu_count": 3,
+        "observed_dimension": 3,
+        "rum_compatible_count": 105,
+        "scalar_compatible_count": 13,
+        "tier_set_counts": {
+          "no_random_utility_representation": 20,
+          "random_utility_non_luce|no_random_utility_representation": 92,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 13
+        },
+        "unique_projection_count": 125
+      },
+      {
+        "complete": false,
+        "domain": "ab+ac+abc",
+        "menu_count": 3,
+        "observed_dimension": 4,
+        "rum_compatible_count": 85,
+        "scalar_compatible_count": 1,
+        "tier_set_counts": {
+          "no_random_utility_representation": 165,
+          "random_utility_non_luce|no_random_utility_representation": 84,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 1
+        },
+        "unique_projection_count": 250
+      },
+      {
+        "complete": false,
+        "domain": "ab+bc+abc",
+        "menu_count": 3,
+        "observed_dimension": 4,
+        "rum_compatible_count": 85,
+        "scalar_compatible_count": 1,
+        "tier_set_counts": {
+          "no_random_utility_representation": 165,
+          "random_utility_non_luce|no_random_utility_representation": 84,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 1
+        },
+        "unique_projection_count": 250
+      },
+      {
+        "complete": false,
+        "domain": "ac+bc+abc",
+        "menu_count": 3,
+        "observed_dimension": 4,
+        "rum_compatible_count": 85,
+        "scalar_compatible_count": 1,
+        "tier_set_counts": {
+          "no_random_utility_representation": 165,
+          "random_utility_non_luce|no_random_utility_representation": 84,
+          "scalar_luce|random_utility_non_luce|no_random_utility_representation": 1
+        },
+        "unique_projection_count": 250
+      },
+      {
+        "complete": true,
+        "domain": "ab+ac+bc+abc",
+        "menu_count": 4,
+        "observed_dimension": 5,
+        "rum_compatible_count": 231,
+        "scalar_compatible_count": 1,
+        "tier_set_counts": {
+          "no_random_utility_representation": 1019,
+          "random_utility_non_luce": 230,
+          "scalar_luce": 1
+        },
+        "unique_projection_count": 1250
+      }
+    ],
+    "middle_witness_failures": 0,
+    "proper_projection_count": 1125,
+    "proper_tier_counts": {
+      "no_random_utility_representation": 575,
+      "random_utility_non_luce|no_random_utility_representation": 422,
+      "scalar_luce|random_utility_non_luce|no_random_utility_representation": 128
+    },
+    "scalar_witness_failures": 0,
+    "solver_failures": 0
+  },
+  "claim_boundary": "Elementary finite completion-ambiguity theorem layered on classical Luce and ARSP tests; no representation-theorem novelty, finite-sample or general-domain identification, endogenous-menu, human/model, moral-value, strategic, dynamic, physical-channel, or full ASMP-9 claim.",
+  "gates": {
+    "D0_domain_lattice_completeness": true,
+    "E0_existential_compatibility": true,
+    "FULL0_complete_domain_control": true,
+    "H0_source_integrity": true,
+    "N0_non_rum_completion": true,
+    "R0_non_luce_rum_completion": true,
+    "RESOURCE": true,
+    "T0_tests": true,
+    "TIER0_compatibility_set_trichotomy": true
+  },
+  "registration_sha256": "2b9df78c26213db60749e8592dbfe18a2d23bfc8e2394ed13b648fc7a49b18a5",
+  "resource": {
+    "elapsed_seconds": 19.636858,
+    "resident_bytes": 26312704,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.55-verification-result-v1",
+  "source_commit": "a7372842a21699c234ddd5cbce8257097d3fa4b8",
+  "source_integrity": [
+    {
+      "actual": "bbb16ac46ec31d44205758bc273fb808312968f455ae38ed24e1d58bbed16ffa",
+      "expected": "bbb16ac46ec31d44205758bc273fb808312968f455ae38ed24e1d58bbed16ffa",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/PRIOR_ART_GATE_v0_55.md"
+    },
+    {
+      "actual": "c7e2aee6dd63d5dff39745880a5c28ef0dc4d01213aa8fe532d2662e9ee8ec7d",
+      "expected": "c7e2aee6dd63d5dff39745880a5c28ef0dc4d01213aa8fe532d2662e9ee8ec7d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/THEOREM_DRAFT_v0_55.md"
+    },
+    {
+      "actual": "b9551d1766dba4ea2914fdcb528e197a29ee304ba1be7b748ee651db16810687",
+      "expected": "b9551d1766dba4ea2914fdcb528e197a29ee304ba1be7b748ee651db16810687",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/VERIFICATION_PROTOCOL_v0_55.md"
+    },
+    {
+      "actual": "3c146892ed862877a34d547f98447198b1c4b10539c25da7cb6e36fb8f9fe987",
+      "expected": "3c146892ed862877a34d547f98447198b1c4b10539c25da7cb6e36fb8f9fe987",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/incomplete_menu.py"
+    },
+    {
+      "actual": "bd98a24297d9b55350cc26aef9bab98f87f6d1f044b4689f7372601069c95435",
+      "expected": "bd98a24297d9b55350cc26aef9bab98f87f6d1f044b4689f7372601069c95435",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/register_verification_v0_55.py"
+    },
+    {
+      "actual": "a3568d3f181f147bfb7b486a39123a1b948c7fbd7e7b8293b813807c67cff08e",
+      "expected": "a3568d3f181f147bfb7b486a39123a1b948c7fbd7e7b8293b813807c67cff08e",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_incomplete_menu.py"
+    },
+    {
+      "actual": "7223273127e97ee0329c9d18078fa8e824fa1dbb9bd7165ef4663c2dd851b055",
+      "expected": "7223273127e97ee0329c9d18078fa8e824fa1dbb9bd7165ef4663c2dd851b055",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_verifier_v0_55.py"
+    },
+    {
+      "actual": "56114766227ae01e76f9ee770809d29061cb4d001857101f99ec8e239a1c6525",
+      "expected": "56114766227ae01e76f9ee770809d29061cb4d001857101f99ec8e239a1c6525",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/verify_theorems_v0_55.py"
+    }
+  ],
+  "status": "incomplete_menu_tier_identification_verified",
+  "tests": {
+    "expected": 9,
+    "ok": true,
+    "output": ".........                                                                [100%]\n9 passed in 3.50s",
+    "returncode": 0
+  },
+  "verified": true
+}

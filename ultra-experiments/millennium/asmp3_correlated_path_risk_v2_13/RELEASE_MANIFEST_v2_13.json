@@ -1,0 +1,101 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-CORRELATED-PATH-RISK-v2.13",
+  "file_count": 23,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/RELEASE_MANIFEST_v2_12.json": {
+      "bytes": 10726,
+      "sha256": "4F284C5B7242CC6E6FEE64B17BB5F4EC04FFCEA36E43375246881BA77822103D"
+    },
+    "../asmp3_consolidated_resolution_disposition_v2_12/RESOLUTION_DISPOSITION_v2_12.md": {
+      "bytes": 5463,
+      "sha256": "052AFC628CCD0FD2C95BAB522566D92C8C87027C6007621BBCBEA8895B1AF21B"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/INDEPENDENT_NOISE_AMPLIFICATION_THEOREM_v1_8.md": {
+      "bytes": 6330,
+      "sha256": "4E473CC86D470FE0F836D7B060D4BD046BC2B366A2C9F015AF13754AE7F16CF0"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/RELEASE_MANIFEST_v1_8.json": {
+      "bytes": 3064,
+      "sha256": "FF45BCAA2873A03E967F20EE934A6AB1F326FF35E8FB92FCD1F2845E00D8D27C"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/artifacts/independent_noise_amplification_v1_8.json": {
+      "bytes": 634098,
+      "sha256": "937308CDB7F321516B0CFCC76AA7167E5B7542E0812E52BD63D493130D90750B"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/artifacts/independent_noise_amplification_verification_v1_8.json": {
+      "bytes": 830,
+      "sha256": "115689625AA5C09CF5277CF62BFADAB49B2C7F8C78C0B49054B847159A6CB393"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/ONLINE_NOISY_TRACE_EXTRACTOR_THEOREM_v2_10.md": {
+      "bytes": 9014,
+      "sha256": "8F1A8BB73EDA568B6701678961B8F46DE85072FDF189B95E20779837B2508CD5"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/RELEASE_MANIFEST_v2_10.json": {
+      "bytes": 5691,
+      "sha256": "AA0CE04D78E96453B975B852D9F8F2BD80030AC72F2347CA41BA669D815066F5"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/artifacts/online_noisy_trace_extractor_v2_10.json": {
+      "bytes": 29273,
+      "sha256": "67E0D89F118260C189CDF0FCE71FA47DCB5FF61F1E4BF0F6669A527E2AE04851"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/artifacts/online_noisy_trace_extractor_verification_v2_10.json": {
+      "bytes": 1053,
+      "sha256": "DE90C56F709821BCB9F36FEC1D31CB039BE264D9AE54D925E1BA1454970B6D53"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_13.md": {
+      "bytes": 2811,
+      "sha256": "A596A8FA30F0248936E79B428326D8ECC07956727951838348A1F9F1FE8A9F5A"
+    },
+    "CORRELATED_PATH_RISK_THEOREM_v2_13.md": {
+      "bytes": 5140,
+      "sha256": "1A1B4D127658E2B219C4E87B28B61769492AD9DB9883CCA8A8A498E69543D623"
+    },
+    "README.md": {
+      "bytes": 808,
+      "sha256": "54590CF182180388704BEC73E15415D9592D3A122E57BF2E2DC9170DDA5FE261"
+    },
+    "artifacts/correlated_path_risk_v2_13.json": {
+      "bytes": 43783,
+      "sha256": "158B18B549F725D150012593C264F7C3DE9B346C6BB06877A75EEEA09FE05887"
+    },
+    "artifacts/correlated_path_risk_verification_v2_13.json": {
+      "bytes": 1053,
+      "sha256": "F89E9C90EE46565157B64753BCCC9F13D9DCAD9EA7A850F95E161D635D4E0BD9"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3126,
+      "sha256": "AC787C62AE3FE3B49C36733892F87B590AE035A17079CBF9EA7D9AD7D334DFE5"
+    },
+    "correlated_path_risk.py": {
+      "bytes": 13615,
+      "sha256": "DFCAD29AF890E609ABC17D8280BBDCE2F12C9D1ACD8616E1A5256711E9915C6E"
+    },
+    "run_correlated_path_risk.py": {
+      "bytes": 472,
+      "sha256": "A382CD49F4D019DA76574ED42B6867DE53101F35D0FCED3363393ED862140FC1"
+    },
+    "test_correlated_path_risk.py": {
+      "bytes": 3216,
+      "sha256": "603B704C82C4A2D35277F2FC303D4723148250A7862355A56EEF5776451D3764"
+    },
+    "verify_correlated_path_risk.py": {
+      "bytes": 11606,
+      "sha256": "F72DA70425DB03D34015AD85D1EFE8F7A4A3EFD6091E01E92045F8998F622ACC"
+    }
+  },
+  "release_status": "controlled_selected_path_risk_resolves_correlated_noise_block",
+  "schema_version": "asmp3_correlated_path_risk_release_v2_13"
+}

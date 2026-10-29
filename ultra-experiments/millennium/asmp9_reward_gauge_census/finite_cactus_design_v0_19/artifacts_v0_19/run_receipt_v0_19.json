@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 261.4129486999882,
+  "gate_count": 9,
+  "passed_gate_count": 8,
+  "peak_resident_bytes": 23552000,
+  "protocol_sha256": "bed0a4670ab8171a3a6d93e359582066010e9508ccee29f87aebf23f01990d00",
+  "registration_sha256": "172340cee97c0cea02623cc323d7542ca937b753f30471953c46d57ddeff6ce8",
+  "report_sha256": "6d65d6ea977bb4c0db1237f4dd0e6cc8bb616cd2445c41ff3fd0525b8b479b46",
+  "result_sha256": "362e67da4f1e1ba7f838b1010f1ba6f28f6bbef670d2a18b93cb34a0a3136195",
+  "verdict": "finite_budget_cactus_dp_not_established"
+}

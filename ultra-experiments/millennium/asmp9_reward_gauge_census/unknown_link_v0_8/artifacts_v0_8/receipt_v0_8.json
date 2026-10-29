@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 164.53009639997617,
+  "implementation_commit": "bdece7b9e03778f00a18739009b5ce764706238a",
+  "output_hashes": {
+    "RESULT_v0_8.md": "155f5bdbeeb365704e94bc78c7bfbe6187078205ac956e45f87ef53aa8292565",
+    "result_v0_8.json": "1106ff53355b1f8401f02b502b1dfe4c47401660282b5321d9896340d48d0b71"
+  },
+  "protocol_id": "ASMP-9-UNKNOWN-LINK-v0.8",
+  "registration_commit": "863f5df964d078b801bfd0bec82c01bb87f8b466",
+  "registration_sha256": "448f247abb2dd80f91ca774c2762f3dfcea640643c386c82778eb108d66c6400"
+}

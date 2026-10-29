@@ -1,0 +1,87 @@
+{
+  "schema_version": "ai_safety_millennium_scope_expansion_v0_2_draft",
+  "set_id": "ASMP-CANDIDATE-SET-v0.2-EXPANSION-DRAFT",
+  "date": "2026-07-20",
+  "status": "prior_art_gated_scoping_draft",
+  "supersedes": null,
+  "preserves_frozen_parent": "ASMP-CANDIDATE-SET-v0.1",
+  "normative": false,
+  "proposed_top_level_count_after_adoption": 12,
+  "proposals": [
+    {
+      "source_label": "A",
+      "proposed_id": "ASMP-8",
+      "title": "The Goodhart Frontier",
+      "disposition": "partial_extension",
+      "matrix_layer": "specification",
+      "canonical_target": "Classify divergence and optimizer-independent reachable-set pressure pairs for which proxy error implies a uniform true-regret bound, with sharp lower bounds outside the positive class.",
+      "prior_art_correction": "Empirical overoptimization laws and broad unhackability impossibilities already exist; the new target is their restricted sharp frontier.",
+      "seed_resource_class": "cpu_light"
+    },
+    {
+      "source_label": "B",
+      "proposed_id": "ASMP-9",
+      "title": "Value Identifiability under Access Constraints and Reward Gauge",
+      "disposition": "partial_extension",
+      "matrix_layer": "specification",
+      "canonical_target": "Characterize minimal preference-query and environment-intervention access for stable reward or preference identification modulo the maximal invariance group of a frozen demonstrator model.",
+      "prior_art_correction": "Generic partial identifiability and several necessary-and-sufficient IRL results are already known; only the sharp access-complexity frontier remains a plausible new candidate.",
+      "seed_resource_class": "cpu_moderate"
+    },
+    {
+      "source_label": "C",
+      "proposed_id": "ASMP-10",
+      "title": "Predictability of Capability Transitions",
+      "disposition": "distinct",
+      "matrix_layer": "learning_dynamics",
+      "canonical_target": "Determine when prospectively frozen training observables uniformly predict a metric-robust future capability functional, or prove prefix-indistinguishability obstructions.",
+      "prior_art_correction": "Developmental observables and metric-mirage results are anchors, not a general cross-scale prediction theorem.",
+      "seed_resource_class": "gpu_optional_moderate"
+    },
+    {
+      "source_label": "D",
+      "proposed_id": "ASMP-5A",
+      "title": "Quantitative Bounded-Tiling Degradation",
+      "disposition": "subproblem",
+      "parent_id": "ASMP-5",
+      "matrix_layer": "reflection",
+      "canonical_target": "Bound or prove unbounded the rate of proof-strength degradation over finite resource-bounded successor chains under a nonzero progress requirement.",
+      "prior_art_correction": "This quantifies an existing ASMP-5 obligation and does not yet justify a separate top-level problem.",
+      "seed_resource_class": "cpu_moderate_heavy"
+    },
+    {
+      "source_label": "E",
+      "proposed_id": "ASMP-11",
+      "title": "Interpretability-Access Detectability of Conditional Defection",
+      "disposition": "partial_extension",
+      "matrix_layer": "adversarial_internals",
+      "canonical_target": "Characterize the minimax detection frontier for planted conditional defection across a non-gerrymandered lattice of bounded white-box, interpretability, and causal-intervention access classes.",
+      "prior_art_correction": "White-box undetectability already exists; raw access to weights is not the open frontier.",
+      "seed_resource_class": "cpu_toy_gpu_real_model"
+    },
+    {
+      "source_label": "F",
+      "proposed_id": "ASMP-12",
+      "title": "Resource-Bounded Program-Equilibrium Frontier",
+      "disposition": "partial_extension",
+      "matrix_layer": "multi_agent_constructive",
+      "canonical_target": "Characterize resource-indexed program-equilibrium payoff regions and separately characterize the commitment or negotiation dynamics selecting among them.",
+      "prior_art_correction": "The unrestricted feasible-individually-rational payoff set is already characterized; the plausible frontier is finite resources and selection.",
+      "seed_resource_class": "cpu_moderate"
+    }
+  ],
+  "admission_gate": {
+    "prior_art_query_frozen": true,
+    "primary_sources_required": true,
+    "allowed_dispositions": ["distinct", "partial_extension", "subproblem", "subsumed", "ill_posed"],
+    "non_overlap_argument_required": true,
+    "hostile_referee_review_required": true,
+    "permanent_id_assigned_only_after_gate": true
+  },
+  "claim_boundary": {
+    "actual_prize_announced": false,
+    "formal_openness_established": false,
+    "empirical_seed_can_resolve_problem": false,
+    "candidate_count_includes_subproblem": false
+  }
+}

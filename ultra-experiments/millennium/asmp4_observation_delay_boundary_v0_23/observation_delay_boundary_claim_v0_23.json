@@ -1,0 +1,34 @@
+{
+  "schema_version": "asmp4_observation_delay_boundary_claim_v0_23",
+  "status": "sharp current-information delay and preview boundary",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_22_causal_encoder_claim_sha256": "2a963630840314cafd044ce45e75a53dfbab89f2ebc547b321ffe11a8144f103"
+  },
+  "main_theorem": {
+    "delay_zero_region": "[2,infinity) x [2,infinity)",
+    "every_positive_integer_delay_region": "empty",
+    "safe_interval_gap": 6,
+    "capacity_or_memory_cannot_repair": true
+  },
+  "restoration": {
+    "charged_current_preview_region": "[2,infinity) x [2,infinity)",
+    "seeded_constant_q_region": "[1,infinity) x [1,infinity)"
+  },
+  "adversary_tree": {
+    "max_horizon": 6,
+    "max_delay": 4,
+    "rows": 84
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 23,
+    "tests": 264
+  },
+  "decision": "current_mode_information_not_bandwidth_is_load_bearing_under_arbitrary_disturbance",
+  "nonclaim": "The impossibility uses arbitrary current q, safety from the first write, and no charged preview. It does not apply when q is predictable from available history, current preview is charged, safety starts after a calibration phase, or the plant has overlapping robust-control sets."
+}

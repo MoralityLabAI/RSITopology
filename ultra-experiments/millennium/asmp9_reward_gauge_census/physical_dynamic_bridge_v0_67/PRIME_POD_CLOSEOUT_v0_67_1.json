@@ -1,0 +1,55 @@
+{
+  "schema_version": "asmp9_physical_dynamic_bridge_prime_closeout_v0_67_1",
+  "closed_utc": "2026-07-29T21:20:28Z",
+  "account": {
+    "username": "moralitylab",
+    "user_id": "cmbqxo1kc0020eppjy9mnws3d"
+  },
+  "source_commit": "29a9b707045a7510fea76b30b508ef9e0ffdc292",
+  "protected_run": {
+    "id": "e2s64hw5ywag1d8hgwfef6jd",
+    "status_after_closeout": "COMPLETED",
+    "mutated": false
+  },
+  "interrupted_pod": {
+    "id": "1a09321918fd43b9974837f0c41a295a",
+    "provider": "datacrunch",
+    "gpu": "A100_80GB x1",
+    "market": "spot",
+    "created_utc": "2026-07-29T19:23:13Z",
+    "terminated_utc": "2026-07-29T20:59:24Z",
+    "termination_class": "provider_termination_on_spot_instance",
+    "last_observed_completed_work_units": 224,
+    "score_records_opened_or_interpreted": false,
+    "artifacts_recovered": false
+  },
+  "completed_pod": {
+    "id": "ec7a1d8595a24c6d9d973f7fea958bc4",
+    "provider": "massedcompute",
+    "gpu": "A6000_48GB x1",
+    "market": "on_demand",
+    "created_utc": "2026-07-29T21:02:13Z",
+    "terminated_utc": "2026-07-29T21:20:02Z",
+    "records_completed": 240,
+    "analysis_completed": true,
+    "cleanup_passed": true,
+    "peak_gpu_delta_mb": 3385,
+    "peak_gpu_temperature_c": 31
+  },
+  "artifact_verification": {
+    "full_local_bundle": "D:\\Research_Engine\\runs\\asmp9_physical_dynamic_bridge_v0_67\\prime_construction_v0_67_1_20260729",
+    "manifest_entries": 508,
+    "matched": 508,
+    "failed": 0,
+    "analysis_replay_byte_identical": true,
+    "remote_tests": "10 passed",
+    "local_tests": "10 passed"
+  },
+  "scientific_closeout": {
+    "construction_status": "completed",
+    "instrument_status": "failed",
+    "confirmation_authorized": false,
+    "claim_status": "not_established_by_construction_preconditions"
+  },
+  "active_pods_after_closeout": 0
+}

@@ -1,0 +1,108 @@
+{
+  "all_recorded_gates_pass": true,
+  "artifact_sha256": {
+    "comparator_rows_v0_47.json": "83f5fbbdcf80c16a6d0955c3cbce960198ad817c4d5222e2d110695d5430e459",
+    "exact_risk_rows_v0_47.json": "2128e2ad1fa4cf2bd827bfc928254ae230b08ada79726bd91fce9fdc884513fd",
+    "result_v0_47.json": "daa1863bac0efebc0421dd1b03214a63c6bbe5e13f851dbc76db1e9e1f68c1d5"
+  },
+  "comparator_rows_match": true,
+  "ok": true,
+  "recorded_status": "sharp_atom_modulus_established_allocation_ranking_changed",
+  "registration_hash_match": true,
+  "risk_rows_match": true,
+  "schema": "asmp9-v0.47-independent-verification-v1",
+  "scientific_payload_match": true,
+  "source_checks": [
+    {
+      "actual": "0c905affc807dd1add73ff82532f9e4a1ebe92a2bd0802f4fa8298af9f2c7ecc",
+      "expected": "0c905affc807dd1add73ff82532f9e4a1ebe92a2bd0802f4fa8298af9f2c7ecc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/coupled_uncertainty_v0_46/coupled_uncertainty.py"
+    },
+    {
+      "actual": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "expected": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+    },
+    {
+      "actual": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "expected": "64526e5421f30ed25018b0a2b9d5992b7cdd24d5735bd79b27e28cfe8e8e5417",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/allocation_design.py"
+    },
+    {
+      "actual": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "expected": "e965ba4e7cf19c51e72f86d0c80a7cc1ac4ce0a41c1c3844a4667ce598b21fcc",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sample_allocation_v0_45/audit_formula_universe.py"
+    },
+    {
+      "actual": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "expected": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+    },
+    {
+      "actual": "f8d54fbe21da7a6c1a0c94b95b4887d3a3b5c0b12d3043b9449c0e04730593a5",
+      "expected": "f8d54fbe21da7a6c1a0c94b95b4887d3a3b5c0b12d3043b9449c0e04730593a5",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/PRIOR_ART_GATE_v0_47.md"
+    },
+    {
+      "actual": "b497e697af886d11442fa994e178d08f24e4d9371cb07ed0006c2d3a621b8b28",
+      "expected": "b497e697af886d11442fa994e178d08f24e4d9371cb07ed0006c2d3a621b8b28",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/PROTOCOL_v0_47.md"
+    },
+    {
+      "actual": "533637f0e47d79b88d66271ce79a3852b8ae2595a69ed42e0ed3a009e70b97b7",
+      "expected": "533637f0e47d79b88d66271ce79a3852b8ae2595a69ed42e0ed3a009e70b97b7",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/README.md"
+    },
+    {
+      "actual": "2a756c678a1ae8016ac7b7e0f89caa5b1a02840153bd38d215da3f69a563c164",
+      "expected": "2a756c678a1ae8016ac7b7e0f89caa5b1a02840153bd38d215da3f69a563c164",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/THEOREM_DRAFT_v0_47.md"
+    },
+    {
+      "actual": "71058072b4fd74ad1997ae4b9c56d3eb0201571c37e9c8d33498d4b577d38537",
+      "expected": "71058072b4fd74ad1997ae4b9c56d3eb0201571c37e9c8d33498d4b577d38537",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/build_release_v0_47.py"
+    },
+    {
+      "actual": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00",
+      "expected": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/environment_lock_v0_47.json"
+    },
+    {
+      "actual": "e6cf5ca6bc9ce0a3c0d767c489216fdd66a5246515e868ea908c5eef8bf9f6b0",
+      "expected": "e6cf5ca6bc9ce0a3c0d767c489216fdd66a5246515e868ea908c5eef8bf9f6b0",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/run_confirmation_v0_47.py"
+    },
+    {
+      "actual": "131045efb885523b3b746f0e8598cb00e42c995f2db6a80a327f0ccbbc03bfbd",
+      "expected": "131045efb885523b3b746f0e8598cb00e42c995f2db6a80a327f0ccbbc03bfbd",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/sharp_atom_modulus.py"
+    },
+    {
+      "actual": "5b70b19f4440161012fd79493c6bd2e52660b3a3a31b3b21e2e2dc195991547a",
+      "expected": "5b70b19f4440161012fd79493c6bd2e52660b3a3a31b3b21e2e2dc195991547a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/test_sharp_atom_modulus.py"
+    },
+    {
+      "actual": "a907b785257f27d34ba0d53169ade5b2a902f6e872771d450daf3e6c6ebeb957",
+      "expected": "a907b785257f27d34ba0d53169ade5b2a902f6e872771d450daf3e6c6ebeb957",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/verify_result_v0_47.py"
+    }
+  ],
+  "source_hashes_match": true
+}

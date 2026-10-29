@@ -1,0 +1,73 @@
+{
+  "schema_version": "asmp9_context_quotient_confirmation_release_v0_68_2_1",
+  "status": "scientific_gates_rederived_but_execution_cleanup_invalid",
+  "result": "CONFIRMATION_RESULT_v0_68_2_1.md",
+  "independent_audit_source": {
+    "path": "audit_local_confirmation_v0682.py",
+    "sha256": "e43e82b86884670108a534ffe3d21469024e8c84c7ff910916e9a0271f6ae71f"
+  },
+  "external_run_root": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_1_local_20260731",
+  "artifacts": [
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/analysis_receipt_v0_68_2_1.json",
+      "bytes": 1216,
+      "sha256": "89c4ab84872908c190afb06230cf52482b70c77d23701ab86b06992433b8508a"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/analysis_v0_68_2_1.json",
+      "bytes": 28597,
+      "sha256": "720b1b5069c0f100a6ac969a87e377edccd4cfd91b2715cb4aeaf021ce1e0f77"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/authorization_v0_68_2_1.json",
+      "bytes": 2736,
+      "sha256": "91bbdd4d393e94ff491c0dc87f731a01d9ac2c51a70131c8a963980b87fadc2f"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/cleanup_summary_v0_68_2_1.json",
+      "bytes": 1604,
+      "sha256": "cb5bebc0c2134ae8f616eb4e14f55bc8b0a57a78926351d97c80676ee8c9086d"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/completion_summary_v0_68_2_1.json",
+      "bytes": 328,
+      "sha256": "3edc6e2ccaf261b082be3d9a9c2c3e13bb1b4befb5dafe4942815e08047c6016"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/decision_v0_68_2_1.json",
+      "bytes": 4637,
+      "sha256": "96b707dfb82e2681b57b480fe7cf30a9b457eb1bdc18f209f83c36505c3fc78d"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/independent_audit_v0_68_2_1.json",
+      "bytes": 2059,
+      "sha256": "9788f0b8f6edeebb8d17868902f20c8808176c764821c1ce32d1f441b3a46b94"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/preparation_receipt_v0_68_2_1.json",
+      "bytes": 996,
+      "sha256": "319fcce06da949e1d3aa20480ed308951050e94baf77011411d468e964740381"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/records_v0_68_2_1.jsonl",
+      "bytes": 385862,
+      "sha256": "ea43e8ed6b442830c977ddc798ca423c74c4bdc4b8176f640d5a8e698c2ebdcb"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/registration_v0_68_2_1.json",
+      "bytes": 8850,
+      "sha256": "b4dd543caf890e4980f94f2a98340320db29fe03c74e4cbe28039ec57dabf90b"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/telemetry_v0_68_2_1.csv",
+      "bytes": 16182,
+      "sha256": "586672a4bc28bbca8571585ac1e6d5cf8631aa1012c9fa642e7305a75332682e"
+    },
+    {
+      "path": "artifacts_v0_68_2_1_confirmation/wrapper_summary_v0_68_2_1.json",
+      "bytes": 3767,
+      "sha256": "ba7830fa14451b650014b6c11cc8a415e910055e03ad7650f71a7638f412a0a0"
+    }
+  ],
+  "claim_boundary": "Finite-registry result package with preserved cleanup-invalid execution status; no value-identification or ASMP-9 resolution claim."
+}

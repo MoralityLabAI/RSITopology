@@ -1,0 +1,48 @@
+{
+  "artifact_sha256": {
+    "VERIFY_RESULT_v0_47.json": "06623bea888f0c3523c668cfe690215a2db3647bc92f6c995b1727b8c41b0145",
+    "artifacts_v0_47/comparator_rows_v0_47.json": "83f5fbbdcf80c16a6d0955c3cbce960198ad817c4d5222e2d110695d5430e459",
+    "artifacts_v0_47/exact_risk_rows_v0_47.json": "2128e2ad1fa4cf2bd827bfc928254ae230b08ada79726bd91fce9fdc884513fd",
+    "artifacts_v0_47/result_v0_47.json": "daa1863bac0efebc0421dd1b03214a63c6bbe5e13f851dbc76db1e9e1f68c1d5"
+  },
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/run_confirmation_v0_47.py",
+    "test": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/test_sharp_atom_modulus.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/sharp_atom_modulus_v0_47/verify_result_v0_47.py"
+  },
+  "gates": {
+    "A0": true,
+    "B0": true,
+    "C0": true,
+    "E0": true,
+    "K0": true,
+    "L0": true,
+    "N0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "T0": true,
+    "U0": true
+  },
+  "implementation_commit": "3e69399c7a598dc7805436469aa1d72280c47288",
+  "protocol_id": "asmp9-sharp-atom-modulus-v0.47",
+  "registration_commit": "2ab0bc4d56ae93d641dff8be437c881c97641927",
+  "registration_sha256": "79b27566df548e734a7f18e4ae3521c6b882716d6337fd8a8cb208072d0da36f",
+  "resource": {
+    "elapsed_seconds": 96.2406353999977,
+    "peak_aggregate_working_set_bytes": 418701312,
+    "worker_processes": 4
+  },
+  "status": "sharp_atom_modulus_established_allocation_ranking_changed",
+  "verification": {
+    "all_recorded_gates_pass": true,
+    "comparator_rows_match": true,
+    "ok": true,
+    "registration_hash_match": true,
+    "risk_rows_match": true,
+    "scientific_payload_match": true,
+    "source_hashes_match": true
+  },
+  "version": "0.47"
+}

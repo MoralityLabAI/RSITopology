@@ -1,0 +1,73 @@
+{
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-COHERENCE-v0.9",
+  "alpha": 0.05,
+  "probability_floor": 0.1,
+  "coherent_tolerance": 0.5,
+  "incoherent_margin": 0.6,
+  "planted_circulation": 1.2,
+  "replicates": 4096,
+  "multipliers": [
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "graphs": [
+    {
+      "name": "cycle_3",
+      "seed": 990901,
+      "expected_beta_1": 1,
+      "expected_maximum_cycle_length": 3
+    },
+    {
+      "name": "cycle_4",
+      "seed": 990902,
+      "expected_beta_1": 1,
+      "expected_maximum_cycle_length": 4
+    },
+    {
+      "name": "cycle_6",
+      "seed": 990903,
+      "expected_beta_1": 1,
+      "expected_maximum_cycle_length": 6
+    },
+    {
+      "name": "cycle_8",
+      "seed": 990904,
+      "expected_beta_1": 1,
+      "expected_maximum_cycle_length": 8
+    },
+    {
+      "name": "theta_4",
+      "seed": 990905,
+      "expected_beta_1": 2,
+      "expected_maximum_cycle_length": 4
+    },
+    {
+      "name": "complete_5",
+      "seed": 990906,
+      "expected_beta_1": 6,
+      "expected_maximum_cycle_length": 3
+    }
+  ],
+  "controls": {
+    "forest_seed": 990920,
+    "floor_seed": 990921,
+    "replicates": 8192,
+    "samples_per_edge": 100000
+  },
+  "monte_carlo_gates": {
+    "tail_probability": 0.01,
+    "low_multiplier": 0.125,
+    "minimum_low_inconclusive_lcb": 0.9,
+    "high_multiplier_floor": 1.0,
+    "minimum_high_expected_lcb": 0.99
+  },
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_ram_gib": 2,
+    "maximum_wall_seconds": 180
+  },
+  "success_verdict": "finite_sample_cycle_coherence_certificate_verified"
+}

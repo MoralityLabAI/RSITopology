@@ -1,0 +1,8 @@
+optimizer,phase,count
+gibbs,mixed,2316
+gibbs,negative_tail,6226
+gibbs,nonnegative,5893
+gibbs,peak_then_degrade,1185
+top_spike_mixture,mixed,785
+top_spike_mixture,negative_tail,6715
+top_spike_mixture,nonnegative,8120

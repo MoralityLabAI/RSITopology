@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_noisy_tree_probability_stateful_contract_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status": true,
+    "V1_all_1144000_noisy_executions_reconstructed": true,
+    "V2_probability_tables_and_sharp_cases_reconstructed": true,
+    "V3_contract_mutants_and_controls_reconstructed": true,
+    "V4_one_shot_erased_state_rows_reconstructed": true,
+    "V5_formal_empty_witness_lane_reconstructed": true,
+    "V6_all_12_online_compositions_reconstructed": true,
+    "V7_no_restart_or_ideal_replay_resource_is_hidden": true,
+    "V8_all_10_producer_gates_true": true,
+    "V9_claim_boundary_preserves_noisy_trace_scope": true
+  },
+  "claim_boundary": "This checker certifies one-shot extraction from actual trace-completely bound noisy rejections with ideal candidate revalidation. It does not infer public noisy traces, H access, or conditional path-error control from protocol admission alone.",
+  "passed": true,
+  "schema_version": "asmp3_online_noisy_trace_extractor_verification_v2_10"
+}

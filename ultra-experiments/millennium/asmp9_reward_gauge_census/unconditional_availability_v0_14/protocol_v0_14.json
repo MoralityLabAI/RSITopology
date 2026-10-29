@@ -1,0 +1,34 @@
+{
+  "protocol_id": "ASMP-9-UNCONDITIONAL-AVAILABILITY-v0.14",
+  "success_verdict": "conditional_exactness_and_unconditional_nuisance_frontier_verified_v0_14",
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_fiber_partition_and_mass",
+    "G2_availability_formula",
+    "G3_exact_conditional_size",
+    "G4_excess_factorization",
+    "G5_no_go_upper_bound",
+    "G6_interior_sufficiency",
+    "G7_null_control",
+    "G8_extreme_nuisance_collapse",
+    "G9_resource_and_scope"
+  ],
+  "fresh_registry": {
+    "alpha": "1/20",
+    "cycle_lengths": [6, 7],
+    "trials_per_edge": [1, 2, 3],
+    "odds_ratios": ["1/1", "5/4", "7/4", "5/2"],
+    "nuisance_ratios": ["1/1", "3/1", "12/1", "64/1", "1024/1"]
+  },
+  "balanced_nuisance_ratio": "1/1",
+  "extreme_nuisance_ratio": "1024/1",
+  "interior_nuisance_ratio": "1/1",
+  "interior_probability_floor": "1/4",
+  "maximum_extreme_to_balanced_excess_ratio": "1/1000",
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_wall_seconds": 120,
+    "maximum_ram_gib": 1
+  },
+  "claim_boundary": "Exact finite conditional/unconditional Bradley-Terry access theorem on oriented cycles; not behavioral model validation, positive scalarity certification, unknown-link or dependent-response inference, general IRL, or ASMP-9 resolution."
+}

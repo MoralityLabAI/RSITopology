@@ -1,0 +1,38 @@
+{
+  "schema_version": "asmp4_finite_state_sensor_claim_v0_18",
+  "status": "finite-state support-zero-error sensor theorem with exact language entropy",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_17_kernel_claim_sha256": "a8e87b315537dec89c67629111de7dbff77464a0817940af096fc5930559a530"
+  },
+  "general_theorem": {
+    "feasibility": "reachable subset-observer q-homogeneity",
+    "finite_read_words": "L_T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "asymptotic_region": "[1+log2(rho(A)),infinity) x [2,infinity)"
+  },
+  "fixtures": {
+    "feasible": 4,
+    "infeasible": 1,
+    "golden_read_threshold": "2+log2(phi)",
+    "history_overlap_fixture_feasible": true
+  },
+  "two_state_binary_census": {
+    "transducers": 256,
+    "feasible": 80,
+    "infeasible": 176,
+    "history_essential": 48,
+    "globally_disjoint": 32
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 18,
+    "tests": 214
+  },
+  "decision": "finite_sensor_memory_replaces_current_support_with_subset_observer_entropy",
+  "nonclaim": "The theorem assumes a finite registered transducer, fixed initial sensor state, raw-output charging, and support-zero-error safety. It does not cover unknown initial sensor state, continuous state, average or block error, expected length, or controller-side compression of raw outputs."
+}

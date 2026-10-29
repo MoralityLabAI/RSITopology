@@ -1,0 +1,35 @@
+{
+  "schema_version": "asmp5a_bounded_tiling_protocol_v0_1",
+  "protocol_id": "asmp5a-explicit-conjunction-tiling-v0.1",
+  "maximum_obligations": 12,
+  "proof_grammar": {
+    "leaf": "one unique registered safety obligation",
+    "internal": "sound binary conjunction of disjoint child obligation sets",
+    "root_requirement": "covers every obligation introduced by the successor chain",
+    "trusted_kernel": "fixed leaf and conjunction checker"
+  },
+  "resource_metrics": {
+    "work": "total proof-tree nodes",
+    "depth": "longest root-to-leaf conjunction path",
+    "memory": "Horton-Strahler register number"
+  },
+  "resource_budgets": [
+    {"id": "shallow_parallel", "work": 23, "depth": 4, "memory": 4},
+    {"id": "memory_tight_serial", "work": 23, "depth": 11, "memory": 2},
+    {"id": "balanced_middle", "work": 15, "depth": 3, "memory": 3}
+  ],
+  "controls": {
+    "catalan_tree_count": true,
+    "dynamic_program_enumeration_equality": true,
+    "obligation_label_permutation": "reverse_labels",
+    "reject_unexpanded_summary_leaf": true,
+    "reject_duplicate_leaf_coverage": true
+  },
+  "evidence_label_on_pass": "finite_multi_resource_tiling_tradeoff_established",
+  "resource_ceiling": {
+    "wall_seconds": 60,
+    "process_peak_rss_bytes": 268435456,
+    "gpu_hours": 0
+  },
+  "claim_boundary": "Exact binary-conjunction proof-tree enumeration through twelve obligations; theorem-generator only, not a bounded-Lob or open-ended tiling result."
+}

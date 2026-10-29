@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "artifact_hashes_match": true,
+    "core_gates_replay": true,
+    "frontier_replays_byte_exact": true,
+    "protocol_hash_matches": true,
+    "registered_sources_match": true,
+    "registration_hash_matches": true,
+    "report_claim_boundary_present": true,
+    "runner_gate_count_and_pass": true,
+    "scientific_core_replays": true,
+    "verdict_exact": true,
+    "witnesses_replay_exact": true
+  },
+  "claim_boundary": "Classical dual-norm robust counterpart validated on a finite rational Goodhart registry; no novelty claim for convex duality, no learned reward model, no RL trajectory, and no ASMP-8 resolution.",
+  "decision": "pass",
+  "instrument_status": "valid",
+  "schema_version": "asmp8_dual_frontier_verification_v0_2"
+}

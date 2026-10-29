@@ -1,0 +1,19 @@
+{
+  "external_source": "D:\\Research_Engine\\runs\\asmp9_physical_target_interface_v0_80_20260729",
+  "files": {
+    "../RESOLUTION_OBLIGATION_MATRIX_v0_80.md": "cc4619f9d0c41a5caf7c30a6c85cb639b1aa55303fd26b6de220a42385896b5d",
+    "AUDIT_v0_80.md": "1f371dcc6e1af64495a1a28c98aeef21ebe0cc432a3b904a6e15205fd9a09160",
+    "RESULT_v0_80.md": "9b831fd7d8f2f8986a49612a7750858c88f6b54423755a073e8e98d0034260bd",
+    "artifacts_v0_80/adjudication.json": "c4efea6552494c1443c915e69a426a46d644bd3be11746ee9c836f7e01b4e062",
+    "artifacts_v0_80/execution_receipt.json": "f1e459ff652ba8657bfd86a2d8fcf2484458ce91314c446c17afdd664056cb33",
+    "artifacts_v0_80/primary_response_rows.jsonl": "acbf097e1be99c68928c0e5e2a739e96391b61907925482b5b1384760ea4e9e1",
+    "artifacts_v0_80/primary_result.json": "7534c77342b787ca7ef19d27123bcdc2fb48717f213d6bc39e2155a6cf62f361",
+    "artifacts_v0_80/primary_run_receipt.json": "8e186f6c954959938419e5a279d38d6b5fe9d8c072acd4ac31b243314672a0df",
+    "artifacts_v0_80/replay_response_rows.jsonl": "acbf097e1be99c68928c0e5e2a739e96391b61907925482b5b1384760ea4e9e1",
+    "artifacts_v0_80/replay_result.json": "7534c77342b787ca7ef19d27123bcdc2fb48717f213d6bc39e2155a6cf62f361",
+    "artifacts_v0_80/replay_run_receipt.json": "8e186f6c954959938419e5a279d38d6b5fe9d8c072acd4ac31b243314672a0df",
+    "registration_v0_80.json": "9afc80afa01d1fe3d6365a8fe4f65155abd8f12eead0f7a3deddf3e879a78df9"
+  },
+  "prereveal_commit": "231e7d3f618c97c4c705e5f72bd0706007c349a5",
+  "status": "audited_registered_negative_result"
+}

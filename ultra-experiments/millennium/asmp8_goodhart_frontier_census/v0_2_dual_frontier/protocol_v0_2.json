@@ -1,0 +1,69 @@
+{
+  "schema_version": "asmp8_dual_frontier_protocol_v0_2",
+  "protocol_id": "asmp8.goodhart.dual_norm_frontier.v0.2",
+  "status": "frozen_candidate_before_registration_and_run",
+  "parent_result": "../artifacts/RESULT_v0_1.md",
+  "finite_registry": {
+    "outcome_count": 5,
+    "reference_policy": ["1/5", "1/5", "1/5", "1/5", "1/5"],
+    "policy_denominator": 15,
+    "policy_universe": "all weak compositions of 15 across 5 labelled outcomes",
+    "expected_policy_count": 3876,
+    "proxy_reward": [-2, -1, 0, 1, 2],
+    "analyze_only_strictly_positive_proxy_gain": true
+  },
+  "error_models": [
+    {
+      "q": "infinity",
+      "dual_coordinate": "weighted_l1_likelihood_ratio_movement_equal_to_2TV"
+    },
+    {
+      "q": "2",
+      "dual_coordinate": "sqrt_chi_squared_pi_relative_to_p0"
+    },
+    {
+      "q": "1",
+      "dual_coordinate": "maximum_absolute_likelihood_ratio_deviation"
+    }
+  ],
+  "registered_error_radius": "1/4",
+  "controls": {
+    "near_tie": {
+      "epsilon": "1/4",
+      "true_rewards": ["0", "1/2"],
+      "proxy_rewards": ["1/4", "1/4"],
+      "tie_break": "lowest_index",
+      "expected_regret": "1/2"
+    },
+    "rare_tail_l2": {
+      "rare_probability": "1/1000000",
+      "reference_policy": ["999999/1000000", "1/1000000"],
+      "optimized_policy": ["0", "1"],
+      "proxy_rewards": ["0", "1"],
+      "true_rewards": ["0", "-1"],
+      "maximum_weighted_l2_error_squared": "1/100000",
+      "minimum_true_harm": "99/100"
+    }
+  },
+  "gates": {
+    "G0_registration_binding": "Protocol, claim packet, prior art, implementation, tests, verifier, and README are committed and match registration hashes before execution.",
+    "G1_complete_registry": "Exactly 3876 labelled rational policies are enumerated and every strictly proxy-improving policy is analyzed under all three registered error norms.",
+    "G2_dual_formula": "Every robust margin equals proxy gain minus epsilon times registered dual movement; q=1 and infinity are exact rational identities and q=2 is certified by exact squared algebra.",
+    "G3_sharpness": "Every analyzed policy/error-norm cell has a registered attaining error witness, exact for q=1 and infinity and algebraically exact for q=2.",
+    "G4_coordinate_minimality": "For each error norm there is an equal-proxy-gain pair with unequal movement and an equal-movement pair with unequal proxy gain.",
+    "G5_near_tie_sharpness": "The adverse tie control attains deterministic proxy-optimization regret exactly equal to 2 epsilon.",
+    "G6_rare_tail_liveness": "The registered rare-tail construction meets its L2 error ceiling while true-reward gain is at most -0.99.",
+    "G7_resource_and_receipts": "Run stays under resource ceilings and emits write-once result, frontier, witnesses, report, and receipt artifacts."
+  },
+  "decision_rule": {
+    "validated": "G0 through G7 all pass",
+    "not_established": "G0, G1, G5, G6, and G7 pass but any of G2 through G4 fails",
+    "invalid": "Any of G0, G1, G5, G6, or G7 fails"
+  },
+  "resource_ceiling": {
+    "wall_seconds": 120,
+    "process_peak_rss_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "claim_boundary": "Classical dual-norm robust counterpart validated on a finite rational Goodhart registry; no novelty claim for convex duality, no learned reward model, no RL trajectory, and no ASMP-8 resolution."
+}

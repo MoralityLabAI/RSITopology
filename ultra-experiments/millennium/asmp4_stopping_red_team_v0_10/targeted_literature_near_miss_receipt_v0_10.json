@@ -1,0 +1,83 @@
+{
+  "schema_version": "asmp4_targeted_literature_near_miss_receipt_v0_10",
+  "audit_scope": "three strongest primary-source near-misses returned by targeted searches for multi-channel, network, event-triggered, and bidirectional control-rate theorems",
+  "search_query_clusters": [
+    "invariance entropy multiple channels control",
+    "invariance feedback entropy decentralized networked multi-channel",
+    "data-rate theorem sensor controller actuator two channels",
+    "bidirectional communication invariance entropy control systems"
+  ],
+  "sources": [
+    {
+      "id": "kawan_delvenne_network_entropy_2016",
+      "title": "Network Entropy and Data Rates Required for Networked Control",
+      "primary_url": "https://arxiv.org/pdf/1409.6037",
+      "published_doi": "https://doi.org/10.1109/TCNS.2015.2440551",
+      "local_pdf_sha256": "62136b8da74aa46abac34516577005d2afa1d48d1fdc7836d3765a4952c88e48",
+      "checked_pages": [
+        "PDF 2",
+        "PDF 3",
+        "PDF 7",
+        "PDF 8"
+      ],
+      "near_miss_type": "genuine n-dimensional convex data-rate region",
+      "rate_coordinates": "one constrained rate entering each direct-product plant subsystem; the paper assumes controller-to-actuator channels while noting an estimator-to-controller alternative",
+      "asmp4_applicability_failure": "the coordinates index receiving plant subsystems, not ASMP-4's sequential read and write interfaces, and the controller has perfect overall-state knowledge",
+      "selects_asmp4_sensor_computation_registry": false,
+      "requires_added_architecture_mapping": true,
+      "full_text_definition_reviewed": true
+    },
+    {
+      "id": "khojasteh_timing_information_2020",
+      "title": "The Value of Timing Information in Event-Triggered Control",
+      "primary_url": "https://arxiv.org/pdf/1609.09594",
+      "published_doi": "https://doi.org/10.1109/TAC.2019.2951213",
+      "local_pdf_sha256": "81278ae7309721036cef953413f545e609e3957a3a9d19a24adc15a98a4d9963",
+      "checked_pages": [
+        "PDF 2",
+        "PDF 4",
+        "PDF 15"
+      ],
+      "near_miss_type": "two rate notions for one event-triggered channel",
+      "rate_coordinates": "payload transmission rate R_s and payload-plus-timing access rate R_c on the same sensor-to-controller channel",
+      "asmp4_applicability_failure": "the controller-to-plant input is infinite-precision and delay-free rather than a separately charged port; acknowledgments may be signaled through the plant/control input",
+      "selects_asmp4_sensor_computation_registry": false,
+      "requires_added_architecture_mapping": true,
+      "full_text_definition_reviewed": true
+    },
+    {
+      "id": "tomar_zamani_compositional_ife_2020",
+      "title": "Compositional Quantification of Invariance Feedback Entropy for Networks of Uncertain Control Systems",
+      "primary_url": "https://edoc.ub.uni-muenchen.de/28710/1/Tomar_Mahendra_Singh.pdf",
+      "published_doi": "https://doi.org/10.1109/LCSYS.2020.2992884",
+      "local_pdf_sha256": "0aade25fc436e56c22940a010c7994d22457fb18d737cf7621eafb09ce6b424a",
+      "checked_pages": [
+        "PDF 51",
+        "PDF 54 / printed 36",
+        "PDF 55 / printed 37"
+      ],
+      "near_miss_type": "scalar network IFE bounded by a sum of subsystem IFEs",
+      "rate_coordinates": "one coder-to-controller IFE for the network and one of the same kind for each comparison subsystem",
+      "asmp4_applicability_failure": "the sum decomposes interconnected plant state subsystems, not sequential read/write transcripts, and supplies no sensor-domain selector",
+      "selects_asmp4_sensor_computation_registry": false,
+      "requires_added_architecture_mapping": true,
+      "full_text_definition_reviewed": true
+    }
+  ],
+  "totals": {
+    "reviewed_primary_near_misses": 3,
+    "genuine_multirate_regions": 1,
+    "same_channel_multiple_rate_notions": 1,
+    "network_ife_compositions": 1,
+    "asmp4_registry_selectors": 0,
+    "full_text_definition_reviews": 3,
+    "exhaustive_search": false,
+    "external_expert_review": false
+  },
+  "bounded_inference": "The strongest located neighboring theorems are architecture-specific and do not select ASMP-4's read/write registries; applying any of them to the canonical target would require an additional architecture mapping and sensor-domain choice.",
+  "nonclaims": [
+    "The targeted search is not exhaustive and cannot prove that no applicable theorem exists.",
+    "Search-engine coverage and query choice are not a substitute for external expert review.",
+    "The audit rejects only the applicability of these three inspected near-misses, not the wider literature."
+  ]
+}

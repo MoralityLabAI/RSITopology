@@ -1,0 +1,17 @@
+{
+  "registration_id": "ASMP-9-EXACT-TIE-WIDTH-v0.4-registration",
+  "registered_at_utc": "2026-07-28T18:06:59Z",
+  "implementation_commit": "bab45c4cee9c71285ad9c153ef934d2591071b1e",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/protocol_v0_4.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/PRIOR_ART_v0_4.md": "9af69e5a1a701ebe2c5980ba67bed4341af285e187aa86137edaf3c3ddc3d74e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/THEOREM_v0_4.md": "a3be35163b11d1e29abb7278fe1d8ba3e8f03e2c46b2bd3b7bf120f6f9da3966",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/zero_radius_width.py": "e084b4b71e4f32d581304c82216d672d4026d539af39a2dff4b8832f1a894fb5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/test_zero_radius_width.py": "00b19e06d7a08661d7de3ee98e5e18528ce23150bac4eb7b3d5b874464a4ea92",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/PROTOCOL_v0_4.md": "60a9b3db21f14df80578bb35342b9e1f43f131cf8a61b6257f8743b5f789c534",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/protocol_v0_4.json": "2cb116284c9ee83d2e319ef95be3114bd930caae5de78a2b6bb873c8dc9ca13b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/run_verification.py": "0ece72a5c6e15126560adebcaefcc09189b0eb17383af3ed2644f2a13e4bf32f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/verify_result.py": "c3a756f54e5364728b3b2bd068ddb593e998d7f06d7ae5459f50807e51ca210c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/zero_radius_theorem_v0_4/README.md": "086c221aeb1d12566a9963169ed18d35ff3188dac01488f0207ad3aa79757048"
+  }
+}

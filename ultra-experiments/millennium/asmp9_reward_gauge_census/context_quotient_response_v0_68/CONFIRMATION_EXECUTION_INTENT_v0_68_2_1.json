@@ -1,0 +1,48 @@
+{
+  "schema_version": "asmp9_context_quotient_confirmation_execution_intent_v0_68_2_1",
+  "status": "sealed_prereveal_pending_execution",
+  "created_utc": "2026-07-31T04:35:07.9644145Z",
+  "outcomes_read": false,
+  "model_forward_passes_before_seal": 0,
+  "source_commit": "866c2e684f2b3402387469036de73c13826590f3",
+  "supersedes_after_zero-record_preflight_abort": "CONFIRMATION_EXECUTION_INTENT_v0_68_2.json",
+  "run_root": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_1_local_20260731",
+  "prereveal_validation": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_local_20260731\\prereveal_validation.json",
+    "sha256": "7e44f96396d9024f047a72dd9e78e396a429dee86ba67114dd6e65ed66d8f919",
+    "status": "passed",
+    "confirmation_records": 528,
+    "confirmation_job_list_sha256": "097f9cad620a8de161d1e611d2d1e1c12b3b6d6d35c9298913d824b9d9a7a300"
+  },
+  "preparation_receipt": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_1_local_20260731\\preparation_receipt.json",
+    "sha256": "319fcce06da949e1d3aa20480ed308951050e94baf77011411d468e964740381"
+  },
+  "registration": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_1_local_20260731\\confirmation\\registration.json",
+    "sha256": "b4dd543caf890e4980f94f2a98340320db29fe03c74e4cbe28039ec57dabf90b",
+    "preflight": "passed"
+  },
+  "authorization": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_1_local_20260731\\confirmation\\authorization.json",
+    "sha256": "91bbdd4d393e94ff491c0dc87f731a01d9ac2c51a70131c8a963980b87fadc2f"
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_uuid": "GPU-113d2889-9c86-faac-ad21-8db35f945b89",
+    "driver_version": "555.99",
+    "gpu_memory_total_mb": 4096,
+    "gpu_memory_used_mb_at_seal": 0,
+    "gpu_temperature_c_at_seal": 80,
+    "free_host_memory_mb_at_seal": 6674,
+    "gpu_compute_apps_at_seal": []
+  },
+  "repair_boundary": {
+    "prior_attempt_records_completed": 0,
+    "prior_attempt_peak_gpu_delta_mb": 0,
+    "scientific_change": false,
+    "resource_threshold_change": false
+  },
+  "execution_rule": "Run the exact repaired authorization through run_windows_guarded_v0_68_2.ps1. Resume is permitted only from hash-valid registered checkpoints.",
+  "claim_boundary": "This receipt establishes repaired prereveal chronology and exact environment binding only. It contains no confirmation outcome."
+}

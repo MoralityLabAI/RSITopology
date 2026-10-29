@@ -1,0 +1,30 @@
+{
+  "schema_version": "asmp4_boundary_claim_v0_4",
+  "problem_id": "ASMP-4",
+  "status": "boundary_strengthening_not_new_resolution",
+  "claim": "Positive port-specific rescaling of one shared bilateral transcript-tree cost preserves a rectangular ASMP-4 region with rescaled thresholds. Genuinely different cost orderings need not: over all finite binary prefix-free codebooks in an exact four-plan synchronous no-side-channel game, expected read length and worst-case write length have only the Pareto minima (7/4,3) and (2,2); public repeated blocks have frontier upward-closure conv{(7/12,1),(2/3,2/3)} and exclude the coordinatewise lower corner.",
+  "canonical_metric_unchanged": true,
+  "canonical_resolution_preserved": true,
+  "scheduling_quantifier": "fixed plant-independent public codebook schedule",
+  "adaptive_successor": "../asmp4_adaptive_history_collapse_v0_5/RESULT.md",
+  "adaptive_successor_restores_closed_asymptotic_corner": true,
+  "heterogeneous_fixture": {
+    "read_cost": "expected prefix length under (1/2,1/4,1/8,1/8)",
+    "write_cost": "worst-case prefix length",
+    "codebook_class": "all finite binary prefix-free read/write codebooks",
+    "timing": "synchronous no-lag",
+    "terminal_deadline_ticks": 3,
+    "side_channels": false,
+    "control_authority_fixed": true
+  },
+  "evidence": {
+    "unit_rescaling_theorem": "THEOREM.md#1-positive-unit-conversions-preserve-rectangularity",
+    "heterogeneous_diagonal_sandwich": "THEOREM.md#2-what-bilateral-copying-implies-for-different-costs",
+    "finite_counterexample": "THEOREM.md#3-four-plan-synchronous-prefix-game",
+    "unrestricted_prefix_frontier": "THEOREM.md#unrestricted-prefix-code-theorem",
+    "probability_phase_and_minimality": "THEOREM.md#probability-phase-and-minimality",
+    "fixed_schedule_asymptotic_frontier": "THEOREM.md#4-complete-fixed-schedule-repeated-block-frontier",
+    "central_harness": "heterogeneous_frontier.py",
+    "independent_verifier": "verify_heterogeneous_theorem.py"
+  }
+}

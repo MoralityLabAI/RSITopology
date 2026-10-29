@@ -1,0 +1,169 @@
+{
+  "claim_boundary": {
+    "establishes": "One finite standard-gamble access ledger for acquiring and testing a normalized semantic rectangle under registered mixture-affine and response-margin assumptions.",
+    "excludes": [
+      "validating expected utility for humans or models",
+      "identifying cardinal value from deterministic ordinal comparisons",
+      "context-varying anchors or response midpoints",
+      "dependent-response or minimax finite-sample theory",
+      "a claim that practical consequences possess stable utility",
+      "resolution of ASMP-9"
+    ]
+  },
+  "continuous_control": {
+    "bisection_depth": 3,
+    "direction": [
+      "-1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "expected_coordinate_support": "1/4",
+    "expected_independent_residual_support": "1/2",
+    "tolerance": "1/4"
+  },
+  "finite_sample": {
+    "correct_probability_floor": "3/4",
+    "family_error": "1/100",
+    "population_query_count": 48,
+    "registered_minimum_odd_repeats": 43
+  },
+  "gates": {
+    "G0_registration_binding": "Registration, protocol, environment, and every sealed source hash must match.",
+    "G1_population_acquisition": "All twelve centered-grid cells are recovered exactly in four binary queries each and the 48-query transcript lower bound matches.",
+    "G2_rectangle_algebra": "The 3x4 cross-difference operator has exact rank six, the additive fixture has zero residual, and the planted interaction is nonzero.",
+    "G3_complete_coverage": "Omitting any one of the twelve cells admits an exact nonadditive witness agreeing on all measured cells.",
+    "G4_shared_uncertainty_geometry": "Continuous-depth intervals cover every cell; the registered residual direction has support 1/4 rather than the independent-residual surrogate 1/2.",
+    "G5_three_state_semantics": "The registered additive, interaction, and boundary fixtures return certify, reject, and inconclusive respectively.",
+    "G6_mixture_affinity_liveness": "A consistent compound lottery passes, a planted distorted lottery fails, and a width-straddling cell is inconclusive.",
+    "G7_access_no_go": "Ordinal-only and row-local-ruler witness pairs preserve their declared transcripts while changing rectangle additivity.",
+    "G8_finite_sample": "Forty-three repeats are the exact smallest registered odd count passing the familywise binomial gate; chance-level responses are unavailable.",
+    "G9_v031_handoff": "The output exposes the 6x12 shared-cell incidence, cell widths, and directional support required for set-valued downstream propagation.",
+    "G10_prior_art_and_claim_boundary": "Classical measurement, standard-gamble, finite-sample, and claim-boundary tokens remain present.",
+    "G11_resource_and_scope": "CPU-only runtime <= 30 seconds and peak resident memory <= 268435456 bytes."
+  },
+  "mixture_controls": {
+    "consistent": {
+      "first": "1/32",
+      "first_weight": "1/3",
+      "mixture": "17/32",
+      "second": "25/32",
+      "tolerance": "0"
+    },
+    "distorted": {
+      "first": "1/32",
+      "first_weight": "1/3",
+      "mixture": "19/32",
+      "second": "25/32",
+      "tolerance": "0"
+    },
+    "uncertain": {
+      "first": "1/4",
+      "first_weight": "1/3",
+      "first_width": "1/48",
+      "mixture": "2/3",
+      "mixture_width": "1/48",
+      "second": "3/4",
+      "second_width": "1/48",
+      "tolerance": "1/16"
+    }
+  },
+  "no_go_controls": {
+    "ordinal_additive": [
+      [
+        "0",
+        "1/3"
+      ],
+      [
+        "2/3",
+        "1"
+      ]
+    ],
+    "ordinal_interactive": [
+      [
+        "0",
+        "1/9"
+      ],
+      [
+        "4/9",
+        "1"
+      ]
+    ],
+    "row_local_additive": [
+      [
+        "0",
+        "1/4",
+        "1/2"
+      ],
+      [
+        "1/3",
+        "7/12",
+        "5/6"
+      ]
+    ],
+    "row_local_interactive": [
+      [
+        "0",
+        "1/4",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "2/3",
+        "5/6"
+      ]
+    ]
+  },
+  "primary_fixture": {
+    "bisection_depth": 4,
+    "column_count": 4,
+    "interaction_amplitude": "1/16",
+    "interaction_cell": [
+      2,
+      3
+    ],
+    "row_count": 3,
+    "values": [
+      [
+        "1/32",
+        "7/32",
+        "13/32",
+        "19/32"
+      ],
+      [
+        "5/32",
+        "11/32",
+        "17/32",
+        "23/32"
+      ],
+      [
+        "9/32",
+        "15/32",
+        "21/32",
+        "27/32"
+      ]
+    ]
+  },
+  "protocol_id": "ASMP-9-BEHAVIORAL-RECTANGLE-v0.32",
+  "references": [
+    "Herstein and Milnor 1953",
+    "Luce and Tukey 1964",
+    "Krantz, Luce, Suppes, and Tversky 1971",
+    "Torrance 1986",
+    "Wakker and Stiggelbout 1995",
+    "Chen and Liu 2026",
+    "ASMP-9 v0.26-v0.31"
+  ],
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 268435456,
+    "wall_seconds": 30
+  },
+  "version": "0.32",
+  "verdicts": {
+    "fail": "behavioral_rectangle_boundary_not_established_v0_32",
+    "pass": "behavioral_rectangle_boundary_established_v0_32"
+  }
+}

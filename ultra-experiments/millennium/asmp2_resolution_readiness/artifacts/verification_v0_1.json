@@ -1,0 +1,21 @@
+{
+  "check_count": 12,
+  "checks": {
+    "all_required_bindings_are_absent_from_problem_record": true,
+    "authoritative_hashes_match": true,
+    "definition_debt_reproduced": true,
+    "draft_status_reproduced": true,
+    "finite_curvature_recomputed": true,
+    "global_threshold_conflict_recomputed": true,
+    "positive_fisher_recomputed": true,
+    "reported_gate_conjunction": true,
+    "schema_and_identity": true,
+    "source_indistinguishability_recomputed": true,
+    "stop_decision_is_scoped": true,
+    "utility_floor_recomputed": true
+  },
+  "passed": true,
+  "passed_count": 12,
+  "result_sha256": "b9b3159adf460add88541bb44b289d822c92adacfd9c1294b3c650804f6c9359",
+  "schema_version": "asmp2_resolution_readiness_verification_v0_1"
+}

@@ -1,0 +1,214 @@
+{
+  "active_choice_index": 1,
+  "active_signals": [
+    "1/16",
+    "1/4",
+    "1/8"
+  ],
+  "all_gates_passed": true,
+  "claim_boundary": "exact binary specialization of decision-specific safety deficiency; not a general closed-form rate for arbitrary semiparametric classes",
+  "exact_table": {
+    "0/1": {
+      "0": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "1": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "2": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "3": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "4": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "5": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "6": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "7": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "8": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "9": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      }
+    },
+    "1/16": {
+      "0": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "1": {
+        "deficiency": "7/16",
+        "success": "9/16"
+      },
+      "2": {
+        "deficiency": "7/16",
+        "success": "9/16"
+      },
+      "3": {
+        "deficiency": "833/2048",
+        "success": "1215/2048"
+      },
+      "4": {
+        "deficiency": "833/2048",
+        "success": "1215/2048"
+      },
+      "5": {
+        "deficiency": "201341/524288",
+        "success": "322947/524288"
+      },
+      "6": {
+        "deficiency": "201341/524288",
+        "success": "322947/524288"
+      },
+      "7": {
+        "deficiency": "24521413/67108864",
+        "success": "42587451/67108864"
+      },
+      "8": {
+        "deficiency": "24521413/67108864",
+        "success": "42587451/67108864"
+      },
+      "9": {
+        "deficiency": "12003609821/34359738368",
+        "success": "22356128547/34359738368"
+      }
+    },
+    "1/4": {
+      "0": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "1": {
+        "deficiency": "1/4",
+        "success": "3/4"
+      },
+      "2": {
+        "deficiency": "1/4",
+        "success": "3/4"
+      },
+      "3": {
+        "deficiency": "5/32",
+        "success": "27/32"
+      },
+      "4": {
+        "deficiency": "5/32",
+        "success": "27/32"
+      },
+      "5": {
+        "deficiency": "53/512",
+        "success": "459/512"
+      },
+      "6": {
+        "deficiency": "53/512",
+        "success": "459/512"
+      },
+      "7": {
+        "deficiency": "289/4096",
+        "success": "3807/4096"
+      },
+      "8": {
+        "deficiency": "289/4096",
+        "success": "3807/4096"
+      },
+      "9": {
+        "deficiency": "6413/131072",
+        "success": "124659/131072"
+      }
+    },
+    "1/8": {
+      "0": {
+        "deficiency": "1/2",
+        "success": "1/2"
+      },
+      "1": {
+        "deficiency": "3/8",
+        "success": "5/8"
+      },
+      "2": {
+        "deficiency": "3/8",
+        "success": "5/8"
+      },
+      "3": {
+        "deficiency": "81/256",
+        "success": "175/256"
+      },
+      "4": {
+        "deficiency": "81/256",
+        "success": "175/256"
+      },
+      "5": {
+        "deficiency": "4509/16384",
+        "success": "11875/16384"
+      },
+      "6": {
+        "deficiency": "4509/16384",
+        "success": "11875/16384"
+      },
+      "7": {
+        "deficiency": "127413/524288",
+        "success": "396875/524288"
+      },
+      "8": {
+        "deficiency": "127413/524288",
+        "success": "396875/524288"
+      },
+      "9": {
+        "deficiency": "14536989/67108864",
+        "success": "52571875/67108864"
+      }
+    }
+  },
+  "gates": {
+    "active_choice_is_largest_signal": true,
+    "positive_signal_eventually_crosses_delta": true,
+    "success_monotone_across_registered_signals": true,
+    "zero_signal_deficiency_is_one_half_for_all_n": true,
+    "zero_signal_sample_complexity_is_infinite_below_one_half": true
+  },
+  "sample_complexities": {
+    "0/1": "infinity",
+    "1/16": 105,
+    "1/4": 7,
+    "1/8": 25
+  },
+  "sample_sizes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "schema_version": "asmp2_safety_deficiency_v0_3",
+  "signals": [
+    "0/1",
+    "1/16",
+    "1/8",
+    "1/4"
+  ],
+  "target_delta": "1/10",
+  "theorem_sha256": "6c4f5b78cc50aa9baebab0de11b4812675d6e3480db869d260c07256b246e8c4"
+}

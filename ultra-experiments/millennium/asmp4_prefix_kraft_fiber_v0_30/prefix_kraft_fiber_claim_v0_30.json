@@ -1,0 +1,33 @@
+{
+  "schema_version": "asmp4_prefix_kraft_fiber_v0_30",
+  "theorem": {
+    "name": "rounded local-fiber Kraft transfer",
+    "finite_horizon": "target sequential prefix cost is at most source cost plus worst-path sum of local ceil-log fibers",
+    "asymptotic": "directed rate slack is rounded local-fiber entropy",
+    "exact_corollary": "bidirectional sublinear rounded profiles preserve the complete prefix-cost region"
+  },
+  "sharpness": {
+    "ternary_clone": "2 bits per step versus log2 3 unrounded bits",
+    "disclosure": "terminal-bijective three-step factor attains one bit correction",
+    "single_ceiling": "ceil(T log2 3) is strictly below 2T for every T at least 3"
+  },
+  "central_harness": {
+    "binary_causal_maps": 332928,
+    "regular_clone_rows": 512,
+    "mixed_schedules": 16384,
+    "disclosure_block_powers": 7,
+    "sparse_horizons": 8192
+  },
+  "independent_harness": {
+    "full_ternary_binary_output_maps": 4096,
+    "explicit_regular_trees": 30,
+    "mixed_schedules": 15625,
+    "sparse_horizons": 16384
+  },
+  "mutations_rejected": 8,
+  "predecessor_inventory": {
+    "packages": 30,
+    "tests": 334
+  },
+  "disposition": "sequential prefix-free transfer is controlled by per-prefix rounded local fibers, not terminal or unrounded fiber entropy"
+}

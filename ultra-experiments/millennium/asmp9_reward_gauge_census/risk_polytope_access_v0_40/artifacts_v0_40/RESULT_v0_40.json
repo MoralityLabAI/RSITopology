@@ -1,0 +1,1136 @@
+{
+  "classification_rows": [
+    {
+      "epsilon": "3/4",
+      "is_test_cover": false,
+      "subset": [],
+      "subset_size": 0
+    },
+    {
+      "epsilon": "1/2",
+      "is_test_cover": false,
+      "subset": [
+        "s0"
+      ],
+      "subset_size": 1
+    },
+    {
+      "epsilon": "1/2",
+      "is_test_cover": false,
+      "subset": [
+        "s1"
+      ],
+      "subset_size": 1
+    },
+    {
+      "epsilon": "1/2",
+      "is_test_cover": false,
+      "subset": [
+        "sx"
+      ],
+      "subset_size": 1
+    },
+    {
+      "epsilon": "3/4",
+      "is_test_cover": false,
+      "subset": [
+        "s_const"
+      ],
+      "subset_size": 1
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s0",
+        "s1"
+      ],
+      "subset_size": 2
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s0",
+        "sx"
+      ],
+      "subset_size": 2
+    },
+    {
+      "epsilon": "1/2",
+      "is_test_cover": false,
+      "subset": [
+        "s0",
+        "s_const"
+      ],
+      "subset_size": 2
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s1",
+        "sx"
+      ],
+      "subset_size": 2
+    },
+    {
+      "epsilon": "1/2",
+      "is_test_cover": false,
+      "subset": [
+        "s1",
+        "s_const"
+      ],
+      "subset_size": 2
+    },
+    {
+      "epsilon": "1/2",
+      "is_test_cover": false,
+      "subset": [
+        "sx",
+        "s_const"
+      ],
+      "subset_size": 2
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s0",
+        "s1",
+        "sx"
+      ],
+      "subset_size": 3
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s0",
+        "s1",
+        "s_const"
+      ],
+      "subset_size": 3
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s0",
+        "sx",
+        "s_const"
+      ],
+      "subset_size": 3
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s1",
+        "sx",
+        "s_const"
+      ],
+      "subset_size": 3
+    },
+    {
+      "epsilon": "0",
+      "is_test_cover": true,
+      "subset": [
+        "s0",
+        "s1",
+        "sx",
+        "s_const"
+      ],
+      "subset_size": 4
+    }
+  ],
+  "compiled_rows": {
+    "combined_groups": [
+      {
+        "epsilon": "12/35",
+        "source_observations": 1,
+        "subset": [],
+        "subset_size": 0,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "s0"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 2,
+        "subset": [
+          "s1"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "sx"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 1,
+        "subset": [
+          "s_const"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "sx"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "s0",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s1",
+          "sx"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 2,
+        "subset": [
+          "s1",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "sx"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s1",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 4,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      }
+    ],
+    "s0_asymmetric": [
+      {
+        "epsilon": "1/5",
+        "source_observations": 1,
+        "subset": [],
+        "subset_size": 0,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 2,
+        "subset": [
+          "s0"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 2,
+        "subset": [
+          "s1"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 2,
+        "subset": [
+          "sx"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 1,
+        "subset": [
+          "s_const"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "sx"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 2,
+        "subset": [
+          "s0",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s1",
+          "sx"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 2,
+        "subset": [
+          "s1",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "1/5",
+        "source_observations": 2,
+        "subset": [
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "sx"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s1",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 4,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s0_asymmetric_group"
+      }
+    ],
+    "s1_asymmetric": [
+      {
+        "epsilon": "12/35",
+        "source_observations": 1,
+        "subset": [],
+        "subset_size": 0,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "s0"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 2,
+        "subset": [
+          "s1"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "sx"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 1,
+        "subset": [
+          "s_const"
+        ],
+        "subset_size": 1,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "sx"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "s0",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s1",
+          "sx"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 2,
+        "subset": [
+          "s1",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "12/35",
+        "source_observations": 2,
+        "subset": [
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 2,
+        "witness_reference_rule": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "sx"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s1",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 3,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      },
+      {
+        "epsilon": "0",
+        "source_observations": 4,
+        "subset": [
+          "s0",
+          "s1",
+          "sx",
+          "s_const"
+        ],
+        "subset_size": 4,
+        "witness_reference_rule": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "worst_problem": "s1_asymmetric_group"
+      }
+    ]
+  },
+  "elapsed_seconds": 12.234085900010541,
+  "gates": {
+    "C0_classification_formula": true,
+    "D0_decision_type_antichains": true,
+    "F0_full_persistence_curves": true,
+    "G0_asymmetric_group_formula": true,
+    "H0_solver_formula_agreement": true,
+    "K0_ancillary_query_invariance": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true
+  },
+  "peak_working_set_bytes": 73109504,
+  "persistence_curves": {
+    "classification": [
+      {
+        "minimal_access_sets": [
+          [
+            "s0",
+            "s1"
+          ],
+          [
+            "s0",
+            "sx"
+          ],
+          [
+            "s1",
+            "sx"
+          ]
+        ],
+        "tolerance": "0"
+      },
+      {
+        "minimal_access_sets": [
+          [
+            "s0"
+          ],
+          [
+            "s1"
+          ],
+          [
+            "sx"
+          ]
+        ],
+        "tolerance": "1/2"
+      },
+      {
+        "minimal_access_sets": [
+          []
+        ],
+        "tolerance": "3/4"
+      }
+    ],
+    "combined_groups": [
+      {
+        "minimal_access_sets": [
+          [
+            "s0",
+            "s1"
+          ],
+          [
+            "s0",
+            "sx"
+          ],
+          [
+            "s1",
+            "sx"
+          ]
+        ],
+        "tolerance": "0"
+      },
+      {
+        "minimal_access_sets": [
+          [
+            "s1"
+          ],
+          [
+            "s0",
+            "sx"
+          ]
+        ],
+        "tolerance": "1/5"
+      },
+      {
+        "minimal_access_sets": [
+          []
+        ],
+        "tolerance": "12/35"
+      }
+    ],
+    "s0_asymmetric": [
+      {
+        "minimal_access_sets": [
+          [
+            "s0"
+          ],
+          [
+            "s1",
+            "sx"
+          ]
+        ],
+        "tolerance": "0"
+      },
+      {
+        "minimal_access_sets": [
+          []
+        ],
+        "tolerance": "1/5"
+      }
+    ],
+    "s1_asymmetric": [
+      {
+        "minimal_access_sets": [
+          [
+            "s1"
+          ],
+          [
+            "s0",
+            "sx"
+          ]
+        ],
+        "tolerance": "0"
+      },
+      {
+        "minimal_access_sets": [
+          []
+        ],
+        "tolerance": "12/35"
+      }
+    ]
+  },
+  "protocol_id": "asmp9-risk-polytope-access-v0.40",
+  "registration_file_sha256": "166ad20ba6b95a23f736310373a8de6b07a7c44f37d423d419101e619e7c6128",
+  "registration_implementation_commit": "4abbe74a50eb327d53a05d238317902425a80fc9",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "result_content_sha256": "6af27b72b9753bb03b8453fcfed8e933e3ea09d742967bbd34984c003f731202",
+  "solver_spotchecks": [
+    {
+      "exact_solver_epsilon": "3/4",
+      "match": true,
+      "partition_formula_epsilon": "3/4",
+      "subset": []
+    },
+    {
+      "exact_solver_epsilon": "1/2",
+      "match": true,
+      "partition_formula_epsilon": "1/2",
+      "subset": [
+        "s0"
+      ]
+    },
+    {
+      "exact_solver_epsilon": "0",
+      "match": true,
+      "partition_formula_epsilon": "0",
+      "subset": [
+        "s0",
+        "s1"
+      ]
+    }
+  ],
+  "status": "finite_risk_polytope_access_characterization_established",
+  "zero_tolerance_minimal_access": {
+    "classification": [
+      [
+        "s0",
+        "s1"
+      ],
+      [
+        "s0",
+        "sx"
+      ],
+      [
+        "s1",
+        "sx"
+      ]
+    ],
+    "combined_groups": [
+      [
+        "s0",
+        "s1"
+      ],
+      [
+        "s0",
+        "sx"
+      ],
+      [
+        "s1",
+        "sx"
+      ]
+    ],
+    "s0_asymmetric": [
+      [
+        "s0"
+      ],
+      [
+        "s1",
+        "sx"
+      ]
+    ],
+    "s1_asymmetric": [
+      [
+        "s1"
+      ],
+      [
+        "s0",
+        "sx"
+      ]
+    ]
+  }
+}

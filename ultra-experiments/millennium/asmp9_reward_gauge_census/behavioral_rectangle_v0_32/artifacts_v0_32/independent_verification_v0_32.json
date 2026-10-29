@@ -1,0 +1,29 @@
+{
+  "check_count": 20,
+  "checks": {
+    "all_gates_pass": true,
+    "chronology": true,
+    "claim_boundary": true,
+    "coverage": true,
+    "finite_sample": true,
+    "gate_count": true,
+    "handoff": true,
+    "mixture_controls": true,
+    "no_go": true,
+    "operator": true,
+    "population_queries": true,
+    "protocol_hash": true,
+    "protocol_id": true,
+    "registration_hash": true,
+    "resources": true,
+    "result_hash": true,
+    "sealed_files": true,
+    "shared_geometry": true,
+    "three_states": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "7862f69eafbe7f04371842b15c3ee5ad1014f4e00bef68d5ead14bbe60023501",
+  "result_sha256": "5729d7909fbf31b2de7b7260f6a30677a5d1f0d367613e37eb6938085b05819f",
+  "verifier_sha256": "bafe2d9c7bfcf49dfc65981f5ce5b6f6b1a6e759754890a8842c6fd2f1d6e026"
+}

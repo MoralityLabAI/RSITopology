@@ -1,0 +1,79 @@
+{
+  "confirmation_fixture": {
+    "decision_types": {
+      "classification": "four-target zero-one",
+      "root_group": {
+        "false_negative": "2/3",
+        "false_positive": "1/3",
+        "labels": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    "queries": {
+      "left_q": {
+        "error": "1/4",
+        "signature": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "right_q": {
+        "error": "1/3",
+        "signature": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "root_q": {
+        "error": "1/5",
+        "signature": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    "targets": 4
+  },
+  "implementation_commit": "4a4b24b6741882d94cc21c08c48810f5c3dee24b",
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41",
+    "elapsed_seconds": 12.259872,
+    "status": "pass",
+    "tests_passed": 14
+  },
+  "protocol_id": "asmp9-sequential-risk-access-v0.41",
+  "registered_at_utc": "2026-07-29T10:51:02Z",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "sealed_files": {
+    "../decision_relative_access_v0_38/relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "PRIOR_ART_GATE_v0_41.md": "54d34b44075fbab8e3388fd230aebeeee00553c6d3b5e08b572e23a87cd64f9c",
+    "PROTOCOL_v0_41.md": "b294e960e682d3faeb7b8dc88a00a84fbb7c341399a6a43e727fce7a96d72609",
+    "THEOREM_DRAFT_v0_41.md": "0f55930a0510710af60b454a6515cbe43ecfce60b572598799f29b19fd6eddad",
+    "confirmation.py": "bc960a89d9a94a1e1a02d29c185d105685e165c7096fc30db9bc2f781c861ed8",
+    "environment_lock_v0_41.json": "c3fb84e94b568f9f6affa758a7d2e77e74979b617d68d31d3840ad89219c2f63",
+    "execute_confirmation.py": "509fa142a726b0c2747e7c5b376283fa37d23743309719006257f0b1a7bc97a7",
+    "protocol_v0_41.json": "05e6ce300a38de2a679c69f34471438ca6438a167628f1a8d62a081d3ee723eb",
+    "sequential_access.py": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+    "test_confirmation_structure.py": "467f0b2ce8408dbc62c33d597f9b2c7a1e050186eb5c986ab9b8650abc6d3bc4",
+    "test_execute_confirmation.py": "41fd88c246780d5d5a9db66b097f99207fe9580fb12cc11141b3cdd2a82099d5",
+    "test_sequential_access.py": "283b42b9bb201221a2c0899fa358491d7cc344ecae19ea75ece3c4b5beacfcd0",
+    "verify_result_v0_41.py": "729e62baf3f2d147cce7863714ac35d009e0a1613b06b6bbf238d5b5f13bfdfd"
+  },
+  "status": "registered_prereveal",
+  "version": "0.41"
+}

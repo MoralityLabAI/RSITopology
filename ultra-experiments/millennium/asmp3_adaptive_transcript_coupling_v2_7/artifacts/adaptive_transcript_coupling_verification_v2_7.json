@@ -1,0 +1,18 @@
+{
+  "check_count": 9,
+  "checker": "clean_room_adaptive_tree_pattern_depth_gap_and_extraction_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_42_coupling_rows_reconstructed": true,
+    "V2_all_30_error_pattern_spaces_reconstructed": true,
+    "V3_all_524288_adaptive_tree_cases_reconstructed": true,
+    "V4_all_36_tightness_rows_reconstructed": true,
+    "V5_all_12_extraction_rows_reconstructed": true,
+    "V6_path_risk_resource_and_gap_formulas_exact": true,
+    "V7_parent_and_resume_trigger_contracts_match": true,
+    "V8_all_11_producer_gates_true": true
+  },
+  "claim_boundary": "This checker certifies adaptive path coupling under the declared fresh conditional block law. It does not extend the result to persistent, preselected, or adversarially correlated noise.",
+  "passed": true,
+  "schema_version": "asmp3_adaptive_transcript_coupling_verification_v2_7"
+}

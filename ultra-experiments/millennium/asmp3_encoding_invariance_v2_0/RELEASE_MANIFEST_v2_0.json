@@ -1,0 +1,89 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-ENCODING-INVARIANCE-v2.0",
+  "file_count": 20,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_block_selection_composition_v1_9/BLOCK_SELECTION_COMPOSITION_THEOREM_v1_9.md": {
+      "bytes": 6418,
+      "sha256": "691FA772F81A5ED84112E365E8B60F6948DD205F2D63EBE30DE0CD7635F9AAED"
+    },
+    "../asmp3_block_selection_composition_v1_9/RELEASE_MANIFEST_v1_9.json": {
+      "bytes": 3074,
+      "sha256": "E5D48F7F9E93A6D2189E20C4838E51D881AB5D2D0210F393360AD9BD9635289C"
+    },
+    "../asmp3_block_selection_composition_v1_9/artifacts/block_selection_composition_v1_9.json": {
+      "bytes": 1691219,
+      "sha256": "63E16A22B9EC6B459DE3F38887E323F224F0B64FA7C4EC4FA682E4FAE788E561"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/INDEPENDENT_NOISE_AMPLIFICATION_THEOREM_v1_8.md": {
+      "bytes": 6330,
+      "sha256": "4E473CC86D470FE0F836D7B060D4BD046BC2B366A2C9F015AF13754AE7F16CF0"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/RELEASE_MANIFEST_v1_8.json": {
+      "bytes": 3064,
+      "sha256": "FF45BCAA2873A03E967F20EE934A6AB1F326FF35E8FB92FCD1F2845E00D8D27C"
+    },
+    "../asmp3_independent_noise_amplification_v1_8/artifacts/independent_noise_amplification_v1_8.json": {
+      "bytes": 634098,
+      "sha256": "937308CDB7F321516B0CFCC76AA7167E5B7542E0812E52BD63D493130D90750B"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v2_0.md": {
+      "bytes": 1861,
+      "sha256": "C70DFE9C6DD87BA4B6EC23EB9265FCFC1DA23A86F9ED911E03D3DB94F916A034"
+    },
+    "ENCODING_INVARIANCE_THEOREM_v2_0.md": {
+      "bytes": 6929,
+      "sha256": "149B10B278FE41C9EDB8D37A9CAF5719C48A14E66F85570F54A6A8C23CAE0E82"
+    },
+    "README.md": {
+      "bytes": 730,
+      "sha256": "2D1C7708F30C74EE96A0B193BD569F4DE78904C3C020F153AC0B89A208802947"
+    },
+    "artifacts/encoding_invariance_v2_0.json": {
+      "bytes": 34866,
+      "sha256": "0EFF1BB9F80AE281EFA29E151FD87FA0200CC62A651F1B5E5E777BED5A44C191"
+    },
+    "artifacts/encoding_invariance_verification_v2_0.json": {
+      "bytes": 862,
+      "sha256": "85916925C52DD892E4382751B5DF2D136648E4BE7799FA4EA649C52B5843B8E6"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2780,
+      "sha256": "1398A2FCFDFA54BD509296D442AF531F6FE3A3C7F39FEAF5FB547AA9BD80C470"
+    },
+    "encoding_invariance.py": {
+      "bytes": 13574,
+      "sha256": "BEF72AF3C46BAF2CD48D095E80ECC3711B89EA60058AE8C85896700173E5CCF6"
+    },
+    "run_encoding_invariance.py": {
+      "bytes": 818,
+      "sha256": "C74FA4A23439784143CF6AB86C02D905B501E9623B9B3E4D30D053700552DB0D"
+    },
+    "test_encoding_invariance.py": {
+      "bytes": 4612,
+      "sha256": "A267C5D421E0ADAC914A3096C55D2A52A7EA287CD8B9EDC5B14F3CE69B9C94C8"
+    },
+    "verify_encoding_invariance.py": {
+      "bytes": 10362,
+      "sha256": "B163057E4CC0FE2AC36F852685005CC59A19EC769C8135E09C24E6E7AC9D194F"
+    }
+  },
+  "release_status": "exact_replication_quotient_invariance_and_macro_cost_barrier",
+  "schema_version": "asmp3_encoding_invariance_release_v2_0"
+}

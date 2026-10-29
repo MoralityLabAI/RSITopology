@@ -1,0 +1,222 @@
+{
+  "claim_boundary": "For a finite simple generalized-theta block with k internally vertex-disjoint terminal paths, positive integer edge counts, independent fair microtrials, and epsilon=1/2, the strong-availability numerator is product_j(2A_j-B_j)-2 product_j(A_j-B_j). Every global optimum balances counts within each individual path, so exact optimization reduces to enumerating path totals. For fixed k this uses O(N^(k-1)) exact-arithmetic evaluations in the numerical budget and is pseudopolynomial when N is binary encoded. Majorization, Schur-convex reliability allocation, active-spare placement, and pseudopolynomial series-parallel optimization are classical; no novelty claim is made. This does not solve arbitrary biconnected blocks, prove optimizer hardness or approximation complexity, cover arbitrary epsilon, adaptive allocation, dependent or misspecified responses, behavioral reward identification, general inverse reinforcement learning, or resolve ASMP-9.",
+  "freshness_rule": {
+    "burned_cells": [
+      {
+        "path_lengths": [
+          1,
+          2,
+          2
+        ],
+        "total_budget": 10
+      },
+      {
+        "path_lengths": [
+          1,
+          2,
+          3
+        ],
+        "total_budget": 11
+      },
+      {
+        "path_lengths": [
+          2,
+          2,
+          3
+        ],
+        "total_budget": 12
+      }
+    ],
+    "selection_rule": "Fresh path-length, count, and budget cells were selected by declared structural diversity only: three and four paths, unequal path lengths, at least one overlapping-cycle case, and bounded exhaustive enumeration cost. No formula value, optimizer, path-total allocation, or smoothing outcome on the fresh cells was evaluated before registration."
+  },
+  "fresh_validation": {
+    "formula_cells": [
+      {
+        "name": "theta_134_heterogeneous",
+        "path_counts": [
+          [
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            5,
+            2,
+            3,
+            1
+          ]
+        ],
+        "path_lengths": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "theta_234_heterogeneous",
+        "path_counts": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            4,
+            2,
+            5
+          ]
+        ],
+        "path_lengths": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "theta_1224_four_path",
+        "path_counts": [
+          [
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            1,
+            4,
+            2
+          ]
+        ],
+        "path_lengths": [
+          1,
+          2,
+          2,
+          4
+        ]
+      }
+    ],
+    "optimizer_cells": [
+      {
+        "name": "theta_124_budget12",
+        "path_lengths": [
+          1,
+          2,
+          4
+        ],
+        "total_budget": 12
+      },
+      {
+        "name": "theta_233_budget13",
+        "path_lengths": [
+          2,
+          3,
+          3
+        ],
+        "total_budget": 13
+      },
+      {
+        "name": "theta_1223_four_path_budget13",
+        "path_lengths": [
+          1,
+          2,
+          2,
+          3
+        ],
+        "total_budget": 13
+      }
+    ],
+    "smoothing_cell": {
+      "count_values": [
+        1,
+        2,
+        3
+      ],
+      "path_lengths": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_freshness_and_structure",
+    "G2_path_state_formula",
+    "G3_strict_path_smoothing",
+    "G4_reduced_optimizer_exactness",
+    "G5_composition_count",
+    "G6_optimizer_path_balance",
+    "G7_prior_art_and_claim_boundary",
+    "G8_resource_and_scope"
+  ],
+  "prior_art": [
+    {
+      "identifier": "doi:10.2307/3214014",
+      "role": "classical majorization and Schur-convex component assignment in parallel-series and series-parallel systems"
+    },
+    {
+      "identifier": "FSU-M699 / doi:10.1016/S0169-7161(88)07023-3",
+      "role": "classical multistate component-assignment extension"
+    },
+    {
+      "identifier": "doi:10.1017/S0269964800000899",
+      "role": "classical active-redundancy allocation in coherent systems"
+    },
+    {
+      "identifier": "doi:10.1287/opre.39.3.407",
+      "role": "classical component assignment for parallel-series and series-parallel systems"
+    },
+    {
+      "identifier": "doi:10.3166/jds.14.473-487",
+      "role": "pseudopolynomial finite-choice series-parallel reliability allocation"
+    },
+    {
+      "identifier": "ASMP-9-v0.23",
+      "role": "predecessor edge-multivariate q=-1 availability evaluator"
+    }
+  ],
+  "protocol_id": "ASMP-9-THETA-OPTIMIZER-v0.25",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "statistical_policy": "No statistical inference. Every primary quantity is an exact integer, rational, finite enumeration, symbolic inequality condition, or cryptographic hash.",
+  "structured_claims": {
+    "allowed": [
+      "The registered four-state formula exactly computes strong availability on the fresh generalized-theta cells at epsilon=1/2.",
+      "Every global optimizer in the declared generalized-theta class balances counts within each individual path.",
+      "Enumerating balanced path totals returns the exact global optimizer; for fixed path count it is polynomial in the numerical budget and pseudopolynomial in binary-encoded N.",
+      "This is a conservative ASMP specialization in a classical reliability-allocation neighborhood; no novelty claim is registered."
+    ],
+    "forbidden": [
+      "All series-parallel or arbitrary biconnected blocks are solved.",
+      "The optimizer is polynomial in binary input length or fixed-parameter tractable in k plus log N.",
+      "All edges or all path totals are globally balanced.",
+      "Exact optimizer search is hard, approximation is hard, or no better algorithm exists.",
+      "The result covers arbitrary epsilon, adaptive allocation, dependent responses, response misspecification, behavioral reward identification, or general inverse reinforcement learning.",
+      "Classical majorization, Schur-convex allocation, active-redundancy theory, or pseudopolynomial reliability allocation is new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.25",
+  "verdict_map": {
+    "all_gates_pass": "generalized_theta_reduction_established_v0_25",
+    "any_substantive_gate_fails": "generalized_theta_reduction_not_established_v0_25",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_25"
+  }
+}

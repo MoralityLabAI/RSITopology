@@ -1,0 +1,13 @@
+{
+  "alphabet_size": 6,
+  "claim_boundary": [
+    "deterministic bounded errors on enumerable atoms only",
+    "no stochastic optional-stopping or learned-policy claim",
+    "no ASMP-8 resolution claim"
+  ],
+  "error_alphabet": [-1, 0, 1],
+  "error_cap": 1,
+  "policy_mass_move": "1/6",
+  "protocol_id": "ASMP8-ADAPTIVE-REUSE-v0.6",
+  "schema_version": "asmp8_adaptive_reuse_protocol_v0_6"
+}

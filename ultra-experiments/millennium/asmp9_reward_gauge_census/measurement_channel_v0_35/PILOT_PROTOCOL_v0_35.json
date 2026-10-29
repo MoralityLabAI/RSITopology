@@ -1,0 +1,95 @@
+{
+  "schema_version": "asmp9_measurement_channel_pilot_protocol_v0_35",
+  "status": "scientific_protocol_frozen_environment_registration_pending",
+  "phase": "burned_measurement_pilot",
+  "scientific_question": "Can an independently calibrated semantic-choice channel provide a robust monotone ruler on fresh prompt families?",
+  "data_separation": {
+    "v0_34_rows": "burned_design_only",
+    "v0_34_future_holdout": "remains_unexecuted_and_ineligible",
+    "v0_35_prompt_families": "pilot_commission,pilot_engineer,pilot_resident",
+    "confirmation": "not_authorized"
+  },
+  "factorial_code_design": {
+    "presentation_order": [
+      "target_first",
+      "target_second"
+    ],
+    "response_code_mapping": [
+      "natural_A_for_description_1",
+      "reverse_B_for_description_1"
+    ],
+    "purpose": "Separate semantic contrast, position bias, response-token bias, and their interaction."
+  },
+  "probability_grid": [
+    "0",
+    "1/12",
+    "1/6",
+    "1/3",
+    "1/2",
+    "2/3",
+    "5/6",
+    "11/12",
+    "1"
+  ],
+  "mandatory_controls": {
+    "code_mapping": "Every literal code-key row must have positive raw target-oriented log odds in all presentation/code cells.",
+    "semantic_equality": "The maximum absolute factorial-averaged target-oriented log odds for semantically identical descriptions contributes to the independent instrument radius.",
+    "probability_order": "Every higher-probability copy of the same anchor lottery must dominate its lower-probability copy outside the instrument radius.",
+    "anchor_dominance": "BEST must dominate every registered cell and every registered cell must dominate WORST outside the instrument radius.",
+    "cold_start_replay": "Every prompt row is repeated after a process restart; the maximum target-log-odds replay delta contributes to the instrument radius."
+  },
+  "derived_instrument_radius": {
+    "formula_ascii": "radius = max_semantic_equality_abs_contrast + max_cold_start_target_log_odds_delta",
+    "post_hoc_override": false
+  },
+  "monotone_ruler_gate": {
+    "formula_ascii": "d_inf(y,C) = 0.5 * max_{i<j} max(y_j-y_i,0), where C is the cone of nonincreasing curves",
+    "curve_admission": "For every required curve, d_inf is no larger than the derived radius, y(p=0) is at least the radius, and y(p=1) is at most minus the radius.",
+    "required_standard_curves": 36,
+    "required_compound_curves": 18
+  },
+  "planned_scale": {
+    "fresh_prompt_families": 3,
+    "main_objects": 18,
+    "probability_points": 9,
+    "factorial_cells_per_content": 4,
+    "unique_prompt_rows": 2412,
+    "cold_start_epochs": 2,
+    "planned_receipts": 4824
+  },
+  "fixed_sequence_gates": [
+    {
+      "gate": "C0",
+      "condition": "All literal code-mapping controls pass.",
+      "failure": "code_channel_invalid"
+    },
+    {
+      "gate": "D0",
+      "condition": "All probability-order and anchor-dominance controls pass outside the derived instrument radius.",
+      "failure": "semantic_order_invalid"
+    },
+    {
+      "gate": "M0",
+      "condition": "All 36 standard and 18 compound ruler curves satisfy the monotone-distance and robust-endpoint conditions.",
+      "failure": "monotone_ruler_not_established"
+    },
+    {
+      "gate": "J0",
+      "condition": "Every registered component/mixture tuple is jointly admitted by M0.",
+      "failure": "mixture_analysis_unavailable"
+    }
+  ],
+  "total_mapping": {
+    "pass_all": "measurement_channel_admitted_for_successor_design_only",
+    "fail_any": "stop_without_mixture_or_decision_quotient_claim",
+    "invalid_instrument": "not_evaluated",
+    "sequence_rule": "Only pass opens the next gate; fail or not_evaluated stops the sequence."
+  },
+  "execution_requirements": {
+    "manifest": "A compare-or-fail manifest derived deterministically from pilot_design_v035.py and marked registered_not_run.",
+    "registration": "A compare-or-fail environment registration binding the model, server, CUDA library, runner, analyzer, hard-cap wrapper, source artifacts, resource limits, commit, and manifest hashes.",
+    "authorization": "The live runner rejects draft or execution_authorized=false manifests.",
+    "output": "One write-once hashed receipt per query and a hash-bound aggregate analysis."
+  },
+  "claim_boundary": "This pilot can validate or reject one semantic-choice measurement channel. It cannot confirm mixture affinity, validate the v0.33 decision quotient on held-out behavior, authorize edits, establish a general value representation, or resolve ASMP-9."
+}

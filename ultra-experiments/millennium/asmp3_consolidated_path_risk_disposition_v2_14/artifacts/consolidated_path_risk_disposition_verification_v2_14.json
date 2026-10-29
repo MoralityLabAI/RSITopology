@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_source_manifest_requirement_path_risk_trigger_and_stop_audit",
+  "checks": {
+    "V0_schema_parent_and_status": true,
+    "V1_all_source_hashes_reconstructed": true,
+    "V2_all_thirteen_package_manifests_independently_rehashed": true,
+    "V3_all_eighteen_requirement_statuses_and_checks_match": true,
+    "V4_literal_two_sided_refutation_preserved": true,
+    "V5_online_characterization_and_minimality_preserved": true,
+    "V6_correlated_path_risk_theorem_and_firewall_reconstructed": true,
+    "V7_noise_trigger_cleared_and_exactly_four_blockers_remain": true,
+    "V8_external_gate_reconstructed_as_zero_of_two": true,
+    "V9_all_producer_gates_and_claim_boundaries_hold": true
+  },
+  "claim_boundary": "This checker validates the internal evidence disposition. It does not supply normative authority, unrestricted classification, or external acceptance.",
+  "passed": true,
+  "schema_version": "asmp3_consolidated_path_risk_disposition_verification_v2_14"
+}

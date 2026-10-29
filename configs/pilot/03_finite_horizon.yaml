@@ -1,0 +1,13 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2",
+  "experiment": "03_finite_horizon",
+  "run_id": "pilot_v1",
+  "seed": 2026071613,
+  "parameters": {
+    "spectra": [[1.01], [1.2], [1.5], [1.2, 1.2], [1.5, 1.2, 1.05]],
+    "horizons": [5, 10, 20, 50, 100, 250, 500],
+    "collar_ratios": [0.0625, 0.125, 0.25, 0.5, 0.8],
+    "block_length": 32
+  }
+}

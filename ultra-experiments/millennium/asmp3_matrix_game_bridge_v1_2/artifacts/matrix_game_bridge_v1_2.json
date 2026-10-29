@@ -1,0 +1,1610 @@
+{
+  "alias_rows": [
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/4",
+          "3/4"
+        ],
+        "min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "copy_count_per_action": 1,
+      "game": {
+        "columns": 2,
+        "payoff": [
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "3/5"
+          ]
+        ],
+        "rows": 2
+      },
+      "quotient_columns": 2,
+      "quotient_rows": 2,
+      "raw_columns": 2,
+      "raw_rows": 2,
+      "value": "1/2"
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/8",
+          "1/8",
+          "3/8",
+          "3/8"
+        ],
+        "min_mix": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "copy_count_per_action": 2,
+      "game": {
+        "columns": 4,
+        "payoff": [
+          [
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5"
+          ]
+        ],
+        "rows": 4
+      },
+      "quotient_columns": 2,
+      "quotient_rows": 2,
+      "raw_columns": 4,
+      "raw_rows": 4,
+      "value": "1/2"
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "min_mix": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "copy_count_per_action": 3,
+      "game": {
+        "columns": 6,
+        "payoff": [
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ]
+        ],
+        "rows": 6
+      },
+      "quotient_columns": 2,
+      "quotient_rows": 2,
+      "raw_columns": 6,
+      "raw_rows": 6,
+      "value": "1/2"
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/16",
+          "1/16",
+          "1/16",
+          "1/16",
+          "3/16",
+          "3/16",
+          "3/16",
+          "3/16"
+        ],
+        "min_mix": [
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "copy_count_per_action": 4,
+      "game": {
+        "columns": 8,
+        "payoff": [
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ]
+        ],
+        "rows": 8
+      },
+      "quotient_columns": 2,
+      "quotient_rows": 2,
+      "raw_columns": 8,
+      "raw_rows": 8,
+      "value": "1/2"
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/20",
+          "1/20",
+          "1/20",
+          "1/20",
+          "1/20",
+          "3/20",
+          "3/20",
+          "3/20",
+          "3/20",
+          "3/20"
+        ],
+        "min_mix": [
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "copy_count_per_action": 5,
+      "game": {
+        "columns": 10,
+        "payoff": [
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ]
+        ],
+        "rows": 10
+      },
+      "quotient_columns": 2,
+      "quotient_rows": 2,
+      "raw_columns": 10,
+      "raw_rows": 10,
+      "value": "1/2"
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/24",
+          "1/24",
+          "1/24",
+          "1/24",
+          "1/24",
+          "1/24",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8"
+        ],
+        "min_mix": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "copy_count_per_action": 6,
+      "game": {
+        "columns": 12,
+        "payoff": [
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "4/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "2/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5",
+            "3/5"
+          ]
+        ],
+        "rows": 12
+      },
+      "quotient_columns": 2,
+      "quotient_rows": 2,
+      "raw_columns": 12,
+      "raw_rows": 12,
+      "value": "1/2"
+    }
+  ],
+  "certified": true,
+  "claim_boundary": "The normal-form matrix must be explicitly supplied. A compact extensive-form game can have exponentially many pure strategies; perfect-recall sequence form is still required to avoid that expansion.",
+  "experiment_id": "ASMP-3-MATRIX-GAME-BRIDGE-v1.2",
+  "explicit_rows": [
+    {
+      "case_id": "matching_pennies",
+      "certificate": {
+        "claimed_value": "0",
+        "column_payoffs_against_max_mix": [
+          "0",
+          "0"
+        ],
+        "exact": true,
+        "lower_bound": "0",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "mixed_pair_payoff": "0",
+        "row_payoffs_against_min_mix": [
+          "0",
+          "0"
+        ],
+        "upper_bound": "0",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "game": {
+        "columns": 2,
+        "payoff": [
+          [
+            "1",
+            "-1"
+          ],
+          [
+            "-1",
+            "1"
+          ]
+        ],
+        "rows": 2
+      },
+      "interpretation": "hidden simultaneous mixing raises the pure maximin from -1 to 0",
+      "pure_maximin": "-1",
+      "pure_minimax": "1"
+    },
+    {
+      "case_id": "rock_paper_scissors",
+      "certificate": {
+        "claimed_value": "0",
+        "column_payoffs_against_max_mix": [
+          "0",
+          "0",
+          "0"
+        ],
+        "exact": true,
+        "lower_bound": "0",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "min_mix": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "mixed_pair_payoff": "0",
+        "row_payoffs_against_min_mix": [
+          "0",
+          "0",
+          "0"
+        ],
+        "upper_bound": "0",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "game": {
+        "columns": 3,
+        "payoff": [
+          [
+            "0",
+            "-1",
+            "1"
+          ],
+          [
+            "1",
+            "0",
+            "-1"
+          ],
+          [
+            "-1",
+            "1",
+            "0"
+          ]
+        ],
+        "rows": 3
+      },
+      "interpretation": "three-action cyclic hidden strategies require full mixing",
+      "pure_maximin": "-1",
+      "pure_minimax": "1"
+    },
+    {
+      "case_id": "biased_oversight",
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/4",
+          "3/4"
+        ],
+        "min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "game": {
+        "columns": 2,
+        "payoff": [
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "3/5"
+          ]
+        ],
+        "rows": 2
+      },
+      "interpretation": "nonuniform verifier mixing equalizes two hidden attacks",
+      "pure_maximin": "2/5",
+      "pure_minimax": "3/5"
+    }
+  ],
+  "gates": {
+    "A0_action_aliases_preserve_value": true,
+    "I0_identity_values_are_one_over_size": true,
+    "I1_all_identity_saddles_exact": true,
+    "M0_all_explicit_saddles_exact": true,
+    "M1_matching_mixed_value_zero": true,
+    "M2_biased_nonuniform_saddle_exact": true
+  },
+  "identity_rows": [
+    {
+      "certificate": {
+        "claimed_value": "1",
+        "column_payoffs_against_max_mix": [
+          "1"
+        ],
+        "exact": true,
+        "lower_bound": "1",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1"
+        ],
+        "min_mix": [
+          "1"
+        ],
+        "mixed_pair_payoff": "1",
+        "row_payoffs_against_min_mix": [
+          "1"
+        ],
+        "upper_bound": "1",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 1,
+      "matrix_entries": 1,
+      "mixed_value": "1",
+      "pure_maximin": "1",
+      "row_actions": 1,
+      "size": 1
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/2",
+        "column_payoffs_against_max_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "exact": true,
+        "lower_bound": "1/2",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "mixed_pair_payoff": "1/2",
+        "row_payoffs_against_min_mix": [
+          "1/2",
+          "1/2"
+        ],
+        "upper_bound": "1/2",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 2,
+      "matrix_entries": 4,
+      "mixed_value": "1/2",
+      "pure_maximin": "0",
+      "row_actions": 2,
+      "size": 2
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/3",
+        "column_payoffs_against_max_mix": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "exact": true,
+        "lower_bound": "1/3",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "min_mix": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "mixed_pair_payoff": "1/3",
+        "row_payoffs_against_min_mix": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "upper_bound": "1/3",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 3,
+      "matrix_entries": 9,
+      "mixed_value": "1/3",
+      "pure_maximin": "0",
+      "row_actions": 3,
+      "size": 3
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/4",
+        "column_payoffs_against_max_mix": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "exact": true,
+        "lower_bound": "1/4",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "min_mix": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "mixed_pair_payoff": "1/4",
+        "row_payoffs_against_min_mix": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "upper_bound": "1/4",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 4,
+      "matrix_entries": 16,
+      "mixed_value": "1/4",
+      "pure_maximin": "0",
+      "row_actions": 4,
+      "size": 4
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/5",
+        "column_payoffs_against_max_mix": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "exact": true,
+        "lower_bound": "1/5",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "min_mix": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "mixed_pair_payoff": "1/5",
+        "row_payoffs_against_min_mix": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "upper_bound": "1/5",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 5,
+      "matrix_entries": 25,
+      "mixed_value": "1/5",
+      "pure_maximin": "0",
+      "row_actions": 5,
+      "size": 5
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/6",
+        "column_payoffs_against_max_mix": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "exact": true,
+        "lower_bound": "1/6",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "min_mix": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "mixed_pair_payoff": "1/6",
+        "row_payoffs_against_min_mix": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "upper_bound": "1/6",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 6,
+      "matrix_entries": 36,
+      "mixed_value": "1/6",
+      "pure_maximin": "0",
+      "row_actions": 6,
+      "size": 6
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/7",
+        "column_payoffs_against_max_mix": [
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        "exact": true,
+        "lower_bound": "1/7",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        "min_mix": [
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        "mixed_pair_payoff": "1/7",
+        "row_payoffs_against_min_mix": [
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        "upper_bound": "1/7",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 7,
+      "matrix_entries": 49,
+      "mixed_value": "1/7",
+      "pure_maximin": "0",
+      "row_actions": 7,
+      "size": 7
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/8",
+        "column_payoffs_against_max_mix": [
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8"
+        ],
+        "exact": true,
+        "lower_bound": "1/8",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8"
+        ],
+        "min_mix": [
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8"
+        ],
+        "mixed_pair_payoff": "1/8",
+        "row_payoffs_against_min_mix": [
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8"
+        ],
+        "upper_bound": "1/8",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 8,
+      "matrix_entries": 64,
+      "mixed_value": "1/8",
+      "pure_maximin": "0",
+      "row_actions": 8,
+      "size": 8
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/9",
+        "column_payoffs_against_max_mix": [
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9"
+        ],
+        "exact": true,
+        "lower_bound": "1/9",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9"
+        ],
+        "min_mix": [
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9"
+        ],
+        "mixed_pair_payoff": "1/9",
+        "row_payoffs_against_min_mix": [
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9",
+          "1/9"
+        ],
+        "upper_bound": "1/9",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 9,
+      "matrix_entries": 81,
+      "mixed_value": "1/9",
+      "pure_maximin": "0",
+      "row_actions": 9,
+      "size": 9
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/10",
+        "column_payoffs_against_max_mix": [
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10"
+        ],
+        "exact": true,
+        "lower_bound": "1/10",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10"
+        ],
+        "min_mix": [
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10"
+        ],
+        "mixed_pair_payoff": "1/10",
+        "row_payoffs_against_min_mix": [
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10",
+          "1/10"
+        ],
+        "upper_bound": "1/10",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 10,
+      "matrix_entries": 100,
+      "mixed_value": "1/10",
+      "pure_maximin": "0",
+      "row_actions": 10,
+      "size": 10
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/11",
+        "column_payoffs_against_max_mix": [
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11"
+        ],
+        "exact": true,
+        "lower_bound": "1/11",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11"
+        ],
+        "min_mix": [
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11"
+        ],
+        "mixed_pair_payoff": "1/11",
+        "row_payoffs_against_min_mix": [
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11",
+          "1/11"
+        ],
+        "upper_bound": "1/11",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 11,
+      "matrix_entries": 121,
+      "mixed_value": "1/11",
+      "pure_maximin": "0",
+      "row_actions": 11,
+      "size": 11
+    },
+    {
+      "certificate": {
+        "claimed_value": "1/12",
+        "column_payoffs_against_max_mix": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        "exact": true,
+        "lower_bound": "1/12",
+        "lower_certificate_valid": true,
+        "max_mix": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        "min_mix": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        "mixed_pair_payoff": "1/12",
+        "row_payoffs_against_min_mix": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        "upper_bound": "1/12",
+        "upper_certificate_valid": true
+      },
+      "certified": true,
+      "hidden_attack_actions": 12,
+      "matrix_entries": 144,
+      "mixed_value": "1/12",
+      "pure_maximin": "0",
+      "row_actions": 12,
+      "size": 12
+    }
+  ],
+  "parent_result": "ASMP-3-TWO-ROLE-BACKWARD-BRIDGE-v1.1",
+  "schema_version": "asmp3_matrix_game_bridge_v1_2",
+  "status": "exact_simultaneous_hidden_action_bridge",
+  "theorem": {
+    "certificate": "matching rational max lower and min upper strategies",
+    "consequence": "hidden mixed strategies are handled exactly without revealing their actions or imposing a sequential order",
+    "input": "finite rational zero-sum simultaneous-action payoff matrix",
+    "max_lp": "maximize v with x in simplex and A^T x >= v 1",
+    "min_lp": "minimize w with y in simplex and A y <= w 1"
+  }
+}

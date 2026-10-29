@@ -1,0 +1,22 @@
+{
+  "comparisons": [
+    {
+      "byte_identical_overlap_count": 0,
+      "path": "C:\\projects\\RSITopology\\protocols\\qwen08_dense_local_prompt_manifest_v0_1.json",
+      "prompt_count": 4608,
+      "sha256": "b7d2e98e90158b1a5f67981f5ec40261c672c64739263927dc5322861cacbd39"
+    },
+    {
+      "byte_identical_overlap_count": 0,
+      "path": "C:\\projects\\RSITopology\\protocols\\qwen_holonomy_causal_outer_manifest_v0_1_1.json",
+      "prompt_count": 460,
+      "sha256": "3dec1f1693a4789ddf4e4439fe54551960f96a4d067c330f22558e7144093cc4"
+    }
+  ],
+  "fresh_prompt_count": 2304,
+  "manifest_path": "C:\\projects\\RSITopology\\protocols\\qwen08_context_stageb_prompt_manifest_v0_1.json",
+  "manifest_sha256": "efed466dbd859047679483d971340a937a86320fd299efdb213611c9dec8adf8",
+  "passed": true,
+  "schema_version": "qwen08_context_stageb_prompt_separation_v0_1",
+  "scientific_protocol_sha256": "62c4e9d2c250957bfd3257c2775691d0078ae50fad772f443d741fcacef935b1"
+}

@@ -1,0 +1,28 @@
+{
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/run_confirmation_v0_44.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/verify_result_v0_44.py"
+  },
+  "elapsed_seconds": 12.657392300025094,
+  "gates": {
+    "B0": true,
+    "C0": true,
+    "D0": true,
+    "I0": true,
+    "P0": true,
+    "Q0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "X0": true
+  },
+  "implementation_commit": "d87e78026c26b1cf50de96d79a3568324432569a",
+  "peak_working_set_bytes": 276942848,
+  "protocol_id": "asmp9-policy-specific-information-v0.44",
+  "registration_commit": "ec7487b2137b5553a17e06316d686911ceceaabe",
+  "registration_sha256": "067690ee28cc38f69b70d8581f12fafaf1194a66b6b0b82d1af5854f774746e5",
+  "result_sha256": "76375faf5bad1d8c93fd78f2293fa0d9c79680ea8f8c945f476057d34b24cbf5",
+  "status": "policy_specific_information_containment_established",
+  "verification_sha256": "2913d3e405cdc0a162c073f8edc91fb3a50bfa1cbed2326f9b7d30dd4772eddd",
+  "version": "0.44"
+}

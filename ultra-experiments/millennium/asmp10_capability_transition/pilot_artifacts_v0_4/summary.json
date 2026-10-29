@@ -1,0 +1,206 @@
+{
+  "allocator": {
+    "allocator_fraction": 0.5000610426077402,
+    "allocator_hard_cap_mb": 2048.0,
+    "total_gpu_mb": 4095.5
+  },
+  "chunks_completed": 6,
+  "chunks_registered": 6,
+  "delayed_transition_candidates": 3,
+  "elapsed_seconds": 1179.2810000000027,
+  "error": null,
+  "global_gpu_used_mb_end_descriptive": 115.0,
+  "global_gpu_used_mb_start_descriptive": 74.0,
+  "pilot_live": true,
+  "results": [
+    {
+      "delay_steps": null,
+      "delayed_transition_candidate": false,
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.016282270460226584,
+        "step": 15000,
+        "test_accuracy": 0.41247832775115967,
+        "test_loss": 2.748558759689331,
+        "train_accuracy": 1.0,
+        "train_loss": 0.0007101887022145092
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 14.451124965246336,
+        "parameter_l2": 16.033317147408706,
+        "representation_effective_rank": 23.896460698902615,
+        "token_embedding_stable_rank": 11.021124305526982
+      },
+      "memorization_step": 100,
+      "metric_count": 151,
+      "peak_cuda_allocated_mb": 0.0,
+      "peak_cuda_reserved_mb": 0.0,
+      "run_id": "seed07_tf040_wd100",
+      "seed": 7,
+      "status": "completed",
+      "steps_completed": 15000,
+      "train_fraction": 0.4,
+      "transition_step": null,
+      "weight_decay": 1.0
+    },
+    {
+      "delay_steps": null,
+      "delayed_transition_candidate": false,
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.006851233196673335,
+        "step": 15000,
+        "test_accuracy": 0.3639514744281769,
+        "test_loss": 3.1904714107513428,
+        "train_accuracy": 1.0,
+        "train_loss": 0.0020625998731702566
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 15.028286973164615,
+        "parameter_l2": 13.502303406025153,
+        "representation_effective_rank": 22.829567583758013,
+        "token_embedding_stable_rank": 9.651003441830504
+      },
+      "memorization_step": 100,
+      "metric_count": 151,
+      "peak_cuda_allocated_mb": 0.0,
+      "peak_cuda_reserved_mb": 0.0,
+      "run_id": "seed07_tf040_wd200",
+      "seed": 7,
+      "status": "completed",
+      "steps_completed": 15000,
+      "train_fraction": 0.4,
+      "transition_step": null,
+      "weight_decay": 2.0
+    },
+    {
+      "delay_steps": 1800,
+      "delayed_transition_candidate": true,
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.04010869144063153,
+        "step": 15000,
+        "test_accuracy": 1.0,
+        "test_loss": 0.014494681730866432,
+        "train_accuracy": 1.0,
+        "train_loss": 0.009576371870934963
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.766645977582398,
+        "parameter_l2": 16.19950965520137,
+        "representation_effective_rank": 21.236657735739893,
+        "token_embedding_stable_rank": 11.830857337825543
+      },
+      "memorization_step": 100,
+      "metric_count": 151,
+      "peak_cuda_allocated_mb": 0.0,
+      "peak_cuda_reserved_mb": 0.0,
+      "run_id": "seed07_tf055_wd100",
+      "seed": 7,
+      "status": "completed",
+      "steps_completed": 15000,
+      "train_fraction": 0.55,
+      "transition_step": 1900,
+      "weight_decay": 1.0
+    },
+    {
+      "delay_steps": 1200,
+      "delayed_transition_candidate": true,
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.038141548825781184,
+        "step": 15000,
+        "test_accuracy": 1.0,
+        "test_loss": 0.013479627668857574,
+        "train_accuracy": 1.0,
+        "train_loss": 0.006493098568171263
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.577292813025693,
+        "parameter_l2": 14.103824222290756,
+        "representation_effective_rank": 19.371120842839648,
+        "token_embedding_stable_rank": 10.665952839557775
+      },
+      "memorization_step": 100,
+      "metric_count": 151,
+      "peak_cuda_allocated_mb": 0.0,
+      "peak_cuda_reserved_mb": 0.0,
+      "run_id": "seed07_tf055_wd200",
+      "seed": 7,
+      "status": "completed",
+      "steps_completed": 15000,
+      "train_fraction": 0.55,
+      "transition_step": 1300,
+      "weight_decay": 2.0
+    },
+    {
+      "delay_steps": 800,
+      "delayed_transition_candidate": true,
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 0.052385701434739626,
+        "step": 15000,
+        "test_accuracy": 1.0,
+        "test_loss": 0.015957079827785492,
+        "train_accuracy": 1.0,
+        "train_loss": 0.012513513676822186
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 13.11554725047207,
+        "parameter_l2": 16.581520848421096,
+        "representation_effective_rank": 18.783692690506044,
+        "token_embedding_stable_rank": 10.992871868811502
+      },
+      "memorization_step": 100,
+      "metric_count": 151,
+      "peak_cuda_allocated_mb": 66.26416015625,
+      "peak_cuda_reserved_mb": 94.0,
+      "run_id": "seed07_tf070_wd100",
+      "seed": 7,
+      "status": "completed",
+      "steps_completed": 15000,
+      "train_fraction": 0.7,
+      "transition_step": 900,
+      "weight_decay": 1.0
+    },
+    {
+      "delay_steps": 300,
+      "delayed_transition_candidate": false,
+      "device": "cuda",
+      "final_metrics": {
+        "gradient_norm": 3.3273910773681354,
+        "step": 15000,
+        "test_accuracy": 1.0,
+        "test_loss": 0.054038576781749725,
+        "train_accuracy": 1.0,
+        "train_loss": 0.043771181255578995
+      },
+      "geometry": {
+        "feature_step": 500,
+        "output_weight_stable_rank": 12.67075167683947,
+        "parameter_l2": 13.86354214510737,
+        "representation_effective_rank": 16.22674806102644,
+        "token_embedding_stable_rank": 9.892999579448464
+      },
+      "memorization_step": 100,
+      "metric_count": 151,
+      "peak_cuda_allocated_mb": 66.103515625,
+      "peak_cuda_reserved_mb": 92.0,
+      "run_id": "seed07_tf070_wd200",
+      "seed": 7,
+      "status": "completed",
+      "steps_completed": 15000,
+      "train_fraction": 0.7,
+      "transition_step": 400,
+      "weight_decay": 2.0
+    }
+  ],
+  "schema_version": "asmp10_modular_transition_liveness_summary_v0_4",
+  "status": "completed",
+  "task_id": "asmp10-grokking-liveness-v0-4"
+}

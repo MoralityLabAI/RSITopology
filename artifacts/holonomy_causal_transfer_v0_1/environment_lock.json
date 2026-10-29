@@ -1,0 +1,9 @@
+{
+  "execution": "CPU-only; no model weights, CUDA, training, or mutation",
+  "numpy": "2.4.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.4",
+  "python_executable": "C:\\Python311\\python.exe",
+  "scikit_learn": "1.7.1",
+  "scipy": "1.16.2"
+}

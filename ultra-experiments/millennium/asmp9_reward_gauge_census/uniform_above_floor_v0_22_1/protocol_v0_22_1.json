@@ -1,0 +1,136 @@
+{
+  "amends": "ASMP-9-UNIFORM-ABOVE-FLOOR-v0.22",
+  "amendment_scope": "Mechanical successor only. Replace v0.22's case-sensitive substring proxy in G8 with exact equality against sealed structured allowed/forbidden claim lists; preserve the mathematics, trial counts, thresholds, resource caps, and claim boundary; execute only on successor-fresh graphs.",
+  "claim_boundary": "For one finite simple biconnected comparison block under the inherited independent-binomial model, epsilon=1/2, and a declared uniform integer trial count r>=2 on every edge, translate exact quotient-liveness availability into Backman's weighted strongly-connected partial-orientation Tutte specialization. For every fixed r, the evaluation point ((2^r-2)/(2^r-1),2^r) lies on the Jaeger-Vertigan-Welsh #P-hard curve H_-1. Tutte multiplicativity over connected components and vertex-biconnected blocks, with bridge factors known explicitly, gives a polynomial-time Turing reduction from general fixed-point evaluation to an oracle on finite simple biconnected blocks. Therefore the exact microtrial numerator is #P-complete and exact rational availability is #P-hard under polynomial-time Turing reductions even inside one block. This is a prior-art-derived access-model translation. It does not prove that uniform allocation is optimal, classify maximin design or nonuniform counts, arbitrary epsilon, approximation, adaptive allocation, dependence, response misspecification, behavioral reward identification, general IRL, or resolve ASMP-9.",
+  "complexity_statement": {
+    "allowed": [
+      "For every fixed r>=2, exact evaluation of the declared uniform allocation on finite simple biconnected blocks is #P-hard under polynomial-time Turing reductions, by Tutte block multiplicativity and explicit bridge factors.",
+      "For fixed r, the common-denominator microtrial numerator is #P-complete under polynomial-time Turing reductions.",
+      "The r=2 minimal uniform above-floor cell evaluates T_G(2/3,4) times a known nonzero rational prefactor."
+    ],
+    "forbidden": [
+      "Maximin allocation is #P-hard.",
+      "Uniform allocation is optimal on arbitrary biconnected blocks.",
+      "Nonuniform counts or arbitrary endpoint probabilities are classified.",
+      "The Backman formula or the Tutte hard curve is new."
+    ]
+  },
+  "environment_lock_path": "environment_lock_v0_22_1.json",
+  "freshness_rule": {
+    "burned_atlas_rule": "Every connected graph with 3-6 vertices and at most 9 edges was burned by v0.20 development.",
+    "burned_registry_path": "burned_graph_registry_v0_22_1.json",
+    "exact_check": "NetworkX graph isomorphism after matching node and edge counts",
+    "prior_universe": "Every graph-shaped dictionary in every earlier ASMP-9 protocol*.json plus the v0.20 graph-atlas envelope, including all v0.22 cells"
+  },
+  "gate_ids": [
+    "G0_registration_and_predecessor_binding",
+    "G1_freshness_and_structure",
+    "G2_state_law_and_semantics",
+    "G3_weighted_tutte_identity",
+    "G4_hard_curve_and_fixed_points",
+    "G5_minimal_above_floor_microtrial",
+    "G6_endpoint_label_invariance",
+    "G7_exact_numerator_ledger",
+    "G8_structured_complexity_attribution",
+    "G9_resource_and_scope"
+  ],
+  "predecessor_record": {
+    "expected_gate_passes": {
+      "G0_registration_binding": true,
+      "G1_freshness_and_structure": true,
+      "G2_state_law_and_semantics": true,
+      "G3_weighted_tutte_identity": true,
+      "G4_hard_curve_and_fixed_points": true,
+      "G5_minimal_above_floor_microtrial": true,
+      "G6_endpoint_label_invariance": true,
+      "G7_exact_numerator_ledger": true,
+      "G8_complexity_attribution": false,
+      "G9_resource_and_scope": true
+    },
+    "expected_verdict": "uniform_above_floor_translation_not_established_v0_22",
+    "independent_verification_path": "../uniform_above_floor_v0_22/artifacts_v0_22/independent_verification_v0_22.json",
+    "independent_verification_sha256": "92d8ba625dd4900fcd77da913f7bdc7d8bd2354f1650b9a4ac35b691be02eb4b",
+    "registration_path": "../uniform_above_floor_v0_22/registration_v0_22.json",
+    "registration_sha256": "d62cf556ad469ff8c20bb6f004c04c3ccaac0c58157fd77f4bf978a53bc840db",
+    "result_path": "../uniform_above_floor_v0_22/artifacts_v0_22/result_v0_22.json",
+    "result_sha256": "15dd7308e561853bcf655f7a3cd9b97344342d1af347fa5c0efdab2464b6cb48",
+    "run_receipt_path": "../uniform_above_floor_v0_22/artifacts_v0_22/run_receipt_v0_22.json",
+    "run_receipt_sha256": "72af311f69f05f9f7f67d5001698cbc6dcff67fb27177eb1531031bb3d679bdd"
+  },
+  "primary_graphs": {
+    "chorded_cycle_7": {
+      "edges": [
+        [0, 1],
+        [0, 2],
+        [0, 6],
+        [1, 2],
+        [2, 3],
+        [2, 4],
+        [3, 4],
+        [4, 5],
+        [4, 6],
+        [5, 6]
+      ],
+      "node_count": 7
+    },
+    "chorded_cycle_8": {
+      "edges": [
+        [0, 1],
+        [0, 4],
+        [0, 7],
+        [1, 2],
+        [1, 5],
+        [2, 3],
+        [2, 6],
+        [3, 4],
+        [4, 5],
+        [5, 6],
+        [6, 7]
+      ],
+      "node_count": 8
+    },
+    "complete_5": {
+      "edges": [
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [0, 4],
+        [1, 2],
+        [1, 3],
+        [1, 4],
+        [2, 3],
+        [2, 4],
+        [3, 4]
+      ],
+      "node_count": 5
+    }
+  },
+  "prior_art": [
+    {
+      "identifier": "arXiv:1408.3962",
+      "role": "weighted strongly-connected partial-orientation Tutte formula"
+    },
+    {
+      "doi": "10.1017/S0305004100068936",
+      "role": "Tutte-plane #P-hardness dichotomy"
+    }
+  ],
+  "protocol_id": "ASMP-9-UNIFORM-ABOVE-FLOOR-v0.22.1",
+  "registered_trial_counts": [
+    2,
+    3,
+    5
+  ],
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "statistical_policy": "No statistical inference. All quantities are exact integers, rationals, graph predicates, hashes, or resource measurements.",
+  "version": "0.22.1",
+  "verdict_map": {
+    "all_gates_pass": "uniform_above_floor_value_complexity_classified_v0_22_1",
+    "any_substantive_gate_fails": "uniform_above_floor_translation_not_established_v0_22_1",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_22_1"
+  }
+}

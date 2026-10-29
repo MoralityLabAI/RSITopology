@@ -1,0 +1,1152 @@
+{
+  "claim_eligible": false,
+  "conditional_power": [
+    {
+      "alpha": "1/20",
+      "boundary": 237,
+      "cycle_length": 3,
+      "exact_power": {
+        "decimal": 0.8011830932745435,
+        "denominator_bit_length": 1942,
+        "denominator_sha256": "3ac4126d5ec1eac9dbc233ed4cb534c7fcb2ffef5bc17d29ac41035c5be7c18c",
+        "numerator_bit_length": 1941,
+        "numerator_sha256": "ac4a519bbe91c4be702c198f7ecf178407a73d0280e72e7ebf58160c03092cb2"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.4054651081081644,
+      "odds_ratio": "3/2",
+      "pre_attainment_power_decrease_count": 151,
+      "previous_power": {
+        "decimal": 0.7991355916337046,
+        "denominator_bit_length": 1935,
+        "denominator_sha256": "bd1993cab6b03d6a6636e08f419fcf4c04aeae14fe3167623872201b7477bcf7",
+        "numerator_bit_length": 1935,
+        "numerator_sha256": "c9a15c1c0de3c3f1233efea9f3283cc558dba3c3d70c6319c3ade1d54c4cef7d"
+      },
+      "randomization": {
+        "decimal": 0.8842815659536858,
+        "denominator_bit_length": 1331,
+        "denominator_sha256": "a86b58553fd101eef39e0c084cac7e6542fbde8ea0e5556034932d83f5fe9fb9",
+        "numerator_bit_length": 1331,
+        "numerator_sha256": "9c236a362b846ea8fba624988b437081ad7fdfcdb37e5473596ae1da35a4a798"
+      },
+      "scaled_first_attainment": 24.82469503786798,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 453
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 312,
+      "cycle_length": 4,
+      "exact_power": {
+        "decimal": 0.8008265587332892,
+        "denominator_bit_length": 3181,
+        "denominator_sha256": "17c3ddff028896c8e1add9cbed2778431c4ee51492b1deec88735633ed65ad9f",
+        "numerator_bit_length": 3180,
+        "numerator_sha256": "4214e1dd4b04446cf427836f186519b50eba413fcb3de9256e941a0d3da89df7"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.4054651081081644,
+      "odds_ratio": "3/2",
+      "pre_attainment_power_decrease_count": 226,
+      "previous_power": {
+        "decimal": 0.7988799167682425,
+        "denominator_bit_length": 3175,
+        "denominator_sha256": "706be7d46c995b6420066f6882f931edf5ec26afac2308651e0925dc91302d9b",
+        "numerator_bit_length": 3175,
+        "numerator_sha256": "08c9cc65c9b7e33b5493c7268b8b7b0fb2ef21ad8ec97cffb29f0e4c756cf18b"
+      },
+      "randomization": {
+        "decimal": 0.894970530278823,
+        "denominator_bit_length": 2320,
+        "denominator_sha256": "99ce29e6958e07230f0474175ffbe6aee9f927e98501258f1eb3383725c82170",
+        "numerator_bit_length": 2320,
+        "numerator_sha256": "0bb2ca14c73385e64ab709f9539d4d8b40112f2c3e820598e1761a29e2caf700"
+      },
+      "scaled_first_attainment": 24.78359454939469,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 603
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 462,
+      "cycle_length": 6,
+      "exact_power": {
+        "decimal": 0.8003787437302458,
+        "denominator_bit_length": 6563,
+        "denominator_sha256": "57df49cdd7a595854d231bfdfb73ab472a034ac3638ecd6198dccc68184635da",
+        "numerator_bit_length": 6562,
+        "numerator_sha256": "cc9450edd9096ea93780dfeb52b70e9eca48880570f72731e062e80ab5489a9a"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.4054651081081644,
+      "odds_ratio": "3/2",
+      "pre_attainment_power_decrease_count": 377,
+      "previous_power": {
+        "decimal": 0.7985268138804662,
+        "denominator_bit_length": 6558,
+        "denominator_sha256": "68de3fc230e8fa41af9177d78f07ab3b981f4bea41013f78436eb55d628e84cb",
+        "numerator_bit_length": 6557,
+        "numerator_sha256": "22d282708f3592b20afa648c092300d81adf1b6e3ed6ff1330fbd285e4afde34"
+      },
+      "randomization": {
+        "decimal": 0.9061953033674403,
+        "denominator_bit_length": 5319,
+        "denominator_sha256": "2cf6cbc334949742afaed6937091bf81e18ab2abfd734a835914cea1b9bd2645",
+        "numerator_bit_length": 5319,
+        "numerator_sha256": "ec60f2df89ce2ad96a4df445f4e556c7f00360f7258d5eff8f98ea6f782a064a"
+      },
+      "scaled_first_attainment": 24.742494060921395,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 903
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 612,
+      "cycle_length": 8,
+      "exact_power": {
+        "decimal": 0.8001205877683308,
+        "denominator_bit_length": 11142,
+        "denominator_sha256": "c38db4d2c92d3f0a920e60298d3d3049d30e5089913f748fdb812dbd97fbb243",
+        "numerator_bit_length": 11142,
+        "numerator_sha256": "69a302ac22dd92bf93709dce553fb9bad7288add6f16e2a6c9ed601e789a1afa"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.4054651081081644,
+      "odds_ratio": "3/2",
+      "pre_attainment_power_decrease_count": 526,
+      "previous_power": {
+        "decimal": 0.7983136593497018,
+        "denominator_bit_length": 11133,
+        "denominator_sha256": "b9928df0023aaaa3fc685e263c65198786f1c8f607bc6f8f12e4ca59375c9480",
+        "numerator_bit_length": 11132,
+        "numerator_sha256": "90c0b81c28825bd6338abac4a3d3b574e78d52ccbdc1aab824469c30afbaa328"
+      },
+      "randomization": {
+        "decimal": 0.9120105775239323,
+        "denominator_bit_length": 9504,
+        "denominator_sha256": "b2f18be2d6b5bcbc5b77939c86a7cf6eaf3d94adb8b0d27c959a31d26b69ec37",
+        "numerator_bit_length": 9504,
+        "numerator_sha256": "a0ecbe24d5fb86b4e8567eaa90b035222c5c58231d49a4330827a59f13266df1"
+      },
+      "scaled_first_attainment": 24.72194381668475,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 1203
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 913,
+      "cycle_length": 12,
+      "exact_power": {
+        "decimal": 0.8001783936924388,
+        "denominator_bit_length": 23930,
+        "denominator_sha256": "a54e1da240fadd1e59e0816297ac40d4ab53122609c5cfaf49e7994855f0509b",
+        "numerator_bit_length": 23930,
+        "numerator_sha256": "1b9233b7d03d7185654510f9d66977ac6955312e0ffbee13e9ec2979c3f69d88"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.4054651081081644,
+      "odds_ratio": "3/2",
+      "pre_attainment_power_decrease_count": 830,
+      "previous_power": {
+        "decimal": 0.7984743027207393,
+        "denominator_bit_length": 23920,
+        "denominator_sha256": "153b80f1e5b1940022f4d50bed4ad27094260651adfed720b1a8bc0e20456ef7",
+        "numerator_bit_length": 23919,
+        "numerator_sha256": "043399f16309aa4c49ed43f25484278d34682f04b7eff713ac9c8d7dcf528b86"
+      },
+      "randomization": {
+        "decimal": 0.9117015908447557,
+        "denominator_bit_length": 21497,
+        "denominator_sha256": "871b298aad99132f9f7e6aa3032fb4923dfe366ad2e2ae394e7f193042194a8f",
+        "numerator_bit_length": 21497,
+        "numerator_sha256": "9e82a4c335e4b2c2a3ce13ff93c08d2d9adc2a138fd776740a55ea3fca2c071a"
+      },
+      "scaled_first_attainment": 24.728793898096963,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 1805
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 83,
+      "cycle_length": 3,
+      "exact_power": {
+        "decimal": 0.8015325441714353,
+        "denominator_bit_length": 541,
+        "denominator_sha256": "ffcbd4dc4d78870da5803b4cd6ee60d05da96145d55e7d39e8837c127aa55e7a",
+        "numerator_bit_length": 541,
+        "numerator_sha256": "410137c090443c9f26b95a4828eec6eba0b07de7f6465492b710b8c18d19d428"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.6931471805599453,
+      "odds_ratio": "2/1",
+      "pre_attainment_power_decrease_count": 50,
+      "previous_power": {
+        "decimal": 0.7946763891461486,
+        "denominator_bit_length": 538,
+        "denominator_sha256": "3c9ae25109fa10899d5a35fff919d2878e5562daf13422a16db3af1bc2e56fb0",
+        "numerator_bit_length": 537,
+        "numerator_sha256": "256e63853f167a1b7faed4a68e71742c7e75eb3e441571ca6e3dd52c9f620dea"
+      },
+      "randomization": {
+        "decimal": 0.07691314827307832,
+        "denominator_bit_length": 448,
+        "denominator_sha256": "2de96ec4a4b229d579397d9f05d25da8eea6b5023e9bccd05dfccf12087339e9",
+        "fraction": "53487740595154064569903611468055479162732755081412484640614552823096676121686091816348169011686821997891938488205026358749466665046752/695430388641056579228036532817108014663533448455946910180505988593996970409832881328944137138219471561217924038459734777590299208984375",
+        "numerator_bit_length": 445,
+        "numerator_sha256": "f893c07f95ae41633297849178a198711c161996faa56c194d26383be82dad18"
+      },
+      "scaled_first_attainment": 24.823405719107072,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 155
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 109,
+      "cycle_length": 4,
+      "exact_power": {
+        "decimal": 0.8025590384800995,
+        "denominator_bit_length": 925,
+        "denominator_sha256": "520c5505cc1366124f4dec60e60fbae9800d5ad846f86c117c217003d9182c6a",
+        "numerator_bit_length": 925,
+        "numerator_sha256": "fbc1013b1f873b870d3b9d1dbe142fb5f69e160b4a75ac40479d5948b1f56203"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.6931471805599453,
+      "odds_ratio": "2/1",
+      "pre_attainment_power_decrease_count": 75,
+      "previous_power": {
+        "decimal": 0.7962228355377083,
+        "denominator_bit_length": 921,
+        "denominator_sha256": "8b884f77b86ea89b11b90f1032b5cf6ac58e4913c8aa247e505389e8198bc4e1",
+        "numerator_bit_length": 920,
+        "numerator_sha256": "25381d4374a90d71dcf627444a2d00852f328837378f78c9a024e757d5a82b3e"
+      },
+      "randomization": {
+        "decimal": 0.07473796354985851,
+        "denominator_bit_length": 794,
+        "denominator_sha256": "58ca0a246bdd1099d2baea57ed0a5e8e197a09dfad20f7b4bb0ce6e0d05708fc",
+        "numerator_bit_length": 791,
+        "numerator_sha256": "8820f0a3f1fc95e6d476d8a7873f5acf9aa4d4bd00bfab5296a7661973b89739"
+      },
+      "scaled_first_attainment": 24.863443470266922,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 207
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 160,
+      "cycle_length": 6,
+      "exact_power": {
+        "decimal": 0.8006837582785069,
+        "denominator_bit_length": 1984,
+        "denominator_sha256": "36e6ac97fb5c1a7797100e3f38b89cdddcdb9123d48a1e78b3a8d87922d3fc0a",
+        "numerator_bit_length": 1984,
+        "numerator_sha256": "f1c9843c0b5dda6a6e71aa9cb236571fc67615cd2e48d8cb003557c7cea2b20e"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.6931471805599453,
+      "odds_ratio": "2/1",
+      "pre_attainment_power_decrease_count": 127,
+      "previous_power": {
+        "decimal": 0.7952719316896004,
+        "denominator_bit_length": 1979,
+        "denominator_sha256": "5386d1ada16b991c006664be24f80647e516a531b571a4a46a43b2da5ea07a25",
+        "numerator_bit_length": 1978,
+        "numerator_sha256": "3ba5683c23d9b0ae7f8312dcec8c75c67f26a59895c250a2e64f2d04cc3b805c"
+      },
+      "randomization": {
+        "decimal": 0.08900563445192727,
+        "denominator_bit_length": 1793,
+        "denominator_sha256": "d7fba3d3f2a6a3a675ebf2a082bbdd16391ba96334c11f0fcaed2ad13dd83062",
+        "numerator_bit_length": 1790,
+        "numerator_sha256": "de6e030360137a048104d7d47b45f9a4bebc86242a7bc7cba3eecf0ee5ba718a"
+      },
+      "scaled_first_attainment": 24.74333021678737,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 309
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 212,
+      "cycle_length": 8,
+      "exact_power": {
+        "decimal": 0.801594501842808,
+        "denominator_bit_length": 3484,
+        "denominator_sha256": "c00c92241b2b4575e2accbea7db539e070751a5082d14fd04c18246bc7cd46e7",
+        "numerator_bit_length": 3483,
+        "numerator_sha256": "a56c4c67ba7595815606103c4aa54127f7d5288a89f85e151adf2a0acc74d362"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.6931471805599453,
+      "odds_ratio": "2/1",
+      "pre_attainment_power_decrease_count": 182,
+      "previous_power": {
+        "decimal": 0.7963489743193877,
+        "denominator_bit_length": 3474,
+        "denominator_sha256": "70381599eaafc27c2446606905aec8032ad093727cd167293f5858dafff6abc0",
+        "numerator_bit_length": 3473,
+        "numerator_sha256": "a2cf441aca10866a10600755a87511ed3cbbcbc22599e4b5babbf8c0834f5ff1"
+      },
+      "randomization": {
+        "decimal": 0.08449033283461817,
+        "denominator_bit_length": 3238,
+        "denominator_sha256": "1ce6133a7e9e80a2a2fbde0481207c1e24d62f9e2e749be231ac4069426ff77e",
+        "numerator_bit_length": 3235,
+        "numerator_sha256": "5ebf2f8c66c6ed73b68ff8ec955ce82772829164a5193dfd476afdfabfb343c7"
+      },
+      "scaled_first_attainment": 24.803386843527147,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 413
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 315,
+      "cycle_length": 12,
+      "exact_power": {
+        "decimal": 0.8011255241049038,
+        "denominator_bit_length": 7681,
+        "denominator_sha256": "a990db4b5f27026e38f44856ea42e07b4ba755493dcbb77e73d6a962cd8e28d1",
+        "numerator_bit_length": 7681,
+        "numerator_sha256": "ad0fd55d3206e680a0a2ccbb70abd71291dd6ec80646551ea4dabe99feebc927"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 0.6931471805599453,
+      "odds_ratio": "2/1",
+      "pre_attainment_power_decrease_count": 280,
+      "previous_power": {
+        "decimal": 0.796249693655721,
+        "denominator_bit_length": 7670,
+        "denominator_sha256": "2d4c2036b00bdf533ef27654967b532ab39868f7c723b1b1181894c723b9dc10",
+        "numerator_bit_length": 7670,
+        "numerator_sha256": "30d64090c1ab9a264654997fdba697bfca9e31c7fdf7b2159e7d131152bd4560"
+      },
+      "randomization": {
+        "decimal": 0.08806683101614951,
+        "denominator_bit_length": 7342,
+        "denominator_sha256": "806b2035a910a56809290bebdac84d65f20f345e30246d7966e83f42c8f7dc51",
+        "numerator_bit_length": 7339,
+        "numerator_sha256": "e9b69f152ed19cf1d52f9f9a3341d2fe7edfb7ededbcbb1a7b36714c2a2268b0"
+      },
+      "scaled_first_attainment": 24.78336796794722,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 619
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 35,
+      "cycle_length": 3,
+      "exact_power": {
+        "decimal": 0.8034931612228376,
+        "denominator_bit_length": 235,
+        "denominator_sha256": "41f60ed960b9a8aeba7e5ff7d33eb8ffea83e03048d8910b67bfe5b599b5ebb7",
+        "fraction": "23632124157334597822776429866718217988357373045541361478881541260242767/29411730301934152433318704882548000038774728825604332468581627717695488",
+        "numerator_bit_length": 234,
+        "numerator_sha256": "6b259b87efe9d3bc393ea1b7cb596ca3e1bcd448c4d4e1d652c80800db85df80"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 1.0986122886681098,
+      "odds_ratio": "3/1",
+      "pre_attainment_power_decrease_count": 22,
+      "previous_power": {
+        "decimal": 0.7951358932446708,
+        "denominator_bit_length": 227,
+        "denominator_sha256": "097f08ac250748c1acd67909723f6ce88a48542d04a26a9396012fb63615272a",
+        "fraction": "101949531374020084150988616956509358629188165603414108686281254564597/128216487571702722995096342910464917126542496004701770526054330353616",
+        "numerator_bit_length": 226,
+        "numerator_sha256": "c6d21e9de6422b8dc0af18f5a06c571a6bd9fc1ed702c91407f3d5f68255b12b"
+      },
+      "randomization": {
+        "decimal": 0.18219676416173472,
+        "denominator_bit_length": 175,
+        "denominator_sha256": "205ab3d970021cd41113c1b3fa46b216fb8e8b7d4a9bfe99ad479422a4993eb7",
+        "fraction": "5045317578981197409506826268971285355432990633614080/27691587181551184804645529116384603116376271197014717",
+        "numerator_bit_length": 172,
+        "numerator_sha256": "ba106ced409b439dcb025965544d1c2b3e06968cce1b18e6831b11edd5fcd75f"
+      },
+      "scaled_first_attainment": 25.345928177064224,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 63
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 46,
+      "cycle_length": 4,
+      "exact_power": {
+        "decimal": 0.8010480731867552,
+        "denominator_bit_length": 395,
+        "denominator_sha256": "55b221b76c7f44ef7eb0fbf39b23df9983809d57accc5db0bc175c1354b67c73",
+        "fraction": "48664854379222265929156493593888688889507083134237456062440101285052783364160324610063567511676543053510787698538087149/60751477980119443621318449614811029590680846155349098041133103244589762389027404291271010463928722189775411118239994180",
+        "numerator_bit_length": 395,
+        "numerator_sha256": "2da9673de0a21f21d8e42bade8b4bf0be30b4cfd2732bf1b9331d0fd2eaa5055"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 1.0986122886681098,
+      "odds_ratio": "3/1",
+      "pre_attainment_power_decrease_count": 29,
+      "previous_power": {
+        "decimal": 0.7994775453323628,
+        "denominator_bit_length": 387,
+        "denominator_sha256": "cbeab88dc463723396206b60cf87c5b418e14f57561d7f76cfc143e7567f8be7",
+        "fraction": "138579547508038199737185621485919449287560795190969750429382670972091842501865995385903758429008463110808695142348471/173337635706112565434006433418692070163848944190920472305361396050633539645099977442703291188825885916426699462867000",
+        "numerator_bit_length": 386,
+        "numerator_sha256": "50edd68832f0480986767b5d3f6eec1692231da1e76199fa1b3fca7599132bac"
+      },
+      "randomization": {
+        "decimal": 0.6690151218744381,
+        "denominator_bit_length": 305,
+        "denominator_sha256": "706bf33a8b8cd9a9923d2f341feb2b135bb787a0a70da91f952a264b0fa998e9",
+        "fraction": "28382113316972629966414347530346601279481186268413329374621675447921759327921310137147200629/42423724649828517567130498234928171277736821055682031028904521249766564623293601848176640000",
+        "numerator_bit_length": 304,
+        "numerator_sha256": "e1990e4b96384de7d9ee6b4e501e291172648b66c15f377c895afb55941f96b9"
+      },
+      "scaled_first_attainment": 25.345928177064224,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 84
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 66,
+      "cycle_length": 6,
+      "exact_power": {
+        "decimal": 0.8013465635913345,
+        "denominator_bit_length": 829,
+        "denominator_sha256": "0216780db7a009bc553d0aa20ccd4aa73259632f8486463b6f4e1b1cdb905744",
+        "numerator_bit_length": 829,
+        "numerator_sha256": "19174270316ce2f9b75c11263a60c381601b6213ac93f1b703e466be89f060bb"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 1.0986122886681098,
+      "odds_ratio": "3/1",
+      "pre_attainment_power_decrease_count": 51,
+      "previous_power": {
+        "decimal": 0.7968721950715664,
+        "denominator_bit_length": 823,
+        "denominator_sha256": "be3c9d07ec6c812897335e97f652aa4a9dca8bd4009b1f343e73c62fcafe41f9",
+        "numerator_bit_length": 823,
+        "numerator_sha256": "13791d6e80cdbd6552ebf4c1f6c7df5e84f41f17f1eec17f5f18a5244893d3cc"
+      },
+      "randomization": {
+        "decimal": 0.20065215871965325,
+        "denominator_bit_length": 715,
+        "denominator_sha256": "9f5ba764c5b453000eed84d023b6c322b02a7c790de92ed36760feafb80e8fec",
+        "numerator_bit_length": 713,
+        "numerator_sha256": "f334bb2ca2067926960c443f640f539001cc8bf8b6b2c49637948a95cc97fd1d"
+      },
+      "scaled_first_attainment": 25.144770016928792,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 125
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 87,
+      "cycle_length": 8,
+      "exact_power": {
+        "decimal": 0.8019988921492368,
+        "denominator_bit_length": 1443,
+        "denominator_sha256": "6c7263fcc81a9ca33a19fb43fb901c26d7e3027e26524ff5ea5e2daae5b84ec1",
+        "numerator_bit_length": 1443,
+        "numerator_sha256": "1430f0509ffed720596a6a71be00f6d12214e4a6aa95d139afa27898f4f1b7b4"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 1.0986122886681098,
+      "odds_ratio": "3/1",
+      "pre_attainment_power_decrease_count": 72,
+      "previous_power": {
+        "decimal": 0.7980445867906051,
+        "denominator_bit_length": 1435,
+        "denominator_sha256": "fe39e0348a811ed204c13b17c0c652dadea8f21b196c41852d7d31cc3d5e5f34",
+        "numerator_bit_length": 1435,
+        "numerator_sha256": "a4b5bd42790f45abfa8d15fd9f3e6027a1ff13cc6717fea2c6b2e6f751f4be59"
+      },
+      "randomization": {
+        "decimal": 0.19981856874176304,
+        "denominator_bit_length": 1290,
+        "denominator_sha256": "04e924f19e88fbcfcf6d4fdc8410433a30fb4868e0c4112489e52b91cb6cd88d",
+        "numerator_bit_length": 1287,
+        "numerator_sha256": "53920a769242898d9817ab357950237ad45f80df6dbbee3ae52ce5604cffa52b"
+      },
+      "scaled_first_attainment": 25.19505955696265,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 167
+    },
+    {
+      "alpha": "1/20",
+      "boundary": 129,
+      "cycle_length": 12,
+      "exact_power": {
+        "decimal": 0.8024642604293724,
+        "denominator_bit_length": 3168,
+        "denominator_sha256": "cb9be7bcb397a7e88cf9e46ef32f93c5af49ab399380df37d2c801527b2707ad",
+        "numerator_bit_length": 3168,
+        "numerator_sha256": "543e601ba8676e676f6f397cc41f214961f773e5b33a85e221f4c080718b8c14"
+      },
+      "exact_size": {
+        "decimal": 0.05,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "a0dc59003589a5f0e296d6cf249484625e561a1d07500bed8806a4598d8b60b2",
+        "fraction": "1/20",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "log_odds": 1.0986122886681098,
+      "odds_ratio": "3/1",
+      "pre_attainment_power_decrease_count": 113,
+      "previous_power": {
+        "decimal": 0.7990489317880811,
+        "denominator_bit_length": 3152,
+        "denominator_sha256": "5853a10d33fc3a1c63cf5b21cea1695cefc47ec33b57da5e58e5fc902f8d1b1a",
+        "numerator_bit_length": 3152,
+        "numerator_sha256": "5d53d34ee421f710313d4f228be7142ce8efd564f539ed8a26c06be13d7ea32b"
+      },
+      "randomization": {
+        "decimal": 0.19922369692553527,
+        "denominator_bit_length": 2945,
+        "denominator_sha256": "e146b02225600b29dc4931a71be764bcea6a241b3ad4d4c49422ad2f19f7beda",
+        "numerator_bit_length": 2943,
+        "numerator_sha256": "1b0f9c315532ce3083e1aa2c5983d44d7f489b37d826964609bdbaa4422533d1"
+      },
+      "scaled_first_attainment": 25.24534909699651,
+      "status": "reached",
+      "target_power": "4/5",
+      "trials_per_edge": 251
+    }
+  ],
+  "liveness": [
+    {
+      "beta1": 1,
+      "edge_count": 3,
+      "fiber_count": 7,
+      "fiber_rank_counts": {
+        "0": 6,
+        "1": 1
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.75,
+          "denominator_bit_length": 3,
+          "denominator_sha256": "6894b87e4d7693fac623a0f133ca4ef5e01677700e0784d2c370028c29a16863",
+          "fraction": "3/4",
+          "numerator_bit_length": 2,
+          "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+        },
+        "1": {
+          "decimal": 0.25,
+          "denominator_bit_length": 3,
+          "denominator_sha256": "6894b87e4d7693fac623a0f133ca4ef5e01677700e0784d2c370028c29a16863",
+          "fraction": "1/4",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.25,
+        "denominator_bit_length": 3,
+        "denominator_sha256": "6894b87e4d7693fac623a0f133ca4ef5e01677700e0784d2c370028c29a16863",
+        "fraction": "1/4",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "cycle_3",
+      "node_count": 3,
+      "trials_per_edge": 1
+    },
+    {
+      "beta1": 1,
+      "edge_count": 3,
+      "fiber_count": 19,
+      "fiber_rank_counts": {
+        "0": 12,
+        "1": 7
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.28125,
+          "denominator_bit_length": 6,
+          "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+          "fraction": "9/32",
+          "numerator_bit_length": 4,
+          "numerator_sha256": "7ad1ac4193e2879655f135a0c236366ac9fa325666ac85fd058f2473b7618a71"
+        },
+        "1": {
+          "decimal": 0.71875,
+          "denominator_bit_length": 6,
+          "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+          "fraction": "23/32",
+          "numerator_bit_length": 5,
+          "numerator_sha256": "163ee0d46590e3158b82ec38ef7a5851d4c36fdafc63b2bd3d3bc7194e356975"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.71875,
+        "denominator_bit_length": 6,
+        "denominator_sha256": "dd425feef83c5d3c5a19ad203460d56f9a65950707d36191f082f876bde43328",
+        "fraction": "23/32",
+        "numerator_bit_length": 5,
+        "numerator_sha256": "163ee0d46590e3158b82ec38ef7a5851d4c36fdafc63b2bd3d3bc7194e356975"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "cycle_3",
+      "node_count": 3,
+      "trials_per_edge": 2
+    },
+    {
+      "beta1": 1,
+      "edge_count": 3,
+      "fiber_count": 37,
+      "fiber_rank_counts": {
+        "0": 18,
+        "1": 19
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.08203125,
+          "denominator_bit_length": 9,
+          "denominator_sha256": "e57ef2e81a0bddaa20f4dbf03c87c5424d5ce205b44e08ccce1104330f5eafbb",
+          "fraction": "21/256",
+          "numerator_bit_length": 5,
+          "numerator_sha256": "96948a5d7a59563d5b8313b5cd736fb1819cffd419e675ce0d81990ffe7013ec"
+        },
+        "1": {
+          "decimal": 0.91796875,
+          "denominator_bit_length": 9,
+          "denominator_sha256": "e57ef2e81a0bddaa20f4dbf03c87c5424d5ce205b44e08ccce1104330f5eafbb",
+          "fraction": "235/256",
+          "numerator_bit_length": 8,
+          "numerator_sha256": "6d6baf8ce98479ae176aa4ecc3d5001dd776a8025814b271b9e995ea168fcc67"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.91796875,
+        "denominator_bit_length": 9,
+        "denominator_sha256": "e57ef2e81a0bddaa20f4dbf03c87c5424d5ce205b44e08ccce1104330f5eafbb",
+        "fraction": "235/256",
+        "numerator_bit_length": 8,
+        "numerator_sha256": "6d6baf8ce98479ae176aa4ecc3d5001dd776a8025814b271b9e995ea168fcc67"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "cycle_3",
+      "node_count": 3,
+      "trials_per_edge": 3
+    },
+    {
+      "beta1": 1,
+      "edge_count": 4,
+      "fiber_count": 15,
+      "fiber_rank_counts": {
+        "0": 14,
+        "1": 1
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.875,
+          "denominator_bit_length": 4,
+          "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+          "fraction": "7/8",
+          "numerator_bit_length": 3,
+          "numerator_sha256": "e15375ab2f089171bc6a2694da4ee70e0ac2d9f8c15306db24b3168755bd614c"
+        },
+        "1": {
+          "decimal": 0.125,
+          "denominator_bit_length": 4,
+          "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+          "fraction": "1/8",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.125,
+        "denominator_bit_length": 4,
+        "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+        "fraction": "1/8",
+        "numerator_bit_length": 1,
+        "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "cycle_4",
+      "node_count": 4,
+      "trials_per_edge": 1
+    },
+    {
+      "beta1": 1,
+      "edge_count": 4,
+      "fiber_count": 65,
+      "fiber_rank_counts": {
+        "0": 50,
+        "1": 15
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.4296875,
+          "denominator_bit_length": 8,
+          "denominator_sha256": "bbb14f87a48bdfde2231c950291770ad68c1a56b6119e0c8fc192bf66ad371e2",
+          "fraction": "55/128",
+          "numerator_bit_length": 6,
+          "numerator_sha256": "72b9fdd468dd3502e9de26691450d5d18b503eb0cd8fcdc4c3b300f2a8f2e549"
+        },
+        "1": {
+          "decimal": 0.5703125,
+          "denominator_bit_length": 8,
+          "denominator_sha256": "bbb14f87a48bdfde2231c950291770ad68c1a56b6119e0c8fc192bf66ad371e2",
+          "fraction": "73/128",
+          "numerator_bit_length": 7,
+          "numerator_sha256": "6e09a91826ff6ad14fa8aa9403a8230fd5668b80b5cece49f92a0f228707ddc6"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.5703125,
+        "denominator_bit_length": 8,
+        "denominator_sha256": "bbb14f87a48bdfde2231c950291770ad68c1a56b6119e0c8fc192bf66ad371e2",
+        "fraction": "73/128",
+        "numerator_bit_length": 7,
+        "numerator_sha256": "6e09a91826ff6ad14fa8aa9403a8230fd5668b80b5cece49f92a0f228707ddc6"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "cycle_4",
+      "node_count": 4,
+      "trials_per_edge": 2
+    },
+    {
+      "beta1": 1,
+      "edge_count": 4,
+      "fiber_count": 175,
+      "fiber_rank_counts": {
+        "0": 110,
+        "1": 65
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.14404296875,
+          "denominator_bit_length": 12,
+          "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+          "fraction": "295/2048",
+          "numerator_bit_length": 9,
+          "numerator_sha256": "10076000a78e2f1055de3b4687d17eba4d9d61d7883f559db7a361cd7f3e97da"
+        },
+        "1": {
+          "decimal": 0.85595703125,
+          "denominator_bit_length": 12,
+          "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+          "fraction": "1753/2048",
+          "numerator_bit_length": 11,
+          "numerator_sha256": "0f65007d45d9141030f0f49a6c93a33ce8e0a1c1a500e0c1ef3b60de411b0a6d"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.85595703125,
+        "denominator_bit_length": 12,
+        "denominator_sha256": "fffa127072167c7c705368efd312dcc2a6629b8188f06aab174fcbe4c96808bc",
+        "fraction": "1753/2048",
+        "numerator_bit_length": 11,
+        "numerator_sha256": "0f65007d45d9141030f0f49a6c93a33ce8e0a1c1a500e0c1ef3b60de411b0a6d"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "cycle_4",
+      "node_count": 4,
+      "trials_per_edge": 3
+    },
+    {
+      "beta1": 2,
+      "edge_count": 5,
+      "fiber_count": 24,
+      "fiber_rank_counts": {
+        "0": 18,
+        "1": 4,
+        "2": 2
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.5625,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "9/16",
+          "numerator_bit_length": 4,
+          "numerator_sha256": "7ad1ac4193e2879655f135a0c236366ac9fa325666ac85fd058f2473b7618a71"
+        },
+        "1": {
+          "decimal": 0.25,
+          "denominator_bit_length": 3,
+          "denominator_sha256": "6894b87e4d7693fac623a0f133ca4ef5e01677700e0784d2c370028c29a16863",
+          "fraction": "1/4",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        },
+        "2": {
+          "decimal": 0.1875,
+          "denominator_bit_length": 5,
+          "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+          "fraction": "3/16",
+          "numerator_bit_length": 2,
+          "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.1875,
+        "denominator_bit_length": 5,
+        "denominator_sha256": "5b4fc52ecbf30e25346da08ea7250879d04f6f27dc42bb7a3a785b82440d516d",
+        "fraction": "3/16",
+        "numerator_bit_length": 2,
+        "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "theta_5",
+      "node_count": 4,
+      "trials_per_edge": 1
+    },
+    {
+      "beta1": 2,
+      "edge_count": 5,
+      "fiber_count": 115,
+      "fiber_rank_counts": {
+        "0": 54,
+        "1": 28,
+        "2": 33
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.103515625,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "53/512",
+          "numerator_bit_length": 6,
+          "numerator_sha256": "03dec1b6379a35cbe10edb6ca30cf987b00116202c3825dece1d98c7a0718a09"
+        },
+        "1": {
+          "decimal": 0.1796875,
+          "denominator_bit_length": 8,
+          "denominator_sha256": "bbb14f87a48bdfde2231c950291770ad68c1a56b6119e0c8fc192bf66ad371e2",
+          "fraction": "23/128",
+          "numerator_bit_length": 5,
+          "numerator_sha256": "163ee0d46590e3158b82ec38ef7a5851d4c36fdafc63b2bd3d3bc7194e356975"
+        },
+        "2": {
+          "decimal": 0.716796875,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "367/512",
+          "numerator_bit_length": 9,
+          "numerator_sha256": "468d5a4bd4a8613a262dee8b4f721d2734a906bfb64e290826093d1134fe5cfe"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.716796875,
+        "denominator_bit_length": 10,
+        "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+        "fraction": "367/512",
+        "numerator_bit_length": 9,
+        "numerator_sha256": "468d5a4bd4a8613a262dee8b4f721d2734a906bfb64e290826093d1134fe5cfe"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "theta_5",
+      "node_count": 4,
+      "trials_per_edge": 2
+    },
+    {
+      "beta1": 2,
+      "edge_count": 5,
+      "fiber_count": 322,
+      "fiber_rank_counts": {
+        "0": 106,
+        "1": 76,
+        "2": 140
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.01446533203125,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "237/16384",
+          "numerator_bit_length": 8,
+          "numerator_sha256": "c957875e944bdb5996444aa0fceee5ff2029d584e801d58ab3cf42b8b0d1e222"
+        },
+        "1": {
+          "decimal": 0.057373046875,
+          "denominator_bit_length": 13,
+          "denominator_sha256": "679d690e571cafcbd7ed3f1272bf45e242ccac7d7dee06567520a7cb96de0bbf",
+          "fraction": "235/4096",
+          "numerator_bit_length": 8,
+          "numerator_sha256": "6d6baf8ce98479ae176aa4ecc3d5001dd776a8025814b271b9e995ea168fcc67"
+        },
+        "2": {
+          "decimal": 0.92816162109375,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "15207/16384",
+          "numerator_bit_length": 14,
+          "numerator_sha256": "5bac5d95c3cc923247502c6ec54e5fa1ff58f5af45ffe954af3598890b1defc2"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.92816162109375,
+        "denominator_bit_length": 15,
+        "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+        "fraction": "15207/16384",
+        "numerator_bit_length": 14,
+        "numerator_sha256": "5bac5d95c3cc923247502c6ec54e5fa1ff58f5af45ffe954af3598890b1defc2"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "theta_5",
+      "node_count": 4,
+      "trials_per_edge": 3
+    },
+    {
+      "beta1": 3,
+      "edge_count": 6,
+      "fiber_count": 38,
+      "fiber_rank_counts": {
+        "0": 24,
+        "1": 8,
+        "3": 6
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.375,
+          "denominator_bit_length": 4,
+          "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+          "fraction": "3/8",
+          "numerator_bit_length": 2,
+          "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+        },
+        "1": {
+          "decimal": 0.25,
+          "denominator_bit_length": 3,
+          "denominator_sha256": "6894b87e4d7693fac623a0f133ca4ef5e01677700e0784d2c370028c29a16863",
+          "fraction": "1/4",
+          "numerator_bit_length": 1,
+          "numerator_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3"
+        },
+        "3": {
+          "decimal": 0.375,
+          "denominator_bit_length": 4,
+          "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+          "fraction": "3/8",
+          "numerator_bit_length": 2,
+          "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.375,
+        "denominator_bit_length": 4,
+        "denominator_sha256": "b111a44c539632e82c1b7826ce0d17836678b8279e1b80ff0ad04a3196b49f08",
+        "fraction": "3/8",
+        "numerator_bit_length": 2,
+        "numerator_sha256": "d74d3359d0d4b9dc5e975b97cafab3f836151e3f1cedc72d673f95df5b81c331"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "complete_4",
+      "node_count": 4,
+      "trials_per_edge": 1
+    },
+    {
+      "beta1": 3,
+      "edge_count": 6,
+      "fiber_count": 201,
+      "fiber_rank_counts": {
+        "0": 66,
+        "1": 56,
+        "3": 79
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.029296875,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "15/512",
+          "numerator_bit_length": 4,
+          "numerator_sha256": "70397337def45fdc5cb2b5c077623c1f6698c4f3b4405d3be96b25d218ea34f6"
+        },
+        "1": {
+          "decimal": 0.08984375,
+          "denominator_bit_length": 9,
+          "denominator_sha256": "e57ef2e81a0bddaa20f4dbf03c87c5424d5ce205b44e08ccce1104330f5eafbb",
+          "fraction": "23/256",
+          "numerator_bit_length": 5,
+          "numerator_sha256": "163ee0d46590e3158b82ec38ef7a5851d4c36fdafc63b2bd3d3bc7194e356975"
+        },
+        "3": {
+          "decimal": 0.880859375,
+          "denominator_bit_length": 10,
+          "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+          "fraction": "451/512",
+          "numerator_bit_length": 9,
+          "numerator_sha256": "e98cdbf4a60b0e09a9800742cf264254c295588e14c53d43cfe7bba19b381ff8"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.880859375,
+        "denominator_bit_length": 10,
+        "denominator_sha256": "848c3317e2d9d9b7cf952b07062717fd93087e3a0cb15eacbefa2041a4fee470",
+        "fraction": "451/512",
+        "numerator_bit_length": 9,
+        "numerator_sha256": "e98cdbf4a60b0e09a9800742cf264254c295588e14c53d43cfe7bba19b381ff8"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "complete_4",
+      "node_count": 4,
+      "trials_per_edge": 2
+    },
+    {
+      "beta1": 3,
+      "edge_count": 6,
+      "fiber_count": 586,
+      "fiber_rank_counts": {
+        "0": 120,
+        "1": 152,
+        "3": 314
+      },
+      "flat_null_rank_mass": {
+        "0": {
+          "decimal": 0.001739501953125,
+          "denominator_bit_length": 16,
+          "denominator_sha256": "8895210a82bf4f438c1b35f86dcc122222368bef934d76e85c6a6c6d1a5eae2c",
+          "fraction": "57/32768",
+          "numerator_bit_length": 6,
+          "numerator_sha256": "445a88269432653b62c8655fe86d9f023d1a6a83bf9f186c5642cff4a1bfcfd8"
+        },
+        "1": {
+          "decimal": 0.01434326171875,
+          "denominator_bit_length": 15,
+          "denominator_sha256": "c4dba763a9a749e2b9b9de742b24c2525215075d92255c6758ba81f74c062632",
+          "fraction": "235/16384",
+          "numerator_bit_length": 8,
+          "numerator_sha256": "6d6baf8ce98479ae176aa4ecc3d5001dd776a8025814b271b9e995ea168fcc67"
+        },
+        "3": {
+          "decimal": 0.983917236328125,
+          "denominator_bit_length": 16,
+          "denominator_sha256": "8895210a82bf4f438c1b35f86dcc122222368bef934d76e85c6a6c6d1a5eae2c",
+          "fraction": "32241/32768",
+          "numerator_bit_length": 15,
+          "numerator_sha256": "ab49acce079b2d57a117bf1c966b1bebbe61bfc3df3c361323ff3378a2852628"
+        }
+      },
+      "full_quotient_mass": {
+        "decimal": 0.983917236328125,
+        "denominator_bit_length": 16,
+        "denominator_sha256": "8895210a82bf4f438c1b35f86dcc122222368bef934d76e85c6a6c6d1a5eae2c",
+        "fraction": "32241/32768",
+        "numerator_bit_length": 15,
+        "numerator_sha256": "ab49acce079b2d57a117bf1c966b1bebbe61bfc3df3c361323ff3378a2852628"
+      },
+      "gauge_invariance_exact": true,
+      "graph": "complete_4",
+      "node_count": 4,
+      "trials_per_edge": 3
+    }
+  ],
+  "status": "development_only_burned"
+}

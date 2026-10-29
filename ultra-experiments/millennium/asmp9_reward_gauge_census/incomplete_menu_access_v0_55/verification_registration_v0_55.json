@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "Elementary finite completion-ambiguity theorem layered on classical Luce and ARSP tests; no representation-theorem novelty, finite-sample or general-domain identification, endogenous-menu, human/model, moral-value, strategic, dynamic, physical-channel, or full ASMP-9 claim.",
+  "expected_domain_count": 15,
+  "expected_domain_summary_sha256": "a584b8954bc7ddfb8901d7b6907fa90c0b5c0b45eb770de5c8cd30e9e6241e69",
+  "expected_full_tier_counts": {
+    "no_random_utility_representation": 1019,
+    "random_utility_non_luce": 230,
+    "scalar_luce": 1
+  },
+  "expected_proper_domain_count": 14,
+  "expected_proper_projection_count": 1125,
+  "expected_proper_tier_counts": {
+    "no_random_utility_representation": 575,
+    "random_utility_non_luce|no_random_utility_representation": 422,
+    "scalar_luce|random_utility_non_luce|no_random_utility_representation": 128
+  },
+  "expected_test_count": 9,
+  "protocol_id": "asmp9-incomplete-menu-tier-identification-v0.55",
+  "resource_caps": {
+    "resident_bytes": 268435456,
+    "seconds": 60,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.55-verification-registration-v1",
+  "source_commit": "a7372842a21699c234ddd5cbce8257097d3fa4b8",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/PRIOR_ART_GATE_v0_55.md": "bbb16ac46ec31d44205758bc273fb808312968f455ae38ed24e1d58bbed16ffa",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/THEOREM_DRAFT_v0_55.md": "c7e2aee6dd63d5dff39745880a5c28ef0dc4d01213aa8fe532d2662e9ee8ec7d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/VERIFICATION_PROTOCOL_v0_55.md": "b9551d1766dba4ea2914fdcb528e197a29ee304ba1be7b748ee651db16810687",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/incomplete_menu.py": "3c146892ed862877a34d547f98447198b1c4b10539c25da7cb6e36fb8f9fe987",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/register_verification_v0_55.py": "bd98a24297d9b55350cc26aef9bab98f87f6d1f044b4689f7372601069c95435",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_incomplete_menu.py": "a3568d3f181f147bfb7b486a39123a1b948c7fbd7e7b8293b813807c67cff08e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_verifier_v0_55.py": "7223273127e97ee0329c9d18078fa8e824fa1dbb9bd7165ef4663c2dd851b055",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/verify_theorems_v0_55.py": "56114766227ae01e76f9ee770809d29061cb4d001857101f99ec8e239a1c6525"
+  },
+  "test_command": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_incomplete_menu.py ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/test_verifier_v0_55.py",
+  "verification_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/incomplete_menu_access_v0_55/verify_theorems_v0_55.py"
+}

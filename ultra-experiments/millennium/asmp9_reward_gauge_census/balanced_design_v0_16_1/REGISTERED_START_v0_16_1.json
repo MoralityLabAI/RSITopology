@@ -1,0 +1,11 @@
+{
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.1",
+  "registration_sha256": "9174911e1a68a78c93163516400c91333ab4184fa732b322887f1d8a780e4ef6",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 120
+  },
+  "started_at_utc": "2026-07-28T23:14:30Z",
+  "status": "started"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "asmp4_two_port_game_protocol_v0_1",
+  "protocol_id": "asmp4.two_port_finite_game.v0.1",
+  "status": "registered_before_claim_eligible_run",
+  "parent_proposal": "../round_robin_v0_1/ASMP-4_PROPOSAL.md",
+  "parent_review": "../round_robin_v0_1/ASMP-4_REVIEW.md",
+  "review_repairs": {
+    "primary_estimand": "F_T=1 iff one universal time-indexed memoryless code confines every registered initial state against every registered disturbance path",
+    "descriptive_fraction_estimand": "omitted",
+    "controller_initialization": "fixed empty state independent of the initial plant state",
+    "initial_cell_specific_controller_selection": "forbidden",
+    "H3_scope": "architecture-specific rectangularity and separate-port necessity only",
+    "timeout_semantics": "invalid_resource_cap, never infeasible"
+  },
+  "plant": {
+    "normal_update": "n_next = a_n*n + c*z + u + w",
+    "tangent_update": "z_next = a_z*z",
+    "primary_a_n": "3/2",
+    "stable_control_a_n": "4/5",
+    "a_z_grid": ["6/5", "3/2"],
+    "coupling_grid": ["0", "1/8", "1/2"],
+    "disturbances": ["-1/32", "1/32"],
+    "safe_normal_interval": ["-1", "1"],
+    "initial_n": ["-1/4", "0", "1/4"],
+    "initial_z": ["-1/4", "0", "1/4"]
+  },
+  "interface": {
+    "read_bits_per_step": [0, 1, 2],
+    "write_bits_per_step": [0, 1, 2],
+    "sensor_statistic": "q=(3/2)n+c*z for the primary plant; q=a_n*n+c*z in controls",
+    "ordered_sensor_thresholds": {
+      "0": [],
+      "1": ["0"],
+      "2": ["-1/2", "0", "1/2"]
+    },
+    "threshold_convention": "q equal to a threshold enters the higher-index bin",
+    "action_dictionaries": {
+      "0": ["0"],
+      "1": ["-1/2", "1/2"],
+      "2": ["-3/4", "-1/4", "1/4", "3/4"]
+    },
+    "charge": "worst-case fixed alphabet bits per step; cumulative budgets are T*r and T*w",
+    "policy_grammar": "deterministic time-indexed memoryless map (time,read_symbol)->write_symbol; one map sequence is shared by all initial states and disturbance histories"
+  },
+  "registered_grid": {
+    "horizons": [2, 3],
+    "cell_count": 108,
+    "formula": "2 horizons * 3 read rates * 3 write rates * 3 couplings * 2 tangent rates"
+  },
+  "gates": {
+    "G0_registration_binding": "All sealed inputs match committed blobs and the tracked diff is empty.",
+    "G1_universal_quantifier_trap": "A one-symbol two-state fixture is feasible with cell-specific controller choice but infeasible for one universal controller.",
+    "G2_stable_zero_rate_liveness": "The stable c=0 plant is feasible through T=3 with r=w=0.",
+    "G3_authority_and_side_channel_controls": "Full-state continuous action u=-q confines every registered primary cell; it rescues a registered under-budget cell that the declared interface cannot.",
+    "G4_zero_coupling_tangent_invariance": "At c=0 every feasibility decision is identical for a_z=6/5 and a_z=3/2.",
+    "G5_coupling_changes_frontier": "At T=2,r=0,w=0 the c=0 cell passes and c=1/2,a_z=3/2 fails.",
+    "G6_separate_port_boundary": "At T=2,c=1/2,a_z=3/2, (r,w)=(2,2) passes while (0,2) and (2,0) fail.",
+    "G7_grid_and_witness_replay": "Exactly 108 cells are solved; every feasible universal policy replays over all initial states and disturbances; symbol relabeling preserves every decision.",
+    "G8_independent_verification": "A separately committed verifier reproduces the grid and gate decisions before ASMP-5 opens."
+  },
+  "decision_rule": {
+    "pass": "G0 through G7 pass in the runner and G8 passes independently.",
+    "fail": "A registered mathematical polarity or exact replay check fails.",
+    "invalid": "Binding, grammar, resource, write-once, or verification failure.",
+    "sequence_rule": "Only pass opens ASMP-5; fail or invalid stops the queue."
+  },
+  "evidence_label_on_pass": "exact_registered_architecture_phase_map",
+  "prohibited_claims": [
+    "continuous nonlinear capacity region",
+    "architecture-independent separate-port theorem",
+    "controller optimality outside the finite grammar",
+    "evaluator safety beyond the declared normal interval",
+    "ASMP-4 resolution"
+  ],
+  "resource_ceiling": {
+    "wall_seconds": 120,
+    "python_peak_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "output_policy": "write_once_non_aliasing"
+}

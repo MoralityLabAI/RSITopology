@@ -1,0 +1,39 @@
+{
+  "environment": {
+    "arithmetic": "integer binomial masses and fractions.Fraction",
+    "gpu": "not used",
+    "implementation": "CPython",
+    "python": "3.11.4"
+  },
+  "executed_utc": "2026-08-03T22:25:23.065190+00:00",
+  "experiment_id": "ASMP-7-METER-COVERAGE-ROBUSTNESS-v0.3",
+  "protocol_binding": {
+    "exact_field_set": true,
+    "field_claim_boundary": true,
+    "field_compliant_boundary": true,
+    "field_coverage_counts": true,
+    "field_domain_size": true,
+    "field_error_limit": true,
+    "field_fixed_independent_mask_counterfactual": true,
+    "field_forbidden_boundaries": true,
+    "field_independent_coverage_semantics": true,
+    "field_m_cap": true,
+    "field_models": true,
+    "field_protocol_id": true,
+    "field_schema_version": true,
+    "field_selective_coverage_semantics": true,
+    "field_theta_grid": true
+  },
+  "protocol_sha256": "76dbefedfa09c56ed3c50212fcb647f73ffceabb901ce83d43a485e5d1cc3660",
+  "result_sha256": "8277b755f4ee26cfb1df48b9986d252a8102a2f92eb6a6a7afa6d2d3b7134ffa",
+  "schema_version": "asmp7_coverage_robustness_run_receipt_v0_3_1",
+  "source_hashes": {
+    "PROTOCOL_v0_3.md": "9a09574cd32b4f9522082eec33e1c480bca66c031ff77f259a039028a6e43e41",
+    "README.md": "ed39cc818b49026bd2e38d4b0571aec5c0b923eeb5b3d6b250df80d612ee3445",
+    "coverage_robustness.py": "1b0b3f60e812c4b0a66e7492847494284d00258837555bbaf61860914a498e5d",
+    "protocol_v0_3.json": "76dbefedfa09c56ed3c50212fcb647f73ffceabb901ce83d43a485e5d1cc3660",
+    "run.py": "8c35a5ee4f9363d9d88d8ee177bbcaee19bbc7d880e0b601331101971756d3e3",
+    "test_coverage_robustness.py": "5c7d90f50b728a7271a065bb461974f11d309c714b6965bc94c88cc6e6e8ffc3",
+    "verify_result.py": "264311a8372b71bf93ed53789c15e710c2112889f87ebb7b8924104e492cbbc2"
+  }
+}

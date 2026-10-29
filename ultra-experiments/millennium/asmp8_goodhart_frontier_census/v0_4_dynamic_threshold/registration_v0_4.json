@@ -1,0 +1,21 @@
+{
+  "schema_version": "asmp8_dynamic_threshold_registration_v0_4",
+  "protocol_id": "asmp8.goodhart.dynamic_audit_threshold.v0.4",
+  "registered_at_utc": "2026-07-23T15:01:13.5161197Z",
+  "status": "prospective_registration_before_claim_run",
+  "source_commit_before_registration": "3f4fb5477fbd92fddaac44eb83b12269ef514342",
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/CLAIM_PACKET_v0_4.md": "8afc2ebf451b9264326be4537a1dd7d5d12313852d6a265cc2790843578bf3ef",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/PRIOR_ART_v0_4.md": "1a0760a11d4b2b0f4303c7ee7df51f953e39c268816ac778e851bea52f2ca383",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/README.md": "814097b2d5186ee4569b5d7e35594f17114c655db86c2b5a8d42fddbc0e0de7f",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/dynamic_threshold.py": "c89df3d9185af5e28afd9f5a6cc5deb84391e321e8ca87985b6ce812d003a56f",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/protocol_v0_4.json": "f0539de78b3cab962173dc59447b9ce10f9d9d11b85530db4c29180ae01bee70",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/run.py": "d87e57956e65027ddfa193ffae839ca8ca02db74c5483dc8289ec07aff63fc2c",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/test_dynamic_threshold.py": "39835623197c0b1e6b11d0932bc64716b747126be8daa3a123a621753296d3d3",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/verify_result.py": "774069b6cba581745a0244ebab062418cf3283249a7ba4ed0ff0f59094ea9fd1",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/calibration.py": "1df845085ddc6cbb4799169a4277cce13cd4061ea5262d2216753370cc05844f",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/protocol_v0_3.json": "b556b5e98eeba8a213d2ecd677cea5485a6b649d498ee4d5f42530c57bedc6fe"
+  },
+  "registered_primary_estimand": "Per-stream first-passage audit count for a nondecreasing robust certificate margin, with exact oracle-limit classification and no crossing-fraction pass threshold.",
+  "claim_boundary": "Synthetic finite-population first-passage audit thresholds under a finite-grid simultaneous Hoeffding instrument; no learned reward model, no universal sequential-optimality claim, and no ASMP-8 resolution."
+}

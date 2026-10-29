@@ -1,0 +1,23 @@
+{
+  "attempted_from_commit": "99aff69341b3388b53882fde72b29f16a23b0b28",
+  "failure_class": "preregistered_executor_input_parsing_error",
+  "failure_stage": "before_seed_derivation_and_sampling",
+  "files": {
+    "confirmation.stderr.log": {
+      "bytes": 1033,
+      "sha256": "d94bd192fb861b30a5cf0582adc05a4c7ebc8d1a36f5a69bea850c5fffb0c7cd"
+    },
+    "confirmation.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "registration_v0_42.json": {
+      "bytes": 3582,
+      "sha256": "689bb44d7bf20b1ff6e9966fcd666a6a3927b64c54ad64eb5471789bb2761ca4"
+    }
+  },
+  "result_artifact_created": false,
+  "status": "implementation_failure_no_scientific_result",
+  "traceback_terminal": "ValueError: could not convert string to float: '1/1000'",
+  "version": "0.42"
+}

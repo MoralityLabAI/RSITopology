@@ -1,0 +1,83 @@
+{
+  "amendment_id": "ultra.transient_amplification.v0.1.1",
+  "base_protocol_id": "ultra.transient_amplification.v0.1",
+  "amendment_type": "pre_run_scope_and_numerical_certification",
+  "base_protocol_unchanged": true,
+  "status": "frozen_before_pilot",
+  "terminology": {
+    "control_failure_replacement": "declared_radius_crossing",
+    "reason": "The norm ball has not been independently established as a safety set.",
+    "evidence_layers": [
+      "mathematical_theorem",
+      "deterministic_fixture_calibration",
+      "application_hypothesis"
+    ]
+  },
+  "theorem_domain": {
+    "operator": "A in R^(n x n)",
+    "metric": "M=M^T positive definite",
+    "horizon": "T in nonnegative integers",
+    "radii": "delta>=0 and b>=0",
+    "time_set": "{0,...,T}",
+    "identity": "sup_(||x0||_M<=delta) max_(0<=t<=T) ||A^t x0||_M = delta G_T(A;M)",
+    "zero_radius_case": "When delta=0, the supremum is zero and the declared-radius condition passes for every b>=0."
+  },
+  "fixture_certification": {
+    "arithmetic": "Python Fraction exact rational arithmetic for the registered Jordan family",
+    "power_coefficients": "binomial(t,j) decay^(t-j) coupling^j for 0<=j<=min(t,n-1)",
+    "lower_bound": "maximum over registered t of the Euclidean norm of the last column, squared and compared as a rational",
+    "upper_bound": "maximum over registered t of sqrt(||A^t||_1 ||A^t||_infinity); for this nonnegative Toeplitz triangular family both induced norms equal the exact rational coefficient sum",
+    "three_state_rule": {
+      "pass": "delta * certified_upper_gain <= b",
+      "fail": "delta^2 * certified_lower_gain_squared > b^2",
+      "numerically_indeterminate": "all remaining cases"
+    },
+    "float64_role": "The SVD estimate and singular-vector witness validate implementation behavior but do not determine a boundary case without the rational bracket."
+  },
+  "exact_liveness": {
+    "pass": "At coupling 0, A=0.9I, G_40=1, and 0.05*G_40=0.05<0.5.",
+    "fail": "At coupling 0.2, x0=0.05 e8 and t=40; exact rational evaluation of the j=6 and j=7 binomial terms alone gives ||A^40 e8||_2^2>101, hence ||A^40 x0||_2>0.5.",
+    "all_same_result": "instrument_invalid",
+    "interpretation": "The run calibrates implementation polarity; it does not discover the planted separation."
+  },
+  "metric_covariance_reframes": {
+    "convention": "old coordinates x=S y; A_S=S^-1 A S and M_S=S^T M S",
+    "count_per_matrix": 8,
+    "seed": 17072027,
+    "generator": "independent QR frames from iid standard normals with singular values geomspace(1,4,n)",
+    "condition_number": 4.0,
+    "matrix_serialization": "float64 C-order bytes",
+    "stored_hashes_required": true
+  },
+  "metric_relative_only": {
+    "registered_witness_coupling": 0.2,
+    "coordinate_scaling": "D=diag((3/4)^7,(3/4)^6,...,3/4,1)",
+    "alternative_metric": "M=D^T D",
+    "equivalent_operator": "D A D^-1 = 0.9I + 0.15N",
+    "required_result": "Euclidean metric is certified fail while the alternative metric is certified pass at the same abstract operator.",
+    "scope": "No metric-independent risk claim is permitted without an externally justified physical metric."
+  },
+  "clarified_gates": {
+    "G0_eigenvalue_match_tolerance": 1e-10,
+    "G1_witness_absolute_tolerance": 1e-10,
+    "G2_probe_upper_tolerance": 1e-10,
+    "G2_rule": "Every sampled gain must be no larger than the float64 singular-value estimate within tolerance. A sampled radius crossing corroborates fail; absence of a sampled crossing supplies no pass evidence.",
+    "G3_rule": "The spectral-radius gate passes every coupling; the rational classifier contains at least one pass and at least one fail.",
+    "G4_relative_tolerance": 1e-8,
+    "G5_rule": "The registered alternative-metric witness flips the rational declared-radius decision."
+  },
+  "excluded_systems": [
+    "affine forcing",
+    "stochastic disturbances",
+    "time-varying response maps",
+    "nonlinear rollout validity",
+    "unregistered or unjustified physical metrics"
+  ],
+  "additional_prohibited_claims": [
+    "pseudospectral result",
+    "superiority over one-step Jacobian norm",
+    "metric-independent risk",
+    "observed decay within the registered T=40 decision horizon"
+  ],
+  "decay_certificate": "A^t=sum_(j=0)^7 binomial(t,j) 0.9^(t-j) (kappa N)^j tends to zero for every registered coupling despite possible finite-time growth."
+}

@@ -1,0 +1,236 @@
+{
+  "claim_boundary": "Classical dual-norm robust counterpart validated on a finite rational Goodhart registry; no novelty claim for convex duality, no learned reward model, no RL trajectory, and no ASMP-8 resolution.",
+  "controls": {
+    "near_tie": {
+      "pass": true,
+      "regret": "1/2",
+      "selected_index": 0,
+      "two_epsilon": "1/2"
+    },
+    "rare_tail_l2": {
+      "error_ceiling_squared": "1/100000",
+      "minimum_true_harm": "99/100",
+      "pass": true,
+      "proxy_gain": "999999/1000000",
+      "true_gain": "-999999/1000000",
+      "weighted_l2_error_squared": "1/250000"
+    }
+  },
+  "coordinate_minimality": {
+    "1": {
+      "equal_movement_unequal_proxy_gain": {
+        "first_counts": [
+          0,
+          0,
+          14,
+          1,
+          0
+        ],
+        "first_movement_key": "11/3",
+        "first_policy_id": 134,
+        "first_proxy_gain": "1/15",
+        "q": "1",
+        "second_counts": [
+          0,
+          0,
+          0,
+          1,
+          14
+        ],
+        "second_movement_key": "11/3",
+        "second_policy_id": 1,
+        "second_proxy_gain": "29/15"
+      },
+      "equal_proxy_gain_unequal_movement": {
+        "first_counts": [
+          2,
+          3,
+          4,
+          3,
+          3
+        ],
+        "first_movement_key": "1/3",
+        "first_policy_id": 1811,
+        "first_proxy_gain": "2/15",
+        "q": "1",
+        "second_counts": [
+          0,
+          0,
+          14,
+          0,
+          1
+        ],
+        "second_movement_key": "11/3",
+        "second_policy_id": 133,
+        "second_proxy_gain": "2/15"
+      }
+    },
+    "2": {
+      "equal_movement_unequal_proxy_gain": {
+        "first_counts": [
+          0,
+          0,
+          14,
+          1,
+          0
+        ],
+        "first_movement_key": "152/45",
+        "first_policy_id": 134,
+        "first_proxy_gain": "1/15",
+        "q": "2",
+        "second_counts": [
+          0,
+          0,
+          0,
+          1,
+          14
+        ],
+        "second_movement_key": "152/45",
+        "second_policy_id": 1,
+        "second_proxy_gain": "29/15"
+      },
+      "equal_proxy_gain_unequal_movement": {
+        "first_counts": [
+          0,
+          1,
+          4,
+          4,
+          6
+        ],
+        "first_movement_key": "8/15",
+        "first_policy_id": 194,
+        "first_proxy_gain": "1",
+        "q": "2",
+        "second_counts": [
+          0,
+          0,
+          0,
+          15,
+          0
+        ],
+        "second_movement_key": "4",
+        "second_policy_id": 15,
+        "second_proxy_gain": "1"
+      }
+    },
+    "infinity": {
+      "equal_movement_unequal_proxy_gain": {
+        "first_counts": [
+          0,
+          0,
+          14,
+          1,
+          0
+        ],
+        "first_movement_key": "22/15",
+        "first_policy_id": 134,
+        "first_proxy_gain": "1/15",
+        "q": "infinity",
+        "second_counts": [
+          0,
+          0,
+          0,
+          1,
+          14
+        ],
+        "second_movement_key": "22/15",
+        "second_policy_id": 1,
+        "second_proxy_gain": "29/15"
+      },
+      "equal_proxy_gain_unequal_movement": {
+        "first_counts": [
+          2,
+          3,
+          4,
+          3,
+          3
+        ],
+        "first_movement_key": "2/15",
+        "first_policy_id": 1811,
+        "first_proxy_gain": "2/15",
+        "q": "infinity",
+        "second_counts": [
+          0,
+          0,
+          14,
+          0,
+          1
+        ],
+        "second_movement_key": "22/15",
+        "second_policy_id": 133,
+        "second_proxy_gain": "2/15"
+      }
+    }
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "8758948cdbf57d41f43385e931036b5be5e2398be184f3a36da9a96901ccb94a"
+    },
+    "G1_complete_registry": {
+      "expected": 3876,
+      "observed": 3876,
+      "pass": true
+    },
+    "G2_dual_formula": {
+      "checked_cells": 5589,
+      "note": "q=1 and infinity are checked by independent extreme-point enumeration; q=2 by exact squared algebra.",
+      "pass": true,
+      "passed": 5589
+    },
+    "G3_sharpness": {
+      "pass": true,
+      "passed": 5589,
+      "total": 5589
+    },
+    "G4_coordinate_minimality": {
+      "pass": true
+    },
+    "G5_near_tie_sharpness": {
+      "pass": true,
+      "regret": "1/2",
+      "selected_index": 0,
+      "two_epsilon": "1/2"
+    },
+    "G6_rare_tail_liveness": {
+      "error_ceiling_squared": "1/100000",
+      "minimum_true_harm": "99/100",
+      "pass": true,
+      "proxy_gain": "999999/1000000",
+      "true_gain": "-999999/1000000",
+      "weighted_l2_error_squared": "1/250000"
+    },
+    "G7_resource_and_receipts": {
+      "elapsed_seconds": 5.207014700004947,
+      "pass": true,
+      "process_peak_rss_bytes": 28909568
+    }
+  },
+  "instrument_status": "valid",
+  "phase_counts": {
+    "1": {
+      "negative": 613,
+      "positive": 1218,
+      "zero": 32
+    },
+    "2": {
+      "negative": 356,
+      "positive": 1505,
+      "zero": 2
+    },
+    "infinity": {
+      "negative": 253,
+      "positive": 1534,
+      "zero": 76
+    }
+  },
+  "policy_count": 3876,
+  "pre_resource_verdict": "dual_frontier_validated",
+  "protocol_sha256": "481159bfd00cebb00049ea09db12c157cbb3c186dbba02c7e19ecda9adafb9ce",
+  "proxy_improving_policy_count": 1863,
+  "registered_epsilon": "1/4",
+  "registration_sha256": "8758948cdbf57d41f43385e931036b5be5e2398be184f3a36da9a96901ccb94a",
+  "schema_version": "asmp8_dual_frontier_result_v0_2",
+  "source_commit": "36ef46ce43aa6c62fcd64fd91dc7ea062ab7df2d",
+  "verdict": "dual_frontier_validated"
+}

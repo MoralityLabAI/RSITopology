@@ -1,0 +1,13 @@
+{
+  "completed_stages": [
+    "registration_binding",
+    "pair_registry",
+    "global_allocation_registry",
+    "compact_value_registry"
+  ],
+  "elapsed_seconds": 67.50612320000073,
+  "peak_resident_bytes": 22126592,
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.1",
+  "stage": "compact_value_registry",
+  "status": "running"
+}

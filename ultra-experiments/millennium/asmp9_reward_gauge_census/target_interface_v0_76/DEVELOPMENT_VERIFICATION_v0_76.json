@@ -1,0 +1,146 @@
+{
+  "cases": {
+    "cross_cut": {
+      "exact_partition_match": false,
+      "representative_insensitive": false,
+      "representative_insensitive_encoder": null,
+      "representative_leakage_witnesses": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "status": "cross_cut_misspecified_interface",
+      "target_decoder": null,
+      "target_recoverable": false,
+      "underidentification_witnesses": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "exact": {
+      "exact_partition_match": true,
+      "representative_insensitive": true,
+      "representative_insensitive_encoder": [
+        [
+          "left",
+          "a"
+        ],
+        [
+          "right",
+          "b"
+        ]
+      ],
+      "representative_leakage_witnesses": [],
+      "status": "exact_target_interface",
+      "target_decoder": [
+        [
+          "a",
+          "left"
+        ],
+        [
+          "b",
+          "right"
+        ]
+      ],
+      "target_recoverable": true,
+      "underidentification_witnesses": []
+    },
+    "leakage_only": {
+      "exact_partition_match": false,
+      "representative_insensitive": false,
+      "representative_insensitive_encoder": null,
+      "representative_leakage_witnesses": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "status": "recoverable_with_representative_leakage",
+      "target_decoder": [
+        [
+          "a",
+          "left"
+        ],
+        [
+          "b",
+          "left"
+        ],
+        [
+          "c",
+          "right"
+        ],
+        [
+          "d",
+          "right"
+        ]
+      ],
+      "target_recoverable": true,
+      "underidentification_witnesses": []
+    },
+    "underidentified_only": {
+      "exact_partition_match": false,
+      "representative_insensitive": true,
+      "representative_insensitive_encoder": [
+        [
+          "left",
+          "a"
+        ],
+        [
+          "right",
+          "a"
+        ]
+      ],
+      "representative_leakage_witnesses": [],
+      "status": "underidentified",
+      "target_decoder": null,
+      "target_recoverable": false,
+      "underidentification_witnesses": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "all_four_states_realized": true,
+    "leakage_case_has_decoder": true,
+    "statuses_match": true,
+    "underidentified_case_has_no_decoder": true
+  },
+  "claim_boundary": "Finite partition-factorization distinction only; no physical reward-channel or behavioral validation, and no ASMP-9 resolution.",
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_76.md": "66716320d920dcbb3f0c424b8b6e12513b8c025a7c15a885e1a5ab0a6c7c209a",
+    "THEOREM_DRAFT_v0_76.md": "68d9bbc39e6da3d3d86aae452261bcba4667d5f2b05b76b575bcdb4b82267428",
+    "target_interface.py": "756d6da29997701478426a456aecfae6a61a9f04e32e0e1c43c6c085eecbd661",
+    "test_target_interface.py": "ea073d61b47026dff8a9e1d3e904effc4d4ccbe0f62f49d9b25049bd097c214c"
+  },
+  "status": "development_only_not_preregistered"
+}

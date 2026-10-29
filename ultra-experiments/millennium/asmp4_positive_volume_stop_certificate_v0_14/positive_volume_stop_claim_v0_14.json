@@ -1,0 +1,34 @@
+{
+  "schema_version": "asmp4_positive_volume_stop_claim_v0_14",
+  "status": "harness-backed stop after nondegenerate registry fork",
+  "sealed_resources": {
+    "count": 3,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_10_stopping_claim_sha256": "fd8b2e74bdd6f16aabd7907dc621254accd6e8fa183957d1eaaf3138163d314c",
+    "v0_13_collar_claim_sha256": "6c09924712d5342c69a731a602bdb3b008ef30d54a7cd0b74e08250d64c4bd19"
+  },
+  "positive_volume_fork": {
+    "normalized_volume": "2",
+    "nhim_dimension": 1,
+    "computed_region": "[2,infinity) x [2,infinity)",
+    "raw_region": "[3,infinity) x [2,infinity)",
+    "finite_margin": "ceil(rho*2^T)"
+  },
+  "source_selector_audit": {
+    "candidate_selector_terms_present": 0,
+    "counterfactual_selectors": 5,
+    "distinct_selected_regions": 2
+  },
+  "predecessor_inventory": {
+    "packages": 14,
+    "tests": 174
+  },
+  "decision": "stop_local_construction_and_request_normative_registration",
+  "reopening_conditions": [
+    "a normative sensor observation/computation registry is added",
+    "an attributable proof or implementation error invalidates the positive-volume fork",
+    "a specified perturbation/noise model invalidates or collapses both exact completions",
+    "an attributable theorem or external review maps the existing wording to one unique formal class"
+  ],
+  "nonclaim": "ASMP-4 is not claimed mathematically resolved. The certificate stops further bounded local enumeration because it cannot choose a missing normative registry; perturbation/noise robustness and external review remain valid reopening routes."
+}

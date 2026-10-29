@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "bytes": 1706,
+      "path": "README.md",
+      "sha256": "533637f0e47d79b88d66271ce79a3852b8ae2595a69ed42e0ed3a009e70b97b7"
+    },
+    {
+      "bytes": 3554,
+      "path": "PRIOR_ART_GATE_v0_47.md",
+      "sha256": "f8d54fbe21da7a6c1a0c94b95b4887d3a3b5c0b12d3043b9449c0e04730593a5"
+    },
+    {
+      "bytes": 6466,
+      "path": "PROTOCOL_v0_47.md",
+      "sha256": "b497e697af886d11442fa994e178d08f24e4d9371cb07ed0006c2d3a621b8b28"
+    },
+    {
+      "bytes": 5145,
+      "path": "THEOREM_DRAFT_v0_47.md",
+      "sha256": "2a756c678a1ae8016ac7b7e0f89caa5b1a02840153bd38d215da3f69a563c164"
+    },
+    {
+      "bytes": 108,
+      "path": "environment_lock_v0_47.json",
+      "sha256": "4f7d32f636d2adbd2494531c94bbb691d0489f223d7318e585dd1aea31961b00"
+    },
+    {
+      "bytes": 15643,
+      "path": "sharp_atom_modulus.py",
+      "sha256": "131045efb885523b3b746f0e8598cb00e42c995f2db6a80a327f0ccbbc03bfbd"
+    },
+    {
+      "bytes": 5962,
+      "path": "test_sharp_atom_modulus.py",
+      "sha256": "5b70b19f4440161012fd79493c6bd2e52660b3a3a31b3b21e2e2dc195991547a"
+    },
+    {
+      "bytes": 18922,
+      "path": "run_confirmation_v0_47.py",
+      "sha256": "e6cf5ca6bc9ce0a3c0d767c489216fdd66a5246515e868ea908c5eef8bf9f6b0"
+    },
+    {
+      "bytes": 3209,
+      "path": "verify_result_v0_47.py",
+      "sha256": "a907b785257f27d34ba0d53169ade5b2a902f6e872771d450daf3e6c6ebeb957"
+    },
+    {
+      "bytes": 5335,
+      "path": "registration_v0_47.json",
+      "sha256": "79b27566df548e734a7f18e4ae3521c6b882716d6337fd8a8cb208072d0da36f"
+    },
+    {
+      "bytes": 14122,
+      "path": "artifacts_v0_47/exact_risk_rows_v0_47.json",
+      "sha256": "2128e2ad1fa4cf2bd827bfc928254ae230b08ada79726bd91fce9fdc884513fd"
+    },
+    {
+      "bytes": 1382,
+      "path": "artifacts_v0_47/comparator_rows_v0_47.json",
+      "sha256": "83f5fbbdcf80c16a6d0955c3cbce960198ad817c4d5222e2d110695d5430e459"
+    },
+    {
+      "bytes": 47390,
+      "path": "artifacts_v0_47/result_v0_47.json",
+      "sha256": "daa1863bac0efebc0421dd1b03214a63c6bbe5e13f851dbc76db1e9e1f68c1d5"
+    },
+    {
+      "bytes": 5547,
+      "path": "VERIFY_RESULT_v0_47.json",
+      "sha256": "06623bea888f0c3523c668cfe690215a2db3647bc92f6c995b1727b8c41b0145"
+    },
+    {
+      "bytes": 6806,
+      "path": "RESULT_v0_47.md",
+      "sha256": "2bbb4839e67a3d8e039386ad9bb0c2e51e9963ee375ded86e71a86efbcb51764"
+    },
+    {
+      "bytes": 1892,
+      "path": "RUN_RECEIPT_v0_47.json",
+      "sha256": "857010038c11bf1b2445d82b9c29467308968a43b01bd13b90cb1e3776485349"
+    }
+  ],
+  "schema": "asmp9-v0.47-release-manifest-v1"
+}

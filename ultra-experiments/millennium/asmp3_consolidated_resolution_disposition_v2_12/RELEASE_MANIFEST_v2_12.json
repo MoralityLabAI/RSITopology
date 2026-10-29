@@ -1,0 +1,229 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-CONSOLIDATED-RESOLUTION-DISPOSITION-v2.12",
+  "file_count": 55,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/RELEASE_MANIFEST_v2_7.json": {
+      "bytes": 4272,
+      "sha256": "569445CD8CCB363C60A325AED48ACE59924E5707EF0805F1414C2A50D240ED9E"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/artifacts/adaptive_transcript_coupling_v2_7.json": {
+      "bytes": 642958,
+      "sha256": "F7FF271E1CB9B3F56184C2FE8006F49D7248136A1ACBFE347EEDF436D64AFC4C"
+    },
+    "../asmp3_adaptive_transcript_coupling_v2_7/artifacts/adaptive_transcript_coupling_verification_v2_7.json": {
+      "bytes": 914,
+      "sha256": "4F45AAC3DACDE79F3E2595AA1E292A6E01AB6BD92D577E8327EE9DA963CF0E03"
+    },
+    "../asmp3_constructive_refutation_protocol_v2_3/RELEASE_MANIFEST_v2_3.json": {
+      "bytes": 4814,
+      "sha256": "3F46B4CC8B44DF9B5600C5A17A71E22EE91936D1522C1DF5D0970B5885EA7896"
+    },
+    "../asmp3_constructive_refutation_protocol_v2_3/artifacts/constructive_refutation_protocol_v2_3.json": {
+      "bytes": 620625,
+      "sha256": "A437C1BD67171B4DB07D32D53B96A5D6DE79D25AC11E9B498BD817EFD0C72781"
+    },
+    "../asmp3_constructive_refutation_protocol_v2_3/artifacts/constructive_refutation_protocol_verification_v2_3.json": {
+      "bytes": 864,
+      "sha256": "9239DA4CFC45DB511F1542F9700AA2B5D6E2E825B582384BC0998CD8123EDFF3"
+    },
+    "../asmp3_encoding_invariance_v2_0/RELEASE_MANIFEST_v2_0.json": {
+      "bytes": 3620,
+      "sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075"
+    },
+    "../asmp3_encoding_invariance_v2_0/artifacts/encoding_invariance_v2_0.json": {
+      "bytes": 34866,
+      "sha256": "0EFF1BB9F80AE281EFA29E151FD87FA0200CC62A651F1B5E5E777BED5A44C191"
+    },
+    "../asmp3_encoding_invariance_v2_0/artifacts/encoding_invariance_verification_v2_0.json": {
+      "bytes": 862,
+      "sha256": "85916925C52DD892E4382751B5DF2D136648E4BE7799FA4EA649C52B5843B8E6"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_verification_v2_1.json": {
+      "bytes": 861,
+      "sha256": "01F05CF39E9DDFB36A2B871DCA09DFAFD443BB98D4B88A0A2A46ED88E916748D"
+    },
+    "../asmp3_online_contract_minimality_v2_11/RELEASE_MANIFEST_v2_11.json": {
+      "bytes": 5241,
+      "sha256": "A7F9CB1A09922824CBE9B29BE71BCE27DC03C7294E6FF9565511F899CCAA5CC1"
+    },
+    "../asmp3_online_contract_minimality_v2_11/STOPPING_BOUNDARY_v2_11.md": {
+      "bytes": 2493,
+      "sha256": "9C149FBB6D49C1D019BD75BA019F943E32401054A8C34FE2D7D146D700C3C97B"
+    },
+    "../asmp3_online_contract_minimality_v2_11/artifacts/online_contract_minimality_v2_11.json": {
+      "bytes": 177358,
+      "sha256": "8275CE9CB6C09190DACC59FBA3D97439A02681DD5C45118CDE23EB1C476BD537"
+    },
+    "../asmp3_online_contract_minimality_v2_11/artifacts/online_contract_minimality_verification_v2_11.json": {
+      "bytes": 990,
+      "sha256": "8D8C70B8F7AC95F6796BD6EBB026DC6A9B74A4C30EB8E81E7A07F4074EAE33F2"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/RELEASE_MANIFEST_v2_10.json": {
+      "bytes": 5691,
+      "sha256": "AA0CE04D78E96453B975B852D9F8F2BD80030AC72F2347CA41BA669D815066F5"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/artifacts/online_noisy_trace_extractor_v2_10.json": {
+      "bytes": 29273,
+      "sha256": "67E0D89F118260C189CDF0FCE71FA47DCB5FF61F1E4BF0F6669A527E2AE04851"
+    },
+    "../asmp3_online_noisy_trace_extractor_v2_10/artifacts/online_noisy_trace_extractor_verification_v2_10.json": {
+      "bytes": 1053,
+      "sha256": "DE90C56F709821BCB9F36FEC1D31CB039BE264D9AE54D925E1BA1454970B6D53"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/RELEASE_MANIFEST_v2_9.json": {
+      "bytes": 5048,
+      "sha256": "497EB96B03B88A53B1B4FDD2761264E16F39136A07B90E0EA4B5109DD809EFCB"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/artifacts/oracle_parametric_replay_v2_9.json": {
+      "bytes": 28585,
+      "sha256": "343B0CDBC36E889AE34005B838E56B3A804B00944586BB1FFE78D8A4032F5B70"
+    },
+    "../asmp3_oracle_parametric_replay_v2_9/artifacts/oracle_parametric_replay_verification_v2_9.json": {
+      "bytes": 995,
+      "sha256": "34F4030F4CB4608FF0E371E249DDE0FEC605A9543C272C39540D730F5592F7AA"
+    },
+    "../asmp3_protocol_quantifier_v0_7/RELEASE_MANIFEST_v0_7.json": {
+      "bytes": 2507,
+      "sha256": "E93DA3ACD8E96B93B0EFAED5D22142AFDFBC27E269998644FEC1DF234FD46D23"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_verification_v0_7.json": {
+      "bytes": 1500,
+      "sha256": "2B12E510EB9CDA14EFA5E4C116F7E7A2E12C78192BB5B204EACA1DB58A15C8BD"
+    },
+    "../asmp3_randomized_finder_amplification_v2_4/RELEASE_MANIFEST_v2_4.json": {
+      "bytes": 3699,
+      "sha256": "CC1A6F4831499AE522A54EA00A15A521D5CF8249EFEBBA9F44B732D50F51862A"
+    },
+    "../asmp3_randomized_finder_amplification_v2_4/artifacts/randomized_finder_amplification_v2_4.json": {
+      "bytes": 451719,
+      "sha256": "F1FA19490327833AFDA5A877D4B2161D5C6517ADC9D99136BADF3A1F772C7821"
+    },
+    "../asmp3_randomized_finder_amplification_v2_4/artifacts/randomized_finder_amplification_verification_v2_4.json": {
+      "bytes": 928,
+      "sha256": "631AF5C93F00EA4BC8E091D512A92D846D9F5E2274D914D5411155EFB8A0090F"
+    },
+    "../asmp3_resolution_boundary_v0_3/artifacts/expert_review_status_v0_6.json": {
+      "bytes": 746,
+      "sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D"
+    },
+    "../asmp3_resource_tradeoff_v2_2/RELEASE_MANIFEST_v2_2.json": {
+      "bytes": 3539,
+      "sha256": "E0440C6A3B291A09D2698F143DC37AEDB03DF3A7B22CD7BCBD557996064C964E"
+    },
+    "../asmp3_resource_tradeoff_v2_2/artifacts/resource_tradeoff_v2_2.json": {
+      "bytes": 340282,
+      "sha256": "4D4DD4AEDEBA45677ADCC15BB2085AED779D3A53CE11B6C9B88499AF26B6B98D"
+    },
+    "../asmp3_resource_tradeoff_v2_2/artifacts/resource_tradeoff_verification_v2_2.json": {
+      "bytes": 838,
+      "sha256": "C44BA4C51A0B6099D914DAE193546B45C5A661F20C8492D8D8988649023A6C96"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/RELEASE_MANIFEST_v2_8.json": {
+      "bytes": 4231,
+      "sha256": "8E29A8441E591966B6DF36AD1634C6041EFF8C37AA4197B0C25ABC5A3F323FA9"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/artifacts/trace_binding_extractor_v2_8.json": {
+      "bytes": 31115,
+      "sha256": "C84B77E18639AC6F509EAA50C807E060E96B863F7E7603E9B04F30480E773206"
+    },
+    "../asmp3_trace_binding_extractor_v2_8/artifacts/trace_binding_extractor_verification_v2_8.json": {
+      "bytes": 921,
+      "sha256": "B0EB551CDFAFF585654B008A71B84C0357001B5E65CBB5B8C226E8E1D1272401"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/RELEASE_MANIFEST_v2_5.json": {
+      "bytes": 4267,
+      "sha256": "0FC5C8234BFC7BACCE1A1DB9E5B947C43F206E8552BA347A90F317D6D08004CA"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/artifacts/witness_transparent_normal_form_v2_5.json": {
+      "bytes": 84594,
+      "sha256": "AC4C330BA203D704E2466945328BE65A7A7657D624FAB9D1F811D2354CE4F945"
+    },
+    "../asmp3_witness_transparent_normal_form_v2_5/artifacts/witness_transparent_normal_form_verification_v2_5.json": {
+      "bytes": 936,
+      "sha256": "34FF1094D5EFC850EE5A5096954AC6128752A1D133FE45F40DF7857B1EDFBC80"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_12.md": {
+      "bytes": 1079,
+      "sha256": "B1B6BD20A807A64202355896412CB4B32E7F5673C367BD2BEC6B70AEC00C84CF"
+    },
+    "EXTERNAL_REVIEW_HANDOFF_v2_12.md": {
+      "bytes": 1916,
+      "sha256": "D89847624700C14B77587B4EBD0FD3369DA5698D3032B6A490B17CBA429EC71B"
+    },
+    "README.md": {
+      "bytes": 676,
+      "sha256": "5E39B2C7ECF36E11A721DC744F0B6692246BEA93947A87574EFC7AE567951F9C"
+    },
+    "REQUIREMENT_EVIDENCE_MATRIX_v2_12.md": {
+      "bytes": 2196,
+      "sha256": "BBA12A226E9DAF6CEF67615ED3B3C8A4B5234624F6FABC3EA880DA549D6DEE4C"
+    },
+    "RESOLUTION_DISPOSITION_v2_12.md": {
+      "bytes": 5463,
+      "sha256": "052AFC628CCD0FD2C95BAB522566D92C8C87027C6007621BBCBEA8895B1AF21B"
+    },
+    "STOPPING_DECISION_v2_12.md": {
+      "bytes": 1356,
+      "sha256": "3EC2A392214F181419393EB2DE1C87E7CC7F2C8EDE1CBD3CF40A5DEEFF67EF50"
+    },
+    "artifacts/consolidated_resolution_disposition_v2_12.json": {
+      "bytes": 19086,
+      "sha256": "81F434CC6CEA9B83855C28DD850E17866F55852E1D6A89FC2C94FC07478511BA"
+    },
+    "artifacts/consolidated_resolution_disposition_verification_v2_12.json": {
+      "bytes": 962,
+      "sha256": "F3F34518ED9289CAFBCE8E778297D6411522F5CDACDB13D9A55245217C8D64E8"
+    },
+    "build_release_manifest.py": {
+      "bytes": 5085,
+      "sha256": "378ECD5E106CC97745469CF0505C0BC2E6A7EB96A16AF8DA80E0F4464A40B520"
+    },
+    "consolidated_resolution_disposition.py": {
+      "bytes": 24909,
+      "sha256": "BF99A0ACF37CC643C3C9BB9DD26F436B2923F0413B696634C332F7B714EF8342"
+    },
+    "run_consolidated_resolution_disposition.py": {
+      "bytes": 491,
+      "sha256": "E64B0ED371D4E714B27205112591E41DE140CB13840B2C3DD102696CF0AEE7C2"
+    },
+    "test_consolidated_resolution_disposition.py": {
+      "bytes": 2871,
+      "sha256": "BE9E0B3D019440FF7172AEF1AFC9314251D27020AFD1B563E44632E9A5D4CA23"
+    },
+    "verify_consolidated_resolution_disposition.py": {
+      "bytes": 11451,
+      "sha256": "9187D560A25565A3D3281303C057E034C9B52B6DE6483E34E9B9494064A3047E"
+    }
+  },
+  "release_status": "literal_refutation_online_subclass_minimality_and_updated_stop_disposition",
+  "schema_version": "asmp3_consolidated_resolution_disposition_release_v2_12"
+}

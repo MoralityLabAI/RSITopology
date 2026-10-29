@@ -1,0 +1,52 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: "Also run the per-package ASMP suites (one pytest process per directory; slow)"
+        type: boolean
+        default: false
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[test]"
+      - name: Core tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        # Three tests depend on files outside the repository or on torch; see docs/CRITIQUE_NOTES_20261012.md section 7.
+        run: >
+          python -m pytest tests -q -p no:cacheprovider
+          --deselect tests/test_godel_capture_hardening.py::test_float32_conversion_cache_excludes_head_and_hashes_tensor
+          --deselect tests/test_qwen_controller_task_capture.py
+          --deselect tests/test_holonomy_from_spec.py::test_independent_prose_specification_reproduces_headline_control
+      - name: Problem-set validator (reports, does not gate)
+        continue-on-error: true
+        run: python ultra-experiments/millennium/validate_problem_set.py
+      - name: Receipt audit (reports, does not gate)
+        continue-on-error: true
+        run: python scripts/audit_receipts.py --out-md "$RUNNER_TEMP/receipt_audit.md" --out-json "$RUNNER_TEMP/receipt_audit.json" && head -40 "$RUNNER_TEMP/receipt_audit.md"
+
+  packages:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.packages }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[test]"
+      - name: Per-package ASMP suites
+        run: python scripts/run_package_tests.py --timeout 1200

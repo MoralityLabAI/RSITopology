@@ -1,0 +1,59 @@
+{
+  "protocol_id": "ASMP-9-CONTEXT-GLUING-v0.11.2",
+  "supersedes_unavailable_protocol_ids": [
+    "ASMP-9-CONTEXT-GLUING-v0.11",
+    "ASMP-9-CONTEXT-GLUING-v0.11.1"
+  ],
+  "repair_scope": "implementation-only exact GF(2) incidence rank and bitset cycle-space elimination; signed decisions remain rational",
+  "tuple_census": {
+    "item_count": 4,
+    "context_count": 3,
+    "expected_tuple_count": 262144,
+    "maximum_tuple_count": 262144,
+    "expected_mixed_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "random_cells": {
+    "seed": 1101101,
+    "count": 4096,
+    "minimum_items": 5,
+    "maximum_items": 9,
+    "minimum_contexts": 2,
+    "maximum_contexts": 5
+  },
+  "minimality_controls": {
+    "maximum_items": 10,
+    "maximum_contexts": 6
+  },
+  "allowed_statuses": [
+    "local_scalar_failed",
+    "shared_scalar_forced_by_design",
+    "shared_scalar_verified",
+    "shared_scalar_refuted"
+  ],
+  "resource_limits": {
+    "cpu_only": true,
+    "maximum_ram_gib": 2,
+    "maximum_wall_seconds": 360
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_exact_census",
+    "G2_census_liveness",
+    "G3_seeded_coverage",
+    "G4_quotient_and_sharpness",
+    "G5_shared_controls",
+    "G6_nongluing_controls",
+    "G7_local_failure_and_status_liveness",
+    "G8_minimality",
+    "G9_resource_envelope"
+  ],
+  "success_verdict": "finite_contextual_scalar_gluing_geometry_verified_v0_11_2"
+}

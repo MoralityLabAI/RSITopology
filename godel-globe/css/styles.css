@@ -102,6 +102,9 @@ button:focus-visible, .button:focus-visible, select:focus-visible, input:focus-v
 .controls { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
 .controls label { color: var(--muted); display: grid; font-size: 11px; gap: 5px; }
 .controls label:first-child, .search-control { grid-column: 1 / -1; }
+.axis-controls { display: grid; gap: 6px; grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.axis-controls > span { color: var(--muted); font-size: 11px; grid-column: 1 / -1; }
+.axis-controls[hidden] { display: none; }
 select, input[type="search"] { background: rgba(255,255,255,0.045); color: var(--text); height: 34px; min-width: 0; padding: 0 9px; width: 100%; }
 select option { background: var(--panel-strong); }
 
@@ -179,6 +182,10 @@ select option { background: var(--panel-strong); }
 .dot-gray { background: var(--gray); }
 .dot-amber { background: var(--amber); }
 .dot-green { background: var(--green); }
+.dot-base { background: #7ce2ff; }
+.dot-jinn { background: #ffbd59; }
+.dot-beast { background: #f06fff; }
+.dot-failure { background: var(--danger); }
 
 .tooltip {
   background: rgba(7, 12, 24, 0.96);

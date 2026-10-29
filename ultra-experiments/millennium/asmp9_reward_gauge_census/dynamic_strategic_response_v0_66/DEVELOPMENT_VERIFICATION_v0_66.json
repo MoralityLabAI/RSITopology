@@ -1,0 +1,39 @@
+{
+  "version": "v0.66",
+  "registered": false,
+  "claim_eligible": false,
+  "status": "development_checks_passed",
+  "test_command": "python -m pytest ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/test_dynamic_response.py -q -p no:cacheprovider",
+  "test_result": {
+    "passed": 10,
+    "failed": 0
+  },
+  "independent_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/verify_development.py",
+  "independent_counts": {
+    "binary_machine_classification": {
+      "identify_and_restore": 152,
+      "identify_only_altering": 40,
+      "unidentifiable": 64
+    },
+    "binary_machines": 256,
+    "inverse_closed_checks": 64,
+    "inverse_closed_classification": {
+      "identify_and_restore": 48,
+      "unidentifiable": 16
+    },
+    "pairwise_but_not_global_pair_checks": 3,
+    "safe_implies_identification_checks": 256
+  },
+  "registration_decision": "do_not_register",
+  "sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_66.md": "431dfbe6dd43e879cb9715287ec3493b7d2e7d69ca5a1a7af50f03778a7c04d7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/DEVELOPMENT_RESULT_v0_66.md": "c66bcdb14973ad469b25aa07bdf7ef6b9ec77d413b53576da28691048d84b2d7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/PRIOR_ART_GATE_v0_66.md": "e33b9c9a36fa8d9a2d07ebca64b1e4185ab4f0d72110ef698e210fa96d326916",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/README.md": "57ef50c4c2f470cb798b26fd6ac505ada4f5fb13f94ba6bbbe5735a4d4308ba9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/REGISTRATION_DECISION_v0_66.md": "5a2ad10c4fe5c9e0999001a6520b92ae05d376884d7075e2d420ed786a9dae32",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/THEOREM_DRAFT_v0_66.md": "6c90d67f65c23430a4126644174437e8c434b986ea92b5199c089875c171b7f1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/dynamic_response.py": "4725518feb61ff5edf3aef38cb8cc179772581f7d8c8b4f266540d63da1606c9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/test_dynamic_response.py": "f97d17abfd6d658669ea4c2ac027e11f500db5c1089efa83aa45c3b90ca59888",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/dynamic_strategic_response_v0_66/verify_development.py": "5d076c6f1eb6ddfee3882b5be8202af89ecfca78f096b47cbaa312ffc0394849"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "asmp8_dynamic_threshold_protocol_v0_4",
+  "protocol_id": "asmp8.goodhart.dynamic_audit_threshold.v0.4",
+  "status": "frozen_candidate_before_registration_and_run",
+  "parent_result": "../v0_3_calibrated_certificate/artifacts_v0_3/RESULT_v0_3.md",
+  "registered_correction": "The v0.3 50% optimizer-transfer threshold was arbitrary. Version 0.4 uses per-stream first-passage times of a monotone certificate margin and no crossing-fraction gate.",
+  "registry": {
+    "reuse": "Exact v0.3a 64-outcome proxy, three hidden error populations, and 20 proxy-only policies.",
+    "primary_focus": "diffuse_low_error top_spike path",
+    "all_registry_paths_reported": true
+  },
+  "audit_dynamics": {
+    "checkpoints": [32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576],
+    "nested_streams": 1024,
+    "root_seed": 80420260723,
+    "familywise_alpha": 0.05,
+    "allocation": "equal Bonferroni allocation over 2 sampled moments times 16 registered checkpoints",
+    "linfinity_error_cap": 1.0,
+    "monotone_envelope": "running minimum of all valid upper bounds observed up to each checkpoint",
+    "crossing_rule": "first checkpoint where max_q(proxy_gain - envelope_radius_q * dual_movement_q) is strictly positive",
+    "reversion_rule": "mathematically prohibited by the monotone envelope and tested exhaustively"
+  },
+  "oracle_classification": {
+    "oracle_margin": "same maximum lower bound with exact finite-population L1, L2, and Linfinity error norms",
+    "structurally_uncertifiable": "oracle_margin <= 0",
+    "budget_censored": "oracle_margin > 0 and no observed crossing by the registered audit cap",
+    "crossed": "observed first positive margin by the cap"
+  },
+  "gates": {
+    "G0_registration_binding": "Protocol, claim packet, prior art, implementation, tests, verifier, and README are committed and hash-bound before execution.",
+    "G1_simultaneous_instrument": "For each hidden error population, the one-sided 95% exact binomial upper bound on streams with any simultaneous-envelope failure is at most 0.07.",
+    "G2_monotone_dynamics": "Every certificate-margin trajectory is nondecreasing on the complete registered grid.",
+    "G3_conditional_soundness": "No true-gain-nonpositive policy crosses on any stream whose simultaneous norm instrument is valid.",
+    "G4_oracle_consistency": "Every policy is assigned exactly one oracle class and every structurally_uncertifiable policy has no positive oracle margin.",
+    "G5_top_spike_liveness": "At least one diffuse-error top-spike stream crosses by the audit cap; the complete crossing distribution is reported with no crossing-fraction pass threshold.",
+    "G6_no_reversion": "No policy/stream returns to non-positive margin after its first positive margin.",
+    "G7_resources_and_receipts": "The run remains under CPU/RAM ceilings and emits write-once result, condition, policy, crossing-CDF, report, and receipt artifacts."
+  },
+  "gates_numeric": {
+    "maximum_instrument_failure_cp_upper": 0.07
+  },
+  "decision_rule": {
+    "dynamic_threshold_measured": "G0 through G7 all pass",
+    "threshold_censored": "G0 through G4, G6, and G7 pass but G5 fails",
+    "not_established": "G1, G2, G3, G4, or G6 fails",
+    "invalid": "G0 or G7 fails"
+  },
+  "resource_ceiling": {
+    "wall_seconds": 180,
+    "process_peak_rss_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "claim_boundary": "Synthetic finite-population first-passage audit thresholds under a finite-grid simultaneous Hoeffding instrument; no learned reward model, no universal sequential-optimality claim, and no ASMP-8 resolution."
+}

@@ -1,0 +1,26 @@
+{
+  "created_at_utc": "2026-07-28T16:48:14.441768+00:00",
+  "elapsed_seconds": 5.169804600009229,
+  "implementation_commit": "3c99eab311fd5111a49cf161f9125e9bfd5f7797",
+  "outputs": {
+    "RESULT_v0_2.md": "c028d637841251effa70e3c6ff06a97acb0394b63a04b5e2bf5fe4271142f602",
+    "frontier_cells_v0_2.csv": "7dae73ad7b8e5b1a9da7a3fb8456f9aba2741a64ac6604b262b3ab7ff966cfba",
+    "result_v0_2.json": "f7264a9a41bf97313179226dc39e22493adf31bb9f190f9fb90fd5cbf5ce7a4f",
+    "thresholds_v0_2.csv": "3b4ff2ef65000fb0f1abdde675bc7af44b1ce792acc8a26567454866f1575854"
+  },
+  "protocol_id": "ASMP-9-ORDINAL-ACCESS-v0.2",
+  "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+  "registration_commit": "5e645f3d2e609dc5a755d97da4eea6c2ab4785ef",
+  "registration_sha256": "418198c27024bb0ec30e9ac7e6977ffd44729a65a16c4ed284c8329cdffb9782",
+  "scipy": "1.16.2",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/PRIOR_ART_v0_2.md": "d0eb1e4a198d07891b1823e302eb782c7f97a6c11eea1ed301c43ab43e83d630",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/PROTOCOL_v0_2.md": "d2f5825e1539f416779fc6c249c90fcbeb2d41a3d9ba28ed0b7e3ebec4f08bc2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/README.md": "e65426f81dfd86ebc0418528ad523a0f7735e22ceb9fa6cc7097c2bc278e42fb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/ordinal_frontier.py": "2accf05235c51dc6474c353891f96c88f59c5a59688f0284e5469c739f88496d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/protocol_v0_2.json": "b2c665de6559ec86ae2aa6081db8344ad89fff7ffd521fdbade0b4e6077f2883",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/run.py": "a13d2e617bcf2679cda0a8836d779d3cfca449d2a4d955bba02a5f11dfd5b214",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/test_ordinal_frontier.py": "b04385f8ebdcc9911d92a1b4d6f8c8deaaa64ade31580bf300c6ba537df0a017",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/verify_result.py": "ee12a738085653c97ffe1df7a875e903796e61516ddb727e72e2518385e4260f"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "asmp9_context_quotient_local_registration_repair_v0_68_2_1",
+  "status": "frozen_prereveal_registration_only",
+  "date": "2026-07-31",
+  "base_execution_amendment": {
+    "path": "local_execution_resource_amendment_v0_68_2.json",
+    "sha256": "0a09faaa7ef8db05e043bf1b39214be2b0f20471bf823a78610d5564394dd798"
+  },
+  "aborted_attempt": {
+    "attempt_id": "20260731T043143Z-24780",
+    "records_completed": 0,
+    "peak_gpu_delta_mb": 0,
+    "cleanup_passed": true
+  },
+  "repair": {
+    "registered_environment": "exact prereveal Python and package versions only",
+    "host_environment": "separate non-compared provenance object",
+    "resource_contract_patch": {
+      "swap_bytes": 0
+    }
+  },
+  "unchanged": [
+    "model and tokenizer bytes",
+    "confirmation job universe and order",
+    "construction decision and intersection",
+    "singleton float16 scoring",
+    "scientific protocols",
+    "endpoints",
+    "thresholds",
+    "gates",
+    "decision mapping",
+    "claim boundary"
+  ],
+  "outcomes_read": false,
+  "claim_boundary": "Registration compatibility repair only; no scientific or resource threshold is changed."
+}

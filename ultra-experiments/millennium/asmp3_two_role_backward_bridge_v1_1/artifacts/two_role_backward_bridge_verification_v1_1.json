@@ -1,0 +1,16 @@
+{
+  "check_count": 7,
+  "checker": "clean_room_backward_and_saddle_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_family_registry_complete": true,
+    "V2_all_family_backward_certificates_reconstructed": true,
+    "V3_exponential_strategy_linear_recursion_counts": true,
+    "V4_alternating_game_saddle_reconstructed": true,
+    "V5_matching_information_boundary_reconstructed": true,
+    "V6_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker covers the registered perfect-information games; it does not validate an imperfect-information extension.",
+  "passed": true,
+  "schema_version": "asmp3_two_role_backward_bridge_verification_v1_1"
+}

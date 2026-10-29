@@ -1,0 +1,16 @@
+{
+  "elapsed_seconds": 7.533689498901367,
+  "environment": {
+    "cpu_count": 12,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]"
+  },
+  "outputs": {
+    "frontier.csv": "c11b0d9c9ab340aaec210ee035e7fe7e576de36318058c196432963064119122",
+    "result.json": "26b41cb5a68e829fcefe065dbf8c0aba76373def2b438647bbce807f14a2cf05"
+  },
+  "protocol_sha256": "104a87cbfccb56596cf50a0cde1a37225e5abe663db577fb4748fbcf139712bc",
+  "registration_sha256": "8ff0d178a64aebd35a94e41138217a18978adde49ac552708fe5310bd978ca39",
+  "schema_version": "asmp6_semantic_collusion_frontier_receipt_v0_1",
+  "source_commit": "c66ffd0487a7cb282e82b0e561c9bec5fad18e07"
+}

@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+  "registration_sha256": "a26ef3900087416df5ba92e5c85fd23006ea35f3677ebeb98f5f2cb4fd7ede60",
+  "result_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/block_factorization_v0_20/artifacts_v0_20/result_v0_20.json",
+  "result_sha256": "bd626d1ad1da1299ff05fd0be415acdffd264b561278a941e094982f8ad9394c",
+  "verdict": "finite_block_factorization_established_in_frozen_model_v0_20"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "asmp4_support_incidence_quotient_contract_v0_21",
+  "domain": "finite registered support-zero-error sensor transducers",
+  "signature": {
+    "definition": "sigma(y)={(s,z,s'): (y,s') in E(s,z)}",
+    "active_only": true,
+    "equivalence": "y~y' iff sigma(y)=sigma(y')"
+  },
+  "quotient": {
+    "preserves": "full event-support incidence up to duplicate raw labels",
+    "minimality": "coarsest quotient from which every active support-incidence class is recoverable",
+    "feasibility": "preserved exactly",
+    "renaming_invariant": true,
+    "duplicate_clone_invariant": true,
+    "idempotent": true
+  },
+  "semantic_rate": {
+    "observer": "multiplicity adjacency A_sem after support-incidence quotient",
+    "finite_read_words": "L_T_sem ceil(rho*2^T)",
+    "asymptotic_region": "[1+log2(rho(A_sem)),infinity) x [2,infinity)"
+  },
+  "scope": "exact-support quotient, not a proved minimal control-sufficient quotient"
+}

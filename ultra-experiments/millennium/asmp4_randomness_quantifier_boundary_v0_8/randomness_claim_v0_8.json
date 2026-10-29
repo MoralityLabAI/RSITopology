@@ -1,0 +1,59 @@
+{
+  "schema_version": "asmp4_randomness_quantifier_boundary_claim_v0_8",
+  "status": "exact stochastic-quantifier boundary; canonical probability order unspecified",
+  "canonical_audit": {
+    "shared_randomness_independent_of_state_permitted": true,
+    "universal_disturbance_sequence_required": true,
+    "probability_disturbance_order_clause_count": 0,
+    "graduation_rule_requires_explicit_randomness_adversaries_and_quantifier_order": true,
+    "decision": "randomness_disturbance_quantifier_underdetermined"
+  },
+  "continuous_diagonal_fixture": {
+    "dynamics": "x_(t+1)=(u_t-w_t)^2",
+    "initial_state": "x_0=1",
+    "safe_set": "(0,infinity)",
+    "shared_random_control": "u_t=r_t iid Uniform[0,1]",
+    "read_rate": 0,
+    "write_rate": 0,
+    "per_disturbance_almost_sure_safe": true,
+    "uniform_almost_sure_safe": false,
+    "support_zero_error_safe": false,
+    "adaptive_disturbance_safe": false
+  },
+  "countable_disturbance_theorem": {
+    "statement": "For countable disturbance alphabets and finite-time-detectable safety, forall w P_r[safe(r,w)]=1 implies P_r[forall w safe(r,w)]=1.",
+    "proof_device": "countable union of finite-prefix null failure sets"
+  },
+  "finite_grid_census": {
+    "symbol_sizes": [2, 3, 4, 5],
+    "horizons": [1, 2, 3, 4],
+    "cells": 16,
+    "enumerated_seed_disturbance_pairs": 484524,
+    "fixed_disturbance_safe_seed_words": "(N-1)^T",
+    "safe_seed_disturbance_pairs": "(N(N-1))^T",
+    "universal_safe_seed_words": 0,
+    "formula_mismatches": 0
+  },
+  "formula_phase_map": {
+    "symbol_sizes": [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024],
+    "horizons": [1, 2, 4, 8, 16, 32],
+    "cells": 60,
+    "fixed_path_success": "((N-1)/N)^T",
+    "lim_N_then_T": 1,
+    "lim_T_then_N": 0,
+    "continuous_fixed_path_success": 1,
+    "continuous_universal_seed_success": 0
+  },
+  "monte_carlo_boundary": {
+    "independent_continuous_pair_failure_probability": 0,
+    "adaptive_diagonal_failure_probability": 1,
+    "disposition": "random nonfailure cannot certify universal confinement"
+  },
+  "canonical_disposition": "A randomized ASMP-4 code is not well-defined until the source orders shared-randomness probability, disturbance universality, and any adversarial access to the seed.",
+  "nonclaims": [
+    "normally hyperbolic classification of the diagonal boundary fixture",
+    "positive-error noisy-channel capacity",
+    "state-correlated uncharged randomness",
+    "a registration-independent canonical ASMP-4 region"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "implementation_commit": "018d95a675e7a9bb32505d656ebd4d3ced489afd",
+  "output_hashes": {
+    "RESULT_v0_15.md": "01e1040202d7ab397644b894d7b5a9069b9452b7ddf05cbc049aba400190571c",
+    "result_v0_15.json": "bfe51cd189753d3577c8d0a65df57fbd6672c8da43cdd213e3b83f434ab32f71"
+  },
+  "protocol_id": "ASMP-9-SHARP-INTERIOR-AVAILABILITY-v0.15",
+  "registration_commit": "9d6ee8799695f6dda4395aee039a9eb977866f18",
+  "registration_sha256": "6ae71920008977079385d0cacd71133f38311412034a277194517525a0b08e21",
+  "resources": {
+    "elapsed_seconds": 2.7800775000068825,
+    "gpu_used": false,
+    "peak_resident_bytes": 20938752
+  },
+  "verdict": "registered_exact_result_passed"
+}

@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_unique_marker_search_and_resource_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_40_resource_rows_reconstructed": true,
+    "V2_dimension_one_and_post_witness_cost_one_exact": true,
+    "V3_randomized_q_over_N_and_linear_success_threshold_exact": true,
+    "V4_small_subset_strategy_spaces_reconstructed": true,
+    "V5_permutation_invariance_reconstructed": true,
+    "V6_parent_macro_and_noise_contracts_reconstructed": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates black-box classical unique-marker search under a zero-or-one promise. It does not cover structured side information, quantum queries, or witness-bearing transcripts.",
+  "passed": true,
+  "schema_version": "asmp3_honest_search_barrier_verification_v2_1"
+}

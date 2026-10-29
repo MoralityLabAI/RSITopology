@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-WEIGHTED-NOISE-SUBSET-SUM-v1.6",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_noise_symmetry_quotient_v1_5/NOISE_SYMMETRY_QUOTIENT_THEOREM_v1_5.md": {
+      "bytes": 5691,
+      "sha256": "CBDCF897CC47CDC62FCA88E06466208DEEB4AF16432B34ABF29CE9CC03BD8C92"
+    },
+    "../asmp3_noise_symmetry_quotient_v1_5/RELEASE_MANIFEST_v1_5.json": {
+      "bytes": 2970,
+      "sha256": "79CD4C77829105A7C4344F8C65DA26BE895DBA2732E83C24C8FC9E073B56F6DE"
+    },
+    "../asmp3_noise_symmetry_quotient_v1_5/artifacts/noise_symmetry_quotient_v1_5.json": {
+      "bytes": 583183,
+      "sha256": "408CBB65CD2D41DDB411927204A38872BDA1450B8D03FE90306D72F857BB33CF"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_6.md": {
+      "bytes": 2209,
+      "sha256": "90559DA28FB812F9B06C5E208C639E381FADB02A20F3AE75E780C06A3B00EE29"
+    },
+    "README.md": {
+      "bytes": 873,
+      "sha256": "A2D2015F3B240E9C15B2021FEAFB66F692B57CDAB831008BEED6A2B094FA4845"
+    },
+    "WEIGHTED_NOISE_SUBSET_SUM_THEOREM_v1_6.md": {
+      "bytes": 6925,
+      "sha256": "E3C2514738ADA39121126523F86257499C5380CD70F88C88F4E68BA913E1F378"
+    },
+    "artifacts/weighted_noise_subset_sum_v1_6.json": {
+      "bytes": 3411499,
+      "sha256": "BDD85BEC34CEF4656B749C512EE49F536955A6D6A254386871E264D004526C2B"
+    },
+    "artifacts/weighted_noise_subset_sum_verification_v1_6.json": {
+      "bytes": 878,
+      "sha256": "C6883AB634FC4542D81919A6DD4EEC3A223DF9209CB54829C0045B51A1B91299"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2519,
+      "sha256": "D795C70CC34CF21D725DDF3A14AA68CF93CBAF52960D7BD8052ED6906B103C8E"
+    },
+    "run_weighted_noise_subset_sum.py": {
+      "bytes": 889,
+      "sha256": "FC96C16129BFB16CF91261C176B479E6296FC9B8BC071AF5B76DDF563AC46630"
+    },
+    "test_weighted_noise_subset_sum.py": {
+      "bytes": 5320,
+      "sha256": "61ADE7091DF72DBABF650303F1B5E8C15AF8EC8FA3944F3B09261B8269F24750"
+    },
+    "verify_weighted_noise_subset_sum.py": {
+      "bytes": 10767,
+      "sha256": "41E3EB6EB8151F1183E95A3DBF20EAE761A326AC2966BB738C5565AD8927DAA7"
+    },
+    "weighted_noise_subset_sum.py": {
+      "bytes": 13397,
+      "sha256": "25E78E34293650D51D616A1623539E5719D025F3F5D4348318E9F6EF51265187"
+    }
+  },
+  "release_status": "exact_weighted_budget_phase_and_complexity_boundary",
+  "schema_version": "asmp3_weighted_noise_subset_sum_release_v1_6"
+}

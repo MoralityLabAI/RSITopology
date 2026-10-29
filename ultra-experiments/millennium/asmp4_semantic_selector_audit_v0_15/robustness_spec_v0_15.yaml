@@ -1,0 +1,59 @@
+schema_version: "1.0"
+review_id: asmp4-selector-metric-robustness-v0-15
+eval_id: asmp4-semantic-selector-audit-v0-15
+construct: conservative semantic detection of a sensor-registry selector
+robustness_claim: The selector-risk metric is invariant to nuisance reformatting, sensitive and monotonic to explicit selection, detects paraphrased raw-injectivity attacks, and remains quiet on clean architecture clauses.
+evidence_scope: held_out
+independent_unit: probe_family_id
+metrics:
+  - id: selector_risk
+    description: A deterministic score in {0,0.5,1}, where 0 is no selection, 0.5 is ambiguous, and 1 is an explicit computed, raw, or parameterized registry selector.
+thresholds:
+  min_independent_families_per_type: 1
+  min_invariance_pass_rate: 1.0
+  min_sensitivity_pass_rate: 1.0
+  max_attack_escape_rate: 0.0
+  max_false_positive_rate: 0.0
+  max_monotonicity_violation_rate: 0.0
+hook_policy:
+  require_matched_control: true
+probes:
+  - probe_id: invariant-reflow-01
+    probe_family_id: invariant-reflow
+    probe_type: invariance
+    split: held_out
+    metric_ids: [selector_risk]
+    expected_behavior: stable
+    tolerance: 0.0
+    source_ref: fixture://robustness_fixtures_v0_15.json#invariant-reflow-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c
+  - probe_id: sensitivity-raw-selector-01
+    probe_family_id: sensitivity-raw-selector
+    probe_type: sensitivity
+    split: held_out
+    metric_ids: [selector_risk]
+    expected_behavior: increase
+    required_delta: 1.0
+    source_ref: fixture://robustness_fixtures_v0_15.json#sensitivity-raw-selector-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c
+  - probe_id: monotonicity-explicitness-01
+    probe_family_id: monotonicity-explicitness
+    probe_type: monotonicity
+    split: held_out
+    metric_ids: [selector_risk]
+    expected_behavior: increase
+    required_delta: 0.5
+    source_ref: fixture://robustness_fixtures_v0_15.json#monotonicity-explicitness-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c
+  - probe_id: anti-gaming-paraphrase-01
+    probe_family_id: anti-gaming-paraphrase
+    probe_type: anti_gaming
+    split: held_out
+    metric_ids: [selector_risk]
+    expected_behavior: detect_violation
+    source_ref: fixture://robustness_fixtures_v0_15.json#anti-gaming-paraphrase-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c
+  - probe_id: clean-control-architecture-01
+    probe_family_id: clean-control-architecture
+    probe_type: clean_control
+    split: held_out
+    metric_ids: [selector_risk]
+    expected_behavior: no_violation
+    source_ref: fixture://robustness_fixtures_v0_15.json#clean-control-architecture-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c
+mechanistic_hooks: []

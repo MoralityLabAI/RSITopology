@@ -1,0 +1,165 @@
+{
+  "gate_passes": {
+    "G0_registration_binding": true,
+    "G1_homogeneous_scale_obstruction": true,
+    "G2_adaptive_scale_obstruction": true,
+    "G3_unknown_numeraire_control": true,
+    "G4_calibrated_numeraire": true,
+    "G5_finite_mdp_realization": true,
+    "G6_quotient_criterion": true,
+    "G7_robust_conditioning": true,
+    "G8_prior_art_and_claim_boundary": true,
+    "G9_resource_and_scope": true
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "a8cd1d8633c2e4017889dbd06ddb90db1c9d1799432deb09a8e593da38d466af",
+      "sealed_file_count": 13
+    },
+    "G1_homogeneous_scale_obstruction": {
+      "pass": true,
+      "row_count": 2
+    },
+    "G2_adaptive_scale_obstruction": {
+      "pass": true,
+      "total_transcripts": 768
+    },
+    "G3_unknown_numeraire_control": {
+      "pass": true,
+      "scale_checks": 2
+    },
+    "G4_calibrated_numeraire": {
+      "maximum_localization_error": "1819/1720320",
+      "maximum_queries": 14,
+      "pass": true,
+      "scale_break_checks": 2
+    },
+    "G5_finite_mdp_realization": {
+      "pass": true,
+      "row_count": 4
+    },
+    "G6_quotient_criterion": {
+      "pass": true,
+      "row_count": 3
+    },
+    "G7_robust_conditioning": {
+      "amplification_ratio": 2896.309462056848,
+      "pass": true,
+      "row_count": 2
+    },
+    "G8_prior_art_and_claim_boundary": {
+      "identifiers": [
+        "ASMP-9-v0.10",
+        "ASMP-9-v0.26-v0.27",
+        "ICML-1999-Ng-Harada-Russell",
+        "NeurIPS-2021-671f0311",
+        "PMLR:139:5496-5505",
+        "PMLR:202:32033-32058",
+        "PMLR:235:24808-24828",
+        "doi:10.1093/biomet/asm029"
+      ],
+      "pass": true
+    },
+    "G9_resource_and_scope": {
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 31997952,
+      "wall_seconds": 0.09808850000263192
+    }
+  },
+  "homogeneous_rows": [
+    {
+      "adaptive_depth": 7,
+      "adaptive_pass": true,
+      "law_pass": true,
+      "name": "fresh_four_feature",
+      "transcript_count": 256
+    },
+    {
+      "adaptive_depth": 8,
+      "adaptive_pass": true,
+      "law_pass": true,
+      "name": "fresh_five_feature",
+      "transcript_count": 512
+    }
+  ],
+  "mdp_rows": [
+    {
+      "fixed_horizon": 4,
+      "name": "fresh_four_feature",
+      "pass": true,
+      "query_initial_states": 5,
+      "state_count": 45,
+      "transition_count": 40
+    },
+    {
+      "fixed_horizon": 4,
+      "name": "fresh_five_feature",
+      "pass": true,
+      "query_initial_states": 6,
+      "state_count": 54,
+      "transition_count": 48
+    },
+    {
+      "fixed_horizon": 3,
+      "name": "unknown_numeraire",
+      "pass": true,
+      "query_initial_states": 4,
+      "state_count": 28,
+      "transition_count": 24
+    },
+    {
+      "fixed_horizon": 4,
+      "name": "calibrated_numeraire",
+      "pass": true,
+      "query_initial_states": 4,
+      "state_count": 36,
+      "transition_count": 32
+    }
+  ],
+  "protocol_id": "ASMP-9-CALIBRATED-OCCUPANCY-v0.28",
+  "quotient_rows": [
+    {
+      "identifiable_modulo_gauge": true,
+      "measurement_rank": 4,
+      "name": "fresh_connected_constant_gauge",
+      "pass": true,
+      "witness_pass": true
+    },
+    {
+      "identifiable_modulo_gauge": false,
+      "measurement_rank": 3,
+      "name": "fresh_disconnected_constant_gauge",
+      "pass": true,
+      "witness_pass": true
+    },
+    {
+      "identifiable_modulo_gauge": true,
+      "measurement_rank": 3,
+      "name": "fresh_affine_gauge",
+      "pass": true,
+      "witness_pass": true
+    }
+  ],
+  "registration_sha256": "a8cd1d8633c2e4017889dbd06ddb90db1c9d1799432deb09a8e593da38d466af",
+  "robust_rows": [
+    {
+      "amplification": 1.0,
+      "design_rank": 3,
+      "name": "fresh_well_conditioned",
+      "pass": true,
+      "quotient_dimension": 3,
+      "sigma_min": 1.0
+    },
+    {
+      "amplification": 2896.309462056848,
+      "design_rank": 3,
+      "name": "fresh_ill_conditioned",
+      "pass": true,
+      "quotient_dimension": 3,
+      "sigma_min": 0.00034526697271148585
+    }
+  ],
+  "verdict": "calibrated_occupancy_boundary_established_v0_28"
+}

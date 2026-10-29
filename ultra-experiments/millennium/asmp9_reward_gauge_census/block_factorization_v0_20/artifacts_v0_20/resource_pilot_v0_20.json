@@ -1,0 +1,20 @@
+{
+  "allocation_count": 11,
+  "block_edge_counts": [
+    8,
+    3
+  ],
+  "claim_eligible": false,
+  "elapsed_seconds": 2.607701000000816,
+  "epsilon": "3/11",
+  "exact_match": true,
+  "peak_resident_bytes": 20672512,
+  "proxy": "burned_k2_4_plus_triangle",
+  "source_hashes": {
+    "block_factorization.py": "c5cb870558cec9d148167cf8190578e8e16a6164a3d018561c0c35128313076e",
+    "run_resource_pilot_v0_20.py": "5d3634bc71003b0528761bfdbb84f317abd4b3b382668f829b298022dd9065be",
+    "run_verification_v0_20.py": "8f5ba1183dbe4284f2802a772853c112ac741dec72d520dd726bf8b537499899"
+  },
+  "status": "development_only_all_cells_burned",
+  "total_budget": 12
+}

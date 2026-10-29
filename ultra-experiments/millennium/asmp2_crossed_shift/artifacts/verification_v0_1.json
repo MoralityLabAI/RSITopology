@@ -1,0 +1,34 @@
+{
+  "G6_independent_verification": {
+    "checks": {
+      "affine_control_exact": true,
+      "all_runner_gates_pass": true,
+      "ambiguity_table_exact": true,
+      "claim_hash_matches_local": true,
+      "count_matched_control_exact": true,
+      "eight_coordinate_reframes": true,
+      "exact_gate_universe": true,
+      "fisher_eigenpairs_exact": true,
+      "fisher_exact": true,
+      "forced_label_preserved": true,
+      "global_ambiguity_exact": true,
+      "kappa_exact": true,
+      "protocol_hash_matches_local": true,
+      "registration_commit_agrees": true,
+      "resource_ceiling_pass": true,
+      "result_hash_matches_receipt": true,
+      "risk_null_control_exact": true,
+      "runner_status_valid": true,
+      "safety_control_exact": true,
+      "schema_matches": true,
+      "verifier_hash_matches_receipt": true
+    },
+    "pass": true
+  },
+  "claim_boundary": "Exact verification of one analytically forced finite construction; no general ASMP-2 inference.",
+  "evidence_label": "instrument_valid_forced_construction",
+  "instrument_status": "valid",
+  "next_stage": "ASMP-4",
+  "schema_version": "asmp2_crossed_shift_verification_v0_1",
+  "stage_decision": "pass"
+}
