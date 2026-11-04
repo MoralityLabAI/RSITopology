@@ -1,7 +1,7 @@
 import unittest
 from fractions import Fraction as Q
 from itertools import product
-from reversible_lumpability import example, mv, mm, sq, diagnostic, power
+from reversible_lumpability import example, mv, mm, sq, diagnostic, power, relabel, leakage_squared_three
 
 class ReversibleTests(unittest.TestCase):
     def test_symmetric_markov_and_projector(self):
@@ -44,6 +44,18 @@ class ReversibleTests(unittest.TestCase):
         leak,macro = diagnostic(2,(Q(0),Q(0),Q(1)))
         self.assertGreater(leak,0)
         self.assertGreater(macro,0)
+
+
+    def test_unmarked_spectrum_cannot_identify_autonomy(self):
+        K,P,N,A = example()
+        K2 = relabel(K,(0,2,1))   # permutation similarity, same full spectrum
+        for t in range(1,6):
+            self.assertEqual(sum(power(K,t)[i][i] for i in range(3)),
+                             sum(power(K2,t)[i][i] for i in range(3)))
+        self.assertEqual(leakage_squared_three(K,P,N), Q(3,64))
+        self.assertEqual(leakage_squared_three(K2,P,N), Q(3,16))
+        self.assertNotEqual(leakage_squared_three(K,P,N),
+                            leakage_squared_three(K2,P,N))
 
 if __name__ == "__main__":
     unittest.main()
