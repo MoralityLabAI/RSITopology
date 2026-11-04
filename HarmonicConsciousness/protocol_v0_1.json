@@ -1,0 +1,70 @@
+{
+  "id": "HarmonicConsciousness-v0.1",
+  "created": "2026-10-27",
+  "status": "candidate_pre_registration_not_sealed",
+  "scope": "synthetic wave diagnostics and a future human/model measurement proposal",
+  "epistemic_ceiling": "engineering_evidence",
+  "quantum_mechanics_claim": false,
+  "consciousness_established": false,
+  "synthetic": {
+    "seed": 20261027,
+    "geometry": "fixed finite orthonormal spatial modes",
+    "time_evolution": "complex positive-frequency finite-mode half-wave",
+    "analytical_target": "exact time-averaged localized energy with frequency-gap bound",
+    "checks": [
+      "independent numerical quadrature",
+      "basis invariance within an exactly degenerate eigenspace",
+      "interference gap bound",
+      "constant-phase-offset invariance for phase locking",
+      "stationary circular-shift surrogate",
+      "uninformative pure-tone surrogate negative control",
+      "invalid input rejection"
+    ],
+    "command": "python -m pytest -q tests/test_harmonic_consciousness.py"
+  },
+  "future_measurement": {
+    "status": "unfunded_unrun_requires_precommitment",
+    "preferred_temporal_measurement": "EEG/MEG/iEEG with appropriate access/ethics",
+    "preferred_spatial_measurement": "structural connectome Laplacian or registered sheaf operators",
+    "target_condition": "externally labeled awareness/reportability under controlled conditions",
+    "construction_split": "subjects_and_runs_not_outcomes",
+    "assessment_split": "held_out_subjects_or_registered_model_run_families",
+    "primary_contrast": "incremental held-out predictive performance of registered m:n phase coupling over structure/power/autocorrelation/common-input baselines",
+    "causal_extension": "phase-targeted perturbation versus power- and spectrum-matched control",
+    "report_all": [
+      "sample sizes and exclusions",
+      "sampling frequency and preprocessing",
+      "phase bands and ratio choice",
+      "effect size and confidence interval",
+      "shuffled-label and circular-shift baselines",
+      "phase surrogates' stationarity diagnostics",
+      "negative and common-drive controls",
+      "effective rank and projector occupancy",
+      "held-out generalization",
+      "provenance hashes"
+    ],
+    "requires_before_seal": [
+      "dataset permission and acquisition pipeline",
+      "labels and operational awareness definition",
+      "subject/run IDs and splits",
+      "preselected spectral bands and lag windows",
+      "power analysis and alpha correction",
+      "specified source leakage and common drive controls",
+      "model/site/checkpoint hash if using AI",
+      "independent held-out evaluator"
+    ],
+    "falsify_if": [
+      "phase features fail to beat registered nonphase baselines in held-out evaluation",
+      "selective causal phase intervention fails with sufficient power",
+      "effect disappears under identity-robust projector/group analysis",
+      "proposed graph-sequence uniformity fails as spectral gap shrinks"
+    ]
+  },
+  "rsi_topology_integration": {
+    "source": "reports/mathematical_program.md and reports/monitor_holonomy_insight.md",
+    "authorization_levels_unchanged": ["engineering_evidence", "lineage_certified", "holonomy_clean"],
+    "signed_edits_require": "holonomy_clean",
+    "weights_or_models_mutated": false,
+    "outcomes_or_label_selection_used": false
+  }
+}

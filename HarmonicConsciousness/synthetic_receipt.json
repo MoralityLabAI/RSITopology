@@ -1,0 +1,26 @@
+{
+  "awareness_inference": "none",
+  "effective_rank_identity_4d": 4.0,
+  "finite_wave": {
+    "analytic_quadrature_absolute_error": 2.722009284639171e-09,
+    "bound_holds": true,
+    "distinct_frequency_count": 4,
+    "horizon": 32.0,
+    "incoherent_energy": 1.0837,
+    "interference": -0.02657821504566482,
+    "interference_bound": 0.05826129078269547,
+    "minimum_distinct_gap": 0.5,
+    "sampled_time_average": 1.0571217876763446,
+    "time_average": 1.0571217849543353
+  },
+  "seed": 20261027,
+  "status": "synthetic_only",
+  "temporal_phase": {
+    "observed": 0.9974277086194084,
+    "p_upper_tail": 0.005,
+    "replicates": 199,
+    "seed": 17,
+    "surrogate_max": 0.2899554260968826,
+    "surrogate_mean": 0.151934689473105
+  }
+}

@@ -16,6 +16,14 @@ Two downstream hypotheses are kept separate:
    matched-rank Haar subspace. Discovery emits a normalized proposal and hash;
    it does not apply the edit.
 
+## Harmonic Consciousness and FRC calibration
+
+[`HarmonicConsciousness/`](HarmonicConsciousness/README.md) develops an
+N-dimensional Hilbert-space harmonic-resonance hypothesis, a finite-mode
+localization lemma, and a candidate self-designed evaluation experiment linked
+to EvalMath and Fidelity Recursive Complexity. Its model-free synthetic suite
+has 26 focused tests and leaves the existing lineage/holonomy gates unchanged.
+
 ## Identity-attestation consumers
 
 The spectral-bundle, lineage, and holonomy stack is exposed as a three-level
