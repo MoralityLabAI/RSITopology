@@ -1,0 +1,46 @@
+{
+  "base_main_commit": "f82ae3dc204b2866e77e0039f5b516e2ce50e58e",
+  "caveat": "Synthetic dynamical controls only. Neither IIT Phi nor FRC liminf nor consciousness is measured.",
+  "execution": "local_cpu_numpy_20261027",
+  "git_status": "local_verification_before_repository_merge",
+  "local_tests_passed": 10,
+  "repo_target": "MoralityLabAI/RSITopology",
+  "runs": {
+    "development": {
+      "flags": {
+        "channel_psd_surrogate_same_peak_lower_corr": true,
+        "locked_phase_high_order_low_task_gain": true,
+        "memory_cut_degrades_task": true,
+        "xor_lag8_spread_at_least_tenth": false,
+        "xor_structural_coupling_without_task_gain": true
+      },
+      "seed": 20261027,
+      "trials": 24
+    },
+    "holdout": {
+      "flags": {
+        "channel_psd_surrogate_same_peak_lower_corr": true,
+        "locked_phase_high_order_low_task_gain": true,
+        "memory_cut_degrades_task": true,
+        "xor_lag8_spread_at_least_tenth": false,
+        "xor_structural_coupling_without_task_gain": true
+      },
+      "seed": 7810427,
+      "trials": 24
+    }
+  },
+  "schema": "harmonic_consciousness_implementation_receipt_v0.1",
+  "sha256": {
+    ".github/workflows/harmonic-consciousness.yml": "5477b26ae925219a3bf35f15d3fa8949ee57130ae31e742922e12f563cb79db5",
+    "HarmonicConsciousness/README.md": "898ffc52f2473b04dc61e01a1cc912b12305c4af44a5337a24581f933db3006e",
+    "HarmonicConsciousness/__init__.py": "7200fcc1a2303aec7bd956968dc1a29e8ecbeb447392ac0b727123dd4c9e0357",
+    "HarmonicConsciousness/benchmark.py": "7a7a28532d0871e0af18eddbfb19885c645b281b0889dd372a085281fb8928eb",
+    "HarmonicConsciousness/protocol_v0_1.json": "f24721a76b924c2075aede5ac70feefe5888665f52be1135205273c416a1949a",
+    "HarmonicConsciousness/results/dev_v0_1.json": "cb2812d3ab765b15e7658a5dcfb5684ef1f7d2831a402bba1806c05dea0e4548",
+    "HarmonicConsciousness/results/holdout_v0_1.json": "5d38321c23c2f33e823eaa12d74c37112c5143502a76225224fee872e63f8c27",
+    "pyproject.toml": "a7989bd2f02094dd9fb6e42dbcc7e24b65c6de5843f50e1a035ef7368a0dec01",
+    "scripts/run_harmonic_consciousness.py": "607c7948dd15e169d729f6d58d8476aa59b39b7e14e0bea964b5c57d53a5807f",
+    "tests/test_harmonic_consciousness.py": "c32d312f614f781f9dd87cfb574ab97e91a199ff4f2ad7026a00d15e84049d45"
+  },
+  "test_command": "python -m unittest discover -s tests -p test_harmonic_consciousness.py -v"
+}
