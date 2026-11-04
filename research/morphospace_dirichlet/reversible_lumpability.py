@@ -40,3 +40,15 @@ def diagnostic(t, f):
     latent = mv(N,micro)
     macro_error = add(mv(P,micro), mv(power(A,t),f), sign=-1)
     return sq(latent),sq(macro_error)
+
+
+def relabel(K, new_to_old):
+    """Conjugate by a permutation: identical eigenvalues, changed fixed labels."""
+    return tuple(tuple(K[new_to_old[i]][new_to_old[j]] for j in range(len(K)))
+                 for i in range(len(K)))
+
+def leakage_squared_three(K, P, N):
+    """Exact ||Q K P||_op² when Q has rank one, as in the 3-state witness."""
+    B = mm(mm(N,K),P)
+    # Q has rank one here, hence B rank <= 1 and ||B||² = tr(B* B).
+    return sum((v*v for row in B for v in row), Q(0))
