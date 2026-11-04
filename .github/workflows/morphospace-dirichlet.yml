@@ -1,0 +1,22 @@
+name: Morphospace spectral autonomy exact audit
+on:
+  push:
+    paths:
+      - 'research/morphospace_dirichlet/**'
+      - '.github/workflows/morphospace-dirichlet.yml'
+  pull_request:
+    paths:
+      - 'research/morphospace_dirichlet/**'
+      - '.github/workflows/morphospace-dirichlet.yml'
+  workflow_dispatch:
+jobs:
+  rational-graph:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: QD-01 graph identity and QD-02 Markov compression tests
+        run: python -m unittest discover -s research/morphospace_dirichlet -p 'test_*.py' -v
