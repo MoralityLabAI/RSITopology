@@ -21,7 +21,7 @@ class DirichletQuotientTests(unittest.TestCase):
         f = {"A": Fraction(3), "B": Fraction(-2)}
         self.assertTrue(externally_equitable(vertices, edges, grouping))
         self.assertEqual(squared_autonomy_defect(vertices, edges, grouping, f), Fraction(0))
-        self.assertEqual(energy(edges, {u: f[grouping[u]] for u in vertices),
+        self.assertEqual(energy(edges, {u: f[grouping[u]] for u in vertices}),
                          energy(quotient_edges(edges, grouping), f))
 
     def test_internal_edges_do_not_affect_lifted_energy(self):
