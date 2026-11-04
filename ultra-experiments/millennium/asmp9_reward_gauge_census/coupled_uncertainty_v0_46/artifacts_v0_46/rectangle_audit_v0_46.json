@@ -1,0 +1,195 @@
+{
+  "audits": {
+    "branch_classification": {
+      "allocations": 2080,
+      "constructive_underbound_count": 0,
+      "exact_best_upper": "282765162191/500000000000",
+      "exact_optima": [
+        [
+          28,
+          19,
+          19
+        ]
+      ],
+      "exact_uniform_upper": "114652350237/200000000000",
+      "first_mismatches": [
+        {
+          "allocation": [
+            1,
+            14,
+            51
+          ],
+          "exact_upper": "2140172369279/2859319531517",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            15,
+            50
+          ],
+          "exact_upper": "2101453413384/2818148450579",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            16,
+            49
+          ],
+          "exact_upper": "2066530349019/2780702379356",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            17,
+            48
+          ],
+          "exact_upper": "2034855868687/2746430458406",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            18,
+            47
+          ],
+          "exact_upper": "2005990025957/2714888932652",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            19,
+            46
+          ],
+          "exact_upper": "1979574769337/2685715660757",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            20,
+            45
+          ],
+          "exact_upper": "1955315529803/2658611675228",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            21,
+            44
+          ],
+          "exact_upper": "1932967664248/2633327595089",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            22,
+            43
+          ],
+          "exact_upper": "1912326312475/2609653448237",
+          "formula_upper": "3/4",
+          "match": false
+        },
+        {
+          "allocation": [
+            1,
+            23,
+            42
+          ],
+          "exact_upper": "1893218699201/2587410934382",
+          "formula_upper": "3/4",
+          "match": false
+        }
+      ],
+      "formula_best_upper": "282765162191/500000000000",
+      "formula_optima": [
+        [
+          28,
+          19,
+          19
+        ]
+      ],
+      "formula_uniform_upper": "114652350237/200000000000",
+      "maximum_formula_excess": "9406355841/114634946332",
+      "mismatch_count": 1739,
+      "mode": "branch_classification",
+      "rows_sha256": "791e83281a8adaea0fddfe30ed017476f0cf055e7437f9a3961a392b20079f52",
+      "total_budget": 66,
+      "uniform_allocation": [
+        22,
+        22,
+        22
+      ]
+    },
+    "root_group": {
+      "allocations": 2080,
+      "constructive_underbound_count": 0,
+      "exact_best_upper": "127082126437/500000000000",
+      "exact_optima": [
+        [
+          64,
+          1,
+          1
+        ]
+      ],
+      "exact_uniform_upper": "202678635829/500000000000",
+      "first_mismatches": [],
+      "formula_best_upper": "127082126437/500000000000",
+      "formula_optima": [
+        [
+          64,
+          1,
+          1
+        ]
+      ],
+      "formula_uniform_upper": "202678635829/500000000000",
+      "maximum_formula_excess": "0",
+      "mismatch_count": 0,
+      "mode": "root_group",
+      "rows_sha256": "7f37d160a0453afdf3c80a18f3f5f8a4d6876cf63d0e9de1ae085a71f58ddee1",
+      "total_budget": 66,
+      "uniform_allocation": [
+        22,
+        22,
+        22
+      ]
+    }
+  },
+  "coupled_optimum_rows": {
+    "branch_classification_at_coupled_optimum": {
+      "allocation": [
+        28,
+        19,
+        19
+      ],
+      "exact_upper": "282765162191/500000000000",
+      "formula_upper": "282765162191/500000000000",
+      "match": true
+    },
+    "root_group_at_coupled_optimum": {
+      "allocation": [
+        64,
+        1,
+        1
+      ],
+      "exact_upper": "127082126437/500000000000",
+      "formula_upper": "127082126437/500000000000",
+      "match": true
+    }
+  },
+  "schema": "asmp9-v0.46-rectangle-audit-v1",
+  "total_budget": 66
+}

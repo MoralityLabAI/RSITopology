@@ -1,0 +1,371 @@
+{
+  "elapsed_seconds": 220.0448210000177,
+  "endpoint_controls": [
+    {
+      "bound": 1,
+      "exact_delta_zero_separates": true,
+      "positive_delta_half_separates": false,
+      "query": [
+        0,
+        1
+      ],
+      "query_width": 1,
+      "scores": [
+        0,
+        1
+      ],
+      "sharp_positive_delta_width": 2
+    },
+    {
+      "bound": 2,
+      "exact_delta_zero_separates": true,
+      "positive_delta_half_separates": false,
+      "query": [
+        0,
+        -1
+      ],
+      "query_width": 1,
+      "scores": [
+        -1,
+        0
+      ],
+      "sharp_positive_delta_width": 3
+    },
+    {
+      "bound": 8,
+      "exact_delta_zero_separates": true,
+      "positive_delta_half_separates": false,
+      "query": [
+        6,
+        -7
+      ],
+      "query_width": 7,
+      "scores": [
+        -1,
+        0
+      ],
+      "sharp_positive_delta_width": 15
+    },
+    {
+      "bound": 32,
+      "exact_delta_zero_separates": true,
+      "positive_delta_half_separates": false,
+      "query": [
+        30,
+        -31
+      ],
+      "query_width": 31,
+      "scores": [
+        -1,
+        0
+      ],
+      "sharp_positive_delta_width": 63
+    }
+  ],
+  "full_pair_cells": [
+    {
+      "bound": 25,
+      "dimension": 2,
+      "elapsed_seconds": 11.102906100015389,
+      "failure_count": 0,
+      "maximum_constructed_width": 49,
+      "pair_count": 1279200,
+      "ray_count": 1600,
+      "sharp_width": 49
+    },
+    {
+      "bound": 26,
+      "dimension": 2,
+      "elapsed_seconds": 12.207161199999973,
+      "failure_count": 0,
+      "maximum_constructed_width": 51,
+      "pair_count": 1437360,
+      "ray_count": 1696,
+      "sharp_width": 51
+    },
+    {
+      "bound": 27,
+      "dimension": 2,
+      "elapsed_seconds": 14.33295489999,
+      "failure_count": 0,
+      "maximum_constructed_width": 53,
+      "pair_count": 1691880,
+      "ray_count": 1840,
+      "sharp_width": 53
+    },
+    {
+      "bound": 28,
+      "dimension": 2,
+      "elapsed_seconds": 16.029411600000458,
+      "failure_count": 0,
+      "maximum_constructed_width": 55,
+      "pair_count": 1873080,
+      "ray_count": 1936,
+      "sharp_width": 55
+    },
+    {
+      "bound": 29,
+      "dimension": 2,
+      "elapsed_seconds": 19.867126900004223,
+      "failure_count": 0,
+      "maximum_constructed_width": 57,
+      "pair_count": 2331720,
+      "ray_count": 2160,
+      "sharp_width": 57
+    },
+    {
+      "bound": 30,
+      "dimension": 2,
+      "elapsed_seconds": 20.761215999984415,
+      "failure_count": 0,
+      "maximum_constructed_width": 59,
+      "pair_count": 2471976,
+      "ray_count": 2224,
+      "sharp_width": 59
+    },
+    {
+      "bound": 31,
+      "dimension": 2,
+      "elapsed_seconds": 25.870975600002566,
+      "failure_count": 0,
+      "maximum_constructed_width": 61,
+      "pair_count": 3034416,
+      "ray_count": 2464,
+      "sharp_width": 61
+    },
+    {
+      "bound": 32,
+      "dimension": 2,
+      "elapsed_seconds": 28.194205099978717,
+      "failure_count": 0,
+      "maximum_constructed_width": 63,
+      "pair_count": 3357936,
+      "ray_count": 2592,
+      "sharp_width": 63
+    },
+    {
+      "bound": 6,
+      "dimension": 3,
+      "elapsed_seconds": 14.106402200006414,
+      "failure_count": 0,
+      "maximum_constructed_width": 11,
+      "pair_count": 1495585,
+      "ray_count": 1730,
+      "sharp_width": 11
+    },
+    {
+      "bound": 2,
+      "dimension": 5,
+      "elapsed_seconds": 51.305650099995546,
+      "failure_count": 0,
+      "maximum_constructed_width": 3,
+      "pair_count": 4151521,
+      "ray_count": 2882,
+      "sharp_width": 3
+    }
+  ],
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_strict_opposite_scores": true,
+    "G2_constructed_width_bound": true,
+    "G3_lower_witness_validity": true,
+    "G4_lower_witness_sharpness": true,
+    "G5_fresh_grid_complete": true,
+    "G6_zero_endpoint_discontinuity": true
+  },
+  "lower_witness_cells": [
+    {
+      "bound": 65,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 66,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 67,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 68,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 69,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 70,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 71,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 72,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 73,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 74,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 75,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 76,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 77,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 78,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 79,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 80,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 81,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 82,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 83,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 84,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 85,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 86,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 87,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 88,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 89,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 90,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 91,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 92,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 93,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 94,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 95,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 96,
+      "narrower_strict_separator_exists": false,
+      "primitive": true
+    }
+  ],
+  "protocol_id": "ASMP-9-SHARP-WIDTH-v0.3.1",
+  "random_cells": [
+    {
+      "bound": 3,
+      "dimension": 6,
+      "failure_count": 0,
+      "maximum_constructed_width": 5,
+      "pair_count": 4096,
+      "seed": 90310,
+      "sharp_width": 5
+    },
+    {
+      "bound": 5,
+      "dimension": 10,
+      "failure_count": 0,
+      "maximum_constructed_width": 9,
+      "pair_count": 4096,
+      "seed": 90311,
+      "sharp_width": 9
+    },
+    {
+      "bound": 9,
+      "dimension": 20,
+      "failure_count": 0,
+      "maximum_constructed_width": 17,
+      "pair_count": 4096,
+      "seed": 90312,
+      "sharp_width": 17
+    }
+  ],
+  "registration_commit": "1741389aba2041a125738668d326d57307ceb462",
+  "registration_sha256": "51f9fb42309bf440915968d46523e4a40caa348703cb87ccc2a45b471c108c58",
+  "verdict": "corrected_sharp_query_width_theorem_implementation_verified"
+}

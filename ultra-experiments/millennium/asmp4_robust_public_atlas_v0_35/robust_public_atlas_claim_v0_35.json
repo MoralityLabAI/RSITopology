@@ -1,0 +1,33 @@
+{
+  "schema_version": "asmp4_robust_public_atlas_v0_35",
+  "theorem": {
+    "error_recurrence": "e_(t+1)<=A*e_t+D*omega",
+    "finite_atlas": "compact robust public basins admit a finite read-labeled connector subcover",
+    "read_bound": "ceil(log2 N_read)",
+    "write_bound": "ceil(log2 N_distinct_connector_words)",
+    "safe_reset": "propagated error stays below safety margin and terminal reset margin",
+    "v33_implication": "a finite fixed-reset atlas supplies constant safe-closing certificates",
+    "v34_boundary": "the literal v0.34 local premise needs an all-pairs atlas; a fixed-reset atlas only supplies its safe-closing conclusion",
+    "coordinate_invariance": "registered bi-Lipschitz conjugacies preserve atlas existence but need not preserve numerical radii"
+  },
+  "nonlinear_fixture": {
+    "plant": "x_next=2*x+u+x^2/4+w",
+    "core": "[-1,1]",
+    "reset": "[-1/8,1/8]",
+    "disturbance": "|w|<=1/128",
+    "read_cells": 33,
+    "write_words": 33,
+    "read_bits": 6,
+    "write_bits": 6,
+    "worst_case_error": "11/128"
+  },
+  "evidence": {
+    "error_rows": 3888,
+    "nonlinear_rows": 3171,
+    "cover_rows": 20,
+    "mutations_rejected": 8,
+    "predecessor_packages": 35,
+    "predecessor_tests": 384
+  },
+  "disposition": "robust finite-cost public connector atlases are now constructed from registered Lipschitz margins and observation/action quantization; proving such robust pointwise connectors for the full canonical normally hyperbolic class remains open"
+}

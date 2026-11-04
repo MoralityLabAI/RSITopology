@@ -1,0 +1,487 @@
+{
+  "cells_sha256": "fbddc7646d4603243f56914778c89c5b56407462c7efc542171a96cf62bc62f5",
+  "claim_boundary": "Conditional finite stochastic-choice access ledger: bounded context-degree reconstruction, margin-promised sampling, fixed Huber contamination, and recorded pre-response versus outcome-dependent selection. Classical/elementary ingredients; no empirical-premise, efficient-general-modulus, hidden-menu, latent-confounding, strategic/nonstationary, welfare, novelty, or full ASMP-9 resolution claim.",
+  "gates": {
+    "B57": true,
+    "C59": true,
+    "H0": true,
+    "I0": true,
+    "M58": true,
+    "RESOURCE": true,
+    "S60": true,
+    "T0": true,
+    "X0": true
+  },
+  "primary": {
+    "counts": {
+      "v57": {
+        "agreement_coordinates": 88724,
+        "cells": 12,
+        "high_degree_zero_checks": 86228
+      },
+      "v58": {
+        "eta_paths": 3,
+        "gamma_paths": 3,
+        "sample_cells": 3
+      },
+      "v59": {
+        "construction_checks": 13695,
+        "grid_pairs": 13695,
+        "robust_sample_cells": 9,
+        "witnesses": 3
+      },
+      "v60": {
+        "bounded_checks": 4788,
+        "confounding_checks": 1596,
+        "distributions": 56,
+        "selection_cells": 4
+      }
+    },
+    "fact_digest": "b6a183bac5f264bc410c2c25e07bd4030b7d0b2286efcaa3cb9ae302060ac9ae",
+    "gates": {
+      "B57": true,
+      "C59": true,
+      "M58": true,
+      "S60": true,
+      "X0": true
+    },
+    "rows": [
+      {
+        "agreement_coordinates": 72,
+        "high_degree_zero_checks": 4320,
+        "kind": "v57",
+        "max_degree": 1,
+        "n": 9,
+        "norm": 13,
+        "r": 1,
+        "special_probability": "3/5",
+        "target_value": 0
+      },
+      {
+        "agreement_coordinates": 1458,
+        "high_degree_zero_checks": 1044,
+        "kind": "v57",
+        "max_degree": 4,
+        "n": 9,
+        "norm": 351,
+        "r": 4,
+        "special_probability": "6/11",
+        "target_value": -57
+      },
+      {
+        "agreement_coordinates": 2286,
+        "high_degree_zero_checks": 0,
+        "kind": "v57",
+        "max_degree": 7,
+        "n": 9,
+        "norm": 1,
+        "r": 7,
+        "special_probability": "9/17",
+        "target_value": -47
+      },
+      {
+        "agreement_coordinates": 450,
+        "high_degree_zero_checks": 9855,
+        "kind": "v57",
+        "max_degree": 2,
+        "n": 10,
+        "norm": 97,
+        "r": 2,
+        "special_probability": "4/7",
+        "target_value": -41
+      },
+      {
+        "agreement_coordinates": 3810,
+        "high_degree_zero_checks": 1665,
+        "kind": "v57",
+        "max_degree": 5,
+        "n": 10,
+        "norm": 1023,
+        "r": 5,
+        "special_probability": "7/13",
+        "target_value": 42
+      },
+      {
+        "agreement_coordinates": 5100,
+        "high_degree_zero_checks": 0,
+        "kind": "v57",
+        "max_degree": 8,
+        "n": 10,
+        "norm": 1,
+        "r": 8,
+        "special_probability": "10/19",
+        "target_value": 107
+      },
+      {
+        "agreement_coordinates": 1925,
+        "high_degree_zero_checks": 21010,
+        "kind": "v57",
+        "max_degree": 3,
+        "n": 11,
+        "norm": 545,
+        "r": 3,
+        "special_probability": "5/9",
+        "target_value": 8
+      },
+      {
+        "agreement_coordinates": 9317,
+        "high_degree_zero_checks": 2530,
+        "kind": "v57",
+        "max_degree": 6,
+        "n": 11,
+        "norm": 2815,
+        "r": 6,
+        "special_probability": "8/15",
+        "target_value": 71
+      },
+      {
+        "agreement_coordinates": 11242,
+        "high_degree_zero_checks": 0,
+        "kind": "v57",
+        "max_degree": 9,
+        "n": 11,
+        "norm": 1,
+        "r": 9,
+        "special_probability": "11/21",
+        "target_value": 101
+      },
+      {
+        "agreement_coordinates": 6732,
+        "high_degree_zero_checks": 42108,
+        "kind": "v57",
+        "max_degree": 4,
+        "n": 12,
+        "norm": 2561,
+        "r": 4,
+        "special_probability": "6/11",
+        "target_value": 75
+      },
+      {
+        "agreement_coordinates": 21780,
+        "high_degree_zero_checks": 3696,
+        "kind": "v57",
+        "max_degree": 7,
+        "n": 12,
+        "norm": 7423,
+        "r": 7,
+        "special_probability": "9/17",
+        "target_value": 102
+      },
+      {
+        "agreement_coordinates": 24552,
+        "high_degree_zero_checks": 0,
+        "kind": "v57",
+        "max_degree": 10,
+        "n": 12,
+        "norm": 1,
+        "r": 10,
+        "special_probability": "12/23",
+        "target_value": 47
+      },
+      {
+        "binary_uniform": true,
+        "eta": "7/9973",
+        "full": [
+          "9952/29919",
+          "1/3",
+          "9994/29919"
+        ],
+        "kind": "v58_eta"
+      },
+      {
+        "binary_uniform": true,
+        "eta": "19/4001",
+        "full": [
+          "3944/12003",
+          "1/3",
+          "4058/12003"
+        ],
+        "kind": "v58_eta"
+      },
+      {
+        "binary_uniform": true,
+        "eta": "31/997",
+        "full": [
+          "904/2991",
+          "1/3",
+          "1090/2991"
+        ],
+        "kind": "v58_eta"
+      },
+      {
+        "full": [
+          "2004/4985",
+          "1984/4985",
+          "1/5"
+        ],
+        "gamma": "1/997",
+        "kind": "v58_gamma",
+        "regularity_gap": "2/997"
+      },
+      {
+        "full": [
+          "1566/3865",
+          "1526/3865",
+          "1/5"
+        ],
+        "gamma": "2/773",
+        "kind": "v58_gamma",
+        "regularity_gap": "4/773"
+      },
+      {
+        "full": [
+          "207/500",
+          "193/500",
+          "1/5"
+        ],
+        "gamma": "7/1000",
+        "kind": "v58_gamma",
+        "regularity_gap": "7/500"
+      },
+      {
+        "compact_exponent": 6,
+        "compact_positive": true,
+        "count": 13024922,
+        "kind": "v58_sample",
+        "n": 4,
+        "norm": 3,
+        "q": 24,
+        "r": 1
+      },
+      {
+        "compact_exponent": 98,
+        "compact_positive": true,
+        "count": 457140887781,
+        "kind": "v58_sample",
+        "n": 7,
+        "norm": 49,
+        "q": 392,
+        "r": 3
+      },
+      {
+        "compact_exponent": 254,
+        "compact_positive": true,
+        "count": 276738083591819,
+        "kind": "v58_sample",
+        "n": 9,
+        "norm": 127,
+        "q": 2286,
+        "r": 6
+      },
+      {
+        "dimension": 4,
+        "distributions": 165,
+        "histogram_sha256": "4fd759621113ba905271783c498146d799870297ef40f4b737a91cb29d59348a",
+        "kind": "v59_grid",
+        "pairs": 13695
+      },
+      {
+        "epsilon": "2/889",
+        "gamma": "1/887",
+        "kind": "v59_witness",
+        "observed": [
+          "1784/4445",
+          "1774/4445",
+          "887/4445"
+        ],
+        "tv": "2/887"
+      },
+      {
+        "epsilon": "6/917",
+        "gamma": "3/911",
+        "kind": "v59_witness",
+        "observed": [
+          "1852/4585",
+          "1822/4585",
+          "911/4585"
+        ],
+        "tv": "6/911"
+      },
+      {
+        "epsilon": "10/711",
+        "gamma": "5/701",
+        "kind": "v59_witness",
+        "observed": [
+          "484/1185",
+          "1402/3555",
+          "701/3555"
+        ],
+        "tv": "10/701"
+      },
+      {
+        "contamination_fraction": "1/7",
+        "count": 17728366,
+        "kind": "v59_sample",
+        "n": 4,
+        "r": 1
+      },
+      {
+        "contamination_fraction": "3/8",
+        "count": 33343801,
+        "kind": "v59_sample",
+        "n": 4,
+        "r": 1
+      },
+      {
+        "contamination_fraction": "5/7",
+        "count": 159555294,
+        "kind": "v59_sample",
+        "n": 4,
+        "r": 1
+      },
+      {
+        "contamination_fraction": "1/7",
+        "count": 622219541702,
+        "kind": "v59_sample",
+        "n": 7,
+        "r": 3
+      },
+      {
+        "contamination_fraction": "3/8",
+        "count": 1170280672719,
+        "kind": "v59_sample",
+        "n": 7,
+        "r": 3
+      },
+      {
+        "contamination_fraction": "5/7",
+        "count": 5599975875314,
+        "kind": "v59_sample",
+        "n": 7,
+        "r": 3
+      },
+      {
+        "contamination_fraction": "1/7",
+        "count": 376671280444420,
+        "kind": "v59_sample",
+        "n": 9,
+        "r": 6
+      },
+      {
+        "contamination_fraction": "3/8",
+        "count": 708449493995056,
+        "kind": "v59_sample",
+        "n": 9,
+        "r": 6
+      },
+      {
+        "contamination_fraction": "5/7",
+        "count": 3390041523999778,
+        "kind": "v59_sample",
+        "n": 9,
+        "r": 6
+      },
+      {
+        "floor": "1/5",
+        "kind": "v60_selection",
+        "lecam_floor_product": "4828.231823261732592289384556979434872882552937857374044923220085",
+        "per_menu_count": 65285,
+        "total": 652850
+      },
+      {
+        "floor": "1/20",
+        "kind": "v60_selection",
+        "lecam_floor_product": "4828.231823261732592289384556979434872882552937857374044923220085",
+        "per_menu_count": 65285,
+        "total": 2611400
+      },
+      {
+        "floor": "1/125",
+        "kind": "v60_selection",
+        "lecam_floor_product": "4828.231823261732592289384556979434872882552937857374044923220085",
+        "per_menu_count": 65285,
+        "total": 16321250
+      },
+      {
+        "floor": "1/2000",
+        "kind": "v60_selection",
+        "lecam_floor_product": "4828.231823261732592289384556979434872882552937857374044923220085",
+        "per_menu_count": 65285,
+        "total": 261140000
+      },
+      {
+        "bounded_checks": 4788,
+        "confounding_checks": 1596,
+        "distributions": 56,
+        "kind": "v60_grid",
+        "overlap_counts": {
+          "1/3:2/3": 486,
+          "2/3:5/6": 56,
+          "4/5:1": 56
+        },
+        "support": [
+          0,
+          2,
+          3
+        ],
+        "tier_handoff": {
+          "luce_completion": [
+            "L",
+            "R",
+            "N"
+          ],
+          "no_rum_completion": [
+            "N"
+          ],
+          "rum_no_luce_completion": [
+            "R",
+            "N"
+          ]
+        }
+      }
+    ]
+  },
+  "registration_sha256": "e6138bb101b094110c2011a91bf71ccaaa808857ad8c0eeec1fb38ac35ae69df",
+  "replay": {
+    "counts": {
+      "v57": {
+        "agreement_coordinates": 88724,
+        "cells": 12,
+        "high_degree_zero_checks": 86228
+      },
+      "v58": {
+        "eta_paths": 3,
+        "gamma_paths": 3,
+        "sample_cells": 3
+      },
+      "v59": {
+        "construction_checks": 13695,
+        "grid_pairs": 13695,
+        "robust_sample_cells": 9,
+        "witnesses": 3
+      },
+      "v60": {
+        "bounded_checks": 4788,
+        "confounding_checks": 1596,
+        "distributions": 56,
+        "selection_cells": 4
+      }
+    },
+    "fact_digest": "b6a183bac5f264bc410c2c25e07bd4030b7d0b2286efcaa3cb9ae302060ac9ae",
+    "gates": {
+      "B57": true,
+      "C59": true,
+      "M58": true,
+      "S60": true,
+      "X0": true
+    },
+    "import_independent": true,
+    "returncode": 0,
+    "stderr": ""
+  },
+  "resource": {
+    "elapsed_seconds": 12.210197599983076,
+    "resident_bytes": 25206784,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.61-verification-result-v1",
+  "source_commit": "b74486bfb875368ed23d6fe8a827a7c6dcbb1e83",
+  "source_mismatches": {},
+  "source_was_ancestor": true,
+  "status": "conditional_structured_choice_stack_verified",
+  "tests": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "......                                                                   [100%]\n6 passed in 0.67s\n"
+  }
+}

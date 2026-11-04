@@ -1,0 +1,119 @@
+{
+  "protocol_id": "holonomy_causal_transfer_falsification_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_before_canonical_run",
+  "frozen_on": "2026-07-16",
+  "scientific_parents": [
+    "rsi-topology-monitor-holonomy-noise-null-v0.2",
+    "control_risk_redteam_v0_1",
+    "edit_sectioning_crossover_v0_3",
+    "godel_globes_falsification_v0_1"
+  ],
+  "purpose": "Falsify or calibrate the claim that noise-valid loop holonomy predicts path-dependent causal effects of signed mechanistic interventions after local lineage and Jacobian visibility are controlled.",
+  "claim_boundary": "The canonical run is a CPU-synthetic causal-response calibration over Grassmannian transports. It can validate the measurement, bound, controls, and analysis polarity. It is not transformer evidence, does not identify a natural behavior bundle, does not edit model weights, and does not establish self-improvement or RSI.",
+  "invariant_levels": [
+    "engineering_evidence",
+    "lineage_certified",
+    "holonomy_clean"
+  ],
+  "new_invariant_levels": false,
+  "mathematical_estimand": {
+    "path_displacement": "d(u;P,Q) = ||T_P u - T_Q u||_2",
+    "loop_equivalence": "d(u;P,Q) = ||(H_gamma-I)u||_2 up to orthogonal conjugation and the registered path-orientation convention",
+    "causal_response": "Phi(z) = tanh(J z)",
+    "lipschitz_bound": "||Phi(a T_P u)-Phi(a T_Q u)||_2 <= a ||J||_2 d(u;P,Q)",
+    "worst_direction_bound": "d_max <= 2 sin(theta_max/2) for det(H)>0",
+    "orientation_rule": "det(H)<0 is a categorical signed-identity break; canonical angles are suppressed and authorization is denied"
+  },
+  "canonical_population": {
+    "ambient_dimension": 8,
+    "rank": 4,
+    "steps_per_side": 8,
+    "step_sizes": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12
+    ],
+    "conditions": [
+      "flat_flat",
+      "curved_flat"
+    ],
+    "causal_map_replicates": 24,
+    "causal_output_dimension": 6,
+    "direction_classes": [
+      "maximally_exposed",
+      "seeded_haar",
+      "minimally_exposed"
+    ],
+    "directions_per_class": 1,
+    "edit_norms": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "seed": 2026071602,
+    "grouping_unit": "causal_map_replicate",
+    "cross_validation": "six-fold GroupKFold with causal_map_replicate held out",
+    "bootstrap_draws": 4096,
+    "control_error_budget": 0.25
+  },
+  "frozen_features": {
+    "baseline": [
+      "edit_norm",
+      "causal_lipschitz_constant",
+      "jacobian_visibility",
+      "minimum_edge_worst_direction_retention",
+      "mean_edge_chordal_lineage",
+      "path_edge_count",
+      "step_size"
+    ],
+    "holonomy_augmented": [
+      "directional_path_displacement",
+      "causal_risk_bound",
+      "maximum_canonical_angle_degrees"
+    ],
+    "outcome": "downstream_response_disagreement",
+    "target_blindness": "All transports, directions, covariates, folds, and thresholds are determined without reading the downstream response disagreement."
+  },
+  "matched_controls": {
+    "flat_vs_curved": "At every step size, the rank-four flat-flat and curved-flat direct-sum loops have equal minimum edge worst-direction retention while differing in one canonical rotation plane. The retained flat block supplies a low-exposure direction inside the same bundle.",
+    "bundle_energy": "Both transported coordinates have identical squared norm; energy disagreement must remain numerical zero.",
+    "gauge_reframing": "Independent node-wise orthogonal reframings must preserve path displacement, causal response disagreement after covariant response-map transformation, canonical angles, determinant, and decisions.",
+    "orientation_reversal": "A registered reflection receipt must deny signed authorization and suppress angles.",
+    "permuted_holonomy": "A seeded permutation of augmented holonomy features across grouped fixtures is a descriptive leakage null and cannot replace the primary matched controls."
+  },
+  "gates": {
+    "G0_matched_local_lineage": "Maximum flat-versus-curved absolute difference in minimum edge worst-direction retention at matched step size is at most 1e-10.",
+    "G1_path_identity": "Maximum absolute discrepancy between direct two-path displacement and its loop-holonomy expression is at most 1e-9.",
+    "G2_bound_coverage": "No finite orientation-preserving row exceeds its registered Lipschitz causal-risk bound by more than 1e-10.",
+    "G3_flat_negative_control": "Maximum flat-loop directional displacement is at most 1e-8.",
+    "G4_curved_positive_control": "At least one curved maximally-exposed row has directional displacement above 0.5 and downstream response disagreement above 0.1.",
+    "G5_incremental_prediction": "Grouped held-out relative SSE reduction from adding the frozen holonomy features is at least 0.25 and its grouped-bootstrap one-sided 95% lower bound is strictly above 0.10.",
+    "G6_bound_authorization": "Among rows whose causal-risk bound is at most the error budget, false authorization count is zero; authorized coverage is reported and may be zero without changing the safety gate.",
+    "G7_energy_invariance": "Maximum transported-coordinate squared-energy difference is at most 1e-12.",
+    "G8_gauge_invariance": "Maximum registered gauge-preflight discrepancy is at most 1e-9.",
+    "G9_orientation_reversal": "The reflection control is denied, det(H)<0, and canonical angles are absent."
+  },
+  "decision_states": {
+    "pass": "All instrument and causal-calibration gates pass. This validates the synthetic causal instrument only.",
+    "geometry_only": "G0-G3 and G7-G9 pass but G4 or G5 fails; causal relevance is not established.",
+    "invalid_instrument": "Any of G0-G3 or G7-G9 fails.",
+    "unsafe_bound": "G2 or G6 fails. The proposed control gate must not be used."
+  },
+  "real_model_handoff": {
+    "development_model": "small Qwen approximately 0.8B, exact revision to be frozen separately",
+    "confirmatory_model": "Qwen/Qwen3-1.7B revision 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "axes": "context x genuine checkpoint/model state; precision remains a stress axis, not a substitute for a lineage-connected checkpoint axis",
+    "required_splits": [
+      "construction",
+      "geometry_validation",
+      "causal_outer"
+    ],
+    "entry_condition": "A real-model causal run requires a passing negative-control calibration, beta_1>0 on the lineage-thresholded graph, noise-valid held-out holonomy, a sealed loop/edit universe, and a separately validated hard-cap execution receipt.",
+    "natural_collapse": "beta_1=0 or no noise-valid loop is reported as holonomy_unavailable, not repaired by post-hoc axis or threshold changes."
+  }
+}

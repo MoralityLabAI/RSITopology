@@ -1,0 +1,26 @@
+{
+  "schema_version": "asmp8_calibrated_certificate_completion_receipt_v0_3",
+  "completed_at_utc": "2026-07-23T14:46:06.4620125Z",
+  "source_commit": "dae6ba3b3441572c56e16e184826fa5132b3b7c2",
+  "registration_sha256": "0df8935e6fef5b2637bd38f6208fb3a7939ea2b97f8a59007cae907f25de94b4",
+  "protocol_sha256": "b556b5e98eeba8a213d2ecd677cea5485a6b649d498ee4d5f42530c57bedc6fe",
+  "verdict": "calibrated_certificate_valid_but_vacuous",
+  "verification_decision": "pass",
+  "artifacts": {
+    "condition_summary_v0_3.csv": "d1d7e9bc244d4fd455490f7e305926bbb58e01bc0dec0d008568e933001a8b8a",
+    "policy_summary_v0_3.csv": "6b52ad0d9b0634f814a18f8e3fe3f1d7f889398d450cf0aa193b0807e2c403a6",
+    "receipt_v0_3.json": "0c58923a1f63218bf4c2c5eadaf5dc75fc1eba5a18e5b1ed6d8ba35c8a79e00f",
+    "result_v0_3.json": "fc4f12855bbe0910e2ecc05a7771fe07bf4b744c0954b77a1c435d7213e916ca",
+    "RESULT_v0_3.md": "c3fe949791e68535ef38ea1452d7d9435796980a34be06888bf2114c3a6e7736",
+    "risk_coverage_v0_3.csv": "7da8f2e10a07a2f667a6d1507704b49244df7c44db8a2fc9faf211dc45c8d124",
+    "risk_coverage_v0_3.svg": "30b56cf1e4453ba458bc2bb41099d4334448255bb0dde9db3af84f1fc4ff394b",
+    "verification_v0_3.json": "cf70b0fa0b34410125a1d43c176cac2ce163dbfc3693a158ea0e5890da07b767",
+    "../POSTRUN_AUDIT_v0_3.md": "913af16fec53077cdc63f6444228b131f4674431da39a8ed26900df1719cab76"
+  },
+  "tests": {
+    "command": "python -m pytest ultra-experiments/millennium/asmp8_goodhart_frontier_census -q",
+    "passed": 16,
+    "failed": 0
+  },
+  "claim_boundary": "Synthetic finite-population calibration of a classical robust lower bound; no learned reward model, no real human-preference uncertainty set, no RL trajectory, and no ASMP-8 resolution."
+}

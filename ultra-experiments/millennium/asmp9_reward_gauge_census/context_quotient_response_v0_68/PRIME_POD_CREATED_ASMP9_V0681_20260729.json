@@ -1,0 +1,18 @@
+{
+  "schema_version": "asmp9_context_quotient_prime_pod_created_v0_68_1",
+  "created_receipt_utc": "2026-07-29T22:21:48.3960520Z",
+  "pod_id": "c7fd619a1ab64811a49b0827bc8d6829",
+  "pod_name": "jinn-paper-20260725-asmp9-v0681-construct",
+  "availability_id": "0c9d6a",
+  "cloud_id": "1A100.22V_SPOT",
+  "gpu_type": "A100_80GB",
+  "gpu_count": 1,
+  "provider": "datacrunch",
+  "region": "FI",
+  "listed_hourly_usd": 0.6265,
+  "spot": true,
+  "image": "ubuntu_22_cuda_12",
+  "disk_size_gb": 200,
+  "status": "created_installation_not_yet_verified",
+  "model_forward_passes": 0
+}

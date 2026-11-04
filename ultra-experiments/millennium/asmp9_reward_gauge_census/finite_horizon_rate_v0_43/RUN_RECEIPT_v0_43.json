@@ -1,0 +1,26 @@
+{
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/run_confirmation_v0_43.py",
+    "verify": "python ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/verify_result_v0_43.py"
+  },
+  "elapsed_seconds": 8.592658300010953,
+  "gates": {
+    "E0": true,
+    "K0": true,
+    "L0": true,
+    "P0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "U0": true
+  },
+  "implementation_commit": "6319aad7fdb1fef94d1c25abe1d2d6cc56680b07",
+  "peak_working_set_bytes": 276803584,
+  "protocol_id": "asmp9-finite-horizon-rate-v0.43",
+  "registration_commit": "f20705d22a99072c3d61b0c43ba483d43d176385",
+  "registration_sha256": "34d519d48d06fd64d2450c83bce8b1aaf9583b0434885533c720917d5537a81b",
+  "result_sha256": "d96bc39cba4435734373d4689343537ecebdf184ac70d51876563c707baea88d",
+  "status": "finite_horizon_rate_characterization_established",
+  "verification_sha256": "dfb23d5f6424cfbbf2efff5af5c923ab2a4c3018ca43a16d4f2f079e3b498748",
+  "version": "0.43"
+}

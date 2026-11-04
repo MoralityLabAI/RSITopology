@@ -1,0 +1,76 @@
+{
+  "protocol_id": "qwen08_precision_frustration_margin_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_not_run",
+  "registered_on": "2026-07-17",
+  "purpose": "Correct the liveness interpretation of the rank-one holonomy analysis by measuring the conservative projective loop-length budget and its quantization-induced erosion.",
+  "parent": {
+    "filtration_protocol_id": "qwen08_precision_filtration_w1_v0_1",
+    "filtration_protocol_sha256": "923b2cff503952cc7d6eea29ff999416d0c82ee4f40f015b8804e36d9b7830aa",
+    "filtration_result_sha256": "3b377f1f4a5582fb30fdf6016c4ae17a67a463684224ba0ae402cb6cce904e7c",
+    "filtration_run_receipt_sha256": "d3f301bbf24a4f19d8fd852c0b661135963959d8882f003463df41a5ca9c2b58",
+    "scientific_protocol_sha256": "6437d637d6a25efe47c462a0cadeb9aa2dd18a018a794f9e688befa4adb5ef8b",
+    "prompt_manifest_sha256": "9315073ff8db07fb258563957b509cdbe6ecfdc80ab0a12b869fe614077e88db",
+    "prompt_payload_sha256": "87d2f05eb24e7074943b6625c907bf08362db5ffa5ac24f6a313f7d75806c14e"
+  },
+  "mathematical_object": {
+    "edge_retention_by_half": "r_e,h = abs(inner_product(u_source,h, u_target,h))^2 for the registered rank-one between-class bases",
+    "edge_principal_angle_degrees_by_half": "alpha_e,h = degrees(arccos(sqrt(r_e,h))) in [0, 90]",
+    "conservative_edge_angle": "alpha_e = max_h alpha_e,h = degrees(arccos(sqrt(min_h r_e,h)))",
+    "cycle_angle_budget": "B_gamma = sum over boundary edges e of alpha_e",
+    "frustration_margin": "F_gamma = 180 degrees - B_gamma",
+    "systolic_bound": "For a closed real line-bundle cycle, w1(gamma) = -1 implies projective loop length at least 180 degrees. Therefore B_gamma < 180 degrees forces w1(gamma) = +1 in both registered halves.",
+    "liveness_rule": "The discrete w1 sign is empirically live only on a cycle whose conservative budget B_gamma is at least 180 degrees. Lowering the admission floor does not make w1 live when the measured angle budget remains below 180 degrees.",
+    "cycle_universe": "The six connected simple cycles of the frozen 2 x 4 ladder; the disconnected GF(2) cycle-chain is reported separately and cannot establish simple-loop liveness."
+  },
+  "primary_estimands": {
+    "per_cycle": ["B_gamma", "F_gamma", "construction and validation actual angle sums", "w1 sign", "forced-or-live status"],
+    "per_graph": "maximum B_gamma and minimum F_gamma over the six connected simple cycles",
+    "paired_quantization_erosion": "E_site = max_gamma B_gamma(4bit, site) - max_gamma B_gamma(float16, site), equivalently min_gamma F_gamma(float16, site) - min_gamma F_gamma(4bit, site)",
+    "relative_erosion": "E_site divided by the float16 minimum frustration margin, reported only when that denominator is positive",
+    "matched_cycle_erosion": "Also report B_gamma(4bit) - B_gamma(float16) for every identical cycle class so graph-maximum switching cannot hide the cycle identity."
+  },
+  "resampling": {
+    "replicates": 256,
+    "seed": 2026071729,
+    "seed_derivation": "stable_seed(seed, 'frustration-margin', replicate_index)",
+    "pairing": "One stratified half x subcondition prompt-ID bootstrap draw is reused across precision, state, site, and shard.",
+    "checkpoint_block_replicates": 16,
+    "intervals": "Empirical 0.05 and 0.95 percentile bounds over paired bootstrap replicates, with the full-sample point reported separately.",
+    "interval_warning": "These are descriptive percentile intervals for max-type statistics. The full-sample point is not required to lie inside them; no bias-corrected or calibrated coverage claim is made."
+  },
+  "registered_decisions": {
+    "forced_orientable_point": "B_gamma point < 180 degrees",
+    "forced_orientable_with_90_support": "B_gamma upper descriptive percentile < 180 degrees",
+    "w1_live_point": "B_gamma point >= 180 degrees",
+    "quantization_erosion_established": "The paired lower descriptive percentile for E_site is strictly greater than zero.",
+    "interpretation": "If all cycles are forced orientable, the observed positive w1 signs carry no information beyond edge lineages. The frustration margin, not the topological class, is the live graded diagnostic."
+  },
+  "controls": {
+    "forced_fixture": "A planted cycle with total projective edge-angle budget below 180 degrees must be labeled forced orientable.",
+    "live_negative_fixture": "A planted projective cycle with budget exactly 180 degrees and sign holonomy -1 must be labeled w1-live and orientation reversing.",
+    "gauge_preflight": "384 independent node-sign reframings must produce zero budget, liveness, and determinant-decision mismatches.",
+    "precision_pairing": "Every bootstrap index array is byte-identical across the two precision conditions."
+  },
+  "reporting": {
+    "supersedes_prose_not_receipts": "The sealed qwen08_precision_filtration_w1_v0_1 result and category remain immutable. Any prose saying positive w1 was empirically observed as precision-stable is superseded by this forcing analysis.",
+    "required_claim": "Four-bit quantization compressed rank-one support margins, caused one local support-gate crossing, and eroded the loop angle budget toward the 180-degree frustration bound, while every measured cycle remained inside the geometrically forced orientable regime. On this capture, w1 carries no information beyond edge lineages.",
+    "claim_boundary": "This is an outcome-free measurement study. It can measure projective angle budgets and bound when rank-one sign holonomy is forced or live on the frozen Qwen development capture. It cannot establish causal edit value, VPD efficacy, monitor sufficiency, capability preservation, compactification, recursive self-improvement, or RSI. It adds no attestation level and reopens no closed causal/VPD stage."
+  },
+  "resource_contract": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 250,
+    "timeout_seconds": 14400,
+    "gpu_allowance_mb": 1,
+    "checkpoint_every_seconds": 600,
+    "swap_bytes": 0,
+    "hard_capped_job_object_required": true,
+    "abort_is_valid": true
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}

@@ -1,0 +1,290 @@
+{
+  "certified": true,
+  "claim_boundary": "The parser and compiler close the machine grammar for a successor proposal. They do not establish authorial adoption of v0.3 or provide external expert reproduction.",
+  "compiled_rows": [
+    {
+      "admissible_interfaces": null,
+      "bytes": 5085,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 0,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "EA6A99EE85060575CCE9F3BC15512F3216B70DE737F80CDF207DD96875E4CF29"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5121,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 0,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "8F31B4C98AFDADD1BD1B5F9D160BEF925A68C1CA1018D4EFF5C7545774422DB2"
+    },
+    {
+      "admissible_interfaces": null,
+      "bytes": 5085,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 1,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "6F949661E84D9BA29D6035007E984B140C57B086BFCF7F2D42964D4825DB4373"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5121,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 1,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "13C605CD9108F4AE2EED92D90FC96B911AF038B3F7135CE2A947E30C034BA4E3"
+    },
+    {
+      "admissible_interfaces": null,
+      "bytes": 5085,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 2,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "0F9E97BD4B175F56A3C7035A96D779268371A175762C6BD5C0973BAE6956C401"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5121,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 2,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "7ECCBD8EA228DC060E4343D5D5ADE22A7B57F2A6C76ABC4FDBF29BF9250C14B7"
+    },
+    {
+      "admissible_interfaces": null,
+      "bytes": 5085,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 5,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "487BEE06E595678A3D39F6599CB84ECFA251744FE396574E5F052434B3D92BCE"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5121,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 5,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "FED893F06C7261D60C811A9803694F69E5B72B5FAAE68A5DD169AB64A4CB361C"
+    },
+    {
+      "admissible_interfaces": null,
+      "bytes": 5089,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 17,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "A55CC24EF298A05FAD6D603AC43E6FDB64B2142F33D2328903D27D61A75D9D1C"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5125,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 17,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "E487BCAA5FFA02EE240DF7237EBA292EFD43FB8FCFC7595C818C0FE0C2908042"
+    },
+    {
+      "admissible_interfaces": null,
+      "bytes": 5089,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 64,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "286E7FFE425D39A52E9B415977C76DD5BE832245C9C275EB04678FFB47F5BACA"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5125,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 64,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "B482F25096C88CA8C102A466FBB0B29A165FDA409A3CC75957FD42E22C4900BA"
+    },
+    {
+      "admissible_interfaces": null,
+      "bytes": 5093,
+      "certified": true,
+      "fixed_interface": "G_VEC",
+      "machine_index": 999,
+      "mode": "FIX",
+      "round_trip_equal": true,
+      "sha256": "559C09C58B03DC7663FB0B1124BF451B869C2A02662841CB21249C70EDA0F692"
+    },
+    {
+      "admissible_interfaces": {
+        "interface_ids": [
+          "G_VEC"
+        ],
+        "kind": "finite"
+      },
+      "bytes": 5129,
+      "certified": true,
+      "fixed_interface": null,
+      "machine_index": 999,
+      "mode": "ADM",
+      "round_trip_equal": true,
+      "sha256": "1A27344E5A51EC46FA2951992A06068554E7750D8885ADFDB9F22F2CBAA7CFC0"
+    }
+  ],
+  "experiment_id": "ASMP-3-MACHINE-GRAMMAR-v0.3",
+  "gates": {
+    "M0_all_nine_inputs_hashed": true,
+    "M10_reference_IR_gas_and_U_TM_execution_checks_pass": true,
+    "M1_source_machine_closure_markers_hold": true,
+    "M2_codec_has_all_twelve_canonicality_fields": true,
+    "M3_universal_IR_has_twenty_five_typed_opcodes_and_bit_cost": true,
+    "M4_all_twenty_three_component_signatures_registered": true,
+    "M5_all_twenty_five_builtin_semantics_registered": true,
+    "M6_all_fourteen_FIX_ADM_compiler_rows_round_trip": true,
+    "M7_all_five_noncanonical_byte_fixtures_rejected": true,
+    "M8_FIX_and_ADM_quantifier_locations_are_machine_distinct": true,
+    "M9_v2_21_compiler_image_is_in_machine_grammar_domain": true
+  },
+  "grammar_summary": {
+    "builtins": 25,
+    "codec": "ASMP3-CANONICAL-JSON-v0.3",
+    "component_signatures": 23,
+    "membership_semantics": "WV-MEMBERSHIP-v0.3",
+    "opcodes": 25,
+    "universal_machine": "WV-IR-v0.3"
+  },
+  "malformed_rows": [
+    {
+      "bytes": 7781,
+      "fixture": "pretty_printed",
+      "reason": "noncanonical JSON value bytes",
+      "rejected": true
+    },
+    {
+      "bytes": 5090,
+      "fixture": "trailing_newline",
+      "reason": "noncanonical JSON value bytes",
+      "rejected": true
+    },
+    {
+      "bytes": 5092,
+      "fixture": "utf8_bom",
+      "reason": "UTF-8 BOM is forbidden",
+      "rejected": true
+    },
+    {
+      "bytes": 5136,
+      "fixture": "duplicate_key",
+      "reason": "duplicate object key: schema_version",
+      "rejected": true
+    },
+    {
+      "bytes": 5091,
+      "fixture": "floating_number",
+      "reason": "floats are forbidden",
+      "rejected": true
+    }
+  ],
+  "reference_runtime_audit": {
+    "certified": true,
+    "checks": {
+      "Minsky_countdown_returns_zero": true,
+      "insufficient_fuel_faults": true,
+      "invalid_machine_code_halts_at_step_zero": true,
+      "one_state_halting_machine_halts_in_one_step": true,
+      "one_state_loop_machine_does_not_halt_in_thirty_two_steps": true
+    },
+    "countdown_low_fuel": {
+      "dispatches": 3,
+      "gas": 4,
+      "reason": "OUT_OF_GAS",
+      "status": "FAULT"
+    },
+    "countdown_success": {
+      "dispatches": 81,
+      "gas": 367,
+      "status": "HALT",
+      "value": 0
+    },
+    "halt_gas": 104,
+    "halt_machine_index": "197059630964793346504392711",
+    "invalid_gas": 2,
+    "loop_gas": 321,
+    "loop_machine_index": "197059631036852040070725895"
+  },
+  "resolution_effect": {
+    "membership_under_successor": "undecidable for FIX and ADM by the v2.21 NONHALT reduction",
+    "remaining_external_reproductions": "0/2",
+    "successor_problem_created": "ASMP-3-MACHINE-v0.3",
+    "v0_1_silently_amended": false,
+    "v2_21_reduction_compiles": true
+  },
+  "schema_version": "asmp3_machine_grammar_artifact_v0_3",
+  "source_hashes": {
+    "canonical_sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5",
+    "grammar_sha256": "2F808ED1B4CD11018DFF922EBFC19B50F54D4376A37C605DF727A4FEE3EA0A7F",
+    "registry_sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0",
+    "typed_json_sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837",
+    "typed_markdown_sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B",
+    "v2_21_artifact_sha256": "92C2ECB6BF40DDE15FA6C88409555D45F4BF1266009E59C98D1D8E88F8424C79",
+    "v2_21_manifest_sha256": "4425333E332E33D92CEED460E1555406581B536DBFB264540430FF74B731ECED",
+    "v2_21_theorem_sha256": "71F25E2A5AB93861F64247FBB5CC5202CF814F8F7ECCFB04B5ADD0BE3059AFB0",
+    "v2_21_verification_sha256": "3AEBD64E5154AC5861CDF368F682D656F50E52846A5CF004D3307FBECECA24B1"
+  },
+  "source_markers": {
+    "ASMP3_frozen_fields_present": true,
+    "closed_core_requires_encodings": true,
+    "complete_noise_required": true,
+    "encoding_invariance_required": true,
+    "honest_efficiency_required": true,
+    "standard_encodings_required": true
+  },
+  "status": "executable_nonnormative_successor_machine_grammar"
+}

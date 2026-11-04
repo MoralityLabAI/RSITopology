@@ -1,0 +1,11 @@
+{
+  "schema_version": "asmp_v0_2_input_receipt_v0_1",
+  "recorded_at": "2026-07-20",
+  "source_path_at_import": "D:\\Download\\asmp_candidate_extensions_v0_1.md",
+  "source_filename": "asmp_candidate_extensions_v0_1.md",
+  "source_bytes": 14868,
+  "source_sha256": "2006468EAC4758D6DB3FC4914DB76A81AF3E59E1E3B4572A46FBE868B5E1C366",
+  "source_status": "brainstorm_grade_pre_registration",
+  "derived_document": "V0_2_SCOPE_EXPANSION_DRAFT.md",
+  "claim": "Records provenance only; it does not freeze or endorse the source statements."
+}

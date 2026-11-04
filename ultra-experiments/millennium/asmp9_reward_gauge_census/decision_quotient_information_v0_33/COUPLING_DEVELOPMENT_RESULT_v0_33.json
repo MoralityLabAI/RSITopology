@@ -1,0 +1,214 @@
+{
+  "actual_objects": {
+    "analysis_map_shape": [
+      3,
+      8
+    ],
+    "coupling_shape": [
+      8,
+      6
+    ],
+    "policy_matrix_shape": [
+      6,
+      3
+    ],
+    "semantic_operator_shape": [
+      6,
+      12
+    ]
+  },
+  "claim_boundary": {
+    "identifies_physical_coupling": false,
+    "proves_access_to_arbitrary_linear_queries": false,
+    "registered_or_claim_eligible": false,
+    "resolves_asmp9": false
+  },
+  "claim_status": "development_only_unregistered",
+  "formula": {
+    "column_major_operator": "transpose(C) kron (Q L)",
+    "decision_effect": "Q L K C",
+    "rank_identity": "rank(C) * rank(Q L)"
+  },
+  "full_policy_family": {
+    "decision_null_gauge_dimension": 30,
+    "decision_relevant_dimension": 18,
+    "independent_canonical_row_indices": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      30,
+      31,
+      32
+    ],
+    "minimum_arbitrary_scalar_linear_queries": 18,
+    "policy_analysis_rank": 3,
+    "policy_difference_rank": 3,
+    "raw_coupling_dimension": 48,
+    "semantic_rank": 6
+  },
+  "restricted_two_policy_control": {
+    "decision_null_gauge_dimension": 42,
+    "decision_relevant_dimension": 6,
+    "policy_analysis_rank": 1,
+    "policy_difference_rank": 1,
+    "raw_coupling_dimension": 48,
+    "semantic_rank": 6
+  },
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/artifacts_v0_32/result_v0_32.json": "5729d7909fbf31b2de7b7260f6a30677a5d1f0d367613e37eb6938085b05819f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/protocol_v0_32.json": "d7ec8ecb3f5c3ea4ced0b0b193ea35f55f9018c76ca7e6f9b911bfb9944a73e0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/protocol_v0_29.json": "46987f1ada3dffb97e17ab214743a09500a8a10a8cc116493837d510d2ef8d47",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/artifacts_v0_31_1/result_v0_31.json": "f07ee0b7ef11339f97b2862987495a9d4088e44f55b58c7d708ba9ee0d578e94",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/protocol_v0_31.json": "b2b2e65e658dbf545a3983bd37ee5920d799c643804ae38e8f877bd00a1e81b8"
+  },
+  "witnesses": {
+    "decision_changing_coordinate_coupling": {
+      "coupling_entries": [
+        {
+          "column": 0,
+          "row": 0,
+          "value": "1"
+        }
+      ],
+      "effect_entries": [
+        {
+          "column": 0,
+          "row": 0,
+          "value": "-1"
+        },
+        {
+          "column": 1,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 5,
+          "row": 0,
+          "value": "-1"
+        },
+        {
+          "column": 0,
+          "row": 1,
+          "value": "-1"
+        },
+        {
+          "column": 1,
+          "row": 1,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 1,
+          "value": "1"
+        },
+        {
+          "column": 5,
+          "row": 1,
+          "value": "-1"
+        },
+        {
+          "column": 0,
+          "row": 2,
+          "value": "-1"
+        },
+        {
+          "column": 1,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 5,
+          "row": 2,
+          "value": "-1"
+        },
+        {
+          "column": 0,
+          "row": 3,
+          "value": "-1"
+        },
+        {
+          "column": 1,
+          "row": 3,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 3,
+          "value": "1"
+        },
+        {
+          "column": 5,
+          "row": 3,
+          "value": "-1"
+        },
+        {
+          "column": 0,
+          "row": 4,
+          "value": "-3/2"
+        },
+        {
+          "column": 1,
+          "row": 4,
+          "value": "3/2"
+        },
+        {
+          "column": 4,
+          "row": 4,
+          "value": "3/2"
+        },
+        {
+          "column": 5,
+          "row": 4,
+          "value": "-3/2"
+        }
+      ]
+    },
+    "nonzero_decision_null_coupling": {
+      "coupling_entries": [
+        {
+          "column": 0,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 1,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 3,
+          "value": "1"
+        }
+      ],
+      "effect_entries": []
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "burned_inputs_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bounded_context_degree_v0_57/PRIOR_ART_GATE_v0_57.md": "fe2d599ba16b2a1ff3c8f38c1c94423590aef6737ecce0e275168419df6b62ff",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bounded_context_degree_v0_57/THEOREM_DRAFT_v0_57.md": "eadae422c0522411707ad7a1cc36bf14bc13ac9996c7180bade86b6a5b14f3b1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/bounded_context_degree_v0_57/bounded_context_degree.py": "6037c71bbcd3580f19ca37da5532d4d92319376605f565d6a5aa4426fab84ed8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/contamination_radius_v0_59/PRIOR_ART_GATE_v0_59.md": "4a245f3fa202a40d5177324dc17167feb97a22d6ed2c0ddb3f17fe0fe7ba0397",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/contamination_radius_v0_59/THEOREM_DRAFT_v0_59.md": "e6580293fa289e420583a398d2bc033b4b6656aad71b207cc625cd8ce76f4a7d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/contamination_radius_v0_59/contamination_radius.py": "5d01ce959bea3e23b5ea83d552930a4357adfe31d2bf104cee710a73f466821c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_tiers_v0_58/PRIOR_ART_GATE_v0_58.md": "eb66bd351a65db16d56b2246e10a4076b175c3243f3d3556f9a7b955021636c9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_tiers_v0_58/THEOREM_DRAFT_v0_58.md": "138bed5f6debe4388f081d754e8204c540c777e85200709e17b804e627fc8af4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_tiers_v0_58/finite_sample_tiers.py": "0f8fad80d5a1cd483c460dc3e25983bdca0795ff5ff87c364ae4d88e51665be8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/RESULT_v0_56.md": "89d19f38a33b888323023c359f5293d6d7a689ee919c2984ca04f74cd71b48b9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/THEOREM_DRAFT_v0_56.md": "1547a5d4a4c52d4337b9355c860719c11846bb5fa84c10c72b92c7937f1d84b6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_incomplete_menu_v0_56/VERIFY_RESULT_v0_56.json": "08cc4ff81ff66bd2c58ae48376cfb1e6ca6ca8da54ae09b53623d02ff11a88c9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/selection_channel_v0_60/PRIOR_ART_GATE_v0_60.md": "ee1b8846ae07688178ceef351f9675efe11b4f9fc64259b97171b1a274ae6c56",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/selection_channel_v0_60/THEOREM_DRAFT_v0_60.md": "9ff3707d01624716f0b450c283b61873cfceb08f86e927fb61d5535d8adc4b12",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/selection_channel_v0_60/selection_channel.py": "73c7b11344d2dda9a226c3d353238fe9eab08dd0086ed8657bddd0c1ec5e1655"
+  },
+  "claim_boundary": "Conditional finite stochastic-choice access ledger: bounded context-degree reconstruction, margin-promised sampling, fixed Huber contamination, and recorded pre-response versus outcome-dependent selection. Classical/elementary ingredients; no empirical-premise, efficient-general-modulus, hidden-menu, latent-confounding, strategic/nonstationary, welfare, novelty, or full ASMP-9 resolution claim.",
+  "expected_test_count": 6,
+  "freshness": {
+    "burned_v57_maximum_n": 8,
+    "verification_v57_minimum_n": 9
+  },
+  "protocol_id": "asmp9-structured-choice-stack-v0.61",
+  "resource_caps": {
+    "resident_bytes": 805306368,
+    "seconds": 180,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.61-verification-registration-v1",
+  "source_commit": "b74486bfb875368ed23d6fe8a827a7c6dcbb1e83",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/PRIOR_ART_GATE_v0_61.md": "c72ad5941d4d3a8b8b19fd4437868de84b4ad65f8e12ab06ddd6ee5f1ff5aa22",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/PROOF_AUDIT_v0_61.md": "b75a70d08c36ad72e66609cc8133e4b4d51dcd593a37546147075f95b19ea5db",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/README.md": "6574d18f8b42507b9ddd892db13c16cb18008949948a3aac47dc614ba99d1f13",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/VERIFICATION_PROTOCOL_v0_61.md": "8cba51dcc509e62d572d6dedf9a2141b33472d29c148690c02336a29642e41ed",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/independent_replay_v0_61.py": "46943520496537104e3a02e9cec286f544106a1da620758237f7b28995f1ca90",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/register_verification_v0_61.py": "43d9ffe11e803334e4c8f49473e2f5b413b21ac07b3d906f6dea3308f15daaf0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/stack_verifier_v0_61.py": "3da715975c0f96757e991bae7a1ddc900794752f1d58a575da6345a031d57fa2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/test_stack_verifier_v0_61.py": "2dbb5d606e0530f167673b10c14451ce6b2397b55931e81f8d53722e835f08d2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/verification_cells_v0_61.json": "fbddc7646d4603243f56914778c89c5b56407462c7efc542171a96cf62bc62f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/verify_stack_v0_61.py": "36db3041e7f5461c434463aabb4da5e00e0832316b4d105467dc2bc5938816e2"
+  },
+  "test_command": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/test_stack_verifier_v0_61.py",
+  "verification_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/structured_choice_stack_v0_61/verify_stack_v0_61.py"
+}

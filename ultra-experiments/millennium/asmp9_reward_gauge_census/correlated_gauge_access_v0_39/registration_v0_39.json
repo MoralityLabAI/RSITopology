@@ -1,0 +1,51 @@
+{
+  "confirmation_grid": {
+    "alignments": ["q0", "q0_complement", "q1", "q2", "constant"],
+    "intervention_probabilities": ["2/7", "5/9"],
+    "leakage_vectors": [
+      ["7/9", "2/9", "4/9"],
+      ["1/6", "5/6", "1/2"],
+      ["4/11", "4/11", "4/11"]
+    ],
+    "strengths": [
+      ["6/7", "1/7"],
+      ["7/10", "3/10"],
+      ["11/16", "5/16"],
+      ["9/14", "5/14"]
+    ]
+  },
+  "implementation_commit": "06b819d27d6dace13defa45f12db0c55838882d6",
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/correlated_gauge_access_v0_39",
+    "elapsed_seconds": 21.32,
+    "status": "pass",
+    "tests_passed": 11
+  },
+  "protocol_id": "asmp9-correlated-gauge-access-v0.39",
+  "registered_at_utc": "2026-07-29T10:16:37Z",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "sealed_files": {
+    "../decision_relative_access_v0_38/relative_deficiency.py": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+    "DEVELOPMENT_RESULTS_v0_39.json": "c6373ff6675641c874e66b9515278ba4d93ed48a28c35f734aea0b36edc75208",
+    "PRIOR_ART_GATE_v0_39.md": "6537fb421fd08c56480795ea8213df5a360094958df254f592c16217a690fa04",
+    "PROTOCOL_v0_39.md": "a137eed9d5b82936b695e448810dab4936f793d4850b49d815ffa42b9f4607c1",
+    "THEOREM_DRAFT_v0_39.md": "65146ba5479566c6b817868fd88e9ce255f84075b9bfda2c35dd7dfe861bce9a",
+    "confirmation.py": "d0a13c84b45b55555fb6e5880601cb8e43e000e646f7ad2bdcf32ab2069fd445",
+    "environment_lock_v0_39.json": "d8b31031109c92a221611fd96b807846380dedb8b67796e2848a3af8e735809d",
+    "execute_confirmation.py": "6158ff3c19b842f07ff74cd890e87e2fc50169e93db60a93191c234a383d6aaa",
+    "gauge_leakage.py": "efd3a9033e496662f3aebcd254f16307e4426a98b8d1d2a79a0489a9ece00b08",
+    "protocol_v0_39.json": "db32f0b148615c4e64806a502998a6d93d9cb3a36f8c108024a5f3bd94d29078",
+    "run_burned_development.py": "a22998a905d93e6cad77eb53743be8ea6ed58c7e1e06b0efb9521adea9964c9c",
+    "test_access_alignment.py": "2d2b907c421870db1ae3354369b43594659877fb66013e0a0b557c5e8c610e87",
+    "test_confirmation_structure.py": "5e7abbca62b22fbae6b1d55e519dca9bb541cd16f7c93444c0f2df108ca759e1",
+    "test_execute_confirmation.py": "d580a671f26b87849d7f921897924ac41aa5c526cdaeb10ea00c809df0968bfd",
+    "test_gauge_leakage.py": "ac405e4fca9cc50f37ec0de5846b8d9dbfce922e8bb8c1aca72e6cd297af05c1"
+  },
+  "status": "registered_prereveal",
+  "version": "0.39"
+}

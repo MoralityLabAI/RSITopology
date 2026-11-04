@@ -1,0 +1,95 @@
+{
+  "gate_passes": {
+    "R0_repair_registration_binding": true,
+    "R1_immutable_source_binding": true,
+    "R2_original_scientific_gates": true,
+    "R3_original_failure_isolation": true,
+    "R4_structural_prior_art_gate": true,
+    "R5_claim_boundary": true,
+    "R6_derived_adjudication": true,
+    "R7_resource_and_scope": true
+  },
+  "gates": {
+    "R0_repair_registration_binding": {
+      "pass": true,
+      "registration_sha256": "74f98fa33d8dccdaf1f2b9955a61b9e51c25d64fbc425ad831f1685b06f2376c",
+      "sealed_file_count": 18
+    },
+    "R1_immutable_source_binding": {
+      "pass": true,
+      "source_hashes": {
+        "failed_repair_execution_note": "92bab8cebebd5ea1528f2872c1646d279ab203d4e04d7ab22548fd8f1b07a763",
+        "failed_repair_protocol": "e006194a23a5758eb08396d8278df7be9beb8108f7ca34d13a99047e6ad33f27",
+        "failed_repair_registration": "5352b253bb2e5fe05db4c3cd3332f3bee175daf4858e83826e776535a38e7d73",
+        "independent_verification": "9e2f8589d020052e1de2a57e4ab760ec03c05272d1d715b91bd8e143a9d05d8d",
+        "original_registration": "50cf84a1921ad943adc3d6fb65c62e34939ea6621a93c775c8f31c4db917c52e",
+        "postrun_note": "87d0ad30edf392d1ea3d0c247b3a4eba93c61f46389f0af6c7b7a6f1bd18784c",
+        "prior_art_audit": "7e1fdb042bb9e88cc1c55b61d6c7851098957e975cc73f99ee5741c1740f31e6",
+        "protocol": "24dfb1c80beca86b4ba39410e6b94d592b61fbe8585568d4d7c966734a199c49",
+        "result": "e21ee3222858f31356ba2c3c0676f3afaea97f3aea607d51895c4039a418c15a",
+        "run_receipt": "d18645a03628327dc460023e5e5b285408b14d9a64edda2c4a325a3367a23d3f"
+      }
+    },
+    "R2_original_scientific_gates": {
+      "original_gate_passes": {
+        "G0_registration_binding": true,
+        "G10_resource_and_scope": true,
+        "G1_freshness_and_structure": true,
+        "G2_population_recovery": true,
+        "G3_sharp_dyadic_query_bound": true,
+        "G4_restricted_offset_obstruction": true,
+        "G5_bounded_error_finite_sample_rule": true,
+        "G6_flat_link_no_uniform_rate": true,
+        "G7_no_offset_control": true,
+        "G8_sample_certificate": true,
+        "G9_prior_art_and_claim_boundary": false
+      },
+      "pass": true
+    },
+    "R3_original_failure_isolation": {
+      "false_independent_checks": [
+        "all_gates_pass",
+        "verdict"
+      ],
+      "original_verdict": "offset_access_boundary_not_established_v0_26",
+      "pass": true
+    },
+    "R4_structural_prior_art_gate": {
+      "actual_identifiers": [
+        "ASMP-9-v0.8",
+        "arXiv:2405.02612",
+        "doi:10.1016/0167-2681(90)90086-S",
+        "doi:10.1093/0199248915.003.0015",
+        "doi:10.1093/biomet/asm029",
+        "doi:10.1287/moor.2018.0938"
+      ],
+      "pass": true,
+      "required_identifiers": [
+        "ASMP-9-v0.8",
+        "arXiv:2405.02612",
+        "doi:10.1016/0167-2681(90)90086-S",
+        "doi:10.1093/0199248915.003.0015",
+        "doi:10.1093/biomet/asm029",
+        "doi:10.1287/moor.2018.0938"
+      ]
+    },
+    "R5_claim_boundary": {
+      "pass": true
+    },
+    "R6_derived_adjudication": {
+      "pass": true
+    },
+    "R7_resource_and_scope": {
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 18731008,
+      "wall_seconds": 0.03988209998351522
+    }
+  },
+  "original_result_sha256": "e21ee3222858f31356ba2c3c0676f3afaea97f3aea607d51895c4039a418c15a",
+  "original_verdict_preserved": "offset_access_boundary_not_established_v0_26",
+  "protocol_id": "ASMP-9-OFFSET-ACCESS-v0.26.2-RUNNER-REPAIR",
+  "registration_sha256": "74f98fa33d8dccdaf1f2b9955a61b9e51c25d64fbc425ad831f1685b06f2376c",
+  "repair_kind": "mechanical_re_adjudication_no_new_scientific_run",
+  "verdict": "offset_access_boundary_established_by_runner_repair_v0_26_2"
+}

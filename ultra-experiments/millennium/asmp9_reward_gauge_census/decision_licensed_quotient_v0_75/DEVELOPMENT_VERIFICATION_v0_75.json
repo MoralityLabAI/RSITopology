@@ -1,0 +1,104 @@
+{
+  "checks": {
+    "contrast_exact": true,
+    "gauge_derived_as_common_mode": true,
+    "gauge_only_channel_rejected": true,
+    "non_gauge_witness_emitted": true,
+    "output_nuisance_exact": true
+  },
+  "claim_boundary": "Finite linear policy-margin license and access composition only; no claim that the policy family or reward is morally adequate, and no ASMP-9 resolution.",
+  "exact_contrast": {
+    "decision_matrix": [
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "decision_rank": 1,
+    "effective_map": [
+      [
+        "2"
+      ]
+    ],
+    "effective_measurement_rank": 1,
+    "exactly_identifies_decision_quotient": true,
+    "gauge_basis": [
+      [
+        "1"
+      ],
+      [
+        "1"
+      ]
+    ],
+    "gauge_dimension": 1,
+    "non_gauge_witness": null,
+    "policy_count": 2,
+    "reward_dimension": 2
+  },
+  "exact_with_output_nuisance": {
+    "decision_matrix": [
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "decision_rank": 1,
+    "effective_map": [
+      [
+        "2"
+      ]
+    ],
+    "effective_measurement_rank": 1,
+    "exactly_identifies_decision_quotient": true,
+    "gauge_basis": [
+      [
+        "1"
+      ],
+      [
+        "1"
+      ]
+    ],
+    "gauge_dimension": 1,
+    "non_gauge_witness": null,
+    "policy_count": 2,
+    "reward_dimension": 2
+  },
+  "gauge_only_confounded": {
+    "decision_matrix": [
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "decision_rank": 1,
+    "effective_map": [],
+    "effective_measurement_rank": 0,
+    "exactly_identifies_decision_quotient": false,
+    "gauge_basis": [
+      [
+        "1"
+      ],
+      [
+        "1"
+      ]
+    ],
+    "gauge_dimension": 1,
+    "non_gauge_witness": [
+      [
+        "1"
+      ],
+      [
+        "0"
+      ]
+    ],
+    "policy_count": 2,
+    "reward_dimension": 2
+  },
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_75.md": "c1ffd4e46208249f4531f1eb3a70311c45a86c6bbbd4aee1d164f37779f95d4f",
+    "THEOREM_DRAFT_v0_75.md": "e9808b3e0fb2cc7f5f43e61f530e8fdb709360fc442244c061cc521fe004f396",
+    "decision_licensed_quotient.py": "c4c14a408463a22f27dd75af35f30f41f4f2a0cfa6a13d79e9fda9dcfec37ab1",
+    "test_decision_licensed_quotient.py": "0ee55c0120af9702f79ef9a4f1ac98246ea47645ec10ab4da44123063f01936a"
+  },
+  "status": "development_only_not_preregistered"
+}

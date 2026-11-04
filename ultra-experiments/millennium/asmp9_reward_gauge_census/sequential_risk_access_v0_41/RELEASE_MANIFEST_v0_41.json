@@ -1,0 +1,56 @@
+{
+  "files": {
+    "../README.md": {
+      "bytes": 22350,
+      "sha256": "80645cf0a1196d5b7976f20868868a552d10d49de80a17b6ba086919d29741ef"
+    },
+    "../RESOLUTION_OBLIGATION_MATRIX_v0_41.md": {
+      "bytes": 5440,
+      "sha256": "4fc6782325b29996fd7b09e0242f80aba38d60bb3168a91a201e6e8d01860d24"
+    },
+    "PRIOR_ART_GATE_v0_41.md": {
+      "bytes": 1853,
+      "sha256": "54d34b44075fbab8e3388fd230aebeeee00553c6d3b5e08b572e23a87cd64f9c"
+    },
+    "PROTOCOL_v0_41.md": {
+      "bytes": 2897,
+      "sha256": "b294e960e682d3faeb7b8dc88a00a84fbb7c341399a6a43e727fce7a96d72609"
+    },
+    "README.md": {
+      "bytes": 1614,
+      "sha256": "5db394bc50d67782e1afc4644023be4ecb0c7edd0c32392a915b62b44b0ebd28"
+    },
+    "RESULT_v0_41.md": {
+      "bytes": 6748,
+      "sha256": "90d66cc2ce7683362db6e451666b14710e8bd257b6aea7f8a0a0ef4b0bb4d645"
+    },
+    "RUN_RECEIPT_v0_41.json": {
+      "bytes": 1932,
+      "sha256": "db72446d153acd5552055d3f7761fb4019dfad74a51d2f05a30dc410ce1b687d"
+    },
+    "THEOREM_DRAFT_v0_41.md": {
+      "bytes": 3946,
+      "sha256": "0f55930a0510710af60b454a6515cbe43ecfce60b572598799f29b19fd6eddad"
+    },
+    "artifacts_v0_41/RESULT_v0_41.json": {
+      "bytes": 5652,
+      "sha256": "b76bd22e972478c6b98e2a8d0701e7d4b2993fcfda150c0660babea1b039e685"
+    },
+    "artifacts_v0_41/VERIFY_v0_41.json": {
+      "bytes": 473,
+      "sha256": "f83fdf080e6895871dc3b9927fe9cc2fe16df77e44138d5b0ae9754aee39b9bb"
+    },
+    "registration_v0_41.json": {
+      "bytes": 2675,
+      "sha256": "1666885fe1072f9c718268d6007c98b453a9c534394bef047f1f1629febeb08e"
+    },
+    "verify_result_v0_41.py": {
+      "bytes": 2675,
+      "sha256": "729e62baf3f2d147cce7863714ac35d009e0a1613b06b6bbf238d5b5f13bfdfd"
+    }
+  },
+  "protocol_id": "asmp9-sequential-risk-access-v0.41",
+  "registration_commit": "797a7990be5edd48655e39be37da756ff39a5b06",
+  "result_status": "finite_sequential_risk_access_characterization_established",
+  "version": "0.41"
+}

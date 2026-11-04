@@ -1,0 +1,20 @@
+{
+  "check_count": 11,
+  "checker": "clean_room_hash_codec_IR_signature_compiler_quantifier_malformed_parent_and_claim_boundary_audit",
+  "checks": {
+    "V0_schema_status_and_all_hashes": true,
+    "V10_reference_UTM_and_IR_gas_receipts_reconstructed": true,
+    "V1_codec_fields_and_forbidden_alias_features": true,
+    "V2_universal_machine_basis_opcodes_and_cost_frozen": true,
+    "V3_all_component_and_builtin_signatures_are_closed": true,
+    "V4_all_fourteen_compilers_and_two_examples_reconstructed_byte_exactly": true,
+    "V5_FIX_and_ADM_machine_quantifiers_are_distinct": true,
+    "V6_malformed_canonicality_firewall_receipts_complete": true,
+    "V7_typed_parent_fields_are_machine_represented": true,
+    "V8_v2_21_full_set_reduction_survives_compilation": true,
+    "V9_claim_boundary_is_successor_not_silent_parent_amendment": true
+  },
+  "claim_boundary": "The checker reconstructs compiler bytes independently. Adoption and external expert reproduction remain non-machine obligations.",
+  "passed": true,
+  "schema_version": "asmp3_machine_grammar_verification_v0_3"
+}

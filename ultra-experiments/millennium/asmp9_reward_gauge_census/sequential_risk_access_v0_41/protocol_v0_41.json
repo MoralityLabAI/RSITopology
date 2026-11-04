@@ -1,0 +1,57 @@
+{
+  "claim_boundary": {
+    "allowed": "Exact finite sequential risk-polytope recursion and adaptive-versus-open-loop separation in the registered rational fixture.",
+    "forbidden": [
+      "new sequential-design or optimal-decision-tree theorem",
+      "efficient general policy-search algorithm",
+      "finite-sample or unknown-channel guarantee",
+      "real-model evidence",
+      "ASMP-9 resolution"
+    ]
+  },
+  "confirmation_fixture": {
+    "decision_types": {
+      "classification": "four-target zero-one",
+      "root_group": {
+        "false_negative": "2/3",
+        "false_positive": "1/3",
+        "labels": [0, 0, 1, 1]
+      }
+    },
+    "queries": {
+      "left_q": {
+        "error": "1/4",
+        "signature": [0, 1, 0, 0]
+      },
+      "right_q": {
+        "error": "1/3",
+        "signature": [0, 0, 0, 1]
+      },
+      "root_q": {
+        "error": "1/5",
+        "signature": [0, 0, 1, 1]
+      }
+    },
+    "targets": 4
+  },
+  "gates": {
+    "A0": "The horizon-two classification gap is exactly 46/675.",
+    "B0": "The adaptive classification curve is exactly 3/4, 3/5, 61/135.",
+    "D0": "Both root-group modes equal 4/45.",
+    "N0": "Adaptive and nonadaptive classification agree at horizons zero and one.",
+    "P0": "Fourteen preregistration tests pass.",
+    "R0": "Exactly six classification and two group cells are emitted.",
+    "S0": "All registered source and environment hashes match.",
+    "X0": "Every minimax certificate equalizes target risk."
+  },
+  "primary_object": "finite-horizon adaptive upper risk polytope",
+  "protocol_id": "asmp9-sequential-risk-access-v0.41",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "status": "prospective_unregistered",
+  "version": "0.41"
+}

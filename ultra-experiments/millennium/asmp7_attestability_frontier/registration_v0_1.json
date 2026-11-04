@@ -1,0 +1,49 @@
+{
+  "asmp_problem": "ASMP-7 Capability Attestability under Compression and Decomposition",
+  "claim_boundary": "Exact finite rational evidence for one registered Boolean execution and representation class. This can establish trace-law overlap and a charged-audit frontier only inside that class. It does not establish semantic meter coverage, attestability of a deployed model, closure under unregistered transformations, optimality among all telemetry experiments, or resolution of ASMP-7.",
+  "command": "python ultra-experiments/millennium/asmp7_attestability_frontier/run_frontier.py --registration ultra-experiments/millennium/asmp7_attestability_frontier/registration_v0_1.json --output-dir ultra-experiments/millennium/asmp7_attestability_frontier/artifacts_v0_1",
+  "error_limits": {
+    "false_negative": "1/20",
+    "false_positive": "1/20"
+  },
+  "experiment_id": "ASMP-7-FINITE-ATTESTABILITY-FRONTIER-v0.1",
+  "gates": [
+    "T0_finite_orbit_integrity",
+    "T1_trace_impossibility",
+    "P0_sufficient_statistic",
+    "A0_privacy_kill",
+    "A1_charged_audit_liveness",
+    "U0_uniform_composite",
+    "E0_exhaustive_liveness",
+    "F0_frontier_integrity"
+  ],
+  "maximum_challenges": 128,
+  "policy_classes": {
+    "compliant": "agreement_count <= 8",
+    "forbidden": "agreement_count >= 14"
+  },
+  "prereveal_source_commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+  "prior_art_disposition": "classical_testing_components_application_specific_instrument",
+  "registered_utc": "2026-07-21T04:28:33Z",
+  "representation_state_count": 48,
+  "sealed_files": {
+    ".gitattributes": "6455d23d9d3efaa95bfcd6ff09a568110d840715fef2f2962dd38af3f6a13964",
+    "PRIOR_ART_v0_1.md": "a524eb99dd3b6505759ed5ba896f773b8f63dd216e81c31d34635c23f2295aeb",
+    "PROTOCOL_v0_1.md": "59817447540f0e95f7352880a710a8c0c87d038a8aa1ca31acda15fda4dfb1fb",
+    "README.md": "5c045f5d550061f43d88d0539ab690986522db3e9118cba3e19758d791e5af37",
+    "attestability.py": "6a6faf6b1641318a704d63d1081a8589585f21df44fee4d863db1f43484c4cc6",
+    "run_frontier.py": "02af3735c47b2225ee8c2fdaae15aa60cdc32637f19ead56dcfaadb9992d736d",
+    "test_attestability.py": "0a488dacb1cc059639b6958011cf299c1d3d16ae95177a3d2cdefb88b18097fd"
+  },
+  "stop_rule": "Run once after registration. Any failed construction or exactness gate yields invalid_instrument. Scientific directional failures are reported without threshold, grid, or model amendment.",
+  "theta_grid": [
+    "1/2",
+    "3/5",
+    "2/3",
+    "3/4",
+    "4/5",
+    "1/1"
+  ],
+  "truth_table_count": 65536,
+  "version": "0.1"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "mobius_synergy_identity_protocol_amendment_v0_1_1",
+  "protocol_id": "mobius_synergy_identity_v0_1_1",
+  "status": "provenance_only_amendment_not_run",
+  "parent_protocol": {
+    "path": "protocol_v0_1.json",
+    "sha256": "4569b90fec5263da17fb4cc75162463cc9302ca638e0ec7f7c205fd34c2f2abd"
+  },
+  "parent_registration": {
+    "path": "registration.json",
+    "sha256": "3c4975a260e736d1c548d2aab22336dd70dab0b2410093146e8dd2c3cd5cbdee"
+  },
+  "scientific_contract_changed": false,
+  "confirmatory_target_changed": false,
+  "rank_universe_changed": false,
+  "null_or_margin_changed": false,
+  "amendments": {
+    "indexed_chunk_integrity": "Before analysis, require unique chunk_id and path values; exact containment beneath the capture root; exact SHA-256 agreement for every indexed NPZ; exact activation shape, dtype, finiteness, and row-count agreement; and a unique nonempty prompt-id list matching every row.",
+    "environment_lock": "The v0.1.1 registration seals the Python, NumPy, and SciPy versions consumed by the analysis runner.",
+    "atomic_write_once_release": "The claim runner refuses an existing final or staging directory, writes into a sibling staging directory, hashes every completed artifact, and atomically renames the staging directory to the final path only after the release manifest is sealed.",
+    "failure_behavior": "A failed run may leave a visibly named staging directory but can never modify or replace a completed claim directory. A new attempt requires a new empty output path or explicit versioned extension."
+  },
+  "claim_boundary": "This amendment changes provenance enforcement only. It does not convert representation stability into causal evidence, authorize weight edits, add an invariant level, or strengthen the v0.1 scientific claim."
+}

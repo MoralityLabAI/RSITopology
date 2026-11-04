@@ -1,0 +1,28 @@
+{
+  "implementation_commit": "c7672b74024004a28601433de35b4d1f678553b4",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/protocol_v0_21.json",
+  "registered_at_utc": "2026-07-29T02:23:25Z",
+  "registration_id": "ASMP-9-LOCAL-BLOCK-COMPLEXITY-v0.21-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/V0_2_SCOPE_EXPANSION_DRAFT.md": "06a364441f07db1893b042eb967e70079417473c7fa32d3ebf3fdb12096b3b15",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": "892e4754540673c56ee0b4d7ee5ba2b249b21080a8aadae80440b6256ee51c8f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_20.md": "253284acbc553700a33309c2c0577a6f593ade6e52ec5382694fd14861f6fcfc",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/block_factorization_v0_20/block_factorization.py": "c5cb870558cec9d148167cf8190578e8e16a6164a3d018561c0c35128313076e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/block_factorization_v0_20/protocol_v0_20.json": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/general_graph_design_v0_17/protocol_v0_17.json": "f63d498f897fe26224a2cb4afed2471e39c565b600a6a7f98392e51858765423",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/DEVELOPMENT_NOTE_v0_21.md": "22bc8ba822c6626f8fa7648316c42715010b04b165df01ca1a4fb119117f2eb0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/PRIOR_ART_GATE_v0_21.md": "0a002c8885fcf580a151b51634f2085d97db6a1b0054858ee17f6fb30d6614f3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/PROTOCOL_v0_21.md": "c5823e5fae26b64dab4c5143406d07f49e1be74399cccc88c3f76652edd68ac9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/README.md": "7fdffad0dcfe5db8745783cd88ba5d4672cb382d75f568da36881c7468cd7ab7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/THEORY_DRAFT_v0_21.md": "8b9c0c9bc48c4102e852b4cd1835e427d265643e38b0deb2767ea54d58737d3f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/burned_graph_registry_v0_21.json": "30b9620756787b8224664048384f2f38cab95300547b265aa5bf27addd0cc1a5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/local_block_complexity.py": "e297c3e4944ce8a4e51dae2365a2bb97c094489e21eafed9b400bffdba303bdf",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/make_burned_graph_registry_v0_21.py": "f1370d0c95b65d238c711b18c80b35075116a15f51ba83d34516cca6737d7917",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/protocol_v0_21.json": "5b1a62e5c28444fe78b663913510d40e88f6724fc6f808d15b71fd73e8cf8c4a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/register_v0_21.py": "3313531c8939ec3f0b4c1087e2fe78adb8b6b7295ae8370985eda18085cdf4f9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/run_verification_v0_21.py": "b7c5bd1d43f16c85256791145353f1c80ffb6154466708dc0625efdfb1cd7da5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/test_local_block_complexity.py": "531efaaafa534e15fe31d496ef4284c3df451d74036dcd3e4c95cbe3bdcd3361",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/test_protocol_v0_21.py": "8708903635fc5fc29d331ddbbd7ff4a21ffc9a889042f1f1ae12b42bf28dc6af",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/local_block_complexity_v0_21/verify_result_v0_21.py": "db6e276e4d8383992d7955556579716be536220642c7165a50ef43ff431adcbd"
+  }
+}

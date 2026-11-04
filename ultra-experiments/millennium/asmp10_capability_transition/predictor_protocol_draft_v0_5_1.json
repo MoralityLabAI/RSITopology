@@ -1,0 +1,106 @@
+{
+  "schema_version": "asmp10_predictor_protocol_draft_v0_5_1",
+  "status": "draft_not_registered_not_authorized",
+  "supersedes_draft": "PREDICTOR_PROTOCOL_DRAFT_v0_5.md",
+  "burned_seeds": [0, 1, 7],
+  "optimizer_scope": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.98],
+    "cross_optimizer_claim_allowed": false
+  },
+  "training": {
+    "modulus": 31,
+    "steps": 15000,
+    "train_fractions": [0.5, 0.55, 0.6],
+    "weight_decay": [1.0, 2.0],
+    "metric_evaluation_every_steps": 25,
+    "checkpoint_every_steps": 100,
+    "checkpoint_every_seconds": 60,
+    "feature_cutoff_step": 500
+  },
+  "state_machine": {
+    "initial_state": "incapable",
+    "up_threshold": {
+      "test_accuracy_min_inclusive": 0.9,
+      "test_loss_max_inclusive": 0.5
+    },
+    "down_threshold": {
+      "test_accuracy_max_exclusive": 0.8,
+      "or_test_loss_min_exclusive": 0.75
+    },
+    "entry_dwell_steps": 500,
+    "entry_dwell_evaluations_at_primary_cadence": 21,
+    "exit_dwell_steps": 100,
+    "exit_dwell_evaluations_at_primary_cadence": 5,
+    "minimum_terminal_tail_steps": 500,
+    "minimum_delayed_transition_steps": 500,
+    "transition_time_field": "confirmed_dwell_onset_step"
+  },
+  "cadence_validity": {
+    "primary_steps": 25,
+    "deterministic_sensitivity_steps": [50, 100],
+    "require_identical_three_way_label": true,
+    "require_identical_event_kind_order": true,
+    "maximum_transition_step_difference": 100,
+    "failure_instrument_status": "cadence_dependent",
+    "failure_gate_decision": "not_evaluated"
+  },
+  "outcome_classes": [
+    "no_adjudicable_horizon_stable_transition",
+    "early_horizon_stable",
+    "delayed_horizon_stable"
+  ],
+  "baseline_blocks": {
+    "B0_hyperparameter": [
+      "train_fraction",
+      "weight_decay",
+      "split_size",
+      "model_size",
+      "optimizer_identity",
+      "learning_rate",
+      "seed_cluster_metadata"
+    ],
+    "B1_scalar_prefix": [
+      "B0_hyperparameter",
+      "train_loss_trajectory",
+      "test_loss_trajectory",
+      "train_accuracy_trajectory",
+      "test_accuracy_trajectory",
+      "gradient_norm_trajectory",
+      "global_parameter_norm_trajectory",
+      "last_layer_norm_trajectory",
+      "logit_scale_trajectory"
+    ],
+    "B2_published_progress": [
+      "B1_scalar_prefix",
+      "construction_frozen_restricted_loss",
+      "construction_frozen_excluded_loss",
+      "registered_fourier_concentration",
+      "registered_fourier_gini",
+      "construction_split_effective_theory_phase_map"
+    ],
+    "B3_geometry": [
+      "token_embedding_stable_rank",
+      "output_weight_stable_rank",
+      "representation_effective_rank",
+      "registered_spectral_trajectory"
+    ]
+  },
+  "primary_comparison": {
+    "baseline": "B2_published_progress",
+    "augmented": "B2_published_progress+B3_geometry",
+    "metric": "paired_seed_grouped_multiclass_log_loss_difference"
+  },
+  "unresolved_before_registration": [
+    "exact_seed_lists",
+    "seed_cluster_count",
+    "target_free_power_calculation",
+    "numeric_practical_margins",
+    "resampling_counts",
+    "minimum_per_class_counts",
+    "censoring_ceiling",
+    "published_measure_source_revisions",
+    "environment_hash"
+  ]
+}

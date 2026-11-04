@@ -1,0 +1,64 @@
+{
+  "artifact_sha256": {
+    "VERIFY_RESULT_v0_48.json": "9675399fd37904b73dfee0053034d244f11505f80a6aa457fbe6dd1af68de2c6",
+    "VERIFY_RESULT_v0_48_1.json": "e8554dd5786a5f795763a80982e5d5df91f061caf7e27513f81bbed492c2bc1d",
+    "artifacts_v0_48/experiment_rows_v0_48.json": "d0024a9ff29962372c5bfc6ad3e29601a5fb880c6bd9d094cc192dbea134193f",
+    "artifacts_v0_48/result_v0_48.json": "bfae0cd82bc6a59c862d963b7a76ac8b25b8d74e00217a377ff1051a9caaff3d",
+    "artifacts_v0_48/subset_bounds_v0_48.json": "6067bf95b61c60f6a86ff317f711497b69dd46f9d42fad00502aa8f61151dea3"
+  },
+  "commands": {
+    "execute": "python ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/run_confirmation_v0_48.py",
+    "repair_test": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/test_verifier_repair_v0_48_1.py",
+    "scientific_test": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/test_ordering_modulus.py",
+    "verify_original": "python ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/verify_result_v0_48.py",
+    "verify_repaired": "python ultra-experiments/millennium/asmp9_reward_gauge_census/ordering_modulus_v0_48/verify_result_v0_48_1.py"
+  },
+  "gates": {
+    "A0": true,
+    "C0": true,
+    "D0": true,
+    "E0": true,
+    "L0": true,
+    "P0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "U0": true,
+    "X0": false
+  },
+  "implementation_commit": "145a74f5bf311167cb34eefc5da11a0502792373",
+  "protocol_id": "asmp9-decision-dependent-ordering-v0.48",
+  "registration_commit": "a6362f0514c6328d7f7b8ec2873f3a1843098cec",
+  "registration_sha256": "35e94a38aeebdfe6a33352498a309bf17e6aaa5914519432faaacfb9eb1b065a",
+  "repair": {
+    "implementation_commit": "48b145c6501b7c9f6c1e5f04f2e5ca930dd7e71e",
+    "registration_commit": "466d21961ab072aa8cfb7006bc751f62f6d8bdb0",
+    "registration_sha256": "c50140c8a01df31df616a0a011f679012319c920d60dbbee6c247f4c977902b3",
+    "scope": "post-outcome verifier-only; no scientific changes"
+  },
+  "resource": {
+    "elapsed_seconds": 39.46925759999431,
+    "peak_aggregate_working_set_bytes": 413794304,
+    "worker_processes": 4
+  },
+  "scientific_result_commit": "83bae5e5e850a5c586d028745f09ad48a70fc0a5",
+  "status": "decision_dependent_ordering_not_established",
+  "tests": {
+    "repair": 5,
+    "scientific": 13
+  },
+  "verification": {
+    "experiment_rows_match": true,
+    "instrument_valid": true,
+    "ok": true,
+    "original_verifier_failure_diagnosed": true,
+    "prediction_gate_X0": false,
+    "registered_source_hashes_match": true,
+    "registration_hash_match": true,
+    "repair_intent_match": true,
+    "repair_source_hashes_match": true,
+    "scientific_payload_match": true,
+    "status_mapping_match": true,
+    "subset_bounds_match": true
+  },
+  "version": "0.48.1"
+}

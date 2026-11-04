@@ -1,0 +1,27 @@
+{
+  "check_count": 18,
+  "checks": {
+    "adaptive_rows": true,
+    "all_gates_pass": true,
+    "calibrated_numeraire": true,
+    "claim_boundary": true,
+    "conditioning_separation": true,
+    "finite_mdp_rows": true,
+    "gate_universe": true,
+    "homogeneous_rows": true,
+    "non_gauge_witness": true,
+    "protocol_hash": true,
+    "quotient_rows": true,
+    "registration_hash": true,
+    "resource_caps": true,
+    "result_hash": true,
+    "robust_rows": true,
+    "sealed_files": true,
+    "unknown_numeraire": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "97b152cf7ab380823ecd33b89969dbb49e67bc30be6a1e1018ec92051f8996f6",
+  "result_sha256": "0f7b5bb876f8b7b6d58f7b891ed6e54b69f0c7168db5eb379ea8c21d675fad14",
+  "verifier_sha256": "975a618f3b1083e2aa154ef7b7c1384c9624e7fad8903b843bb760ae8fc12152"
+}

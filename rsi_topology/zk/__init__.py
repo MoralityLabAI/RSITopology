@@ -1,0 +1,53 @@
+"""Zero-knowledge-portable deterministic reference layer."""
+
+from .fixed_point import (
+    FRACTION_BITS,
+    NEGATIVE_CONTROL_EPSILON_Q_FLOOR,
+    ONE,
+    SCALE,
+    TWO,
+)
+from .gate_reference import (
+    PROTOCOL_VERSION,
+    ControlRiskMeasurementFP,
+    EdgeRiskReceiptFP,
+    LoopRiskReceiptFP,
+    _canonical_bytes,
+    array_sha256,
+    array_sha256_le_f64,
+    canonical_bytes,
+    canonical_gate_serialization,
+    certification_level_from_margins_fp,
+    control_risk_vector_fp,
+    gate_serialization_sha256,
+    journal_bytes,
+    measurement_commitment_sha256,
+    measurement_from_dict_fp,
+    predict_control_gate_fp,
+    sha256_json,
+)
+
+__all__ = [
+    "FRACTION_BITS",
+    "SCALE",
+    "ONE",
+    "TWO",
+    "NEGATIVE_CONTROL_EPSILON_Q_FLOOR",
+    "PROTOCOL_VERSION",
+    "EdgeRiskReceiptFP",
+    "LoopRiskReceiptFP",
+    "ControlRiskMeasurementFP",
+    "control_risk_vector_fp",
+    "predict_control_gate_fp",
+    "certification_level_from_margins_fp",
+    "_canonical_bytes",
+    "canonical_bytes",
+    "sha256_json",
+    "array_sha256",
+    "array_sha256_le_f64",
+    "canonical_gate_serialization",
+    "gate_serialization_sha256",
+    "measurement_commitment_sha256",
+    "journal_bytes",
+    "measurement_from_dict_fp",
+]

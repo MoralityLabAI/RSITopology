@@ -1,0 +1,422 @@
+{
+  "certified": true,
+  "claim_boundary": "This packet is an evidence-backed disposition, not a normative amendment or a claim of community acceptance. It records an exact internal refutation of the literal named iff, a minimal constructive online subclass, and the remaining unrestricted, normative, and external gates.",
+  "disposition": {
+    "community_or_prize_style_acceptance": "not_established_external_gate_0_of_2",
+    "current_black_box_harness": "stop_extension_until_registered_resume_trigger",
+    "literal_v0_1_named_conjecture": "refuted_internal_exact_both_directions",
+    "nonnormative_registry_negative_route": "mathematical_conditions_satisfied_internal",
+    "normative_definition": "unclosed",
+    "repaired_online_contract_subclass": "constructively_characterized_and_black_box_minimal",
+    "safe_public_label": "ASMP-3 v0.1 named iff refuted internally; repaired online subclass characterized and black-box minimal; unrestricted classification and external acceptance not established",
+    "unrestricted_asmp3_classification": "not_established"
+  },
+  "evidence_package_rows": [
+    {
+      "certified": true,
+      "directory": "asmp3_protocol_quantifier_v0_7",
+      "evidence_id": "v0.7_protocol_quantifier",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v0_7.json",
+      "manifest_sha256": "E93DA3ACD8E96B93B0EFAED5D22142AFDFBC27E269998644FEC1DF234FD46D23",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_protocol_quantifier_v0_7",
+      "result_status": "exact_quantifier_fork",
+      "sealed_files": 15,
+      "sealed_member_bytes": 129382,
+      "verification_schema": "asmp3_protocol_quantifier_verification_v0_7"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_encoding_invariance_v2_0",
+      "evidence_id": "v2.0_encoding_invariance",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_0.json",
+      "manifest_sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_encoding_invariance_v2_0",
+      "result_status": "exact_replication_quotient_invariance_and_macro_cost_barrier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 2489006,
+      "verification_schema": "asmp3_encoding_invariance_verification_v2_0"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_honest_search_barrier_v2_1",
+      "evidence_id": "v2.1_honest_search",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_1.json",
+      "manifest_sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_honest_search_barrier_v2_1",
+      "result_status": "exact_dimension_one_unique_marker_search_separation",
+      "sealed_files": 20,
+      "sealed_member_bytes": 857707,
+      "verification_schema": "asmp3_honest_search_barrier_verification_v2_1"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_resource_tradeoff_v2_2",
+      "evidence_id": "v2.2_resource_tradeoff",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_2.json",
+      "manifest_sha256": "E0440C6A3B291A09D2698F143DC37AEDB03DF3A7B22CD7BCBD557996064C964E",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_resource_tradeoff_v2_2",
+      "result_status": "exact_unique_marker_communication_query_frontier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 2221702,
+      "verification_schema": "asmp3_resource_tradeoff_verification_v2_2"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_constructive_refutation_protocol_v2_3",
+      "evidence_id": "v2.3_constructive_protocol",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_3.json",
+      "manifest_sha256": "3F46B4CC8B44DF9B5600C5A17A71E22EE91936D1522C1DF5D0970B5885EA7896",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_constructive_refutation_protocol_v2_3",
+      "result_status": "constructive_positive_protocol_under_typed_finder_noise_contracts",
+      "sealed_files": 26,
+      "sealed_member_bytes": 2900195,
+      "verification_schema": "asmp3_constructive_refutation_protocol_verification_v2_3"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_randomized_finder_amplification_v2_4",
+      "evidence_id": "v2.4_randomized_finder",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_4.json",
+      "manifest_sha256": "CC1A6F4831499AE522A54EA00A15A521D5CF8249EFEBBA9F44B732D50F51862A",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_randomized_finder_amplification_v2_4",
+      "result_status": "exact_randomized_finder_restart_noise_and_budget_frontier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 1278671,
+      "verification_schema": "asmp3_randomized_finder_amplification_verification_v2_4"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_witness_transparent_normal_form_v2_5",
+      "evidence_id": "v2.5_witness_normal_form",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_5.json",
+      "manifest_sha256": "0FC5C8234BFC7BACCE1A1DB9E5B947C43F206E8552BA347A90F317D6D08004CA",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_witness_transparent_normal_form_v2_5",
+      "result_status": "conditional_protocol_to_finder_normal_form_and_literal_two_sided_separation",
+      "sealed_files": 23,
+      "sealed_member_bytes": 744578,
+      "verification_schema": "asmp3_witness_transparent_normal_form_verification_v2_5"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_adaptive_transcript_coupling_v2_7",
+      "evidence_id": "v2.7_adaptive_coupling",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_7.json",
+      "manifest_sha256": "569445CD8CCB363C60A325AED48ACE59924E5707EF0805F1414C2A50D240ED9E",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_adaptive_transcript_coupling_v2_7",
+      "result_status": "pathwise_adaptive_protocol_coupling_and_robustification_theorem",
+      "sealed_files": 23,
+      "sealed_member_bytes": 2581746,
+      "verification_schema": "asmp3_adaptive_transcript_coupling_verification_v2_7"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_trace_binding_extractor_v2_8",
+      "evidence_id": "v2.8_trace_binding",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_8.json",
+      "manifest_sha256": "8E29A8441E591966B6DF36AD1634C6041EFF8C37AA4197B0C25ABC5A3F323FA9",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_trace_binding_extractor_v2_8",
+      "result_status": "operational_refute_binding_compiler_and_finder_extractor",
+      "sealed_files": 23,
+      "sealed_member_bytes": 976885,
+      "verification_schema": "asmp3_trace_binding_extractor_verification_v2_8"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_oracle_parametric_replay_v2_9",
+      "evidence_id": "v2.9_oracle_replay",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_9.json",
+      "manifest_sha256": "497EB96B03B88A53B1B4FDD2761264E16F39136A07B90E0EA4B5109DD809EFCB",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_oracle_parametric_replay_v2_9",
+      "result_status": "oracle_parametric_ideal_replay_compiler_with_transcript_firewall",
+      "sealed_files": 27,
+      "sealed_member_bytes": 1022960,
+      "verification_schema": "asmp3_oracle_parametric_replay_verification_v2_9"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_online_noisy_trace_extractor_v2_10",
+      "evidence_id": "v2.10_online_extractor",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_10.json",
+      "manifest_sha256": "AA0CE04D78E96453B975B852D9F8F2BD80030AC72F2347CA41BA669D815066F5",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_online_noisy_trace_extractor_v2_10",
+      "result_status": "one_shot_online_noisy_trace_finder_without_restart",
+      "sealed_files": 30,
+      "sealed_member_bytes": 1067608,
+      "verification_schema": "asmp3_online_noisy_trace_extractor_verification_v2_10"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_online_contract_minimality_v2_11",
+      "evidence_id": "v2.11_contract_minimality",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_11.json",
+      "manifest_sha256": "A7F9CB1A09922824CBE9B29BE71BCE27DC03C7294E6FF9565511F899CCAA5CC1",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_online_contract_minimality_v2_11",
+      "result_status": "black_box_las_vegas_online_contract_minimality",
+      "sealed_files": 28,
+      "sealed_member_bytes": 552692,
+      "verification_schema": "asmp3_online_contract_minimality_verification_v2_11"
+    }
+  ],
+  "experiment_id": "ASMP-3-CONSOLIDATED-RESOLUTION-DISPOSITION-v2.12",
+  "gates": {
+    "F0_all_authoritative_source_clauses_present": true,
+    "F1_all_twelve_decisive_packages_sealed_and_verified": true,
+    "F2_literal_named_conjecture_two_sided_refutation_preserved": true,
+    "F3_one_shot_online_normal_form_supersedes_replay_only_scope": true,
+    "F4_six_clause_black_box_minimality_is_certified": true,
+    "F5_complete_resolution_requirements_are_not_overclaimed": true,
+    "F6_external_acceptance_gate_correctly_fails": true,
+    "F7_all_requirement_rows_have_direct_passing_evidence": true,
+    "F8_stopping_decision_has_only_non_grid_resume_triggers": true,
+    "F9_disposition_separates_refutation_subclass_and_full_acceptance": true
+  },
+  "parent_result": "ASMP-3-ONLINE-CONTRACT-MINIMALITY-v2.11",
+  "remaining_blockers": [
+    {
+      "blocker": "v0.1 does not authoritatively choose FIX versus ADM or the six-clause online contract",
+      "category": "definition_authority",
+      "clearing_event": "authoritative successor definition or scope adjudication",
+      "id": "B0_normative_interface",
+      "why_current_harness_cannot_clear_it": "exact calculations cannot choose normative scope"
+    },
+    {
+      "blocker": "v2.11 minimality is black-box and does not classify every task-specific non-black-box protocol",
+      "category": "new_mathematical_theory",
+      "clearing_event": "concrete non-black-box family or universal structure theorem",
+      "id": "B1_non_black_box_scope",
+      "why_current_harness_cannot_clear_it": "larger observation grids cannot prove a theorem using absent task structure"
+    },
+    {
+      "blocker": "matching resource lower bounds remain family- and interface-specific",
+      "category": "new_mathematical_theory",
+      "clearing_event": "interface-uniform interactive communication/query/honest-work lower bounds",
+      "id": "B2_universal_resources",
+      "why_current_harness_cannot_clear_it": "more marker instances do not quantify over arbitrary interaction"
+    },
+    {
+      "blocker": "the positive theorem needs a controlled adaptive path-error event",
+      "category": "new_noise_theory",
+      "clearing_event": "new correlated-noise hypothesis with a path-level theorem or sharp impossibility",
+      "id": "B3_noise_scope",
+      "why_current_harness_cannot_clear_it": "v2.11 proves soundness alone is insufficient"
+    },
+    {
+      "blocker": "expert gate remains 0/2 with 0/1 independent team checkers",
+      "category": "external_evidence",
+      "clearing_event": "two attributable expert reproductions including one independently implemented checker",
+      "id": "B4_external_review",
+      "why_current_harness_cannot_clear_it": "repository-generated receipts cannot establish external identity or independence"
+    }
+  ],
+  "requirement_rows": [
+    {
+      "evidence": "ASMP-3 / ASMP-CANDIDATE-SET-v0.1 / declared ZFC base",
+      "evidence_check": true,
+      "id": "D0",
+      "layer": "definition",
+      "requirement": "exact problem ID, version, and foundational base",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "v0.1 remains a research-agenda artifact; registry graduation is false",
+      "evidence_check": true,
+      "id": "D1",
+      "layer": "definition",
+      "requirement": "authoritatively closed formal core",
+      "status": "not_satisfied_authoritative"
+    },
+    {
+      "evidence": "typed successor remains nonnormative and v2.11 lists interface adoption as a resume trigger",
+      "evidence_check": true,
+      "id": "D2",
+      "layer": "definition",
+      "requirement": "normative FIX/ADM and Refute-binding choice",
+      "status": "definitionally_unclosed"
+    },
+    {
+      "evidence": "v0.7 optimal gap (3/5)^d tends to zero although the three displayed conditions hold",
+      "evidence_check": true,
+      "id": "N0",
+      "layer": "named_conjecture",
+      "requirement": "frozen-interface sufficiency direction",
+      "status": "refuted_exact"
+    },
+    {
+      "evidence": "a nonbinding decidable Refute can be empty or padded without changing protocol admission",
+      "evidence_check": true,
+      "id": "N1",
+      "layer": "named_conjecture",
+      "requirement": "literal nonbinding-Refute necessity direction",
+      "status": "refuted_exact"
+    },
+    {
+      "evidence": "v0.7 refutes sufficiency; v2.5 refutes necessity",
+      "evidence_check": true,
+      "id": "N2",
+      "layer": "named_conjecture",
+      "requirement": "two-sided disposition under both principal literal readings",
+      "status": "refuted_exact_both_readings"
+    },
+    {
+      "evidence": "v0.7 exact frozen-message separation",
+      "evidence_check": true,
+      "id": "G0",
+      "layer": "registry_negative_route",
+      "requirement": "separation_or_impossibility_in_the_frozen_message_game",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "v0.7 retains Theta(n) honest work and persistent semantic error 1/5",
+      "evidence_check": true,
+      "id": "G1",
+      "layer": "registry_negative_route",
+      "requirement": "efficient_honest_prover_and_noise_model_must_remain_in_scope",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "v2.10 one-shot normal form plus v2.11 six-premise black-box minimality",
+      "evidence_check": true,
+      "id": "R0",
+      "layer": "complete_item_1",
+      "requirement": "formal class equality, separation, or complete invariant",
+      "status": "online_subclass_characterized_black_box_minimal_unrestricted_open"
+    },
+    {
+      "evidence": "v2.3 constructive protocol, v2.7 adaptive coupling, v2.10 one-shot converse",
+      "evidence_check": true,
+      "id": "R1",
+      "layer": "complete_item_2",
+      "requirement": "constructive protocol against adaptive obfuscation",
+      "status": "satisfied_for_declared_online_subclass_only"
+    },
+    {
+      "evidence": "v2.1 q/N search, v2.2 Kq>=N covering, v2.11 exact observation frontiers",
+      "evidence_check": true,
+      "id": "R2",
+      "layer": "complete_item_3",
+      "requirement": "matching communication, query, and honest-prover lower bounds",
+      "status": "partial_registered_families_and_black_box_model"
+    },
+    {
+      "evidence": "v2.7 exact fresh post-history path bound; v2.11 proves path control necessary",
+      "evidence_check": true,
+      "id": "R3",
+      "layer": "complete_item_4",
+      "requirement": "robust theorem for full legal correlated/noisy class",
+      "status": "partial_fresh_conditional_path_noise_only"
+    },
+    {
+      "evidence": "v2.0 exact quotient transport and N-query parity macro barrier",
+      "evidence_check": true,
+      "id": "R4",
+      "layer": "complete_item_5",
+      "requirement": "benign encoding invariance and full-answer macro firewall",
+      "status": "satisfied_component"
+    },
+    {
+      "evidence": "twelve decisive evidence packages with valid release manifests",
+      "evidence_check": true,
+      "id": "A0",
+      "layer": "acceptance",
+      "requirement": "sealed public proof and machine artifacts",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "all twelve decisive packages have passing clean-room verifiers",
+      "evidence_check": true,
+      "id": "A1",
+      "layer": "acceptance",
+      "requirement": "independently implemented machine checks",
+      "status": "satisfied_internal_repository"
+    },
+    {
+      "evidence": "0/2 qualifying teams and 0/1 independent team checker",
+      "evidence_check": true,
+      "id": "A2",
+      "layer": "acceptance",
+      "requirement": "two independent expert teams including one independent checker",
+      "status": "missing_external_0_of_2"
+    },
+    {
+      "evidence": "counterfamilies and exact finite identities; empirical-only resolution disabled",
+      "evidence_check": true,
+      "id": "A3",
+      "layer": "acceptance",
+      "requirement": "deductive rather than simulation-only resolution evidence",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "(3/5)^d optimum, q/N and k/N frontiers, sharp max(0,1-s-delta)",
+      "evidence_check": true,
+      "id": "A4",
+      "layer": "acceptance",
+      "requirement": "sharp negative and normal-form boundaries",
+      "status": "satisfied_for_registered_claims"
+    }
+  ],
+  "schema_version": "asmp3_consolidated_resolution_disposition_v2_12",
+  "source_clause_checks": {
+    "canonical_calls_set_a_research_agenda": true,
+    "canonical_lists_five_complete_resolution_items": true,
+    "canonical_names_the_weak_verifier_conjecture": true,
+    "typed_successor_does_not_change_parent": true,
+    "typed_successor_is_nonnormative": true,
+    "v2_11_stop_requires_a_real_resume_trigger": true
+  },
+  "source_hashes": {
+    "canonical_markdown_sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5",
+    "expert_status_sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D",
+    "problem_registry_sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0",
+    "typed_successor_sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B",
+    "v2_11_stopping_boundary_sha256": "9C149FBB6D49C1D019BD75BA019F943E32401054A8C34FE2D7D146D700C3C97B"
+  },
+  "status": "literal_refutation_online_subclass_minimality_and_updated_stop_disposition"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-audit-throughput-sample-v0-5-20260723",
+  "amends": "protocols/asmp8_qwen08_audit_throughput_sample_v0_4.json",
+  "amendment_reason": "Both NF4 and direct-float16 Hugging Face loaders failed before inference under the bounded Windows job. This fallback benchmarks the local pre-quantized Qwen 0.8B Q4_K_M kernel at the measured 127.17-token prompt length.",
+  "purpose": "Estimate compute-side prompt-processing throughput; not a scientific outcome gate and not an NF4-equivalent measurement.",
+  "measurement_contract": {
+    "audit_proxy": "128-token Qwen 0.8B Q4_K_M prompt evaluation",
+    "manifest_mean_tokens_per_audit": 127.16840277777777,
+    "prompt_tokens_per_trial": 128,
+    "repetitions": 10,
+    "threads": 6,
+    "generation": false,
+    "gradients": false,
+    "weights_modified": false,
+    "gpu_used": false
+  },
+  "resource_caps": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 600,
+    "gpu_allowance_mb": 1,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_audit_throughput_sample_v0_5"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_audit_throughput_sample_v0_5\\wrapper",
+  "checkpoint_strategy": "llama-bench internal warmup plus ten repeated prompt-processing trials",
+  "exact_inner_command": [
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064\\payload\\llama-bench.exe",
+    "--model",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--n-prompt",
+    "128",
+    "--n-gen",
+    "0",
+    "--repetitions",
+    "10",
+    "--threads",
+    "6",
+    "--n-gpu-layers",
+    "0",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "128",
+    "--output",
+    "json"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  }
+}

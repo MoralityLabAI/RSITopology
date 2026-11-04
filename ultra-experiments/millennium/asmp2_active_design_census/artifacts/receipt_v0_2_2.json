@@ -1,0 +1,20 @@
+{
+  "amendment_sha256": "ba0871eeca66828600f4af3461baa4ec9f1e44b144eed06685f4f074b3179034",
+  "claim_packet_sha256": "e7a12136f7d7353e88775500e10a6a83ab0ef1e78905af98a9c2d4f373d35fe8",
+  "environment": {
+    "numpy": "2.4.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "psutil": "7.0.0",
+    "python": "3.11.4",
+    "sympy": "1.14.0"
+  },
+  "git_commit_at_run": "a3f0ce7b54e19cd3543469bc5382c509f65637ae",
+  "git_tracked_diff_sha256_at_run": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "performance_parent_sha256": "2414ac724f0b05141d6d82bbb4bbe13f53d19380f003909aba9380e4aa233936",
+  "result_sha256": "a35d6e3a5a2aa5ba1063d3bb1419ca60c97950a03260f1b6460497667d3cd6a0",
+  "runner_sha256": "264789709a89dfc0bcda987af5937dda9f8edbff90113a117453d6d88c963a0c",
+  "schema_version": "asmp2_active_design_receipt_v0_2_2",
+  "scientific_parent_sha256": "de42afaa6a1fc3fc2200d4f8f32e1df0b6a80de05da32d19e75c3bfcc9c63168",
+  "tests_sha256": "fb20c2420cc44ed12e78eea20c312fb63291baa61464d8492806b061583352ce",
+  "verifier_sha256": "87e25c1d008f4fd1014fd1aa0770ed7422812384f58850785d28e935550101ad"
+}

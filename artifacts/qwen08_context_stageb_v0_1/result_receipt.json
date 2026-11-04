@@ -1,0 +1,58 @@
+{
+  "schema_version": "qwen08_context_stageb_repository_receipt_v0_1",
+  "decision": "main_result_only_precision_stability_not_established",
+  "scientific_protocol": {
+    "path": "protocols/qwen08_context_stageb_v0_1.json",
+    "sha256": "62c4e9d2c250957bfd3257c2775691d0078ae50fad772f443d741fcacef935b1"
+  },
+  "prompt_manifest": {
+    "path": "protocols/qwen08_context_stageb_prompt_manifest_v0_1.json",
+    "sha256": "efed466dbd859047679483d971340a937a86320fd299efdb213611c9dec8adf8",
+    "fresh_prompt_count": 2304,
+    "prior_split_byte_overlap_count": 0
+  },
+  "implementation_commit_before_capture": "a37ffcb",
+  "capture_indices": {
+    "main_base_4bit": "227a8fb890dbdb25d65c02afcd3dacb64c0f610045e04f81dbd456216d827061",
+    "main_naive_4bit": "aea5aabcdc274ef5ad03d59d04015d7c158d901e2b510d8ef6b1ceaef2b583c3",
+    "control_base_float16": "5d51503e7313583e8b6e9463a9f8ab48cedb053f46c5372a8760779037de864a",
+    "control_naive_float16": "bc424c09aa6e57590e5a10e9a456bbc6126e73c21fae6b92b4b2edc4b0a032cb"
+  },
+  "analysis_authorization_sha256": "1e86ae557385c93604a3df6876581aca279ca29ce39e9458c09fb3e7eeb939ce",
+  "external_result": {
+    "path": "D:/Research_Engine/runs/qwen08_context_stageb_analysis_v0_1/stage_b_result.json",
+    "sha256": "01d3a29f0916a1df044a1b48fd540c8d11cba1bc3f2ee47c35571b54c8ab22ba",
+    "byte_identical_replay": true
+  },
+  "release_manifests": {
+    "main_4bit": "3128c84ebd96b017774f035a2b625027d87ebba125d2b903d61e476f80a54de0",
+    "control_float16": "bf98b400a1045fb98a36ef2679df923c15b9be640162c976bbc7d97c54a83f87"
+  },
+  "main_gate": {
+    "site": "model.layers.23",
+    "rank": 1,
+    "tau_conn": 0.912869571639184,
+    "tau_cycle": 0.9596850660901078,
+    "tau_loop": 0.9596850660901078,
+    "phase_at_0_9": "coherent",
+    "beta_1": 3,
+    "w1_syndrome": [0, 0, 0],
+    "admitted_generator_count": 3,
+    "bootstrap_reversal_count_per_generator": [0, 0, 0],
+    "clopper_pearson_upper_95_per_generator": 0.011633876163163281,
+    "passed": true
+  },
+  "precision_control": {
+    "site": "model.layers.19",
+    "float16_phase_at_0_9": "coherent",
+    "float16_beta_1": 3,
+    "comparison_status": "unavailable",
+    "reason": "main_four_bit_site_graph_missing",
+    "precision_stable": false
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}

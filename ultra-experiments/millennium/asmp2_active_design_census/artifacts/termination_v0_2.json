@@ -1,0 +1,24 @@
+{
+  "schema_version": "asmp2_active_design_termination_v0_2",
+  "protocol_id": "asmp2.active_design_census.v0.2",
+  "preregistered_commit": "dc15a1da951e15da01487204f0f7e2296bfc4e95",
+  "instrument_status": "unavailable",
+  "stage_decision": "unavailable_resource_cap",
+  "registered_wall_ceiling_seconds": 180,
+  "external_wrapper_observed_timeout_seconds": 184.1,
+  "process_termination": {
+    "required": true,
+    "remaining_matching_processes_after_termination": 0
+  },
+  "registered_output_state": {
+    "result_v0_2_json_exists": false,
+    "receipt_v0_2_json_exists": false,
+    "partial_scientific_outcome_read": false
+  },
+  "sealed_input_sha256": {
+    "protocol_v0_2.json": "de42afaa6a1fc3fc2200d4f8f32e1df0b6a80de05da32d19e75c3bfcc9c63168",
+    "CLAIM_PACKET.md": "f4c4026f10ab13c8b5843d371d90ab9e359a220e72c640bc7e09be91446aa406",
+    "run.py": "5d6e5198d0179687ab6f3182dba005f2a87110f448a5d4e8246a9d515c0e5991"
+  },
+  "interpretation": "The exhaustive registered universe was not evaluated within the frozen v0.2 implementation and resource pairing. No scientific selector comparison was obtained."
+}

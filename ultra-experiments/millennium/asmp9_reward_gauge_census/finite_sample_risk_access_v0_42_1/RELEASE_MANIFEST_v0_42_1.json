@@ -1,0 +1,107 @@
+{
+  "file_count": 25,
+  "files": {
+    "README.md": {
+      "bytes": 23332,
+      "sha256": "42f1566104837e255dbd3dd924c418edccbd2a0b7ee6ec41ce0cb212de1a0a1d"
+    },
+    "RESOLUTION_OBLIGATION_MATRIX_v0_42.md": {
+      "bytes": 5694,
+      "sha256": "70069606f41bd52b808e52be864978d666bb13e090b5f161e408feaaeff33e2a"
+    },
+    "finite_sample_risk_access_v0_42/FAILED_EXECUTION_v0_42.json": {
+      "bytes": 842,
+      "sha256": "636d88b98af487ac37fc534e8a622d94ad54a157623784577f1d8dbfff3f84be"
+    },
+    "finite_sample_risk_access_v0_42/FAILED_EXECUTION_v0_42.md": {
+      "bytes": 1180,
+      "sha256": "09d6792f52b00f334ea5aa3640377f7d378df6a3eedbdb8e70379da04c7c6fc9"
+    },
+    "finite_sample_risk_access_v0_42/PRIOR_ART_GATE_v0_42.md": {
+      "bytes": 1778,
+      "sha256": "d2a1aefc4ee80213598101c2cf415041ebbf8d006acef785d3d9e7e7409f9a33"
+    },
+    "finite_sample_risk_access_v0_42/PROTOCOL_v0_42.md": {
+      "bytes": 4490,
+      "sha256": "29b83f3bdc46c794b3d83eef93d121c3be21ad2b04dbcec1c77e2dc9b7f974b6"
+    },
+    "finite_sample_risk_access_v0_42/THEOREM_DRAFT_v0_42.md": {
+      "bytes": 4901,
+      "sha256": "4e7c91bc50b4360a6946cd9022b8b00ff275443d95fe49d820a9059d093842f7"
+    },
+    "finite_sample_risk_access_v0_42/confirmation.stderr.log": {
+      "bytes": 1033,
+      "sha256": "d94bd192fb861b30a5cf0582adc05a4c7ebc8d1a36f5a69bea850c5fffb0c7cd"
+    },
+    "finite_sample_risk_access_v0_42/finite_sample_access.py": {
+      "bytes": 12504,
+      "sha256": "34a905293a5b87b07b7e7d216f035ecdd2d1a1abdfc3521f5a7bd7707e178834"
+    },
+    "finite_sample_risk_access_v0_42/registration_v0_42.json": {
+      "bytes": 3582,
+      "sha256": "689bb44d7bf20b1ff6e9966fcd666a6a3927b64c54ad64eb5471789bb2761ca4"
+    },
+    "finite_sample_risk_access_v0_42/sampled_confirmation.py": {
+      "bytes": 8073,
+      "sha256": "88ce962a5381d2b21fe1b41ac7d8a34045f2fbdd2be5fe8fcaabe827cb127882"
+    },
+    "finite_sample_risk_access_v0_42_1/PROTOCOL_AMENDMENT_v0_42_1.md": {
+      "bytes": 1372,
+      "sha256": "df44ce9174f966c2adda358a885e4fd0be19b86cb4d66a52b701b73cf22fb03d"
+    },
+    "finite_sample_risk_access_v0_42_1/RESULT_v0_42_1.md": {
+      "bytes": 5467,
+      "sha256": "73d76520670a0a7badaf27415d8fada14dc507ccf2b6cb52ac47e3d53f6a091d"
+    },
+    "finite_sample_risk_access_v0_42_1/RUN_RECEIPT_v0_42_1.json": {
+      "bytes": 1345,
+      "sha256": "ae6cc5f7daa9c8c59e704141dfe647c0e8fb1120fd325fa6ed24896b5b976a52"
+    },
+    "finite_sample_risk_access_v0_42_1/VERIFY_RESULT_v0_42_1.json": {
+      "bytes": 254,
+      "sha256": "718edcfed18ac101cc617e83d19ec12dceb25131d07b706eaa7c0d9bb317e710"
+    },
+    "finite_sample_risk_access_v0_42_1/artifacts_v0_42_1/RESULT_v0_42_1.json": {
+      "bytes": 5324,
+      "sha256": "2b4a20d7e347e54f5467bd3306202697f9638256c2d1505a1bb741f2bb7aa450"
+    },
+    "finite_sample_risk_access_v0_42_1/build_release_v0_42_1.py": {
+      "bytes": 4843,
+      "sha256": "58605b9fdbe4a2eebf5fe9d55d74d423d89ec74e25917dd4a68581137a214be9"
+    },
+    "finite_sample_risk_access_v0_42_1/environment_lock_v0_42_1.json": {
+      "bytes": 348,
+      "sha256": "0bf7b4c76b429d00d07774955209b66884e12076cc9aa0a6b7af84d813754500"
+    },
+    "finite_sample_risk_access_v0_42_1/execute_confirmation_v0_42_1.py": {
+      "bytes": 5286,
+      "sha256": "3175f2b4b231c7ef689bf6913fdd46c0114779c6ee4033b3538a03346bedbd6d"
+    },
+    "finite_sample_risk_access_v0_42_1/protocol_v0_42_1.json": {
+      "bytes": 927,
+      "sha256": "03d7976535448536c610dc0f0eba398c9542eef1c3b454674f40fc9c5741e28f"
+    },
+    "finite_sample_risk_access_v0_42_1/register_v0_42_1.py": {
+      "bytes": 4187,
+      "sha256": "ea1c03b11a87fed08186986d5c92dae41f381121f9abbcd538c9d79475f5c048"
+    },
+    "finite_sample_risk_access_v0_42_1/registration_v0_42_1.json": {
+      "bytes": 4089,
+      "sha256": "0a4c40833c8fe58e8a620a7a6bb7759956c616ab9bc3bd2a0aa9eb55aa3bf6f0"
+    },
+    "finite_sample_risk_access_v0_42_1/test_repair_v0_42_1.py": {
+      "bytes": 955,
+      "sha256": "8ba3cfa59c90353eaaea25df306dc26396230254783738fd4193d9d128701915"
+    },
+    "finite_sample_risk_access_v0_42_1/verify_result_v0_42_1.py": {
+      "bytes": 3382,
+      "sha256": "13cc84f28c2ad1d9a0d1d4dd0dcd77870862b9ade288adbd9ebb7ba3e09ef42f"
+    },
+    "finite_sample_risk_access_v0_42_1/write_environment_lock_v0_42_1.py": {
+      "bytes": 1394,
+      "sha256": "29bd45c4fd885c0a1e21f7e3a751ef38104c1189a176019af75b6b7633fd95f8"
+    }
+  },
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42.1",
+  "version": "0.42.1"
+}

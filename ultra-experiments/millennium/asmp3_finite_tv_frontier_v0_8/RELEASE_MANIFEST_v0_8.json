@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-FINITE-TV-FRONTIER-v0.8",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md": {
+      "bytes": 4301,
+      "sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../asmp3_typed_successor_v0_2/typed_successor_v0_2.json": {
+      "bytes": 2482,
+      "sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v0_8.md": {
+      "bytes": 1659,
+      "sha256": "A7DDB89C6AD23E21F96C28E69C6E88D9E4790F956ACF8D01FBE103E902CC17A7"
+    },
+    "FINITE_TV_FRONTIER_THEOREM_v0_8.md": {
+      "bytes": 7277,
+      "sha256": "0811DAB26F29F0B2BCD4AB19A2A3EF3908758BA915A8D895F02AF841729796A5"
+    },
+    "README.md": {
+      "bytes": 759,
+      "sha256": "05FDA77B3EAE94822BB45D8B2015E48DEBFAFB6EBC10D6B1EE65C5E717B3569A"
+    },
+    "artifacts/finite_tv_frontier_v0_8.json": {
+      "bytes": 10257,
+      "sha256": "BFB6CF9ADC9500B22B774628C632EE0575CE13C9085BF1BBFD931ABE3C14DF08"
+    },
+    "artifacts/finite_tv_frontier_verification_v0_8.json": {
+      "bytes": 759,
+      "sha256": "170A65356DC53328FB1C2BE9452CD6E92FB48EAF8F37A3CC536B0A312959A30C"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2444,
+      "sha256": "C717EBC9FDF23F09AB0F9EFB70E3D01B78481F0240B61740B0C718444BC67383"
+    },
+    "finite_tv_frontier.py": {
+      "bytes": 15734,
+      "sha256": "68EDE0CCAA82EE9259F15FDBCC2DCFDA8E843C7FE443E4D4AFDF4E6ED24D5237"
+    },
+    "run_finite_tv_frontier.py": {
+      "bytes": 814,
+      "sha256": "B3A243EA83C2DBEE2FADCE3BD6202BA5D4D5900EE80C7FD10DCD0C82B147C49A"
+    },
+    "test_finite_tv_frontier.py": {
+      "bytes": 3911,
+      "sha256": "343B74611CB0626FDFB8004E57FA1E2658959F62E8E3659ABD50478A23F5D37B"
+    },
+    "verify_finite_tv_frontier.py": {
+      "bytes": 9022,
+      "sha256": "467CDA9C02FB1B62A05B3DB118BDAE4A7FD55C08DA5DA750B684C73636D94118"
+    }
+  },
+  "release_status": "exact_finite_typed_subtheorem",
+  "schema_version": "asmp3_finite_tv_frontier_release_v0_8"
+}

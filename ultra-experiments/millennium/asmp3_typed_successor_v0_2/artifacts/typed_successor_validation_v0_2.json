@@ -1,0 +1,21 @@
+{
+  "check_count": 11,
+  "checks": {
+    "D0_schema_and_status_are_draft_only": true,
+    "D1_typed_layers_are_complete_and_disjoint": true,
+    "D2_fixed_and_existential_quantifiers_are_distinct": true,
+    "D3_refute_relation_has_all_adequacy_axioms": true,
+    "D4_joint_noise_object_replaces_marginal_condition": true,
+    "D5_successor_targets_both_classes": true,
+    "D6_document_preserves_nonnormative_firewall": true,
+    "W0_witness_is_exact_and_certified": true,
+    "W1_frozen_branch_matches_fixed_target": true,
+    "W2_vector_branch_matches_admissible_target": true,
+    "W3_witness_gates_and_resource_ledger_pass": true
+  },
+  "claim_boundary": "This validation establishes internal type consistency and exact alignment with the v0.7 witness only. It does not adopt the draft, amend ASMP-3 v0.1, or resolve either characterization.",
+  "draft_status": "nonnormative_successor_draft",
+  "passed": true,
+  "schema_version": "asmp3_typed_successor_validation_v0_2",
+  "witness_experiment_id": "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7"
+}

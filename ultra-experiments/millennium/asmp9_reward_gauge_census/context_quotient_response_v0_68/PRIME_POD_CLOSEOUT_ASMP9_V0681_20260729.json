@@ -1,0 +1,110 @@
+{
+  "schema_version": "asmp9_prime_pod_closeout_v0_68_1",
+  "status": "closed_artifacts_verified_pod_terminated",
+  "claim_boundary": "This receipt establishes execution provenance, resource-bound execution, artifact recovery, and pod cleanup for the construction split. It does not establish the confirmation result, value identification, reward-orbit identification, or ASMP-9 resolution.",
+  "run": {
+    "run_id": "asmp9-context-quotient-v0681-construction",
+    "phase": "construction",
+    "source_commit": "12844c052d7bc2f16167e0b5565297c27c53c8dd",
+    "registration_sha256": "cfda65f75832aaf1f093e0fc5c573b25f5fd5c286125bcc1b8a33bada71857e7",
+    "authorization_sha256": "b6183d3455a7b9c139bae7ab8852b8162e55da905554efa6e09a607b66737e74",
+    "records_expected": 528,
+    "records_completed": 528,
+    "decision": "local_and_global_confirmation_authorized"
+  },
+  "pod": {
+    "id": "c7fd619a1ab64811a49b0827bc8d6829",
+    "name": "jinn-paper-20260725-asmp9-v0681-construct",
+    "availability_id": "0c9d6a",
+    "provider": "datacrunch",
+    "provider_gpu_label": "A100_80GB x1",
+    "observed_gpu": "NVIDIA A100-SXM4-80GB",
+    "gpu_count": 1,
+    "image": "ubuntu_22_cuda_12",
+    "created_at_utc": "2026-07-29T22:21:43Z",
+    "terminated_at_utc": "2026-07-29T23:53:24Z",
+    "provider_duration": "1.5h",
+    "listed_price_at_hold_usd_per_hour": 0.6265,
+    "provider_history_price_usd_per_hour": 0.6813,
+    "registered_price_cap_usd_per_hour": 0.70,
+    "provider_reported_total_cost_units": 10205,
+    "interpreted_total_cost_usd": 1.0205,
+    "pricing_note": "The provider history uses integer cost units; prior receipts interpret one unit as 0.0001 USD. The provider-history hourly rate, not the earlier availability-hold quote, is the final authoritative rate and remains below the registered cap."
+  },
+  "resource_contract": {
+    "memory_mb": 8192,
+    "minimum_free_memory_mb": 12288,
+    "swap_bytes": 0,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "gpu_allowance_mb": 4096,
+    "gpu_temperature_cap_c": 88,
+    "timeout_seconds_per_attempt": 3600,
+    "batch_size": 1,
+    "checkpoint_every_records": 1
+  },
+  "attempts": [
+    {
+      "attempt_id": "20260729T224752Z-5142",
+      "started_at_utc": "2026-07-29T22:47:52Z",
+      "ended_at_utc": "2026-07-29T23:47:53Z",
+      "status": "aborted",
+      "stop_reason": "registered_timeout",
+      "records_completed_after_attempt": 526,
+      "runner_exit_code": 1,
+      "analysis_status": "not_run",
+      "peak_gpu_total_used_mb": 2338,
+      "peak_gpu_delta_mb": 2338,
+      "peak_gpu_temperature_c": 30,
+      "cleanup_passed": true,
+      "wrapper_summary_sha256": "87ef5fb1cb350bcee4912ce0a56d1d0b3539fc8a11b66f13b790a8f472d79986",
+      "cleanup_summary_sha256": "1375d4a8cc8eff72dd4fa549459b5b9f30eea91413b4af80988b35b6e1ad5c02",
+      "gpu_telemetry_sha256": "8dad02f465c01dc46888ba10a518c9bb2420e4a4f4257fdb1f7797ab23572a99"
+    },
+    {
+      "attempt_id": "20260729T234846Z-83612",
+      "started_at_utc": "2026-07-29T23:48:46Z",
+      "ended_at_utc": "2026-07-29T23:49:27Z",
+      "status": "completed",
+      "already_complete_at_start": 526,
+      "new_records_computed": 2,
+      "records_completed_after_attempt": 528,
+      "runner_exit_code": 0,
+      "analysis_status": "completed",
+      "analysis_exit_code": 0,
+      "peak_gpu_total_used_mb": 2116,
+      "peak_gpu_delta_mb": 2116,
+      "peak_gpu_temperature_c": 29,
+      "cleanup_passed": true,
+      "wrapper_summary_sha256": "44e27dc4541ca2702616d7250506087be0a67c3613bb07d0173e761e16d7df32",
+      "cleanup_summary_sha256": "d49b9ce33dfec8bef1cc855d3a2b7db07c2001cce2c225569e9e25cdd00a9b1b",
+      "gpu_telemetry_sha256": "a478b16bfa21bf276fecc5bbc93f2272fe9a9f680714b4efe34b00e9097f623a"
+    }
+  ],
+  "canonical_artifacts": {
+    "target_prereveal_validation_sha256": "57238af5ac0add5b02d97f8651f6210ea8620b013676ab35e8edc6878378db08",
+    "completion_summary_sha256": "cc8489a1f73d2d3d50930a3eb2d6e6eb7d5414ab5cba18b9158336d313feefd7",
+    "events_sha256": "af80fe181999e1db2467f7e9ee926caf2bd96ac65e838d2ae571372a700b3218",
+    "records_sha256": "4d475d063fbf32d320419831df948c5118e682589ed385f602c3e275b5f3fd92",
+    "analysis_sha256": "05de98008345c00e5f7e352ff6eb75f34282912503672b59d2856fc75e7cd880",
+    "decision_sha256": "82cebc6360fc66d9588141e8db2ebfccf1f21673d325739642f10bb03e97641f",
+    "analysis_receipt_sha256": "545712df5a486ba0082d413be26c8efcaf2b6fd91b5df0b3abe0be7b364de537",
+    "complete_archive": {
+      "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_1\\asmp9_context_v0681_prime_construction.tgz",
+      "bytes": 291812,
+      "sha256": "e130d1ea0e86707e77caabfdb6b94449a1bc39f5660acdfbe048dcda68514ebb",
+      "extracted_file_count": 1087,
+      "work_unit_count": 528,
+      "rendered_input_count": 528,
+      "wrapper_attempt_count": 2
+    }
+  },
+  "final_external_state": {
+    "active_prime_pods": 0,
+    "pod_terminated": true,
+    "gpu_after_each_cleanup": "0 MiB used; no compute applications",
+    "protected_rl_run_id": "e2s64hw5ywag1d8hgwfef6jd",
+    "protected_rl_run_status": "COMPLETED",
+    "protected_rl_run_modified": false
+  }
+}

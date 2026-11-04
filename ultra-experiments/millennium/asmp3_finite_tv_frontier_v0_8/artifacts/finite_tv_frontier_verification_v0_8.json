@@ -1,0 +1,18 @@
+{
+  "check_count": 9,
+  "checker": "clean_room_standard_library_reconstruction",
+  "checks": {
+    "V0_schema_status_and_boundary": true,
+    "V1_explicit_primal_dual_certificates": true,
+    "V2_convex_hull_collision_reconstructed": true,
+    "V3_joint_marginal_counterexample_reconstructed": true,
+    "V4_parity_depth_registry_complete": true,
+    "V5_parity_bsc_mixtures_reconstructed": true,
+    "V6_alias_registry_complete": true,
+    "V7_alias_invariance_reconstructed": true,
+    "V8_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker verifies the finite rational certificates and parametric BSC rows. It is not an external mathematical review.",
+  "passed": true,
+  "schema_version": "asmp3_finite_tv_frontier_verification_v0_8"
+}

@@ -1,0 +1,93 @@
+{
+  "application_metrics": {
+    "bitvm_profile": {
+      "augmented_selective_risk_auc": 0.01196821573309844,
+      "baseline_selective_risk_auc": 0.009663576863661778,
+      "n": 32.0,
+      "selective_risk_auc_improvement": -0.0023046388694366628
+    },
+    "diplomacy_orders": {
+      "augmented_selective_risk_auc": 0.003355127084985782,
+      "baseline_selective_risk_auc": 0.002423396315755013,
+      "n": 32.0,
+      "selective_risk_auc_improvement": -0.0009317307692307693
+    },
+    "memetic_treaty": {
+      "augmented_selective_risk_auc": 0.03392287618024131,
+      "baseline_selective_risk_auc": 0.03392287618024131,
+      "n": 32.0,
+      "selective_risk_auc_improvement": 0.0
+    },
+    "moral_story": {
+      "augmented_selective_risk_auc": 0.0,
+      "baseline_selective_risk_auc": 0.0,
+      "n": 32.0,
+      "selective_risk_auc_improvement": 0.0
+    },
+    "oracle_control": {
+      "augmented_selective_risk_auc": 0.6889435242409994,
+      "baseline_selective_risk_auc": 0.6889318054909994,
+      "n": 32.0,
+      "selective_risk_auc_improvement": -1.1718749999944933e-05
+    },
+    "prisoner_dilemma": {
+      "augmented_selective_risk_auc": 0.0,
+      "baseline_selective_risk_auc": 0.0,
+      "n": 32.0,
+      "selective_risk_auc_improvement": 0.0
+    },
+    "secret_route": {
+      "augmented_selective_risk_auc": 0.28086229646469163,
+      "baseline_selective_risk_auc": 0.2813136853535807,
+      "n": 32.0,
+      "selective_risk_auc_improvement": 0.00045138888888907047
+    },
+    "strategic_tick": {
+      "augmented_selective_risk_auc": 0.011240452887175543,
+      "baseline_selective_risk_auc": 0.011240452887175543,
+      "n": 32.0,
+      "selective_risk_auc_improvement": 0.0
+    },
+    "studio_skill_route": {
+      "augmented_selective_risk_auc": 0.006233311644050705,
+      "baseline_selective_risk_auc": 0.006233311644050705,
+      "n": 32.0,
+      "selective_risk_auc_improvement": 0.0
+    }
+  },
+  "claim_boundary": "Held-out synthetic controller-task selective-risk prediction for one Qwen0.8B first-token probability. No causal, deployment, scalable-oversight, Goodhart-frontier, or recursive-improvement conclusion follows.",
+  "construction_count": 288,
+  "gates": {
+    "G0_heldout_selective_risk_increment": "fail",
+    "J0_exact_join_and_outcome_support": "pass"
+  },
+  "inputs": {
+    "features_sha256": "0a26ec884c72c758d0cdf82f2792cd1266b370f1b383bc66418f88d9c8aa058b",
+    "outcomes_sha256": "98c4838d5deee0862f75080ffcccc9090884ed93b25cbb8c110da5e009c336a6"
+  },
+  "primary": {
+    "bootstrap_95": [
+      -0.0008743427641711831,
+      9.900655864202178e-05
+    ],
+    "metric": "application_balanced_selective_risk_auc_improvement",
+    "observed": -0.0003107443888642563,
+    "permutation_p_one_sided": 0.9414348462664714,
+    "permutation_replicates": 2048
+  },
+  "row_count": 576,
+  "schema_version": "asmp8_qwen08_control_gate_analysis_v0_1",
+  "secondary": {
+    "augmented_average_precision": 0.7661731690542672,
+    "augmented_log_loss": 0.3053589626468687,
+    "augmented_roc_auc": 0.934575193094048,
+    "baseline_average_precision": 0.7680980812390069,
+    "baseline_log_loss": 0.3050866793212231,
+    "baseline_roc_auc": 0.935678587654962,
+    "log_loss_improvement": -0.00027228332564560587
+  },
+  "status": "qwen_confidence_control_gate_not_established",
+  "validation_count": 288,
+  "validation_mean_regret": 0.13256944444444443,
+  "validation_proxy_failure_rate": 0.2465277777777778
+}

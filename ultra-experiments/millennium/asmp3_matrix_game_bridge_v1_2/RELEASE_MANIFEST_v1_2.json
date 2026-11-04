@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-MATRIX-GAME-BRIDGE-v1.2",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_two_role_backward_bridge_v1_1/RELEASE_MANIFEST_v1_1.json": {
+      "bytes": 2984,
+      "sha256": "6E38FB599014A8129F0CB178E923DF5EE20FF97D5F24FFCA6270FCD9E184E9B4"
+    },
+    "../asmp3_two_role_backward_bridge_v1_1/TWO_ROLE_BACKWARD_THEOREM_v1_1.md": {
+      "bytes": 6271,
+      "sha256": "D9AB9659049AC85CDC2495E3033FF112A366CACE10DCA38AE3A92D3F8752790E"
+    },
+    "../asmp3_two_role_backward_bridge_v1_1/artifacts/two_role_backward_bridge_v1_1.json": {
+      "bytes": 46519,
+      "sha256": "44EF8C56135258EC529B4EBD5D53FA66644E9F7EFC5141E9790DAFF3AEFCE927"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_2.md": {
+      "bytes": 1275,
+      "sha256": "2E65FD21079E4639D5E9CF2D824313D6799F0E26ED02440AEE237BA15E9B8D63"
+    },
+    "MATRIX_GAME_THEOREM_v1_2.md": {
+      "bytes": 5779,
+      "sha256": "0D1AB775011A1F77D64D7E97D0ACBAE2960C42B5B1C83201041F5BAB1B59DD3A"
+    },
+    "README.md": {
+      "bytes": 605,
+      "sha256": "00CDFB1FC56D78A7663C197436CDD073931F93EA91797DC650DD55D2AF982739"
+    },
+    "artifacts/matrix_game_bridge_v1_2.json": {
+      "bytes": 32493,
+      "sha256": "184EA3B911D309AEBC984922E6EE891477DF03333D12CDFB5D344BE5E197E771"
+    },
+    "artifacts/matrix_game_bridge_verification_v1_2.json": {
+      "bytes": 693,
+      "sha256": "EE76B0F268ED4537EEE387AE9D286D9960689CF4D49CECBF4CF41BB595C4FED8"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2470,
+      "sha256": "6D9D1A73A8D4E83E9020687F284D4A73BF2545C457669AA176AC3E27B223E810"
+    },
+    "matrix_game_bridge.py": {
+      "bytes": 10011,
+      "sha256": "92528E8DFCA54522FFDB4BADC8AE12E65C903005A5B168C8792FA4144BDF8313"
+    },
+    "run_matrix_game_bridge.py": {
+      "bytes": 814,
+      "sha256": "4F5432D58EF5B74B007E4813239EE9318A6BFBBC40EF71A1E0DF1E0A9567E6B2"
+    },
+    "test_matrix_game_bridge.py": {
+      "bytes": 3623,
+      "sha256": "69000FEB5ED6E3E48906ECEF15BF7C331303401651EE45F108D6096FFFB180B2"
+    },
+    "verify_matrix_game_bridge.py": {
+      "bytes": 7739,
+      "sha256": "F9B7D9A8B2BDDB551E4A88E468D335DEB297BEC3FC94AD0AC60BB1B145617F06"
+    }
+  },
+  "release_status": "exact_simultaneous_hidden_action_bridge",
+  "schema_version": "asmp3_matrix_game_bridge_release_v1_2"
+}

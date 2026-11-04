@@ -1,0 +1,127 @@
+{
+  "exhaustive_three_outcome": {
+    "expected_ordered_pair_count": 361,
+    "expected_region_checks": 1140,
+    "expected_table_count": 19,
+    "interpolation_checks": 790,
+    "interpolation_mismatches": 0,
+    "no_robust_pair_count": 282,
+    "ordered_pair_count": 361,
+    "region_checks": 1140,
+    "region_grid_count": 10,
+    "region_mismatches": 0,
+    "regret_equivalence_mismatches": 0,
+    "robust_chain_mismatches": 0,
+    "robust_pair_count": 79,
+    "table_count": 19
+  },
+  "gates": {
+    "B0": true,
+    "D0": true,
+    "H0": true,
+    "M0": true,
+    "Q0": true,
+    "R0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "V0": true
+  },
+  "minimal_witness": {
+    "boundary_size": 2,
+    "bounds": [
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "minimax_optimizer_count": 2,
+    "minimax_regret": "1/2",
+    "robust_optimizer_count": 0,
+    "vertices": [
+      [
+        "3/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "3/4"
+      ]
+    ]
+  },
+  "ok": true,
+  "protocol_id": "asmp9-reference-weight-robustness-verification-v0.50",
+  "registration_sha256": "262b271bd87e393c6ff939e7d8a012fb9c7d7d642a0f39741fa2936a98fd2962",
+  "resource": {
+    "elapsed_seconds": 8.537865099991905,
+    "peak_working_set_bytes": 27660288,
+    "worker_processes": 1
+  },
+  "schema": "asmp9-v0.50-theorem-verification-v1",
+  "source_checks": [
+    {
+      "actual": "5f490ceaf4839052622c272bd4e889734af63cb3cce2bb0a6f6da8c559e4f747",
+      "expected": "5f490ceaf4839052622c272bd4e889734af63cb3cce2bb0a6f6da8c559e4f747",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/DEVELOPMENT_RESULT_v0_50.md"
+    },
+    {
+      "actual": "414fb2a2750f9d5bbf178e93852b93a6fdfdae063a5b92d7d0c5e5d03b0cb4d1",
+      "expected": "414fb2a2750f9d5bbf178e93852b93a6fdfdae063a5b92d7d0c5e5d03b0cb4d1",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/PRIOR_ART_GATE_v0_50.md"
+    },
+    {
+      "actual": "bb0d97e63c8cdc6736cdab25a0e13e4a9e01670b589a108209d99153b2b785da",
+      "expected": "bb0d97e63c8cdc6736cdab25a0e13e4a9e01670b589a108209d99153b2b785da",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/README.md"
+    },
+    {
+      "actual": "8e080efe34cce9a88519952d0c356dbe393368de87c003592609bc08f999a2a2",
+      "expected": "8e080efe34cce9a88519952d0c356dbe393368de87c003592609bc08f999a2a2",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/THEOREM_DRAFT_v0_50.md"
+    },
+    {
+      "actual": "4cfd7623b4295506fdb7dda41c080fd075104bf3e417ad8dabeb238c6d31f78b",
+      "expected": "4cfd7623b4295506fdb7dda41c080fd075104bf3e417ad8dabeb238c6d31f78b",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/VERIFICATION_PROTOCOL_v0_50.md"
+    },
+    {
+      "actual": "cc7a2fa9340525d1b249c58aaba446470747193a8709e9c4d75b0de7160b2123",
+      "expected": "cc7a2fa9340525d1b249c58aaba446470747193a8709e9c4d75b0de7160b2123",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/reference_weight.py"
+    },
+    {
+      "actual": "9f8d33a31ad0102f5e2b6bb33d6a56968fa2f689600781f31d71ec3bdc18c649",
+      "expected": "9f8d33a31ad0102f5e2b6bb33d6a56968fa2f689600781f31d71ec3bdc18c649",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/test_reference_weight.py"
+    },
+    {
+      "actual": "70cb32ed0942447dc1d9f154e0abaad3b35b32190fc696228d9ac26f290bf459",
+      "expected": "70cb32ed0942447dc1d9f154e0abaad3b35b32190fc696228d9ac26f290bf459",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/test_verifier_v0_50.py"
+    },
+    {
+      "actual": "46cb44d64970743f83a89afe0f7df67633adec1d3a71f2ed3f244b653f75844d",
+      "expected": "46cb44d64970743f83a89afe0f7df67633adec1d3a71f2ed3f244b653f75844d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/verify_theorems_v0_50.py"
+    }
+  ],
+  "status": "finite_reference_weight_theorem_verified",
+  "tests": {
+    "expected": 11,
+    "ok": true,
+    "output": "...........                                                              [100%]\n11 passed in 1.29s",
+    "returncode": 0
+  },
+  "v0_48_recovery": {
+    "robust_optimizer_count": 1451520,
+    "robust_optimizer_exists": true
+  }
+}

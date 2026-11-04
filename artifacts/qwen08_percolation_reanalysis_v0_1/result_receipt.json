@@ -1,0 +1,87 @@
+{
+  "schema_version": "qwen08_percolation_compact_result_receipt_v0_1",
+  "epistemic_status": "retrospective_engineering_evidence",
+  "implementation_commit": "6bdf40a2d35308be8a3b1b86d4e331dcaec0a83e",
+  "protocol": {
+    "path": "protocols/qwen08_percolation_reanalysis_v0_1.json",
+    "sha256": "6c12dd2445e81bd7026ee75ec578bfff7e7d0272c6fea991daa1fcf6dcb9d6f1"
+  },
+  "external_artifacts": {
+    "authorization": {
+      "path": "D:\\Research_Engine\\authorizations\\qwen08_percolation_reanalysis_v0_1.json",
+      "sha256": "db41df4cb73cf74b215c269b5339b051ff8bf3ed1f0f5a9e61f5e590248ea18c"
+    },
+    "result": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_percolation_reanalysis_v0_1\\result.json",
+      "sha256": "e58f8a488812043c88c6a08fdfd5551fc723844bbe60d09b5fb9311aa075e797"
+    },
+    "wrapper_summary": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_percolation_reanalysis_v0_1\\_wrapper\\wrapper_summary.json",
+      "sha256": "0c1e6d406637560a84c495664eb56d26a65d3375a9cdf44befc310487f007660"
+    },
+    "cleanup_summary": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_percolation_reanalysis_v0_1\\_wrapper\\cleanup_summary.json",
+      "sha256": "d1015e507b3165de49877f3c7e57903d21ab145e4eb09611aa9482d556c02a17"
+    }
+  },
+  "predictions": {
+    "P1_context_edges_critical": true,
+    "P2_layer15_threshold_effect": true,
+    "all_predictions_pass": true
+  },
+  "site_results": [
+    {
+      "site": "model.layers.11",
+      "tau_conn": 0.9036031365713961,
+      "tau_cycle": 0.929846423398852,
+      "tau_loop": 0.929846423398852,
+      "connectivity_critical_class": "context",
+      "beta_1_at_frozen_floor": 3,
+      "beta_1_at_floor_zero": 3
+    },
+    {
+      "site": "model.layers.15",
+      "tau_conn": 0.8941279103160477,
+      "tau_cycle": 0.8978924981490899,
+      "tau_loop": 0.8978924981490899,
+      "connectivity_critical_class": "context",
+      "beta_1_at_frozen_floor": 0,
+      "beta_1_at_floor_zero": 3
+    },
+    {
+      "site": "model.layers.19",
+      "tau_conn": 0.9012813621606193,
+      "tau_cycle": 0.9238857899500318,
+      "tau_loop": 0.9238857899500318,
+      "connectivity_critical_class": "context",
+      "beta_1_at_frozen_floor": 2,
+      "beta_1_at_floor_zero": 3
+    },
+    {
+      "site": "model.layers.23",
+      "tau_conn": 0.91198718802533,
+      "tau_cycle": 0.9186749415211454,
+      "tau_loop": 0.9186749415211454,
+      "connectivity_critical_class": "context",
+      "beta_1_at_frozen_floor": 3,
+      "beta_1_at_floor_zero": 3
+    }
+  ],
+  "resource_receipt": {
+    "status": "completed",
+    "elapsed_seconds": 9.435,
+    "peak_ram_mb": 79.527,
+    "memory_cap_mb": 1024,
+    "peak_io_mb_s": 17.13,
+    "io_cap_mb_s": 20,
+    "cpu_percent": 8.016,
+    "cpu_cap_percent": 25,
+    "peak_gpu_mb": 0,
+    "swap_bytes": 0,
+    "cleanup_passed": true
+  },
+  "claim_boundary": "Retrospective exact curve only; no causal, fresh w1, edit, VPD, recursive-improvement, or RSI claim and no new attestation level.",
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}

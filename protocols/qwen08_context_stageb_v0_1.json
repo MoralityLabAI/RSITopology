@@ -1,0 +1,167 @@
+{
+  "protocol_id": "qwen08_context_stageb_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_not_run",
+  "registered_on": "2026-07-16",
+  "scientific_parent": {
+    "protocol": "percolation_phase_v0_1",
+    "retrospective_result": "qwen08_percolation_reanalysis_v0_1",
+    "prior_result_sha256": "6a153e34dfc1092d7ca21719d56376678cf7d11906a688077d8bba1f97d1a6c7"
+  },
+  "purpose": "Run the first out-of-sample sign-percolation test on fresh graph-reachability contexts around the locally rank-four Qwen0.8B nodes, with one unquantized float16 layer control.",
+  "claim_boundary": "This fresh development-model capture may establish context-restricted lineage, an out-of-sample first Stiefel-Whitney sign result, and a q=0 percolation phase on the frozen base-to-naive grid. It cannot establish semantic identity, causal edit value, VPD efficacy, capability preservation, compactification, recursive improvement, or RSI. Float16 is an unquantized full-weight control, not float32 arithmetic.",
+  "prior_node_selection": {
+    "source_analysis": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\analysis_result.json",
+    "source_analysis_sha256": "6a153e34dfc1092d7ca21719d56376678cf7d11906a688077d8bba1f97d1a6c7",
+    "selected_rank_four_nodes": [
+      "base/model.layers.19/graph_reachability/shard-02",
+      "base/model.layers.19/graph_reachability/shard-03",
+      "base/model.layers.23/graph_reachability/shard-03",
+      "naive_qlora/model.layers.19/graph_reachability/shard-02"
+    ],
+    "selection_role": "Sites, behavior family, and two context neighborhoods were selected from the revealed dense-local run; every prompt and activation measured here is fresh. This is confirmatory only for the registered conditional predictions, not for the site-selection process itself."
+  },
+  "states": [
+    "base",
+    "naive_qlora"
+  ],
+  "state_axis_interpretation": "Engineering checkpoint axis only; the naive adapter is not an efficacy comparator.",
+  "main_capture": {
+    "quantization": "4bit",
+    "sites": [
+      "model.layers.19",
+      "model.layers.23"
+    ]
+  },
+  "precision_control": {
+    "quantization": "float16",
+    "sites": [
+      "model.layers.19"
+    ],
+    "interpretation": "Unquantized float16 model weights and float32-stored activations. This tests four-bit sensitivity at one layer and is not a float32 model capture."
+  },
+  "prompt_design": {
+    "seed": 2026071701,
+    "families": [
+      "graph_reachability"
+    ],
+    "subconditions_per_family": 9,
+    "context_shards": 4,
+    "context_neighborhoods": {
+      "old_shard_02": [
+        "shard-00",
+        "shard-01"
+      ],
+      "old_shard_03": [
+        "shard-02",
+        "shard-03"
+      ]
+    },
+    "neighborhood_semantics": "The labels preserve the preregistered old-context targeting, while every graph instance and opaque nonce is freshly generated. The two replicas per neighborhood are not byte or activation reuses.",
+    "halves": [
+      "construction",
+      "geometry_validation"
+    ],
+    "prompts_per_subcondition_per_half_per_shard": 32,
+    "prompts_per_state": 2304,
+    "zero_byte_overlap_required_with": [
+      "qwen08_dense_local_prompt_manifest_v0_1",
+      "qwen_holonomy_causal_outer_manifest_v0_1_1"
+    ]
+  },
+  "primary_object": {
+    "kind": "cross_fitted_between_class_scatter",
+    "ranks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "rank_selection": "Largest prefix rank passing the strict bootstrap-versus-label-permutation margin at every state x fresh-context node in one site grid.",
+    "bootstrap_replicates": 256,
+    "minimum_strict_null_margin": 0.02,
+    "covariance_gram_status": "reported_ungated"
+  },
+  "graph": {
+    "node": "model_state/site/graph_reachability/fresh_context_shard/rank",
+    "edges": "adjacent fresh context shards within each state plus same-shard cross-state edges",
+    "lineage_floor": 0.9,
+    "expected_nodes_per_fully_connected_cell": 8,
+    "expected_edges_per_fully_connected_cell": 10,
+    "expected_beta_1_if_fully_connected": 3,
+    "beta_1_formula": "beta_1 = |E_tau| - |V| + c(G_tau)"
+  },
+  "holonomy": {
+    "prompt_resampling_replicates": 256,
+    "orientation_reversal": "Categorical sign -1; canonical angles remain suppressed.",
+    "w1_gate": {
+      "rule": "Every admitted fundamental generator loop has det(H)>0 on geometry_validation, construction/validation determinant agreement, and a one-sided 95% Clopper-Pearson upper bound at most 0.05 on its bootstrap orientation-reversal probability.",
+      "alpha": 0.05,
+      "maximum_reversal_probability_upper_95": 0.05
+    },
+    "budget": {
+      "maximum_canonical_angle_degrees": 5.0,
+      "maximum_identity_loss": 0.05
+    }
+  },
+  "percolation_gate": {
+    "lineage_floor": 0.9,
+    "sign_noise_rate": 0.0,
+    "rule": "At least one main-capture site is connected with beta_1>0 and is classified coherent by the exact Experiment-07 phase classifier; every admitted generator at every counted site must pass the w1 gate.",
+    "synthetic_comparison": "Use the identical L=2, C=4 graph size and exact phase classifier. Synthetic agreement is calibration of the label, not evidence that the transformer was drawn from the synthetic ensemble."
+  },
+  "precision_gate": {
+    "rule": "Layer 19 must have at least one loop admitted in both four-bit and float16 analyses; all common admitted loop determinant signs agree and both q=0 phase labels are coherent.",
+    "failure_effect": "The main four-bit result remains reportable, but precision_stable is false and no precision-robust claim is allowed."
+  },
+  "fixed_decisions": {
+    "pass": "out_of_sample_w1_and_coherent_phase_supported",
+    "fail_w1": "fresh_w1_prediction_failed",
+    "no_cycles": "not_established_holonomy_unavailable",
+    "disconnected": "not_established_lineage_disconnected_at_frozen_floor",
+    "precision_unavailable_or_failed": "main_result_only_precision_stability_not_established",
+    "invalid": "invalid_instrument_or_provenance"
+  },
+  "resource_contract": {
+    "main_capture": {
+      "memory_mb": 6144,
+      "cpu_percent": 50,
+      "io_mb_s": 750,
+      "timeout_seconds": 3600,
+      "gpu_allowance_mb": 3440,
+      "checkpoint_every_seconds": 600,
+      "swap_bytes": 0,
+      "batch_size": 4
+    },
+    "precision_control": {
+      "memory_mb": 6144,
+      "cpu_percent": 50,
+      "io_mb_s": 750,
+      "timeout_seconds": 3600,
+      "gpu_allowance_mb": 3800,
+      "checkpoint_every_seconds": 600,
+      "swap_bytes": 0,
+      "batch_size": 4
+    },
+    "analysis": {
+      "memory_mb": 4096,
+      "cpu_percent": 50,
+      "io_mb_s": 250,
+      "timeout_seconds": 14400,
+      "gpu_allowance_mb": 1,
+      "checkpoint_every_seconds": 600,
+      "swap_bytes": 0
+    },
+    "abort_is_valid": true,
+    "local_uncapped_execution_prohibited": true
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}

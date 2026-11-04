@@ -1,0 +1,497 @@
+{
+  "certified": true,
+  "claim_boundary": "This internal disposition strengthens the registered marker-family resource theorem. It does not invent a cross-task complexity class, amend the normative problem, classify unrestricted ASMP-3 protocols, or establish external acceptance.",
+  "disposition": {
+    "community_or_prize_style_acceptance": "not_established_external_gate_0_of_2",
+    "cross_task_resource_classification": "not_well_posed_until_formal_class_is_frozen",
+    "literal_v0_1_named_conjecture": "refuted_internal_exact_both_directions",
+    "marker_family_resource_theorem": "exact_for_arbitrary_round_public_coin_adaptive_queries_and_bounded_soundness",
+    "normative_definition": "unclosed",
+    "repaired_online_contract_subclass": "constructively_characterized_black_box_minimal_and_dependence_agnostic_via_selected_path_risk",
+    "safe_public_label": "ASMP-3 v0.1 iff refuted internally; repaired online subclass characterized; marker-family interactive resource frontier exact through bounded soundness; cross-task classification, normative closure, and external acceptance not established",
+    "unrestricted_asmp3_classification": "not_established"
+  },
+  "evidence_package_rows": [
+    {
+      "certified": true,
+      "directory": "asmp3_protocol_quantifier_v0_7",
+      "evidence_id": "v0.7_protocol_quantifier",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v0_7.json",
+      "manifest_sha256": "E93DA3ACD8E96B93B0EFAED5D22142AFDFBC27E269998644FEC1DF234FD46D23",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_protocol_quantifier_v0_7",
+      "result_status": "exact_quantifier_fork",
+      "sealed_files": 15,
+      "sealed_member_bytes": 129382,
+      "verification_schema": "asmp3_protocol_quantifier_verification_v0_7"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_encoding_invariance_v2_0",
+      "evidence_id": "v2.0_encoding_invariance",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_0.json",
+      "manifest_sha256": "55D55173F1A406799BA7DE491833F4013700A40256627D858644411AE0E0E075",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_encoding_invariance_v2_0",
+      "result_status": "exact_replication_quotient_invariance_and_macro_cost_barrier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 2489006,
+      "verification_schema": "asmp3_encoding_invariance_verification_v2_0"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_honest_search_barrier_v2_1",
+      "evidence_id": "v2.1_honest_search",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_1.json",
+      "manifest_sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_honest_search_barrier_v2_1",
+      "result_status": "exact_dimension_one_unique_marker_search_separation",
+      "sealed_files": 20,
+      "sealed_member_bytes": 857707,
+      "verification_schema": "asmp3_honest_search_barrier_verification_v2_1"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_resource_tradeoff_v2_2",
+      "evidence_id": "v2.2_resource_tradeoff",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_2.json",
+      "manifest_sha256": "E0440C6A3B291A09D2698F143DC37AEDB03DF3A7B22CD7BCBD557996064C964E",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_resource_tradeoff_v2_2",
+      "result_status": "exact_unique_marker_communication_query_frontier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 2221702,
+      "verification_schema": "asmp3_resource_tradeoff_verification_v2_2"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_constructive_refutation_protocol_v2_3",
+      "evidence_id": "v2.3_constructive_protocol",
+      "independent_check_count": 8,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_3.json",
+      "manifest_sha256": "3F46B4CC8B44DF9B5600C5A17A71E22EE91936D1522C1DF5D0970B5885EA7896",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_constructive_refutation_protocol_v2_3",
+      "result_status": "constructive_positive_protocol_under_typed_finder_noise_contracts",
+      "sealed_files": 26,
+      "sealed_member_bytes": 2900195,
+      "verification_schema": "asmp3_constructive_refutation_protocol_verification_v2_3"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_randomized_finder_amplification_v2_4",
+      "evidence_id": "v2.4_randomized_finder",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_4.json",
+      "manifest_sha256": "CC1A6F4831499AE522A54EA00A15A521D5CF8249EFEBBA9F44B732D50F51862A",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_randomized_finder_amplification_v2_4",
+      "result_status": "exact_randomized_finder_restart_noise_and_budget_frontier",
+      "sealed_files": 20,
+      "sealed_member_bytes": 1278671,
+      "verification_schema": "asmp3_randomized_finder_amplification_verification_v2_4"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_witness_transparent_normal_form_v2_5",
+      "evidence_id": "v2.5_witness_normal_form",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_5.json",
+      "manifest_sha256": "0FC5C8234BFC7BACCE1A1DB9E5B947C43F206E8552BA347A90F317D6D08004CA",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_witness_transparent_normal_form_v2_5",
+      "result_status": "conditional_protocol_to_finder_normal_form_and_literal_two_sided_separation",
+      "sealed_files": 23,
+      "sealed_member_bytes": 744578,
+      "verification_schema": "asmp3_witness_transparent_normal_form_verification_v2_5"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_adaptive_transcript_coupling_v2_7",
+      "evidence_id": "v2.7_adaptive_coupling",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_7.json",
+      "manifest_sha256": "569445CD8CCB363C60A325AED48ACE59924E5707EF0805F1414C2A50D240ED9E",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_adaptive_transcript_coupling_v2_7",
+      "result_status": "pathwise_adaptive_protocol_coupling_and_robustification_theorem",
+      "sealed_files": 23,
+      "sealed_member_bytes": 2581746,
+      "verification_schema": "asmp3_adaptive_transcript_coupling_verification_v2_7"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_trace_binding_extractor_v2_8",
+      "evidence_id": "v2.8_trace_binding",
+      "independent_check_count": 9,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_8.json",
+      "manifest_sha256": "8E29A8441E591966B6DF36AD1634C6041EFF8C37AA4197B0C25ABC5A3F323FA9",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_trace_binding_extractor_v2_8",
+      "result_status": "operational_refute_binding_compiler_and_finder_extractor",
+      "sealed_files": 23,
+      "sealed_member_bytes": 976885,
+      "verification_schema": "asmp3_trace_binding_extractor_verification_v2_8"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_oracle_parametric_replay_v2_9",
+      "evidence_id": "v2.9_oracle_replay",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_9.json",
+      "manifest_sha256": "497EB96B03B88A53B1B4FDD2761264E16F39136A07B90E0EA4B5109DD809EFCB",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_oracle_parametric_replay_v2_9",
+      "result_status": "oracle_parametric_ideal_replay_compiler_with_transcript_firewall",
+      "sealed_files": 27,
+      "sealed_member_bytes": 1022960,
+      "verification_schema": "asmp3_oracle_parametric_replay_verification_v2_9"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_online_noisy_trace_extractor_v2_10",
+      "evidence_id": "v2.10_online_extractor",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_10.json",
+      "manifest_sha256": "AA0CE04D78E96453B975B852D9F8F2BD80030AC72F2347CA41BA669D815066F5",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_online_noisy_trace_extractor_v2_10",
+      "result_status": "one_shot_online_noisy_trace_finder_without_restart",
+      "sealed_files": 30,
+      "sealed_member_bytes": 1067608,
+      "verification_schema": "asmp3_online_noisy_trace_extractor_verification_v2_10"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_online_contract_minimality_v2_11",
+      "evidence_id": "v2.11_contract_minimality",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_11.json",
+      "manifest_sha256": "A7F9CB1A09922824CBE9B29BE71BCE27DC03C7294E6FF9565511F899CCAA5CC1",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_online_contract_minimality_v2_11",
+      "result_status": "black_box_las_vegas_online_contract_minimality",
+      "sealed_files": 28,
+      "sealed_member_bytes": 552692,
+      "verification_schema": "asmp3_online_contract_minimality_verification_v2_11"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_correlated_path_risk_v2_13",
+      "evidence_id": "v2.13_correlated_path_risk",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_13.json",
+      "manifest_sha256": "0B3B3F33F2E91F6D0045094D74BF1672AE546F74BC02337165847BEB6FEA4914",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_correlated_path_risk_v2_13",
+      "result_status": "arbitrary_dependence_online_extraction_under_controlled_path_risk",
+      "sealed_files": 23,
+      "sealed_member_bytes": 849325,
+      "verification_schema": "asmp3_correlated_path_risk_verification_v2_13"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_interactive_covering_frontier_v2_15",
+      "evidence_id": "v2.15_interactive_covering",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_15.json",
+      "manifest_sha256": "1766784413D1D6A3A6D17952CC10175F2B89CCADF39CAF2E8644B53635DC84E6",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_interactive_covering_frontier_v2_15",
+      "result_status": "exact_arbitrary_round_public_coin_interactive_unique_marker_frontier",
+      "sealed_files": 25,
+      "sealed_member_bytes": 10781024,
+      "verification_schema": "asmp3_interactive_covering_frontier_verification_v2_15"
+    },
+    {
+      "certified": true,
+      "directory": "asmp3_bounded_soundness_frontier_v2_16",
+      "evidence_id": "v2.16_bounded_soundness",
+      "independent_check_count": 10,
+      "independent_verifier_passed": true,
+      "manifest": "RELEASE_MANIFEST_v2_16.json",
+      "manifest_sha256": "08F3DF275F55805E0D11E9A7A5D2F4E54F1996D80DDB4C168BD3BA50B76AEB7F",
+      "manifest_valid": true,
+      "producer_certified": true,
+      "result_schema": "asmp3_bounded_soundness_frontier_v2_16",
+      "result_status": "exact_public_coin_interactive_unique_marker_frontier_with_bounded_soundness",
+      "sealed_files": 21,
+      "sealed_member_bytes": 31461571,
+      "verification_schema": "asmp3_bounded_soundness_frontier_verification_v2_16"
+    }
+  ],
+  "experiment_id": "ASMP-3-CONSOLIDATED-RESOURCE-SCOPE-v2.17",
+  "gates": {
+    "C0_all_authoritative_source_clauses_present": true,
+    "C1_all_fifteen_decisive_packages_sealed_and_verified": true,
+    "C2_v2_14_literal_noise_and_online_disposition_is_preserved": true,
+    "C3_v2_15_arbitrary_round_interactive_frontier_is_recorded": true,
+    "C4_v2_16_bounded_soundness_frontier_and_gap_are_recorded": true,
+    "C5_R2_is_strengthened_without_cross_task_overclaim": true,
+    "C6_all_eighteen_requirement_rows_have_direct_evidence": true,
+    "C7_remaining_resource_target_is_definition_dependent_not_a_grid_gap": true,
+    "C8_exactly_four_non_grid_blockers_and_external_gate_remain": true,
+    "C9_disposition_separates_literal_subclass_marker_resource_cross_task_and_external_layers": true
+  },
+  "parent_results": [
+    "ASMP-3-CONSOLIDATED-PATH-RISK-DISPOSITION-v2.14",
+    "ASMP-3-INTERACTIVE-COVERING-FRONTIER-v2.15",
+    "ASMP-3-BOUNDED-SOUNDNESS-FRONTIER-v2.16"
+  ],
+  "remaining_blockers": [
+    {
+      "blocker": "v0.1 does not authoritatively choose FIX versus ADM or the six-clause online contract",
+      "category": "definition_authority",
+      "clearing_event": "authoritative successor definition or scope adjudication",
+      "id": "B0_normative_interface",
+      "why_current_harness_cannot_clear_it": "exact calculations cannot choose normative scope"
+    },
+    {
+      "blocker": "black-box online minimality does not classify every task-specific non-black-box protocol",
+      "category": "new_mathematical_theory",
+      "clearing_event": "concrete non-black-box family or universal structure theorem",
+      "id": "B1_non_black_box_scope",
+      "why_current_harness_cannot_clear_it": "larger observation grids cannot prove a theorem using absent task structure"
+    },
+    {
+      "blocker": "marker-family Find/message/Check frontiers are exact through arbitrary public-coin rounds and bounded soundness, but no frozen cross-task protocol class exists for a universal matching lower bound",
+      "category": "definition_dependent_theorem",
+      "clearing_event": "freeze a formal cross-task class and its reduction-preserving resource measures",
+      "id": "B2_cross_task_resources",
+      "why_current_harness_cannot_clear_it": "a universal quantifier over an unspecified task/protocol class has no determinate truth condition"
+    },
+    {
+      "blocker": "expert gate remains 0/2 with 0/1 independent team checkers",
+      "category": "external_evidence",
+      "clearing_event": "two attributable expert reproductions including one independently implemented checker",
+      "id": "B3_external_review",
+      "why_current_harness_cannot_clear_it": "repository-generated receipts cannot establish external identity or independence"
+    }
+  ],
+  "requirement_rows": [
+    {
+      "evidence": "ASMP-3 / ASMP-CANDIDATE-SET-v0.1 / declared ZFC base",
+      "evidence_check": true,
+      "id": "D0",
+      "layer": "definition",
+      "requirement": "exact problem ID, version, and foundational base",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "v0.1 remains a research-agenda artifact; graduation is false",
+      "evidence_check": true,
+      "id": "D1",
+      "layer": "definition",
+      "requirement": "authoritatively closed formal core",
+      "status": "not_satisfied_authoritative"
+    },
+    {
+      "evidence": "typed successor remains nonnormative",
+      "evidence_check": true,
+      "id": "D2",
+      "layer": "definition",
+      "requirement": "normative FIX/ADM and Refute-binding choice",
+      "status": "definitionally_unclosed"
+    },
+    {
+      "evidence": "v0.7 optimal gap (3/5)^d tends to zero although the three displayed conditions hold",
+      "evidence_check": true,
+      "id": "N0",
+      "layer": "named_conjecture",
+      "requirement": "frozen-interface sufficiency direction",
+      "status": "refuted_exact"
+    },
+    {
+      "evidence": "a nonbinding decidable Refute can be empty or padded without changing protocol admission",
+      "evidence_check": true,
+      "id": "N1",
+      "layer": "named_conjecture",
+      "requirement": "literal nonbinding-Refute necessity direction",
+      "status": "refuted_exact"
+    },
+    {
+      "evidence": "v0.7 refutes sufficiency; v2.5 refutes necessity",
+      "evidence_check": true,
+      "id": "N2",
+      "layer": "named_conjecture",
+      "requirement": "two-sided disposition under both principal literal readings",
+      "status": "refuted_exact_both_readings"
+    },
+    {
+      "evidence": "v0.7 exact frozen-message separation",
+      "evidence_check": true,
+      "id": "G0",
+      "layer": "registry_negative_route",
+      "requirement": "separation_or_impossibility_in_the_frozen_message_game",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "v0.7 retains Theta(n) honest work and persistent semantic error 1/5",
+      "evidence_check": true,
+      "id": "G1",
+      "layer": "registry_negative_route",
+      "requirement": "efficient_honest_prover_and_noise_model_must_remain_in_scope",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "v2.10 one-shot normal form plus v2.11 six-premise black-box minimality",
+      "evidence_check": true,
+      "id": "R0",
+      "layer": "complete_item_1",
+      "requirement": "formal class equality, separation, or complete invariant",
+      "status": "online_subclass_characterized_black_box_minimal_unrestricted_open"
+    },
+    {
+      "evidence": "v2.3 constructive protocol, v2.7 adaptive coupling, v2.10 one-shot converse",
+      "evidence_check": true,
+      "id": "R1",
+      "layer": "complete_item_2",
+      "requirement": "constructive protocol against adaptive obfuscation",
+      "status": "satisfied_for_declared_online_subclass_only"
+    },
+    {
+      "evidence": "v2.1 exact honest Find; v2.15 exact min(1,Kq/N) interactive Check frontier; v2.16 exact s+(1-s)min(1,Kq/N) bounded-soundness frontier",
+      "evidence_check": true,
+      "id": "R2",
+      "layer": "complete_item_3",
+      "requirement": "matching communication, query, and honest-prover lower bounds",
+      "status": "exact_arbitrary_round_public_coin_bounded_soundness_marker_family_cross_task_open"
+    },
+    {
+      "evidence": "v2.13 proves alpha>=max(0,1-s-delta_path) for arbitrary dependence with controlled selected-path risk and a sharp marginal-only firewall",
+      "evidence_check": true,
+      "id": "R3",
+      "layer": "complete_item_4",
+      "requirement": "robust theorem for correlated/noisy semantic judgments",
+      "status": "exact_for_declared_online_subclass_via_selected_path_risk_unrestricted_open"
+    },
+    {
+      "evidence": "v2.0 exact quotient transport and N-query parity macro barrier",
+      "evidence_check": true,
+      "id": "R4",
+      "layer": "complete_item_5",
+      "requirement": "benign encoding invariance and full-answer macro firewall",
+      "status": "satisfied_component"
+    },
+    {
+      "evidence": "fifteen decisive evidence packages with valid release manifests",
+      "evidence_check": true,
+      "id": "A0",
+      "layer": "acceptance",
+      "requirement": "sealed public proof and machine artifacts",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "all fifteen decisive packages have passing clean-room verifiers",
+      "evidence_check": true,
+      "id": "A1",
+      "layer": "acceptance",
+      "requirement": "independently implemented machine checks",
+      "status": "satisfied_internal_repository"
+    },
+    {
+      "evidence": "0/2 qualifying teams and 0/1 independent team checker",
+      "evidence_check": true,
+      "id": "A2",
+      "layer": "acceptance",
+      "requirement": "two independent expert teams including one independent checker",
+      "status": "missing_external_0_of_2"
+    },
+    {
+      "evidence": "counterfamilies and exact finite identities; empirical-only resolution disabled",
+      "evidence_check": true,
+      "id": "A3",
+      "layer": "acceptance",
+      "requirement": "deductive rather than simulation-only resolution evidence",
+      "status": "satisfied_internal"
+    },
+    {
+      "evidence": "(3/5)^d, q/N, k/N, path-risk law, interactive min(1,Kq/N), and bounded-soundness exact gap",
+      "evidence_check": true,
+      "id": "A4",
+      "layer": "acceptance",
+      "requirement": "sharp negative and normal-form boundaries",
+      "status": "satisfied_for_registered_claims"
+    }
+  ],
+  "resource_progress": {
+    "certified": true,
+    "cleared_firewalls": [
+      "one_message_only",
+      "nonadaptive_queries_only",
+      "perfect_completeness_only",
+      "perfect_soundness_only",
+      "fixed_round_schedule_only"
+    ],
+    "exact_bounded_soundness_frontier": "C*=s+(1-s)*min(1,K*q/N)",
+    "exact_bounded_soundness_gap": "C*-s=(1-s)*min(1,K*q/N)",
+    "exact_marker_frontier": "min(1,K*q/N)",
+    "former_status": "partial_registered_families_and_black_box_model",
+    "fully_cleared": false,
+    "id": "P2_interactive_resource_scope",
+    "new_status": "exact_arbitrary_round_public_coin_bounded_soundness_marker_family_cross_task_open",
+    "remaining_scope": "cross-task class theorem after a formal protocol/task class is frozen"
+  },
+  "schema_version": "asmp3_consolidated_resource_scope_v2_17",
+  "source_checks": {
+    "base_has_four_blockers": true,
+    "canonical_freezes_public_coin_message_order": true,
+    "canonical_requires_formal_complexity_class": true,
+    "canonical_requires_matching_resource_lower_bounds": true,
+    "registry_is_not_normative": true,
+    "v2_15_removes_round_and_adaptivity_firewalls": true,
+    "v2_16_removes_positive_soundness_firewall": true
+  },
+  "source_hashes": {
+    "canonical_sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5",
+    "expert_status_sha256": "CC8932F9FB2F64B155680EB7138E4C3AEFA8FDF3316D3216F21C678A57995F8D",
+    "registry_sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0",
+    "v2_14_artifact_sha256": "237A020A582D70BABFEF85EFDAB170AB6870656070703351775B4C44E0EB7B7E",
+    "v2_15_artifact_sha256": "265677150E2D17EB8ADA19A31D3EA54C0BB1FF426EA78D117576AB4939D345E6",
+    "v2_16_artifact_sha256": "9BC95D8E1B7113DEEB6F01AFA37F86B05CE17AD4AB5D44463C889BF5FA77D20D"
+  },
+  "status": "interactive_resource_frontier_strengthened_and_cross_task_definition_boundary",
+  "totals": {
+    "decisive_evidence_packages": 15,
+    "direct_requirement_evidence_checks": 18,
+    "external_expert_teams": 0,
+    "remaining_blockers": 4,
+    "requirement_rows": 18,
+    "resource_progress_events": 1,
+    "sealed_manifest_members": 344,
+    "sealed_member_bytes": 59915052
+  }
+}

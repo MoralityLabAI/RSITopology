@@ -1,0 +1,62 @@
+{
+  "claim_boundary": "Finite bounds-aware crossover surface for the transparent parity oracle only.",
+  "claim_grid": {
+    "alpha": "1/20",
+    "degrees": [
+      3,
+      4
+    ],
+    "dimensions": [
+      13,
+      15,
+      17
+    ],
+    "expected_counts": {
+      "brackets": 18,
+      "cost_cells": 144,
+      "covering_cells": 48,
+      "metric_probes_per_cost_cell": 5
+    },
+    "flip_rates": [
+      "1/20",
+      "3/20",
+      "1/4"
+    ],
+    "protocol_id": "asmp11.intermediate_width_crossover.v0.2.1",
+    "resource_policy": {
+      "execution": "sequential_cpu_only",
+      "hard_wall_seconds_per_cell": 15,
+      "max_candidate_blocks_per_cell": 30000,
+      "max_greedy_rounds_per_cell": 4096,
+      "max_ram_bytes": 4294967296,
+      "max_total_wall_seconds": 900
+    },
+    "sample_cap": 4096,
+    "status": "source_freeze_candidate_not_registered",
+    "target_power": "9/10",
+    "width_rule": {
+      "3": "every integer s with 3 < s < n-3",
+      "4": "every integer s with 4 < s < n-2"
+    }
+  },
+  "manifest_sha256": "fd7308267fca05054c2e7cc404405f169ca25b4ef64326b67b6f828601303b1b",
+  "output_policy": "write_once_non_aliasing",
+  "prior_anchor_sha256": "0731492d15a21d99b721e4d6d434b1f874019973bf2901b14efd1f5f9c683d07",
+  "proposed_asmp_id": "ASMP-11",
+  "protocol_id": "asmp11.intermediate_width_crossover.v0.2.1",
+  "registered_at_utc": "2026-08-03T21:30:38.237930+00:00",
+  "schema_version": "asmp11_intermediate_crossover_registration_v0_2_1",
+  "source_commit": "a24d869",
+  "source_hashes": {
+    "PROTOCOL_v0_2_1.md": "c58345bfb6584504024101c7086922aacec68c3cdf99cc2d2a9ae831cf3ebc4d",
+    "README.md": "e17ae4d4aeb597d0dbcfd4ca76e3041dd495029f48f50d83f2df3cc912d4d910",
+    "build_registration.py": "a8e409870b83b9c737c19f675e053d62df9fcfd92c21b96595d4e02a2218a24c",
+    "crossover_frontier.py": "09451c7daafb44928271f448702d10daf2a51c03ed41eef48ac1beb420d677eb",
+    "experiment_v0_2_1.json": "fd7308267fca05054c2e7cc404405f169ca25b4ef64326b67b6f828601303b1b",
+    "prior_anchor_v0_2.json": "0731492d15a21d99b721e4d6d434b1f874019973bf2901b14efd1f5f9c683d07",
+    "run.py": "4cf14dd953910b890820f6b62b2a57a22ee6a78184ba2476dcd9978a602f738d",
+    "test_crossover_frontier.py": "ce7336db3e28e430a1a699cc02f080432132baa26db7206025b37cbfce884acf",
+    "verify_result.py": "9050ac0192a24e839f62d02c2ed5f3d439003c25ba7f41336d88888ef2bde82c"
+  },
+  "status": "prospective_registration_before_claim_grid_execution"
+}

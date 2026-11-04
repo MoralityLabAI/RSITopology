@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_bounded_soundness_bad_seed_balancing_exhaustive_gap_frontier_audit",
+  "checks": {
+    "V0_schema_parent_and_status": true,
+    "V1_parent_contracts_reconstructed": true,
+    "V2_all_17784_bounded_soundness_rows_reconstructed": true,
+    "V3_all_12150_finite_seed_balancing_rows_reconstructed": true,
+    "V4_all_25523_small_seed_families_reconstructed": true,
+    "V5_all_3103_target_gap_thresholds_reconstructed": true,
+    "V6_exact_completeness_and_gap_theorems_match": true,
+    "V7_zero_soundness_slice_recovers_v2_15": true,
+    "V8_interface_and_claim_boundaries_are_explicit": true,
+    "V9_all_ten_producer_gates_pass": true
+  },
+  "claim_boundary": "This checker certifies the public-coin marker interface, not private-coin or arbitrary-task lower bounds.",
+  "passed": true,
+  "schema_version": "asmp3_bounded_soundness_frontier_verification_v2_16"
+}

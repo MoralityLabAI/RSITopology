@@ -1,0 +1,173 @@
+{
+  "adjudication": {
+    "candidate_negative_result": true,
+    "exact_fiber_boundary_proved": true,
+    "global_continuation_for_unrestricted_smooth_qmd": "impossible",
+    "problem_resolved": false,
+    "reason_not_yet_claimed_resolved": "the canonical v0.1 classification target is not a single closed universal sentence, and independent expert reproduction is absent"
+  },
+  "all_gates_passed": true,
+  "authoritative_and_theorem_inputs": {
+    "AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "LOCAL_SUFFICIENCY_COUNTEREXAMPLE_v0_5.md": "fd3d43412e104fa528b31d56ed0053fe9286ce6e70c5c428045fdb60d88fe8ab",
+    "PRIOR_ART_v0_2.md": "7a2e424e0b6a83f4fa49b4135e910c54194dc7037c9b3139093b245da18c4402",
+    "THEOREM_v0_2.md": "e036d4cfd76d4a3a1c7dd6d79e7a0d23c4a9f6d1d1646c54efc1379c5746a9a5",
+    "problem_set_v0_1.json": "30ff673486b140c178d279eb100c81a46c849ba5b9955eddee16c83824d43ee0"
+  },
+  "fiber_certificate": {
+    "deterministic_uniform_success": "0/1",
+    "good_actions_by_world": {
+      "-1": [
+        1
+      ],
+      "1": [
+        -1
+      ]
+    },
+    "minimax_sample_complexity_for_delta_below_one_half": "infinity",
+    "optimal_probability_of_action_minus_one": "1/2",
+    "randomized_uniform_success": "1/2",
+    "reason": "all finite source-data laws are identical across worlds, so every source-only procedure induces the same action distribution"
+  },
+  "gates": {
+    "both_worlds_have_a_good_noninert_action": true,
+    "bump_and_derivative_zero_at_sources": true,
+    "common_finite_curvature_bound": true,
+    "common_full_support": true,
+    "exact_deterministic_fiber_value_is_zero": true,
+    "exact_randomized_fiber_value_is_one_half": true,
+    "finite_sample_minimax_confidence_ceiling_is_one_half": true,
+    "nonzero_risk_derivatives_factor_through_z_score": true,
+    "positive_fisher_information": true,
+    "source_joint_laws_identical": true,
+    "source_joint_scores_identical": true,
+    "world_good_action_sets_are_disjoint": true
+  },
+  "local_sufficiency_counterexample": {
+    "action_rows": {
+      "-1": {
+        "factor_through_score": "-1",
+        "globally_safe_on_local_ball": false,
+        "maximum_risk": "5/8",
+        "minimum_risk": "3/8",
+        "risk_derivative": "-1/4",
+        "score_derivative": "1/4",
+        "utility": "1/1"
+      },
+      "1": {
+        "factor_through_score": "1",
+        "globally_safe_on_local_ball": false,
+        "maximum_risk": "5/8",
+        "minimum_risk": "3/8",
+        "risk_derivative": "1/4",
+        "score_derivative": "1/4",
+        "utility": "1/1"
+      }
+    },
+    "actions": [
+      -1,
+      1
+    ],
+    "all_gates_passed": true,
+    "conclusion": "pathwise factorization and positive conditioning are not sufficient for the stated safety certificate without robust feasibility/margin",
+    "fisher_information": "1/4",
+    "gates": {
+      "both_risk_derivatives_factor_continuously": true,
+      "dominated_qmd_full_support": true,
+      "no_registered_action_is_uniformly_safe": true,
+      "positive_fisher_information": true,
+      "strict_conditioning_margin": true,
+      "utility_floor_met_by_every_action": true
+    },
+    "observation": "Bernoulli(1/2+theta/4)",
+    "policy_randomization": "not_registered",
+    "risk": "1/2+action*theta/4",
+    "safety_threshold": "1/2",
+    "schema_version": "asmp2_local_factorization_counterexample_v0_5",
+    "source_reference": "0",
+    "theta_adv": "[-1/2,1/2]",
+    "utility": "1",
+    "utility_floor": "4/5"
+  },
+  "problem_id": "ASMP-2",
+  "problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "schema_version": "asmp2_source_fiber_boundary_v0_2",
+  "witness": {
+    "actions": [
+      -1,
+      1
+    ],
+    "bump": "(16/9)*theta^2*(theta^2-1/4)^2",
+    "fisher_information_at_zero": "3/32",
+    "observation": "(Z,Y[-1],Y[+1]) independent Bernoulli channels",
+    "p_z": "1/2 + theta/8",
+    "risk": "1/2 + theta/16 + action*world*bump(theta)/8",
+    "risk_curvature_bound": "193/36",
+    "source_rows": [
+      {
+        "bump": "0/1",
+        "bump_prime": "0/1",
+        "joint_law_equal": true,
+        "joint_pmf": {
+          "000": "2601/16384",
+          "001": "2295/16384",
+          "010": "2295/16384",
+          "011": "2025/16384",
+          "100": "2023/16384",
+          "101": "1785/16384",
+          "110": "1785/16384",
+          "111": "1575/16384"
+        },
+        "joint_score_derivative_equal": true,
+        "theta": "-1/2"
+      },
+      {
+        "bump": "0/1",
+        "bump_prime": "0/1",
+        "joint_law_equal": true,
+        "joint_pmf": {
+          "000": "1/8",
+          "001": "1/8",
+          "010": "1/8",
+          "011": "1/8",
+          "100": "1/8",
+          "101": "1/8",
+          "110": "1/8",
+          "111": "1/8"
+        },
+        "joint_score_derivative_equal": true,
+        "theta": "0/1"
+      },
+      {
+        "bump": "0/1",
+        "bump_prime": "0/1",
+        "joint_law_equal": true,
+        "joint_pmf": {
+          "000": "1575/16384",
+          "001": "1785/16384",
+          "010": "1785/16384",
+          "011": "2023/16384",
+          "100": "2025/16384",
+          "101": "2295/16384",
+          "110": "2295/16384",
+          "111": "2601/16384"
+        },
+        "joint_score_derivative_equal": true,
+        "theta": "1/2"
+      }
+    ],
+    "sources": [
+      "-1/2",
+      "0/1",
+      "1/2"
+    ],
+    "theta_domain": "[-1,1]",
+    "threshold": "9/16",
+    "utility": "1",
+    "utility_floor": "4/5",
+    "worlds": [
+      -1,
+      1
+    ]
+  }
+}

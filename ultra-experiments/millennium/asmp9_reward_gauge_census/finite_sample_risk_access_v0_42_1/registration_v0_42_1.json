@@ -1,0 +1,67 @@
+{
+  "confidence": {
+    "alpha": 0.05,
+    "channel_event": "Bonferroni-simultaneous shared-binary Hoeffding event over three query parameters",
+    "deficiency_bound": "max_theta(source_policy_bound + reference_policy_bound)",
+    "numerics": "80-digit Decimal log and square root, converted outward to binary float",
+    "policy_bound": "loss_span(theta) * min(1, horizon * max_query_tv)"
+  },
+  "expected_decisions_on_simultaneous_event": {
+    "4_class_identification/adaptive": "pass",
+    "4_class_identification/open_loop": "fail",
+    "root_group_asymmetric/adaptive": "pass",
+    "root_group_asymmetric/open_loop": "pass"
+  },
+  "implementation_commit": "9b2de93a94aa944cc9269c40171f0a88e2cc09c9",
+  "parent_failed_registration_sha256": "689bb44d7bf20b1ff6e9966fcd666a6a3927b64c54ad64eb5471789bb2761ca4",
+  "practical_margins": {
+    "4_class_identification": "1/1000",
+    "root_group_asymmetric": "1/1000"
+  },
+  "preflight": {
+    "command": "python -m pytest -q ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_risk_access_v0_42 ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_risk_access_v0_42_1",
+    "elapsed_seconds": 23.327691,
+    "status": "pass",
+    "tests_passed": 26
+  },
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42.1",
+  "registered_at_utc": "2026-07-29T11:29:58Z",
+  "repair_scope": [
+    "parse practical-margin rational strings through Fraction",
+    "derive seed from the exact v0.42.1 registration bytes with a versioned domain separator",
+    "add regression tests and repair receipts"
+  ],
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1342177280,
+    "max_wall_seconds": 900,
+    "network": false,
+    "processes": 1
+  },
+  "sampling": {
+    "generator": "keyed BLAKE2b 64-bit streams with exact-modulus rejection sampling",
+    "samples_per_target_query": 48000,
+    "seed_rule": "SHA256(exact registration bytes || NUL || asmp9-v0.42-sampled-confirmation)",
+    "shared_parameter_estimator": "pool four target-specific flip counts within each query",
+    "targets": 4
+  },
+  "sealed_files": {
+    "../finite_sample_risk_access_v0_42/FAILED_EXECUTION_v0_42.json": "636d88b98af487ac37fc534e8a622d94ad54a157623784577f1d8dbfff3f84be",
+    "../finite_sample_risk_access_v0_42/FAILED_EXECUTION_v0_42.md": "09d6792f52b00f334ea5aa3640377f7d378df6a3eedbdb8e70379da04c7c6fc9",
+    "../finite_sample_risk_access_v0_42/PROTOCOL_v0_42.md": "29b83f3bdc46c794b3d83eef93d121c3be21ad2b04dbcec1c77e2dc9b7f974b6",
+    "../finite_sample_risk_access_v0_42/THEOREM_DRAFT_v0_42.md": "4e7c91bc50b4360a6946cd9022b8b00ff275443d95fe49d820a9059d093842f7",
+    "../finite_sample_risk_access_v0_42/confirmation.stderr.log": "d94bd192fb861b30a5cf0582adc05a4c7ebc8d1a36f5a69bea850c5fffb0c7cd",
+    "../finite_sample_risk_access_v0_42/execute_confirmation_v0_42.py": "2294869e15d4b88e9ec9a7ef37a60f5996c8fdd1d11795d4a8cdf6010a24057f",
+    "../finite_sample_risk_access_v0_42/finite_sample_access.py": "34a905293a5b87b07b7e7d216f035ecdd2d1a1abdfc3521f5a7bd7707e178834",
+    "../finite_sample_risk_access_v0_42/registration_v0_42.json": "689bb44d7bf20b1ff6e9966fcd666a6a3927b64c54ad64eb5471789bb2761ca4",
+    "../finite_sample_risk_access_v0_42/sampled_confirmation.py": "88ce962a5381d2b21fe1b41ac7d8a34045f2fbdd2be5fe8fcaabe827cb127882",
+    "PROTOCOL_AMENDMENT_v0_42_1.md": "df44ce9174f966c2adda358a885e4fd0be19b86cb4d66a52b701b73cf22fb03d",
+    "environment_lock_v0_42_1.json": "0bf7b4c76b429d00d07774955209b66884e12076cc9aa0a6b7af84d813754500",
+    "execute_confirmation_v0_42_1.py": "3175f2b4b231c7ef689bf6913fdd46c0114779c6ee4033b3538a03346bedbd6d",
+    "protocol_v0_42_1.json": "03d7976535448536c610dc0f0eba398c9542eef1c3b454674f40fc9c5741e28f",
+    "test_repair_v0_42_1.py": "8ba3cfa59c90353eaaea25df306dc26396230254783738fd4193d9d128701915",
+    "verify_result_v0_42_1.py": "13cc84f28c2ad1d9a0d1d4dd0dcd77870862b9ade288adbd9ebb7ba3e09ef42f",
+    "write_environment_lock_v0_42_1.py": "29bd45c4fd885c0a1e21f7e3a751ef38104c1189a176019af75b6b7633fd95f8"
+  },
+  "status": "registered_prereveal",
+  "version": "0.42.1"
+}

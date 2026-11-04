@@ -1,0 +1,42 @@
+{
+  "all_tiers_nonempty": true,
+  "binary_access_pair_projection_match": true,
+  "certificate_mismatches": 0,
+  "claim_eligible": false,
+  "class_counts": {
+    "no_random_utility_representation": 1019,
+    "random_utility_non_luce": 230,
+    "scalar_luce": 1
+  },
+  "elapsed_seconds": 11.272913,
+  "grid_denominator": 6,
+  "kernel_count": 1250,
+  "minimum_bm_distribution": {
+    "-1/2": 165,
+    "-1/3": 384,
+    "-1/6": 470,
+    "0/1": 230,
+    "1/6": 1
+  },
+  "no_object_negative_bm": {
+    "choice": "a",
+    "menu": [
+      "a",
+      "b"
+    ],
+    "value": "-1/4"
+  },
+  "peak_traced_bytes": 471838,
+  "status": "development_only",
+  "universe": [
+    "a",
+    "b",
+    "c"
+  ],
+  "witness_statuses": {
+    "none": "no_random_utility_representation",
+    "random_utility_non_luce": "random_utility_non_luce",
+    "scalar": "scalar_luce",
+    "scalar_access": "scalar_luce"
+  }
+}

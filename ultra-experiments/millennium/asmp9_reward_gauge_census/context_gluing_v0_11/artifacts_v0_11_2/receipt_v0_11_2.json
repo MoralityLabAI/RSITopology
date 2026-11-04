@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 104.33779779999168,
+  "implementation_commit": "cbaa42ae9a3fd37ef2a1f45291e49781d2010967",
+  "output_hashes": {
+    "RESULT_v0_11_2.md": "8d72117f9f1891f1c2bb06f1afe02c09fd1f987ebe91de0d5ca95b3504e70c88",
+    "result_v0_11_2.json": "af56f76be38e323da507d45999fb724be45541944cdc2ac74d9625c618216919"
+  },
+  "protocol_id": "ASMP-9-CONTEXT-GLUING-v0.11.2",
+  "registration_commit": "899df090d460678aa0b575716e324e5dc5070801",
+  "registration_sha256": "6ab4db0beb6934e158d3e1920fb60fd91bd027417626d906817e085fdae5d604"
+}

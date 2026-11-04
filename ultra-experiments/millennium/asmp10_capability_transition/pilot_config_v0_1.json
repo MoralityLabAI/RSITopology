@@ -1,0 +1,44 @@
+{
+  "schema_version": "asmp10_modular_transition_pilot_config_v0_1",
+  "task_id": "asmp10-grokking-v0-1",
+  "status": "pilot_only_not_claim_eligible",
+  "device": "cuda",
+  "modulus": 31,
+  "train_fraction": 0.4,
+  "split_seed": 20260720,
+  "model": {
+    "d_model": 64,
+    "n_heads": 4,
+    "d_mlp": 128,
+    "n_layers": 1,
+    "dropout": 0.0
+  },
+  "optimizer": {
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.98]
+  },
+  "steps": 4000,
+  "eval_every_steps": 50,
+  "checkpoint_every_steps": 100,
+  "checkpoint_every_seconds": 60,
+  "early_feature_step": 500,
+  "transition": {
+    "test_accuracy_floor": 0.9,
+    "test_loss_ceiling": 0.5,
+    "consecutive_evaluations": 5
+  },
+  "runs": [
+    {"run_id": "seed00_wd010", "seed": 0, "weight_decay": 0.1},
+    {"run_id": "seed01_wd010", "seed": 1, "weight_decay": 0.1},
+    {"run_id": "seed00_wd100", "seed": 0, "weight_decay": 1.0},
+    {"run_id": "seed01_wd100", "seed": 1, "weight_decay": 1.0}
+  ],
+  "resource_intent": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "gpu_allowance_mb": 3072,
+    "timeout_seconds": 1800,
+    "swap_bytes": 0
+  }
+}

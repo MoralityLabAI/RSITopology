@@ -1,0 +1,32 @@
+{
+  "check_count": 23,
+  "checks": {
+    "all_gates_pass": true,
+    "approximate_bound": true,
+    "approximate_sharpness": true,
+    "baseline_mdp": true,
+    "calibrated_semantics": true,
+    "claim_boundary": true,
+    "constraint_omissions": true,
+    "constraint_rank": true,
+    "eligibility_negative_controls": true,
+    "eligibility_positive": true,
+    "gate_universe": true,
+    "mechanical_controls": true,
+    "mechanics_semantic_no_go": true,
+    "policy_occupancies": true,
+    "prior_art": true,
+    "protocol_hash": true,
+    "registration_hash": true,
+    "resource_caps": true,
+    "result_hash": true,
+    "sealed_files": true,
+    "semantic_controls": true,
+    "unknown_scale_coupling": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "b7b7af3fc3076d643a58f49d23c836d11a80acc1aa190c1e0fc2d9cce00c4871",
+  "result_sha256": "96491a7a087a9c56726392e28bffafba10f9184040ffaa505604205e3e02893a",
+  "verifier_sha256": "cc86dc686f3bcff58eb620b68c72e98c1e1576194ec643a836a68868dc243a91"
+}

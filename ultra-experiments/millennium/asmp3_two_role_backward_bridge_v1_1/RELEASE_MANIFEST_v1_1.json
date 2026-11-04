@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-TWO-ROLE-BACKWARD-BRIDGE-v1.1",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_realization_flow_bridge_v1_0/REALIZATION_FLOW_THEOREM_v1_0.md": {
+      "bytes": 6727,
+      "sha256": "9E46C35B136ACEB2D127AE31F6A4F570F4383CBAB8048E811679D6CA32CE4E56"
+    },
+    "../asmp3_realization_flow_bridge_v1_0/RELEASE_MANIFEST_v1_0.json": {
+      "bytes": 2972,
+      "sha256": "40FDD9783242BB9C7DFACAD208E8CF3CC4EFDFF006145A8486E5422589432D6D"
+    },
+    "../asmp3_realization_flow_bridge_v1_0/artifacts/realization_flow_bridge_v1_0.json": {
+      "bytes": 133684,
+      "sha256": "F324E07E4685A18091CB170B44AFC59831A1F641789647F1DCA8C03CBB7BA4DE"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_1.md": {
+      "bytes": 1412,
+      "sha256": "D5262EC27F0CB7839313B8692F3D062990D1672005DFD3AC94B4C6AA788058F1"
+    },
+    "README.md": {
+      "bytes": 684,
+      "sha256": "8F6A24045B765E404CBA1C27BF6B854567766B6ED2E7E5A15699F9430CE84F5B"
+    },
+    "TWO_ROLE_BACKWARD_THEOREM_v1_1.md": {
+      "bytes": 6271,
+      "sha256": "D9AB9659049AC85CDC2495E3033FF112A366CACE10DCA38AE3A92D3F8752790E"
+    },
+    "artifacts/two_role_backward_bridge_v1_1.json": {
+      "bytes": 46519,
+      "sha256": "44EF8C56135258EC529B4EBD5D53FA66644E9F7EFC5141E9790DAFF3AEFCE927"
+    },
+    "artifacts/two_role_backward_bridge_verification_v1_1.json": {
+      "bytes": 700,
+      "sha256": "7968F3E7527C87BE7E1684C8B80ADC38FA7D9AF99CC4BDCE34BB31CA7828914C"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2521,
+      "sha256": "643C14D3E316D8EA2E011CB5E39E764DC40B8E09BBC443B92C4BD5EE9F181C68"
+    },
+    "run_two_role_backward_bridge.py": {
+      "bytes": 831,
+      "sha256": "186AA137E8C1008EA4D17252E76739B0244ED9A4082D8FCC57564A27011976C0"
+    },
+    "test_two_role_backward_bridge.py": {
+      "bytes": 4030,
+      "sha256": "27125AFE2D6F5E6D3FB9A83EDADAA31D24B9B3FA31CD0D61B63905BA49ACAF55"
+    },
+    "two_role_backward_bridge.py": {
+      "bytes": 17957,
+      "sha256": "E5D0FCB7770275089AE56AE09EF435FED6B5242BEB02A7AF4E26581947FC264D"
+    },
+    "verify_two_role_backward_bridge.py": {
+      "bytes": 10613,
+      "sha256": "387E2261D479569728B4B058F81FBEEABFB01CB504BCAB98D5274C253619A021"
+    }
+  },
+  "release_status": "exact_perfect_information_two_role_bridge",
+  "schema_version": "asmp3_two_role_backward_bridge_release_v1_1"
+}

@@ -1,0 +1,287 @@
+{
+  "claim_boundary": "At the frozen epsilon=1/2, positive-count floor N=|E| of the independent-binomial conditional-access model inherited from ASMP-9 v0.17-v0.20, establish the exact identity F_G=T_G(0,2)/2^|E| for one finite simple biconnected comparison block. Use the classical Las Vergnas orientation interpretation and Jaeger-Vertigan-Welsh Tutte dichotomy to classify the availability numerator as #P-complete and exact rational value computation as #P-hard under polynomial-time Turing reductions, including Turing-hardness when the input is restricted to biconnected blocks. This is an access-model translation and complexity classification at one boundary, not a novelty claim for the Tutte polynomial or totally cyclic orientations. It does not classify optimizer search, budgets above |E|, arbitrary epsilon, weighted partial orientations, approximation, the full fixed-parameter landscape, adaptive allocation, dependent or misspecified responses, behavioral reward identification, general IRL, or resolve ASMP-9.",
+  "gate_passes": {
+    "G0_registration_binding": true,
+    "G1_freshness_and_structure": true,
+    "G2_tutte_exhaustive_equality": true,
+    "G3_asmp_boundary_identity": true,
+    "G4_normalization_and_label_invariance": true,
+    "G5_unique_count_floor_design_value": true,
+    "G6_bridge_scope_control": true,
+    "G7_block_product_and_localization": true,
+    "G8_complexity_attribution": true,
+    "G9_resource_and_scope": true
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "pass": true,
+      "registration_sha256": "6e79a421c1551e07d44fdaadff5a4967f2cf92371ac0434ce2460ae001aad6c1",
+      "sealed_file_count": 20
+    },
+    "G1_freshness_and_structure": {
+      "freshness": {
+        "block_product": {
+          "biconnected": false,
+          "bridge_count": 0,
+          "edge_count": 17,
+          "node_count": 11,
+          "prior_isomorphic_matches": 0
+        },
+        "bridge_scope": {
+          "biconnected": false,
+          "bridge_count": 1,
+          "edge_count": 13,
+          "node_count": 8,
+          "prior_isomorphic_matches": 0
+        },
+        "pentagonal_prism": {
+          "biconnected": true,
+          "bridge_count": 0,
+          "edge_count": 15,
+          "node_count": 10,
+          "prior_isomorphic_matches": 0
+        },
+        "petersen": {
+          "biconnected": true,
+          "bridge_count": 0,
+          "edge_count": 15,
+          "node_count": 10,
+          "prior_isomorphic_matches": 0
+        },
+        "subdivided_k4_star": {
+          "biconnected": true,
+          "bridge_count": 0,
+          "edge_count": 9,
+          "node_count": 7,
+          "prior_isomorphic_matches": 0
+        },
+        "wheel_7": {
+          "biconnected": true,
+          "bridge_count": 0,
+          "edge_count": 12,
+          "node_count": 7,
+          "prior_isomorphic_matches": 0
+        }
+      },
+      "pairwise_primary_isomorphism_collisions": 0,
+      "pass": true,
+      "prior_graph_record_count": 29,
+      "product_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ]
+    },
+    "G2_tutte_exhaustive_equality": {
+      "pass": true,
+      "per_graph": {
+        "pentagonal_prism": {
+          "totally_cyclic_orientation_count": 1800,
+          "tutte_02": 1800
+        },
+        "petersen": {
+          "totally_cyclic_orientation_count": 1920,
+          "tutte_02": 1920
+        },
+        "subdivided_k4_star": {
+          "totally_cyclic_orientation_count": 24,
+          "tutte_02": 24
+        },
+        "wheel_7": {
+          "totally_cyclic_orientation_count": 726,
+          "tutte_02": 726
+        }
+      }
+    },
+    "G3_asmp_boundary_identity": {
+      "pass": true,
+      "per_graph": {
+        "pentagonal_prism": {
+          "asmp_numerator": 1800,
+          "tutte_02": 1800
+        },
+        "petersen": {
+          "asmp_numerator": 1920,
+          "tutte_02": 1920
+        },
+        "subdivided_k4_star": {
+          "asmp_numerator": 24,
+          "tutte_02": 24
+        },
+        "wheel_7": {
+          "asmp_numerator": 726,
+          "tutte_02": 726
+        }
+      }
+    },
+    "G4_normalization_and_label_invariance": {
+      "label_values": {
+        "all_one": "3/64",
+        "all_zero": "3/64",
+        "alternating": "3/64"
+      },
+      "normalization_exact": true,
+      "pass": true
+    },
+    "G5_unique_count_floor_design_value": {
+      "exact_positive_composition_counts": {
+        "pentagonal_prism": 1,
+        "petersen": 1,
+        "subdivided_k4_star": 1,
+        "wheel_7": 1
+      },
+      "pass": true,
+      "value_equals_unique_allocation_availability": true
+    },
+    "G6_bridge_scope_control": {
+      "asmp_numerator": 1452,
+      "bridge_indices": [
+        12
+      ],
+      "pass": true,
+      "quotient_availability": "363/2048",
+      "totally_cyclic_orientation_count": 0,
+      "tutte_02": 0
+    },
+    "G7_block_product_and_localization": {
+      "asmp_numerator": 1452,
+      "biconnected_oracle_calls": 2,
+      "block_product_tutte_02": 1452,
+      "localization_reduction": "bridge test; biconnected decomposition; one oracle call per nontrivial block; integer product",
+      "pass": true,
+      "totally_cyclic_orientation_count": 1452,
+      "tutte_02": 1452
+    },
+    "G8_complexity_attribution": {
+      "allowed_statement_count": 3,
+      "forbidden_statement_count": 4,
+      "pass": true,
+      "proof_source": "Las Vergnas identity plus Jaeger-Vertigan-Welsh graphic Tutte dichotomy; finite run is not the proof"
+    },
+    "G9_resource_and_scope": {
+      "claim_boundary": "At the frozen epsilon=1/2, positive-count floor N=|E| of the independent-binomial conditional-access model inherited from ASMP-9 v0.17-v0.20, establish the exact identity F_G=T_G(0,2)/2^|E| for one finite simple biconnected comparison block. Use the classical Las Vergnas orientation interpretation and Jaeger-Vertigan-Welsh Tutte dichotomy to classify the availability numerator as #P-complete and exact rational value computation as #P-hard under polynomial-time Turing reductions, including Turing-hardness when the input is restricted to biconnected blocks. This is an access-model translation and complexity classification at one boundary, not a novelty claim for the Tutte polynomial or totally cyclic orientations. It does not classify optimizer search, budgets above |E|, arbitrary epsilon, weighted partial orientations, approximation, the full fixed-parameter landscape, adaptive allocation, dependent or misspecified responses, behavioral reward identification, general IRL, or resolve ASMP-9.",
+      "gpu_used": false,
+      "pass": true,
+      "peak_resident_bytes": 39137280,
+      "wall_seconds": 36.49326699998346
+    }
+  },
+  "primary_results": {
+    "pentagonal_prism": {
+      "allocation": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "asmp_numerator": 1800,
+      "availability": "225/4096",
+      "denominator_unreduced": 32768,
+      "edge_count": 15,
+      "total_orientation_count": 32768,
+      "totally_cyclic_orientation_count": 1800,
+      "tutte_02": 1800
+    },
+    "petersen": {
+      "allocation": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "asmp_numerator": 1920,
+      "availability": "15/256",
+      "denominator_unreduced": 32768,
+      "edge_count": 15,
+      "total_orientation_count": 32768,
+      "totally_cyclic_orientation_count": 1920,
+      "tutte_02": 1920
+    },
+    "subdivided_k4_star": {
+      "allocation": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "asmp_numerator": 24,
+      "availability": "3/64",
+      "denominator_unreduced": 512,
+      "edge_count": 9,
+      "total_orientation_count": 512,
+      "totally_cyclic_orientation_count": 24,
+      "tutte_02": 24
+    },
+    "wheel_7": {
+      "allocation": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "asmp_numerator": 726,
+      "availability": "363/2048",
+      "denominator_unreduced": 4096,
+      "edge_count": 12,
+      "total_orientation_count": 4096,
+      "totally_cyclic_orientation_count": 726,
+      "tutte_02": 726
+    }
+  },
+  "protocol_id": "ASMP-9-LOCAL-BLOCK-COMPLEXITY-v0.21",
+  "registration_sha256": "6e79a421c1551e07d44fdaadff5a4967f2cf92371ac0434ce2460ae001aad6c1",
+  "verdict": "count_floor_local_value_complexity_classified_v0_21"
+}

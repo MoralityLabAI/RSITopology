@@ -1,0 +1,40 @@
+{
+  "schema_version": "asmp9_stochastic_experiment_run_receipt_v0_37",
+  "status": "completed_verified",
+  "prereveal_registration_commit": "2148cadbe12ac3f98eb8b1798e34eff2325789c5",
+  "implementation_commit": "906ff48fbb70aadd0b8c2a9f110cd425f37fd4d6",
+  "registration": {
+    "path": "REGISTRATION_v0_37.json",
+    "bytes": 7506,
+    "sha256": "63a9621b66981ce2904ab4b96b672ca4175d64d12cae61a16d505397945c2c22",
+    "content_sha256": "f22d84af0d4e22172fc9ef2bc1b39540ced16ca21f476e9a43dbd4505515aaf0"
+  },
+  "result": {
+    "path": "artifacts_v0_37/RESULT_v0_37.json",
+    "bytes": 2310,
+    "sha256": "966bc14ac9ae1e4a5a6910ba32933b098c22a071f360e99a92f22937bd49c778",
+    "content_sha256": "7d99e2fd47d0136a2e3b7b847ded2b4b5d41acb05619e14c35e3557e51dcd8c1"
+  },
+  "verification": {
+    "path": "artifacts_v0_37/VERIFY_v0_37.json",
+    "bytes": 805,
+    "sha256": "1325a9635209179f4b1f7952ced8d5fa389d8b13b58a8590d84325e367eaba21",
+    "passed": true,
+    "checks_passed": 12
+  },
+  "gates_passed": [
+    "E0",
+    "B0",
+    "R0",
+    "S0",
+    "C0"
+  ],
+  "runtime": {
+    "producer_elapsed_seconds": 611.7678792,
+    "producer_maximum_sampled_peak_working_set_mib": 74.32,
+    "producer_memory_sampling_note": "Windows PeakWorkingSet was sampled through elapsed second 579. The 1 GiB registration value was a validity/reporting ceiling, not an OS-enforced hard cap; the final interval was not continuously sampled.",
+    "verifier_elapsed_seconds": 727.0764879,
+    "verifier_maximum_sampled_peak_working_set_mib": 71.87
+  },
+  "claim_boundary": "This exact finite result separates zero-error component quotient, quantitative target-risk profile, and full nuisance-sensitive experiment comparison. It is a classical instrument consolidation and does not identify a real reward, prove a general comparison theorem, or resolve ASMP-9."
+}

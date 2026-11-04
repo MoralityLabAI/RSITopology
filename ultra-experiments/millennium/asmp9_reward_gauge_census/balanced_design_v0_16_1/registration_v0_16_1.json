@@ -1,0 +1,23 @@
+{
+  "implementation_commit": "d2d9b500d3633c54d1a2be625ca23aad8bf0b950",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/protocol_v0_16_1.json",
+  "registered_at_utc": "2026-07-28T23:14:17Z",
+  "registration_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.1-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/PRIOR_ART_GATE_v0_16.md": "536c0dc9483234520ce0433f9cacaf542e71e0761208ef6ac94a7853c4d16fc7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/RUN_ABORT_v0_16.json": "5fa9fd7532b7f43b1e15ce1ad9cf54c3804ca5fdd4367138e315aaa66310a7d1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/RUN_ABORT_v0_16.md": "0e6d5bc26a084f0a5ca5ff83539a76583e197f784ab45e4202f523905a0178c9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/THEOREM_v0_16.md": "d387a0ae9009b06a4080698d92beb97dbdcb9b4a0c4e0a40d83e8b4e5c8580d0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/experiment.py": "8629173d0d33617a4e425ecda799804728c18acb0513f6d57d8a822aa8146b36",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/run_verification.py": "15ce2de21a80032b0e2fdf9d7cf828d25c4cbbbe29ca260227d2577e25a0d5d4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16/verify_result.py": "2ac4e8da05c8a399a8ec1d1bd3f83964f1842ed96690a82f22e8ccde18ed9921",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/PROTOCOL_v0_16_1.md": "57a427a2f45f984be6171a2da1af3e58b89a25dd22f1bf8f0d5784135f00b213",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/README.md": "3e93e619aa8ff550b58f0d32084eec766007809fefaeed44899fb13c1fa3232c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/environment_v0_16_1.json": "cac7d464a642bcd3cace205dcb517fc849520c1f630dd832e94d3abf2d837951",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/protocol_v0_16_1.json": "41fcf417ed2f33d3e3d6816d1eed833e1c0d6dde6fce29b4e89a624e0c6e08dd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/register.py": "026f05c2fb9e4b775ed3cd0f6bf3990b48d72944c7a31433b92f38e3767ff006",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/run_verification.py": "f6a7c3193eacf40dda824f0611c0d81520b9e128e5858380c69812f867622bcd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/test_protocol.py": "2f564028830fd64695344c7345c196ceed47e7b10299d5435597cec492b44ddf",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/balanced_design_v0_16_1/verify_result.py": "75cd2a972d3ea30f5988f8f34f28155d750aa04d4e39c38e71682f4387ee0b31"
+  }
+}

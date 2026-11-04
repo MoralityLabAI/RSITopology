@@ -1,0 +1,147 @@
+{
+  "canonical_boundary": {
+    "above": {
+      "is_equilibrium": false,
+      "margin": "-1/100",
+      "temptation": "301/100"
+    },
+    "at": {
+      "is_equilibrium": true,
+      "margin": "0",
+      "temptation": "3"
+    },
+    "below": {
+      "is_equilibrium": true,
+      "margin": "1/100",
+      "temptation": "299/100"
+    }
+  },
+  "cells": {
+    "chicken_order|T=0": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 195,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "chicken_order|T=1": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 258,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "chicken_order|T=1/2": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 258,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "chicken_order|T=2": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 258,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "chicken_order|T=3": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 272,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "chicken_order|T=4": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 313,
+      "catalogs_with_syntax_death": 16,
+      "extensional_catalogs_with_cooperative_death": 134
+    },
+    "chicken_order|T=5": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 313,
+      "catalogs_with_syntax_death": 16,
+      "extensional_catalogs_with_cooperative_death": 134
+    },
+    "chicken_order|T=6": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 313,
+      "catalogs_with_syntax_death": 16,
+      "extensional_catalogs_with_cooperative_death": 134
+    },
+    "pd_order|T=0": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 118,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "pd_order|T=1": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 118,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "pd_order|T=1/2": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 118,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "pd_order|T=2": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 187,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "pd_order|T=3": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 0,
+      "catalogs_with_payoff_death": 187,
+      "catalogs_with_syntax_death": 0,
+      "extensional_catalogs_with_cooperative_death": 0
+    },
+    "pd_order|T=4": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 234,
+      "catalogs_with_syntax_death": 16,
+      "extensional_catalogs_with_cooperative_death": 134
+    },
+    "pd_order|T=5": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 234,
+      "catalogs_with_syntax_death": 16,
+      "extensional_catalogs_with_cooperative_death": 134
+    },
+    "pd_order|T=6": {
+      "catalogs": 512,
+      "catalogs_with_cooperative_death": 174,
+      "catalogs_with_payoff_death": 234,
+      "catalogs_with_syntax_death": 16,
+      "extensional_catalogs_with_cooperative_death": 134
+    }
+  },
+  "claim_boundary": "Exact finite pure-equilibrium survival surface only; no ordinary bifiltration, mixed-equilibrium, proof-agent, or language-model claim.",
+  "gates": {
+    "B0_boundary_liveness": true,
+    "E0_decomposition": true,
+    "F0_temptation_phase": true,
+    "M0_margin_certificate": true,
+    "N0_source_blind": true,
+    "P0_encoding": true,
+    "U0_universe": true
+  },
+  "margin_checks": 32064,
+  "positive_margin_certificates": 12384,
+  "schema_version": "asmp12_equilibrium_survival_result_v0_2",
+  "verdict": "equilibrium_survival_phase_established_for_registered_finite_class"
+}

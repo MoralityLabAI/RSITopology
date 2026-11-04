@@ -1,0 +1,67 @@
+{
+  "schema_version": "asmp8_qwen08_action_probe_completion_receipt_v0_1",
+  "status": "qwen_action_probe_control_gate_not_established",
+  "completed_utc": "2026-07-25T22:53:59Z",
+  "preregistration": {
+    "commit": "cc4fc83f761fbe20090a47eb5a96712942261b0d",
+    "protocol_path": "protocols/asmp8_qwen08_action_probe_v0_1.json",
+    "protocol_sha256": "63c5828c93962f455120e117da2ec56f87f8256997c70a396bd1c5eaeb78a0d2"
+  },
+  "feature_seal": {
+    "commit": "3da104d585cfd042014d0b8a908c44db3dbc977d",
+    "capture_receipt_sha256": "f2fff7ce94d2beb1a7fc2e6341586ac44f97e976c5bbfa213c6a719e764e5b77",
+    "feature_receipt_sha256": "0c6c7c5ba00168767272c6742b27a34327aab0acb9fb4e44363e367f342e3fe0",
+    "features_sha256": "22c78ffda464c1202bced0583f6dd5936768a24f7166a3da427e7ebc91d17307",
+    "outcomes_consumed": false
+  },
+  "revealed_artifacts": {
+    "outcomes_sha256": "17ee4d35cb20fe403f6311122313cb9faa8de9cde735964e66d8ec38f34afb62",
+    "analysis_sha256": "774747c9b879e8d0294a3391c551ed2d8decd4b61ef1770002027a266c6cb1e3",
+    "generated_report_sha256": "211a555106067af465ed6fd451758c7606bb7591db9177c27dc29ae3bb3f1f1b",
+    "result_sha256": "b061021621916f3fbc459be692797094de1dd30400a3a3b2d08980acdce74654"
+  },
+  "verification": {
+    "focused_tests": "12 passed",
+    "outcome_replay_byte_identical": true,
+    "analysis_replay_byte_identical": true,
+    "report_replay_byte_identical": true,
+    "feature_outcome_join_count": 576,
+    "duplicate_or_missing_ids": 0,
+    "raw_archive_manifest_files_verified": 1167,
+    "raw_archive_manifest_mismatches": 0,
+    "prime_pod_terminated": true,
+    "active_prime_pods_after_termination": 0
+  },
+  "gates": {
+    "P0_plan_and_session_integrity": "pass",
+    "V0_complete_choice_vectors": "pass",
+    "C0_cold_start_repeatability": "pass",
+    "L0_feature_liveness": "pass",
+    "J0_exact_join_and_outcome_support": "pass",
+    "G0_heldout_selective_risk_increment": "fail"
+  },
+  "primary": {
+    "application_balanced_selective_risk_auc_improvement": 0.0038783360131702397,
+    "bootstrap_95": [
+      -0.0006490605193136479,
+      0.011116168117641542
+    ],
+    "permutation_p_one_sided": 0.04441190824792582,
+    "permutation_replicates": 2048
+  },
+  "secondary_prediction": {
+    "log_loss_improvement": 0.014897747358852076,
+    "baseline_average_precision": 0.7680980812390069,
+    "augmented_average_precision": 0.7921643731506232,
+    "baseline_roc_auc": 0.935678587654962,
+    "augmented_roc_auc": 0.9358083987797754
+  },
+  "secondary_action": {
+    "probe_accuracy": 0.2743055555555556,
+    "proxy_accuracy": 0.7534722222222222,
+    "probe_mean_regret": 0.43795138888888885,
+    "proxy_mean_regret": 0.13256944444444443,
+    "probe_proxy_disagreement_rate": 0.7569444444444444
+  },
+  "claim_boundary": "The target-conditioned Qwen action distribution produced a promising but application-unstable risk signal and failed the frozen primary gate. This rejects this probe for the registered use, not hidden-state features or all task-conditioned signals, and supports no causal, deployment, scalable-oversight, Goodhart-frontier, recursive-improvement, or ASMP-8 resolution claim."
+}

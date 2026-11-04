@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_primal_dual_matrix_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_explicit_saddles_reconstructed": true,
+    "V2_identity_registry_complete": true,
+    "V3_identity_saddles_reconstructed": true,
+    "V4_identity_values_decay_as_one_over_size": true,
+    "V5_alias_registry_complete": true,
+    "V6_alias_saddles_reconstructed": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates supplied normal-form matrices and rational saddles; it does not construct a compact sequence form.",
+  "passed": true,
+  "schema_version": "asmp3_matrix_game_bridge_verification_v1_2"
+}

@@ -1,0 +1,11 @@
+{
+  "finished_at_utc": "2026-07-29T05:44:26Z",
+  "implementation_commit": "899cee20ce171f996f9c2adf4774a5beeb58fc01",
+  "protocol_sha256": "d7ec8ecb3f5c3ea4ced0b0b193ea35f55f9018c76ca7e6f9b911bfb9944a73e0",
+  "registered_at_utc": "2026-07-29T05:44:18Z",
+  "registration_sha256": "95eb63461eec234601b6bc0caa0d20238d1e534ff4acbd5633baa8ea9940c5f9",
+  "result_sha256": "5729d7909fbf31b2de7b7260f6a30677a5d1f0d367613e37eb6938085b05819f",
+  "run_commit": "f2fb9565996ae604aa1b3ba90fd7d4073aa1d835",
+  "started_at_utc": "2026-07-29T05:44:26Z",
+  "verdict": "behavioral_rectangle_boundary_established_v0_32"
+}

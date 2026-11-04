@@ -1,0 +1,160 @@
+{
+  "schema_version": "qwen08_stratified_completion_measurement_protocol_v0_1",
+  "protocol_id": "asmp8.qwen08.stratified_completion_measurement.v0.1",
+  "run_id": "asmp8-qwen08-stratified-completion-measurement-v0-1-20260725",
+  "status": "registered_not_run",
+  "motivated_by": {
+    "run_id": "asmp8-qwen08-completion-audits-500k-v0-8-20260724",
+    "checkpoint_requests": 91000,
+    "effective_unique_prompts": 105,
+    "covered_application_families": [
+      "bitvm_profile",
+      "diplomacy_orders"
+    ],
+    "interpretation": "The endurance checkpoint is systems evidence and a partial behavioral checksum, not 91,000 independent scientific observations."
+  },
+  "frozen_inputs": {
+    "prompt_manifest": "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "prompt_manifest_sha256": "fd77eadebd0f9d4a1874b3bcee6a86563eaa7777487ff687ba9e1dee762f6f11",
+    "prompt_count": 576,
+    "application_count": 9,
+    "geometry_halves": [
+      "construction",
+      "validation"
+    ],
+    "outcomes_consumed": false,
+    "runner": "scripts/run_qwen08_stratified_audits.py",
+    "runner_sha256": "3e03500848706fa9087279d5c2f30d9d1d96a0882ebbd3aa3968f44baa894bbb",
+    "analyzer": "scripts/analyze_qwen08_stratified_audits.py",
+    "analyzer_sha256": "067abd2db428569a51e86522008b2c9df9f46df70ded684542e00d8c5255cc14",
+    "base_runner": "scripts/run_qwen08_completion_audits.py",
+    "base_runner_sha256": "8f5e0f0127e209fc3c6f9e295f16dd000373b610d1ba429b8259a12066aeabdf",
+    "test_file": "tests/test_qwen08_stratified_audits.py",
+    "test_file_sha256": "85fc93b45a0409e4acbe68fb9f81410d2f9d66de5230cf292ebed3d3dae138ee",
+    "derived_plan_sha256": "66008034e1ce6e80609177c49d505c18b9a08b851975fc7e18cf4e32c0d71b38"
+  },
+  "schedule": {
+    "item_count": 3456,
+    "planned_server_epochs": 4,
+    "census_requests": 2304,
+    "stability_requests": 1152,
+    "application_half_strata": 18,
+    "first_distinct_prompt_block_covers_all_strata": true,
+    "all_unique_prompts_precede_stability_repetition": true,
+    "epoch_0": "576-prompt interleaved census; uncached then cached within prompt",
+    "epoch_1": "planned restart; 576-prompt interleaved census; cached then uncached within prompt",
+    "epochs_2_and_3": "planned restarts; 18 frozen stratum prompts; 32 grouped cached repetitions each"
+  },
+  "registered_gates": {
+    "P0_plan_and_session_integrity": {
+      "required_plan_binding_failures": 0,
+      "required_server_sessions_per_planned_epoch": 1
+    },
+    "C0_full_census_and_cache_order_invariance": {
+      "required_unique_prompts": 576,
+      "required_census_receipts_per_prompt": 4,
+      "required_exact_token_agreement": 1.0,
+      "maximum_probability_range": 1e-06
+    },
+    "R0_restart_and_repeat_stability": {
+      "required_stability_prompts": 18,
+      "required_receipts_per_stability_prompt": 64,
+      "required_exact_token_agreement": 1.0,
+      "maximum_probability_range": 1e-06
+    },
+    "L0_proxy_liveness": {
+      "required_strata": 18,
+      "required_unique_prompts_per_stratum": 32,
+      "minimum_probability_variance_strictly_greater_than": 1e-08
+    }
+  },
+  "resource_caps": {
+    "memory_mb": 4096,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 7200,
+    "gpu_allowance_mb": 1600,
+    "swap_bytes": 0
+  },
+  "thermal_guard": {
+    "maximum_start_temperature_c": 75,
+    "runner_pause_temperature_c": 84,
+    "runner_resume_temperature_c": 82,
+    "runner_poll_seconds": 0.5,
+    "hard_abort_temperature_c": 88,
+    "minimum_free_gpu_mb": 2500,
+    "minimum_free_physical_mb": 8192
+  },
+  "execution_gate": {
+    "requires_exclusive_gpu": true,
+    "must_not_overlap_run": "asmp8-qwen08-completion-audits-500k-v0-8-20260724",
+    "existing_run_cleanup_must_pass": true,
+    "test_command": "python -m pytest tests/test_qwen08_completion_audits.py tests/test_qwen08_stratified_audits.py -q",
+    "registered_test_result": "15 passed"
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1",
+    "records_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\records",
+    "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\wrapper"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\wrapper",
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1",
+    "sha256": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0"
+  },
+  "exact_inner_command": [
+    "D:\\Research_Engine\\.venv-train\\Scripts\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen08_stratified_audits.py",
+    "--run-id",
+    "asmp8-qwen08-stratified-completion-measurement-v0-1-20260725",
+    "--server-path",
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064-cuda12.4\\payload\\llama-server.exe",
+    "--model-path",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--prompt-manifest",
+    "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1",
+    "--stability-repeats",
+    "32",
+    "--event-every",
+    "18",
+    "--context-size",
+    "768",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "256",
+    "--gpu-layers",
+    "99",
+    "--threads",
+    "2",
+    "--port",
+    "8822",
+    "--thermal-pause-temperature",
+    "84",
+    "--thermal-resume-temperature",
+    "82",
+    "--thermal-poll-seconds",
+    "0.5"
+  ],
+  "exact_analysis_command": [
+    "python",
+    "scripts/analyze_qwen08_stratified_audits.py",
+    "--prompt-manifest",
+    "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "--plan",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\measurement_plan.json",
+    "--records-dir",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\records",
+    "--output-json",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\analysis.json",
+    "--output-report",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_stratified_completion_measurement_v0_1\\REPORT.md",
+    "--probability-tolerance",
+    "0.000001",
+    "--liveness-variance-floor",
+    "0.00000001"
+  ],
+  "claim_boundary": "Target-blind measurement reliability only. No outcomes are consumed; no correctness, calibration, oversight sufficiency, Goodhart pressure, recursive improvement, or ASMP-8 resolution claim is available."
+}

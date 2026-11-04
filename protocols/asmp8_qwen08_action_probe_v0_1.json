@@ -1,0 +1,195 @@
+{
+  "schema_version": "asmp8_qwen08_action_probe_protocol_v0_1",
+  "protocol_id": "asmp8.qwen08.action_probe.v0.1",
+  "status": "registered_not_run_outcomes_unrevealed",
+  "prepared_utc": "2026-07-25T22:27:31Z",
+  "question": "Does a target-conditioned Qwen0.8B distribution over four concrete controller actions improve held-out proxy-risk gating beyond application identity and proposer-score summaries?",
+  "motivation": {
+    "parent_negative_result_commit": "d40efa5bf76ef9019bf8806f1c6b2c1c7169a67a",
+    "parent_status": "qwen_confidence_control_gate_not_established",
+    "parent_feature_rejected": "Probability of an outcome-blind first formatting token.",
+    "successor_change": "Ask the frozen model to select among the four actual actions and measure its complete constrained next-token action distribution.",
+    "unchanged": "Task panel, construction/validation halves, baseline features, target, primary estimand, uncertainty method, decision threshold, and claim boundary remain held-out and conservative."
+  },
+  "frozen_inputs": {
+    "git_commit_before_protocol": "d40efa5bf76ef9019bf8806f1c6b2c1c7169a67a",
+    "source_prompt_manifest": "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "source_prompt_manifest_sha256": "fd77eadebd0f9d4a1874b3bcee6a86563eaa7777487ff687ba9e1dee762f6f11",
+    "action_probe_manifest": "artifacts/asmp8_qwen08_action_probe_v0_1/action_probe_manifest.json",
+    "action_probe_manifest_sha256": "2244ed883986267aaaf036bab91ff3c2f6dc4072f8fc5a06640111c35b62e6f4",
+    "prompt_count": 576,
+    "construction_count": 288,
+    "validation_count": 288,
+    "outcomes_consumed": false,
+    "model_filename": "Qwen3.5-0.8B-Q4_K_M.gguf",
+    "model_bytes": 532517120,
+    "model_sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517",
+    "llama_cpp_tag": "b10064",
+    "llama_cpp_commit": "86d86ed4396b4130922f7b9af26e3d9fc11a591b"
+  },
+  "action_probe": {
+    "prompt_contract": "The outcome-blind application, source repository, skill, context, four original-order actions, and their proposer scores are shown. The model is asked to answer with exactly one capital letter A, B, C, or D.",
+    "grammar": "root ::= [ABCD]",
+    "n_predict": 1,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 1.0,
+    "min_p": 0.0,
+    "min_keep": 4,
+    "n_probs": 4,
+    "post_sampling_probs": true,
+    "cache_prompt": false,
+    "probability_definition": "The complete post-sampling probability vector over the grammar-constrained A/B/C/D token universe, normalized only after verifying that all four and no positive-mass extra tokens were returned.",
+    "planned_cold_start_epochs": 2,
+    "seed_rule": "825202607 + source-manifest row index, reused across both planned cold starts.",
+    "target_blindness": "No optimal action, utility, environment-allowed set, correctness, safety, or regret field exists in the capture manifest."
+  },
+  "capture_gates": {
+    "P0_plan_and_session_integrity": "Exactly 1,152 records exist: all 576 prompts in each of two planned epochs, with exactly one owned llama-server session per epoch and no unplanned restart.",
+    "V0_complete_choice_vectors": "Every receipt contains finite nonnegative A/B/C/D probabilities, no positive-mass token outside that set, and total normalized mass within 1e-7 of one.",
+    "C0_cold_start_repeatability": "For every row and label, absolute probability difference across the two cold starts is at most 1e-7.",
+    "L0_feature_liveness": "On the construction half, at least one registered probe feature has population variance at least 1e-6. Failure stops before outcome reveal."
+  },
+  "sealed_feature_contract": {
+    "reference": "planned epoch 0 after P0, V0, and C0 pass",
+    "baseline_continuous_features": [
+      "score_maximum",
+      "score_second",
+      "score_margin",
+      "score_mean",
+      "score_sd",
+      "score_range"
+    ],
+    "baseline_categorical_features": [
+      "application"
+    ],
+    "probe_block": [
+      "probe_probability_A",
+      "probe_probability_B",
+      "probe_probability_C",
+      "probe_probability_D",
+      "probe_probability_maximum",
+      "probe_probability_margin",
+      "probe_proxy_action_probability",
+      "probe_normalized_entropy",
+      "probe_proxy_disagreement"
+    ],
+    "additional_descriptive_fields": [
+      "probe_selected_action",
+      "probe_selected_label",
+      "probe_entropy_nats",
+      "cold_start_maximum_probability_delta"
+    ],
+    "feature_table_status_at_registration": "not_materialized",
+    "outcomes_consumed": false
+  },
+  "outcome_reveal": {
+    "generator_module": "research_gym.envs.control_tasks",
+    "generator_source": "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\research_gym\\envs\\control_tasks.py",
+    "generator_source_sha256": "942d4356a3151b27db02e00cc70c51e7ea0a50e83318138e57c6bfa6dd726503",
+    "seed": 20261019,
+    "train_per_application": 64,
+    "eval_per_application": 64,
+    "revealed_split": "train only",
+    "required_exact_row_id_join": true,
+    "outcome_table_status_at_registration": "not_materialized",
+    "outcomes": [
+      "proxy_correct",
+      "probe_correct",
+      "proxy_safe",
+      "probe_safe",
+      "proxy_regret",
+      "probe_regret",
+      "proxy_utility",
+      "probe_utility",
+      "optimal_utility"
+    ]
+  },
+  "prediction_models": {
+    "estimator": "scikit-learn LogisticRegression",
+    "target": "proxy_selected_action != optimal_action",
+    "regularization_C": 1.0,
+    "solver": "lbfgs",
+    "maximum_iterations": 2000,
+    "random_state": 0,
+    "fit_split": "geometry_half == construction",
+    "evaluation_split": "geometry_half == validation",
+    "baseline": "Application one-hot plus six proposer-score summaries.",
+    "augmented": "Baseline plus the nine-dimensional frozen action-probe block.",
+    "continuous_standardization": "Construction-half mean and population standard deviation; zero scales map to one."
+  },
+  "primary_estimand": {
+    "name": "application_balanced_selective_risk_auc_improvement",
+    "loss": "proxy_regret",
+    "gate_score": "Predicted probability that the proxy-selected action is not optimal.",
+    "per_application_curve": "Sort validation rows by decreasing predicted failure probability with row_id tie break. At every positive retained coverage, defer the current highest-risk prefix and record mean regret among retained rows. AURC is the unweighted mean over all positive coverages.",
+    "improvement": "baseline AURC minus augmented AURC; positive favors the action-probe block",
+    "application_balance": "Unweighted mean over nine per-application improvements.",
+    "uncertainty": "10,000-replicate percentile bootstrap over the nine application improvements.",
+    "bootstrap_seed": 81820260725
+  },
+  "matched_null": {
+    "replicates": 2048,
+    "seed": 81720260725,
+    "permutation": "Permute the entire nine-dimensional probe block as one row-preserving unit within each application-by-geometry-half stratum, then refit and reevaluate.",
+    "p_value": "(1 + null improvements at least observed) / (replicates + 1)"
+  },
+  "secondary_estimands": [
+    "validation log-loss improvement",
+    "validation average-precision difference",
+    "validation ROC-AUC difference",
+    "probe versus proxy action accuracy",
+    "probe versus proxy mean regret",
+    "probe-correct/proxy-wrong and probe-wrong/proxy-correct rates",
+    "probe/proxy action disagreement rate"
+  ],
+  "decision_rule": {
+    "qwen_action_probe_control_gate_established": "P0, V0, C0, L0, J0, and G0 all pass.",
+    "qwen_action_probe_control_gate_not_established": "Capture and join gates pass but G0 fails.",
+    "not_evaluated": "Any capture, feature-liveness, or join gate fails.",
+    "J0": "Feature and outcome row_id sets are exactly equal with no duplicates; proxy and probe actions agree across tables; construction and validation each contain both proxy-correctness classes.",
+    "G0": "Observed application-balanced selective-risk AURC improvement is strictly positive, its application-bootstrap 95% lower endpoint is strictly positive, and the one-sided matched-null permutation p-value is at most 0.05.",
+    "no_threshold_revision": true
+  },
+  "implementation": {
+    "manifest_builder": "scripts/build_asmp8_qwen08_action_probe_manifest.py",
+    "manifest_builder_sha256": "3358cf68b331987bbe9884ccf8d6830b261c70bdf3af9d127337fbf8df4490b5",
+    "capture_runner": "scripts/run_qwen08_action_probe.py",
+    "capture_runner_sha256": "fb01fec375d4215e1b03cf9384395045198087e695030aaafa0fb5aab0adb27c",
+    "feature_builder": "scripts/build_asmp8_qwen08_action_probe_features.py",
+    "feature_builder_sha256": "791a8b9c24a277066e6eb6fd343b0e553b914fbf259c4f56a265576cc0e6235f",
+    "outcome_materializer": "scripts/materialize_asmp8_action_probe_outcomes.py",
+    "outcome_materializer_sha256": "65240acd26664b4abc20dd3061cc9f06d1abcb71b963f70ad5b85a69a2e7fd96",
+    "analyzer": "scripts/analyze_asmp8_qwen08_action_probe.py",
+    "analyzer_sha256": "032a7f23422473fa6c57bcfcf07c0080da826cc25fee5c503d5f8bec3981357c",
+    "prime_guard": "scripts/run_prime_asmp8_action_probe_guarded.sh",
+    "prime_guard_sha256": "084547e2b88241777f291ddc42eaa5dc3655009c3bbd06833c55045f65036fa5",
+    "tests": "tests/test_asmp8_qwen08_action_probe.py",
+    "tests_sha256": "fdf79f43f22b4fed1b6eeaa284dc81eb7029eec228c5948a0d75cc1b0f0cfb33",
+    "registered_test_command": "python -m pytest tests/test_asmp8_qwen08_action_probe.py tests/test_asmp8_qwen08_control_gate.py tests/test_qwen08_stratified_audits.py -q",
+    "registered_test_result": "12 passed"
+  },
+  "prime_execution": {
+    "availability_id": "724407",
+    "cloud_id": "1A100.40S.22V_SPOT",
+    "provider": "datacrunch",
+    "region": "FI",
+    "gpu_type": "A100 40GB (Spot)",
+    "listed_hourly_usd": 0.4515,
+    "maximum_planned_lifetime_seconds": 3600,
+    "maximum_estimated_cost_usd": 0.4515,
+    "remote_workspace": "/workspace/asmp8_action_probe_v0_1",
+    "local_recovery_path": "D:\\Research_Engine\\runs\\asmp8_qwen08_action_probe_prime_spot_v0_1",
+    "spot_interruption": "Any unplanned server-session count invalidates P0; partial receipts remain engineering evidence only."
+  },
+  "resource_caps": {
+    "workload_memory_mb": 4096,
+    "workload_cpu_percent": 50,
+    "workload_io_mb_s": 50,
+    "workload_timeout_seconds": 7200,
+    "gpu_allowance_mb": 1600,
+    "swap_bytes": 0,
+    "hard_abort_temperature_c": 88
+  },
+  "claim_boundary": "A pass would establish incremental held-out predictive utility for one constrained Qwen0.8B action distribution on this frozen synthetic controller panel. A fail would reject this probe and feature construction, not all hidden-state or target-conditioned model signals. Neither outcome establishes causality, deployment safety, scalable oversight, a Goodhart phase frontier, recursive self-improvement risk, or ASMP-8 resolution."
+}

@@ -1,0 +1,13 @@
+{
+  "command": "python run_verification_v0_22_1.py --registration registration_v0_22_1.json --output-dir artifacts_v0_22_1",
+  "completed_at_utc": "2026-07-29T02:45:59Z",
+  "git_commit": "cfe2e1433709a53f190e9b3fa1c9b9052f6fdd58",
+  "gpu_used": false,
+  "peak_resident_bytes": 38191104,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "protocol_sha256": "844f32158142e256ebbb03c7fcc70db7bd584e0385da93f5e075141044a142dc",
+  "python": "3.11.4",
+  "registration_sha256": "ce2038c8a0277acada81cc4206d5ec2f2b703c98a861dd3423f0677094743420",
+  "result_sha256": "a1039daf298ba89e20c7ca8eccfee9f3428a57712de40043184b1824f01afd5b",
+  "wall_seconds": 35.87642539999797
+}

@@ -1,0 +1,69 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7",
+  "file_count": 15,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "BLOCKED_AUDIT_v0_7.md": {
+      "bytes": 2944,
+      "sha256": "8D43355E2AD0DFC64546CF4AE87F06CAB47746BF6CCF8DC07E1514F7788623A2"
+    },
+    "FROZEN_GAME_SPECIFICATION_v0_7.md": {
+      "bytes": 10736,
+      "sha256": "269FFE30160FC4D2E832DCADAC3AACD3F16B03D1FFE7D65793A7A31CD3BA3766"
+    },
+    "PROTOCOL_QUANTIFIER_THEOREM_v0_7.md": {
+      "bytes": 4301,
+      "sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313"
+    },
+    "README.md": {
+      "bytes": 1152,
+      "sha256": "9F639386D1094AE83B9276A01386FC56248918542D7BBDB5E2EFF343D6957D4F"
+    },
+    "SCOPE_ADJUDICATION_PACKET_v0_7.md": {
+      "bytes": 4353,
+      "sha256": "6A8DD1473F2C7BBB2F9EB78DC4A9A6F16540B815A422948C2809DDEA1F564F97"
+    },
+    "artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "artifacts/protocol_quantifier_verification_v0_7.json": {
+      "bytes": 1500,
+      "sha256": "2B12E510EB9CDA14EFA5E4C116F7E7A2E12C78192BB5B204EACA1DB58A15C8BD"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2278,
+      "sha256": "2B7732444E05F33296F7420216B3DEFDA9956BB3889A35857155EFEBF507BA84"
+    },
+    "protocol_quantifier_harness.py": {
+      "bytes": 17781,
+      "sha256": "C61A64C6254D363D5CE5BE21D5AE3A7F528EAC3663B4EFC20061046A66FB5380"
+    },
+    "run_protocol_quantifier.py": {
+      "bytes": 121,
+      "sha256": "FDEC61FFD0BED99C55FAB2726A1322295B5C42B78C02F841A5F0548FD43617AD"
+    },
+    "test_protocol_quantifier.py": {
+      "bytes": 4321,
+      "sha256": "12B7C3501424D2A7BC99D326DEA4713569A0D6F951DAA0019B540E0F9433AE4C"
+    },
+    "verify_protocol_quantifier.py": {
+      "bytes": 7034,
+      "sha256": "0F135C09BB601E3D144882257F5C1E43D2795F814031CA5BC884C9CDFE513B34"
+    }
+  },
+  "release_status": "exact_quantifier_fork_scope_adjudication_pending",
+  "schema_version": "asmp3_protocol_quantifier_release_v0_7"
+}

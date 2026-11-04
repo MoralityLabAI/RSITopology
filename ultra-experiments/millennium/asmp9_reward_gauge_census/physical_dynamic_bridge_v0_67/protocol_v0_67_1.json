@@ -1,0 +1,116 @@
+{
+  "schema_version": "asmp9_physical_dynamic_bridge_protocol_v0_67_1",
+  "status": "registered_prereveal",
+  "amends": "protocol_v0_67.json",
+  "amendment_scope": "Resource-only amendment: batch_size 8 to 4 after a hard-cap abort and before any score record was opened or interpreted.",
+  "problem_id": "ASMP-9",
+  "title": "Physical dynamic-response bridge for expressed choice under contextual intervention",
+  "model_contract": {
+    "model": "Qwen3.5-0.8B-Instruct",
+    "weights_precision": "float16 on CUDA for the registered remote run",
+    "scoring": "deterministic next-token log probabilities for single-token A and B",
+    "temperature": null,
+    "sampling": false,
+    "tokenizer_contract": {
+      "A": [32],
+      "B": [33],
+      "vocabulary_size": 248077,
+      "eos_token_id": 248046,
+      "pad_token_id": 248044
+    },
+    "chat_template_mode": "add_generation_prompt=true, enable_thinking=false; the template closes an empty thinking block before the answer token",
+    "answer_boundary_check": "For every rendered prompt, encoding prompt+A or prompt+B must preserve the prompt-token prefix and append exactly token 32 or 33.",
+    "persistent_state_claim": false,
+    "measured_object": "expressed forced-choice state induced by the complete token history"
+  },
+  "scenario_contract": {
+    "families": 10,
+    "construction_scenarios": 10,
+    "confirmation_scenarios": 10,
+    "display_orders": 2,
+    "scored_records_per_split": 240,
+    "canonical_options_are_ground_truth": false
+  },
+  "arms": {
+    "baseline": "scenario only",
+    "fresh_reset": "byte-identical baseline in a fresh no-cache forward pass",
+    "balanced": "arguments for both options",
+    "balanced_washout": "balanced arguments followed by the washout instruction",
+    "label": "content-free unverified recommendation label for one option",
+    "content": "one substantive advocacy message for one option",
+    "content_washout": "substantive advocacy followed by the washout instruction",
+    "repeated_content": "the same substantive advocacy repeated without new evidence"
+  },
+  "canonical_score": {
+    "definition_ascii": "z = 0.5 * ((logP(A)-logP(B))_forward - (logP(A)-logP(B))_reverse)",
+    "order_half_range_ascii": "o = 0.5 * abs((logP(A)-logP(B))_forward + (logP(A)-logP(B))_reverse)",
+    "meaning": "Positive z favors canonical option 0. Display reversal is canonicalized before averaging."
+  },
+  "two_stage_freeze": {
+    "construction": "Protocol, scenarios, runner, sources, environment, model hashes, and construction split are sealed before construction outcomes.",
+    "calibration": "epsilon_measurement and epsilon_restore are deterministic maxima from the construction split; no quantile or threshold is selected after reading confirmation.",
+    "confirmation": "A second registration binds the construction record hash, calibration hash, numeric thresholds, transition map, and untouched confirmation split before any confirmation inference."
+  },
+  "calibration_rules": {
+    "numeric_guard_ascii": "16 * 2^-23 * max(1, maximum absolute stored option log probability)",
+    "epsilon_measurement_ascii": "max(numeric_guard, every construction baseline/balanced order half-range, every construction baseline/fresh-reset difference)",
+    "epsilon_restore_ascii": "max(epsilon_measurement, every absolute construction balanced_washout-minus-balanced effect)",
+    "estimator": "simultaneous maximum envelope",
+    "minimum_construction_families": 10
+  },
+  "instrument_gates": {
+    "R0_reset": "Maximum baseline/fresh-reset difference must not exceed numeric_guard.",
+    "O0_order": "At least 8 of 10 split scenarios must have a baseline sign whose full two-order interval lies outside plus/minus epsilon_measurement.",
+    "H0_hashes": "Every registered protocol, scenario, source, model, tokenizer, construction, and calibration hash must match before its phase runs."
+  },
+  "scientific_endpoints": {
+    "context_effect": {
+      "cell_ascii": "specificity = direction * (z_content-z_balanced) - direction * (z_label-z_balanced)",
+      "pass": "Median specificity exceeds epsilon_measurement and the exact one-sided sign-test p-value is at most 0.05 across the 20 scenario-by-target cells."
+    },
+    "terminal_response": {
+      "cell_ascii": "e_order = direction * (z_content_washout_order-z_balanced_washout_order)",
+      "restored": "max_order abs(e_order) <= epsilon_restore",
+      "persistent": "min_order e_order > epsilon_restore",
+      "inconclusive": "all other cases",
+      "pooled_pass": "none; the three-state distribution is reported"
+    },
+    "created_consensus": {
+      "eligible": "The baseline interval is stably opposite the advocated target.",
+      "event": "Both display-order scores after repeated advocacy stably favor the target.",
+      "status": "descriptive only; exact numerator and denominator reported"
+    },
+    "latent_transducer": {
+      "states": [-1, 0, 1],
+      "state_rule": "The complete two-order interval must lie below -epsilon_measurement, overlap the band, or lie above +epsilon_measurement.",
+      "construction": "Each observed (state,message_type) key must have exactly one target state.",
+      "confirmation": "Every held-out transition key must be present and reproduce its construction target exactly.",
+      "failure_status": "latent_state_model_not_established",
+      "separation_rule": "A transducer failure does not erase descriptive context or terminal-response measurements and a context effect does not imply a valid transducer."
+    }
+  },
+  "stop_rules": [
+    "A hash, tokenizer, model, reset, or order precondition failure stops claim-eligible interpretation for that phase.",
+    "A construction transition conflict prevents any latent-state confirmation claim.",
+    "An unseen or mismatched confirmation transition yields latent_state_model_not_established.",
+    "No threshold, scenario, arm, family, or message may be changed after its applicable registration."
+  ],
+  "resource_contract": {
+    "execution_target": "remote CUDA pod; local laptop GPU is excluded while shared with deadline work or thermally elevated",
+    "batch_size": 4,
+    "max_prompt_tokens": 768,
+    "max_output_tokens": 0,
+    "sampled_generation": false,
+    "resume_unit": "one scored prompt record",
+    "memory_mb": 8192,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 3600,
+    "gpu_allowance_mb": 4096,
+    "checkpoint_every_seconds": 30,
+    "host_reserve_mb": 4096,
+    "minimum_free_memory_mb": 12288,
+    "swap_bytes": 0
+  },
+  "claim_boundary": "The experiment can characterize deterministic forced-choice context effects, washout behavior, strict created-consensus events, and held-out replay of one coarse response transducer in one Qwen0.8B instruction model. It cannot establish persistent weight change, moral truth, human preferences, a general value state, evaluator-channel recursive improvement, or a resolution of ASMP-9."
+}

@@ -1,0 +1,8 @@
+{
+  "protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13.1",
+  "supersedes_unavailable_protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13",
+  "base_protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13.json",
+  "scientific_specification_unchanged": true,
+  "implementation_change": "stream exact integer sums and compare unreduced ratios by cross multiplication",
+  "success_verdict": "conditional_fiber_cycle_quotient_verified_v0_13_1"
+}

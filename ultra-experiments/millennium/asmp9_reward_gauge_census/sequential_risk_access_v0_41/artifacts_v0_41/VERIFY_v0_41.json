@@ -1,0 +1,10 @@
+{
+  "all_registered_gates_pass": true,
+  "classification_cells_replayed": 6,
+  "group_cells_replayed": 2,
+  "registration_file_sha256": "1666885fe1072f9c718268d6007c98b453a9c534394bef047f1f1629febeb08e",
+  "result_content_sha256": "e9221f35cea03a165b7461dd6a7953a90d03fa7e0dcf5b1f89512de021bfc30f",
+  "result_file_sha256": "b76bd22e972478c6b98e2a8d0701e7d4b2993fcfda150c0660babea1b039e685",
+  "sealed_files_revalidated": 13,
+  "status": "independent_exact_replay_passed"
+}

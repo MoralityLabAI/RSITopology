@@ -1,0 +1,23 @@
+{
+  "schema_version": "asmp8_audit_efficiency_registration_v0_5",
+  "protocol_id": "asmp8.goodhart.audit_efficiency.v0.5",
+  "registered_at_utc": "2026-07-23T15:17:35.3311941Z",
+  "status": "prospective_registration_before_claim_run",
+  "source_commit_before_registration": "0d540762a0f302ea633f4143d6b779cc29c65367",
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/CLAIM_PACKET_v0_5.md": "04f6543b4d816bf274c8519b0f96a081af10e20d4faca75683c622eac032272a",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/PRIOR_ART_v0_5.md": "b379b9eeefdfbfbe07649648163fc6c0558d5c40c60fb60d040b9e00ec8d4620",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/README.md": "3f1e79297b9dfc3552d5edfba5d06ced60f281bb82d28ee03fd18b92f074fc78",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/efficiency.py": "0d257e42e2428a89dab1ab9e8a06bd9c72e1792cce35646f1d6041872d0e1924",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/protocol_v0_5.json": "ecbad60b1d2ba9c7310ae0dbc8503740701b660a4c9f9868604c17f33e0c33bb",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/run.py": "8c7635d2c83483985a444e5e752c87ef4912f004ad4fe9e25d290fb17e87683c",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/schemas.py": "a2912b98599ceafdb2a14b99bb449d79ec76bf52a8d164d8ce0bb77ed8614489",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/test_efficiency.py": "8087a91c385a3a4cb9ff8adf265d00db0ea573330de369c869cf63b8479b8294",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_5_audit_efficiency/verify_result.py": "f213da7eef301040d846d952fc41e58a22ed690848a1a2e00640e853d75f5f34",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/calibration.py": "1df845085ddc6cbb4799169a4277cce13cd4061ea5262d2216753370cc05844f",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_3_calibrated_certificate/protocol_v0_3.json": "b556b5e98eeba8a213d2ecd677cea5485a6b649d498ee4d5f42530c57bedc6fe",
+    "ultra-experiments/millennium/asmp8_goodhart_frontier_census/v0_4_dynamic_threshold/artifacts_v0_4/policy_thresholds_v0_4.csv": "be9d2cf3998a5d2842087da355e7bc80174455dc983bde4218548414972512ae"
+  },
+  "registered_primary_estimand": "Matched first-passage audit counts for shared Hoeffding, shared empirical Bernstein, deterministic movement-ordered partial census, and full finite census.",
+  "claim_boundary": "Synthetic 64-outcome audit-efficiency comparison; movement-ordered census assumes enumerable atoms and no learned reward model or ASMP-8 resolution."
+}

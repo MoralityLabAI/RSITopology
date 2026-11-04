@@ -1,0 +1,16 @@
+{
+  "claim_packet_sha256": "e2f232c603dc05ebeadcf328eea9e30590da9a32739c26d07a42be2815f5363e",
+  "environment": {
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "git_commit_at_run": "04c44f536d47e89180234e73a71467861cddd74e",
+  "git_tracked_diff_sha256_at_run": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "protocol_sha256": "e4e0113b84fe430330294302c9667280a338d09113747b6591330bf03c6be900",
+  "result_sha256": "97cb809845241d828596a075fbf8169e98af787ac5154ad80df4f1ab3d54382b",
+  "runner_sha256": "e33e3e91c6541a3503e56b910921d303373bff5d54b5afeed1891361e9c8b4c3",
+  "schema_version": "asmp4_two_port_game_receipt_v0_1",
+  "tests_sha256": "2007620993ef9fc2a43ac3ba77c860596bf04735ce64936211c6bd4dcbdc6391",
+  "verifier_sha256": "36bfaf24fcd6be266fd68aa80f9f222515489660ab7534591bfed8bb18ddcd6d"
+}

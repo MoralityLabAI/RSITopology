@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 49.03765310000745,
+  "implementation_commit": "d67e4e87e579129ce246ade63b7af4da59ca7415",
+  "output_hashes": {
+    "RESULT_v0_7.md": "c06d418c569727e6e13ac7f1007d55df4e0f2943d31334a4a568f33d836db636",
+    "result_v0_7.json": "be682e0b8ba11d54da34288085867a609a5bcfbbb8c396bf3aae9e15938a7f13"
+  },
+  "protocol_id": "ASMP-9-BEHAVIORAL-WELLPOSEDNESS-v0.7",
+  "registration_commit": "02a84307c884d70a40b80c626a7d3c5c637b0faf",
+  "registration_sha256": "198a60f8857898642e257cb600b0d91b13dc2687658ab799b944e78bd3ffb07a"
+}

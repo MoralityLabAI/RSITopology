@@ -1,0 +1,62 @@
+{
+  "binding_diagnostics": {
+    "commit_resolution_error": "",
+    "source_mismatches": [],
+    "source_read_errors": {},
+    "verification_replay_matches_artifact": true
+  },
+  "bindings": {
+    "artifacts": {
+      "protocol_v0_2.json": "59239383bbcbee827870450080365cb22102df040f402c09f04ed578486afec0",
+      "result_v0_2.json": "7e28898c132996212482454a97c73eb95466bd2c8f8b60e994bb5d06d804c32c",
+      "verification_v0_2.json": "4d500af4d8747f2ee218ec2fe126e1f52a16981c4f42699a17138d9fd642c586"
+    },
+    "committed_source_files": {
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/PROTOCOL_v0_2.md": "ac075cf85277877ef95cb780063aec729a909285a55e57ac0e0332c0668fa907",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/README.md": "1edb3354c2ba0120aa7d2777fa9b0ea116f76fb9bf2ba080efcd99a6845be6db",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/balanced_cover.py": "546d14e15b7d24c0c9f15b93b3d214c3ea5d8b2dac0fecd6b57ccece7f36e5e6",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/protocol_v0_2.json": "59239383bbcbee827870450080365cb22102df040f402c09f04ed578486afec0",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/run.py": "0c2b8c856b0ff547ee4c3410ad8c3862ec4fa8ac171ef6fe3f8a1e1eb68acf03",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/synthesize_receipt.py": "f12141e0b04514a6541f9a1aa935d57246049248e871d32b659fdec990d907b5",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/test_balanced_cover.py": "9633542c9ae5119ed7a37f3732de5322283d33966531c0ab931f9e2c69bf0030",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/verify_independent.py": "925ce4e2a0d59dd5b314ec331cf9f36d47a549d431b6988462dda3691477f2d0"
+    },
+    "resolved_source_commit": "75757216a7c6c73d704308170006ef0ecd700d99",
+    "source_files": {
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/PROTOCOL_v0_2.md": "ac075cf85277877ef95cb780063aec729a909285a55e57ac0e0332c0668fa907",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/README.md": "1edb3354c2ba0120aa7d2777fa9b0ea116f76fb9bf2ba080efcd99a6845be6db",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/balanced_cover.py": "546d14e15b7d24c0c9f15b93b3d214c3ea5d8b2dac0fecd6b57ccece7f36e5e6",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/protocol_v0_2.json": "59239383bbcbee827870450080365cb22102df040f402c09f04ed578486afec0",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/run.py": "0c2b8c856b0ff547ee4c3410ad8c3862ec4fa8ac171ef6fe3f8a1e1eb68acf03",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/synthesize_receipt.py": "f12141e0b04514a6541f9a1aa935d57246049248e871d32b659fdec990d907b5",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/test_balanced_cover.py": "9633542c9ae5119ed7a37f3732de5322283d33966531c0ab931f9e2c69bf0030",
+      "ultra-experiments/millennium/asmp6_semantic_collusion_frontier/v0_2_balanced_cover/verify_independent.py": "925ce4e2a0d59dd5b314ec331cf9f36d47a549d431b6988462dda3691477f2d0"
+    }
+  },
+  "checks": {
+    "C0_source_commit_resolves_exactly": true,
+    "C1_source_files_match_commit": true,
+    "C2_frozen_protocol_binding": true,
+    "C3_primary_result_identity_and_preverification_state": true,
+    "C4_verification_pass_and_gates": true,
+    "C5_verification_binds_protocol_and_primary_result": true,
+    "C6_final_conclusion_layers_match_verified_scope": true,
+    "C7_claim_boundary_matches_protocol": true
+  },
+  "claim_boundary": [
+    "one-shot opaque-symbol laws only",
+    "exactly two equiprobable messages only",
+    "uniform benign cover law only",
+    "exact message-averaged cover and exact per-message control only",
+    "no learned or linguistic encoder",
+    "no multiletter or ASMP-6 resolution claim"
+  ],
+  "claim_support": "one_shot_two_equiprobable_messages_uniform_exact_average_cover",
+  "measurement_reliability": "independent_full_grid_continuous_extremal_and_dual_replay_passed",
+  "metric_robustness": "five_probe_pack_independently_replayed",
+  "operational_decision": "register_multiletter_successor",
+  "pass": true,
+  "schema_version": "asmp6_balanced_cover_final_receipt_v0_2_1",
+  "source_commit": "75757216a7c6c73d704308170006ef0ecd700d99",
+  "task_result": "sharp_uniform_alphabet_parity_frontier"
+}

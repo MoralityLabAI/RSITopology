@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_partition_probe_noise_path_premise_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status": true,
+    "V1_observation_partitions_reconstructed": true,
+    "V2_all_73_probe_frontiers_reconstructed": true,
+    "V3_all_76_trace_without_H_rows_reconstructed": true,
+    "V4_all_270_sharp_path_rows_reconstructed": true,
+    "V5_path_error_digest_and_zero_success_case_reconstructed": true,
+    "V6_all_six_premise_counterfamilies_reconstructed": true,
+    "V7_all_12_parent_compositions_reconstructed": true,
+    "V8_all_10_producer_gates_true": true,
+    "V9_claim_boundary_preserves_black_box_scope": true
+  },
+  "claim_boundary": "This checker certifies minimality only for the registered black-box Las Vegas observation model. It does not exclude task-specific structure, non-black-box access, or a different normative interface.",
+  "passed": true,
+  "schema_version": "asmp3_online_contract_minimality_verification_v2_11"
+}

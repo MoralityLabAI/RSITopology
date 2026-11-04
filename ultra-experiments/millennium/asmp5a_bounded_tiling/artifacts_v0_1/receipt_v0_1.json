@@ -1,0 +1,13 @@
+{
+  "environment": {
+    "cpu_count": 12,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "psutil": "7.0.0",
+    "python": "3.11.4"
+  },
+  "protocol_sha256": "7fc0988f1a013cd600b21609018c9c5090eae3d58e3396f225d489e10ce2cc55",
+  "registration_sha256": "d6252c2072d9fcaa3e65d849e1cde1aeff9a5328a4e18342d8947df2032005f6",
+  "result_sha256": "a221d2e57d22ff8480fb5f6c27d1b3eba4edce26092d73c1db3003bb1cc2ff3b",
+  "schema_version": "asmp5a_bounded_tiling_receipt_v0_1",
+  "source_commit": "77da25f5328f4cb7ffa29e3532c5949c13fa7d9c"
+}

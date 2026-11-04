@@ -1,0 +1,12 @@
+{
+  "schema_version": "asmp4_public_connector_contract_v0_34",
+  "objective": "derive v0.33 safe closing from compact connected local controllability on the registered public information state",
+  "requirements": {
+    "state": "registered public information state, not uncharged plant state",
+    "topology": "compact connected recurrent safe component with a finite safe local-connector subcover",
+    "local_certificate": "every two public states in one cover element have a safe causal connector that resets registered memories",
+    "cost": "separate nonnegative read and write connector bounds",
+    "overlap": "cover edges require intersection inside the safe public component"
+  },
+  "scope_boundary": "the theorem does not derive public local connector certificates from the underspecified canonical normally hyperbolic plant wording"
+}

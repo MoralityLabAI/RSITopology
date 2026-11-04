@@ -1,0 +1,20 @@
+{
+  "schema_version": "asmp4_causal_encoder_contract_v0_22",
+  "domain": "finite registered two-q-class support-zero-error sensor transducers",
+  "observation": "causal sensor encoder receives the raw output history before each current write",
+  "encoder": {
+    "state": "reachable subset belief B initialized at registered I",
+    "emit": "the singleton current q class Q(B,y)",
+    "update": "B_next=Delta(B,y)",
+    "raw_charging": "raw y is internal observation and need not remain recoverable",
+    "normal_channel": "normal cell remains separately injective and cannot encode q or sensor state"
+  },
+  "theorem": {
+    "feasibility": "causal encoder exists iff every reachable raw transition is q-homogeneous",
+    "finite_read_words": "2^T ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "region": "[2,infinity) x [2,infinity)",
+    "infeasible_case": "empty region"
+  },
+  "scope": "encoder-optimized local collar semantics, not forced-raw charging"
+}

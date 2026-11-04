@@ -1,0 +1,26 @@
+{
+  "file_count": 19,
+  "files": {
+    "DEVELOPMENT_NOTE_v0_25.md": "3368c111c698c918d39604430ab5850eec5e3bbe30dc0a600a2deac1a7b1f729",
+    "POSTRUN_NOTE_v0_25.md": "5e3273e5fdf188d3b1e8e288e318e72cb0596381e2b3f39d7fd6dc8de2867e99",
+    "PRIOR_ART_GATE_v0_25.md": "e5d730e9f151ee6a9e9c2fdfdad269cff315383d6a3a26319a281359ee2912d0",
+    "PUBLIC_SUMMARY_v0_25.md": "145221ad97d44773ad41a04d93b8181646050c8a4fc27b3e6e0b7f9702301547",
+    "README.md": "8e270671f0b87352ac5b6a4f11ecb29b4267f5785529e21e695648cdbc1cbf59",
+    "THEORY_DRAFT_v0_25.md": "093eed0786b258ad5d43dc185359c170044095984207be382d5fd72afb3db4e0",
+    "artifacts_v0_25/independent_verification_v0_25.json": "e2246e946ab01c6968ac6b0942d97660517606874542b8859344b7a75d884a94",
+    "artifacts_v0_25/result_v0_25.json": "1c7bfcd79fc2574a5055729e38b62f5eeb92d8834fab6777a6ba1116d3e162c5",
+    "artifacts_v0_25/run_receipt_v0_25.json": "fc489bac8d148549b5f627e5d60ec935387bf1e6fa494306b1e2fe9f49edc151",
+    "environment_lock_v0_25.json": "3ffe2b9d4fec3d958cad3d851dd4464c38dda8dd435a035df548eee5a44f3d1a",
+    "make_release_manifest_v0_25.py": "ac3a66f3009ddd4efc934232e0c1fc63f2f09be1ee3db096007e68b39ef18024",
+    "protocol_v0_25.json": "40be5f680fcfac9eef27c2bd34e8e8c22ebb30dd0aa3371f5299cb8c7b4a3154",
+    "register_v0_25.py": "ecf4781ebb888125f47e9b4261ee5abe00ec993673793a6f00458739f597e49e",
+    "registration_v0_25.json": "6b839a8ac1bfbf46b28a016061e243f3e8d0c8e4385c69c802d26168b25a83fd",
+    "run_verification_v0_25.py": "37374603435a4c3b56fdbc03b09132e799f073bb9280f082248f5bcba631c4f3",
+    "test_protocol_v0_25.py": "de4f7f458d0cbd18bd570992ce2372a6246167273e14eb6272e6bd9bce93a511",
+    "test_theta_optimizer_v0_25.py": "9a28ebd5bdebfbab8cc30619670276b6754c26065b87dac21263df206567cb11",
+    "theta_optimizer.py": "036d644263d57f0e87b41740fdc72834d3e336f79f90a739566591da1581896a",
+    "verify_result_v0_25.py": "f7167555495208c6c2bb9a30079146bd1d8e4f00112a6a35ea3c0bb4e26b1f1e"
+  },
+  "generated_at_utc": "2026-07-29T03:49:01Z",
+  "manifest_id": "ASMP-9-THETA-OPTIMIZER-v0.25-release"
+}

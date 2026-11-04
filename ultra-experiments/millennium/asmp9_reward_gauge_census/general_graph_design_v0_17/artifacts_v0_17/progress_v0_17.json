@@ -1,0 +1,18 @@
+{
+  "completed_stages": [
+    "registration_binding",
+    "registry_completeness",
+    "residual_rank",
+    "three_state_compression",
+    "endpoint_reduction",
+    "bad_supports",
+    "exponent_certificates",
+    "finite_counterexample",
+    "result_and_report"
+  ],
+  "elapsed_seconds": 81.5595839000016,
+  "peak_resident_bytes": 24076288,
+  "protocol_id": "ASMP-9-GENERAL-GRAPH-ALLOCATION-v0.17",
+  "stage": "completed",
+  "status": "completed"
+}

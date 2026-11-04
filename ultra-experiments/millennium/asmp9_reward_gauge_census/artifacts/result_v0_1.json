@@ -1,0 +1,381 @@
+{
+  "census": {
+    "acyclic_graphs": 3270,
+    "beta_histogram": [
+      {
+        "beta_1": 0,
+        "graph_count": 2,
+        "vertices": 2
+      },
+      {
+        "beta_1": 0,
+        "graph_count": 7,
+        "vertices": 3
+      },
+      {
+        "beta_1": 1,
+        "graph_count": 1,
+        "vertices": 3
+      },
+      {
+        "beta_1": 0,
+        "graph_count": 38,
+        "vertices": 4
+      },
+      {
+        "beta_1": 1,
+        "graph_count": 19,
+        "vertices": 4
+      },
+      {
+        "beta_1": 2,
+        "graph_count": 6,
+        "vertices": 4
+      },
+      {
+        "beta_1": 3,
+        "graph_count": 1,
+        "vertices": 4
+      },
+      {
+        "beta_1": 0,
+        "graph_count": 291,
+        "vertices": 5
+      },
+      {
+        "beta_1": 1,
+        "graph_count": 317,
+        "vertices": 5
+      },
+      {
+        "beta_1": 2,
+        "graph_count": 235,
+        "vertices": 5
+      },
+      {
+        "beta_1": 3,
+        "graph_count": 125,
+        "vertices": 5
+      },
+      {
+        "beta_1": 4,
+        "graph_count": 45,
+        "vertices": 5
+      },
+      {
+        "beta_1": 5,
+        "graph_count": 10,
+        "vertices": 5
+      },
+      {
+        "beta_1": 6,
+        "graph_count": 1,
+        "vertices": 5
+      },
+      {
+        "beta_1": 0,
+        "graph_count": 2932,
+        "vertices": 6
+      },
+      {
+        "beta_1": 1,
+        "graph_count": 5582,
+        "vertices": 6
+      },
+      {
+        "beta_1": 2,
+        "graph_count": 7120,
+        "vertices": 6
+      },
+      {
+        "beta_1": 3,
+        "graph_count": 6915,
+        "vertices": 6
+      },
+      {
+        "beta_1": 4,
+        "graph_count": 5215,
+        "vertices": 6
+      },
+      {
+        "beta_1": 5,
+        "graph_count": 3057,
+        "vertices": 6
+      },
+      {
+        "beta_1": 6,
+        "graph_count": 1371,
+        "vertices": 6
+      },
+      {
+        "beta_1": 7,
+        "graph_count": 455,
+        "vertices": 6
+      },
+      {
+        "beta_1": 8,
+        "graph_count": 105,
+        "vertices": 6
+      },
+      {
+        "beta_1": 9,
+        "graph_count": 15,
+        "vertices": 6
+      },
+      {
+        "beta_1": 10,
+        "graph_count": 1,
+        "vertices": 6
+      }
+    ],
+    "component_histogram": [
+      {
+        "components": 1,
+        "graph_count": 1,
+        "vertices": 2
+      },
+      {
+        "components": 2,
+        "graph_count": 1,
+        "vertices": 2
+      },
+      {
+        "components": 1,
+        "graph_count": 4,
+        "vertices": 3
+      },
+      {
+        "components": 2,
+        "graph_count": 3,
+        "vertices": 3
+      },
+      {
+        "components": 3,
+        "graph_count": 1,
+        "vertices": 3
+      },
+      {
+        "components": 1,
+        "graph_count": 38,
+        "vertices": 4
+      },
+      {
+        "components": 2,
+        "graph_count": 19,
+        "vertices": 4
+      },
+      {
+        "components": 3,
+        "graph_count": 6,
+        "vertices": 4
+      },
+      {
+        "components": 4,
+        "graph_count": 1,
+        "vertices": 4
+      },
+      {
+        "components": 1,
+        "graph_count": 728,
+        "vertices": 5
+      },
+      {
+        "components": 2,
+        "graph_count": 230,
+        "vertices": 5
+      },
+      {
+        "components": 3,
+        "graph_count": 55,
+        "vertices": 5
+      },
+      {
+        "components": 4,
+        "graph_count": 10,
+        "vertices": 5
+      },
+      {
+        "components": 5,
+        "graph_count": 1,
+        "vertices": 5
+      },
+      {
+        "components": 1,
+        "graph_count": 26704,
+        "vertices": 6
+      },
+      {
+        "components": 2,
+        "graph_count": 5098,
+        "vertices": 6
+      },
+      {
+        "components": 3,
+        "graph_count": 825,
+        "vertices": 6
+      },
+      {
+        "components": 4,
+        "graph_count": 125,
+        "vertices": 6
+      },
+      {
+        "components": 5,
+        "graph_count": 15,
+        "vertices": 6
+      },
+      {
+        "components": 6,
+        "graph_count": 1,
+        "vertices": 6
+      }
+    ],
+    "cyclic_graphs": 30596,
+    "graph_count": 33866
+  },
+  "claim_boundary": {
+    "established_on_pass": "For exact real-valued loop-return queries on the registered graph class, a fundamental cycle basis identifies the edge-reward quotient modulo potential shaping and the query-count threshold is beta_1.",
+    "not_established": [
+      "the same threshold for noisy or ordinal human preferences",
+      "discounted potential shaping",
+      "reward recovery in an MDP from behavior",
+      "practical dominance of shaping ambiguity",
+      "novelty of the underlying graph-cohomology identity",
+      "ASMP-9 resolution"
+    ]
+  },
+  "failure_examples": {
+    "annihilation": [],
+    "boundary": [],
+    "cycle_rank": [],
+    "forest": [],
+    "threshold": []
+  },
+  "gates": {
+    "G0_registration_binding": {
+      "commit": "7ee30353af8db7e9d8d246afcffbe500348a7256",
+      "pass": true,
+      "sealed_inputs": {
+        "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": {
+          "git_blob": "8d90a0a2a3e57d97aec7f17571f69281b9ed6016",
+          "sha256": "d061ace51368a5adbb4bd208e419cd15870eb52474b0a6c8a024a4a7c88ec3d8"
+        },
+        "ultra-experiments/millennium/asmp9_reward_gauge_census/protocol_v0_1.json": {
+          "git_blob": "ad566cb42e14d62dc22eab236e91fb96ff13237c",
+          "sha256": "d7538802d1fedae412661f5db54fdae82aed9f764f1c4b8281bdd26fe1c110f9"
+        },
+        "ultra-experiments/millennium/asmp9_reward_gauge_census/run.py": {
+          "git_blob": "7384981f9d91a2ab82b705af4750c57b766d6661",
+          "sha256": "d3d02afb7ff37acff3d866ea61abffad1da570d96deab13afe58274a95957ba8"
+        },
+        "ultra-experiments/millennium/asmp9_reward_gauge_census/test_reward_gauge.py": {
+          "git_blob": "738b574b69c441df7540e0ada7cdb690799f92d7",
+          "sha256": "978b62e2033cfb5e560966a5e26a13a94d10d7efb9c2907a4610ee15e9fffaff"
+        },
+        "ultra-experiments/millennium/asmp9_reward_gauge_census/verify_result.py": {
+          "git_blob": "434e4869b0a1678f458d794921541cb3481e41af",
+          "sha256": "b69181d45e9e18a09672c241ad95d461560ab5c61ba641f884b650dcdaca60e4"
+        }
+      },
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "G1_complete_graph_census": {
+      "expected": 33866,
+      "observed": 33866,
+      "pass": true,
+      "per_n": {
+        "2": 2,
+        "3": 8,
+        "4": 64,
+        "5": 1024,
+        "6": 32768
+      }
+    },
+    "G2_cycle_rank_identity": {
+      "boundary_failures": 0,
+      "cycle_rank_failures": 0,
+      "pass": true
+    },
+    "G3_gauge_annihilation": {
+      "failures": 0,
+      "pass": true
+    },
+    "G4_exact_access_threshold": {
+      "cyclic_graphs": 30596,
+      "failures": 0,
+      "pass": true
+    },
+    "G5_tree_and_forest_negative_control": {
+      "acyclic_graphs": 3270,
+      "failures": 0,
+      "pass": true
+    },
+    "G6_ordinal_access_counterexample": {
+      "difference_cycle_return": 3,
+      "exact_returns": [
+        3,
+        6
+      ],
+      "ordinal_signs": [
+        1,
+        1
+      ],
+      "pass": true
+    }
+  },
+  "ordinal_counterexample": {
+    "cycle": [
+      1,
+      -1,
+      1
+    ],
+    "cycle_boundary": [
+      0,
+      0,
+      0
+    ],
+    "difference_cycle_return": 3,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "exact_returns": [
+      3,
+      6
+    ],
+    "non_gauge_equivalent": true,
+    "ordinal_signs": [
+      1,
+      1
+    ],
+    "pass": true,
+    "reward_one": [
+      1,
+      -1,
+      1
+    ],
+    "reward_two": [
+      2,
+      -2,
+      2
+    ],
+    "same_ordinal_observation": true
+  },
+  "resources": {
+    "memory_ceiling": 536870912,
+    "python_peak_bytes": 1719016,
+    "wall_ceiling": 120,
+    "wall_seconds": 7.132155400002375
+  },
+  "verdict": "exact_finite_reward_gauge_access_threshold_seed_established"
+}

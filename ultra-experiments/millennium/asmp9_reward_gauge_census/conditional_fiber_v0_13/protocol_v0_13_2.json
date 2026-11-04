@@ -1,0 +1,14 @@
+{
+  "protocol_id": "ASMP-9-CONDITIONAL-FIBER-v0.13.2",
+  "supersedes_unavailable_protocol_ids": [
+    "ASMP-9-CONDITIONAL-FIBER-v0.13",
+    "ASMP-9-CONDITIONAL-FIBER-v0.13.1"
+  ],
+  "base_protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13.json",
+  "scientific_specification_unchanged": true,
+  "implementation_changes": [
+    "stream exact integer sums and compare unreduced ratios by cross multiplication",
+    "construct the proven simple-cycle zero-balance fiber directly"
+  ],
+  "success_verdict": "conditional_fiber_cycle_quotient_verified_v0_13_2"
+}

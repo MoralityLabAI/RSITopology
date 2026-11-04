@@ -1,0 +1,25 @@
+{
+  "registration_id": "ASMP-9-UNCONDITIONAL-AVAILABILITY-v0.14-registration",
+  "registered_at_utc": "2026-07-28T22:04:36Z",
+  "implementation_commit": "e59072fcab115a3d38b9b4b887d5e7024b89741c",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/protocol_v0_14.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/DEVELOPMENT_CENSUS_v0_14.json": "6bd76453d6947e168b9b805eeddf1ef61b63de00a068435732cdcd339be12f3e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/DEVELOPMENT_CENSUS_v0_14_1.json": "d53700ad0594a6c135a4a27f54a6ffa68817e40a2c3f77e5cf26c4a437eb5045",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/DEVELOPMENT_CENSUS_v0_14_1_receipt.json": "819943c07d14df57a724a775b588ed5d261ccf6b288b15ab47de0dbbe44ef082",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/DEVELOPMENT_CENSUS_v0_14_receipt.json": "c5d655b96cb1b5109547d8a12d4fcdc937bf6f94a7189687acb2251381822e25",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/DEVELOPMENT_NOTE_v0_14.md": "9d70c6b54d79d1c3e3b6328c57303efbe3cdaf77a44af7e756ef7fa628c93baa",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/PRIOR_ART_GATE_v0_14.md": "b89f1d1d71a2b798b8ae8272168702c93f7b35225d1e2fcf45579c48b2923990",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/PROTOCOL_v0_14.md": "e4f5471504c37f3fec09c8c0f16528d90435dcf3affc10e308ef592ad6dcbe9d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/README.md": "6771ead24ba3ca400f620815788feac0e15f92e738c2a32e63748a63c01cedf8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/THEOREM_v0_14.md": "5fc4ab1a8bf8532cda52169ed276f37d27c2e67807e16a60b29eaa99bc7244eb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/development_census.py": "39e2c48d59209640960be4bdf88b6118872ca5b9a1dd4d614a78dd79c6c4a408",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/environment_v0_14.json": "14c0f5aa36d533f57cf78fcfc2e34b575c2ff9731b118a30717073496628343a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/experiment.py": "eeacada6b34fd9c35b81535370b87323ed56baf9a3e0800bce9081366ecc8c08",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/protocol_v0_14.json": "e56a62a9c186dac989639ed1b2c9080d3c4b80ecb4535dc13d1398e6b3abd6c8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/run_verification.py": "8823ecad9491b01a24e71ac3f91a38b368b92f0b6d10f7f586fb507a494d4267",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/test_experiment.py": "61be660d13b4f531a8ecb9145f2a24f5a18ef91ff09f760d523341227a9a79f7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/test_run_verification.py": "c0c79000fb8221010fd79b5e7d0a8dcd41007c93164d9788ac985da033c0891b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unconditional_availability_v0_14/verify_result.py": "65dae1a1ac11d00e57c55cdec88d58816335523b81342672f8edd9c2c0b51723"
+  }
+}

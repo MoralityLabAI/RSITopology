@@ -1,0 +1,80 @@
+{
+  "schema_version": "asmp3_typed_successor_draft_v0_2",
+  "status": "nonnormative_successor_draft",
+  "parent_problem_id": "ASMP-3",
+  "parent_problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "changes_parent_problem": false,
+  "motivation_experiment": "ASMP-3-PROTOCOL-QUANTIFIER-FORK-v0.7",
+  "typed_layers": {
+    "environment": [
+      "public_instances",
+      "semantic_worlds",
+      "outputs",
+      "decision_relation",
+      "semantic_atoms",
+      "registered_replications",
+      "ideal_oracle",
+      "complete_noise_class",
+      "prover_information",
+      "verifier_information",
+      "prover_budget"
+    ],
+    "fixed_game": [
+      "message_alphabet",
+      "canonical_serialization",
+      "message_order",
+      "stopping_rule",
+      "randomness",
+      "resource_budgets",
+      "malformed_and_abort_behavior",
+      "payoff",
+      "refute_relation"
+    ],
+    "protocol": [
+      "honest_prover_algorithm",
+      "adversarial_strategy_class",
+      "verifier_algorithm"
+    ]
+  },
+  "interface_modes": {
+    "fixed": {
+      "class_name": "WV-FIX",
+      "interface_quantifier": "fixed_before_protocol_algorithms",
+      "refutation_invariant": "replication_quotiented_r_E_G",
+      "v0_7_witness_gap": "(3/5)^d -> 0"
+    },
+    "existential": {
+      "class_name": "WV-ADM",
+      "interface_quantifier": "exists_G_in_declared_Interfaces_E",
+      "refutation_invariant_options": [
+        "protocol_relative_r_E_G",
+        "effective_best_interface_r_star_E",
+        "proved_equivalent_operational_invariant"
+      ],
+      "v0_7_vector_protocol_gap": "3/5"
+    }
+  },
+  "refute_adequacy_axioms": [
+    "soundness",
+    "coverage_of_every_false_terminal_claim",
+    "binding_to_refutation_based_decisions",
+    "registered_replication_quotient"
+  ],
+  "noise_objects": {
+    "single_atom_profile_role": "marginal_diagnostic_only",
+    "required_characterization_object": "joint_transcript_conditional_selected_refutation_risk",
+    "conditions_in_scope": [
+      "adversarial_refutation_selection",
+      "history_conditional_noise",
+      "registered_replications",
+      "adaptive_query_and_stopping",
+      "full_joint_refute_predicate"
+    ]
+  },
+  "successor_targets": [
+    "characterize_WV_FIX",
+    "characterize_WV_ADM"
+  ],
+  "witness_artifact": "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json",
+  "claim_boundary": "Definition draft only; no parent amendment, mathematical resolution, or external-review receipt."
+}

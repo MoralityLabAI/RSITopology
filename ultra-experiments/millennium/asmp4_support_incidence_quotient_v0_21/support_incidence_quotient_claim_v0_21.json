@@ -1,0 +1,54 @@
+{
+  "schema_version": "asmp4_support_incidence_quotient_claim_v0_21",
+  "status": "clone-invariant exact-support quotient theorem",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_20_refinement_stop_claim_sha256": "b06213d846b53cf7f2262b7f0cf3dea89f22ca5f679ec8e87d5fd88e13de7d8f"
+  },
+  "general_theorem": {
+    "feasibility_preserved": true,
+    "renaming_invariant": true,
+    "duplicate_clone_invariant": true,
+    "idempotent": true,
+    "minimal_exact_support_quotient": true
+  },
+  "memoryless_census": {
+    "relations": 53108,
+    "feasible": 724,
+    "duplicates_removed": 260,
+    "raw_active_histogram": {
+      "2": 20,
+      "3": 210,
+      "4": 494
+    },
+    "semantic_class_histogram": {
+      "2": 64,
+      "3": 396,
+      "4": 264
+    },
+    "joint_histogram": {
+      "2,2": 20,
+      "3,2": 30,
+      "3,3": 180,
+      "4,2": 14,
+      "4,3": 216,
+      "4,4": 264
+    }
+  },
+  "deterministic_embedding": {
+    "labeled_relations": 104,
+    "duplicates_removed": 0,
+    "v0_16_unchanged": true
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 21,
+    "tests": 244
+  },
+  "decision": "duplicate_raw_labels_are_coordinate_artifacts_under_exact_support_quotient",
+  "nonclaim": "The quotient is canonical only for exact support-incidence preservation. It is not proved minimal for safety control, does not select the source's global semantics, and does not establish a nonlinear coordinate-invariant ASMP-4 variational theorem."
+}

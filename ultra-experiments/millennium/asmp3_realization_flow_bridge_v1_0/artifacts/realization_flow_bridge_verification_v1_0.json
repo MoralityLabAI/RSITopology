@@ -1,0 +1,16 @@
+{
+  "check_count": 7,
+  "checker": "clean_room_flow_and_policy_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_and_boundary": true,
+    "V1_band_registry_complete": true,
+    "V2_all_band_flows_reconstructed": true,
+    "V3_exponential_policy_linear_flow_counts": true,
+    "V4_band_gap_uniformly_three_fifths": true,
+    "V5_adaptive_graph_reconstructed": true,
+    "V6_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker reconstructs registered acyclic controlled graphs; it does not extend the result to multi-controller games.",
+  "passed": true,
+  "schema_version": "asmp3_realization_flow_bridge_verification_v1_0"
+}

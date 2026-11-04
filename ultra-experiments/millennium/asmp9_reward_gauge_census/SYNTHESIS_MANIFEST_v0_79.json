@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "Evidence audit and unregistered next-gate design only; no new theorem, physical execution, or ASMP-9 resolution.",
+  "parent_commit": "6f65e5d853be41421c3484ceaf9e0e47d24b9902",
+  "source_hashes": {
+    "ultra-experiments/millennium/V0_2_SCOPE_EXPANSION_DRAFT.md": "06a364441f07db1893b042eb967e70079417473c7fa32d3ebf3fdb12096b3b15",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/NEXT_PHYSICAL_GATE_v0_79.md": "a542b358541c21ed71c5d4283074f8448cce76b623833c035a88fc7c6a0e71cb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_78.md": "3fb5223b652856c7449d3b9247e3dc2c8a1835f11cf9807a1cb41549c8ed9c2c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_SYNTHESIS_v0_79.md": "d1baa3e987b52152fe61c0d450088626c6f6e217b10db277fd9f0551c56ca99a"
+  },
+  "status": "development_synthesis_not_preregistered"
+}

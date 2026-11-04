@@ -1,0 +1,31 @@
+{
+  "protocol_id": "qwen08_dense_local_holonomy_v0_1_1_amendment",
+  "amends": "qwen08_dense_local_holonomy_v0_1",
+  "status": "proposed_additive_amendment_not_registered",
+  "proposed_on": "2026-10-12",
+  "proposed_by": "review pass recorded in docs/CRITIQUE_NOTES_20261012.md section 3.3 and reports/holonomy_orientation_liveness_amendment_20261012.md",
+  "changes_no_gate": true,
+  "rationale": "The parent protocol treats an orientation-reversing loop holonomy (det H = -1) as a categorical denial at every rank. For a cycle of r-dimensional subspaces with polar transports, det H is the holonomy of the induced line bundle Lambda^r U, whose edge angle is arccos(prod_i cos alpha_i) over the principal angles alpha_i; lifting the cycle to the unit sphere shows det H = -1 requires these edge angles to sum to at least 180 degrees. Under the parent lineage floor tau = 0.9 every principal angle satisfies cos(alpha_i) >= sqrt(0.9), so an edge contributes at most arccos(0.9^(r/2)) degrees and reversal on a cycle of length L is impossible unless L * arccos(0.9^(r/2)) >= 180. On the parent's 4-edge elementary rectangles this excludes reversal for every rank r <= 6; on the 8-edge cycle it excludes reversal at rank 1. A gate that cannot fire must not be reported as evidence that it did not fire.",
+  "orientation_liveness_table_tau_0_9": {
+    "max_line_angle_per_edge_degrees": {"1": 18.43, "2": 25.84, "3": 31.37, "4": 35.9, "5": 39.79, "6": 43.2, "7": 46.24, "8": 49.0},
+    "minimal_live_cycle_length": {"1": 10, "2": 7, "3": 6, "4": 6, "5": 5, "6": 5, "7": 4, "8": 4},
+    "elementary_rectangle_4_edges": {"1": "forced_positive", "2": "forced_positive", "3": "forced_positive", "4": "forced_positive", "5": "forced_positive", "6": "forced_positive", "7": "live", "8": "live"},
+    "longest_simple_cycle_8_edges": {"1": "forced_positive", "2": "live", "3": "live", "4": "live", "5": "live", "6": "live", "7": "live", "8": "live"},
+    "generator": "scripts/holonomy_orientation_liveness.py 0.9"
+  },
+  "additions": {
+    "holonomy.orientation_channel_precondition": "For every admitted cycle, compute the angle budget B = sum over edges of arccos(prod_i cos alpha_i) from the measured principal angles (upper-bounded by L * arccos(tau^(r/2)) under the lineage floor). Report det H only when B >= 180 degrees; otherwise record the cycle as orientation_forced_positive and exclude it from any orientation-based statement, positive or negative.",
+    "holonomy.orientation_reversal_denial_scope": "The categorical denial on det H = -1 applies only to cycles with B >= 180 degrees. At the parent lineage floor this excludes all elementary rectangles for common rank at most 6 and the 8-edge cycle at rank 1.",
+    "holonomy.report_angle_budget_with_canonical_angles": "Every canonical-angle report must carry the cycle's angle budget B and its live/forced status, so the graded channel and the orientation channel can be read together.",
+    "aggregate_gate.orientation_statements": "Aggregate statements of the form 'no orientation-reversing loop was found' may count only cycles with B >= 180 degrees. If no such cycle exists in the run, the correct statement is orientation_channel_dead_at_this_floor, which is not evidence for or against identity preservation."
+  },
+  "unchanged": [
+    "lineage_floor 0.9",
+    "ranks 1-8 and the common-rank rule",
+    "beta_1 cycle-rank condition and holonomy_unavailable",
+    "canonical-angle budget 5.0 degrees and identity-loss budget 0.05",
+    "noise null, construction/validation agreement, all fixed stop states",
+    "capture configuration and caps"
+  ],
+  "claim_boundary": "This amendment changes reporting only. It introduces no invariant level, authorises no run, and makes no claim about Qwen0.8B. The underlying inequality is elementary spherical geometry applied to the determinant line bundle; it generalises Theorem 1 of reports/QWEN08_PRECISION_GEOMETRY_PAPER_V0_1.md from rank one to every rank. It says nothing about the liveness of the graded canonical-angle channel, which remains governed by the parent's noise null."
+}

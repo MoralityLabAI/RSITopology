@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_manifest_requirement_interactive_bounded_soundness_and_definition_boundary_audit",
+  "checks": {
+    "V0_schema_parent_and_status": true,
+    "V1_all_source_hashes_reconstructed": true,
+    "V2_all_fifteen_manifests_independently_rehashed": true,
+    "V3_all_eighteen_requirement_statuses_and_evidence_match": true,
+    "V4_literal_online_and_path_risk_disposition_preserved": true,
+    "V5_interactive_marker_frontier_reconstructed": true,
+    "V6_bounded_soundness_frontier_reconstructed": true,
+    "V7_resource_progress_is_strong_but_not_overclaimed": true,
+    "V8_four_blockers_and_definition_dependent_resource_boundary_match": true,
+    "V9_all_gates_and_claim_boundaries_hold": true
+  },
+  "claim_boundary": "This checker validates internal resource-scope evidence; it does not define the missing cross-task class or supply external acceptance.",
+  "passed": true,
+  "schema_version": "asmp3_consolidated_resource_scope_verification_v2_17"
+}

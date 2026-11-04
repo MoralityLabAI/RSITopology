@@ -1,0 +1,36 @@
+{
+  "schema_version": "asmp9_nuisance_confusability_run_receipt_v0_36",
+  "status": "completed_verified",
+  "prereveal_registration_commit": "31f0c0aee068bce13d4be4ac3419ff7d59a832a9",
+  "implementation_commit": "f129e3acdf5738831a67179200636f66cec1a016",
+  "registration": {
+    "path": "REGISTRATION_v0_36.json",
+    "bytes": 5284,
+    "sha256": "fea992716e3941356d5d72a29bac3bbe011dfcd4bdd9bf9b527d04591635e7cb",
+    "content_sha256": "65aeb0da99f8009b936faff26a066a1b6299f0d7e2fcd848c33ccd5ec7c3643e"
+  },
+  "result": {
+    "path": "artifacts_v0_36/RESULT_v0_36.json",
+    "bytes": 2924,
+    "sha256": "160d83802d25453876a37c6e4fce1607ed0b262579bab62b345e9684c2eb49fa",
+    "content_sha256": "12598205063ae3a97ba4af570392984301f1a4b7e2bee6db06c88f8f78902b25"
+  },
+  "verification": {
+    "path": "artifacts_v0_36/VERIFY_v0_36.json",
+    "bytes": 598,
+    "sha256": "36ff04a1ad47f42a4a3c5b75cc01096cd6f524db8ce874c44999bdf04b0672ca",
+    "passed": true
+  },
+  "gates_passed": [
+    "N0",
+    "M0",
+    "D0",
+    "Q0",
+    "W0"
+  ],
+  "runtime": {
+    "elapsed_seconds": 6.033522199984873,
+    "peak_python_tracemalloc_bytes": 351452
+  },
+  "claim_boundary": "This exact finite result separates raw nuisance confusability, its connected-component decision quotient, and a scientifically grounded reward-symmetry action. It does not resolve ASMP-9 or establish reward identification in a real system."
+}

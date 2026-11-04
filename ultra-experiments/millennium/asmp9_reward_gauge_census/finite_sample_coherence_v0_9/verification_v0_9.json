@@ -1,0 +1,30 @@
+{
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-COHERENCE-v0.9",
+  "registration_commit": "0ba56240ccfee7d33b2c3c0135abdeffd370700b",
+  "registration_sha256": "da02bfbf8838062cfc251c994c7eb1c6e23df4c438cdca6c4d3ff304eb94e3a5",
+  "implementation_commit": "15fa5ccd3cf44e808034803199b9f3e807ce6e9f",
+  "sealed_run_verdict": "finite_sample_cycle_coherence_certificate_verified",
+  "artifact_verifier_verdict": "verified",
+  "runtime_gate_count": 10,
+  "runtime_gates_passed": 10,
+  "unit_test_count": 84,
+  "unit_tests_passed": 84,
+  "graph_count": 6,
+  "sample_multiplier_count": 5,
+  "arm_count": 3,
+  "replicates_per_cell": 4096,
+  "certificate_count": 368640,
+  "control_replicate_count": 16384,
+  "simultaneous_event_failure_count": 1786,
+  "minimum_low_budget_inconclusive_lower_99": 0.9762046344934985,
+  "minimum_high_budget_expected_decision_lower_99": 0.9988763226712674,
+  "forest_unavailable_count": 8192,
+  "probability_floor_unavailable_count": 8192,
+  "unsafe_certificate_on_simultaneous_event_count": 0,
+  "elapsed_seconds": 59.39487969997572,
+  "output_hashes": {
+    "RESULT_v0_9.md": "86484c676ebaa88f1eaf087830d918cb66d44b3ed5315d20151e97d2dde65d71",
+    "result_v0_9.json": "28665d339e3e7d873c165432d22cdcc820dd76b00a5722ec3435a3638fb50051"
+  },
+  "claim_boundary": "Conservative simultaneous certificate for independent fixed-count Bernoulli comparisons on six planted finite graphs; not minimax sample complexity, adaptive allocation, a human model, general IRL, or a complete ASMP-9 resolution."
+}

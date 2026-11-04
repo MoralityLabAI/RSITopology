@@ -1,0 +1,48 @@
+{
+  "schema_version": "asmp9_context_quotient_confirmation_execution_intent_v0_68_2",
+  "status": "sealed_prereveal_pending_execution",
+  "created_utc": "2026-07-31T04:30:51.8157044Z",
+  "outcomes_read": false,
+  "model_forward_passes_before_seal": 0,
+  "source_commit": "75a80b4af57b7c21dc73aa9ced41629d205317f3",
+  "run_root": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_local_20260731",
+  "prereveal_validation": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_local_20260731\\prereveal_validation.json",
+    "sha256": "7e44f96396d9024f047a72dd9e78e396a429dee86ba67114dd6e65ed66d8f919",
+    "status": "passed",
+    "confirmation_records": 528,
+    "confirmation_job_list_sha256": "097f9cad620a8de161d1e611d2d1e1c12b3b6d6d35c9298913d824b9d9a7a300"
+  },
+  "preparation_receipt": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_local_20260731\\preparation_receipt.json",
+    "sha256": "20cf0a29b6b186b65c6439ffc52c7e3de64c3acc68ba20492f8549aae447a7fe"
+  },
+  "registration": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_local_20260731\\confirmation\\registration.json",
+    "sha256": "7782dc5bbb4743a52c78555f8c6245d5aab6b318033ed669b4d7413b88aaa4a3"
+  },
+  "authorization": {
+    "path": "D:\\Research_Engine\\runs\\asmp9_context_quotient_response_v0_68_2_local_20260731\\confirmation\\authorization.json",
+    "sha256": "6e7b88c8b4194c7329551e26b3f90576a8485a78f774e6dae42c6ce9959a7454"
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_uuid": "GPU-113d2889-9c86-faac-ad21-8db35f945b89",
+    "driver_version": "555.99",
+    "gpu_memory_total_mb": 4096,
+    "gpu_memory_used_mb_at_seal": 0,
+    "gpu_temperature_c_at_seal": 79,
+    "free_host_memory_mb_at_seal": 7518,
+    "gpu_compute_apps_at_seal": []
+  },
+  "verification": {
+    "focused_tests": {
+      "passed": 29,
+      "failed": 0
+    },
+    "windows_wrapper_smoke": "completed",
+    "wrapper_smoke_model_forward_passes": 0
+  },
+  "execution_rule": "Run the exact authorization through run_windows_guarded_v0_68_2.ps1 once. Any resource abort or cleanup invalidity is a valid non-scientific result and does not permit a threshold or job change.",
+  "claim_boundary": "This receipt establishes prereveal chronology and exact environment binding only. It contains no confirmation outcome."
+}

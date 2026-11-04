@@ -1,0 +1,24 @@
+{
+  "registration_id": "ASMP-9-FINITE-SAMPLE-v0.5.1-registration",
+  "registered_at_utc": "2026-07-28T18:24:36Z",
+  "implementation_commit": "55098112b87e100ec20c5bfd75f13c7bffdc3900",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/protocol_v0_5_1.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/THEOREM_DRAFT_v0_5.md": "d32c3f2e40c1ee77471609058d6ed0013b4020da449e00f43941bf68da0605ea",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/PRIOR_ART_v0_5.md": "b0413fe773c015496da8a4f9a8f4e50dd935f8dcabfa04dbb61952295858bb3a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/finite_sample.py": "3c5953dfdf9bf8440636cedd15cdd3a04d4f46ad39c3130749522bf432007c09",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/information_design.py": "bed02ec93cb6f753a52d1d9abfff4721889872ade62541d43b8cb54ff7ee3205",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/test_finite_sample.py": "c50d8285dfae75c05fa31602a5fa9e5828c16dead92e85997ae2ccfd3a14ccbf",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/test_information_design.py": "4933dabdd72c780f1b548b7bb8bc18ac063f238a05d82df915c13737c5c164c0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/PROTOCOL_v0_5.md": "12f711a91abc3d2297e559debc0a756b6ef5f857af0d04305bb5480ca43d4c0d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/protocol_v0_5.json": "92979185b2d88caa32efcf47f4f48e3d1aba9d47ed219e3a2c77c08af0b81781",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/run_verification.py": "09e644ee7a5cf3e6719fc9c0479582a4892b97160567e43b7fb689f3763b7529",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/verify_result.py": "deff8e7cc626e7dc20909804196ed671de6d214328f82de17b39884206d4e0e2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/RUNNER_PATH_FAILURE_v0_5.md": "e019dcdadcb5b07e77453218ce35709387237a87be0355966d3882773fbc767b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/PROTOCOL_AMENDMENT_v0_5_1.md": "33fc15869a262f6409028c07346d1567009cf1ab2a806437a7aa8fca523e5a31",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/protocol_v0_5_1.json": "d344ec0355978692dd7e128c8eb678fcdd586645a8e56a5e304f9cc78bf2e09c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/run_verification_v0_5_1.py": "57309da95056d56be9a156bc7a472851a24fbd7230d785d0f8c13e18ed60498d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/verify_result_v0_5_1.py": "ff0fc0c9412cef0b81396dbbc78c8a16caceb8d7bf31490f95f6ff917c9bb5ed",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_sample_v0_5/README.md": "34e1c4ab23745f08452a764a89ff15931eafa204e325c90a5016720b6e219b06"
+  }
+}

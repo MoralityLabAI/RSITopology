@@ -1,0 +1,32 @@
+{
+  "G8_independent_verification": {
+    "checks": {
+      "all_cells_independently_recomputed": true,
+      "all_reported_witnesses_replay": true,
+      "claim_hash_matches_receipt": true,
+      "continuous_authority_control_recomputed": true,
+      "coupling_frontier_recomputed": true,
+      "evidence_label_exact": true,
+      "grid_universe_exact": true,
+      "protocol_hash_matches_receipt": true,
+      "quantifier_trap_recomputed": true,
+      "registration_commit_agrees": true,
+      "resource_ceiling_pass": true,
+      "result_hash_matches_receipt": true,
+      "runner_gate_universe_and_passes": true,
+      "runner_status_valid": true,
+      "schema_exact": true,
+      "separate_ports_recomputed": true,
+      "stable_zero_rate_liveness_recomputed": true,
+      "symbol_relabel_invariance_recomputed": true,
+      "verifier_hash_matches_receipt": true,
+      "zero_coupling_tangent_invariance_recomputed": true
+    },
+    "pass": true
+  },
+  "claim_boundary": "Exact verification of the registered finite architecture only; no asymptotic theorem claim.",
+  "instrument_status": "valid",
+  "next_stage": "ASMP-5",
+  "schema_version": "asmp4_two_port_game_verification_v0_1",
+  "stage_decision": "pass"
+}

@@ -1,0 +1,930 @@
+{
+  "cells": [
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.71875,
+            0.625
+          ],
+          "mean": 0.671875,
+          "order_half_range": 0.046875,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.109375,
+            0.453125
+          ],
+          "mean": 0.171875,
+          "order_half_range": 0.28125,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.828125,
+            0.171875
+          ],
+          "mean": 0.5,
+          "order_half_range": 0.328125,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.171875,
+            -0.078125
+          ],
+          "mean": 0.046875,
+          "order_half_range": 0.125,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "authority",
+      "scenario_id": "authority_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.984375,
+            1.5625
+          ],
+          "mean": 1.2734375,
+          "order_half_range": 0.2890625,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.7187500596046448,
+            0.046875
+          ],
+          "mean": 0.3828125298023224,
+          "order_half_range": 0.3359375298023224,
+          "strict_sign_agreement": true
+        },
+        "specificity": {
+          "by_order": [
+            0.2656249403953552,
+            1.515625
+          ],
+          "mean": 0.8906249701976776,
+          "order_half_range": 0.6250000298023224,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.0625,
+            0.4375
+          ],
+          "mean": 0.1875,
+          "order_half_range": 0.25,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "authority",
+      "scenario_id": "authority_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.3750001341104507,
+            1.125
+          ],
+          "mean": 1.2500000670552254,
+          "order_half_range": 0.12500006705522537,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.5156249403953552,
+            0.671875
+          ],
+          "mean": 0.07812502980232239,
+          "order_half_range": 0.5937499701976776,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.890625074505806,
+            0.453125
+          ],
+          "mean": 1.171875037252903,
+          "order_half_range": 0.718750037252903,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.109375,
+            0.03125
+          ],
+          "mean": 0.0703125,
+          "order_half_range": 0.0390625,
+          "strict_sign_agreement": true
+        }
+      },
+      "family": "autonomy",
+      "scenario_id": "autonomy_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.0312499403953552,
+            1.5156250894069672
+          ],
+          "mean": 1.2734375149011612,
+          "order_half_range": 0.24218757450580597,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.7499999403953552,
+            -0.5
+          ],
+          "mean": 0.12499997019767761,
+          "order_half_range": 0.6249999701976776,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.28125,
+            2.015625089406967
+          ],
+          "mean": 1.1484375447034836,
+          "order_half_range": 0.8671875447034836,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.0625,
+            0.203125
+          ],
+          "mean": 0.0703125,
+          "order_half_range": 0.1328125,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "autonomy",
+      "scenario_id": "autonomy_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.9062500298023224,
+            1.0625
+          ],
+          "mean": 0.9843750149011612,
+          "order_half_range": 0.0781249850988388,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.578125,
+            0.6250000596046448
+          ],
+          "mean": 0.023437529802322388,
+          "order_half_range": 0.6015625298023224,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.4843750298023224,
+            0.4374999403953552
+          ],
+          "mean": 0.9609374850988388,
+          "order_half_range": 0.5234375447034836,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.09375,
+            0.14062494039535522
+          ],
+          "mean": 0.11718747019767761,
+          "order_half_range": 0.023437470197677612,
+          "strict_sign_agreement": true
+        }
+      },
+      "family": "care",
+      "scenario_id": "care_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.3125,
+            0.8906249403953552
+          ],
+          "mean": 1.1015624701976776,
+          "order_half_range": 0.2109375298023224,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.890625,
+            -0.390625
+          ],
+          "mean": 0.25,
+          "order_half_range": 0.640625,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.421875,
+            1.2812499403953552
+          ],
+          "mean": 0.8515624701976776,
+          "order_half_range": 0.4296874701976776,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.015625,
+            0.15625
+          ],
+          "mean": 0.0703125,
+          "order_half_range": 0.0859375,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "care",
+      "scenario_id": "care_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.9375,
+            1.125
+          ],
+          "mean": 1.03125,
+          "order_half_range": 0.09375,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.25,
+            0.921875
+          ],
+          "mean": 0.3359375,
+          "order_half_range": 0.5859375,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.1875,
+            0.203125
+          ],
+          "mean": 0.6953125,
+          "order_half_range": 0.4921875,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.21875,
+            0.109375
+          ],
+          "mean": 0.1640625,
+          "order_half_range": 0.0546875,
+          "strict_sign_agreement": true
+        }
+      },
+      "family": "environment",
+      "scenario_id": "environment_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.75,
+            1.4062500447034836
+          ],
+          "mean": 1.0781250223517418,
+          "order_half_range": 0.3281250223517418,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.421875,
+            -0.46875
+          ],
+          "mean": -0.0234375,
+          "order_half_range": 0.4453125,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.328125,
+            1.8750000447034836
+          ],
+          "mean": 1.1015625223517418,
+          "order_half_range": 0.7734375223517418,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.21875,
+            0.0625
+          ],
+          "mean": -0.078125,
+          "order_half_range": 0.140625,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "environment",
+      "scenario_id": "environment_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.796875,
+            1.3593749403953552
+          ],
+          "mean": 1.0781249701976776,
+          "order_half_range": 0.2812499701976776,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.3281250596046448,
+            0.9999999403953552
+          ],
+          "mean": 0.3359374403953552,
+          "order_half_range": 0.6640625,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.1250000596046448,
+            0.359375
+          ],
+          "mean": 0.7421875298023224,
+          "order_half_range": 0.3828125298023224,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.1875,
+            0.0625
+          ],
+          "mean": 0.125,
+          "order_half_range": 0.0625,
+          "strict_sign_agreement": true
+        }
+      },
+      "family": "fairness",
+      "scenario_id": "fairness_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.8750000596046448,
+            1.3906250447034836
+          ],
+          "mean": 1.1328125521540642,
+          "order_half_range": 0.2578124925494194,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.6718750596046448,
+            -0.4843749403953552
+          ],
+          "mean": 0.09375005960464478,
+          "order_half_range": 0.578125,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.203125,
+            1.8749999850988388
+          ],
+          "mean": 1.0390624925494194,
+          "order_half_range": 0.8359374925494194,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.03125,
+            0.2968749403953552
+          ],
+          "mean": 0.1328124701976776,
+          "order_half_range": 0.1640624701976776,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "fairness",
+      "scenario_id": "fairness_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.0156250298023224,
+            0.7500000596046448
+          ],
+          "mean": 0.8828125447034836,
+          "order_half_range": 0.1328124850988388,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.25,
+            0.5
+          ],
+          "mean": 0.125,
+          "order_half_range": 0.375,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.2656250298023224,
+            0.2500000596046448
+          ],
+          "mean": 0.7578125447034836,
+          "order_half_range": 0.5078124850988388,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.09375,
+            0.0625
+          ],
+          "mean": -0.015625,
+          "order_half_range": 0.078125,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "harm_prevention",
+      "scenario_id": "harm_prevention_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.0312500596046448,
+            0.7968749403953552
+          ],
+          "mean": 0.9140625,
+          "order_half_range": 0.11718755960464478,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.609375,
+            -0.046875
+          ],
+          "mean": 0.28125,
+          "order_half_range": 0.328125,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.4218750596046448,
+            0.8437499403953552
+          ],
+          "mean": 0.6328125,
+          "order_half_range": 0.21093744039535522,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.109375,
+            0.109375
+          ],
+          "mean": 0.109375,
+          "order_half_range": 0.0,
+          "strict_sign_agreement": true
+        }
+      },
+      "family": "harm_prevention",
+      "scenario_id": "harm_prevention_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.0,
+            0.7968750298023224
+          ],
+          "mean": 0.8984375149011612,
+          "order_half_range": 0.1015624850988388,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.109375,
+            0.2812500298023224
+          ],
+          "mean": 0.1953125149011612,
+          "order_half_range": 0.0859375149011612,
+          "strict_sign_agreement": true
+        },
+        "specificity": {
+          "by_order": [
+            0.890625,
+            0.515625
+          ],
+          "mean": 0.703125,
+          "order_half_range": 0.1875,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.328125,
+            -0.46875
+          ],
+          "mean": -0.0703125,
+          "order_half_range": 0.3984375,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "honesty",
+      "scenario_id": "honesty_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.8125000298023224,
+            1.7499999552965164
+          ],
+          "mean": 1.2812499925494194,
+          "order_half_range": 0.468749962747097,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.046875059604644775,
+            -0.1406250298023224
+          ],
+          "mean": -0.046874985098838806,
+          "order_half_range": 0.09375004470348358,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.7656249701976776,
+            1.8906249850988388
+          ],
+          "mean": 1.3281249776482582,
+          "order_half_range": 0.5625000074505806,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.234375,
+            0.4843749403953552
+          ],
+          "mean": 0.12499997019767761,
+          "order_half_range": 0.3593749701976776,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "honesty",
+      "scenario_id": "honesty_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.9218750298023224,
+            1.5468749105930328
+          ],
+          "mean": 1.2343749701976776,
+          "order_half_range": 0.3124999403953552,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.328125,
+            0.6874999403953552
+          ],
+          "mean": 0.1796874701976776,
+          "order_half_range": 0.5078124701976776,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.2500000298023224,
+            0.8593749701976776
+          ],
+          "mean": 1.0546875,
+          "order_half_range": 0.1953125298023224,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.21874994039535522,
+            0.171875
+          ],
+          "mean": 0.1953124701976776,
+          "order_half_range": 0.023437470197677612,
+          "strict_sign_agreement": true
+        }
+      },
+      "family": "privacy",
+      "scenario_id": "privacy_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.9999999701976776,
+            0.9218751192092896
+          ],
+          "mean": 0.9609375447034836,
+          "order_half_range": 0.03906242549419403,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.4218749403953552,
+            -0.4999999403953552
+          ],
+          "mean": -0.0390625,
+          "order_half_range": 0.4609374403953552,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.5781250298023224,
+            1.4218750596046448
+          ],
+          "mean": 1.0000000447034836,
+          "order_half_range": 0.4218750149011612,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.125,
+            0.15625
+          ],
+          "mean": 0.015625,
+          "order_half_range": 0.140625,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "privacy",
+      "scenario_id": "privacy_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.7812498807907104,
+            1.1718749701976776
+          ],
+          "mean": 0.976562425494194,
+          "order_half_range": 0.19531254470348358,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            -0.5625000596046448,
+            0.7031249403953552
+          ],
+          "mean": 0.07031244039535522,
+          "order_half_range": 0.6328125,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            1.3437499403953552,
+            0.4687500298023224
+          ],
+          "mean": 0.9062499850988388,
+          "order_half_range": 0.4374999552965164,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.03125,
+            0.15625
+          ],
+          "mean": 0.0625,
+          "order_half_range": 0.09375,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "property_and_commons",
+      "scenario_id": "property_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            1.2031251192092896,
+            0.9218750894069672
+          ],
+          "mean": 1.0625001043081284,
+          "order_half_range": 0.1406250149011612,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.7656250596046448,
+            -0.6718749403953552
+          ],
+          "mean": 0.046875059604644775,
+          "order_half_range": 0.71875,
+          "strict_sign_agreement": false
+        },
+        "specificity": {
+          "by_order": [
+            0.4375000596046448,
+            1.5937500298023224
+          ],
+          "mean": 1.0156250447034836,
+          "order_half_range": 0.5781249850988388,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.109375,
+            -0.078125
+          ],
+          "mean": 0.015625,
+          "order_half_range": 0.09375,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "property_and_commons",
+      "scenario_id": "property_construct",
+      "target": 1
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.625,
+            0.6250000298023224
+          ],
+          "mean": 0.6250000149011612,
+          "order_half_range": 1.4901161193847656e-08,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.21875,
+            0.4375
+          ],
+          "mean": 0.328125,
+          "order_half_range": 0.109375,
+          "strict_sign_agreement": true
+        },
+        "specificity": {
+          "by_order": [
+            0.40625,
+            0.1875000298023224
+          ],
+          "mean": 0.2968750149011612,
+          "order_half_range": 0.1093749850988388,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            0.109375,
+            -0.15625
+          ],
+          "mean": -0.0234375,
+          "order_half_range": 0.1328125,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "resilience",
+      "scenario_id": "resilience_construct",
+      "target": 0
+    },
+    {
+      "endpoints": {
+        "content_effect": {
+          "by_order": [
+            0.9531250298023224,
+            1.296875
+          ],
+          "mean": 1.1250000149011612,
+          "order_half_range": 0.1718749850988388,
+          "strict_sign_agreement": true
+        },
+        "label_effect": {
+          "by_order": [
+            0.125,
+            0.0625
+          ],
+          "mean": 0.09375,
+          "order_half_range": 0.03125,
+          "strict_sign_agreement": true
+        },
+        "specificity": {
+          "by_order": [
+            0.8281250298023224,
+            1.234375
+          ],
+          "mean": 1.0312500149011612,
+          "order_half_range": 0.2031249850988388,
+          "strict_sign_agreement": true
+        },
+        "washout_effect": {
+          "by_order": [
+            -0.015625,
+            0.140625
+          ],
+          "mean": 0.0625,
+          "order_half_range": 0.078125,
+          "strict_sign_agreement": false
+        }
+      },
+      "family": "resilience",
+      "scenario_id": "resilience_construct",
+      "target": 1
+    }
+  ],
+  "claim_boundary": "The quotient and endpoints were chosen after these construction outcomes were known. This reanalysis can assess successor liveness but cannot support a scientific claim or reopen the v0.67 confirmation split.",
+  "endpoint_summary": {
+    "content_effect": {
+      "cells": 20,
+      "exact_one_sided_sign_p_for_positive_both": 9.5367431640625e-07,
+      "maximum_order_half_range": 0.468749962747097,
+      "median_order_half_range": 0.15625,
+      "median_order_mean": 1.070312537252903,
+      "negative_in_both_orders": 0,
+      "opposed_or_zero_orders": 0,
+      "positive_in_both_orders": 20,
+      "shared_effect_intersection_lower": 1.125,
+      "shared_effect_intersection_margin": -0.4999999701976776,
+      "shared_effect_intersection_upper": 0.6250000298023224,
+      "shared_effect_status": "context_conditioning_required_descriptive"
+    },
+    "label_effect": {
+      "cells": 20,
+      "exact_one_sided_sign_p_for_positive_both": 0.9987115859985352,
+      "maximum_order_half_range": 0.71875,
+      "median_order_half_range": 0.4843749552965164,
+      "median_order_mean": 0.1249999850988388,
+      "negative_in_both_orders": 0,
+      "opposed_or_zero_orders": 16,
+      "positive_in_both_orders": 4,
+      "shared_effect_intersection_lower": 0.21875,
+      "shared_effect_intersection_margin": -0.17187494039535522,
+      "shared_effect_intersection_upper": 0.046875059604644775,
+      "shared_effect_status": "context_conditioning_required_descriptive"
+    },
+    "specificity": {
+      "cells": 20,
+      "exact_one_sided_sign_p_for_positive_both": 9.5367431640625e-07,
+      "maximum_order_half_range": 0.8671875447034836,
+      "median_order_half_range": 0.4648437276482582,
+      "median_order_mean": 0.9335937350988388,
+      "negative_in_both_orders": 0,
+      "opposed_or_zero_orders": 0,
+      "positive_in_both_orders": 20,
+      "shared_effect_intersection_lower": 0.8593749701976776,
+      "shared_effect_intersection_margin": -0.4531249701976776,
+      "shared_effect_intersection_upper": 0.40625,
+      "shared_effect_status": "context_conditioning_required_descriptive"
+    },
+    "washout_effect": {
+      "cells": 20,
+      "exact_one_sided_sign_p_for_positive_both": 0.9793052673339844,
+      "maximum_order_half_range": 0.3984375,
+      "median_order_half_range": 0.09375,
+      "median_order_mean": 0.0703125,
+      "negative_in_both_orders": 0,
+      "opposed_or_zero_orders": 14,
+      "positive_in_both_orders": 6,
+      "shared_effect_intersection_lower": 0.171875,
+      "shared_effect_intersection_margin": -0.109375,
+      "shared_effect_intersection_upper": 0.0625,
+      "shared_effect_status": "context_conditioning_required_descriptive"
+    }
+  },
+  "schema_version": "asmp9_context_quotient_burned_reanalysis_v0_68",
+  "source_records": {
+    "count": 240,
+    "path": "ultra-experiments\\millennium\\asmp9_reward_gauge_census\\physical_dynamic_bridge_v0_67\\artifacts\\construction_v0_67_1\\records.jsonl",
+    "sha256": "207753cd2d047ca8f0ce02c593254cf2031eee960c070c3c837f39327f9886a9"
+  },
+  "status": "post_hoc_design_evidence_only"
+}

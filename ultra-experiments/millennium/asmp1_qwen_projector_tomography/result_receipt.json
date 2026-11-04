@@ -1,0 +1,56 @@
+{
+  "schema_version": "qwen08_projector_tomography_release_receipt_v0_1",
+  "run_id": "qwen08-projector-tomography-v01",
+  "prereveal_commit": "aa6d81d9f79b742bbb9de83076fb0e8080b3defc",
+  "verdict": "stable_nonadditivity_not_established",
+  "claim_boundary": "This experiment can show whether coordinated activation-projector attenuation has stable non-additive effects on a frozen Qwen-0.8B task score. It does not authorize signed or disparate weight edits, establish a global rank-four fiber, demonstrate compactification, or provide evidence of recursive self-improvement.",
+  "counts": {
+    "arms": 2,
+    "cube_masks_per_arm": 16,
+    "prompts": 72,
+    "subconditions": 9,
+    "records": 2304
+  },
+  "measurements": {
+    "baseline_replay_max_abs_error": 0.0,
+    "selected_full_subset_median_abs_delta": 0.03266322612762451,
+    "matched_random_full_subset_median_abs_delta": 0.008478522300720215,
+    "selected_degree2_relative_sse_reduction": -0.006751109369600359,
+    "selected_degree2_relative_sse_reduction_ci95": [
+      -0.009546813272774334,
+      -0.005061872904475845
+    ],
+    "matched_random_degree2_relative_sse_reduction": -0.001784657107761005,
+    "selected_mean_interaction_fraction_degree_ge_2": 0.5927039834525716,
+    "matched_random_mean_interaction_fraction_degree_ge_2": 0.7577685025770298,
+    "selected_minus_random_interaction_fraction": -0.16506451912445813,
+    "selected_minus_random_interaction_fraction_ci95": [
+      -0.2425682464204169,
+      -0.09630749674722962
+    ]
+  },
+  "gates": {
+    "N0_baseline_replay": "pass",
+    "L0_intervention_liveness": "pass",
+    "I1_stable_degree2_increment": "fail",
+    "S0_selected_specificity": "fail"
+  },
+  "resources": {
+    "inner_peak_cuda_mb": 2212.6337890625,
+    "wrapper_peak_private_ram_mb": 5808.809,
+    "wrapper_peak_io_mb_s": 96.269,
+    "wrapper_status": "completed",
+    "cleanup_passed": true,
+    "lingering_owned_pids": 0
+  },
+  "source_artifact_sha256": {
+    "registration.json": "f6b106ba2329255ed69e51a50af19519688c425e60d1220df93118ab5891618b",
+    "authorization.json": "04302615aac6f70f2d71f20302182d04022e466290980913c8af9550e702d4e8",
+    "result/summary.json": "ae690fcb4fc2f02511418a3ba23bd479b14319dca47fbf6af69fd0c6f69592dc",
+    "result/baseline_replay.json": "48919f0a57a437cc72c0f00fbf2dd6c970ac714ce5b97328bbb4bf504d404028",
+    "_wrapper/wrapper_summary.json": "1e68c567857f581e391c643d532e2724f49bfe56a2d3593961683e7fad9c45e9",
+    "_wrapper/cleanup_summary.json": "496bcb5565a59b54b182ecb1ddee21807c98c6c468d97770307b79a4c02e2ca5",
+    "analysis/analysis_result.json": "49edd321d9879d624ae151ae700f98c4bee302a89bb13cd4fa0c94fe26d58d55",
+    "analysis/REPORT.md": "46423074c6591582df6cf2980a63a8457bd729248b177019141b94f85d7fd73f"
+  }
+}

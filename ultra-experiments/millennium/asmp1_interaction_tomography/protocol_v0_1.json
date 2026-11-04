@@ -1,0 +1,51 @@
+{
+  "schema_version": "asmp1_interaction_tomography_protocol_v0_1",
+  "status": "registered_before_full_enumeration",
+  "date": "2026-07-19",
+  "parent_problem": "ASMP-1",
+  "title": "Interaction-order tomography modulo parent symmetry",
+  "object": {
+    "mechanisms": "all deterministic semantic-output functions f:{-1,+1}^n->{-1,+1}",
+    "parent_environment": "independent uniform unconditioned coordinates",
+    "measurements": "passive conditional sum and every perfect-intervention conditional sum fixing S with |S|<=r; integer sums are stored",
+    "equivalent_coordinates": "unnormalised Walsh coefficients of degree <=r, related to the conditional means by exact Fourier inversion and fixed nonzero row scaling",
+    "gauge_group": "B_n = Sym(n) semidirect (Z/2)^n acting by parent-coordinate permutations and input-sign flips; intervention labels transform with the same action",
+    "output_labels": "semantic -1 and +1; output complementation is not gauge"
+  },
+  "predeclared_theorems": {
+    "design_rank": "rank A_(n,r) = sum_{j=0}^r binomial(n,j), with kernel spanned by Walsh characters of degree >r",
+    "labelled_threshold": "on the full Boolean class, the smallest uniformly identifying order is r=n",
+    "quotient_threshold": "for n>=2, on the full Boolean class modulo B_n, the smallest uniformly identifying order is r=n-1",
+    "minimum_cost_basis": "for degree<=k mechanisms, minimum row count is D(n,k) and minimum total fixed-coordinate cost is sum_{j=1}^k j binomial(n,j); one all-positive assignment for every |S|<=k attains it"
+  },
+  "registered_grid": {
+    "rank_and_basis": {
+      "n": [1, 8],
+      "r": "0..min(n,4)",
+      "arithmetic": "exact modular rank over prime 2147483647; a full-column-rank result equals rational rank because the column upper bound is D(n,r)"
+    },
+    "boolean_quotient_census": {
+      "n": [2, 4],
+      "r": "0..n",
+      "functions": "all 2^(2^n) labelled Boolean truth tables",
+      "gauge": "all 2^n n! signed parent permutations",
+      "arithmetic": "exact integer truth tables, conditional sums, and Walsh coefficients"
+    }
+  },
+  "gates": {
+    "G1": "every registered full intervention design has exact rank D(n,r)",
+    "G2": "the direct conditional-sum identity 2^|S| m_sum(S,a) = sum_{T subseteq S} W_T chi_T(a) has zero mismatches on every Boolean truth table in the n=2..4 census",
+    "G3": "the observed labelled identifiability threshold equals n for every n=2..4",
+    "G4": "the observed B_n-quotient identifiability threshold equals n-1 for every n=2..4",
+    "G5": "for every n=2..4 and r<=n-2, registered parity functions of degrees r+1 and r+2 collide but occupy distinct gauge orbits; at r=n-1 the parity/negative-parity collision occupies one orbit",
+    "G6": "the greedy minimum-weight vector-matroid basis has D(n,r) rows and the exact analytic total cost on every registered rank/basis cell",
+    "G7": "the output path is non-aliasing and write-once, and a SHA-256 sidecar is emitted",
+    "G8": "the run records argv and registration commit, verifies source/protocol/theorem bytes equal committed blobs before enumeration, and rejects pre/post hash changes",
+    "G9": "the executed grid, gauge, measurement semantics, output-label semantics, and gate universe exactly match the registered protocol fields"
+  },
+  "descriptive_not_gated": {
+    "conditioning": "2-norm condition numbers for the minimum-cost zeta basis and the redundant all-assignments design",
+    "collision_counts": "numbers and maximum multiplicities of labelled and quotient-ambiguous signatures"
+  },
+  "claim_boundary": "The proofs establish the finite universal statements. A pass verifies only the registered bounded implementation and exact n<=4 Boolean quotient census. It does not establish transformer interaction coordinates, VPD efficacy, noisy sample complexity, or a generic ASMP-1 solution."
+}

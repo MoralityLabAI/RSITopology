@@ -1,0 +1,192 @@
+{
+  "certified": true,
+  "claim_boundary": "Exact specialization of the classical discrete moment problem for the independent Binomial(9,1/5) reference moments; not a general moment-order theorem or an empirical verifier result.",
+  "experiment_id": "ASMP-3-MINIMUM-CERTIFYING-MOMENT-ORDER-v0.1.3",
+  "minimum_certifying_order": 4,
+  "order_four_certificate": {
+    "dual": "1{S>=5} <= (S)_4/120",
+    "dual_valid_on_counts_0_to_9": true,
+    "sharp_law": {
+      "0": "404/3125",
+      "1": "207/625",
+      "2": "144/625",
+      "3": "168/625",
+      "5": "126/3125"
+    },
+    "sharp_tail": {
+      "decimal": 0.04032,
+      "exact": "126/3125"
+    }
+  },
+  "order_three_counterexample": {
+    "dual": "1{S>=5} <= S/15-(S)_2/15+(S)_3/30",
+    "dual_expectation": {
+      "decimal": 0.0624,
+      "exact": "39/625"
+    },
+    "dual_valid_on_counts_0_to_9": true,
+    "law": {
+      "0": "136/625",
+      "2": "84/125",
+      "3": "6/125",
+      "5": "39/625"
+    },
+    "tail": {
+      "decimal": 0.0624,
+      "exact": "39/625"
+    }
+  },
+  "reference": {
+    "admissible_error": "1/20",
+    "independent_error": "1/5",
+    "majority_failure_threshold": 5,
+    "moment_basis": "falling factorial",
+    "panel_size": 9
+  },
+  "status": "post_result_exact_characterization",
+  "upper_envelope_by_order": [
+    {
+      "order": 1,
+      "passes_5_percent": false,
+      "sharp_upper": {
+        "decimal": 0.36,
+        "exact": "9/25"
+      },
+      "vertex_witness": {
+        "0": "16/25",
+        "5": "9/25"
+      }
+    },
+    {
+      "order": 2,
+      "passes_5_percent": false,
+      "sharp_upper": {
+        "decimal": 0.10666666666666667,
+        "exact": "8/75"
+      },
+      "vertex_witness": {
+        "1": "13/25",
+        "2": "28/75",
+        "5": "8/75"
+      }
+    },
+    {
+      "order": 3,
+      "passes_5_percent": false,
+      "sharp_upper": {
+        "decimal": 0.0624,
+        "exact": "39/625"
+      },
+      "vertex_witness": {
+        "0": "136/625",
+        "2": "84/125",
+        "3": "6/125",
+        "5": "39/625"
+      }
+    },
+    {
+      "order": 4,
+      "passes_5_percent": true,
+      "sharp_upper": {
+        "decimal": 0.04032,
+        "exact": "126/3125"
+      },
+      "vertex_witness": {
+        "0": "404/3125",
+        "1": "207/625",
+        "2": "144/625",
+        "3": "168/625",
+        "5": "126/3125"
+      }
+    },
+    {
+      "order": 5,
+      "passes_5_percent": true,
+      "sharp_upper": {
+        "decimal": 0.04032,
+        "exact": "126/3125"
+      },
+      "vertex_witness": {
+        "0": "404/3125",
+        "1": "207/625",
+        "2": "144/625",
+        "3": "168/625",
+        "5": "126/3125"
+      }
+    },
+    {
+      "order": 6,
+      "passes_5_percent": true,
+      "sharp_upper": {
+        "decimal": 0.03232,
+        "exact": "101/3125"
+      },
+      "vertex_witness": {
+        "0": "2076/15625",
+        "1": "972/3125",
+        "2": "864/3125",
+        "3": "672/3125",
+        "4": "504/15625",
+        "5": "504/15625",
+        "9": "1/15625"
+      }
+    },
+    {
+      "order": 7,
+      "passes_5_percent": true,
+      "sharp_upper": {
+        "decimal": 0.020352,
+        "exact": "318/15625"
+      },
+      "vertex_witness": {
+        "0": "10484/78125",
+        "1": "23607/78125",
+        "2": "23544/78125",
+        "3": "2772/15625",
+        "4": "1008/15625",
+        "5": "1386/78125",
+        "6": "168/78125",
+        "7": "36/78125"
+      }
+    },
+    {
+      "order": 8,
+      "passes_5_percent": true,
+      "sharp_upper": {
+        "decimal": 0.0197248,
+        "exact": "1541/78125"
+      },
+      "vertex_witness": {
+        "0": "52428/390625",
+        "1": "117972/390625",
+        "2": "117936/390625",
+        "3": "13776/78125",
+        "4": "25704/390625",
+        "5": "6552/390625",
+        "6": "1008/390625",
+        "7": "144/390625",
+        "9": "1/390625"
+      }
+    },
+    {
+      "order": 9,
+      "passes_5_percent": true,
+      "sharp_upper": {
+        "decimal": 0.01958144,
+        "exact": "7649/390625"
+      },
+      "vertex_witness": {
+        "0": "262144/1953125",
+        "1": "589824/1953125",
+        "2": "589824/1953125",
+        "3": "344064/1953125",
+        "4": "129024/1953125",
+        "5": "32256/1953125",
+        "6": "5376/1953125",
+        "7": "576/1953125",
+        "8": "36/1953125",
+        "9": "1/1953125"
+      }
+    }
+  ]
+}

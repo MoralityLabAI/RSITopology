@@ -1,0 +1,23 @@
+{
+  "artifacts": {
+    "canonical_summary.json": {
+      "bytes": 3012,
+      "sha256": "e0020bd99060320ef685a5619e6633da88b82c72c5636cf1fc612fb68866b1f2"
+    },
+    "causal_rows.jsonl": {
+      "bytes": 2646506,
+      "sha256": "111ab26f4b71e5a10921e99650fb9a50a01aa489a7ccc15a4b07f27e1e283025"
+    },
+    "environment_lock.json": {
+      "bytes": 262,
+      "sha256": "f3553ea54bf3ef4869bddf0f37a5b505e5794b0b6f67899c032ad62f1b5d6791"
+    },
+    "loop_receipts.jsonl": {
+      "bytes": 4517,
+      "sha256": "f4ce01013dc9654c5b5a115b09f92d054ba0cea353a9ff53bbf1c698e6daa5bd"
+    }
+  },
+  "protocol_id": "holonomy_causal_transfer_falsification_v0_1",
+  "protocol_sha256": "82bdbf1da84cf246dd63f94da743e17f39fd6d7305bfbfefb5ef22a8cb9e6020",
+  "schema_version": "1.0.0"
+}

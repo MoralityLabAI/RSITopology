@@ -1,0 +1,44 @@
+{
+  "schema_version": "asmp4_resettable_support_variational_claim_v0_24",
+  "status": "exact support-functional variational theorem for reset-concatenable registrations",
+  "sealed_resources": {
+    "count": 4,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_3_metric_claim_sha256": "eb56ebbbccc2f088e09ccc5a6ff55f6403dcdf54ef47d9879dc207285cf31da1",
+    "v0_7_relational_claim_sha256": "6cf4f5c04e789a75510cb1ff032a1ce764312ab8969ae97e32126f4685870749",
+    "v0_23_delay_claim_sha256": "f5c3d7678029957020c30ae4382218d24823f33e165afdb34728464de201dbae"
+  },
+  "main_theorem": {
+    "weighted_entropy": "h(lambda)=inf_(T,(R,W) in A_T) [lambda log2 R+(1-lambda) log2 W]/T",
+    "region": "intersection_(0<=lambda<=1) {lambda r+(1-lambda) w >= h(lambda)}",
+    "properties": [
+      "h is concave",
+      "the region is closed convex and upward",
+      "state conjugacy and transcript relabeling preserve h",
+      "safe block concatenation multiplies transcript counts and convexifies normalized log pairs"
+    ]
+  },
+  "exact_recoveries": {
+    "symmetric_diagonal": "h(lambda)=1 gives [1,infinity) x [1,infinity)",
+    "unequal_rectangle": "h(lambda)=2+lambda gives [3,infinity) x [2,infinity)",
+    "relational_wedge": "h(lambda)=min(log2(3),1+lambda), with critical lambda=log2(3/2)",
+    "raw_clone": "h_m(lambda)=2+lambda log2(m)",
+    "positive_delay_no_preview": "empty region has h(lambda)=infinity"
+  },
+  "relational_harness": {
+    "local_pairs": [[3, 3], [4, 2]],
+    "maximum_horizon": 8,
+    "frontier_points_at_horizon_eight": 9,
+    "critical_support_normals": ["0", "log2(3/2)", "1"]
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 24,
+    "tests": 274
+  },
+  "decision": "replace_two_scalar_thresholds_by_a_weighted_support_family_for_declared_resettable_registrations",
+  "nonclaim": "This theorem is exact for the reset-block-generated region. It equals the full infinite-horizon ASMP-4 region only after periodic block completeness is proved for the registered plant and architecture; it does not select the canonical sensor, timing, randomness, quotient, or global nonlinear class grammar."
+}

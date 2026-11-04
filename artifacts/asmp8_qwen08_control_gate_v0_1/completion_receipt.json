@@ -1,0 +1,46 @@
+{
+  "schema_version": "asmp8_qwen08_control_gate_completion_receipt_v0_1",
+  "status": "qwen_confidence_control_gate_not_established",
+  "completed_utc": "2026-07-25T22:07:24Z",
+  "preregistration": {
+    "commit": "1d12733f90aa831dbeb23c9b9981489ddd2c2ad4",
+    "protocol_path": "protocols/asmp8_qwen08_control_gate_prediction_v0_1.json",
+    "protocol_sha256": "194b0db060da22e7c46766c8ba5e304ae982f8ea552ff301a14a77c74d1728e0"
+  },
+  "artifacts": {
+    "features_sha256": "0a26ec884c72c758d0cdf82f2792cd1266b370f1b383bc66418f88d9c8aa058b",
+    "feature_receipt_sha256": "bb0284b7ee7cd34cca4379551152db1943a901b424456780c02c485afe80eef5",
+    "outcomes_sha256": "98c4838d5deee0862f75080ffcccc9090884ed93b25cbb8c110da5e009c336a6",
+    "analysis_sha256": "bad070ff9474cb4ab3f7195fc9ed97b7ef003f475715178733170f8396ac01c5",
+    "report_sha256": "7f4c890baabecc43e8f9ec8224c95443b624edf6142a0a936b738c39a77e45a1"
+  },
+  "verification": {
+    "focused_tests": "18 passed",
+    "analysis_replay_byte_identical": true,
+    "report_replay_byte_identical": true,
+    "feature_outcome_join_count": 576,
+    "duplicate_or_missing_ids": 0
+  },
+  "gates": {
+    "F0_feature_binding": "pass",
+    "J0_exact_join_and_outcome_support": "pass",
+    "G0_heldout_selective_risk_increment": "fail"
+  },
+  "primary": {
+    "application_balanced_selective_risk_auc_improvement": -0.0003107443888642563,
+    "bootstrap_95": [
+      -0.0008743427641711831,
+      0.00009900655864202178
+    ],
+    "permutation_p_one_sided": 0.9414348462664714,
+    "permutation_replicates": 2048
+  },
+  "secondary": {
+    "log_loss_improvement": -0.00027228332564560587,
+    "baseline_average_precision": 0.7680980812390069,
+    "augmented_average_precision": 0.7661731690542672,
+    "baseline_roc_auc": 0.935678587654962,
+    "augmented_roc_auc": 0.934575193094048
+  },
+  "claim_boundary": "A stable Qwen0.8B first-formatting-token probability did not improve held-out control-risk ranking on the frozen synthetic panel. This rejects that feature for this use; it does not reject hidden-state, sequence-level, or task-conditioned confidence signals and makes no causal, deployment, scalable-oversight, Goodhart-frontier, recursive-improvement, or ASMP-8 resolution claim."
+}

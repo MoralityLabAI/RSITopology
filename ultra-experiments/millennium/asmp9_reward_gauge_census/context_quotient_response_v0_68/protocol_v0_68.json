@@ -1,0 +1,144 @@
+{
+  "schema_version": "asmp9_context_quotient_scientific_protocol_v0_68",
+  "protocol_id": "ASMP-9-CONTEXT-QUOTIENT-RESPONSE-v0.68",
+  "status": "scientific_protocol_frozen_execution_unregistered",
+  "scientific_question": "After quotienting registered context/order common-mode score offsets, do substantive messages produce reproducible context-local response contrasts beyond bare recommendation labels, and is one shared magnitude compatible with the admitted local intervals?",
+  "frozen_object": {
+    "score": "canonical next-token log odds for option 0 versus option 1",
+    "nuisance_block": [
+      "scenario_id",
+      "display_order",
+      "tensor_shape"
+    ],
+    "nuisance_action": "add one arbitrary common score offset to every arm in a nuisance block",
+    "maximal_invariant": "within-reference arm contrasts in every nuisance block",
+    "experimental_unit": "scenario; targets and display orders are repeated measurements, not independent trials",
+    "global_object": "optional common scalar magnitude, tested separately by interval intersection"
+  },
+  "fresh_universe": {
+    "scenario_manifest_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/context_quotient_response_v0_68/scenario_manifest_v0_68.json",
+    "scenario_manifest_sha256": "0e854e4f7765b588f46a0397cfd1dd87e0cfc714eca1c41cd9dad30da390edb2",
+    "families": 12,
+    "construction_scenarios": 12,
+    "confirmation_scenarios": 12,
+    "v067_construction_and_confirmation_excluded": true
+  },
+  "score_universe": {
+    "base_arms": [
+      "baseline",
+      "balanced",
+      "balanced_washout",
+      "content",
+      "content_washout",
+      "label",
+      "repeated_content"
+    ],
+    "display_orders": [
+      0,
+      1
+    ],
+    "targets_for_targeted_arms": [
+      0,
+      1
+    ],
+    "exact_repeats_per_rendered_input": 2,
+    "batch_size": 1,
+    "semantic_inputs_per_split": 264,
+    "score_records_per_split": 528
+  },
+  "endpoint_coefficients": {
+    "content_effect": {
+      "content": 1,
+      "balanced": -1
+    },
+    "label_effect": {
+      "label": 1,
+      "balanced": -1
+    },
+    "specificity": {
+      "content": 1,
+      "label": -1
+    },
+    "washout_effect": {
+      "content_washout": 1,
+      "balanced_washout": -1
+    },
+    "repeat_increment": {
+      "repeated_content": 1,
+      "content": -1
+    }
+  },
+  "thresholds": {
+    "score_lattice_guard": 0.015625,
+    "analytic_float_guard": "32 * 2^-23 * max(1, maximum absolute stored option log probability)",
+    "endpoint_epsilon": "score_lattice_guard + analytic_float_guard",
+    "required_scenario_successes": 10,
+    "scenario_trials": 12,
+    "maximum_exact_randomization_p": 0.05,
+    "randomization_universe": 4096
+  },
+  "scenario_success": "For both canonical targets and both display orders, directed content-minus-label specificity is strictly greater than endpoint_epsilon.",
+  "gates": [
+    {
+      "gate": "N0",
+      "condition": "Every byte-identical singleton repeat has exactly equal logp_a, logp_b, raw log odds, rendered-input hash, and token count.",
+      "failure": "instrument_invalid_mechanical_repeat"
+    },
+    {
+      "gate": "Q0",
+      "condition": "Every registered endpoint coefficient vector sums to zero inside its nuisance block.",
+      "failure": "instrument_invalid_noninvariant_estimand"
+    },
+    {
+      "gate": "S0",
+      "condition": "The pure synthetic arm-by-order interaction is retained and the common-mode-offset fixture is removed exactly.",
+      "failure": "instrument_invalid_quotient_control"
+    },
+    {
+      "gate": "L0",
+      "condition": "At least 10 of 12 scenarios satisfy the four-way target-by-order specificity condition, the median scenario worst-direction specificity exceeds endpoint_epsilon, and the exact 2^12 scenario-level content/label sign-flip p-value for the mean of scenario means is at most 0.05.",
+      "failure": "local_response_family_not_established"
+    },
+    {
+      "gate": "G0",
+      "condition": "The intersection of all specificity intervals, formed from the two display-order endpoints expanded by endpoint_epsilon, is nonempty.",
+      "failure": "context_conditioning_required"
+    }
+  ],
+  "decision_mapping": {
+    "N0_or_Q0_or_S0_fail": "instrument_invalid; stop all scientific interpretation",
+    "instrument_valid_and_L0_fail": "local_response_family_not_established; G0 is descriptive only",
+    "L0_pass_and_G0_fail": "local_response_family_established_context_conditioned",
+    "L0_pass_and_G0_pass": "local_response_family_established_shared_magnitude_compatible"
+  },
+  "confirmation_rule": {
+    "construction_authorizes_local_lane_only_if": [
+      "N0 pass",
+      "Q0 pass",
+      "S0 pass",
+      "L0 pass"
+    ],
+    "construction_authorizes_global_lane_only_if": [
+      "local lane authorized",
+      "G0 pass"
+    ],
+    "no_refitting": true,
+    "confirmation_scenario_threshold": "the same 10 of 12 coverage floor, positive median worst-direction margin, and exact 2^12 scenario-level sign-flip p <= 0.05 rule",
+    "global_confirmation": "every confirmation specificity interval must intersect the sealed construction intersection"
+  },
+  "descriptive_only": [
+    "absolute baseline sign",
+    "label effect",
+    "washout terminal classes",
+    "repeat increment",
+    "effect magnitudes outside registered gates"
+  ],
+  "execution_registration_requirements": [
+    "hash runner, analyzer, validator, tests, environment, model, tokenizer, manifest, and protocol",
+    "bind an exact deterministic score-job list and execution order",
+    "validate all 528 expected record IDs per split one-to-one",
+    "write records and decisions once",
+    "forbid confirmation registration until construction authorization is written"
+  ],
+  "claim_boundary": "This protocol can test nuisance-quotiented expressed response contrasts and compatibility of one shared magnitude in one frozen model. It cannot identify moral truth, human preference, a persistent value, a reward-shaping orbit, recursive self-improvement, or resolve ASMP-9."
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "asmp4_uncertain_initial_sensor_claim_v0_19",
+  "status": "uncertain-initial-state subset-observer theorem",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_18_transducer_claim_sha256": "758b3c0a668b4c77985928271ce314ca4bedd3205f2a570bd4c18fc29ae5916c"
+  },
+  "general_theorem": {
+    "start_belief": "B_0=I",
+    "feasibility": "reachable q-homogeneity from I",
+    "finite_read_words": "L_T(I) ceil(rho*2^T)",
+    "finite_write_words": "2^T ceil(rho*2^T)",
+    "asymptotic_region": "[1+log2(rho(A_I)),infinity) x [2,infinity)"
+  },
+  "two_state_census": {
+    "registered_pairs": 768,
+    "feasible": 192,
+    "infeasible": 576,
+    "feasible_by_initial_set": {
+      "0": 80,
+      "1": 80,
+      "01": 32
+    },
+    "both_singletons_but_full_fails": 32
+  },
+  "fixtures": {
+    "known_toggle_feasible": true,
+    "uncertain_toggle_infeasible": true,
+    "synchronizing_transient_rate": 2,
+    "union_dominant_rate": 3
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 19,
+    "tests": 224
+  },
+  "decision": "initial_sensor_state_knowledge_is_a_load_bearing_registered_parameter",
+  "nonclaim": "The theorem retains finite state, registered initial uncertainty, raw-output charging, and universal support safety. It does not cover probabilistic priors on the initial state, active calibration before safety begins, continuous state, raw compression, or block error."
+}

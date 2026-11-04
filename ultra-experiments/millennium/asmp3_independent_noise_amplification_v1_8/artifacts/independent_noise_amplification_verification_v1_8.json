@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_binomial_tv_rate_and_recurrence_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_complete_448_row_registry_reconstructed": true,
+    "V2_all_binomial_tv_and_bound_fields_reconstructed": true,
+    "V3_word_level_total_variation_replayed": true,
+    "V4_rate_adversary_monotonicity_grid_replayed": true,
+    "V5_even_odd_recurrence_reconstructed": true,
+    "V6_correlation_and_parent_comparison_exact": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates conditionally i.i.d. truth-independent replication errors with one adversarial rate p<=eta. It does not infer independence from marginal error bounds.",
+  "passed": true,
+  "schema_version": "asmp3_independent_noise_amplification_verification_v1_8"
+}

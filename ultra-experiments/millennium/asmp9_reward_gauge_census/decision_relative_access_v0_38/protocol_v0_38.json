@@ -1,0 +1,86 @@
+{
+  "claim_boundary": {
+    "allowed": "Exact decision-relative access threshold in one finite symmetric reward, policy, query, and target-independent nuisance grammar.",
+    "forbidden": [
+      "new Blackwell, Le Cam, Torgersen, or Goel-DeGroot theorem",
+      "general reward or human-value identifiability",
+      "robustness to correlated or strategic nuisance",
+      "real-model evidence",
+      "ASMP-9 resolution"
+    ]
+  },
+  "confirmation_grid": {
+    "burned_strengths_excluded": [
+      ["2/3", "1/3"],
+      ["3/4", "1/4"],
+      ["4/5", "1/5"],
+      ["3/5", "2/5"]
+    ],
+    "nuisance_one_probabilities": ["1/2", "2/3"],
+    "strengths": [
+      ["5/7", "2/7"],
+      ["7/8", "1/8"],
+      ["5/8", "3/8"]
+    ]
+  },
+  "decision_type": {
+    "loss_bounds": ["0", "1"],
+    "loss_name": "three_policy_regret",
+    "losses": [
+      ["0", "1", "1"],
+      ["1", "0", "1"],
+      ["1", "1", "0"]
+    ],
+    "policies": 3,
+    "targets": 3
+  },
+  "epsilon_rule": {
+    "boundary": "(high-low)/2",
+    "pass_operator": "<=",
+    "strict_below_boundary_requires": [
+      "q_target_0",
+      "q_target_1"
+    ],
+    "at_boundary_inclusion_minimal_size": 1
+  },
+  "gates": {
+    "A0": "For every cell, no-access target-relative deficiency is strictly greater than (high-low)/2.",
+    "E0": "Expanded-parameter deficiency without q_gauge_shift is exactly 1/2.",
+    "G0": "Target-independent q_gauge_shift is ancillary for target-relative comparison and gauge-only access equals no access.",
+    "P0": "All exact definition, solver, nuisance, Blackwell, and burned-family preflight tests pass.",
+    "R0": "Exactly six unique registered cells are returned.",
+    "S0": "All protocol, registration, environment, and source hashes match before execution.",
+    "T0": "Each one-target-query deletion deficiency equals (high-low)/2."
+  },
+  "nuisance": {
+    "conditional_law": "target-independent registered Bernoulli law",
+    "expanded_parameter": ["theta", "xi"],
+    "licensed_gauge": "constant reward shift",
+    "marginalization": "sum_xi kappa(xi|theta) E(y|theta,xi)"
+  },
+  "primary_estimand": "delta_D(E_A,E_full)",
+  "protocol_id": "asmp9-decision-relative-access-v0.38",
+  "queries": {
+    "full_access": [
+      "q_target_0",
+      "q_target_1",
+      "q_gauge_shift"
+    ],
+    "independence": "conditional on (theta,xi)",
+    "q_gauge_shift": "deterministic xi",
+    "q_target_0": ["high", "low", "low"],
+    "q_target_1": ["low", "high", "low"]
+  },
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1073741824,
+    "max_wall_seconds": 600,
+    "network": false,
+    "processes": 1
+  },
+  "secondary_estimands": [
+    "G_D optimized minimax value gap",
+    "ordinary expanded-parameter directional deficiency"
+  ],
+  "status": "prospective_unregistered",
+  "version": "0.38"
+}

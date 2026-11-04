@@ -1,0 +1,28 @@
+{
+  "schema_version": "asmp3_external_review_checklist_v0_6",
+  "problem_id": "ASMP-3",
+  "problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "minimum_independent_teams": 2,
+  "minimum_independently_implemented_checkers": 1,
+  "required_review_tracks": [
+    "complexity_and_game_semantics",
+    "probability_noise_and_lower_bound"
+  ],
+  "required_questions_per_receipt": 12,
+  "acceptable_verdicts": [
+    "accept",
+    "accept_with_nonmaterial_corrections"
+  ],
+  "required_independence": [
+    "distinct_reviewer_identities",
+    "independent_initial_review_true",
+    "one_review_per_required_track",
+    "both_teams_reproduce_the_end_to_end_argument",
+    "same_release_manifest_sha256",
+    "no_material_issue_found",
+    "all_assigned_questions_answered_yes",
+    "at_least_one_review_team_implements_and_passes_an_independent_checker"
+  ],
+  "reviews_directory": "reviews",
+  "status_artifact": "artifacts/expert_review_status_v0_6.json"
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-completion-audits-500k-v0-4-20260723",
+  "amends": "protocols/asmp8_qwen08_completion_audits_500k_v0_3.json",
+  "amendment_reason": "The v0.4 smoke exposed a degenerate post-sampling probability. The full run now depends on a nondegenerate pre-sampling-probability smoke; resource and thermal caps are unchanged.",
+  "purpose": "Checkpointed 500,000-audit model-forward stress and measurement run over the frozen 576-prompt manifest.",
+  "measurement_contract": {
+    "audit_unit": "one frozen-manifest prompt plus one deterministic pre-sampling next-token probability",
+    "audit_count": 500000,
+    "unique_prompt_count": 576,
+    "checkpoint_every_audits": 1000,
+    "parallel_requests": 4,
+    "precision": "Q4_K_M",
+    "generation_tokens": 1,
+    "gradients": false,
+    "weights_modified": false,
+    "scientific_gate": false,
+    "required_probability_coverage": 1.0,
+    "minimum_probability_variance": 1e-12,
+    "repeated_prompts_are_independent_evidence": false
+  },
+  "launch_gate": {
+    "required_smoke_run": "asmp8-qwen08-completion-audits-smoke-v0-5-20260723",
+    "required_smoke_guard_status": "completed",
+    "required_smoke_probability_coverage": 1.0,
+    "minimum_smoke_probability_variance": 1e-12,
+    "maximum_smoke_temperature_c": 87,
+    "smoke_cleanup_must_pass": true,
+    "maximum_start_temperature_c": 80,
+    "minimum_free_gpu_mb": 2500,
+    "minimum_free_physical_mb": 8192,
+    "shared_gpu_compute_processes_allowed": 0
+  },
+  "resource_caps": {
+    "memory_mb": 4096,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 43200,
+    "gpu_allowance_mb": 1600,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "thermal_guard": {
+    "maximum_start_temperature_c": 80,
+    "hard_abort_temperature_c": 88,
+    "minimum_free_gpu_mb": 2500,
+    "minimum_free_physical_mb": 8192
+  },
+  "abort_semantics": {
+    "thermal_or_resource_abort_is_valid_outcome": true,
+    "resume_from_last_atomic_checkpoint": true,
+    "incomplete_chunk_replayed": true,
+    "owned_processes_only_cleanup": true
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_completion_audits_500k_v0_4"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_completion_audits_500k_v0_4\\wrapper",
+  "checkpoint_strategy": "atomic progress.json and append-only events.jsonl every 1,000 completed audits",
+  "exact_inner_command": [
+    "D:\\Research_Engine\\.venv-train\\Scripts\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen08_completion_audits.py",
+    "--run-id",
+    "asmp8-qwen08-completion-audits-500k-v0-4-20260723",
+    "--server-path",
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064-cuda12.4\\payload\\llama-server.exe",
+    "--model-path",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--prompt-manifest",
+    "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_completion_audits_500k_v0_4",
+    "--audit-count",
+    "500000",
+    "--checkpoint-every",
+    "1000",
+    "--warmup-count",
+    "8",
+    "--parallel",
+    "4",
+    "--context-size",
+    "768",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "256",
+    "--gpu-layers",
+    "99",
+    "--threads",
+    "6",
+    "--port",
+    "8818"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  },
+  "claim_boundary": "Model-forward completion audit proxy and resource stress test only; cycling 576 prompts 500,000 times is not independent evidence and this run is not an ASMP-8 scientific gate."
+}

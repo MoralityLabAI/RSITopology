@@ -1,0 +1,26 @@
+{
+  "implementation_commit": "94e04366197b713a7cfa2800b3bf9223f2c6b38f",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/protocol_v0_26_2.json",
+  "registered_at_utc": "2026-07-29T04:12:22Z",
+  "registration_id": "ASMP-9-OFFSET-ACCESS-v0.26.2-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/POSTRUN_NOTE_v0_26.md": "87d0ad30edf392d1ea3d0c247b3a4eba93c61f46389f0af6c7b7a6f1bd18784c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/PRIOR_ART_GATE_v0_26.md": "7e1fdb042bb9e88cc1c55b61d6c7851098957e975cc73f99ee5741c1740f31e6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/artifacts_v0_26/independent_verification_v0_26.json": "9e2f8589d020052e1de2a57e4ab760ec03c05272d1d715b91bd8e143a9d05d8d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/artifacts_v0_26/result_v0_26.json": "e21ee3222858f31356ba2c3c0676f3afaea97f3aea607d51895c4039a418c15a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/artifacts_v0_26/run_receipt_v0_26.json": "d18645a03628327dc460023e5e5b285408b14d9a64edda2c4a325a3367a23d3f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/protocol_v0_26.json": "24dfb1c80beca86b4ba39410e6b94d592b61fbe8585568d4d7c966734a199c49",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/registration_v0_26.json": "50cf84a1921ad943adc3d6fb65c62e34939ea6621a93c775c8f31c4db917c52e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/EXECUTION_NOTE_v0_26_1.md": "92bab8cebebd5ea1528f2872c1646d279ab203d4e04d7ab22548fd8f1b07a763",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/adjudicate_v0_26_1.py": "66f93cdee16f7aa6c9578b8a6168c53f486ba90b23dc8c55882627d1f5b91d0d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/protocol_v0_26_1.json": "e006194a23a5758eb08396d8278df7be9beb8108f7ca34d13a99047e6ad33f27",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/registration_v0_26_1.json": "5352b253bb2e5fe05db4c3cd3332f3bee175daf4858e83826e776535a38e7d73",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_1/verify_repair_v0_26_1.py": "4a2e4b79010bebea3db8d4f8b0ff1972406cbeb3c3d35668431638d786ebe58b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/README.md": "9c411d22f46ad1d6a56c0a6774830c34a7204a3c62e033d80aec9e2a6b3876d7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/adjudicate_v0_26_2.py": "8d0347691674eb6c8f3ca1a40f0603d9d8f829a360cab2047d14e9ce44d915b1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/protocol_v0_26_2.json": "67cc006ac6da8131eb9a894ef073e3448d434b562255f02ec15043d711eb00a6",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/register_v0_26_2.py": "02954fc0af231f3ebc8da0da8ba11c55ac73241695e5c434c7ac2b91a3c29a04",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/test_repair_v0_26_2.py": "7ade53089f7ab66c8353ea1499a37c80bebc7a74d60883b5891e8eb19fad4900",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/offset_access_v0_26/repair_v0_26_2/verify_repair_v0_26_2.py": "082520aac4db5880e28a7f5b83488afba427ad00fe0fb46a4b9357643aa5db9b"
+  }
+}

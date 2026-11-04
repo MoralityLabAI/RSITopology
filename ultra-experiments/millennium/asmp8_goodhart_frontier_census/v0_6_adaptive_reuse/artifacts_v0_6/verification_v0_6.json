@@ -1,0 +1,72 @@
+{
+  "binding_gates": {
+    "B0_run_receipt_schema_exact": true,
+    "B1_protocol_hash_bound": true,
+    "B2_result_hash_bound": true,
+    "B3_exact_source_set_and_hashes_bound": true,
+    "B4_protocol_binding_report_bound": true
+  },
+  "bindings": {
+    "protocol_v0_6.json": "252586b1f4a39cef263a03c4fb8fa338cbd3a9f272b09c3ec9d4cfec9109ddab",
+    "result_v0_6.json": "2d5a83acf7cd0fcb5964a5040ca695eff0444a3e625173b7f9750b75740787d4",
+    "run_receipt_v0_6.json": "5d95014895f40682f92180fab3232fe999aa235b249f9cf8c2a452a95a03760f",
+    "source_files": {
+      "PROTOCOL_v0_6.md": "202a1b972e1f4fc2f6910394b34e9f30806c000d7da2ee9d47bafa18e62410e9",
+      "README.md": "ef2ff5611f2f66d18f8ec5226bb584499ad55aaf4283c9778e75c606cca23573",
+      "adaptive_reuse.py": "374c75be9313d48441f136c822b54114758c63110f2d8123714280afd697dffd",
+      "protocol_v0_6.json": "252586b1f4a39cef263a03c4fb8fa338cbd3a9f272b09c3ec9d4cfec9109ddab",
+      "run.py": "95bb2772c533ce58eb2ba8fbe6153cabd03f1064b14aa83ea102dd68024856c2",
+      "test_adaptive_reuse.py": "b9603621e90064a798dc5e8928b9d81b8fd80873a5cf60beb5c0d84414bd34d8",
+      "verify_independent.py": "d83aac9648992a52ab7044c03238ce6283639754cc8bd5876d39fdf7c7e962fe"
+    }
+  },
+  "claim_support": "deterministic_finite_adaptive_audit_reuse",
+  "derived_conclusion_layers": {
+    "claim_boundary": [
+      "deterministic bounded errors on enumerable atoms only",
+      "no stochastic optional-stopping or learned-policy claim",
+      "no ASMP-8 resolution claim"
+    ],
+    "claim_support": "deterministic_finite_adaptive_audit_reuse",
+    "measurement_reliability": "independent_complete_pointwise_and_adaptive_replay_passed",
+    "operational_decision": "retain_bound_require_new_noisy_label_protocol",
+    "task_result": "adaptive_pointwise_certificate_sound"
+  },
+  "derived_primary_gates": {
+    "G0_policy_feasibility": true,
+    "G1_pointwise_soundness": true,
+    "G2_reveal_monotonicity": true,
+    "G3_full_census_exactness": true,
+    "G4_adaptive_soundness": true,
+    "G5_plugin_negative_control": true,
+    "G6_metric_robustness": true
+  },
+  "implementation_imported": false,
+  "independent_gates": {
+    "V0_exact_registered_protocol": true,
+    "V1_exact_result_schema_and_key_universe": true,
+    "V2_pointwise_census_replayed": true,
+    "V3_adaptive_policy_and_audit_replayed": true,
+    "V4_policy_and_monotonicity_replayed": true,
+    "V5_metric_probes_and_primary_gates_derived": true,
+    "V6_conclusion_layers_and_boundary_derived": true,
+    "V7_complete_payload_matches": true
+  },
+  "measurement_reliability": "independent_complete_pointwise_and_adaptive_replay_passed",
+  "mismatch_paths": [],
+  "operational_decision": "retain_bound_require_new_noisy_label_protocol",
+  "pass": true,
+  "protocol_binding": {
+    "exact_field_set": true,
+    "field_alphabet_size": true,
+    "field_claim_boundary": true,
+    "field_error_alphabet": true,
+    "field_error_cap": true,
+    "field_policy_mass_move": true,
+    "field_protocol_id": true,
+    "field_schema_version": true
+  },
+  "replayed_adaptive_traces": 729,
+  "replayed_pointwise_cells": 1399680,
+  "schema_version": "asmp8_adaptive_reuse_verification_v0_6_1"
+}

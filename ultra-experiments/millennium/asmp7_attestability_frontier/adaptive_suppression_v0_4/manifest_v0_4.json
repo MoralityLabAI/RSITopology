@@ -1,0 +1,536 @@
+{
+  "analysis": {
+    "multiple_comparisons": "none; every registered row, theorem obligation, control, and mutation gate is jointly required",
+    "ood_conditions": [
+      "current-X anticipatory timing mutation",
+      "nonmonotone two-step terminal payoff",
+      "arbitrary rational coordinatewise-monotone nonsymmetric terminal payoff"
+    ],
+    "primary_outcomes": [
+      "causal_adaptive_endpoint_equals_static_endpoint",
+      "all_48_upstream_selective_records_reproduced",
+      "NP_predecessor_minimality_transfers"
+    ],
+    "stopping_rule": "validate bindings before scientific work; process the frozen 48 parameter triples, 72 quotient pairs, 144 upper-tail oracle comparisons, and 11520 generic-terminal proof comparisons in declared order; stop before the next registered stage on any binding, exactness, 30-second wall, 64-MiB traced-Python, or one-MiB artifact breach",
+    "uncertainty": "none; all registered probabilities, Bellman values, and certificates use exact rational arithmetic"
+  },
+  "artifacts": {
+    "raw_rows": "../artifacts_v0_4_adaptive_suppression/result_v0_4.json#registry_rows",
+    "replay_command": "python -I run.py --source-commit <40-hex-source-commit>",
+    "seed_manifest": "manifest_v0_4.json#seed_plan",
+    "summary": "../artifacts_v0_4_adaptive_suppression/result_v0_4.json#conclusion_layers",
+    "verification": "../artifacts_v0_4_adaptive_suppression/verification_v0_4.json"
+  },
+  "benefit": "robustness",
+  "budget": {
+    "execution": "strictly sequential; standard library only; no RNG or worker subprocesses",
+    "max_cells_per_world": 144,
+    "max_episodes": 48,
+    "max_horizon": 8192,
+    "max_generic_terminal_comparisons": 11520,
+    "max_oracle_comparisons": 144,
+    "max_quotient_pairs": 72,
+    "max_result_bytes": 1048576,
+    "max_steps_per_episode": 8192,
+    "max_traced_python_mib": 64,
+    "max_wall_seconds": 30
+  },
+  "claim_boundary": [
+    "fixed 16-point Boolean execution known completely to the suppressor",
+    "iid uniform current challenge sampled only after the exact-c mask is frozen and conditionally independent of the frozen filtration",
+    "causal private-randomized mask policies measurable with respect to past X, Y, S and private coins",
+    "fresh randomized-response and fallback coins and post-transcript auditor randomization are hidden from the suppressor",
+    "monitor receives only the report-bit history Y; registered sample minima use the count K",
+    "arbitrary rational coordinatewise-monotone terminal functions are covered; the NP minimum-transfer corollary is for registered count upper-tail tests",
+    "deterministic finite horizons m from 0 through 8192 only",
+    "no current-X-aware mask, nonmonotone audit theorem, random stopping time, infinite horizon, stateful execution, nonuniform or dependent challenge, mask leakage, real meter, deployment, transformation-universal attestability, or ASMP-7 resolution claim"
+  ],
+  "claim_scope": "model_only",
+  "conclusion_layer_names": [
+    "metric_robustness",
+    "task_result",
+    "measurement_reliability",
+    "claim_support",
+    "operational_decision"
+  ],
+  "controls": [
+    {
+      "name": "current_X_anticipatory_timing",
+      "type": "mechanism_knockout"
+    },
+    {
+      "name": "nonmonotone_h2_exactly_one",
+      "type": "mechanism_knockout"
+    },
+    {
+      "name": "concrete_masks_equal_attainable_a_quotient",
+      "type": "independent_replication"
+    },
+    {
+      "name": "input_relabeling",
+      "type": "independent_replication"
+    },
+    {
+      "name": "v0_3_all_selective_records",
+      "type": "baseline"
+    },
+    {
+      "name": "theta_half_zero_coverage_full_coverage",
+      "type": "null"
+    }
+  ],
+  "experimental_unit": "one exact inherited (k1, theta, coverage_count) selective-suppression parameter triple; oracle calls and theorem checks are repeated verification, not independent samples",
+  "hypotheses": [
+    {
+      "falsifier": "a causal adaptive policy has a strict value beyond the appropriate constant-mask endpoint for any registered monotone oracle row, or any analytic premise fails",
+      "id": "H1_full_history_causal_endpoint_theorem",
+      "prediction": "for every rational coordinatewise-monotone terminal phi on {0,1}^m and every deterministic m<=8192, full-history nonanticipating exact-c policies attain the same extrema as constant endpoint masks"
+    },
+    {
+      "falsifier": "any composite-k boundary, common-law status, feasible minimum, or exact infeasible predecessor differs from the bound v0.3 selective record; the frozen selective registry contains no cap-infeasible row",
+      "id": "H2_composite_and_minimality_transfer",
+      "prediction": "endpoint monotonicity in k and admissibility of constant masks transfer all 48 v0.3 selective statuses and exact NP minima/predecessors to the causal adaptive class"
+    },
+    {
+      "falsifier": "the independently implemented current-X mutation fails to recover q0=3/4 and q1=7/16 or does not reverse the causal pair 5/8<3/4",
+      "id": "H3_timing_scope_control",
+      "prediction": "allowing the mask to see current X breaks the causal theorem at (8,14,1,12)"
+    },
+    {
+      "falsifier": "the two-step exactly-one payoff fails to achieve adaptive value 5/8 against best fixed value 1/2",
+      "id": "H4_monotonicity_scope_control",
+      "prediction": "a nonmonotone payoff at k=8, theta=1, c=12 admits strict history-dependent gain and is excluded from H1"
+    }
+  ],
+  "interventions": [
+    {
+      "changes": {
+        "mask_policy": "exact-c mask may be selected from the full past (X,Y,S) history before fresh X_t"
+      },
+      "name": "causal_history_dependent_suppression"
+    },
+    {
+      "changes": {
+        "mask_policy": "one execution-dependent exact-c mask fixed across all challenges"
+      },
+      "name": "v0_3_fixed_mask_baseline"
+    },
+    {
+      "changes": {
+        "mask_policy": "mask may depend on current X_t"
+      },
+      "name": "anticipatory_timing_mutation"
+    }
+  ],
+  "metric_robustness_probes": [
+    {
+      "criterion": "canonical and relabeled agreement sets induce identical attainable-a sets for all 72 registered (k,c) pairs",
+      "family": "invariance",
+      "id": "P1_input_relabeling"
+    },
+    {
+      "criterion": "the current-X mutation gives 3/4 versus 7/16 while the causal cell remains 5/8 versus 3/4",
+      "family": "sensitivity",
+      "id": "P2_timing_sensitivity"
+    },
+    {
+      "criterion": "all 144 monotone h=3 comparisons preserve full-history, count-state, and constant-endpoint equality",
+      "family": "monotonicity",
+      "id": "P3_terminal_monotonicity"
+    },
+    {
+      "criterion": "the nonmonotone h=2 breaker yields 5/8 adaptive versus 1/2 fixed and is never counted as a theorem pass row",
+      "family": "anti_gaming",
+      "id": "P4_nonmonotone_scope_breaker"
+    },
+    {
+      "criterion": "all 48 bound v0.3 selective rows and theta=1/2, c=0, c=16 simple limits reproduce exactly",
+      "family": "clean_control",
+      "id": "P5_upstream_and_simple_limits"
+    }
+  ],
+  "metrics": {
+    "denominators": {
+      "oracle_comparison": "one frozen witness-threshold-gamma-objective tuple",
+      "generic_terminal_comparison": "one horizon-three monotone Boolean terminal, registered action law, and max/min objective tuple",
+      "quotient_pair": "one policy-class agreement count and coverage count",
+      "registry_row": "one inherited selective parameter triple"
+    },
+    "evidence": [
+      "endpoint_value_equality",
+      "upstream_status_and_minimum_equality",
+      "analytic_induction_obligations"
+    ],
+    "exposure": {
+      "activation": "every nonanticipating Bellman state enumerates every attainable a action",
+      "balance_tolerance": 0,
+      "eligibility": "all manifest, source, upstream, and finite-grid bindings pass",
+      "minimum_per_condition": 1,
+      "state_change": "the selected a changes the exact next-report Bernoulli law unless the action set or theta is null"
+    },
+    "hazard": [
+      "binding_failure",
+      "float_or_rng_use",
+      "missing_registry_or_oracle_key",
+      "causal_timing_leak",
+      "quotient_failure",
+      "resource_stop",
+      "artifact_overwrite_attempt"
+    ],
+    "selection": []
+  },
+  "model": {
+    "code_hash": "the required --source-commit must contain byte-identical copies of exactly the eight source-freeze files",
+    "config_paths": [
+      "manifest_v0_4.json",
+      "PROTOCOL_v0_4.md"
+    ],
+    "entrypoint": "run.py",
+    "rng": "no experiment RNG; adversary private randomization is covered analytically as convex mixtures",
+    "update_order": "choose S_t from the frozen past filtration, then sample iid-uniform X_t, then fresh report/fallback coins, then append (X_t,Y_t,S_t); auditor randomizes only after the complete transcript"
+  },
+  "protocol_id": "ASMP7-CAUSAL-ADAPTIVE-SUPPRESSION-v0.4",
+  "question": "Does unrestricted nonanticipating history-dependent exact-c suppression worsen the frozen v0.3 monotone audit frontier beyond constant execution-dependent masks?",
+  "registration_status": "source_candidate_not_executed_requires_commit_before_run",
+  "registry": {
+    "coverage_counts": [
+      0,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "forbidden_boundaries": [
+      14,
+      16
+    ],
+    "generic_terminal_census": {
+      "agreement_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        15,
+        16
+      ],
+      "comparison_count": 11520,
+      "coverage_counts": [
+        0,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "horizon": 3,
+      "loop_order": [
+        "terminal_truth_table",
+        "agreement_count",
+        "coverage_count",
+        "theta",
+        "objective"
+      ],
+      "nonsymmetric_terminal_count": 15,
+      "objectives": [
+        "max",
+        "min"
+      ],
+      "terminal_count": 20,
+      "terminal_family": "all coordinatewise-monotone Boolean truth tables on lexicographically ordered {0,1}^3",
+      "theta_grid": [
+        "1/2",
+        "3/4",
+        "4/5",
+        "1/1"
+      ]
+    },
+    "oracle": {
+      "comparison_count": 144,
+      "gamma_grid": [
+        "0/1",
+        "1/2",
+        "1/1"
+      ],
+      "horizon": 3,
+      "objectives": [
+        "max",
+        "min"
+      ],
+      "thresholds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "witnesses": [
+        {
+          "coverage_count": 12,
+          "id": "privacy_null",
+          "k1": 14,
+          "theta": "1/2"
+        },
+        {
+          "coverage_count": 0,
+          "id": "zero_coverage",
+          "k1": 14,
+          "theta": "1/1"
+        },
+        {
+          "coverage_count": 16,
+          "id": "full_coverage",
+          "k1": 16,
+          "theta": "3/4"
+        },
+        {
+          "coverage_count": 10,
+          "id": "overlap_common_law",
+          "k1": 14,
+          "theta": "3/4"
+        },
+        {
+          "coverage_count": 12,
+          "id": "separated_multi_action",
+          "k1": 14,
+          "theta": "1/1"
+        },
+        {
+          "coverage_count": 12,
+          "id": "second_boundary",
+          "k1": 16,
+          "theta": "4/5"
+        }
+      ]
+    },
+    "parameter_triple_count": 48,
+    "quotient_agreement_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      14,
+      15,
+      16
+    ],
+    "quotient_pair_count": 72,
+    "theta_grid": [
+      "1/2",
+      "3/4",
+      "4/5",
+      "1/1"
+    ]
+  },
+  "resource_guard": {
+    "artifact_measurement": "canonical UTF-8 JSON bytes before exclusive creation",
+    "memory_measurement": "tracemalloc peak Python allocation only; process RSS and native allocator memory are not measured",
+    "on_algorithm_wall_or_traced_memory_stop": "emit one incomplete write-once result containing only the completed prefix and downgrade every conclusion layer",
+    "on_artifact_byte_stop": "fail closed before exclusive path creation and emit no artifact"
+  },
+  "schema": "alife.experiment.v1",
+  "schema_version": "asmp7_adaptive_suppression_manifest_v0_4",
+  "seed_plan": {
+    "confirmatory": [
+      "C0-frozen-48-triple-registry"
+    ],
+    "discovery": [
+      "D0-source-tests-only-no-registered-grid"
+    ],
+    "holdout": [
+      "H0-import-independent-reconstruction"
+    ],
+    "pairing": "symbolic partitions only; no RNG, statistical replicate, or adaptive outcome selection"
+  },
+  "semantics": {
+    "adversary_knowledge": "the complete fixed execution and its agreement set A are known",
+    "causal_filtration": "S_t is an exact-c subset measurable with respect to execution, past (X,Y,S), and suppressor-private coins before X_t; those coins share no randomness with the fresh challenge or report streams",
+    "challenge": "conditional on the complete frozen filtration including S_t and all suppressor-private coins used through time t, X_t is uniform on {0,...,15} and independent of all earlier and future challenge/report/auditor coins",
+    "fresh_stream_product_law": "challenge draws, randomized-response coins, uncovered fallback coins, auditor coins, and suppressor-private coins are mutually independent product streams; conditioning on the frozen past and S_t leaves the current challenge uniform and both current report coins fresh",
+    "forbidden_information": "S_t cannot depend on current X_t, fresh randomized-response/fallback coins, or auditor randomization",
+    "monitor": "the monitor receives only Y_1,...,Y_m; registered upper-tail decisions use K=sum_t Y_t",
+    "report_law": "q_theta(a)=1/2+(2*theta-1)*(a-c/2)/16 for a=|S intersect A|",
+    "terminal_randomization": "rational audit randomization is independent, hidden from the suppressor, and drawn only after the report transcript",
+    "uncovered_event": "fresh fair report bit",
+    "covered_event": "fresh theta-randomized report of execution correctness"
+  },
+  "source_freeze": {
+    "artifact_execution_before_commit": "forbidden",
+    "files": [
+      "PROTOCOL_v0_4.md",
+      "README.md",
+      "SOURCE_FREEZE.md",
+      "adaptive_suppression.py",
+      "manifest_v0_4.json",
+      "run.py",
+      "test_adaptive_suppression.py",
+      "verify_independent.py"
+    ],
+    "ignored_live_cache_policy": "none; __pycache__ is unexpected and scientific launch fails closed",
+    "import_safe_launch": "run.py and verify_independent.py require Python isolated safe-path mode (-I) before any non-builtin import",
+    "live_directory_policy": "exactly the eight frozen regular non-reparse source files and no other live entry",
+    "required": true
+  },
+  "theorem": {
+    "action_interval": "max(0,k+c-16)<=a<=min(k,c)",
+    "composite_corollary": "q_plus(k,c) and q_minus(k,c) are nondecreasing in k, so worst compliant FP is k=8 and worst forbidden detection is k=k1",
+    "constant_attainment": "concrete masks attaining both action-interval endpoints exist and may be reused at every time",
+    "full_history_claim": "for every rational coordinatewise-monotone phi on {0,1}^m, max causal value equals iid Bernoulli(q_plus) expectation and min causal value equals iid Bernoulli(q_minus) expectation",
+    "minimality_transfer": "constant endpoint masks provide the simple-binomial lower bound; bound v0.3 exact size and predecessor NP certificates provide the upper-tail optimum and infeasible predecessor",
+    "randomized_policy": "private-randomized policies are convex mixtures of deterministic conditional actions and cannot exceed exact endpoint extrema"
+  },
+  "upstream_bindings": {
+    "v0_1": {
+      "evidence_commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+      "files": [
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/.gitattributes",
+          "role": "source",
+          "sha256": "6455d23d9d3efaa95bfcd6ff09a568110d840715fef2f2962dd38af3f6a13964"
+        },
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/PRIOR_ART_v0_1.md",
+          "role": "source",
+          "sha256": "a524eb99dd3b6505759ed5ba896f773b8f63dd216e81c31d34635c23f2295aeb"
+        },
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/PROTOCOL_v0_1.md",
+          "role": "source",
+          "sha256": "59817447540f0e95f7352880a710a8c0c87d038a8aa1ca31acda15fda4dfb1fb"
+        },
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/README.md",
+          "role": "source",
+          "sha256": "5c045f5d550061f43d88d0539ab690986522db3e9118cba3e19758d791e5af37"
+        },
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/attestability.py",
+          "role": "source",
+          "sha256": "6a6faf6b1641318a704d63d1081a8589585f21df44fee4d863db1f43484c4cc6"
+        },
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/run_frontier.py",
+          "role": "source",
+          "sha256": "02af3735c47b2225ee8c2fdaae15aa60cdc32637f19ead56dcfaadb9992d736d"
+        },
+        {
+          "commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/test_attestability.py",
+          "role": "source",
+          "sha256": "0a488dacb1cc059639b6958011cf299c1d3d16ae95177a3d2cdefb88b18097fd"
+        },
+        {
+          "commit": "9a67844b496eff8cfb7bfabbdf1ba923fae0a8a1",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/registration_v0_1.json",
+          "role": "registration",
+          "sha256": "0a5f1ad88e7c66822314e906792f1f9a5a97b4fcf10b13c7488a3cb751b1f234"
+        },
+        {
+          "commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/RESULT_v0_1.md",
+          "role": "artifact",
+          "sha256": "8b3e550a18fa49082e0c2ea467d49bed79599801997b581a4c1d1a0ba1377e7d"
+        },
+        {
+          "commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/artifacts_v0_1/result.json",
+          "role": "artifact",
+          "sha256": "74d8e0d0e4cbc39aa7691e1c40fa7669fda6ae8705773fee2c8db2c6fab52bf4"
+        },
+        {
+          "commit": "ba9586de4232c53358d44e3f6c5eca4ae45ab383",
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/artifacts_v0_1/receipt.json",
+          "role": "receipt",
+          "sha256": "8a3414dcc3e709f5f17df958a94c6fb988e3b75097df379df09b9e9409b270a1"
+        }
+      ],
+      "registration_commit": "9a67844b496eff8cfb7bfabbdf1ba923fae0a8a1",
+      "source_commit": "524eef05ec7793b98dc5465e4f7965ea0bf2a818"
+    },
+    "v0_3": {
+      "evidence_commit": "d3b61870e63121b61b00a5ee58f6be80686a46d1",
+      "files": [
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/PROTOCOL_v0_3.md",
+          "role": "source",
+          "sha256": "9a09574cd32b4f9522082eec33e1c480bca66c031ff77f259a039028a6e43e41"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/README.md",
+          "role": "source",
+          "sha256": "ed39cc818b49026bd2e38d4b0571aec5c0b923eeb5b3d6b250df80d612ee3445"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/protocol_v0_3.json",
+          "role": "registration",
+          "sha256": "76dbefedfa09c56ed3c50212fcb647f73ffceabb901ce83d43a485e5d1cc3660"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/coverage_robustness.py",
+          "role": "source",
+          "sha256": "1b0b3f60e812c4b0a66e7492847494284d00258837555bbaf61860914a498e5d"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/run.py",
+          "role": "source",
+          "sha256": "8c35a5ee4f9363d9d88d8ee177bbcaee19bbc7d880e0b601331101971756d3e3"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/test_coverage_robustness.py",
+          "role": "source",
+          "sha256": "5c7d90f50b728a7271a065bb461974f11d309c714b6965bc94c88cc6e6e8ffc3"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/verify_result.py",
+          "role": "source",
+          "sha256": "264311a8372b71bf93ed53789c15e710c2112889f87ebb7b8924104e492cbbc2"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/RESULT_v0_3.md",
+          "role": "artifact",
+          "sha256": "b2be2624dacf657db49b8b485db284afc6d56d3c941efe581ee4388ec435f569"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/result.json",
+          "role": "artifact",
+          "sha256": "8277b755f4ee26cfb1df48b9986d252a8102a2f92eb6a6a7afa6d2d3b7134ffa"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/receipt.json",
+          "role": "receipt",
+          "sha256": "f22d5e493028c6ec7c5679fb53f9d41fd94296c23c8a23b5c09e817dbf294c70"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/verification.json",
+          "role": "verification",
+          "sha256": "e741bf99191e4de1f77ac25ebb170efb9b357659e6c424afd3839751450bf07a"
+        },
+        {
+          "path": "ultra-experiments/millennium/asmp7_attestability_frontier/coverage_robustness_v0_3/artifacts_v0_3/bundle_receipt.json",
+          "role": "receipt",
+          "sha256": "b7ddbad42daa8aef0b85a627fac77112961594afaa80352b78be6368354381b6"
+        }
+      ]
+    }
+  },
+  "write_once_artifacts": {
+    "primary": "../artifacts_v0_4_adaptive_suppression/result_v0_4.json",
+    "refuse_existing_paths": true,
+    "verification": "../artifacts_v0_4_adaptive_suppression/verification_v0_4.json"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "alpha": 0.05,
+  "checks": {
+    "31_repeats_fail_power": true,
+    "32_repeats_pass_power": true,
+    "complete_design_can_falsify_factorization": true,
+    "complete_design_identifies_reward": true,
+    "distance_squared_is_one_quarter": true,
+    "high_precision_boundary_agrees": true,
+    "minimum_repeats_is_32": true,
+    "one_path_deleted_cannot_falsify_factorization": true,
+    "one_path_deleted_still_identifies_reward": true,
+    "primitive_contrast_is_registered_relation": true
+  },
+  "claim_boundary": "Classical known-variance Gaussian lack-of-fit specialization on one complete finite path table. No unknown-variance, missing-data, adaptive, strategic, physical-value, or ASMP-9 resolution claim.",
+  "complete_geometry": {
+    "design_rank": 3,
+    "edge_count": 3,
+    "factorization_test_available": true,
+    "path_count": 4,
+    "primitive_contrasts": [
+      [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    ],
+    "residual_degrees_of_freedom": 1,
+    "reward_coordinates_identified": true
+  },
+  "exact_distance_squared": "1/4",
+  "frozen_power": {
+    "alpha": 0.05,
+    "alternative_noncentrality": 8.0,
+    "critical_value": 3.841458820694124,
+    "degrees_of_freedom": 1,
+    "power": 0.8074304194325571
+  },
+  "high_precision_df1_audit": {
+    "digits": 80,
+    "power_at_31": "0.79500802840181205179395633269771063129488794160276525404039028680897988245352785",
+    "power_at_32": "0.80743041943255707723525737338205279985376035889035597689658965451727346820751085"
+  },
+  "interaction_mean": [
+    "0",
+    "0",
+    "1",
+    "0"
+  ],
+  "one_path_deleted_geometry": {
+    "design_rank": 3,
+    "edge_count": 3,
+    "factorization_test_available": false,
+    "path_count": 3,
+    "primitive_contrasts": [],
+    "residual_degrees_of_freedom": 0,
+    "reward_coordinates_identified": true
+  },
+  "sample_gate": {
+    "critical_value": 3.841458820694124,
+    "minimum_repeats_per_path": 32,
+    "noncentrality": 8.0,
+    "power": 0.8074304194325571,
+    "previous_power": 0.7950080284018122
+  },
+  "sample_variance": 1.0,
+  "source_hashes": {
+    "PRIOR_ART_GATE_v0_72.md": "5d0915ac1313ad20d4bbaf1bec6d4e98056db995286641873ab768b9a717b535",
+    "THEOREM_DRAFT_v0_72.md": "d9bb8f08faae766d5534d1764a674c5d926b5a2140d8bb682873d51cac514c16",
+    "path_factorization_test.py": "728fd416c3c94928653b4135045a1abdd9b136d3c13a336fa2a95035bae130f4",
+    "test_path_factorization_test.py": "04224456800d3693823648c9d004fea2a60d666ec31571d41b1afbe251bac128"
+  },
+  "status": "development_only_not_preregistered",
+  "target_power": 0.8
+}

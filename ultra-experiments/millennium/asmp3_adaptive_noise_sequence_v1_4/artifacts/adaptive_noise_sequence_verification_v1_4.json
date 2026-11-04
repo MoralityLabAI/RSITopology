@@ -1,0 +1,16 @@
+{
+  "check_count": 7,
+  "checker": "clean_room_response_language_and_phase_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_case_registry_complete": true,
+    "V2_all_language_and_sequence_certificates_reconstructed": true,
+    "V3_phase_boundary_exact": true,
+    "V4_separable_values_one": true,
+    "V5_overlap_values_zero": true,
+    "V6_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates the registered adversarial flip-budget controller; it does not generalize the phase boundary to other noise information or independence classes.",
+  "passed": true,
+  "schema_version": "asmp3_adaptive_noise_sequence_verification_v1_4"
+}

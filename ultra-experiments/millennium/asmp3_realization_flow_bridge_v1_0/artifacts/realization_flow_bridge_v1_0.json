@@ -1,0 +1,5380 @@
+{
+  "adaptive_row": {
+    "audit": {
+      "flow_audit": {
+        "all_flows_hold": true,
+        "flow_rows": [
+          {
+            "holds": true,
+            "initial_plus_incoming": "1",
+            "outgoing": "1",
+            "state": "root"
+          },
+          {
+            "holds": true,
+            "initial_plus_incoming": "9/20",
+            "outgoing": "9/20",
+            "state": "left"
+          },
+          {
+            "holds": true,
+            "initial_plus_incoming": "11/20",
+            "outgoing": "11/20",
+            "state": "right"
+          }
+        ],
+        "key_registry_valid": true,
+        "nonnegative": true,
+        "terminal_law": {
+          "accept": "9/16",
+          "reject": "7/16"
+        },
+        "terminal_normalized": true,
+        "valid": true
+      },
+      "occupancy": {
+        "left|no": "3/10",
+        "left|yes": "3/20",
+        "right|no": "11/80",
+        "right|yes": "33/80",
+        "root|A": "2/5",
+        "root|B": "3/5"
+      },
+      "reconstruction_exact": true,
+      "recovered_policy": {
+        "left": {
+          "no": "2/3",
+          "yes": "1/3"
+        },
+        "right": {
+          "no": "1/4",
+          "yes": "3/4"
+        },
+        "root": {
+          "A": "2/5",
+          "B": "3/5"
+        }
+      },
+      "terminal_law": {
+        "accept": "9/16",
+        "reject": "7/16"
+      }
+    },
+    "certified": true,
+    "distinct_pure_terminal_law_count": 4,
+    "graph": {
+      "actions": {
+        "left": [
+          "yes",
+          "no"
+        ],
+        "right": [
+          "yes",
+          "no"
+        ],
+        "root": [
+          "A",
+          "B"
+        ]
+      },
+      "initial": {
+        "root": "1"
+      },
+      "states": [
+        "root",
+        "left",
+        "right"
+      ],
+      "terminals": [
+        "accept",
+        "reject"
+      ],
+      "transitions": {
+        "left|no": {
+          "reject": "1"
+        },
+        "left|yes": {
+          "accept": "1"
+        },
+        "right|no": {
+          "reject": "1"
+        },
+        "right|yes": {
+          "accept": "1"
+        },
+        "root|A": {
+          "left": "3/4",
+          "right": "1/4"
+        },
+        "root|B": {
+          "left": "1/4",
+          "right": "3/4"
+        }
+      }
+    },
+    "pure_policy_count": 8,
+    "pure_terminal_laws": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "registered_policy": {
+      "left": {
+        "no": "2/3",
+        "yes": "1/3"
+      },
+      "right": {
+        "no": "1/4",
+        "yes": "3/4"
+      },
+      "root": {
+        "A": "2/5",
+        "B": "3/5"
+      }
+    }
+  },
+  "band_rows": [
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1",
+              "outgoing": "1",
+              "state": "s0"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1",
+          "s0|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1",
+              "outgoing": "1",
+              "state": "s0"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1",
+              "outgoing": "1",
+              "state": "s0"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/5",
+          "s0|low": "2/5"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 1,
+      "flow_variable_count_per_class": 2,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1",
+              "outgoing": "1",
+              "state": "s0"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "2/5",
+          "s0|low": "3/5"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 2,
+      "state_count": 1,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s1"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/2",
+          "s0|low": "0",
+          "s1|high": "1/2",
+          "s1|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s1"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/2",
+          "s1|high": "0",
+          "s1|low": "1/2"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s1"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/10",
+          "s0|low": "1/5",
+          "s1|high": "3/10",
+          "s1|low": "1/5"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 2,
+      "flow_variable_count_per_class": 4,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/2",
+              "outgoing": "1/2",
+              "state": "s1"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/5",
+          "s0|low": "3/10",
+          "s1|high": "1/5",
+          "s1|low": "3/10"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 4,
+      "state_count": 2,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s2"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/3",
+          "s0|low": "0",
+          "s1|high": "1/3",
+          "s1|low": "0",
+          "s2|high": "1/3",
+          "s2|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s2"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/3",
+          "s1|high": "0",
+          "s1|low": "1/3",
+          "s2|high": "0",
+          "s2|low": "1/3"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s2"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/5",
+          "s0|low": "2/15",
+          "s1|high": "1/5",
+          "s1|low": "2/15",
+          "s2|high": "1/5",
+          "s2|low": "2/15"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 3,
+      "flow_variable_count_per_class": 6,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/3",
+              "outgoing": "1/3",
+              "state": "s2"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "2/15",
+          "s0|low": "1/5",
+          "s1|high": "2/15",
+          "s1|low": "1/5",
+          "s2|high": "2/15",
+          "s2|low": "1/5"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 8,
+      "state_count": 3,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s3"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/4",
+          "s0|low": "0",
+          "s1|high": "1/4",
+          "s1|low": "0",
+          "s2|high": "1/4",
+          "s2|low": "0",
+          "s3|high": "1/4",
+          "s3|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s3"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/4",
+          "s1|high": "0",
+          "s1|low": "1/4",
+          "s2|high": "0",
+          "s2|low": "1/4",
+          "s3|high": "0",
+          "s3|low": "1/4"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s3"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/20",
+          "s0|low": "1/10",
+          "s1|high": "3/20",
+          "s1|low": "1/10",
+          "s2|high": "3/20",
+          "s2|low": "1/10",
+          "s3|high": "3/20",
+          "s3|low": "1/10"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 4,
+      "flow_variable_count_per_class": 8,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/4",
+              "outgoing": "1/4",
+              "state": "s3"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/10",
+          "s0|low": "3/20",
+          "s1|high": "1/10",
+          "s1|low": "3/20",
+          "s2|high": "1/10",
+          "s2|low": "3/20",
+          "s3|high": "1/10",
+          "s3|low": "3/20"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 16,
+      "state_count": 4,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s4"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/5",
+          "s0|low": "0",
+          "s1|high": "1/5",
+          "s1|low": "0",
+          "s2|high": "1/5",
+          "s2|low": "0",
+          "s3|high": "1/5",
+          "s3|low": "0",
+          "s4|high": "1/5",
+          "s4|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s4"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/5",
+          "s1|high": "0",
+          "s1|low": "1/5",
+          "s2|high": "0",
+          "s2|low": "1/5",
+          "s3|high": "0",
+          "s3|low": "1/5",
+          "s4|high": "0",
+          "s4|low": "1/5"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s4"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/25",
+          "s0|low": "2/25",
+          "s1|high": "3/25",
+          "s1|low": "2/25",
+          "s2|high": "3/25",
+          "s2|low": "2/25",
+          "s3|high": "3/25",
+          "s3|low": "2/25",
+          "s4|high": "3/25",
+          "s4|low": "2/25"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 5,
+      "flow_variable_count_per_class": 10,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/5",
+              "outgoing": "1/5",
+              "state": "s4"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "2/25",
+          "s0|low": "3/25",
+          "s1|high": "2/25",
+          "s1|low": "3/25",
+          "s2|high": "2/25",
+          "s2|low": "3/25",
+          "s3|high": "2/25",
+          "s3|low": "3/25",
+          "s4|high": "2/25",
+          "s4|low": "3/25"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 32,
+      "state_count": 5,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s5"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/6",
+          "s0|low": "0",
+          "s1|high": "1/6",
+          "s1|low": "0",
+          "s2|high": "1/6",
+          "s2|low": "0",
+          "s3|high": "1/6",
+          "s3|low": "0",
+          "s4|high": "1/6",
+          "s4|low": "0",
+          "s5|high": "1/6",
+          "s5|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s5"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/6",
+          "s1|high": "0",
+          "s1|low": "1/6",
+          "s2|high": "0",
+          "s2|low": "1/6",
+          "s3|high": "0",
+          "s3|low": "1/6",
+          "s4|high": "0",
+          "s4|low": "1/6",
+          "s5|high": "0",
+          "s5|low": "1/6"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s5"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/10",
+          "s0|low": "1/15",
+          "s1|high": "1/10",
+          "s1|low": "1/15",
+          "s2|high": "1/10",
+          "s2|low": "1/15",
+          "s3|high": "1/10",
+          "s3|low": "1/15",
+          "s4|high": "1/10",
+          "s4|low": "1/15",
+          "s5|high": "1/10",
+          "s5|low": "1/15"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 6,
+      "flow_variable_count_per_class": 12,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/6",
+              "outgoing": "1/6",
+              "state": "s5"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/15",
+          "s0|low": "1/10",
+          "s1|high": "1/15",
+          "s1|low": "1/10",
+          "s2|high": "1/15",
+          "s2|low": "1/10",
+          "s3|high": "1/15",
+          "s3|low": "1/10",
+          "s4|high": "1/15",
+          "s4|low": "1/10",
+          "s5|high": "1/15",
+          "s5|low": "1/10"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 64,
+      "state_count": 6,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s6"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/7",
+          "s0|low": "0",
+          "s1|high": "1/7",
+          "s1|low": "0",
+          "s2|high": "1/7",
+          "s2|low": "0",
+          "s3|high": "1/7",
+          "s3|low": "0",
+          "s4|high": "1/7",
+          "s4|low": "0",
+          "s5|high": "1/7",
+          "s5|low": "0",
+          "s6|high": "1/7",
+          "s6|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          },
+          "s6": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s6"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/7",
+          "s1|high": "0",
+          "s1|low": "1/7",
+          "s2|high": "0",
+          "s2|low": "1/7",
+          "s3|high": "0",
+          "s3|low": "1/7",
+          "s4|high": "0",
+          "s4|low": "1/7",
+          "s5|high": "0",
+          "s5|low": "1/7",
+          "s6|high": "0",
+          "s6|low": "1/7"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          },
+          "s6": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s6"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/35",
+          "s0|low": "2/35",
+          "s1|high": "3/35",
+          "s1|low": "2/35",
+          "s2|high": "3/35",
+          "s2|low": "2/35",
+          "s3|high": "3/35",
+          "s3|low": "2/35",
+          "s4|high": "3/35",
+          "s4|low": "2/35",
+          "s5|high": "3/35",
+          "s5|low": "2/35",
+          "s6|high": "3/35",
+          "s6|low": "2/35"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s6": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 7,
+      "flow_variable_count_per_class": 14,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/7",
+              "outgoing": "1/7",
+              "state": "s6"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "2/35",
+          "s0|low": "3/35",
+          "s1|high": "2/35",
+          "s1|low": "3/35",
+          "s2|high": "2/35",
+          "s2|low": "3/35",
+          "s3|high": "2/35",
+          "s3|low": "3/35",
+          "s4|high": "2/35",
+          "s4|low": "3/35",
+          "s5|high": "2/35",
+          "s5|low": "3/35",
+          "s6|high": "2/35",
+          "s6|low": "3/35"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s6": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 128,
+      "state_count": 7,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s7"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/8",
+          "s0|low": "0",
+          "s1|high": "1/8",
+          "s1|low": "0",
+          "s2|high": "1/8",
+          "s2|low": "0",
+          "s3|high": "1/8",
+          "s3|low": "0",
+          "s4|high": "1/8",
+          "s4|low": "0",
+          "s5|high": "1/8",
+          "s5|low": "0",
+          "s6|high": "1/8",
+          "s6|low": "0",
+          "s7|high": "1/8",
+          "s7|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          },
+          "s6": {
+            "high": "1",
+            "low": "0"
+          },
+          "s7": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s7"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/8",
+          "s1|high": "0",
+          "s1|low": "1/8",
+          "s2|high": "0",
+          "s2|low": "1/8",
+          "s3|high": "0",
+          "s3|low": "1/8",
+          "s4|high": "0",
+          "s4|low": "1/8",
+          "s5|high": "0",
+          "s5|low": "1/8",
+          "s6|high": "0",
+          "s6|low": "1/8",
+          "s7|high": "0",
+          "s7|low": "1/8"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          },
+          "s6": {
+            "high": "0",
+            "low": "1"
+          },
+          "s7": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": [
+        "1/10",
+        "1/5"
+      ],
+      "enumerated_honest_extrema": [
+        "4/5",
+        "9/10"
+      ],
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s7"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/40",
+          "s0|low": "1/20",
+          "s1|high": "3/40",
+          "s1|low": "1/20",
+          "s2|high": "3/40",
+          "s2|low": "1/20",
+          "s3|high": "3/40",
+          "s3|low": "1/20",
+          "s4|high": "3/40",
+          "s4|low": "1/20",
+          "s5|high": "3/40",
+          "s5|low": "1/20",
+          "s6|high": "3/40",
+          "s6|low": "1/20",
+          "s7|high": "3/40",
+          "s7|low": "1/20"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s6": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s7": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 8,
+      "flow_variable_count_per_class": 16,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/8",
+              "outgoing": "1/8",
+              "state": "s7"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/20",
+          "s0|low": "3/40",
+          "s1|high": "1/20",
+          "s1|low": "3/40",
+          "s2|high": "1/20",
+          "s2|low": "3/40",
+          "s3|high": "1/20",
+          "s3|low": "3/40",
+          "s4|high": "1/20",
+          "s4|low": "3/40",
+          "s5|high": "1/20",
+          "s5|low": "3/40",
+          "s6|high": "1/20",
+          "s6|low": "3/40",
+          "s7|high": "1/20",
+          "s7|low": "3/40"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s6": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s7": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": true,
+      "pure_policy_count_per_class": 256,
+      "state_count": 8,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s8"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/9",
+          "s0|low": "0",
+          "s1|high": "1/9",
+          "s1|low": "0",
+          "s2|high": "1/9",
+          "s2|low": "0",
+          "s3|high": "1/9",
+          "s3|low": "0",
+          "s4|high": "1/9",
+          "s4|low": "0",
+          "s5|high": "1/9",
+          "s5|low": "0",
+          "s6|high": "1/9",
+          "s6|low": "0",
+          "s7|high": "1/9",
+          "s7|low": "0",
+          "s8|high": "1/9",
+          "s8|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          },
+          "s6": {
+            "high": "1",
+            "low": "0"
+          },
+          "s7": {
+            "high": "1",
+            "low": "0"
+          },
+          "s8": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s8"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/9",
+          "s1|high": "0",
+          "s1|low": "1/9",
+          "s2|high": "0",
+          "s2|low": "1/9",
+          "s3|high": "0",
+          "s3|low": "1/9",
+          "s4|high": "0",
+          "s4|low": "1/9",
+          "s5|high": "0",
+          "s5|low": "1/9",
+          "s6|high": "0",
+          "s6|low": "1/9",
+          "s7|high": "0",
+          "s7|low": "1/9",
+          "s8|high": "0",
+          "s8|low": "1/9"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          },
+          "s6": {
+            "high": "0",
+            "low": "1"
+          },
+          "s7": {
+            "high": "0",
+            "low": "1"
+          },
+          "s8": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": null,
+      "enumerated_honest_extrema": null,
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s8"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/15",
+          "s0|low": "2/45",
+          "s1|high": "1/15",
+          "s1|low": "2/45",
+          "s2|high": "1/15",
+          "s2|low": "2/45",
+          "s3|high": "1/15",
+          "s3|low": "2/45",
+          "s4|high": "1/15",
+          "s4|low": "2/45",
+          "s5|high": "1/15",
+          "s5|low": "2/45",
+          "s6|high": "1/15",
+          "s6|low": "2/45",
+          "s7|high": "1/15",
+          "s7|low": "2/45",
+          "s8|high": "1/15",
+          "s8|low": "2/45"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s6": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s7": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s8": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 9,
+      "flow_variable_count_per_class": 18,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/9",
+              "outgoing": "1/9",
+              "state": "s8"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "2/45",
+          "s0|low": "1/15",
+          "s1|high": "2/45",
+          "s1|low": "1/15",
+          "s2|high": "2/45",
+          "s2|low": "1/15",
+          "s3|high": "2/45",
+          "s3|low": "1/15",
+          "s4|high": "2/45",
+          "s4|low": "1/15",
+          "s5|high": "2/45",
+          "s5|low": "1/15",
+          "s6|high": "2/45",
+          "s6|low": "1/15",
+          "s7|high": "2/45",
+          "s7|low": "1/15",
+          "s8|high": "2/45",
+          "s8|low": "1/15"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s6": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s7": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s8": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": false,
+      "pure_policy_count_per_class": 512,
+      "state_count": 9,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s9"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/10",
+          "s0|low": "0",
+          "s1|high": "1/10",
+          "s1|low": "0",
+          "s2|high": "1/10",
+          "s2|low": "0",
+          "s3|high": "1/10",
+          "s3|low": "0",
+          "s4|high": "1/10",
+          "s4|low": "0",
+          "s5|high": "1/10",
+          "s5|low": "0",
+          "s6|high": "1/10",
+          "s6|low": "0",
+          "s7|high": "1/10",
+          "s7|low": "0",
+          "s8|high": "1/10",
+          "s8|low": "0",
+          "s9|high": "1/10",
+          "s9|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          },
+          "s6": {
+            "high": "1",
+            "low": "0"
+          },
+          "s7": {
+            "high": "1",
+            "low": "0"
+          },
+          "s8": {
+            "high": "1",
+            "low": "0"
+          },
+          "s9": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s9"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/10",
+          "s1|high": "0",
+          "s1|low": "1/10",
+          "s2|high": "0",
+          "s2|low": "1/10",
+          "s3|high": "0",
+          "s3|low": "1/10",
+          "s4|high": "0",
+          "s4|low": "1/10",
+          "s5|high": "0",
+          "s5|low": "1/10",
+          "s6|high": "0",
+          "s6|low": "1/10",
+          "s7|high": "0",
+          "s7|low": "1/10",
+          "s8|high": "0",
+          "s8|low": "1/10",
+          "s9|high": "0",
+          "s9|low": "1/10"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          },
+          "s6": {
+            "high": "0",
+            "low": "1"
+          },
+          "s7": {
+            "high": "0",
+            "low": "1"
+          },
+          "s8": {
+            "high": "0",
+            "low": "1"
+          },
+          "s9": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": null,
+      "enumerated_honest_extrema": null,
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s9"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/50",
+          "s0|low": "1/25",
+          "s1|high": "3/50",
+          "s1|low": "1/25",
+          "s2|high": "3/50",
+          "s2|low": "1/25",
+          "s3|high": "3/50",
+          "s3|low": "1/25",
+          "s4|high": "3/50",
+          "s4|low": "1/25",
+          "s5|high": "3/50",
+          "s5|low": "1/25",
+          "s6|high": "3/50",
+          "s6|low": "1/25",
+          "s7|high": "3/50",
+          "s7|low": "1/25",
+          "s8|high": "3/50",
+          "s8|low": "1/25",
+          "s9|high": "3/50",
+          "s9|low": "1/25"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s6": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s7": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s8": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s9": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 10,
+      "flow_variable_count_per_class": 20,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/10",
+              "outgoing": "1/10",
+              "state": "s9"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/25",
+          "s0|low": "3/50",
+          "s1|high": "1/25",
+          "s1|low": "3/50",
+          "s2|high": "1/25",
+          "s2|low": "3/50",
+          "s3|high": "1/25",
+          "s3|low": "3/50",
+          "s4|high": "1/25",
+          "s4|low": "3/50",
+          "s5|high": "1/25",
+          "s5|low": "3/50",
+          "s6|high": "1/25",
+          "s6|low": "3/50",
+          "s7|high": "1/25",
+          "s7|low": "3/50",
+          "s8|high": "1/25",
+          "s8|low": "3/50",
+          "s9|high": "1/25",
+          "s9|low": "3/50"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s6": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s7": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s8": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s9": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": false,
+      "pure_policy_count_per_class": 1024,
+      "state_count": 10,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s10"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/11",
+          "s0|low": "0",
+          "s10|high": "1/11",
+          "s10|low": "0",
+          "s1|high": "1/11",
+          "s1|low": "0",
+          "s2|high": "1/11",
+          "s2|low": "0",
+          "s3|high": "1/11",
+          "s3|low": "0",
+          "s4|high": "1/11",
+          "s4|low": "0",
+          "s5|high": "1/11",
+          "s5|low": "0",
+          "s6|high": "1/11",
+          "s6|low": "0",
+          "s7|high": "1/11",
+          "s7|low": "0",
+          "s8|high": "1/11",
+          "s8|low": "0",
+          "s9|high": "1/11",
+          "s9|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s10": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          },
+          "s6": {
+            "high": "1",
+            "low": "0"
+          },
+          "s7": {
+            "high": "1",
+            "low": "0"
+          },
+          "s8": {
+            "high": "1",
+            "low": "0"
+          },
+          "s9": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s10"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/11",
+          "s10|high": "0",
+          "s10|low": "1/11",
+          "s1|high": "0",
+          "s1|low": "1/11",
+          "s2|high": "0",
+          "s2|low": "1/11",
+          "s3|high": "0",
+          "s3|low": "1/11",
+          "s4|high": "0",
+          "s4|low": "1/11",
+          "s5|high": "0",
+          "s5|low": "1/11",
+          "s6|high": "0",
+          "s6|low": "1/11",
+          "s7|high": "0",
+          "s7|low": "1/11",
+          "s8|high": "0",
+          "s8|low": "1/11",
+          "s9|high": "0",
+          "s9|low": "1/11"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s10": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          },
+          "s6": {
+            "high": "0",
+            "low": "1"
+          },
+          "s7": {
+            "high": "0",
+            "low": "1"
+          },
+          "s8": {
+            "high": "0",
+            "low": "1"
+          },
+          "s9": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": null,
+      "enumerated_honest_extrema": null,
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s10"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "3/55",
+          "s0|low": "2/55",
+          "s10|high": "3/55",
+          "s10|low": "2/55",
+          "s1|high": "3/55",
+          "s1|low": "2/55",
+          "s2|high": "3/55",
+          "s2|low": "2/55",
+          "s3|high": "3/55",
+          "s3|low": "2/55",
+          "s4|high": "3/55",
+          "s4|low": "2/55",
+          "s5|high": "3/55",
+          "s5|low": "2/55",
+          "s6|high": "3/55",
+          "s6|low": "2/55",
+          "s7|high": "3/55",
+          "s7|low": "2/55",
+          "s8|high": "3/55",
+          "s8|low": "2/55",
+          "s9|high": "3/55",
+          "s9|low": "2/55"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s10": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s6": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s7": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s8": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s9": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 11,
+      "flow_variable_count_per_class": 22,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/11",
+              "outgoing": "1/11",
+              "state": "s10"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "2/55",
+          "s0|low": "3/55",
+          "s10|high": "2/55",
+          "s10|low": "3/55",
+          "s1|high": "2/55",
+          "s1|low": "3/55",
+          "s2|high": "2/55",
+          "s2|low": "3/55",
+          "s3|high": "2/55",
+          "s3|low": "3/55",
+          "s4|high": "2/55",
+          "s4|low": "3/55",
+          "s5|high": "2/55",
+          "s5|low": "3/55",
+          "s6|high": "2/55",
+          "s6|low": "3/55",
+          "s7|high": "2/55",
+          "s7|low": "3/55",
+          "s8|high": "2/55",
+          "s8|low": "3/55",
+          "s9|high": "2/55",
+          "s9|low": "3/55"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s10": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s6": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s7": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s8": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s9": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": false,
+      "pure_policy_count_per_class": 2048,
+      "state_count": 11,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    },
+    {
+      "actions_per_state": 2,
+      "certified": true,
+      "closest_false": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s10"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s11"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/5",
+            "zero": "1/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/12",
+          "s0|low": "0",
+          "s10|high": "1/12",
+          "s10|low": "0",
+          "s11|high": "1/12",
+          "s11|low": "0",
+          "s1|high": "1/12",
+          "s1|low": "0",
+          "s2|high": "1/12",
+          "s2|low": "0",
+          "s3|high": "1/12",
+          "s3|low": "0",
+          "s4|high": "1/12",
+          "s4|low": "0",
+          "s5|high": "1/12",
+          "s5|low": "0",
+          "s6|high": "1/12",
+          "s6|low": "0",
+          "s7|high": "1/12",
+          "s7|low": "0",
+          "s8|high": "1/12",
+          "s8|low": "0",
+          "s9|high": "1/12",
+          "s9|low": "0"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "1",
+            "low": "0"
+          },
+          "s1": {
+            "high": "1",
+            "low": "0"
+          },
+          "s10": {
+            "high": "1",
+            "low": "0"
+          },
+          "s11": {
+            "high": "1",
+            "low": "0"
+          },
+          "s2": {
+            "high": "1",
+            "low": "0"
+          },
+          "s3": {
+            "high": "1",
+            "low": "0"
+          },
+          "s4": {
+            "high": "1",
+            "low": "0"
+          },
+          "s5": {
+            "high": "1",
+            "low": "0"
+          },
+          "s6": {
+            "high": "1",
+            "low": "0"
+          },
+          "s7": {
+            "high": "1",
+            "low": "0"
+          },
+          "s8": {
+            "high": "1",
+            "low": "0"
+          },
+          "s9": {
+            "high": "1",
+            "low": "0"
+          }
+        },
+        "terminal_law": {
+          "one": "4/5",
+          "zero": "1/5"
+        }
+      },
+      "closest_honest": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s10"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s11"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "1/5",
+            "zero": "4/5"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "0",
+          "s0|low": "1/12",
+          "s10|high": "0",
+          "s10|low": "1/12",
+          "s11|high": "0",
+          "s11|low": "1/12",
+          "s1|high": "0",
+          "s1|low": "1/12",
+          "s2|high": "0",
+          "s2|low": "1/12",
+          "s3|high": "0",
+          "s3|low": "1/12",
+          "s4|high": "0",
+          "s4|low": "1/12",
+          "s5|high": "0",
+          "s5|low": "1/12",
+          "s6|high": "0",
+          "s6|low": "1/12",
+          "s7|high": "0",
+          "s7|low": "1/12",
+          "s8|high": "0",
+          "s8|low": "1/12",
+          "s9|high": "0",
+          "s9|low": "1/12"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "0",
+            "low": "1"
+          },
+          "s1": {
+            "high": "0",
+            "low": "1"
+          },
+          "s10": {
+            "high": "0",
+            "low": "1"
+          },
+          "s11": {
+            "high": "0",
+            "low": "1"
+          },
+          "s2": {
+            "high": "0",
+            "low": "1"
+          },
+          "s3": {
+            "high": "0",
+            "low": "1"
+          },
+          "s4": {
+            "high": "0",
+            "low": "1"
+          },
+          "s5": {
+            "high": "0",
+            "low": "1"
+          },
+          "s6": {
+            "high": "0",
+            "low": "1"
+          },
+          "s7": {
+            "high": "0",
+            "low": "1"
+          },
+          "s8": {
+            "high": "0",
+            "low": "1"
+          },
+          "s9": {
+            "high": "0",
+            "low": "1"
+          }
+        },
+        "terminal_law": {
+          "one": "1/5",
+          "zero": "4/5"
+        }
+      },
+      "enumerated_false_extrema": null,
+      "enumerated_honest_extrema": null,
+      "exact_gap": "3/5",
+      "false_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s10"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s11"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "21/25",
+            "zero": "4/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/20",
+          "s0|low": "1/30",
+          "s10|high": "1/20",
+          "s10|low": "1/30",
+          "s11|high": "1/20",
+          "s11|low": "1/30",
+          "s1|high": "1/20",
+          "s1|low": "1/30",
+          "s2|high": "1/20",
+          "s2|low": "1/30",
+          "s3|high": "1/20",
+          "s3|low": "1/30",
+          "s4|high": "1/20",
+          "s4|low": "1/30",
+          "s5|high": "1/20",
+          "s5|low": "1/30",
+          "s6|high": "1/20",
+          "s6|low": "1/30",
+          "s7|high": "1/20",
+          "s7|low": "1/30",
+          "s8|high": "1/20",
+          "s8|low": "1/30",
+          "s9|high": "1/20",
+          "s9|low": "1/30"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s1": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s10": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s11": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s2": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s3": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s4": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s5": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s6": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s7": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s8": {
+            "high": "3/5",
+            "low": "2/5"
+          },
+          "s9": {
+            "high": "3/5",
+            "low": "2/5"
+          }
+        },
+        "terminal_law": {
+          "one": "21/25",
+          "zero": "4/25"
+        }
+      },
+      "false_zero_probability_interval": [
+        "1/10",
+        "1/5"
+      ],
+      "flow_equality_count_per_class": 12,
+      "flow_variable_count_per_class": 24,
+      "honest_interior_reconstruction": {
+        "flow_audit": {
+          "all_flows_hold": true,
+          "flow_rows": [
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s0"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s1"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s2"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s3"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s4"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s5"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s6"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s7"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s8"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s9"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s10"
+            },
+            {
+              "holds": true,
+              "initial_plus_incoming": "1/12",
+              "outgoing": "1/12",
+              "state": "s11"
+            }
+          ],
+          "key_registry_valid": true,
+          "nonnegative": true,
+          "terminal_law": {
+            "one": "4/25",
+            "zero": "21/25"
+          },
+          "terminal_normalized": true,
+          "valid": true
+        },
+        "occupancy": {
+          "s0|high": "1/30",
+          "s0|low": "1/20",
+          "s10|high": "1/30",
+          "s10|low": "1/20",
+          "s11|high": "1/30",
+          "s11|low": "1/20",
+          "s1|high": "1/30",
+          "s1|low": "1/20",
+          "s2|high": "1/30",
+          "s2|low": "1/20",
+          "s3|high": "1/30",
+          "s3|low": "1/20",
+          "s4|high": "1/30",
+          "s4|low": "1/20",
+          "s5|high": "1/30",
+          "s5|low": "1/20",
+          "s6|high": "1/30",
+          "s6|low": "1/20",
+          "s7|high": "1/30",
+          "s7|low": "1/20",
+          "s8|high": "1/30",
+          "s8|low": "1/20",
+          "s9|high": "1/30",
+          "s9|low": "1/20"
+        },
+        "reconstruction_exact": true,
+        "recovered_policy": {
+          "s0": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s1": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s10": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s11": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s2": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s3": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s4": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s5": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s6": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s7": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s8": {
+            "high": "2/5",
+            "low": "3/5"
+          },
+          "s9": {
+            "high": "2/5",
+            "low": "3/5"
+          }
+        },
+        "terminal_law": {
+          "one": "4/25",
+          "zero": "21/25"
+        }
+      },
+      "honest_zero_probability_interval": [
+        "4/5",
+        "9/10"
+      ],
+      "pure_policies_enumerated": false,
+      "pure_policy_count_per_class": 4096,
+      "state_count": 12,
+      "terminal_dimension": 2,
+      "terminal_verifier": "accept_on_zero"
+    }
+  ],
+  "certified": true,
+  "claim_boundary": "The bridge covers one fully observed strategic controller in a frozen acyclic graph. Multiple independently strategic roles, imperfect recall, endogenous verifier actions, and nonconvex or unregistered noise require additional game-theoretic machinery.",
+  "experiment_id": "ASMP-3-REALIZATION-FLOW-BRIDGE-v1.0",
+  "gates": {
+    "A0_adaptive_flow_reconstruction_exact": true,
+    "A1_adaptive_pure_policy_registry_complete": true,
+    "F0_all_band_flow_reconstructions_exact": true,
+    "F1_pure_policy_count_is_exponential": true,
+    "F2_flow_formulation_size_is_linear": true,
+    "F3_enumerated_band_extrema_match": true,
+    "F4_all_band_gaps_are_three_fifths": true
+  },
+  "parent_result": "ASMP-3-POLYHEDRAL-TV-FRONTIER-v0.9",
+  "schema_version": "asmp3_realization_flow_bridge_v1_0",
+  "status": "exact_acyclic_single_controller_bridge",
+  "theorem": {
+    "consequence": "the terminal-law set is the linear image of a rational flow polytope and can be passed to v0.9 as an extended formulation",
+    "forward": "every randomized policy induces a feasible occupancy flow",
+    "input": "finite acyclic fully observed controlled graph with rational chance transitions",
+    "reverse": "every feasible nonnegative occupancy flow is induced by the normalized flow policy, with arbitrary choices at zero-flow states"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "deterministic": true,
+  "file_count": 14,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_protocol_quantifier_v0_7/FROZEN_GAME_SPECIFICATION_v0_7.md": {
+      "bytes": 10736,
+      "sha256": "269FFE30160FC4D2E832DCADAC3AACD3F16B03D1FFE7D65793A7A31CD3BA3766"
+    },
+    "../asmp3_protocol_quantifier_v0_7/PROTOCOL_QUANTIFIER_THEOREM_v0_7.md": {
+      "bytes": 4301,
+      "sha256": "35E49438AA253147171C2F5F130140E562C989739846527B78F719715A84E313"
+    },
+    "../asmp3_protocol_quantifier_v0_7/RELEASE_MANIFEST_v0_7.json": {
+      "bytes": 2507,
+      "sha256": "E93DA3ACD8E96B93B0EFAED5D22142AFDFBC27E269998644FEC1DF234FD46D23"
+    },
+    "../asmp3_protocol_quantifier_v0_7/artifacts/protocol_quantifier_v0_7.json": {
+      "bytes": 14710,
+      "sha256": "5FDD70E7F2172A417B113A1BF73FFACCC3355CE32409472D835251BDFD09A23D"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "README.md": {
+      "bytes": 773,
+      "sha256": "6EC7C1475E68C60B1A1B458C43FC7A9131D9C0FE9DE4AA47934CEAADB950B660"
+    },
+    "artifacts/typed_successor_validation_v0_2.json": {
+      "bytes": 1046,
+      "sha256": "D57CDC7BCF3ABDC5C37341E6CAFDF0D2F9354944306D6E8877521557CDAAAC55"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2375,
+      "sha256": "1A16F887CBAC62624BED8E23B649683B7925E13FCCB40B833BE5AF8D982B7DDC"
+    },
+    "test_typed_successor.py": {
+      "bytes": 3922,
+      "sha256": "C1CAEB475481D9C6E28523CD39892C4E2A3753A3F78B38F81FC72FF4763A40E5"
+    },
+    "typed_successor_v0_2.json": {
+      "bytes": 2482,
+      "sha256": "FD9F5070B543126DE3CF799012C369F7FC81A15692FB198CF1B855F4058C8837"
+    },
+    "validate_typed_successor.py": {
+      "bytes": 7495,
+      "sha256": "FFA9B6BAB18490835120CE3CCE273C26FE1A29F31B02A21BE2D57E1AABD4EC7F"
+    }
+  },
+  "parent_problem_id": "ASMP-3",
+  "release_status": "nonnormative_typed_successor_draft",
+  "schema_version": "asmp3_typed_successor_release_draft_v0_2"
+}

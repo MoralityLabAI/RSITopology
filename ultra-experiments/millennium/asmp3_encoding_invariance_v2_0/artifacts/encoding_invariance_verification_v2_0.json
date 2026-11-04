@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_quotient_transport_alias_and_parity_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_27_transport_rows_reconstructed": true,
+    "V2_quotient_dimension_and_search_transport_exact": true,
+    "V3_alias_expansion_exhaustion_replayed": true,
+    "V4_parity_partial_assignment_lower_bounds_replayed": true,
+    "V5_macro_semantic_and_resource_rejection_exact": true,
+    "V6_parent_replication_contract_reconstructed": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates finite exact quotient bijections and the deterministic exact-query parity macro barrier. It does not certify all resource-preserving encodings or randomized approximate queries.",
+  "passed": true,
+  "schema_version": "asmp3_encoding_invariance_verification_v2_0"
+}

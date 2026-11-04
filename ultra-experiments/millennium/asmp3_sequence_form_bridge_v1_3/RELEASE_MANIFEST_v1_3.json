@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-SEQUENCE-FORM-BRIDGE-v1.3",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_matrix_game_bridge_v1_2/MATRIX_GAME_THEOREM_v1_2.md": {
+      "bytes": 5779,
+      "sha256": "0D1AB775011A1F77D64D7E97D0ACBAE2960C42B5B1C83201041F5BAB1B59DD3A"
+    },
+    "../asmp3_matrix_game_bridge_v1_2/RELEASE_MANIFEST_v1_2.json": {
+      "bytes": 2931,
+      "sha256": "F7A34E1283DF51B8DC42978146D07903A4253B791AA53B7AC50800A54F4C6918"
+    },
+    "../asmp3_matrix_game_bridge_v1_2/artifacts/matrix_game_bridge_v1_2.json": {
+      "bytes": 32493,
+      "sha256": "184EA3B911D309AEBC984922E6EE891477DF03333D12CDFB5D344BE5E197E771"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v1_3.md": {
+      "bytes": 1400,
+      "sha256": "A2145B296A23081ECB3A94B710AFDD4065891800D3DC7881A80FF14068726E9F"
+    },
+    "README.md": {
+      "bytes": 665,
+      "sha256": "E97174D118A4E7297E52E5BABEDCC06B95930A8A484A7D05C14A5C55236B4EE6"
+    },
+    "SEQUENCE_FORM_THEOREM_v1_3.md": {
+      "bytes": 8002,
+      "sha256": "A77E19066470028E7F23906E2506E9C1C35BEB265C1812C1DFD5642281800E8A"
+    },
+    "artifacts/sequence_form_bridge_v1_3.json": {
+      "bytes": 117318,
+      "sha256": "45025B0091D1898BCB9883A28F85A55FA321ABD035C449AE389F04720855D99C"
+    },
+    "artifacts/sequence_form_bridge_verification_v1_3.json": {
+      "bytes": 843,
+      "sha256": "13CEEAEEB1186A6A908F9E0D990FFB6E64A875E2BB759AB39FA209B970DB9817"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2460,
+      "sha256": "ED55191FA915DD6EB942ACD01B962BCD8EFB13B61D365ED5D2E9027DD08C6215"
+    },
+    "run_sequence_form_bridge.py": {
+      "bytes": 822,
+      "sha256": "2CAB7F4A9D2843ECDBBBBDD4FA1CD4AE23BC1566393F6652C01DAEDC6A8CF3A3"
+    },
+    "sequence_form_bridge.py": {
+      "bytes": 31695,
+      "sha256": "1CA9276A053A785A107C01E273ED0BD4BFD019718A2E1BA2B92BDFC00F1DB5C4"
+    },
+    "test_sequence_form_bridge.py": {
+      "bytes": 4315,
+      "sha256": "0CEF45FE0E89B437B677786B7284EBB7A5FEA692AD86B4931742F595FEE22491"
+    },
+    "verify_sequence_form_bridge.py": {
+      "bytes": 11065,
+      "sha256": "DB0D2E048625C9DDEA6C85CF0DFEC096D1BC2A6E07B1CFB48C24218879EDE13B"
+    }
+  },
+  "release_status": "exact_perfect_recall_sequence_form_bridge",
+  "schema_version": "asmp3_sequence_form_bridge_release_v1_3"
+}

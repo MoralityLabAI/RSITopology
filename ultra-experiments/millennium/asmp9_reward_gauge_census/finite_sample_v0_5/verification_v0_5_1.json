@@ -1,0 +1,24 @@
+{
+  "protocol_id": "ASMP-9-FINITE-SAMPLE-v0.5.1",
+  "registration_commit": "e640043e0cdebbcce274de587da29c1bf483964c",
+  "registration_sha256": "4e08112ea684c419d358fabe740e4ddb18779a4183ebada34dc2e66189ca62d0",
+  "implementation_commit": "55098112b87e100ec20c5bfd75f13c7bffdc3900",
+  "sealed_run_verdict": "finite_sample_width_and_adaptivity_theorem_implementation_verified",
+  "artifact_verifier_verdict": "verified",
+  "runtime_gate_count": 8,
+  "runtime_gates_passed": 8,
+  "unit_test_count": 82,
+  "unit_tests_passed": 82,
+  "fresh_exact_ray_count": 2658,
+  "seeded_high_dimensional_ray_count": 6144,
+  "seeded_noisy_trial_count": 1280,
+  "seeded_noisy_error_count": 0,
+  "fresh_information_design_cell_count": 4,
+  "farey_adjacency_bound_range": [33, 64],
+  "elapsed_seconds": 199.30899900000077,
+  "output_hashes": {
+    "RESULT_v0_5.md": "bd3fdbe2edc6193feea9b28322e8ea432b28f289e7ac125840f06e2d4cf719d7",
+    "result_v0_5.json": "ae0453757494022d7cc353ab9fbcdaece9b344e93f7421a89fc603ce382c9634"
+  },
+  "claim_boundary": "Known independent sign-and-tie response channel after shaping quotient; not Bradley-Terry learning, behavioral IRL, discounted shaping, human-consistency evidence, or a full ASMP-9 resolution."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "asmp4_public_costed_bisimulation_contract_v0_26",
+  "history_game": {
+    "state": "possibly infinite reachable public histories",
+    "actions": "registered safe public block action types",
+    "transition": "possibly adversarial nonempty successor sets",
+    "cost": "nonnegative additive read/write log-transcript cost on each action transition",
+    "objective": "universal safety and coordinatewise worst-path limsup average cost"
+  },
+  "exact_quotient": {
+    "equivalence": "public histories in one class have identical safety status",
+    "actions": "enabled action types match in both directions",
+    "costs": "matched transitions have identical read/write cost vectors",
+    "successors": "for each matched action, the set of successor equivalence classes is identical"
+  },
+  "theorem": {
+    "transfer": "the original history game and quotient have the same achievable read/write budget region",
+    "deterministic_finite_application": "if every quotient action has one successor and the quotient is finite, the v0.25 SCC cycle-polytope theorem applies",
+    "nondeterministic_boundary": "a finite alternating quotient transfers the game but requires a separate multidimensional adversarial mean-payoff analysis"
+  }
+}

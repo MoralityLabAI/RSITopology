@@ -1,0 +1,57 @@
+{
+  "schema_version": "asmp9_reward_gauge_census_protocol_v0_1",
+  "protocol_id": "asmp9.reward_gauge.graph_cohomology_census.v0.1",
+  "status": "registered_before_claim_eligible_run",
+  "parent_scope": "../V0_2_SCOPE_EXPANSION_DRAFT.md#asmp-9--value-identifiability-under-access-constraints-and-reward-gauge",
+  "mathematical_object": {
+    "graphs": "all labelled simple undirected graphs on n=2,...,6 vertices, with each edge oriented from lower to higher label",
+    "reward": "a real 1-cochain r in R^m on oriented edges",
+    "potential_shaping": "r maps to r+B^T*phi, where B is the oriented vertex-edge incidence matrix",
+    "exact_query": "signed return around an oriented graph cycle",
+    "query_construction": "lexicographic spanning forest plus one fundamental cycle per non-tree edge",
+    "components": "c",
+    "cycle_rank": "beta_1=m-n+c"
+  },
+  "access_classes": {
+    "exact_linear_loop_returns": "returns the real number q^T*r for each registered cycle q",
+    "ordinal_zero_comparison": "returns only sign(q^T*r); used solely as a counterexample to access-model transfer"
+  },
+  "census": {
+    "minimum_vertices": 2,
+    "maximum_vertices": 6,
+    "expected_graph_count": 33866,
+    "formula": "sum from n=2 to 6 of 2^(n choose 2)"
+  },
+  "gates": {
+    "G0_registration_binding": "Protocol, runner, verifier, tests, and README are committed and byte-identical to HEAD; tracked diff is empty at start.",
+    "G1_complete_graph_census": "Exactly 33,866 labelled simple graphs are checked with the registered per-n counts.",
+    "G2_cycle_rank_identity": "For every graph, the fundamental-cycle count equals m-n+c and every cycle has zero incidence boundary.",
+    "G3_gauge_annihilation": "For every graph, the full loop-query matrix annihilates every potential-shaping direction: C*B^T=0 exactly over integers.",
+    "G4_exact_access_threshold": "For every graph with beta_1>0, beta_1 fundamental loop returns have quotient-kernel dimension n-c, while deleting one independent query increases the kernel dimension to n-c+1.",
+    "G5_tree_and_forest_negative_control": "Every beta_1=0 graph has no gauge-invariant loop reward and holonomy-style loop access is correctly unavailable.",
+    "G6_ordinal_access_counterexample": "On the triangle, two non-gauge-equivalent rewards yield the same sign for the sole cycle return while exact returns distinguish them."
+  },
+  "decision_rule": {
+    "pass": "G0 through G6 pass.",
+    "fail": "Any exact identity or registered counterexample polarity fails.",
+    "invalid": "Binding, resource, write-once, or census-completeness failure.",
+    "evidence_label": "exact_finite_reward_gauge_access_threshold_seed"
+  },
+  "claim_boundary": {
+    "established_on_pass": "For exact real-valued loop-return queries on the registered graph class, a fundamental cycle basis identifies the edge-reward quotient modulo potential shaping and the query-count threshold is beta_1.",
+    "not_established": [
+      "the same threshold for noisy or ordinal human preferences",
+      "discounted potential shaping",
+      "reward recovery in an MDP from behavior",
+      "practical dominance of shaping ambiguity",
+      "novelty of the underlying graph-cohomology identity",
+      "ASMP-9 resolution"
+    ]
+  },
+  "resource_ceiling": {
+    "wall_seconds": 120,
+    "python_peak_bytes": 536870912,
+    "gpu_hours": 0
+  },
+  "output_policy": "write_once_non_aliasing"
+}

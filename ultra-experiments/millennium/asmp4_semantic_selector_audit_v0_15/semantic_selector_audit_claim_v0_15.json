@@ -1,0 +1,55 @@
+{
+  "schema_version": "asmp4_semantic_selector_audit_claim_v0_15",
+  "status": "v0.14 semantic no-selector claim rejected by conservative clause census",
+  "sealed_resources": {
+    "count": 3,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_14_stop_claim_sha256": "cd8257233156f334a03840c5b514ebb84395555263f086a2fbc5b55085ad6375",
+    "robustness_fixtures_sha256": "4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c"
+  },
+  "evaluation_artifacts": {
+    "eval_manifest_sha256": "adfa2d03e01e3c43d2aaa572cef658c8636259a62e8cf12938749f6bba69f0c6",
+    "preflight_receipt_sha256": "5420ce423723ed4e06046b1d62f6b45895966b0ea32003b21f420092858f0e8f",
+    "clause_rows_sha256": "b5e8c1b16d1abd4b6f65e19a10e591bdd78cff739c5accbe87ecbd79502e0f10",
+    "robustness_spec_sha256": "34b55d66a39457337a86eab65c53986a5bc87ad2086d9872116c6068a7e651c2",
+    "robustness_stage_sha256": "9fb2732431412eb536d36fe94410e912bd161b0b1dad2b6d4ee895a2c4497705",
+    "robustness_observations_sha256": "717d0229c8dd74d6da26a14aaa12c487e4590e554b355d229c78c8bdd454659b",
+    "robustness_report_sha256": "3f4dc2a5e11f3500da59063d977f90c48499c8c81cf5526c2e8951b18e0acecf",
+    "adjudication_queue_sha256": "3981783e54986713d9999db69ed9f17331472b3760cd2ca0292bf97a1f693153"
+  },
+  "clause_census": {
+    "units": 23,
+    "no_selector": 15,
+    "ambiguous": 7,
+    "selects_parameterized": 1,
+    "blocking_items": [
+      "C03",
+      "C04",
+      "C06",
+      "C07",
+      "C08",
+      "C11",
+      "C19",
+      "C22"
+    ]
+  },
+  "metric_robustness": {
+    "held_out_probe_families": 5,
+    "passed_probe_families": 5
+  },
+  "measurement_reliability": {
+    "pairwise_preflight": "fail",
+    "release_blocking": true,
+    "reason": "fixed 23-unit source census is not a held-out blinded pairwise evaluation"
+  },
+  "adjudication_queue": {
+    "items": 8,
+    "status": "pending_external"
+  },
+  "predecessor_inventory": {
+    "packages": 15,
+    "tests": 184
+  },
+  "decision": "qualify_v014_semantic_claim_retain_scoped_operational_stop",
+  "nonclaim": "The audit does not determine the intended formal class or resolve ASMP-4. It rejects the inference from lexical selector absence to proved semantic underdetermination and preserves external adjudication as necessary."
+}

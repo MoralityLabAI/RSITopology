@@ -1,0 +1,24 @@
+{
+  "check_count": 15,
+  "checks": {
+    "all_gates_pass": true,
+    "claim_boundary": true,
+    "gate_universe": true,
+    "independent_failure_isolation": true,
+    "original_failure_preserved": true,
+    "original_science": true,
+    "prior_art_identifiers": true,
+    "protocol_hash": true,
+    "registration_hash": true,
+    "repair_kind": true,
+    "repair_sealed_files": true,
+    "resource_caps": true,
+    "result_hash": true,
+    "source_hashes": true,
+    "verdict": true
+  },
+  "pass": true,
+  "receipt_sha256": "add44fd3bbe8410c7cd23324a4d2bd4383be755c72b2cf7eeed3ef1c1a9b5381",
+  "result_sha256": "55700d9b0a17567a195d94cc45e61a874b1f4840b15c9ba9bfdf6810efe9689f",
+  "verifier_sha256": "4a2e4b79010bebea3db8d4f8b0ff1972406cbeb3c3d35668431638d786ebe58b"
+}

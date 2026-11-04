@@ -1,0 +1,179 @@
+{
+  "all_exact_gates_pass": true,
+  "full_cut_replacement_aliasing_counterexample": {
+    "abstraction": "the full labelled upstream map h:X->H",
+    "continuous_blind_direction_per_environment": "ker([1,2])=span{(-2,1)}",
+    "downstream_coefficients": [
+      "1",
+      "2"
+    ],
+    "gates": {
+      "all_hidden_replacement_laws_match_symbolically": true,
+      "all_labelled_input_environments_are_observed": true,
+      "both_hidden_coordinates_have_nonzero_downstream_effect": true,
+      "downstream_map_is_a_surjective_analytic_submersion": true,
+      "entire_typed_hidden_cut_state_is_replaceable": true,
+      "explicit_tangent_direction_is_in_exact_kernel": true,
+      "full_upstream_abstraction_is_not_identifiable": true,
+      "mechanisms_are_not_identity_gauge_equivalent": true,
+      "natural_input_output_laws_match": true,
+      "registered_design_has_positive_dimensional_kernel": true
+    },
+    "gauge": "identity",
+    "genericity_note": "Every nonzero linear map R^2->R is a submersion with a one-dimensional kernel; the ambiguity is dimensional and persists under small coefficient perturbations.",
+    "left_upstream_map": [
+      "0",
+      "0",
+      "1",
+      "0"
+    ],
+    "model": "X={0,1} -> H=R^2 -> Y=R with g(u,v)=u+2v",
+    "natural_observation_nullity": 2,
+    "natural_observation_rank": 2,
+    "replacement_probe_count": 25,
+    "right_upstream_map": [
+      "0",
+      "0",
+      "-1",
+      "1"
+    ],
+    "shared_natural_outputs": [
+      "0",
+      "1"
+    ],
+    "upstream_parameter_dimension": 4
+  },
+  "interpretation_split": {
+    "full_mechanism_excitation_reading": "the only-if direction is false for a coarse nonconstant Q",
+    "quotient_observation_separation_reading": "requiring positive separation between every distinct Q/G pair excludes the witness by assuming the desired identifiability",
+    "structural_hypergraph_reading": "the if direction is false despite coverage, pair separation, and full incidence rank"
+  },
+  "necessity_counterexample": {
+    "abstraction": "Q(theta)=p_theta(-1,-1,-1)",
+    "available_parent_configuration_count": 8,
+    "full_excitation_rank": 8,
+    "gates": {
+      "environment_does_not_excitate_full_mechanism_class": true,
+      "full_analytic_class_has_eight_coordinates": true,
+      "q_is_exactly_identifiable": true,
+      "q_is_nonconstant": true
+    },
+    "gauge": "identity",
+    "model": "analytic Bernoulli response p_theta(x)=sum_T theta_T chi_T(x), on an interior parameter neighborhood",
+    "observation_rank": 1,
+    "observed_environment_count": 1,
+    "q_rank": 1
+  },
+  "problem": "ASMP-1 v0.1",
+  "schema_version": "asmp1_cut_separation_audit_v0_1",
+  "source_sha256": "46d7e4e184c4f100896770fce10a84261dadd5d1294c50bb0f23b0df05bd7814",
+  "stopping_boundary": "A broader ASMP-1 classification theorem cannot be proved or refuted until v0.1 freezes a Q-relative excitation condition, a noncircular definition of cut separation, the exact meaning of generic, and whether kappa is local conditioning or global quotient separation.",
+  "structural_sufficiency_counterexample": {
+    "abstraction": "full conditional Bernoulli response table",
+    "certified_open_blind_interval": [
+      "-1/25",
+      "1/25"
+    ],
+    "continuous_blind_direction": "theta_{1,2,3}",
+    "gates": {
+      "all_bernoulli_probabilities_are_uniformly_interior": true,
+      "all_parent_configurations_have_positive_environment_mass": true,
+      "ambiguity_fiber_is_positive_dimensional": true,
+      "certified_open_blind_interval_stays_uniformly_interior": true,
+      "every_parent_has_positive_average_causal_effect": true,
+      "full_abstraction_is_not_identifiable": true,
+      "global_quotient_separation_margin_is_zero": true,
+      "hypergraph_covers_every_parent_site": true,
+      "hypergraph_incidence_has_full_parent_rank": true,
+      "hypergraph_pair_separates_parent_sites": true,
+      "mechanisms_are_not_parent_gauge_equivalent": true,
+      "registered_observational_and_interventional_laws_match": true,
+      "top_interaction_is_in_exact_observation_kernel": true
+    },
+    "gauge": "parent permutations and parent sign flips; output labels fixed",
+    "hypergraph": {
+      "coverage": true,
+      "full_incidence_rank": true,
+      "incidence_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "pair_separation": true,
+      "registered_hyperedges": [
+        1,
+        2,
+        4
+      ]
+    },
+    "left_coefficients": [
+      "1/2",
+      "1/25",
+      "1/20",
+      "1/50",
+      "3/50",
+      "3/200",
+      "1/100",
+      "-1/100"
+    ],
+    "left_parent_effects": [
+      "2/25",
+      "1/10",
+      "3/25"
+    ],
+    "left_registered_laws": [
+      "1/2",
+      "23/50",
+      "27/50",
+      "9/20",
+      "11/20",
+      "11/25",
+      "14/25"
+    ],
+    "maximum_probability": "141/200",
+    "mechanism_dimension": 8,
+    "minimum_bernoulli_variance": "8319/40000",
+    "minimum_probability": "77/200",
+    "model": "three-parent analytic Bernoulli SCM with uniform full-support environment and passive plus all singleton activation replacements",
+    "observation_nullity": 4,
+    "observation_rank": 4,
+    "open_blind_fiber_note": "theta_{1,2,3} can vary in an open interval while all registered laws, full support, structural cut gates, and singleton effect margins remain unchanged",
+    "right_coefficients": [
+      "1/2",
+      "1/25",
+      "1/20",
+      "1/50",
+      "3/50",
+      "3/200",
+      "1/100",
+      "1/100"
+    ],
+    "right_parent_effects": [
+      "2/25",
+      "1/10",
+      "3/25"
+    ],
+    "right_registered_laws": [
+      "1/2",
+      "23/50",
+      "27/50",
+      "9/20",
+      "11/20",
+      "11/25",
+      "14/25"
+    ]
+  },
+  "verdict": "cut_separation_conjecture_not_well_posed_as_a_closed_iff"
+}

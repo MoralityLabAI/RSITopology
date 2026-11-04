@@ -1,0 +1,494 @@
+{
+  "claim_boundary": "For a finite-horizon feature MDP, an exogenously selected consequence level preserves the original occupancy query when the state/action sets, initial distribution, transition kernel, horizon, and target feature map are unchanged. A complete scalar value rectangle supplies the declared additive consequence exactly when every anchored increment equals the declared offset increment; this imposes m(n-1) independent constraints and every constraint is necessary. Mechanical data alone cannot certify the semantic coefficient, and an unknown coefficient remains scale-coupled under a rescalable response-link class. If every anchored calibration residual is at most epsilon, every two-sided offset bias is at most 2 epsilon, sharply. These are classical exogenous-decomposition, additive-measurement, reward-invariance, and finite-linear-algebra ingredients; no novelty is claimed. The result does not establish that any real consequence has stable cardinal utility, infer scalar values from ordinal data, validate a demonstrator model, or resolve ASMP-9.",
+  "fresh_validation": {
+    "approximate_cell": {
+      "base_values": [
+        "3/8",
+        "-7/6",
+        "11/5"
+      ],
+      "common_constant": "-2/9",
+      "epsilon": "3/17",
+      "residuals": [
+        [
+          "3/17",
+          0,
+          "1/17",
+          "-2/17"
+        ],
+        [
+          "-3/17",
+          0,
+          0,
+          "2/17"
+        ],
+        [
+          0,
+          0,
+          "-1/17",
+          "3/17"
+        ]
+      ]
+    },
+    "baseline_mdp": {
+      "action_sets": {
+        "end": [
+          "stay"
+        ],
+        "q0": [
+          "alpha",
+          "beta"
+        ],
+        "q1": [
+          "finish",
+          "loop"
+        ],
+        "q2": [
+          "settle"
+        ]
+      },
+      "feature_dimension": 3,
+      "features": [
+        {
+          "action": "alpha",
+          "next_state": "q1",
+          "state": "q0",
+          "vector": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "alpha",
+          "next_state": "q2",
+          "state": "q0",
+          "vector": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "action": "beta",
+          "next_state": "q1",
+          "state": "q0",
+          "vector": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "beta",
+          "next_state": "q2",
+          "state": "q0",
+          "vector": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "finish",
+          "next_state": "end",
+          "state": "q1",
+          "vector": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "action": "loop",
+          "next_state": "end",
+          "state": "q1",
+          "vector": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "loop",
+          "next_state": "q1",
+          "state": "q1",
+          "vector": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "action": "settle",
+          "next_state": "end",
+          "state": "q2",
+          "vector": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "stay",
+          "next_state": "end",
+          "state": "end",
+          "vector": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "horizon": 4,
+      "initial_distribution": {
+        "end": 0,
+        "q0": 1,
+        "q1": 0,
+        "q2": 0
+      },
+      "states": [
+        "q0",
+        "q1",
+        "q2",
+        "end"
+      ],
+      "transitions": [
+        {
+          "action": "alpha",
+          "next_state": "q1",
+          "probability": "2/3",
+          "state": "q0"
+        },
+        {
+          "action": "alpha",
+          "next_state": "q2",
+          "probability": "1/3",
+          "state": "q0"
+        },
+        {
+          "action": "beta",
+          "next_state": "q1",
+          "probability": "1/5",
+          "state": "q0"
+        },
+        {
+          "action": "beta",
+          "next_state": "q2",
+          "probability": "4/5",
+          "state": "q0"
+        },
+        {
+          "action": "finish",
+          "next_state": "end",
+          "probability": 1,
+          "state": "q1"
+        },
+        {
+          "action": "loop",
+          "next_state": "end",
+          "probability": "3/4",
+          "state": "q1"
+        },
+        {
+          "action": "loop",
+          "next_state": "q1",
+          "probability": "1/4",
+          "state": "q1"
+        },
+        {
+          "action": "settle",
+          "next_state": "end",
+          "probability": 1,
+          "state": "q2"
+        },
+        {
+          "action": "stay",
+          "next_state": "end",
+          "probability": 1,
+          "state": "end"
+        }
+      ]
+    },
+    "constraint_cell": {
+      "base_object_count": 5,
+      "consequence_count": 6,
+      "reference_index": 3
+    },
+    "declared_offsets": [
+      "-7/4",
+      0,
+      "5/3",
+      "13/4"
+    ],
+    "mechanical_controls": [
+      {
+        "expected_changed_fields": [
+          "horizon"
+        ],
+        "name": "fresh_horizon_control",
+        "mutation": {
+          "kind": "set_horizon",
+          "value": 6
+        }
+      },
+      {
+        "expected_changed_fields": [
+          "action_sets",
+          "features",
+          "transitions"
+        ],
+        "name": "fresh_policy_feasibility_control",
+        "mutation": {
+          "action": "hold",
+          "features": [
+            {
+              "action": "hold",
+              "next_state": "q2",
+              "state": "q2",
+              "vector": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "kind": "add_action",
+          "state": "q2",
+          "transitions": [
+            {
+              "action": "hold",
+              "next_state": "q2",
+              "probability": 1,
+              "state": "q2"
+            }
+          ]
+        }
+      },
+      {
+        "expected_changed_fields": [
+          "transitions"
+        ],
+        "name": "fresh_transition_control",
+        "mutation": {
+          "action": "alpha",
+          "features": [
+            {
+              "action": "alpha",
+              "next_state": "q1",
+              "state": "q0",
+              "vector": [
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "action": "alpha",
+              "next_state": "q2",
+              "state": "q0",
+              "vector": [
+                0,
+                2,
+                0
+              ]
+            }
+          ],
+          "kind": "replace_transition_distribution",
+          "state": "q0",
+          "transitions": [
+            {
+              "action": "alpha",
+              "next_state": "q1",
+              "probability": "3/5",
+              "state": "q0"
+            },
+            {
+              "action": "alpha",
+              "next_state": "q2",
+              "probability": "2/5",
+              "state": "q0"
+            }
+          ]
+        }
+      },
+      {
+        "expected_changed_fields": [
+          "features"
+        ],
+        "name": "fresh_feature_control",
+        "mutation": {
+          "action": "loop",
+          "kind": "replace_feature",
+          "next_state": "q1",
+          "state": "q1",
+          "vector": [
+            0,
+            "1/7",
+            2
+          ]
+        }
+      }
+    ],
+    "population_cell": {
+      "base_values": [
+        "-4/9",
+        "7/11",
+        "13/10",
+        "-5/6"
+      ],
+      "coefficient": "9/7",
+      "radius": 8,
+      "scale_factors": [
+        "5/8",
+        "11/3"
+      ]
+    },
+    "reference_index": 1,
+    "semantic_cells": {
+      "calibrated": {
+        "adjustments": [],
+        "base_values": [
+          "2/7",
+          "-11/9",
+          "5/4",
+          "17/6",
+          "-13/8"
+        ],
+        "coefficient": 1,
+        "common_constant": "7/10",
+        "missing_cells": []
+      },
+      "incomplete": {
+        "adjustments": [],
+        "base_values": [
+          "2/7",
+          "-11/9",
+          "5/4",
+          "17/6",
+          "-13/8"
+        ],
+        "coefficient": 1,
+        "common_constant": "7/10",
+        "missing_cells": [
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "interaction": {
+        "adjustments": [
+          {
+            "base_index": 3,
+            "delta": "5/19",
+            "level_index": 2
+          }
+        ],
+        "base_values": [
+          "2/7",
+          "-11/9",
+          "5/4",
+          "17/6",
+          "-13/8"
+        ],
+        "coefficient": 1,
+        "common_constant": "7/10",
+        "missing_cells": []
+      },
+      "unknown_scale": {
+        "adjustments": [],
+        "base_values": [
+          "2/7",
+          "-11/9",
+          "5/4",
+          "17/6",
+          "-13/8"
+        ],
+        "coefficient": "9/7",
+        "common_constant": "7/10",
+        "missing_cells": []
+      }
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_structural_product_extension",
+    "G2_mechanical_negative_controls",
+    "G3_semantic_calibration",
+    "G4_semantic_negative_controls",
+    "G5_constraint_rank_and_omission",
+    "G6_mechanics_only_and_scale_no_go",
+    "G7_approximate_calibration",
+    "G8_v028_eligibility",
+    "G9_prior_art_and_claim_boundary",
+    "G10_resource_and_scope"
+  ],
+  "prior_art": [
+    {
+      "identifier": "DOI:10.1016/0022-2496(64)90015-X",
+      "role": "simultaneous additive conjoint measurement"
+    },
+    {
+      "identifier": "Krantz-Luce-Suppes-Tversky-1971",
+      "role": "additive measurement and scale uniqueness"
+    },
+    {
+      "identifier": "ICML-1999-Ng-Harada-Russell",
+      "role": "policy-invariant reward transformations"
+    },
+    {
+      "identifier": "PMLR:80:1262-1270",
+      "role": "exogenous state and reward decomposition"
+    },
+    {
+      "identifier": "PMLR:202:32033-32058",
+      "role": "reward data-source and downstream-task invariances"
+    },
+    {
+      "identifier": "PMLR:235:24808-24828",
+      "role": "environment design for inverse reward learning"
+    },
+    {
+      "identifier": "ASMP-9-v0.28",
+      "role": "calibrated occupancy access and scale obstruction"
+    },
+    {
+      "identifier": "ASMP-9-v0.29",
+      "role": "quotient reward error to policy decision"
+    }
+  ],
+  "protocol_id": "ASMP-9-CONSERVATIVE-NUMERAIRE-v0.30",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 536870912,
+    "wall_seconds": 120
+  },
+  "structured_claims": {
+    "allowed": [
+      "Exact equality of the registered finite MDP mechanics preserves every registered base policy law and target-feature occupancy across consequence levels.",
+      "A complete finite scalar value rectangle is calibrated additive exactly when every anchored consequence increment equals the declared increment.",
+      "The calibrated rectangular test has rank m(n-1), and omitting any one registered constraint admits an exact interaction witness.",
+      "Non-reward MDP mechanics alone cannot certify the semantic consequence coefficient.",
+      "An unknown consequence coefficient remains positive-scale coupled under the registered rescalable response-link family.",
+      "A uniform epsilon anchored residual implies at most 2 epsilon two-sided consequence-offset bias, and the factor two is sharp.",
+      "The v0.28 calibrated-offset operation is eligible only when both mechanical conservativity and semantic calibration pass."
+    ],
+    "forbidden": [
+      "A real consequence has stable known cardinal utility.",
+      "Mechanical noninterference proves semantic calibration.",
+      "Ordinal observations alone identify the registered scalar value table.",
+      "Every useful environment intervention is mechanically conservative.",
+      "The registered consequence is calibrated under every response model.",
+      "Passing the finite certificate proves broad AI safety.",
+      "Classical MDP decomposition, conjoint measurement, or reward invariance is new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.30",
+  "verdict_map": {
+    "all_gates_pass": "conservative_numeraire_boundary_established_v0_30",
+    "any_substantive_gate_fails": "conservative_numeraire_boundary_not_established_v0_30",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_30"
+  }
+}

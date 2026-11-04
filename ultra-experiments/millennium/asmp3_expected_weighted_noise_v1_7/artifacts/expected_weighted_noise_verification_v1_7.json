@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_tv_saddle_parent_order_and_grid_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_complete_parent_registry_reconstructed": true,
+    "V2_all_continuum_saddle_fields_reconstructed": true,
+    "V3_expected_constraint_order_and_strict_cases_reconstructed": true,
+    "V4_small_rational_distribution_grid_replayed": true,
+    "V5_convexification_pair_and_fractional_case_exact": true,
+    "V6_large_succinct_formula_reconstructed": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates separate per-truth expected flip-cost constraints and terminal verification. It does not identify almost-sure, tail-risk, coupled, or path-dependent noise games.",
+  "passed": true,
+  "schema_version": "asmp3_expected_weighted_noise_verification_v1_7"
+}

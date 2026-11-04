@@ -1,0 +1,18 @@
+{
+  "implementation_commit": "f6bb525ff62aea1c9d2c3c1674090063c819a65b",
+  "output_hashes": {
+    "RESULT_v0_17.md": "7252580466d1eba989a450121f93d32450543bc1a2f6ab0a1efbac5e6f22a1b9",
+    "progress_v0_17.json": "a18ff1c7b770bea4d97e3cc3046fb02b0ddb594e404da7259debce47d893b7b3",
+    "result_v0_17.json": "a0b340faaf2753248d17c97b0b3cd14c4ea2c58b9119dc44dc4c9bfa81c844fe",
+    "start_v0_17.json": "5a6e9e78292d46461d8af8fc63baeebe659c852071648e7fbb727a3ff34e1eb8"
+  },
+  "protocol_id": "ASMP-9-GENERAL-GRAPH-ALLOCATION-v0.17",
+  "registration_commit": "0297fcddbe34ea028597fe60b0d3cb849deabfaf",
+  "registration_sha256": "fc0931d34707dad22481e34c3fb50b686978e444828adbd1fd9686b599813b1b",
+  "resources": {
+    "elapsed_seconds": 81.56129760001204,
+    "gpu_used": false,
+    "peak_resident_bytes": 24076288
+  },
+  "verdict": "registered_exact_result_passed"
+}

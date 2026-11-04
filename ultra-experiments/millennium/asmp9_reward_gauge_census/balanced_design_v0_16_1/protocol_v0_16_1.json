@@ -1,0 +1,48 @@
+{
+  "claim_boundary": "Fresh exact verification of the balanced integer maximin theorem and total-budget threshold for one independent Bernoulli cycle experiment; not adaptive allocation, multi-cycle optimal design, behavioral validation, a general RL rollout policy, general IRL identifiability, or ASMP-9 resolution.",
+  "compact_value_registry": {
+    "cycle_lengths": [11, 13],
+    "epsilon": ["5/24", "13/28"],
+    "extra_total_trials": [4, 7, 10]
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_registry_completeness",
+    "G2_pair_reduction",
+    "G3_same_branch_smoothing",
+    "G4_opposite_branch_smoothing",
+    "G5_global_balanced_optimum",
+    "G6_compact_value_formula",
+    "G7_total_budget_threshold",
+    "G8_negative_boundaries",
+    "G9_resource_and_scope"
+  ],
+  "global_allocation_registry": {
+    "cycle_lengths": [5, 6],
+    "epsilon": ["1/28", "7/20"],
+    "extra_total_trials": [12, 14, 18, 21]
+  },
+  "negative_boundary_registry": {
+    "epsilon_zero_cycle_lengths": [8, 9],
+    "k_two_epsilon": ["5/24", "13/28"],
+    "k_two_totals": [14, 18]
+  },
+  "pair_registry": {
+    "a": [8, 10, 13],
+    "differences": [9, 12, 16],
+    "epsilon": ["1/28", "5/24", "7/20", "13/28"],
+    "other_count_tuples": [[5], [4, 8], [1, 7, 10]]
+  },
+  "protocol_id": "ASMP-9-BALANCED-MAXIMIN-DESIGN-v0.16.1",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 120
+  },
+  "threshold_registry": {
+    "cycle_lengths": [13, 15, 18],
+    "delta": ["1/40", "1/160", "1/640"],
+    "epsilon": ["1/28", "5/24", "7/20", "13/28"]
+  },
+  "version": "0.16.1"
+}

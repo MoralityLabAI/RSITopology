@@ -1,0 +1,100 @@
+{
+  "claim_boundary": {
+    "adaptive_upper_bound_proved": false,
+    "globally_minimal_fixed_design_proved": false,
+    "registered_or_claim_eligible": false,
+    "resolves_asmp9": false,
+    "unknown_or_misspecified_laws_supported": false
+  },
+  "claim_status": "development_only_unregistered",
+  "conservative_delta_over_three_start": {
+    "mechanics_samples": 20,
+    "mixture_samples": 5304,
+    "return_samples": 20,
+    "total_queries": 5344
+  },
+  "constructive_upper_certificate": {
+    "errors": {
+      "base": {
+        "decimal": "0.049999700044997697",
+        "denominator_digits": 1038,
+        "exact_fraction_sha256": "43186370471f1945397b87d8d8578be96b7a90aea1063dd37f4c8fc2d8f44bdc",
+        "numerator_digits": 1037,
+        "strictly_below_delta": true
+      },
+      "gauge_alias": {
+        "decimal": "0.049999700044997697",
+        "denominator_digits": 1038,
+        "exact_fraction_sha256": "43186370471f1945397b87d8d8578be96b7a90aea1063dd37f4c8fc2d8f44bdc",
+        "numerator_digits": 1037,
+        "strictly_below_delta": true
+      },
+      "mechanics_flip": {
+        "decimal": "0.049976381371806228",
+        "denominator_digits": 1038,
+        "exact_fraction_sha256": "dcf09ee16cf484f6bd926bb731be36e529d774d5290e0a13d38a685e71d6e270",
+        "numerator_digits": 1037,
+        "strictly_below_delta": true
+      },
+      "mixture_invalid": {
+        "decimal": "0.046208029500163147",
+        "denominator_digits": 3932,
+        "exact_fraction_sha256": "51de4c3f7a77229b69240816dfadff06bf3dfc8b7573202d33df1195c868ea22",
+        "numerator_digits": 3930,
+        "strictly_below_delta": true
+      },
+      "reward_flip": {
+        "decimal": "0.049976381371806228",
+        "denominator_digits": 1038,
+        "exact_fraction_sha256": "dcf09ee16cf484f6bd926bb731be36e529d774d5290e0a13d38a685e71d6e270",
+        "numerator_digits": 1037,
+        "strictly_below_delta": true
+      }
+    },
+    "grid_minimal_by_exhaustive_exact_search": true,
+    "mechanics_samples": 64,
+    "mechanics_threshold": 32,
+    "mixture_samples": 3196,
+    "mixture_threshold": 1645,
+    "return_samples": 64,
+    "return_threshold": 32,
+    "total_queries": 3324,
+    "uniform_delta_correct_on_registered_registry": true
+  },
+  "decision_rule": [
+    "if mixture successes >= mixture threshold: not_certified",
+    "else if return or mechanics successes >= its threshold: policy_0",
+    "else: policy_1"
+  ],
+  "lower_upper_comparison_at_base": {
+    "change_of_measure_expected_query_lower_bound": 1538.6941488690566,
+    "comparison_scope": "equal unit query costs; lower bound is expected queries at base; upper procedure has a fixed query count",
+    "fixed_query_constructive_upper_bound": 3324,
+    "upper_to_lower_ratio": 2.1602733736546322
+  },
+  "midpoint_aligned_grid": {
+    "mixture_sample_multiple": 68,
+    "return_and_mechanics_sample_multiple": 2,
+    "threshold_optimization_permitted": false,
+    "thresholds_frozen_at_exact_probability_midpoints": true
+  },
+  "registry": {
+    "answers": {
+      "base": "policy_1",
+      "gauge_alias": "policy_1",
+      "mechanics_flip": "policy_0",
+      "mixture_invalid": "not_certified",
+      "reward_flip": "policy_0"
+    },
+    "delta": "1/20",
+    "independent_channel_samples": true,
+    "known_channel_laws": true
+  },
+  "source_hashes": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/artifacts_v0_32/result_v0_32.json": "5729d7909fbf31b2de7b7260f6a30677a5d1f0d367613e37eb6938085b05819f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/behavioral_rectangle_v0_32/protocol_v0_32.json": "d7ec8ecb3f5c3ea4ced0b0b193ea35f55f9018c76ca7e6f9b911bfb9944a73e0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/protocol_v0_29.json": "46987f1ada3dffb97e17ab214743a09500a8a10a8cc116493837d510d2ef8d47",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/artifacts_v0_31_1/result_v0_31.json": "f07ee0b7ef11339f97b2862987495a9d4088e44f55b58c7d708ba9ee0d578e94",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/joint_approximate_v0_31/protocol_v0_31.json": "b2b2e65e658dbf545a3983bd37ee5920d799c643804ae38e8f877bd00a1e81b8"
+  }
+}

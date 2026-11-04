@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_protocol_risk_resource_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_all_42_protocol_rows_reconstructed": true,
+    "V2_completeness_soundness_and_gap_exact": true,
+    "V3_all_replication_depths_independently_minimized": true,
+    "V4_polylog_scaling_lane_reconstructed": true,
+    "V5_all_resource_charges_reconstructed": true,
+    "V6_supporting_obstruction_and_noise_contracts_match": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates the conditional challenge/refutation theorem for the declared finder, Refute, and fresh-iid contracts. It does not establish those contracts for arbitrary environments or interfaces.",
+  "passed": true,
+  "schema_version": "asmp3_constructive_refutation_protocol_verification_v2_3"
+}

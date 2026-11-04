@@ -1,0 +1,86 @@
+{
+  "kind": "metric_robustness_stage",
+  "schema_version": "1.0",
+  "review_id": "asmp4-selector-metric-robustness-v0-15",
+  "eval_id": "asmp4-semantic-selector-audit-v0-15",
+  "construct": "conservative semantic detection of a sensor-registry selector",
+  "evidence_scope": "held_out",
+  "independent_unit": "probe_family_id",
+  "metrics": [
+    "selector_risk"
+  ],
+  "probe_plan": [
+    {
+      "schema_version": "1.0",
+      "review_id": "asmp4-selector-metric-robustness-v0-15",
+      "probe_id": "invariant-reflow-01",
+      "probe_family_id": "invariant-reflow",
+      "metric_id": "selector_risk",
+      "probe_type": "invariance",
+      "split": "held_out",
+      "expected_behavior": "stable",
+      "source_ref": "fixture://robustness_fixtures_v0_15.json#invariant-reflow-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c",
+      "tolerance": 0.0
+    },
+    {
+      "schema_version": "1.0",
+      "review_id": "asmp4-selector-metric-robustness-v0-15",
+      "probe_id": "sensitivity-raw-selector-01",
+      "probe_family_id": "sensitivity-raw-selector",
+      "metric_id": "selector_risk",
+      "probe_type": "sensitivity",
+      "split": "held_out",
+      "expected_behavior": "increase",
+      "source_ref": "fixture://robustness_fixtures_v0_15.json#sensitivity-raw-selector-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c",
+      "required_delta": 1.0
+    },
+    {
+      "schema_version": "1.0",
+      "review_id": "asmp4-selector-metric-robustness-v0-15",
+      "probe_id": "monotonicity-explicitness-01",
+      "probe_family_id": "monotonicity-explicitness",
+      "metric_id": "selector_risk",
+      "probe_type": "monotonicity",
+      "split": "held_out",
+      "expected_behavior": "increase",
+      "source_ref": "fixture://robustness_fixtures_v0_15.json#monotonicity-explicitness-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c",
+      "required_delta": 0.5
+    },
+    {
+      "schema_version": "1.0",
+      "review_id": "asmp4-selector-metric-robustness-v0-15",
+      "probe_id": "anti-gaming-paraphrase-01",
+      "probe_family_id": "anti-gaming-paraphrase",
+      "metric_id": "selector_risk",
+      "probe_type": "anti_gaming",
+      "split": "held_out",
+      "expected_behavior": "detect_violation",
+      "source_ref": "fixture://robustness_fixtures_v0_15.json#anti-gaming-paraphrase-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c"
+    },
+    {
+      "schema_version": "1.0",
+      "review_id": "asmp4-selector-metric-robustness-v0-15",
+      "probe_id": "clean-control-architecture-01",
+      "probe_family_id": "clean-control-architecture",
+      "metric_id": "selector_risk",
+      "probe_type": "clean_control",
+      "split": "held_out",
+      "expected_behavior": "no_violation",
+      "source_ref": "fixture://robustness_fixtures_v0_15.json#clean-control-architecture-01?sha256=4ad8415250b12e91798d9a61e792c0c006a108d5444cd6dc6c40f6d8dea0803c"
+    }
+  ],
+  "mechanistic_hook_plan": [],
+  "summary": {
+    "probe_rows": 5,
+    "independent_probe_families": 5,
+    "probe_types": [
+      "anti_gaming",
+      "clean_control",
+      "invariance",
+      "monotonicity",
+      "sensitivity"
+    ],
+    "mechanistic_hooks": 0
+  },
+  "interpretation_constraint": "Staging fixes oracle expectations before outcomes. It is not evidence that any metric or proposed mechanism is robust."
+}

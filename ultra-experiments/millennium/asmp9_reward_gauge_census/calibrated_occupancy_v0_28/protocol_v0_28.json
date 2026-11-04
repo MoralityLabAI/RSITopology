@@ -1,0 +1,512 @@
+{
+  "claim_boundary": "For reward-independent finite-MDP trajectory or environment interventions whose query arguments are homogeneous linear occupancy differences x^T r, an unrestricted unknown response-link class closed under positive rescaling leaves positive reward scale unidentified under any deterministic adaptive query policy. An extra feature with unknown reward coefficient remains inside that scale gauge. An externally calibrated additive consequence is different: full-range offset thresholds recover each occupancy functional, after which reward is identified modulo exactly a declared linear gauge G if and only if ker(X)=G. The smallest quotient singular value controls Euclidean reconstruction stability. These are classical reward-invariance, inverse-problem, environment-design, numeraire-normalization, and threshold-search ingredients specialized into an ASMP-9 access ledger; no novelty is claimed. The result does not establish that money, tokens, or any practical consequence has known stable utility; that real interventions preserve reward semantics; that arbitrary policies expose linear occupancy functionals; or that ASMP-9 is resolved.",
+  "fresh_validation": {
+    "calibrated_numeraire_cell": {
+      "matrix": [
+        [
+          2,
+          -1,
+          0,
+          -1
+        ],
+        [
+          0,
+          3,
+          -2,
+          -1
+        ],
+        [
+          -1,
+          0,
+          4,
+          -3
+        ],
+        [
+          1,
+          -2,
+          1,
+          0
+        ]
+      ],
+      "offsets": [
+        "-7/5",
+        "11/9",
+        "13/8",
+        "-17/12"
+      ],
+      "radius": "23",
+      "reward": [
+        "5/7",
+        "-11/6",
+        "17/10",
+        "-3/8"
+      ],
+      "scale_factors": [
+        "7/4",
+        "19/6"
+      ],
+      "tolerance": "5/2048"
+    },
+    "homogeneous_cells": [
+      {
+        "adaptive_depth": 7,
+        "matrix": [
+          [
+            2,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            3,
+            -2,
+            -1
+          ],
+          [
+            -1,
+            0,
+            4,
+            -3
+          ],
+          [
+            1,
+            -2,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            -1,
+            -2
+          ]
+        ],
+        "name": "fresh_four_feature",
+        "reward": [
+          "5/7",
+          "-11/6",
+          "17/10",
+          "-3/8"
+        ],
+        "scale_factors": [
+          "7/3",
+          "13/8"
+        ]
+      },
+      {
+        "adaptive_depth": 8,
+        "matrix": [
+          [
+            1,
+            -1,
+            0,
+            2,
+            -2
+          ],
+          [
+            0,
+            2,
+            -3,
+            1,
+            0
+          ],
+          [
+            -2,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            -2,
+            4,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            3,
+            0,
+            -2,
+            0
+          ]
+        ],
+        "name": "fresh_five_feature",
+        "reward": [
+          "-2/9",
+          "13/7",
+          "-5/4",
+          "19/11",
+          "7/13"
+        ],
+        "scale_factors": [
+          "5/6",
+          "23/5"
+        ]
+      }
+    ],
+    "quotient_cells": [
+      {
+        "expected_identifiable": true,
+        "expected_rank": 4,
+        "gauge_basis": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "matrix": [
+          [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          [
+            1,
+            0,
+            -1,
+            0,
+            0
+          ]
+        ],
+        "name": "fresh_connected_constant_gauge"
+      },
+      {
+        "expected_identifiable": false,
+        "expected_rank": 3,
+        "gauge_basis": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "matrix": [
+          [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -1
+          ]
+        ],
+        "name": "fresh_disconnected_constant_gauge",
+        "non_gauge_kernel_witness": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "expected_identifiable": true,
+        "expected_rank": 3,
+        "gauge_basis": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "matrix": [
+          [
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1
+          ]
+        ],
+        "name": "fresh_affine_gauge"
+      }
+    ],
+    "robust_cells": [
+      {
+        "matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "name": "fresh_well_conditioned",
+        "quotient_basis": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            "1/2048",
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "name": "fresh_ill_conditioned",
+        "quotient_basis": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "robust_gate": {
+      "minimum_ill_to_well_amplification_ratio": 1000
+    },
+    "unknown_numeraire_cell": {
+      "coefficient": "29/13",
+      "matrix": [
+        [
+          1,
+          -2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          -3,
+          2
+        ],
+        [
+          2,
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          3,
+          0,
+          -2
+        ]
+      ],
+      "offsets": [
+        "-11/7",
+        "5/3",
+        "19/10",
+        "-23/12"
+      ],
+      "reward": [
+        "7/5",
+        "-13/8",
+        "2/9",
+        "17/11"
+      ],
+      "scale_factors": [
+        "4/5",
+        "31/7"
+      ]
+    }
+  },
+  "gate_ids": [
+    "G0_registration_binding",
+    "G1_homogeneous_scale_obstruction",
+    "G2_adaptive_scale_obstruction",
+    "G3_unknown_numeraire_control",
+    "G4_calibrated_numeraire",
+    "G5_finite_mdp_realization",
+    "G6_quotient_criterion",
+    "G7_robust_conditioning",
+    "G8_prior_art_and_claim_boundary",
+    "G9_resource_and_scope"
+  ],
+  "prior_art": [
+    {
+      "identifier": "ICML-1999-Ng-Harada-Russell",
+      "role": "potential-based reward shaping and policy invariance"
+    },
+    {
+      "identifier": "PMLR:139:5496-5505",
+      "role": "finite deterministic MaxEnt-MDP reward identification"
+    },
+    {
+      "identifier": "NeurIPS-2021-671f0311",
+      "role": "entropy-regularized multi-environment reward identification"
+    },
+    {
+      "identifier": "PMLR:202:32033-32058",
+      "role": "reward-learning invariance and partial identification"
+    },
+    {
+      "identifier": "PMLR:235:24808-24828",
+      "role": "adaptive environment design for inverse reinforcement learning"
+    },
+    {
+      "identifier": "doi:10.1093/biomet/asm029",
+      "role": "unknown-link single-index identification conditions"
+    },
+    {
+      "identifier": "ASMP-9-v0.10",
+      "role": "finite-MDP shaping-subspace access specialization"
+    },
+    {
+      "identifier": "ASMP-9-v0.26-v0.27",
+      "role": "calibrated threshold and heterogeneous-midpoint boundaries"
+    }
+  ],
+  "protocol_id": "ASMP-9-CALIBRATED-OCCUPANCY-v0.28",
+  "resource_caps": {
+    "gpu_allowed": false,
+    "peak_resident_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "structured_claims": {
+    "allowed": [
+      "Reward-independent homogeneous occupancy interventions cannot identify positive reward scale over a response-link class closed under positive rescaling.",
+      "The scale obstruction persists under deterministic adaptive selection of occupancy queries.",
+      "A side feature with unknown reward coefficient remains inside the reward-scale gauge.",
+      "An externally calibrated full-range additive consequence localizes each registered occupancy functional.",
+      "After localization, reward is identified modulo exactly the declared linear gauge if and only if the occupancy matrix kernel equals that gauge.",
+      "The smallest quotient singular value controls Euclidean reconstruction stability."
+    ],
+    "forbidden": [
+      "Transition interventions are useless for reward identification.",
+      "Positive reward scale must be identified for every downstream decision target.",
+      "Money, tokens, or any concrete consequence has known stable cardinal utility.",
+      "Every policy or environment exposes a known linear occupancy functional.",
+      "The result supersedes general inverse-reinforcement-learning identifiability or environment-design theory.",
+      "Classical inverse-problem, numeraire, bisection, reward-invariance, or experimental-design mathematics is new.",
+      "ASMP-9 is resolved."
+    ]
+  },
+  "version": "0.28",
+  "verdict_map": {
+    "all_gates_pass": "calibrated_occupancy_boundary_established_v0_28",
+    "any_substantive_gate_fails": "calibrated_occupancy_boundary_not_established_v0_28",
+    "binding_or_resource_gate_fails": "invalid_or_incomplete_v0_28"
+  }
+}

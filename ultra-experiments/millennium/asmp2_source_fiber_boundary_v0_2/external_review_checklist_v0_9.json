@@ -1,0 +1,23 @@
+{
+  "schema_version": "asmp2_external_review_checklist_v0_9",
+  "problem_id": "ASMP-2",
+  "problem_version": "ASMP-CANDIDATE-SET-v0.1",
+  "minimum_independent_teams": 2,
+  "required_questions": [
+    "safety_deficiency_equivalence_correct",
+    "source_fiber_and_approximate_boundary_sharp",
+    "local_factorization_sufficiency_counterexample_valid",
+    "decision_deficiency_counts_as_resolution_or_refreeze_required"
+  ],
+  "required_independence": [
+    "one_nonrepository_lp_or_hand_duality_check",
+    "one_independent_qmd_score_fisher_curvature_reconstruction"
+  ],
+  "allowed_outcomes": [
+    "resolved_negative_subsumed_or_false",
+    "unresolved_refreeze_required",
+    "candidate_refuted"
+  ],
+  "current_team_receipts": [],
+  "completion_gate_satisfied": false
+}

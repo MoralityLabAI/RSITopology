@@ -1,0 +1,180 @@
+{
+  "schema_version": "asmp4_registration_fork_claim_v0_6",
+  "problem_id": "ASMP-4",
+  "claim": "On the same four-mode uncertain safety plant with the same evaluator, control authority, deterministic noiseless serial channels, and complete-transcript cardinality metric, allowing a computed sensor gives closed region [1,infinity) x [1,infinity), while forcing an injective raw sensor gives [2,infinity) x [1,infinity). The only changed premise is upstream computation closure.",
+  "fixture": {
+    "safe_modes": [0, 1, 2, 3],
+    "unsafe_state": "BAD",
+    "actions": [0, 1],
+    "safe_action_by_mode": [0, 0, 1, 1],
+    "disturbance": "after each correct action, choose any next safe mode",
+    "side_information": false,
+    "channel": "deterministic noiseless serial",
+    "cost": "log2 of complete realized transcript-language cardinality"
+  },
+  "computed_sensor_class": {
+    "admitted_partition": [[0, 1], [2, 3]],
+    "upstream_normal_form_closed": true,
+    "downstream_normal_form_closed": true,
+    "finite_region": "B_read>=T and B_write>=T",
+    "closed_asymptotic_region": "[1,infinity) x [1,infinity)"
+  },
+  "forced_raw_sensor_class": {
+    "admitted_partition": [[0], [1], [2], [3]],
+    "upstream_normal_form_closed": false,
+    "downstream_normal_form_closed": true,
+    "finite_region": "B_read>=2T and B_write>=T",
+    "closed_asymptotic_region": "[2,infinity) x [1,infinity)"
+  },
+  "partition_census": {
+    "all_partitions": 15,
+    "safe_partitions": 4,
+    "safe_encoder_controller_pairs": 4,
+    "safe_block_counts": {"2": 1, "3": 2, "4": 1}
+  },
+  "registry_lattice_census": {
+    "all_registries_including_empty": 32768,
+    "nonempty_registries": 32767,
+    "nonempty_registry_histogram": {
+      "infeasible": 2047,
+      "kappa_2": 16384,
+      "kappa_3": 12288,
+      "kappa_4": 2048
+    },
+    "cover_edges": 245760,
+    "strict_cover_edges": 26624,
+    "monotonicity_failures": 0,
+    "strict_raw_to_full_kappa": [4, 2]
+  },
+  "general_registry_lattice_formula": {
+    "safe_partition_count": "s_k=sum_{k_1+...+k_m=k} product_i S(n_i,k_i)",
+    "unsafe_partition_count": "u=Bell(n)-sum_k s_k",
+    "infeasible_nonempty_registries": "2^u-1",
+    "corner_count": "N_k=(2^s_k-1)2^(u+sum_{j>k}s_j)",
+    "strict_cover_edges": "sum_k s_k 2^(u+sum_{j>k}s_j)",
+    "verified_action_shapes_through_five_modes": 18,
+    "verified_action_partitions_through_five_modes": 75,
+    "five_mode_2_3_safe_histogram": {"2": 1, "3": 4, "4": 4, "5": 1},
+    "five_mode_2_3_infeasible_nonempty_registries": 4398046511103,
+    "five_mode_2_3_strict_cover_edges": 2854332185706496
+  },
+  "continuous_embedding": {
+    "dynamics": "n_next=(3/2)n+u-q(z), z_next=w",
+    "q_polynomial": "(12+13z-z^3)/24",
+    "mode_coordinates": ["-3", "-1", "1", "3"],
+    "q_values": ["0", "0", "1", "1"],
+    "normal_multiplier": "3/2",
+    "tangent_reset_derivative": "0",
+    "normal_control_derivative": "1"
+  },
+  "general_reset_mode_theorem": {
+    "action_partition_blocks": "m",
+    "sensor_grammar_threshold": "kappa=min{|P|: P in Gamma and P refines the required-action partition}",
+    "finite_region": "B_read>=T*log2(kappa), B_write>=T*log2(m)",
+    "closed_asymptotic_region": "[log2(kappa),infinity) x [log2(m),infinity)",
+    "infeasible_condition": "no P in Gamma refines the required-action partition"
+  },
+  "fixed_transducer_graph_theorem": {
+    "feasibility": "every reachable sensor-subset observer state is required-action homogeneous",
+    "finite_region": "B_read>=log2|L_f(T)|, B_write>=log2|L_g(T)|",
+    "closed_asymptotic_region": "[h_f,infinity) x [h_g,infinity)",
+    "entropy_computation": "log2 spectral radius of the reachable deterministic subset observer",
+    "golden_mean_fixture_region": "[log2(phi),infinity) x [0,infinity)"
+  },
+  "singleton_transient_delay_census": {
+    "cases_through_three_modes": 60134,
+    "infinitely_safe_cases": 37430,
+    "first_failure_histogram": {"1": 10642, "2": 8406, "3": 3110, "4": 534, "5": 12},
+    "maximum_first_failure_horizon": 5,
+    "maximum_safe_finite_horizon": 4,
+    "maximum_delay_graph": [[1], [2], [0, 1]],
+    "maximum_delay_initial_modes": [0],
+    "maximum_delay_sensor_partition": [[0, 1, 2]],
+    "maximum_delay_action_partition": [[0, 1], [2]]
+  },
+  "adaptive_sensor_grammar_theorem": {
+    "finite_recurrence": "V_0(B)=1; V_(t+1)(B)=min_P sum_C V_t(Succ(C))",
+    "finite_region": "B_read>=log2 V_T(I), B_write>=log2|L_g(T)|",
+    "infinite_viability": "I belongs to the greatest belief set K_infinity closed under at least one safe registered partition",
+    "positional_value": "rho_I=lim_T V_T(I)^(1/T)=min_pi limsup_T (e_I^T A_pi^T 1)^(1/T)",
+    "closed_asymptotic_region": "[log2(rho_I),infinity) x [h_g,infinity)",
+    "stationary_policy_optimal": true,
+    "aperiodic_fixture_adaptive_region": "[log2(phi),infinity) x [log2(phi),infinity)",
+    "aperiodic_fixture_best_fixed_region": "[1,infinity) x [log2(phi),infinity)"
+  },
+  "adaptive_three_mode_census": {
+    "horizon": 4,
+    "cases": 120050,
+    "adaptive_feasible_cases": 99524,
+    "infinitely_viable_cases": 99524,
+    "finite_horizon_only_feasible_cases": 0,
+    "fixed_feasible_cases": 97952,
+    "adaptive_only_feasible_cases": 1572,
+    "strict_finite_horizon_improvements": 4863,
+    "adaptive_matches_action_language_cases": 73223,
+    "maximum_fixed_to_adaptive_ratio": "8"
+  },
+  "adaptive_grammar_lattice_census": {
+    "horizon": 4,
+    "base_graph_initial_action_cases": 12005,
+    "nonempty_grammar_cases": 372155,
+    "finite_feasible_cases": 320930,
+    "infinitely_viable_cases": 320918,
+    "finite_horizon_only_cases": 12,
+    "finite_horizon_only_grammar_size": 1,
+    "finite_horizon_only_first_failure": 5,
+    "action_language_exact_cases": 255869,
+    "cover_edges": 960400,
+    "feasibility_gain_edges": 138546,
+    "viability_gain_edges": 138582,
+    "strict_finite_value_edges": 104556,
+    "maximum_cover_ratio": "81",
+    "monotonicity_failures": 0
+  },
+  "canonical_quantifier_audit": {
+    "canonical_source": "AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md",
+    "explicit_clause_count": 8,
+    "requires_upstream_computation_closure": false,
+    "requires_forced_raw_transduction": false,
+    "computed_sensor_region": "[1,infinity) x [1,infinity)",
+    "fixed_raw_sensor_region": "[2,infinity) x [1,infinity)",
+    "decision": "registration_class_underdetermined"
+  },
+  "canonical_quantifier_sensitivity": {
+    "required_clause_deletions_rejected": 8,
+    "closure_selector_insertions_rejected": 4,
+    "collapsed_regions_rejected": true,
+    "mutation_cases": 13
+  },
+  "canonical_registry_model_audit": {
+    "source_obligation_count": 13,
+    "registry_domain_selected": false,
+    "computed_sensor_registry_satisfies_all_obligations": true,
+    "fixed_raw_sensor_registry_satisfies_all_obligations": true,
+    "computed_sensor_region": "[1,infinity) x [1,infinity)",
+    "fixed_raw_sensor_region": "[2,infinity) x [1,infinity)",
+    "decision": "two_source_models_with_distinct_regions"
+  },
+  "global_registry_scope_audit": {
+    "normative_statement_file": "AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md",
+    "machine_index": "problem_set_v0_1.json",
+    "machine_index_is_normative": false,
+    "graduation_standard_satisfied": false,
+    "registered_occurrence_count": 31,
+    "domain_defining_occurrence_count": 0,
+    "decision": "global_sources_do_not_select_registered_code_domain"
+  },
+  "scope_decision": "The v0.3 diagonal theorem is exact for normal-form-closed serial classes but does not select a unique region across registration grammars that may forbid upstream computation.",
+  "canonical_status": "partial structural classification with exact registration fork; specification choice required",
+  "evidence": {
+    "theorem": "THEOREM.md",
+    "result": "RESULT.md",
+    "central_harness": "registration_fork.py",
+    "independent_verifier": "verify_registration_fork.py",
+    "tests": "test_registration_fork.py",
+    "completion_audit": "COMPLETION_AUDIT_v0_6.md",
+    "stopping_argument": "STOPPING_ARGUMENT_v0_6.md",
+    "prior_art_audit": "PRIOR_ART_AUDIT_v0_6.md",
+    "proof_audit": "PROOF_AUDIT_v0_6.md"
+  }
+}

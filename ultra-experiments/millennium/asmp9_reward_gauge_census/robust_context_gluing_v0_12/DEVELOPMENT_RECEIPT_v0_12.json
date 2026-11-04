@@ -1,0 +1,18 @@
+{
+  "status": "unregistered_development_only",
+  "execution_date": "2026-07-28",
+  "output_sha256": "980d983d302d4c456ecf9802ad208378fdda5a258e43260068f8a9ab4f7cfc5d",
+  "replay_byte_identical": true,
+  "test_count": 7,
+  "tests_passed": 7,
+  "source_hashes": {
+    "CONDITIONING_COUNTEREXAMPLE_v0_12.md": "0d0cb3c14f05b963975d8b2e5e4ac68791a9bbe65100037e900222adf9ad6f1d",
+    "PRIOR_ART_GATE_v0_12.md": "75f98a69bce949a210e9713c28bb5e331034e7999e41d3feeaf214e8fe607d18",
+    "THEOREM_DRAFT_v0_12.md": "3678f764b6a667db492effd94e32bf8176ddf58db34ddca86d642ec128d13f5a",
+    "development_census.py": "099c03c9509c45b45302d3d62e3e37e83b44cc027ea902344c31be6bee880bc8",
+    "exact_certificate.py": "2362d095ad38a8be256ff6b6b069c165f3d7912cd879ae5c1a14e7153adfee11",
+    "robust_gluing.py": "8ba8222801d2fe08037239ece92554b8578144b6329d676091ccbb5912d9f63c",
+    "test_robust_gluing.py": "c3a9dcbcb76703071eb8286d5843dabd9655b241bd0adb887dcdfb35aa16c6d7"
+  },
+  "claim_boundary": "The receipt binds an unregistered development census and exact counterexample certificate. It is not a prospective scientific registration."
+}

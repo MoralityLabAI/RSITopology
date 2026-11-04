@@ -1,0 +1,77 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-POLYHEDRAL-TV-FRONTIER-v0.9",
+  "file_count": 17,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/FINITE_TV_FRONTIER_THEOREM_v0_8.md": {
+      "bytes": 7277,
+      "sha256": "0811DAB26F29F0B2BCD4AB19A2A3EF3908758BA915A8D895F02AF841729796A5"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/RELEASE_MANIFEST_v0_8.json": {
+      "bytes": 2905,
+      "sha256": "FB77EEC450DE73CA4DA826487C631872F925B6F28052FAD4BBAB8A5C8211473F"
+    },
+    "../asmp3_finite_tv_frontier_v0_8/artifacts/finite_tv_frontier_v0_8.json": {
+      "bytes": 10257,
+      "sha256": "BFB6CF9ADC9500B22B774628C632EE0575CE13C9085BF1BBFD931ABE3C14DF08"
+    },
+    "../asmp3_typed_successor_v0_2/ASMP3_TYPED_SUCCESSOR_DRAFT_v0_2.md": {
+      "bytes": 9258,
+      "sha256": "5E2B9A460C813869088A41A7FC1A332DAC9E140DCF66603E31F0250886A6DA9B"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 28,
+      "sha256": "A51104264729E7B362EA8C739DE0ADA29BA6E4F6047580EC3A3FD330AD20FD47"
+    },
+    "COMPLETION_AUDIT_v0_9.md": {
+      "bytes": 1382,
+      "sha256": "7FADE8E846DF71829A62ABF96E27815508655A96A65CD14D7983BEFBD3EA67BF"
+    },
+    "POLYHEDRAL_TV_FRONTIER_THEOREM_v0_9.md": {
+      "bytes": 6361,
+      "sha256": "0C7BC7591A4278531CCF8E41EFA3B35C3B81FA54A7C16A04DBBB950151C1C291"
+    },
+    "README.md": {
+      "bytes": 708,
+      "sha256": "E3C047253AEB76E63DDA6D76B002B806A50D35FFF8EA7AAAAFC498459BD406D5"
+    },
+    "artifacts/polyhedral_tv_frontier_v0_9.json": {
+      "bytes": 9418,
+      "sha256": "CA780DC1B4531DB1A1D6B6CDA960987B8A7016440C87DF920B8D0D64E5E52627"
+    },
+    "artifacts/polyhedral_tv_frontier_verification_v0_9.json": {
+      "bytes": 677,
+      "sha256": "7ADF4670095737CC2D5E5CD4D6008B0256A93F8DD07B8CFA205A567DDEE2CF56"
+    },
+    "build_release_manifest.py": {
+      "bytes": 2487,
+      "sha256": "657669E3D3C33B35CC86222BB7FB650D6AFCD63B9D3FC2841B1326F4D14C026E"
+    },
+    "polyhedral_tv_frontier.py": {
+      "bytes": 14514,
+      "sha256": "5D8A81706CAF004FF0EBF03816B7357831042B9F0DE61D59406E73E69B50C473"
+    },
+    "run_polyhedral_tv_frontier.py": {
+      "bytes": 821,
+      "sha256": "06023978A4E964AB35EA4F5BE38392E68CB7223F43147ED86E5AFD302DB468A9"
+    },
+    "test_polyhedral_tv_frontier.py": {
+      "bytes": 4311,
+      "sha256": "A0E930D2FA6E19E4B804CA1C8352ABE8CE1540E7E6CF6C7D2EA9089347A8F527"
+    },
+    "verify_polyhedral_tv_frontier.py": {
+      "bytes": 7615,
+      "sha256": "0558752F6009C4CC3FD145F78E7828F42FBF3CC7C2D289F73ACB5D57945B4CF3"
+    }
+  },
+  "release_status": "exact_rational_polyhedral_subtheorem",
+  "schema_version": "asmp3_polyhedral_tv_frontier_release_v0_9"
+}

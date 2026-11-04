@@ -1,0 +1,13 @@
+{
+  "comparisons": [
+    {
+      "byte_identical_overlap_count": 0,
+      "path": "C:\\projects\\RSITopology\\protocols\\qwen08_context_stageb_prompt_manifest_v0_1.json",
+      "prompt_count": 2304,
+      "sha256": "efed466dbd859047679483d971340a937a86320fd299efdb213611c9dec8adf8"
+    }
+  ],
+  "fresh_prompt_count": 2304,
+  "passed": true,
+  "schema_version": "qwen08_l19_precision_context_prompt_separation_v0_1"
+}

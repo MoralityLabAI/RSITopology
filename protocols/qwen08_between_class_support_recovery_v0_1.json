@@ -1,0 +1,57 @@
+{
+  "protocol_id": "qwen08_between_class_support_recovery_v0_1",
+  "schema_version": "1.0.0",
+  "status": "frozen_after_local_rank_collapse_before_pooled_analysis",
+  "frozen_on": "2026-07-16",
+  "parent_analysis_registration": {
+    "path": "protocols/qwen08_holonomy_geometry_analysis_v0_1.json",
+    "sha256": "6412ddada05a7dae95466247b926a49d82c5c3bcfebc5f56f174496bbd3d8983"
+  },
+  "observed_parent_stop": "All 48 registered pair grids returned no_supported_identity_rank before graph construction.",
+  "purpose": "Distinguish a sample-limited local-frame failure from failure of the between-class subcondition object itself by increasing samples through target-blind context pooling.",
+  "claim_boundary": "This diagnostic may show that a global behavior-family object is statistically recoverable when contexts are integrated. It cannot establish a local bundle, transport, holonomy, causal edit value, VPD efficacy, compactification, recursive improvement, or RSI. Pooled objects cannot receive lineage_certified or holonomy_clean status.",
+  "states": [
+    "base",
+    "naive_qlora",
+    "shuffled_vpd_policy_qlora",
+    "vpd_policy_qlora"
+  ],
+  "candidate_sites": [
+    "model.layers.11",
+    "model.layers.15",
+    "model.layers.19",
+    "model.layers.23"
+  ],
+  "families": [
+    "affine_recurrence",
+    "symbol_transport",
+    "grid_rotation",
+    "graph_reachability"
+  ],
+  "ranks": [1, 2, 3, 4, 5, 6, 7, 8],
+  "primary_pool": {
+    "context_shards": 8,
+    "prompts_per_subcondition_per_half": 16,
+    "bootstrap_and_permutation_replicates": 128,
+    "minimum_strict_null_margin": 0.02,
+    "pass_rule": "retention_lower_95 - permutation_null_retention_upper_95 > 0.02"
+  },
+  "support_curve": {
+    "pool_sizes": [1, 2, 4, 8],
+    "windows": "all eight cyclic starts for pool sizes 1, 2, and 4; one full window for pool size 8",
+    "pool_size_1_source": "reuse the already sealed local-node receipts rather than recompute",
+    "replicates_for_pool_sizes_2_and_4": 64,
+    "replicates_for_pool_size_8": 128,
+    "interpretation": "Descriptive sample-support curve; only the full eight-shard pool controls the branch decision."
+  },
+  "branch_decision": {
+    "advance_to_denser_local_capture": "For at least one base-to-adapter pair, the common full-pool passing cells contain at least three distinct sites and two distinct families.",
+    "stop_between_class_local_capture": "No registered base-to-adapter pair meets the advance criterion.",
+    "advance_effect": "Register a new capture with more prompt replicas per subcondition per local context; do not infer loops from pooled bases.",
+    "stop_effect": "Do not spend additional GPU on this between-class subcondition object. Any alternative object requires a separately frozen protocol and cannot reuse this diagnostic as confirmatory evidence."
+  },
+  "negative_control": "The existing label-permutation upper-95 comparison remains mandatory at every rank and pool window.",
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}

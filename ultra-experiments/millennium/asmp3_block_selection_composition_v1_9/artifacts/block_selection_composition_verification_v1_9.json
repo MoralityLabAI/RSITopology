@@ -1,0 +1,17 @@
+{
+  "check_count": 8,
+  "checker": "clean_room_block_union_selection_and_depth_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_complete_744_row_registry_reconstructed": true,
+    "V2_all_composition_and_correlation_fields_reconstructed": true,
+    "V3_small_multi_block_spaces_replayed": true,
+    "V4_all_depth_requirements_independently_minimized": true,
+    "V5_selection_and_marginal_witnesses_exact": true,
+    "V6_parent_single_atom_profile_contract_matches": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker validates disjoint independent blocks with fixed majority decoders and the declared OR/failure-selector interface. It is not a global adaptive-protocol optimizer.",
+  "passed": true,
+  "schema_version": "asmp3_block_selection_composition_verification_v1_9"
+}

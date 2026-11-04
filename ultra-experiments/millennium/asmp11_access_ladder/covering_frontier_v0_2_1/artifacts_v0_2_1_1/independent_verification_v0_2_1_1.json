@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "brackets": 18,
+    "cost_cells": 144,
+    "covering_cells": 48
+  },
+  "gates": {
+    "V0_source_binding": true,
+    "V1_output_hashes": true,
+    "V2_cover_witnesses_and_lower_bounds": true,
+    "V3_exact_cost_classification": true,
+    "V4_metric_probe_replay": true,
+    "V5_minimum_width_brackets": true,
+    "V6_layer_and_metric_firewall": true,
+    "V7_complete_registered_grid": true,
+    "V8_primary_gates_passed": true,
+    "V9_claim_operation_consistency": true
+  },
+  "receipt_sha256": "27cce642dc351e104b8a66130c912f098af3f251defbf2f2d84f46d12a4bbc1a",
+  "registration_sha256": "ed8b938c50f4ed4de45afb330c48e9f5c11c065f34e6a00abed5ea7ad30dd79a",
+  "schema_version": "asmp11_intermediate_crossover_independent_verification_v0_2_1",
+  "verified": true
+}

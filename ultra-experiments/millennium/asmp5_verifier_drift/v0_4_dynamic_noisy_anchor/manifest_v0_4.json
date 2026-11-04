@@ -1,0 +1,284 @@
+{
+  "artifacts": {
+    "directory": "../artifacts_v0_4_dynamic_noisy_anchor",
+    "raw_rows": "../artifacts_v0_4_dynamic_noisy_anchor/result_v0_4.json#registry_rows",
+    "replay_command": "python -I run.py --source-commit <40-hex-source-commit>",
+    "result": "../artifacts_v0_4_dynamic_noisy_anchor/result_v0_4.json",
+    "seed_manifest": "manifest_v0_4.json#seed_plan",
+    "summary": "../artifacts_v0_4_dynamic_noisy_anchor/result_v0_4.json#conclusion_layers",
+    "verification": "../artifacts_v0_4_dynamic_noisy_anchor/verification_v0_4.json"
+  },
+  "analysis": {
+    "multiple_comparisons": "none; all 54 registered rows, theorem obligations, and controls are conjunctive",
+    "ood_conditions": [
+      "perfect cross-bit correlation",
+      "false-negative-only noise",
+      "proof class fixed before anchor visibility"
+    ],
+    "primary_outcomes": [
+      "exact finite-horizon failure probability",
+      "fresh-iid infinite-horizon limit",
+      "persistent positive residual risk"
+    ],
+    "stopping_rule": "bind manifest, source, and predecessor before the grid; process all 54 rows in frozen order; stop before later work on any mismatch, float/RNG use, 30-second wall limit, 64-MiB traced-Python peak, or one-MiB artifact limit",
+    "uncertainty": "none; probabilities are exact rational consequences of the frozen product law"
+  },
+  "benefit": "robustness",
+  "budget": {
+    "execution": "strictly sequential standard-library enumeration with no worker subprocesses or experiment RNG",
+    "max_artifact_bytes": 1048576,
+    "max_cells_per_world": 1024,
+    "max_episodes": 54,
+    "max_horizon": 64,
+    "max_steps_per_episode": 64,
+    "max_traced_python_mib": 64,
+    "max_wall_seconds": 30,
+    "partial_run_policy": "fail closed and emit no claim-eligible artifact"
+  },
+  "claim_boundary": [
+    "the primary model is the frozen four-bit anchor R*=0011 with exact safe-acceptance bits and one-sided 0-to-1 noise only on its two hazard-rejection bits",
+    "the 2m hazard-bit replica errors are mutually independent Bernoulli(epsilon) coins in the declared bit-major replica-minor order",
+    "fresh_iid uses a new independent 2m-coin batch at each of exactly H post-install attack opportunities; persistent installs one batch and reuses it for all H opportunities",
+    "the installed anchor is visible before an adaptive adversary chooses one of exactly two proof classes and makes the registered hazard proposal",
+    "the registered finite grid is m in {1,3,5}, epsilon in {0,1/20,1/10}, H in {1,8,64}, and the two frozen temporal models",
+    "the perfect-correlation, false-negative-only, blinded-adversary, swapped-bit, epsilon-zero, and inherited safe-cycle cases are controls, not enlargements of the primary model",
+    "no claim about arbitrary learners, arbitrary or unknown correlation, two-sided or state-dependent error, learned evidence, infinite distinct-state progress, open-ended verifier replacement, general ASMP-5 systems, or resolution of ASMP-5"
+  ],
+  "conclusion_layer_names": [
+    "metric_robustness",
+    "task_result",
+    "measurement_reliability",
+    "claim_support",
+    "operational_decision"
+  ],
+  "claim_scope": "model_only",
+  "controls": [
+    {
+      "name": "epsilon_zero_exact_anchor",
+      "type": "null"
+    },
+    {
+      "name": "false_negative_only_safety_and_independent_safe_bit_deadlock",
+      "type": "mechanism_knockout"
+    },
+    {
+      "name": "v0_3_safe_two_cycle",
+      "type": "baseline"
+    },
+    {
+      "name": "hazard_bit_swap",
+      "type": "no_op"
+    },
+    {
+      "name": "fresh_vs_persistent_temporal_correlation",
+      "type": "simple_limit"
+    },
+    {
+      "name": "perfectly_correlated_hazard_bits",
+      "type": "simple_limit"
+    },
+    {
+      "name": "blinded_one_class_adversary",
+      "type": "mechanism_knockout"
+    }
+  ],
+  "experimental_unit": "one exact registered (m, epsilon, H, temporal-model) row; replica patterns and recurrence steps are terms of that row, not independent samples",
+  "hypotheses": [
+    {
+      "falsifier": "any registered row differs from the exact p_m, q_m, or temporal-risk formula, or either single-bit exploit witness fails",
+      "id": "H1_visible_product_error_risk",
+      "prediction": "independent hazard-bit majorities and reveal-before-choice give q_m=1-(1-p_m)^2 and the registered finite-horizon risks"
+    },
+    {
+      "falsifier": "for any finite odd m and positive probability epsilon the fresh risk does not tend to one, or persistent risk changes with positive H",
+      "id": "H2_temporal_boundary",
+      "prediction": "fresh independent batches accumulate to eventual failure probability one, while one persistent batch retains risk q_m"
+    },
+    {
+      "falsifier": "epsilon zero is nonzero-risk, false-negative-only noise reaches hazard, the inherited cycle is unsafe, or blinded/perfectly-correlated one-bit risk differs from p_m",
+      "id": "H3_scope_controls",
+      "prediction": "the frozen controls isolate direction, temporal correlation, cross-bit correlation, visibility, and nondeadlock semantics"
+    }
+  ],
+  "interventions": [
+    {
+      "changes": {
+        "hazard_rejection_bits": "replace each exact zero by an odd-m majority of independent Bernoulli(epsilon) false-positive replicas"
+      },
+      "name": "replicated_one_sided_noisy_anchor"
+    },
+    {
+      "changes": {
+        "batch_reuse": "fresh independent batch at every opportunity versus one persistent batch"
+      },
+      "name": "temporal_error_law"
+    },
+    {
+      "changes": {
+        "proof_class_timing": "choose after visibility versus one fixed class chosen before visibility"
+      },
+      "name": "adversary_visibility_order"
+    }
+  ],
+  "metrics": {
+    "denominators": {
+      "registry_row": "one frozen (m, epsilon, H, temporal-model) tuple",
+      "replica_pattern": "one of exactly 2^(2m) ordered joint bit patterns",
+      "temporal_opportunity": "one post-install hazard proposal"
+    },
+    "evidence": [
+      "single_bit_majority_error_probability",
+      "visible_adversary_per_installation_failure",
+      "finite_horizon_failure_probability",
+      "fresh_infinite_horizon_limit"
+    ],
+    "exposure": {
+      "activation": "both single-bit error fixtures install an accepting hazard bit",
+      "balance_tolerance": 0,
+      "eligibility": "all 2m independent replica coins and exactly H attack opportunities are represented",
+      "minimum_per_condition": 1,
+      "state_change": "an installed erroneous hazard bit changes its class-specific hazard decision from reject to accept"
+    },
+    "hazard": [
+      "source_or_predecessor_binding_failure",
+      "missing_or_reordered_registry_row",
+      "float_or_rng_use",
+      "false_negative_deadlock",
+      "correlation_or_visibility_scope_leak",
+      "artifact_overwrite_attempt",
+      "resource_stop"
+    ],
+    "selection": []
+  },
+  "model": {
+    "anchor_bit_order": [
+      "safe_class_0",
+      "safe_class_1",
+      "hazard_class_0",
+      "hazard_class_1"
+    ],
+    "coin_order": "hazard_class_0 replicas 0..m-1, then hazard_class_1 replicas 0..m-1",
+    "error_law": "all 2m replica coins are mutually independent Bernoulli(epsilon) false-positive indicators",
+    "code_hash": "the required --source-commit contains byte-identical copies of exactly the eight source files",
+    "config_paths": [
+      "manifest_v0_4.json",
+      "PROTOCOL_v0_4.md"
+    ],
+    "entrypoint": "run.py",
+    "hazard_proposal": "hazard=1",
+    "installation_and_attack_order": [
+      "draw the registered replica batch when required by the temporal model",
+      "install each hazard bit as the strict majority of its m replicas while retaining both safe bits exactly",
+      "reveal the installed four-bit anchor to the adversary",
+      "let the adversary choose proof class 0 or 1",
+      "evaluate one hazard proposal"
+    ],
+    "majority": "strict majority with odd m",
+    "rng": "no experiment RNG; the primary evaluates exact Fraction formulas and the verifier sums the complete finite coin space",
+    "root_anchor_binary": "0011",
+    "root_anchor_integer": 3,
+    "update_order": "install according to temporal law, reveal anchor, choose proof class, evaluate one hazard proposal, then advance the safe/failed state"
+  },
+  "predecessor_binding": {
+    "commit": "61a2f802adb4c4b5f06272d97d9de888413d5352",
+    "files": [
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/artifacts_v0_3/result_v0_3.json",
+        "sha256": "a3e96165b58027a98edf17ce5cd007e283ae65059af7ef8f9e36a471da028f8a"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/artifacts_v0_3/verification_v0_3.json",
+        "sha256": "4a0b8a7bd9c06dd3c10ccadbbd03660ce4a4630254d7454f51d6f4cbbceb6d5e"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/artifacts_v0_3/synthesis_receipt_v0_3.json",
+        "sha256": "11cb0b249a7688877e3d508cdd438d9e6ce67dd0f5bfe8943e9d8fee93655047"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/protocol_v0_3.json",
+        "sha256": "b999ee7bdb456457f25c1999d762279501968738625c24521191eca6d3eaafc1"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/inductive_root.py",
+        "sha256": "724e701a8d0acde0353d671128fb577994bf62b1daa41c606b0d9ea6262620e6"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/run.py",
+        "sha256": "ab1170032af1675959c6298c1939b9fa342b4320583f1479bac18fadccec393f"
+      },
+      {
+        "path": "ultra-experiments/millennium/asmp5_verifier_drift/v0_3_inductive_root/verify_independent.py",
+        "sha256": "4349ee53fb2f76be95079f902f9126999afe4b0b31b029e514afb6e9307e6916"
+      }
+    ]
+  },
+  "protocol_id": "ASMP5-DYNAMIC-REPLICATED-NOISY-ANCHOR-v0.4",
+  "question": "How does a finite replicated one-sided anchor error propagate across repeated post-install adversarial opportunities under fresh and persistent temporal laws?",
+  "registration_status": "source_candidate_not_executed_requires_commit_before_run",
+  "registry": {
+    "epsilon": [
+      "0/1",
+      "1/20",
+      "1/10"
+    ],
+    "horizon": [
+      1,
+      8,
+      64
+    ],
+    "loop_order": [
+      "m",
+      "epsilon",
+      "horizon",
+      "temporal_model"
+    ],
+    "m": [
+      1,
+      3,
+      5
+    ],
+    "row_count": 54,
+    "temporal_model": [
+      "fresh_iid",
+      "persistent"
+    ]
+  },
+  "seed_plan": {
+    "confirmatory": [
+      "C0-frozen-54-row-exact-registry"
+    ],
+    "discovery": [
+      "D0-source-only-off-grid-tests"
+    ],
+    "holdout": [
+      "H0-import-independent-pattern-enumerator-and-recurrence"
+    ],
+    "pairing": "symbolic partitions only; no RNG sampling, statistical replicate, or adaptive outcome selection"
+  },
+  "schema": "alife.experiment.v1",
+  "schema_version": "asmp5_dynamic_replicated_noisy_anchor_manifest_v0_4",
+  "source_freeze": {
+    "artifact_execution_before_commit": "forbidden",
+    "files": [
+      "PROTOCOL_v0_4.md",
+      "README.md",
+      "SOURCE_FREEZE.md",
+      "manifest_v0_4.json",
+      "noisy_anchor.py",
+      "run.py",
+      "test_noisy_anchor.py",
+      "verify_independent.py"
+    ],
+    "isolated_mode": "python -I",
+    "live_directory_policy": "exactly eight regular non-reparse files"
+  },
+  "theorem": {
+    "blinded_one_class_probability": "p_m",
+    "fresh_finite_risk": "1-(1-q_m)^H",
+    "fresh_infinite_horizon": "for every finite odd m and 0<epsilon<=1, the failure probability tends to one",
+    "independent_visible_probability": "q_m=1-(1-p_m)^2",
+    "majority_error_probability": "p_m=sum_{k=(m+1)/2}^m binom(m,k) epsilon^k (1-epsilon)^(m-k)",
+    "persistent_finite_and_infinite_risk": "q_m",
+    "perfectly_correlated_visible_probability": "p_m"
+  }
+}

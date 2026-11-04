@@ -1,0 +1,45 @@
+{
+  "burned_inputs_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/DEVELOPMENT_RESULT_v0_63.md": "0e4e842144e4e47a3800e4926536309f081d67964bb1e8a2676dee344e83e57b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/verify_development.py": "1d6cad1828b2a9428d72ea3d895f75368be0013d5d73047ef4788efbc1fe8fb0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/exact_modulus_slice_v0_62/DEVELOPMENT_RESULT_v0_62.md": "d70e4b1cdb2f174adecb00544ce406c65c2027a8db7ea455a607af81b985c4be"
+  },
+  "claim_boundary": "Exact full-dimensional three-alternative fixed-binary capped-simplex calibration only; classical convex geometry; no general efficient RUM-modulus, hidden-menu, latent-confounding, strategic/dynamic, physical-access, welfare, novelty, or full ASMP-9 resolution claim.",
+  "expected_test_count": 8,
+  "freshness": {
+    "gamma_cells": [
+      "1/4096",
+      "3/1600",
+      "1/200",
+      "1/50"
+    ],
+    "grid_denominators": [
+      20,
+      40
+    ]
+  },
+  "protocol_id": "asmp9-capped-simplex-modulus-v0.63",
+  "resource_caps": {
+    "resident_bytes": 536870912,
+    "seconds": 180,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.63-verification-registration-v1",
+  "source_commit": "6e28b6cd07c073cb5004c57bd2c56f999a408f56",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/PRIOR_ART_GATE_v0_63.md": "43e2cf9bb5999d1c9e269330edd5dee5f307f1b998f42e3cc2b7305d6f03e3f5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/PROOF_AUDIT_v0_63.md": "0647069008160a987bec9199b94a83bebf64a7f7eb22d21c15fe005751d59d84",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/README.md": "eb8fd69680bcf2a0bf91f555be5e2a9b3ef75363aaa46301c2641d5e564c0826",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/THEOREM_DRAFT_v0_63.md": "5bc93ba72fc7a900d94f1d1c0e21c3d66532b1171955d583b6e6c65ea8b51740",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/VERIFICATION_PROTOCOL_v0_63.md": "2c26cae85fd1d3d2dc86de7375097d0d9a04ab489fa98506a1dceb3c04c3565e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/capped_simplex_modulus.py": "9e9959c2d91cfad958e0ed6d993b10993b800cbe81e63ca5cd26df5d3c46fc17",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/independent_replay_v0_63.py": "f84d96441e087d7f2bc2fbe48b6cbf40c0ce2cf9bcc874bbc778dfc81be33d38",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/primary_verifier_v0_63.py": "ce860cb36b23c21668e66c8e189c85e4f17d9239f33dc8a809e70c7fa1a5f786",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/register_verification_v0_63.py": "f5437bff6c2ac6cd842d6e1db2e40f959383e3470043c1d97e415ca0ce03bfa4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/test_capped_simplex_modulus.py": "73badcc89dce8f4e88fe78b807934597fcb3638c4a795763817cc41e376ee7fa",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/verification_cells_v0_63.json": "c11dda56e5bbd18d9cbe3c9b61b7975a403c8d5824c7f4cb33da89e4574673d0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/verify_v0_63.py": "62c0e3c6f61fd48fb33b47f880aa574af196eea0e0bdfb6bf81385fd72fd4bee"
+  },
+  "test_command": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/test_capped_simplex_modulus.py",
+  "verification_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/capped_simplex_modulus_v0_63/verify_v0_63.py"
+}

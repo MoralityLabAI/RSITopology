@@ -1,0 +1,57 @@
+{
+  "schema_version": "asmp4_positive_dimensional_nhim_claim_v0_12",
+  "status": "positive-dimensional compact classical NHIM preserves the sensor-registry fork",
+  "sealed_resources": {
+    "count": 2,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_11_claim_sha256": "cfa565afe35aacb66a001f29d6164dfeff60b78f57943e1f8d80507efa5ae083"
+  },
+  "plant": {
+    "state": "(theta,n,z) in S^1 x R x {-3,-1,1,3}",
+    "dynamics": "theta_next=theta+1/4 mod 1; n_next=(3/2)n+u-q(z); z_next=w",
+    "authority": "[-1,2]",
+    "safe_set": "K=K_0=S^1 x {0} x {-3,-1,1,3}",
+    "unique_safe_controls": [0, 1]
+  },
+  "classical_nhim": {
+    "ambient": "S^1 x R",
+    "manifold": "N=S^1 x {0}",
+    "dimension": 1,
+    "closed_loop": "f(theta,n)=(theta+1/4 mod 1,(3/2)n)",
+    "splitting": {
+      "E_s": "{0}",
+      "E_u": "span(d/dn)",
+      "TN": "span(d/dtheta)"
+    },
+    "tangent_norm": "1",
+    "unstable_inverse_norm": "2/3",
+    "lambda": "3/4",
+    "definition_one_conditions": "all satisfied"
+  },
+  "local_control": {
+    "state_radius": "1/6",
+    "target_radius": "3/4",
+    "formula": "u=q(z)+eta-(3/2)n"
+  },
+  "exact_regions": {
+    "computed": "[1,infinity) x [1,infinity)",
+    "raw": "[2,infinity) x [1,infinity)",
+    "same_plant_authority_timing": true
+  },
+  "primary_definition_audit": {
+    "sources": 1,
+    "items_checked": 2,
+    "pdf_pages_visually_checked": [3, 4],
+    "external_expert_review": false
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 12,
+    "tests": 155
+  },
+  "decision": "zero_dimensional_nhim_objection_removed_without_collapsing_registry_gap",
+  "nonclaim": "The safe manifold is positive-dimensional but still has zero ambient volume; ASMP-4 does not select this classical NHIM class or either sensor registry, and no full canonical solution is claimed."
+}

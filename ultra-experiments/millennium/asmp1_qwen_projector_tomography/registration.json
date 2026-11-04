@@ -1,0 +1,128 @@
+{
+  "analysis_result": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\analysis_result.json",
+    "sha256": "6a153e34dfc1092d7ca21719d56376678cf7d11906a688077d8bba1f97d1a6c7"
+  },
+  "basis_receipts": [
+    {
+      "attained_level": "lineage_certified",
+      "basis_sha256": "6aa16b2d7e338cf4acfbb9d19d08f2b54269069d4753814077330808881cb8ca",
+      "certificate_basis_hash_check": "exact construction-basis receipt match; vv^T is sign-gauge invariant",
+      "certificate_record_sha256": "a40b12addede7038da1afa91d9115d664cc627aca769a8232d69efae6242bfa6",
+      "certificate_site_id": "base/L11/graph_reachability/shard-00/rank-1",
+      "construction_row_count": 144,
+      "discovery_basis_sha256": "00adcca8c81cf83cbd7ffb2bd9a24d2426b631d62d3156da94464f322778a2a0",
+      "eigenvalue": 0.013204514850157991,
+      "expected_discovery_basis_sha256": "00adcca8c81cf83cbd7ffb2bd9a24d2426b631d62d3156da94464f322778a2a0",
+      "random_direction_sha256": "d974b3df6a3f6f114f118f55421b00d60fe54a8794c902a619b36e891d7cafa5",
+      "site_id": "model.layers.11",
+      "source_chunk": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\chunks\\base\\model__layers__11\\shard-00--construction.npz",
+      "source_chunk_sha256": "21f8979ad98e636690ecfc14a4731ca69894d0dc4b9267c71d353e401470d09d"
+    },
+    {
+      "attained_level": "lineage_certified",
+      "basis_sha256": "eb54c325084715a4043a5f4bc2b097d9f5181fef1ea1c53fd40cc94942ef15c7",
+      "certificate_basis_hash_check": "exact construction-basis receipt match; vv^T is sign-gauge invariant",
+      "certificate_record_sha256": "197c6fad34c6ec1eb61f5ada3407a261adbdfc8de99ef0350ef335d1aa8f1603",
+      "certificate_site_id": "base/L15/graph_reachability/shard-00/rank-1",
+      "construction_row_count": 144,
+      "discovery_basis_sha256": "22b585c39535b2dc6ace0693aad8c3b57b41aa45a5ecf88fe6533c2cd0845c32",
+      "eigenvalue": 0.03342234581894986,
+      "expected_discovery_basis_sha256": "22b585c39535b2dc6ace0693aad8c3b57b41aa45a5ecf88fe6533c2cd0845c32",
+      "random_direction_sha256": "fd22cb5ea8a0c43400eaa8f9d17c2f376b9a48094c73e41a27e3e96c9d74a77d",
+      "site_id": "model.layers.15",
+      "source_chunk": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\chunks\\base\\model__layers__15\\shard-00--construction.npz",
+      "source_chunk_sha256": "7ad00222960e63bd11bd5618b664aafec71bdb3a432ca1fe1c03ad88affd68e2"
+    },
+    {
+      "attained_level": "lineage_certified",
+      "basis_sha256": "fd19fe0d6f721b813f96e216459227207c2cda0fb103a60f8ac252380370b61e",
+      "certificate_basis_hash_check": "exact construction-basis receipt match; vv^T is sign-gauge invariant",
+      "certificate_record_sha256": "2b5e034af3b0b2058c0c920bebbf1925a133c8b35278feea7c5d9fdb6535b021",
+      "certificate_site_id": "base/L19/graph_reachability/shard-00/rank-1",
+      "construction_row_count": 144,
+      "discovery_basis_sha256": "7585c60ec9de6a4a8b844e38914b41218238c56a02e16355dd9c0a47d6a06c53",
+      "eigenvalue": 0.08126246486963427,
+      "expected_discovery_basis_sha256": "7585c60ec9de6a4a8b844e38914b41218238c56a02e16355dd9c0a47d6a06c53",
+      "random_direction_sha256": "b7aeb164111b67ddcb6b6f7123be72ba6279762cf26bebf2b2befd031fa75304",
+      "site_id": "model.layers.19",
+      "source_chunk": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\chunks\\base\\model__layers__19\\shard-00--construction.npz",
+      "source_chunk_sha256": "2bd2c52325227ff4610fca03e29dac7fb47c7b4d15e6e7fa2b23f5a4964e1ca9"
+    },
+    {
+      "attained_level": "lineage_certified",
+      "basis_sha256": "824f588b74d627f104ea262e7ce4e18fb652d55c58656a222266ad8531b09d09",
+      "certificate_basis_hash_check": "exact construction-basis receipt match; vv^T is sign-gauge invariant",
+      "certificate_record_sha256": "d05fc2832ccbdf54f873f2a547a0863926720b750fd6e2004161e474f71c3caa",
+      "certificate_site_id": "base/L23/graph_reachability/shard-00/rank-1",
+      "construction_row_count": 144,
+      "discovery_basis_sha256": "aa211f743465bc2518ba704349a326ab0985cc81d4e78d9ee3e66bcfe30f1ae7",
+      "eigenvalue": 0.19021120647079315,
+      "expected_discovery_basis_sha256": "aa211f743465bc2518ba704349a326ab0985cc81d4e78d9ee3e66bcfe30f1ae7",
+      "random_direction_sha256": "7c54c7b2afa863b8b4722b765275f048df1ff54595a0a02254508aeb7ba685d7",
+      "site_id": "model.layers.23",
+      "source_chunk": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\chunks\\base\\model__layers__23\\shard-00--construction.npz",
+      "source_chunk_sha256": "51a564f6dbd5427097a399f1481fb357eb39f8699a45308dad6661225d363035"
+    }
+  ],
+  "capture_index": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\state_capture_index.json",
+    "sha256": "7b887ab7c40f8731f3cbb40243161f46c4925b029b0ef3ea7cfca89c7af789da"
+  },
+  "certificate_file": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\lineage_certificates.jsonl",
+    "sha256": "4c30d98f1a36e33cb4c6f7e0bb19cb3d25a9859375112bb7cbe02e4560d21346"
+  },
+  "environment": {
+    "packages": {
+      "accelerate": "1.12.0",
+      "bitsandbytes": "0.49.1",
+      "numpy": "2.4.3",
+      "torch": "2.5.1+cu121",
+      "transformers": "5.3.0"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "exact_inner_command": [
+    "C:\\Python311\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen08_projector_tomography.py",
+    "--protocol",
+    "C:\\projects\\RSITopology\\protocols\\qwen08_projector_tomography_v0_1.json",
+    "--registration",
+    "D:\\Research_Engine\\runs\\qwen08_projector_tomography_v0_1\\registration.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\qwen08_projector_tomography_v0_1\\result",
+    "--batch-size",
+    "8"
+  ],
+  "outcomes_read": false,
+  "prompt_count": 72,
+  "prompt_manifest": {
+    "path": "C:\\projects\\RSITopology\\protocols\\qwen08_dense_local_prompt_manifest_v0_1.json",
+    "sha256": "b7d2e98e90158b1a5f67981f5ec40261c672c64739263927dc5322861cacbd39"
+  },
+  "protocol": {
+    "path": "C:\\projects\\RSITopology\\protocols\\qwen08_projector_tomography_v0_1.json",
+    "sha256": "6e53cb2d743fb67f602af527307026af01b11a5efd49a152203b973621be2276"
+  },
+  "run_id": "qwen08-projector-tomography-v01",
+  "schema_version": "qwen08_projector_tomography_registration_v0_1",
+  "sealed_evaluation_prompts": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_projector_tomography_v0_1\\sealed_evaluation_prompts.json",
+    "sha256": "7b18e50310e6f669069048cad853ca6b96cce20fe4dba64f92750a28bf9a58b9"
+  },
+  "sealed_projectors": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_projector_tomography_v0_1\\sealed_projectors.npz",
+    "sha256": "4e749d70e8f60b9265b8bfc56b0a211279e8e80f45e4497d05304f9ccea9566a"
+  },
+  "source_files": {
+    "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1": "735c528fefe296d24a9c76d5236dd36dd5d08136ebaab726cea3746bb1026ed0",
+    "C:\\projects\\RSITopology\\rsi_topology\\projector_tomography.py": "caab855895de31064d7441d287ccc6c1e50a3595bdf81363769df6c96c988987",
+    "C:\\projects\\RSITopology\\scripts\\analyze_qwen08_projector_tomography.py": "b9c9815009a16a014c4f22c4da1edde25ae4b3f4d192dba38483cc01b86babe4",
+    "C:\\projects\\RSITopology\\scripts\\prepare_qwen08_projector_tomography.py": "1bf5c1335c4daddd2b7cc583431139514369dc4c6b375d3560bc7d6ea45c05ee",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen08_projector_tomography.py": "77e4e557b509ae29230c2e4a3e8838dd16f64da6ee1ef18309d653d6fe53aa5b",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen_holonomy_jobobject.ps1": "6068d6e4d7fa5b85d2f8ddc3021652c8445088c217784243d7371c97cbf4237e"
+  },
+  "subcondition_count": 9
+}

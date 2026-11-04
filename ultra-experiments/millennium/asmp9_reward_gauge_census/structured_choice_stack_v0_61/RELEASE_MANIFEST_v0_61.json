@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "bytes": 36577,
+      "path": "../README.md",
+      "sha256": "46dcad36115def008592da6fa09b6befe0ac028958d1c18f6045394b2e998cc4"
+    },
+    {
+      "bytes": 5733,
+      "path": "../RESOLUTION_OBLIGATION_MATRIX_v0_61.md",
+      "sha256": "df9c7bf5e4f83d8f77cb51a131f4dc9aff4831a8630ff8eff663384ed0408e29"
+    },
+    {
+      "bytes": 14759,
+      "path": "independent_replay_v0_61.py",
+      "sha256": "46943520496537104e3a02e9cec286f544106a1da620758237f7b28995f1ca90"
+    },
+    {
+      "bytes": 2874,
+      "path": "PRIOR_ART_GATE_v0_61.md",
+      "sha256": "c72ad5941d4d3a8b8b19fd4437868de84b4ad65f8e12ab06ddd6ee5f1ff5aa22"
+    },
+    {
+      "bytes": 5710,
+      "path": "PROOF_AUDIT_v0_61.md",
+      "sha256": "b75a70d08c36ad72e66609cc8133e4b4d51dcd593a37546147075f95b19ea5db"
+    },
+    {
+      "bytes": 1313,
+      "path": "README.md",
+      "sha256": "6574d18f8b42507b9ddd892db13c16cb18008949948a3aac47dc614ba99d1f13"
+    },
+    {
+      "bytes": 4907,
+      "path": "register_verification_v0_61.py",
+      "sha256": "43d9ffe11e803334e4c8f49473e2f5b413b21ac07b3d906f6dea3308f15daaf0"
+    },
+    {
+      "bytes": 7254,
+      "path": "RESULT_v0_61.md",
+      "sha256": "d09d43247af3b5a5174c16dd9498561b5d566d39568779d9cb0ab80b4a113c96"
+    },
+    {
+      "bytes": 25732,
+      "path": "stack_verifier_v0_61.py",
+      "sha256": "3da715975c0f96757e991bae7a1ddc900794752f1d58a575da6345a031d57fa2"
+    },
+    {
+      "bytes": 2419,
+      "path": "test_stack_verifier_v0_61.py",
+      "sha256": "2dbb5d606e0530f167673b10c14451ce6b2397b55931e81f8d53722e835f08d2"
+    },
+    {
+      "bytes": 2174,
+      "path": "verification_cells_v0_61.json",
+      "sha256": "fbddc7646d4603243f56914778c89c5b56407462c7efc542171a96cf62bc62f5"
+    },
+    {
+      "bytes": 6808,
+      "path": "VERIFICATION_PROTOCOL_v0_61.md",
+      "sha256": "8cba51dcc509e62d572d6dedf9a2141b33472d29c148690c02336a29642e41ed"
+    },
+    {
+      "bytes": 5741,
+      "path": "verification_registration_v0_61.json",
+      "sha256": "e6138bb101b094110c2011a91bf71ccaaa808857ad8c0eeec1fb38ac35ae69df"
+    },
+    {
+      "bytes": 11663,
+      "path": "VERIFY_RESULT_v0_61.json",
+      "sha256": "a6deb25c85ee2a2f2c21c6b16206d3d1348af2ee13dd89882a457069fbee7bd7"
+    },
+    {
+      "bytes": 5374,
+      "path": "verify_stack_v0_61.py",
+      "sha256": "36db3041e7f5461c434463aabb4da5e00e0832316b4d105467dc2bc5938816e2"
+    }
+  ],
+  "protocol_id": "asmp9-structured-choice-stack-v0.61",
+  "schema": "asmp9-v0.61-release-manifest-v1",
+  "status": "conditional_structured_choice_stack_verified"
+}

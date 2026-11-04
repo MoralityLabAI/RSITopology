@@ -1,0 +1,177 @@
+{
+  "claim_eligible": false,
+  "common_subset_table": [
+    "0",
+    "1",
+    "0",
+    "1"
+  ],
+  "distinct_randomized_values": 10,
+  "dual_mismatch_count": 0,
+  "elapsed_seconds_descriptive": 0.03706810000585392,
+  "family": [
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "10/11",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/11",
+      "maximum_positive_support": 3,
+      "p": "11/20",
+      "randomized_value": "5/11",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "5/6",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/12",
+      "maximum_positive_support": 3,
+      "p": "3/5",
+      "randomized_value": "5/12",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "10/13",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/13",
+      "maximum_positive_support": 3,
+      "p": "13/20",
+      "randomized_value": "5/13",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "5/7",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/14",
+      "maximum_positive_support": 3,
+      "p": "7/10",
+      "randomized_value": "5/14",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "2/3",
+      "feasible_vertex_count": 4,
+      "formula_value": "1/3",
+      "maximum_positive_support": 3,
+      "p": "3/4",
+      "randomized_value": "1/3",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "5/8",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/16",
+      "maximum_positive_support": 3,
+      "p": "4/5",
+      "randomized_value": "5/16",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "10/17",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/17",
+      "maximum_positive_support": 3,
+      "p": "17/20",
+      "randomized_value": "5/17",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "5/9",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/18",
+      "maximum_positive_support": 3,
+      "p": "9/10",
+      "randomized_value": "5/18",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "10/19",
+      "feasible_vertex_count": 4,
+      "formula_value": "5/19",
+      "maximum_positive_support": 3,
+      "p": "19/20",
+      "randomized_value": "5/19",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "deterministic_value": "1/2",
+      "dual_lambda": "1/2",
+      "feasible_vertex_count": 4,
+      "formula_value": "1/4",
+      "maximum_positive_support": 3,
+      "p": "1",
+      "randomized_value": "1/4",
+      "subset_table": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    }
+  ],
+  "family_size": 10,
+  "formula_mismatch_count": 0,
+  "headline_witness": {
+    "first_value": "5/12",
+    "second_value": "5/18"
+  },
+  "one_outcome_control": {
+    "deterministic_value": "1",
+    "randomized_value": "1/2"
+  },
+  "schema": "asmp9-v0.53-development-census-v1",
+  "support_bound_failure_count": 0,
+  "table_mismatch_count": 0
+}

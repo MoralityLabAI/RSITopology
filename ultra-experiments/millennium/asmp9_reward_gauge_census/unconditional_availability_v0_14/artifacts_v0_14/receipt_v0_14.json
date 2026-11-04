@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 91.75060190001386,
+  "implementation_commit": "e59072fcab115a3d38b9b4b887d5e7024b89741c",
+  "output_hashes": {
+    "RESULT_v0_14.md": "aee7b1cd97a155db75e874b62a1f01a04bc12c6be8eb11e1178e77c15ac0b227",
+    "result_v0_14.json": "1cd1d25eb2bd86c3b8748a29def4ebbdbd6f622c1bc0f0f4a0613d567b5b2b23"
+  },
+  "protocol_id": "ASMP-9-UNCONDITIONAL-AVAILABILITY-v0.14",
+  "registration_commit": "581226c7855b13ce156296a284a473b2b7b0cb93",
+  "registration_sha256": "f9d9a2581e9337ab1034bb73fe1a620e040da161c7e3c9247f7da26f7d577af1"
+}

@@ -1,0 +1,70 @@
+{
+  "files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/README.md": {
+      "bytes": 24106,
+      "sha256": "dfff01177f0003e29b7cfe7fb2846d738a25e8023937b69f06b6aff20eb59014"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_OBLIGATION_MATRIX_v0_43.md": {
+      "bytes": 6208,
+      "sha256": "bb5bfbbbafc303dbb71200def9af1eb003f3f830ea2e47038edb99b4d09a64e9"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/PRIOR_ART_GATE_v0_43.md": {
+      "bytes": 3708,
+      "sha256": "79ba84236210ff82a133dc1a2e67567bc698f383bd45749cdce5a7f8d5b9f559"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/PROTOCOL_v0_43.md": {
+      "bytes": 3386,
+      "sha256": "017f18598e00052e544491c2ab2d4230b50c48040c2a2f0004ff0effbd193af2"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/RESULT_v0_43.md": {
+      "bytes": 5001,
+      "sha256": "7f08cc9a7f92758f0249b55811a0a5e75349dbeb3cb17d5502c8cfffc4e77aa6"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/RUN_RECEIPT_v0_43.json": {
+      "bytes": 1063,
+      "sha256": "0e8644cf8a574abca22e0e581c97e07c9102cc3f35f5a8b2e7f708f23e5f3a0e"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/THEOREM_DRAFT_v0_43.md": {
+      "bytes": 5816,
+      "sha256": "e42bfedb1b065ec0a7aadd8c1112e4db4269114885c1e5b518b97635b53d96ee"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/VERIFY_RESULT_v0_43.json": {
+      "bytes": 3766,
+      "sha256": "dfb23d5f6424cfbbf2efff5af5c923ab2a4c3018ca43a16d4f2f079e3b498748"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/artifacts_v0_43/RESULT_v0_43.json": {
+      "bytes": 47922,
+      "sha256": "d96bc39cba4435734373d4689343537ecebdf184ac70d51876563c707baea88d"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/build_release_v0_43.py": {
+      "bytes": 3992,
+      "sha256": "f4a19e59333a954f5a08ad7b7d7ed270a9738b0f6e0bb2da031ded181d60dfe3"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/environment_lock_v0_43.json": {
+      "bytes": 182,
+      "sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/rate_theorem.py": {
+      "bytes": 10171,
+      "sha256": "c85c54779412ac99365fa40ee1e3d5621586b84bd4ed44d0603b902bfd437700"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/registration_v0_43.json": {
+      "bytes": 3610,
+      "sha256": "34d519d48d06fd64d2450c83bce8b1aaf9583b0434885533c720917d5537a81b"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/run_confirmation_v0_43.py": {
+      "bytes": 10428,
+      "sha256": "8e64446e840a4b8fc1ac697e72d2aba775a05384ee76dad45bd338debee0787a"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/test_rate_theorem.py": {
+      "bytes": 4146,
+      "sha256": "75eb3482966f772d1e02e6b246efbe2b07d1189bcdbf10486c0b1c02d5095ff2"
+    },
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_horizon_rate_v0_43/verify_result_v0_43.py": {
+      "bytes": 2760,
+      "sha256": "f417de4eeb407d7731a3fb8dab9eb2007a81ee4df3b84173a2d925030b8d3550"
+    }
+  },
+  "protocol_id": "asmp9-finite-horizon-rate-v0.43",
+  "version": "0.43"
+}

@@ -1,0 +1,21 @@
+{
+  "implementation_commit": "ea335d0b0316b4e293b76d3bfa2ec252074a21ab",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/protocol_v0_27.json",
+  "registered_at_utc": "2026-07-29T04:23:21Z",
+  "registration_id": "ASMP-9-HETEROGENEOUS-MIDPOINT-v0.27-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/DEVELOPMENT_NOTE_v0_27.md": "54bc56a0550d0a71e452edb9ebdbc37e69f4959712ba398c647b81f7f6ef0c5d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/PRIOR_ART_GATE_v0_27.md": "f77d54268b8ef365b97a90d01f57f625defbd7d28fc5129b0c15deb622d9fae1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/README.md": "61a66040d99c1b21f485b8d8bf97f689dd9fc21df807c56ef96cf602d8e1dcea",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/THEOREM_DRAFT_v0_27.md": "24e7bc5ad3e717eeef457475429d09c0217aa7a17a758fc9a4884c25eddce904",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/__init__.py": "14b336480dae6df4f0dd4906272c9d7d065ae14acc0f10d10aeb4a8ac11dfd2e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/environment_lock_v0_27.json": "922f797639f4fc2a3e8587665f1f1d452865377132110daf407549b1e13f0b46",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/midpoint_access.py": "66d1f0d925031504db0ccd3bd7afe55061da9d39a2644b4cf5cf691cdd15d7a5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/protocol_v0_27.json": "14cf12e7079d2d6e92bed10fe2413dfab456fead81d0ab2084776c02281e0f13",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/register_v0_27.py": "c94f7ab9269f8331224b346f7c954d653bdf701026f69a6cd8a4c05f030f089d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/run_verification_v0_27.py": "6ee2a21c2319c0d61f008ca16ac8883bcba4b904f37c99d590d25ee8d6954677",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/test_midpoint_access.py": "4dc465bc1c990ece738e4dbfe9cb486eb8412cf3643e862cb43220bc19646780",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/test_protocol_v0_27.py": "7bedf6028376ee3c1a2639b8dd3c4202874af05e523d43044a92299f12a2b975",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/heterogeneous_midpoint_v0_27/verify_result_v0_27.py": "aa2e2b384128f0c0214919f1adab7b5173a9055ee40ce34bc10957c3dcd2fcf6"
+  }
+}

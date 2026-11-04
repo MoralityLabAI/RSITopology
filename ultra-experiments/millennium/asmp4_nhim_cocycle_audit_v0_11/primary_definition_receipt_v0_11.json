@@ -1,0 +1,53 @@
+{
+  "schema_version": "asmp4_nhim_primary_definition_receipt_v0_11",
+  "audit_scope": "Definition-level mapping of the repaired full-shift fiber cocycle to one primary random-NHIM formalism",
+  "source": {
+    "id": "li_lu_bates_random_nhim_2013",
+    "title": "Normally hyperbolic invariant manifolds for random dynamical systems: Part I - persistence",
+    "authors": [
+      "Ji Li",
+      "Kening Lu",
+      "Peter Bates"
+    ],
+    "primary_pdf_url": "https://users.math.msu.edu/users/liji/1.pdf",
+    "doi_url": "https://doi.org/10.1090/S0002-9947-2013-05825-4",
+    "local_pdf_sha256": "3440fea6af680ba1578ddffb92788f0c8f49401013ace0ee92de07e0f63b2e78",
+    "checked_pdf_pages": [4, 5],
+    "visual_review": true,
+    "checked_definitions": [
+      {
+        "number": "2.1",
+        "mapped_item": "invertible full-shift metric dynamical base"
+      },
+      {
+        "number": "2.2",
+        "mapped_item": "integer-time cocycle law"
+      },
+      {
+        "number": "2.3",
+        "mapped_item": "M(omega)={0} maps exactly to M(theta^t omega)"
+      },
+      {
+        "number": "2.4",
+        "mapped_item": "Eu/Ec/Es splitting, isomorphism, tangent identity, and rate bounds"
+      }
+    ]
+  },
+  "mapped_conditions": {
+    "cocycle_law": true,
+    "invariant_random_manifold": true,
+    "invariant_splitting": true,
+    "unstable_and_center_isomorphisms": true,
+    "center_equals_tangent": true,
+    "stable_bound": true,
+    "unstable_backward_bound": true,
+    "center_bound": true,
+    "strict_rate_gap": true
+  },
+  "bounded_inference": "The repaired closed-loop fiber is a normally hyperbolic random invariant point under this checked definition, and every condition holds uniformly for every full-shift mode sequence.",
+  "nonclaims": [
+    "ASMP-4 does not itself select this random-cocycle NHIM formalism.",
+    "The probability measure used to instantiate the metric dynamical base does not weaken universal adversarial safety, which is checked for every sequence.",
+    "This definition audit is not external expert review and does not prove a full ASMP-4 variational theorem."
+  ]
+}

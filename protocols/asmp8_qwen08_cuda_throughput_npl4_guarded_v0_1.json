@@ -1,0 +1,68 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-cuda-throughput-npl4-guarded-v0-1-20260723",
+  "purpose": "Guarded non-claim CUDA throughput benchmark for four parallel prompts after the two-prompt escalation gate passed.",
+  "measurement_contract": {
+    "model": "Qwen3.5 0.8B Q4_K_M",
+    "prompt_tokens_per_sequence": 128,
+    "parallel_prompts": 4,
+    "context_tokens": 768,
+    "generation_tokens": 0,
+    "gradients": false,
+    "weights_modified": false
+  },
+  "resource_caps": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 300,
+    "gpu_allowance_mb": 1500,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "thermal_guard": {
+    "maximum_start_temperature_c": 65,
+    "hard_abort_temperature_c": 78,
+    "minimum_free_gpu_mb": 2500,
+    "minimum_free_physical_mb": 8192
+  },
+  "completion_gate": {
+    "required_guard_status": "completed",
+    "maximum_observed_temperature_c": 74,
+    "maximum_final_gpu_memory_delta_mb": 128,
+    "cleanup_must_pass": true,
+    "new_system_or_display_error_events_allowed": 0,
+    "consequence_on_failure": "stop_gpu_batch_scaling"
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_cuda_throughput_npl4_guarded_v0_1"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_cuda_throughput_npl4_guarded_v0_1\\wrapper",
+  "checkpoint_strategy": "one native four-prompt benchmark guarded at 78 C",
+  "exact_inner_command": [
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064-cuda12.4\\payload\\llama-batched-bench.exe",
+    "--model",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--ctx-size",
+    "768",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "256",
+    "--n-gpu-layers",
+    "99",
+    "--threads",
+    "6",
+    "-npp",
+    "128",
+    "-ntg",
+    "0",
+    "-npl",
+    "4",
+    "--output-format",
+    "jsonl"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  }
+}

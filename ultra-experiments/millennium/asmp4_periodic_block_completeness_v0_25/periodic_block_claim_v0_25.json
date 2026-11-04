@@ -1,0 +1,45 @@
+{
+  "schema_version": "asmp4_periodic_block_completeness_claim_v0_25",
+  "status": "exact finite-scheduler periodic-completeness theorem and nonconvex SCC boundary",
+  "sealed_resources": {
+    "count": 3,
+    "canonical_source_sha256": "08115cc4cb9c5333725a820ad3ca67909e15e8625aac3f128bde46b88ed161f5",
+    "v0_5_adaptive_claim_sha256": "f37212d37353f9a1af577fe976c412117d0d67bb833100205fc17c8892a84996",
+    "v0_24_support_claim_sha256": "9e06830ae0783f9ff044ae18b97fe9f0778c95e82c994fdba9bf89dd2055d59b"
+  },
+  "main_theorem": {
+    "component_formula": "R_C=upward_closure(conv{mean(cycle): cycle is a simple directed cycle in C})",
+    "full_formula": "R=union_C R_C over reachable cyclic strongly connected components",
+    "weighted_component_entropy": "h_C(lambda)=minimum cycle mean of lambda read+(1-lambda) write cost",
+    "strong_connectivity": "periodic closed walks are dense in the cycle polytope, so the v0.24 support formula is complete"
+  },
+  "positive_fixture": {
+    "states": 2,
+    "strongly_connected": true,
+    "pareto_cycle_means": [[1, 3], [3, 1]],
+    "connector_cycle_mean": [5, 5],
+    "limit_midpoint": [2, 2],
+    "approximation_rows": 64
+  },
+  "nonconvex_fork": {
+    "reachable_cyclic_components": 2,
+    "component_corners": [[1, 3], [3, 1]],
+    "false_global_support_point": [2, 2],
+    "point_in_true_union": false,
+    "point_in_global_convexification": true
+  },
+  "graph_census": {
+    "two_state_edge_subsets": 15,
+    "support_weights_per_graph": 5
+  },
+  "mutation_audit": {
+    "cases": 5,
+    "rejected": 5
+  },
+  "predecessor_inventory": {
+    "packages": 25,
+    "tests": 284
+  },
+  "decision": "periodic_block_completeness_holds_componentwise_for_finite_additive_schedulers_not_across_irreversible_scc_forks",
+  "nonclaim": "The theorem covers finite public additive scheduler state. It does not prove that a general nonlinear controller has finite sufficient public state, additive block costs, safe reset connectors, or one reachable recurrent component."
+}

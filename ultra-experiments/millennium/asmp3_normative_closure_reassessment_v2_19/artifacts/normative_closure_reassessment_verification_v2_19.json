@@ -1,0 +1,19 @@
+{
+  "check_count": 10,
+  "checker": "clean_room_source_order_interface_delta_prior_claim_FIX_counterfamily_resolution_policy_and_open_gate_audit",
+  "checks": {
+    "V0_schema_parent_status_and_all_hashes": true,
+    "V1_canonical_order_makes_FIX_conservative_without_formal_entailment": true,
+    "V2_ADM_layer_is_added_only_by_nonnormative_successor": true,
+    "V3_v2_18_checks_only_the_conditional_selector_lemma": true,
+    "V4_strict_FIX_sufficiency_counterfamily_reconstructed": true,
+    "V5_literal_necessity_counterfamily_reconstructed": true,
+    "V6_canonical_resolution_policy_prevents_full_resolution_promotion": true,
+    "V7_full_classification_and_impossibility_are_restored_to_open": true,
+    "V8_prior_normative_and_external_gates_remain_open": true,
+    "V9_stop_is_limited_to_failed_lane_with_resume_triggers": true
+  },
+  "claim_boundary": "This checker verifies the correction and evidence statuses; it does not supply formal natural-language semantics, an unrestricted characterization, impossibility, or external acceptance.",
+  "passed": true,
+  "schema_version": "asmp3_normative_closure_reassessment_verification_v2_19"
+}

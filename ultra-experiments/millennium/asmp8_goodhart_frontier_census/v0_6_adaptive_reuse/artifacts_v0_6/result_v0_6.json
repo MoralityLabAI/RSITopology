@@ -1,0 +1,114 @@
+{
+  "claim_boundary": [
+    "deterministic bounded errors on enumerable atoms only",
+    "no stochastic optional-stopping or learned-policy claim",
+    "no ASMP-8 resolution claim"
+  ],
+  "claim_support": "deterministic_finite_adaptive_audit_reuse",
+  "gates": {
+    "G0_policy_feasibility": true,
+    "G1_pointwise_soundness": true,
+    "G2_reveal_monotonicity": true,
+    "G3_full_census_exactness": true,
+    "G4_adaptive_soundness": true,
+    "G5_plugin_negative_control": true,
+    "G6_metric_robustness": true
+  },
+  "measurement_reliability": "pending_independent_complete_replay",
+  "metric_robustness": {
+    "anti_gaming": {
+      "pass": true,
+      "probe": "adaptive_plugin_selection"
+    },
+    "clean_control": {
+      "pass": true,
+      "probe": "full_census_equals_true_gain"
+    },
+    "invariance": {
+      "pass": true,
+      "probe": "joint_atom_relabeling"
+    },
+    "monotonicity": {
+      "pass": true,
+      "probe": "one_more_revealed_atom_fixed_policy"
+    },
+    "sensitivity": {
+      "pass": true,
+      "probe": "double_error_cap"
+    }
+  },
+  "operational_decision": "retain_bound_require_new_noisy_label_protocol",
+  "protocol_binding": {
+    "exact_field_set": true,
+    "field_alphabet_size": true,
+    "field_claim_boundary": true,
+    "field_error_alphabet": true,
+    "field_error_cap": true,
+    "field_policy_mass_move": true,
+    "field_protocol_id": true,
+    "field_schema_version": true
+  },
+  "protocol_constants": {
+    "alphabet_size": 6,
+    "error_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "error_cap": 1,
+    "policy_mass_move": "1/6"
+  },
+  "protocol_id": "ASMP8-ADAPTIVE-REUSE-v0.6",
+  "schema_version": "asmp8_adaptive_reuse_result_v0_6",
+  "summary": {
+    "adaptive": {
+      "adaptive_naive_false_declarations": 512,
+      "adaptive_robust_false_declarations": 0,
+      "adaptive_traces": 729,
+      "first_adaptive_naive_false_witness": {
+        "audits": 0,
+        "errors": [
+          "0/1",
+          "-1/1",
+          "-1/1",
+          "-1/1",
+          "-1/1",
+          "-1/1"
+        ],
+        "mask": 0,
+        "naive_score": "1/6",
+        "policy_id": "move_0_to_5",
+        "robust_lower_bound": "-1/6",
+        "true_gain": "0/1"
+      },
+      "traces_with_naive_false_declaration": 252
+    },
+    "local_monotonicity_failures": 0,
+    "pointwise": {
+      "first_naive_false_witness": {
+        "errors": [
+          "-1/1",
+          "-1/1",
+          "-1/1",
+          "-1/1",
+          "-1/1",
+          "-1/1"
+        ],
+        "mask": 2,
+        "naive_score": "2/15",
+        "policy_id": "move_1_to_0",
+        "robust_lower_bound": "-1/30",
+        "true_gain": "-1/30"
+      },
+      "full_census_failures": 0,
+      "naive_false_declarations": 133488,
+      "pointwise_cells": 1399680,
+      "pointwise_digest_sha256": "4ca73762dabd569354b1c6d4651e7e885cb6ef929d990dec43471c4870fec7ae",
+      "robust_positive_cells": 289008,
+      "robust_soundness_failures": 0
+    },
+    "policy_count": 30,
+    "policy_probability_failures": 0
+  },
+  "task_result": "adaptive_pointwise_certificate_sound"
+}

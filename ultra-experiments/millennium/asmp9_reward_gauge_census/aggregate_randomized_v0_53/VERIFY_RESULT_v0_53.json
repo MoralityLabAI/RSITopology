@@ -1,0 +1,370 @@
+{
+  "claim_boundary": "Exact finite subset-table insufficiency inside classical randomized confidence theory; no novelty, operational desirability, continuous or strategic robustness, physical preference-channel validation, or ASMP-9 resolution.",
+  "controls": {
+    "crossing_support": {
+      "first_coverage": "3/4",
+      "n_plus_k": 4,
+      "positive_report_atoms": 4,
+      "second_coverage": "3/4",
+      "success_probabilities": [
+        "3/4",
+        "3/4"
+      ]
+    },
+    "invalid_component_mixture": {
+      "aggregate_coverage": "1/2",
+      "invalid_component_coverage": "0",
+      "invalid_component_weight": "1/6",
+      "marginal_success": [
+        "5/6",
+        "0"
+      ],
+      "valid_component_weight": "5/6"
+    },
+    "one_outcome": {
+      "deterministic_value": "1",
+      "randomized_value": "1/2",
+      "success_probability": "1/2"
+    }
+  },
+  "family": {
+    "deterministic_mismatch_count": 0,
+    "distinct_randomized_value_count": 10,
+    "dual_mismatch_count": 0,
+    "family_size": 10,
+    "primal_mismatch_count": 0,
+    "rows": [
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "10/11",
+        "dual_value": "5/11",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/11",
+        "p": "11/20",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "10/11",
+          "0"
+        ],
+        "randomized_value": "5/11",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "5/6",
+        "dual_value": "5/12",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/12",
+        "p": "3/5",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "5/6",
+          "0"
+        ],
+        "randomized_value": "5/12",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "10/13",
+        "dual_value": "5/13",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/13",
+        "p": "13/20",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "10/13",
+          "0"
+        ],
+        "randomized_value": "5/13",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "5/7",
+        "dual_value": "5/14",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/14",
+        "p": "7/10",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "5/7",
+          "0"
+        ],
+        "randomized_value": "5/14",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "2/3",
+        "dual_value": "1/3",
+        "feasible_vertex_count": 4,
+        "formula_value": "1/3",
+        "p": "3/4",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "2/3",
+          "0"
+        ],
+        "randomized_value": "1/3",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "5/8",
+        "dual_value": "5/16",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/16",
+        "p": "4/5",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "5/8",
+          "0"
+        ],
+        "randomized_value": "5/16",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "10/17",
+        "dual_value": "5/17",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/17",
+        "p": "17/20",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "10/17",
+          "0"
+        ],
+        "randomized_value": "5/17",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "5/9",
+        "dual_value": "5/18",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/18",
+        "p": "9/10",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "5/9",
+          "0"
+        ],
+        "randomized_value": "5/18",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "10/19",
+        "dual_value": "5/19",
+        "feasible_vertex_count": 4,
+        "formula_value": "5/19",
+        "p": "19/20",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "10/19",
+          "0"
+        ],
+        "randomized_value": "5/19",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "deterministic_optimizer": [
+          "1",
+          "0"
+        ],
+        "deterministic_value": "1/2",
+        "dual_feasible": true,
+        "dual_lambda": "1/2",
+        "dual_value": "1/4",
+        "feasible_vertex_count": 4,
+        "formula_value": "1/4",
+        "p": "1",
+        "positive_report_atoms": 3,
+        "randomized_optimizer_success": [
+          "1/2",
+          "0"
+        ],
+        "randomized_value": "1/4",
+        "subset_table": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "support_bound_failure_count": 0,
+    "table_mismatch_count": 0
+  },
+  "gates": {
+    "C0": true,
+    "D0": true,
+    "F0": true,
+    "H0": true,
+    "I0": true,
+    "M0": true,
+    "P0": true,
+    "RESOURCE": true,
+    "S0": true,
+    "T0": true
+  },
+  "ok": true,
+  "protocol_id": "asmp9-aggregate-randomized-subset-insufficiency-v0.53",
+  "registration_sha256": "5cce4cfeb73b0debe3c7a7d7691c26cde602eacf21708e492dd38ee17a890ca1",
+  "resource": {
+    "elapsed_seconds": 5.511451099999249,
+    "peak_working_set_bytes": 21520384,
+    "worker_processes": 1
+  },
+  "schema": "asmp9-v0.53-verification-result-v1",
+  "source_checks": [
+    {
+      "actual": "c26f082c9b86c0cf87300dfa44899b3badef6fc9d76bb955dc0eead352cbd67c",
+      "expected": "c26f082c9b86c0cf87300dfa44899b3badef6fc9d76bb955dc0eead352cbd67c",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/PRIOR_ART_GATE_v0_53.md"
+    },
+    {
+      "actual": "9563dd3d510ba074fa9fbb78d3dcfc5cc7314bca4fb3dc7e5b3fb75688b8bdee",
+      "expected": "9563dd3d510ba074fa9fbb78d3dcfc5cc7314bca4fb3dc7e5b3fb75688b8bdee",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/THEOREM_DRAFT_v0_53.md"
+    },
+    {
+      "actual": "28d6a62efa6e63990b01e5c0c5a68accf9d378afaf93b8c2d45b5885a8faa209",
+      "expected": "28d6a62efa6e63990b01e5c0c5a68accf9d378afaf93b8c2d45b5885a8faa209",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/VERIFICATION_PROTOCOL_v0_53.md"
+    },
+    {
+      "actual": "d8a08820baafc28992df02b737b65b1d9b1e546bd2c1b37f5a0c880632ebd85c",
+      "expected": "d8a08820baafc28992df02b737b65b1d9b1e546bd2c1b37f5a0c880632ebd85c",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/aggregate_randomized.py"
+    },
+    {
+      "actual": "fdff014572ae032ea0319c7829a4c98401732a79b6703cce856f59ada4dd6c6f",
+      "expected": "fdff014572ae032ea0319c7829a4c98401732a79b6703cce856f59ada4dd6c6f",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/register_verification_v0_53.py"
+    },
+    {
+      "actual": "a4d77766382efaf543b06837ef6c56f3ece2a9f5c4dc0206da92eececc40a89f",
+      "expected": "a4d77766382efaf543b06837ef6c56f3ece2a9f5c4dc0206da92eececc40a89f",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_aggregate_randomized.py"
+    },
+    {
+      "actual": "1eaa841d34a69ac5535a374531ab83b2592a9a2b0a0670d88b71f5b31623a715",
+      "expected": "1eaa841d34a69ac5535a374531ab83b2592a9a2b0a0670d88b71f5b31623a715",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_verifier_v0_53.py"
+    },
+    {
+      "actual": "e0bcb0a5696e7b7e9a9f1a6f9a96aab6e263ee97767381c67a7498b7ae861f94",
+      "expected": "e0bcb0a5696e7b7e9a9f1a6f9a96aab6e263ee97767381c67a7498b7ae861f94",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/verify_theorems_v0_53.py"
+    }
+  ],
+  "source_commit": "029622fbe6e4dc00bd06b7c542a464d2ff81d836",
+  "status": "subset_table_insufficient_for_aggregate_randomization",
+  "tests": {
+    "expected": 9,
+    "ok": true,
+    "output": ".........                                                                [100%]\n9 passed in 0.74s",
+    "returncode": 0
+  }
+}

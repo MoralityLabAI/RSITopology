@@ -1,0 +1,25 @@
+{
+  "schema_version": "asmp6_semantic_collusion_frontier_registration_v0_1",
+  "protocol_id": "asmp6.semantic_collusion.finite_active_audit.v0.1",
+  "registered_at_utc": "2026-07-21T00:00:00Z",
+  "status": "prospective_registration_before_claim_eligible_run",
+  "asmp_id": "ASMP-6",
+  "source_hashes": {
+    "PRIOR_ART_v0_1.md": "0255a0f4f066045c9c457f7bc09c5dbedcb3c15c17f9df08d7a6bf4a62de9df3",
+    "PROTOCOL_v0_1.md": "104a87cbfccb56596cf50a0cde1a37225e5abe663db577fb4748fbcf139712bc",
+    "README.md": "6ae4d0369d8b1b59bb7dd9b907237e575d0df116621a6d62609ba96c38bfc6d2",
+    "collusion_frontier.py": "d01bdc161ca6132e8cdda912a5f09b89d266d5cb3253cbeedcda797c31dcfb70",
+    "run.py": "5dbc660800efcfb442d8dce597aeeac379b6d5c8ca1ef2817a886c00b2509079",
+    "test_collusion_frontier.py": "2e77410c39ad3a2c6caf70e1c040ebec221b7025d133984d2815410b656a6c3a",
+    "verify_result.py": "5989b7df25ee635621c6a3073cc093d4d3dd34f5eb5951a1ef524231a78546ed"
+  },
+  "registered_grid": {
+    "alphabet_size": 4,
+    "encoder_denominator": 4,
+    "covertness_regimes": ["mixture", "per_message"],
+    "delta": ["0", "1/8", "1/4", "1/2"],
+    "audit_charge": [0, 1, 2, 3, 4]
+  },
+  "claim_boundary": "Exact finite access-class census only; no asymptotic capacity, learned collusion, or linguistic codebook claim.",
+  "output_policy": "write_once_non_aliasing"
+}

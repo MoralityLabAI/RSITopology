@@ -1,0 +1,50 @@
+{
+  "protocol_id": "qwen08_percolation_reanalysis_v0_1",
+  "schema_version": "1.0.0",
+  "status": "frozen_retrospective_reanalysis_after_edge_receipt_reveal_before_curve_computation",
+  "frozen_on": "2026-07-16",
+  "epistemic_status": "retrospective_engineering_evidence",
+  "purpose": "Apply the exact lineage-percolation curve to the four frozen Qwen0.8B dense-local graph receipts.",
+  "source": {
+    "path": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\analysis_result.json",
+    "sha256": "6a153e34dfc1092d7ca21719d56376678cf7d11906a688077d8bba1f97d1a6c7"
+  },
+  "site_universe": [
+    "model.layers.11",
+    "model.layers.15",
+    "model.layers.19",
+    "model.layers.23"
+  ],
+  "family": "graph_reachability",
+  "rank": 1,
+  "edge_classes": {
+    "checkpoint": "edge_id contains :precision:",
+    "context": "all within-state adjacent-shard edges"
+  },
+  "frozen_lineage_floor": 0.9,
+  "predictions": {
+    "P1": "Every site's tau_conn newly admits only context edges; no checkpoint edge is globally connectivity-critical.",
+    "P2": "At layer 15, beta_1 is positive at floor 0 but tau_cycle is below 0.9, so the prior holonomy_unavailable result is a threshold effect rather than absence of a full-graph cycle space."
+  },
+  "decision_rules": {
+    "critical_edges": "all edges whose retention equals tau_conn within absolute tolerance 1e-12",
+    "P1_pass": "tau_conn is defined at all sites and every critical edge is class context",
+    "P2_pass": "layer 15 floor-zero beta_1 > 0 and tau_cycle < 0.9"
+  },
+  "threshold_ordering": {
+    "guaranteed": "tau_loop <= tau_cycle",
+    "not_assumed": "no ordering between tau_cycle and tau_conn"
+  },
+  "resource_caps": {
+    "execution": "Windows Job Object",
+    "memory_mb": 1024,
+    "cpu_percent": 25,
+    "io_mb_s": 20,
+    "swap_bytes": 0,
+    "gpu_used": false
+  },
+  "claim_boundary": "Retrospective exact curve over already-revealed engineering receipts. It authorizes no causal stage, fresh w1 claim, edit, VPD reopening, model generation, weight mutation, or new attestation level.",
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}

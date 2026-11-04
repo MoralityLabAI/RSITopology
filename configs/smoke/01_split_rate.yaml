@@ -1,0 +1,16 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2",
+  "experiment": "01_split_rate",
+  "run_id": "smoke_v1",
+  "seed": 2026071601,
+  "parameters": {
+    "unstable_dimensions": [1, 2],
+    "unstable_values": [1.2, 1.5],
+    "stable_dimensions": [1],
+    "horizons": [10, 25],
+    "rotations": 2,
+    "rate_offsets": [-0.75, -0.25, 0.0, 0.25, 0.75],
+    "collar_ratio": 0.25
+  }
+}

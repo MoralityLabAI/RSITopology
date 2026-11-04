@@ -1,0 +1,83 @@
+{
+  "checks": {
+    "protocol_id": true,
+    "registration_sha256": true,
+    "scientific_gates": true,
+    "scientific_payload": true,
+    "source_hashes": true,
+    "version": true
+  },
+  "gate_matches": {
+    "B0": true,
+    "C0": true,
+    "D0": true,
+    "I0": true,
+    "Q0": true,
+    "R0": true,
+    "X0": true
+  },
+  "source_checks": [
+    {
+      "actual_sha256": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "expected_sha256": "ea980e6e2608cd863dbe89c608f66c1199d3e1ca3662fc89089838adf5af2a56",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relative_access_v0_38/relative_deficiency.py"
+    },
+    {
+      "actual_sha256": "2e200e9eb98e32916453b1deb35366f30740435df09a713cc9f197343d0f5e19",
+      "expected_sha256": "2e200e9eb98e32916453b1deb35366f30740435df09a713cc9f197343d0f5e19",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PRIOR_ART_GATE_v0_44.md"
+    },
+    {
+      "actual_sha256": "1cee808700925cc90c47846ceef09a5467bb8f62024e26b9c5a84f312b5cecab",
+      "expected_sha256": "1cee808700925cc90c47846ceef09a5467bb8f62024e26b9c5a84f312b5cecab",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/PROTOCOL_v0_44.md"
+    },
+    {
+      "actual_sha256": "1b20710fe54c48b784fb30e78e7311147d4317e610303dde8d0b22ca080b5649",
+      "expected_sha256": "1b20710fe54c48b784fb30e78e7311147d4317e610303dde8d0b22ca080b5649",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/THEOREM_DRAFT_v0_44.md"
+    },
+    {
+      "actual_sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+      "expected_sha256": "6a61ec246893af976a9e24679e5c242a1cc2ca030b7a200c8b30d04909eedc42",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/environment_lock_v0_44.json"
+    },
+    {
+      "actual_sha256": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "expected_sha256": "3348adf99379df593af2f6c9651c33413f66778d9e96908a9b438abca0531103",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/occupancy_information.py"
+    },
+    {
+      "actual_sha256": "719c407da887b101dab1a531859121a9ab287139d01c79e3cd2d3e8294cc9595",
+      "expected_sha256": "719c407da887b101dab1a531859121a9ab287139d01c79e3cd2d3e8294cc9595",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/run_confirmation_v0_44.py"
+    },
+    {
+      "actual_sha256": "6956b3b2475e90b863be35221cd1a6806e7e443d829371c421bd7df9b002394e",
+      "expected_sha256": "6956b3b2475e90b863be35221cd1a6806e7e443d829371c421bd7df9b002394e",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/test_occupancy_information.py"
+    },
+    {
+      "actual_sha256": "d31543398dcd5e0fce77bf6d7c52fbf95a4e86ca5608eeb40ffbbed7e8babb03",
+      "expected_sha256": "d31543398dcd5e0fce77bf6d7c52fbf95a4e86ca5608eeb40ffbbed7e8babb03",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/occupancy_information_v0_44/verify_result_v0_44.py"
+    },
+    {
+      "actual_sha256": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "expected_sha256": "01769ecf26cc386822b19411e38a53de88cbe1389f71ab4937fadf480561235d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/sequential_risk_access_v0_41/sequential_access.py"
+    }
+  ],
+  "status": "independent_replay_passed",
+  "status_mapping": true
+}

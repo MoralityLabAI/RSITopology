@@ -1,0 +1,47 @@
+{
+  "files": {
+    "../README.md": {
+      "bytes": 19742,
+      "sha256": "0739a053a5c23be84dd220b868e72b6c4155b201c7a865f129e7b6374dd7c7f0"
+    },
+    "../RESOLUTION_OBLIGATION_MATRIX_v0_38.md": {
+      "bytes": 5683,
+      "sha256": "19cf3d68336006ed0ca52e5546a91a61e81ea83c0b7556a58c06801be78e4914"
+    },
+    "POSTRUN_EMPTY_ACCESS_THEOREM_v0_38.md": {
+      "bytes": 2538,
+      "sha256": "da259b4b2c1dd34cfd566271813d994f7b3bd3563e5dd688b6780694daf92820"
+    },
+    "README.md": {
+      "bytes": 1839,
+      "sha256": "5327340bf748b16abe71a6c7179ddc9f2c3f433a13d0e4dbe52b88c133998ca6"
+    },
+    "RESULT_v0_38.md": {
+      "bytes": 5265,
+      "sha256": "59cd6c00f38bed6e36e72a79b4e02de82db8273f03c0bb7139ce5b2dbc5a308d"
+    },
+    "RUN_RECEIPT_v0_38.json": {
+      "bytes": 1664,
+      "sha256": "688c8db2068f51bb5ca997d7846d4c3da67f27c6ca09f306fa2cc7e881d3daa2"
+    },
+    "artifacts_v0_38/RESULT_v0_38.json": {
+      "bytes": 5227,
+      "sha256": "a21a102bfede8dba771292520f8c2161ba2479b209d2ae937f606721f5e7689b"
+    },
+    "artifacts_v0_38/VERIFY_v0_38.json": {
+      "bytes": 3874,
+      "sha256": "89d8b8569776ae12e7cfa5a566f18995dc01e331b102b0e390660775034e0aee"
+    },
+    "registration_v0_38.json": {
+      "bytes": 2283,
+      "sha256": "c8d106eb2181ee561c5509f3af8ccf1309cf7aaf9ccb7c9fb8047b88c8f14a99"
+    },
+    "verify_result_v0_38.py": {
+      "bytes": 5894,
+      "sha256": "8ab599c946f1ceabab9a33e84146d781fc6dcfcd22d9230c39d9c06d8f8e7aff"
+    }
+  },
+  "protocol_id": "asmp9-decision-relative-access-v0.38",
+  "result_status": "finite_decision_relative_access_threshold_established",
+  "version": "0.38"
+}

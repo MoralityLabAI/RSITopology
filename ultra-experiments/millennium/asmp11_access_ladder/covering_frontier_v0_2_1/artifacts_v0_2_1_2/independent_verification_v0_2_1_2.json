@@ -1,0 +1,89 @@
+{
+  "claim_boundary": "Finite bounds-aware crossover surface for the transparent parity oracle only.",
+  "counts": {
+    "brackets": 18,
+    "cost_cells": 144,
+    "covering_cells": 48
+  },
+  "gates": {
+    "V0_source_registration_binding": true,
+    "V10_prior_anchor_independent_replay": true,
+    "V11_checkpoint_raw_row_consistency": true,
+    "V12_claim_operation_consistency": true,
+    "V1_receipt_output_link_closure": true,
+    "V2_cover_witnesses_and_lower_bounds": true,
+    "V3_exact_cost_classification": true,
+    "V4_full_metric_probe_replay": true,
+    "V5_minimum_width_brackets": true,
+    "V6_layer_and_metric_firewall": true,
+    "V7_exact_registered_cartesian_grid": true,
+    "V8_primary_gates_exactly_recomputed": true,
+    "V9_operation_and_resource_consistency": true
+  },
+  "metric_robustness": {
+    "records": {
+      "D1_primary_bound_interval_replay": {
+        "agrees_with_primary": 144,
+        "binding_false": 144,
+        "cells": 144,
+        "counts_toward_robustness": false,
+        "disagrees_with_primary": 0
+      },
+      "P2_query_count_only": {
+        "agrees_with_primary": 144,
+        "binding_false": 144,
+        "cells": 144,
+        "counts_toward_robustness": true,
+        "disagrees_with_primary": 0
+      },
+      "P3_stricter_familywise_error": {
+        "agrees_with_primary": 144,
+        "binding_false": 144,
+        "cells": 144,
+        "counts_toward_robustness": true,
+        "disagrees_with_primary": 0
+      },
+      "P4_stricter_power": {
+        "agrees_with_primary": 144,
+        "binding_false": 144,
+        "cells": 144,
+        "counts_toward_robustness": true,
+        "disagrees_with_primary": 0
+      },
+      "P5_exact_independent_fwer": {
+        "agrees_with_primary": 144,
+        "binding_false": 144,
+        "cells": 144,
+        "counts_toward_robustness": true,
+        "disagrees_with_primary": 0
+      }
+    },
+    "totals": {
+      "identity_diagnostic_agreements": 144,
+      "identity_diagnostic_records": 144,
+      "robustness_agreements": 576,
+      "robustness_disagreements": 0,
+      "robustness_records": 576
+    }
+  },
+  "primary_outputs": {
+    "claim_layer.json": "590af55ecc9be08f633c36d941878f364a115089d44f63b3e0f027fc329f5743",
+    "cost_cells.jsonl": "d95705377f0abe349604b449c605c2007a76f18fc1044c3d58b6aaeac1ef5a05",
+    "cost_checkpoint.json": "33b4302c6bc144c3330edd53b46b1f4be143921a791b66ce031dbebf453a33ef",
+    "covering_cells.jsonl": "addf6dd1cd4547a04bc87a70e3d3e7d7b167f3e5ba0f1e668fe7a3298f0f46b3",
+    "covering_checkpoint.json": "408a1ca0bf0740c70342d84e4815cf27014b7c3ef9f0f40b80d649330a461ed0",
+    "operation_layer.json": "4fb293f4a3e6b1ea1eb77d0dd7963e34dc2f4257390c64836e6adadb794ae3d1",
+    "reliability_layer.json": "0c7fced460c1e586feb2612a05bc656007e05885b1b4b09be6dcbcc6b1283c29",
+    "result_layer.json": "1b3320b7383a8d18e0cbfe351f1501494525b15edc270acc84076e77b96a7379"
+  },
+  "receipt_sha256": "03910a6796b21ac32bce539f18d1ea241f530709219143592e3d2c5c27948ea2",
+  "registration_sha256": "3bfacf0b1d58e8f8f0557d5abf8c0e093e4e50ed6a0a47c65d6abe049330686b",
+  "release_id": "asmp11.intermediate_width_crossover.v0.2.1.2",
+  "resource_assessment": {
+    "measured_resource_checks": "passed",
+    "ram_compliance": "not_established_unmeasured",
+    "wall_observations": "self_reported_internally_consistent"
+  },
+  "schema_version": "asmp11_intermediate_crossover_independent_verification_v0_2_1_2",
+  "verified": true
+}

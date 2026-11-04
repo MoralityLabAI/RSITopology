@@ -1,0 +1,35 @@
+{
+  "buehler_validity_failure_count": 0,
+  "claim_eligible": false,
+  "controls": {
+    "equality_input": [
+      "1",
+      "2"
+    ],
+    "equality_output": [
+      "1",
+      "2"
+    ],
+    "strict_input": [
+      "2",
+      "2"
+    ],
+    "strict_output": [
+      "1",
+      "2"
+    ]
+  },
+  "direct_candidate_count": 3996,
+  "dominance_failure_count": 0,
+  "elapsed_seconds_descriptive": 2.0799627999949735,
+  "global_optimum_check_count": 592,
+  "global_optimum_mismatch_count": 0,
+  "invalid_direct_map_count": 2502,
+  "maximum_valid_maps_per_table": 27,
+  "minimum_valid_maps_per_table": 1,
+  "schema": "asmp9-v0.52-development-census-v1",
+  "strict_dominance_certificate_count": 2454,
+  "table_count": 148,
+  "tie_refinement_check_count": 3342,
+  "valid_direct_map_count": 1494
+}

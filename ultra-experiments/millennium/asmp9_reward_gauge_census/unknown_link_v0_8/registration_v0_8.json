@@ -1,0 +1,17 @@
+{
+  "registration_id": "ASMP-9-UNKNOWN-LINK-v0.8-registration",
+  "registered_at_utc": "2026-07-28T19:01:20Z",
+  "implementation_commit": "bdece7b9e03778f00a18739009b5ce764706238a",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/protocol_v0_8.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/THEOREM_DRAFT_v0_8.md": "4a86c6eb5b8c7e7b3198e0729cdd2394903b9d13d72aed48f1bc275411d63a63",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/PRIOR_ART_v0_8.md": "19a547f9a1bed642c0e3f4188572454e0e5293bbdd4fdc3b437150128599fb53",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/unknown_link.py": "6bf9f432dcafa67853c4cead0483d784b6db3916922d9d28b0325a753af5462f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/test_unknown_link.py": "0cda12527f7713466cc5c176d2df078ae56be42f16ef0f73cc0afc28faecbfd0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/PROTOCOL_v0_8.md": "ebf06134f5ea92a71efe997767dee814c70bdb45669744f99855bede39fa7e77",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/protocol_v0_8.json": "9094b91499b8a4cbfcacc1cdd714f4862c8960a3490b4401d8c1524514dd30ee",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/run_verification.py": "2718b21ccf0e520ee3695204ed299beffa1789d9235abd945b870fef0fe57c6c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/verify_result.py": "2226894605ffde4d52edfa6252f501fb7dd26464c27d37d4d804de3da8ce997d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/unknown_link_v0_8/README.md": "c38345c8be70e59ebc5ce5d08e356fe2ceb2e8a2da9e0c1a026cf9d15c8e2865"
+  }
+}

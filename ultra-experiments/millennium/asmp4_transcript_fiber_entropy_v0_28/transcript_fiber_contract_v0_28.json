@@ -1,0 +1,30 @@
+{
+  "schema_version": "asmp4_transcript_fiber_contract_v0_28",
+  "objective": "nonadditive two-port transcript-language entropy under quotient transfer",
+  "port_cost": {
+    "horizon_T": "log2 cardinality of the realized safe port transcript language",
+    "rate": "limsup of horizon cost divided by T",
+    "nonadditive": true
+  },
+  "causal_factor": {
+    "strategy_transfer": "safe causal representative-history transfer",
+    "port_compatibility": "each target port transcript has a registered source port transcript image",
+    "fiber": "M_i(T) is the maximum target-language preimage count for port i",
+    "directions": "separate maps and fiber profiles are required in each direction"
+  },
+  "transfer": {
+    "finite_horizon": "J_i_target(T) <= J_i_source(T)+log2 M_i(T)",
+    "asymptotic": "rate slack mu_i=limsup_T log2 M_i(T)/T",
+    "exactness": "subexponential fibers in both directions preserve the full region"
+  },
+  "boundary": {
+    "clone": "m_i choices per step give M_i(T)=m_i^T and sharp shift log2 m_i",
+    "finite_state": "a finite one-class quotient need not have subexponential history fibers",
+    "sparse": "unbounded polynomial fibers can have zero fiber entropy"
+  },
+  "nonclaims": [
+    "arbitrary transcript-tree functionals without a registered distortion modulus",
+    "quotient existence for arbitrary nonlinear systems",
+    "multidimensional adversarial mean-payoff computation"
+  ]
+}

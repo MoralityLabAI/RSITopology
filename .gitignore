@@ -15,3 +15,10 @@ Thumbs.db
 
 # Generated experimental receipts remain local unless deliberately packaged.
 artifacts/
+
+# Release archives are packaged deliberately, not committed.
+dist/
+
+# Recovered Silico session material (includes chat transcripts) stays local
+# unless deliberately reviewed and packaged.
+silico_reports/

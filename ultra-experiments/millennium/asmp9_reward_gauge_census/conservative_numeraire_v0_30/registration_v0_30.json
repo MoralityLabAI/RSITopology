@@ -1,0 +1,21 @@
+{
+  "implementation_commit": "b510b38a28fc30c6bd7b48f2c254122220f3b1ed",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/protocol_v0_30.json",
+  "registered_at_utc": "2026-07-29T05:08:06Z",
+  "registration_id": "ASMP-9-CONSERVATIVE-NUMERAIRE-v0.30-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/DEVELOPMENT_NOTE_v0_30.md": "8f90e606cad11e4d294d6b1b03499a509fc90817cc375d8ee261d59ccfee3033",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/PRIOR_ART_GATE_v0_30.md": "f46c77716d77f57a69d6c1f049aee65515cdde624f9f0edd235b4df599e00ea4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/README.md": "ef4f885eaf34573a96c527430a6b5f549d9e29f948801f902a3f51dce6567f2a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/THEOREM_DRAFT_v0_30.md": "c3fe6e157716b4ddf5e5c9cd9a2125def2ec027f69aff8426b06d515f08a9f89",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/__init__.py": "84abd1ed25d98099552c534f859de32aeb7164484415c2c163df151fbea92f6c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/conservative_numeraire.py": "5c6d018bfc55be95dfa86cf44a3e296773498a5d47600d91bd3efd4083961a99",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/environment_lock_v0_30.json": "460d1f0d6757054bb6490a4ddad4776d8d128995a3f62eac7aec9a251a215837",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/protocol_v0_30.json": "ab6db7da89f0886360eb12755c6f6626000b86be872927e3f217d400775fc755",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/register_v0_30.py": "c67b5e36dc32bc119ed1685590a443dfc7d3831076de89ab05091c306102f433",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/run_verification_v0_30.py": "4e5004d90a2d09de34b3771c670ed418ca2877417ad2d5811900ebf1bee15d5a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/test_conservative_numeraire.py": "b3465adc89fd2903096aa42c9a3b226fbe5dd1fd0ebe50699dbae2ca7cdd0a79",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/test_protocol_v0_30.py": "9045bb8a98461ea1077e79150a105adbb285fdfccd0a2429b655cf504063539d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conservative_numeraire_v0_30/verify_result_v0_30.py": "cc86dc686f3bcff58eb620b68c72e98c1e1576194ec643a836a68868dc243a91"
+  }
+}

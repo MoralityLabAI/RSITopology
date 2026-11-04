@@ -1,0 +1,912 @@
+{
+  "block_partitions": [
+    {
+      "expected_blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "graph": "bridge_separated_cycles",
+      "implementation_blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "match": true,
+      "oracle_blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "expected_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "graph": "chorded_cycle_one_block",
+      "implementation_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "match": true,
+      "oracle_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "expected_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "graph": "chorded_cycle_plus_triangle",
+      "implementation_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "match": true,
+      "oracle_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "expected_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "graph": "multiport_diamond",
+      "implementation_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "match": true,
+      "oracle_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "expected_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "graph": "theta_bridge_triangle",
+      "implementation_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "match": true,
+      "oracle_blocks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "expected_blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "graph": "triangle_plus_pentagon",
+      "implementation_blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "match": true,
+      "oracle_blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ]
+    }
+  ],
+  "bridge_irrelevance": {
+    "availability_a": "156207688/3486784401",
+    "availability_b": "156207688/3486784401",
+    "bridge_indices": [
+      3,
+      8
+    ],
+    "exact_match": true,
+    "graph": "bridge_separated_cycles",
+    "status_group_count": 2187,
+    "status_violations": 0
+  },
+  "claim_boundary": "On the frozen independent-binomial conditional-access object inherited from ASMP-9 v0.17-v0.19, prove and prospectively verify that full residual quotient liveness decomposes exactly over nontrivial vertex-biconnected edge blocks; that independent fixed-label availability and a rectangular endpoint-label minimum factor as products over those blocks; and that exact positive-integer allocation between blocks is solved by Bellman recursion once exact local block tables are supplied. This is not a novelty claim for biconnected decomposition, reliability multiplication over blocks, or separable resource-allocation dynamic programming. It does not supply an efficient exact local-design algorithm or complexity classification for a general biconnected block, adaptive allocation, dependent-response or misspecified-link robustness, downstream decision utility, behavioral reward identification, general inverse reinforcement learning, or an ASMP-9 resolution.",
+  "completed_at_utc": "2026-07-29T02:07:18Z",
+  "design_comparison": {
+    "allocation_count": 11,
+    "bellman_optimizers": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "bellman_value": "5800816/3486784401",
+    "epsilon": "2/9",
+    "exact_match": true,
+    "exhaustive_optimizers": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "exhaustive_value": "5800816/3486784401",
+    "graph": "chorded_cycle_plus_triangle",
+    "local_tables": [
+      {
+        "8": {
+          "optimizers": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "value": "299096/43046721"
+        },
+        "9": {
+          "optimizers": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              2,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "value": "414344/43046721"
+        }
+      },
+      {
+        "3": {
+          "optimizers": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "value": "14/81"
+        },
+        "4": {
+          "optimizers": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ],
+          "value": "1526/6561"
+        }
+      }
+    ],
+    "total_budget": 12
+  },
+  "environment": {
+    "gpu_used": false,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "execution_commit": "8487edad48ba302cbf3d71192df593f2480842ca",
+  "fixed_probability_products": [
+    {
+      "counts": [
+        1,
+        2,
+        1,
+        3,
+        2,
+        2,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "direct": "10136591385792256/150094635296999121",
+      "epsilon": "2/9",
+      "factors": [
+        {
+          "edge_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "value": "16183748/43046721"
+        },
+        {
+          "edge_ids": [
+            5,
+            6,
+            7
+          ],
+          "value": "2464/6561"
+        },
+        {
+          "edge_ids": [
+            8,
+            9,
+            10
+          ],
+          "value": "254198/531441"
+        }
+      ],
+      "graph": "multiport_diamond",
+      "labels": "01011001010",
+      "match": true,
+      "product": "10136591385792256/150094635296999121"
+    },
+    {
+      "counts": [
+        2,
+        1,
+        3,
+        1,
+        2,
+        2,
+        5,
+        1,
+        2,
+        3
+      ],
+      "direct": "16009463249024/205891132094649",
+      "epsilon": "2/9",
+      "factors": [
+        {
+          "edge_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "value": "62980288/387420489"
+        },
+        {
+          "edge_ids": [
+            7,
+            8,
+            9
+          ],
+          "value": "254198/531441"
+        }
+      ],
+      "graph": "theta_bridge_triangle",
+      "labels": "1010010110",
+      "match": true,
+      "product": "16009463249024/205891132094649"
+    }
+  ],
+  "fresh_registry": {
+    "burned_signature_count": 5,
+    "graph_count": 6,
+    "minimum_node_count": 7,
+    "unique_signature_count": 6,
+    "violations": []
+  },
+  "gate_count": 10,
+  "gate_pass_count": 10,
+  "gates": [
+    {
+      "gate_id": "G0_registration_binding",
+      "pass": true
+    },
+    {
+      "gate_id": "G1_fresh_graph_registry",
+      "pass": true
+    },
+    {
+      "gate_id": "G2_block_partition",
+      "pass": true
+    },
+    {
+      "gate_id": "G3_exhaustive_status_equivalence",
+      "pass": true
+    },
+    {
+      "gate_id": "G4_fixed_label_probability_product",
+      "pass": true
+    },
+    {
+      "gate_id": "G5_rectangular_worst_label_product",
+      "pass": true
+    },
+    {
+      "gate_id": "G6_bridge_irrelevance",
+      "pass": true
+    },
+    {
+      "gate_id": "G7_bellman_equals_full_edge_census",
+      "pass": true
+    },
+    {
+      "gate_id": "G8_one_block_negative_control",
+      "pass": true
+    },
+    {
+      "gate_id": "G9_resource_and_scope",
+      "pass": true
+    }
+  ],
+  "implementation_commit": "21da5b7aa04aa5f8ad1e70da0aff8da3f69b2bb0",
+  "one_block_negative_control": {
+    "direct": "13121047912/282429536481",
+    "exact_match": true,
+    "factor_count": 1,
+    "graph": "chorded_cycle_one_block",
+    "interpretation": "factor_count_one_no_within_block_computational_simplification",
+    "product": "13121047912/282429536481"
+  },
+  "protocol_id": "ASMP-9-BLOCK-FACTORIZATION-v0.20",
+  "protocol_sha256": "1c19bbd52e52243712fdd8c48728f5093365f30581ad2adc78dbed3afd317140",
+  "registration_binding_failures": [],
+  "registration_sha256": "a26ef3900087416df5ba92e5c85fd23006ea35f3677ebeb98f5f2cb4fd7ede60",
+  "resources": {
+    "elapsed_seconds": 34.74355499999365,
+    "gpu_used": false,
+    "peak_resident_bytes": 30740480,
+    "peak_resident_cap_bytes": 1073741824,
+    "wall_cap_seconds": 180
+  },
+  "started_at_utc": "2026-07-29T02:06:43Z",
+  "status_censuses": [
+    {
+      "first_mismatch": null,
+      "graph": "multiport_diamond",
+      "mismatch_count": 0,
+      "status_vectors_checked": 177147
+    },
+    {
+      "first_mismatch": null,
+      "graph": "theta_bridge_triangle",
+      "mismatch_count": 0,
+      "status_vectors_checked": 59049
+    },
+    {
+      "first_mismatch": null,
+      "graph": "bridge_separated_cycles",
+      "mismatch_count": 0,
+      "status_vectors_checked": 19683
+    },
+    {
+      "first_mismatch": null,
+      "graph": "chorded_cycle_one_block",
+      "mismatch_count": 0,
+      "status_vectors_checked": 6561
+    }
+  ],
+  "verdict": "finite_block_factorization_established_in_frozen_model_v0_20",
+  "version": "0.20",
+  "worst_label_product": {
+    "counts": [
+      2,
+      1,
+      3,
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    "epsilon": "2/9",
+    "factors": [
+      {
+        "edge_ids": [
+          0,
+          1,
+          2
+        ],
+        "value": "197498/531441",
+        "witness_count": 2,
+        "witnesses": [
+          "010",
+          "101"
+        ]
+      },
+      {
+        "edge_ids": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "value": "3431764/43046721",
+        "witness_count": 2,
+        "witnesses": [
+          "01010",
+          "10101"
+        ]
+      }
+    ],
+    "global_witness_count": 4,
+    "global_witnesses": [
+      "01001010",
+      "01010101",
+      "10101010",
+      "10110101"
+    ],
+    "global_worst": "677766526472/22876792454961",
+    "graph": "triangle_plus_pentagon",
+    "match": true,
+    "product_worst": "677766526472/22876792454961"
+  }
+}

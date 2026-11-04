@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_19.md": "44948f337f04e83b7bd01008b8014bfea05b581332d6831e10a01bd28fabb1b2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/PUBLIC_SUMMARY_v0_19_2.md": "7d9ba18874eaf43bffaba361fe06a6f49c72ecd0c89280c0e033f3c80501365e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19_2/RESULT_v0_19_2.md": "a7261f649dcf11bacad33199e8954eecc6a2072a8368a1e784f8808d24814599",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19_2/result_v0_19_2.json": "b7db6efdde7f8453b255f0e93162b368ce1baeef6c26909c7e825667e5e1615d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19_2/run_receipt_v0_19_2.json": "6165dff13707ee4c2f35f75c4d267b116f61f874af5bbaf1d4932040c1f34d68",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/artifacts_v0_19_2/verification_v0_19_2.json": "3f7ab258e494af6356df0cc732ec4bbf8e4b7d006063544dd8ccff49cb8ca5f0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/cycle_cache_v0_19_2.py": "536fe687f237d0b2897efa46d62d3426e99eccb09ebe0ada30bfabf0a86f706a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/protocol_v0_19_2.json": "9c1d2789f1413e05200056dd36a03f73fed5edc714c30b7eda23721ddd921791",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/registration_v0_19_2.json": "7328118a2b76aa0cb8f79c369f5deaaf61bd0663ab9ab35877f4b0ff94089298",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/run_verification_v0_19_2.py": "3fdfe17bf3cf1892ae3267da4c8e90e5398579ec4ff9a711cf6f97c776d13a32",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_cactus_design_v0_19/verify_result_v0_19_2.py": "f88219ac94b8ac28faa14176d79c2193a0ffcaa072ae162f6b8ee7d384c4d117"
+  },
+  "artifact_count": 11,
+  "implementation_commit": "da0734da7d5a8c6f89f98b64cd7f0fed9df0ba42",
+  "manifest_id": "ASMP-9-FINITE-CACTUS-DESIGN-v0.19.2-release",
+  "registration_commit": "4667857250855cf0e11254846e997c07e8e12826",
+  "result_commit": "c4754e2363ebac4834505985ade67f7f36431ab8",
+  "verdict": "finite_budget_cactus_dp_established_in_frozen_model_v0_19_2"
+}

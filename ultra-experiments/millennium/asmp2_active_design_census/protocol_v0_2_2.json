@@ -1,0 +1,38 @@
+{
+  "schema_version": "asmp2_active_design_amendment_v0_2_2",
+  "protocol_id": "asmp2.active_design_census.v0.2.2",
+  "scientific_parent_protocol": "protocol_v0_2.json",
+  "scientific_parent_sha256": "de42afaa6a1fc3fc2200d4f8f32e1df0b6a80de05da32d19e75c3bfcc9c63168",
+  "performance_parent_amendment": "protocol_v0_2_1.json",
+  "performance_parent_sha256": "2414ac724f0b05141d6d82bbb4bbe13f53d19380f003909aba9380e4aa233936",
+  "amendment_scope": "resource_measurement_repair_only",
+  "scientific_contract_changes": "none",
+  "resource_measurement": {
+    "memory": "process RSS sampled every 10 milliseconds using psutil",
+    "timing_start": "entry to main before argument parsing",
+    "timing_stop": "after result payload construction and before write-once artifact emission",
+    "operational_wall_ceiling_seconds": 150,
+    "external_total_wall_ceiling_seconds": 180,
+    "process_peak_rss_bytes": 1073741824,
+    "gpu_hours": 0,
+    "on_exceed": "unavailable_resource_cap"
+  },
+  "required_algorithms": {
+    "runner": "least-significant-parent rank-one recurrence from v0.2.1",
+    "verifier": "most-significant-parent rank-one recurrence from v0.2.1"
+  },
+  "frozen_scientific_fields": [
+    "dimension",
+    "environment_encoding",
+    "feature_basis",
+    "deployment_families",
+    "budgets",
+    "scientific_budgets",
+    "selectors",
+    "numeric_contract",
+    "scientific_thresholds",
+    "instrument_gates",
+    "evidence_labels",
+    "prohibited_claims"
+  ]
+}

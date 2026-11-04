@@ -1,0 +1,109 @@
+{
+  "deterministic": true,
+  "experiment_id": "ASMP-3-INTERACTIVE-COVERING-FRONTIER-v2.15",
+  "file_count": 25,
+  "files": {
+    "../AI_SAFETY_MILLENNIUM_PROBLEMS_v0_1.md": {
+      "bytes": 49607,
+      "sha256": "08115CC4CB9C5333725A820AD3CA67909E15E8625AAC3F128BDE46B88ED161F5"
+    },
+    "../asmp3_correlated_path_risk_v2_13/CORRELATED_PATH_RISK_THEOREM_v2_13.md": {
+      "bytes": 5140,
+      "sha256": "1A1B4D127658E2B219C4E87B28B61769492AD9DB9883CCA8A8A498E69543D623"
+    },
+    "../asmp3_correlated_path_risk_v2_13/RELEASE_MANIFEST_v2_13.json": {
+      "bytes": 4320,
+      "sha256": "0B3B3F33F2E91F6D0045094D74BF1672AE546F74BC02337165847BEB6FEA4914"
+    },
+    "../asmp3_correlated_path_risk_v2_13/artifacts/correlated_path_risk_v2_13.json": {
+      "bytes": 43783,
+      "sha256": "158B18B549F725D150012593C264F7C3DE9B346C6BB06877A75EEEA09FE05887"
+    },
+    "../asmp3_correlated_path_risk_v2_13/artifacts/correlated_path_risk_verification_v2_13.json": {
+      "bytes": 1053,
+      "sha256": "F89E9C90EE46565157B64753BCCC9F13D9DCAD9EA7A850F95E161D635D4E0BD9"
+    },
+    "../asmp3_honest_search_barrier_v2_1/HONEST_SEARCH_BARRIER_THEOREM_v2_1.md": {
+      "bytes": 6591,
+      "sha256": "5659BB28EB99447307F80243840F172EAF99166A0F940BAE0A5BFEB9F4E763C4"
+    },
+    "../asmp3_honest_search_barrier_v2_1/RELEASE_MANIFEST_v2_1.json": {
+      "bytes": 3585,
+      "sha256": "CF36E9B82E1955B7D9671A522117A5D58B964A6C9F51BA85EABB00E78AC03C22"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_v2_1.json": {
+      "bytes": 67028,
+      "sha256": "135EFB7A69E581A3A40C54E0D769C167E5A9DB670B3D43E7939C52F096A2477F"
+    },
+    "../asmp3_honest_search_barrier_v2_1/artifacts/honest_search_barrier_verification_v2_1.json": {
+      "bytes": 861,
+      "sha256": "01F05CF39E9DDFB36A2B871DCA09DFAFD443BB98D4B88A0A2A46ED88E916748D"
+    },
+    "../asmp3_resource_tradeoff_v2_2/RELEASE_MANIFEST_v2_2.json": {
+      "bytes": 3539,
+      "sha256": "E0440C6A3B291A09D2698F143DC37AEDB03DF3A7B22CD7BCBD557996064C964E"
+    },
+    "../asmp3_resource_tradeoff_v2_2/RESOURCE_TRADEOFF_THEOREM_v2_2.md": {
+      "bytes": 5860,
+      "sha256": "64FB084ED49E1ED43EBF8845507D838962F69316537DFED8885769C3F4F2CE26"
+    },
+    "../asmp3_resource_tradeoff_v2_2/artifacts/resource_tradeoff_v2_2.json": {
+      "bytes": 340282,
+      "sha256": "4D4DD4AEDEBA45677ADCC15BB2085AED779D3A53CE11B6C9B88499AF26B6B98D"
+    },
+    "../asmp3_resource_tradeoff_v2_2/artifacts/resource_tradeoff_verification_v2_2.json": {
+      "bytes": 838,
+      "sha256": "C44BA4C51A0B6099D914DAE193546B45C5A661F20C8492D8D8988649023A6C96"
+    },
+    "../problem_set_v0_1.json": {
+      "bytes": 8516,
+      "sha256": "30FF673486B140C178D279EB100C81A46C849BA5B9955EDDEE16C83824D43EE0"
+    },
+    ".gitignore": {
+      "bytes": 30,
+      "sha256": "162E3377CCCC6DE655877FF47265BC9E3A6AC88A3E2C3EB18C77D7C03CB21F2E"
+    },
+    "COMPLETION_AUDIT_v2_15.md": {
+      "bytes": 1445,
+      "sha256": "1E0EFA1C023D8E5D06D30A481AE7723A2144E989FB5B2C66D964ECB148634D49"
+    },
+    "INTERACTIVE_COVERING_THEOREM_v2_15.md": {
+      "bytes": 5982,
+      "sha256": "A959ECD9C0C986287598724E67EFAC56BBD575009E6846EB603A0E206D867C36"
+    },
+    "README.md": {
+      "bytes": 596,
+      "sha256": "B2DB3A83A1582B83D928AC9641FBC6AC9B3768A6B81A6AD4FACE0D29F96EAA81"
+    },
+    "artifacts/interactive_covering_frontier_v2_15.json": {
+      "bytes": 10190137,
+      "sha256": "265677150E2D17EB8ADA19A31D3EA54C0BB1FF426EA78D117576AB4939D345E6"
+    },
+    "artifacts/interactive_covering_frontier_verification_v2_15.json": {
+      "bytes": 934,
+      "sha256": "DC17B23BD5E75C331A901D074470EBCD528EDBAECD28056C94CE62A65C5884F6"
+    },
+    "build_release_manifest.py": {
+      "bytes": 3197,
+      "sha256": "8ACCF5519DDD24AF374FF9A941B3E8D39800A5A6E370BE245570C2920E81C0F3"
+    },
+    "interactive_covering_frontier.py": {
+      "bytes": 17880,
+      "sha256": "F4F1BD960645F24FE1D39A2F5E1D148C320B9073A78401C3DA56F736E0F504B1"
+    },
+    "run_interactive_covering_frontier.py": {
+      "bytes": 475,
+      "sha256": "80F196359A2C3E68B2BA787F9A7B0DFE34BBBCF5F256F3306F0DB13A1AFA0935"
+    },
+    "test_interactive_covering_frontier.py": {
+      "bytes": 3445,
+      "sha256": "57BB73E6FC23C4FF57F68EB685A8659C099D910B12DE8F2C110C3497F7B895C7"
+    },
+    "verify_interactive_covering_frontier.py": {
+      "bytes": 15900,
+      "sha256": "A5C6650E0C2BF01E368B8F58AB4D7F819199F3CC815CB4A00A0503EF5A275711"
+    }
+  },
+  "release_status": "exact_arbitrary_round_public_coin_unique_marker_frontier",
+  "schema_version": "asmp3_interactive_covering_frontier_release_v2_15"
+}

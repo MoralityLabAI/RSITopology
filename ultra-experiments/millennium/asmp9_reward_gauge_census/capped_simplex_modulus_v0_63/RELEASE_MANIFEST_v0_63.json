@@ -1,0 +1,102 @@
+{
+  "files": [
+    {
+      "bytes": 37746,
+      "path": "../README.md",
+      "sha256": "b5b1d44fd5b0a1f3a0e591d67c8277b5b4cc5f306e96b000b291cbfdb0b949ef"
+    },
+    {
+      "bytes": 4970,
+      "path": "../RESOLUTION_OBLIGATION_MATRIX_v0_63.md",
+      "sha256": "39186f4f34b5f966d744c7d478d9af1f0ccc34ef217c159577875df3f69a0c9f"
+    },
+    {
+      "bytes": 7146,
+      "path": "capped_simplex_modulus.py",
+      "sha256": "9e9959c2d91cfad958e0ed6d993b10993b800cbe81e63ca5cd26df5d3c46fc17"
+    },
+    {
+      "bytes": 2643,
+      "path": "DEVELOPMENT_RESULT_v0_63.md",
+      "sha256": "0e4e842144e4e47a3800e4926536309f081d67964bb1e8a2676dee344e83e57b"
+    },
+    {
+      "bytes": 7461,
+      "path": "independent_replay_v0_63.py",
+      "sha256": "f84d96441e087d7f2bc2fbe48b6cbf40c0ce2cf9bcc874bbc778dfc81be33d38"
+    },
+    {
+      "bytes": 6101,
+      "path": "primary_verifier_v0_63.py",
+      "sha256": "ce860cb36b23c21668e66c8e189c85e4f17d9239f33dc8a809e70c7fa1a5f786"
+    },
+    {
+      "bytes": 3205,
+      "path": "PRIOR_ART_GATE_v0_63.md",
+      "sha256": "43e2cf9bb5999d1c9e269330edd5dee5f307f1b998f42e3cc2b7305d6f03e3f5"
+    },
+    {
+      "bytes": 3342,
+      "path": "PROOF_AUDIT_v0_63.md",
+      "sha256": "0647069008160a987bec9199b94a83bebf64a7f7eb22d21c15fe005751d59d84"
+    },
+    {
+      "bytes": 1631,
+      "path": "README.md",
+      "sha256": "eb8fd69680bcf2a0bf91f555be5e2a9b3ef75363aaa46301c2641d5e564c0826"
+    },
+    {
+      "bytes": 3171,
+      "path": "register_verification_v0_63.py",
+      "sha256": "f5437bff6c2ac6cd842d6e1db2e40f959383e3470043c1d97e415ca0ce03bfa4"
+    },
+    {
+      "bytes": 3872,
+      "path": "RESULT_v0_63.md",
+      "sha256": "e63fe997d1a74e250585fa5327a0ddaf77ce95323eb61184ac8626e4e6a7494f"
+    },
+    {
+      "bytes": 5049,
+      "path": "test_capped_simplex_modulus.py",
+      "sha256": "73badcc89dce8f4e88fe78b807934597fcb3638c4a795763817cc41e376ee7fa"
+    },
+    {
+      "bytes": 6241,
+      "path": "THEOREM_DRAFT_v0_63.md",
+      "sha256": "5bc93ba72fc7a900d94f1d1c0e21c3d66532b1171955d583b6e6c65ea8b51740"
+    },
+    {
+      "bytes": 356,
+      "path": "verification_cells_v0_63.json",
+      "sha256": "c11dda56e5bbd18d9cbe3c9b61b7975a403c8d5824c7f4cb33da89e4574673d0"
+    },
+    {
+      "bytes": 3373,
+      "path": "VERIFICATION_PROTOCOL_v0_63.md",
+      "sha256": "2c26cae85fd1d3d2dc86de7375097d0d9a04ab489fa98506a1dceb3c04c3565e"
+    },
+    {
+      "bytes": 3880,
+      "path": "verification_registration_v0_63.json",
+      "sha256": "5fcc7001ec7292181a5dce5252e47ed9bba48d30b3a2fee5570c52dbc434e84c"
+    },
+    {
+      "bytes": 3119,
+      "path": "verify_development.py",
+      "sha256": "1d6cad1828b2a9428d72ea3d895f75368be0013d5d73047ef4788efbc1fe8fb0"
+    },
+    {
+      "bytes": 3664,
+      "path": "VERIFY_RESULT_v0_63.json",
+      "sha256": "1dca1c0d128ec5d8611ebf5ed3c73cb4d8463d6672399fedac3b8e02abe1470c"
+    },
+    {
+      "bytes": 5291,
+      "path": "verify_v0_63.py",
+      "sha256": "62c0e3c6f61fd48fb33b47f880aa574af196eea0e0bdfb6bf81385fd72fd4bee"
+    }
+  ],
+  "protocol_id": "asmp9-capped-simplex-modulus-v0.63",
+  "schema": "asmp9-v0.63-release-manifest-v1",
+  "status": "capped_simplex_moduli_verified"
+}

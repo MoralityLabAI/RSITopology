@@ -1,0 +1,16 @@
+{
+  "registration_id": "ASMP-9-ORDINAL-ACCESS-v0.2-registration",
+  "registered_at_utc": "2026-07-28T00:00:00Z",
+  "implementation_commit": "3c99eab311fd5111a49cf161f9125e9bfd5f7797",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/protocol_v0_2.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/PRIOR_ART_v0_2.md": "d0eb1e4a198d07891b1823e302eb782c7f97a6c11eea1ed301c43ab43e83d630",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/PROTOCOL_v0_2.md": "d2f5825e1539f416779fc6c249c90fcbeb2d41a3d9ba28ed0b7e3ebec4f08bc2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/README.md": "e65426f81dfd86ebc0418528ad523a0f7735e22ceb9fa6cc7097c2bc278e42fb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/ordinal_frontier.py": "2accf05235c51dc6474c353891f96c88f59c5a59688f0284e5469c739f88496d",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/protocol_v0_2.json": "b2c665de6559ec86ae2aa6081db8344ad89fff7ffd521fdbade0b4e6077f2883",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/run.py": "a13d2e617bcf2679cda0a8836d779d3cfca449d2a4d955bba02a5f11dfd5b214",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/test_ordinal_frontier.py": "b04385f8ebdcc9911d92a1b4d6f8c8deaaa64ade31580bf300c6ba537df0a017",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/ordinal_frontier_v0_2/verify_result.py": "ee12a738085653c97ffe1df7a875e903796e61516ddb727e72e2518385e4260f"
+  }
+}

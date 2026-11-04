@@ -1,0 +1,48 @@
+{
+  "claim_boundary": "Finite theorem verification only; not novelty, an empirical preference result, continuous or strategic robustness, or an ASMP-9 resolution.",
+  "expected_admissible_table_count": 19,
+  "expected_ordered_pair_count": 361,
+  "expected_region_checks": 1140,
+  "expected_test_count": 11,
+  "interpolation_coefficients": [
+    "0",
+    "1/4",
+    "1/2",
+    "3/4",
+    "1"
+  ],
+  "protocol_id": "asmp9-reference-weight-robustness-verification-v0.50",
+  "reference_vertices": [
+    [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    [
+      "1/6",
+      "1/3",
+      "1/2"
+    ]
+  ],
+  "region_grid_denominator": 6,
+  "registered_at": "2026-07-29T11:14:03-04:00",
+  "resource_ceiling": {
+    "peak_aggregate_working_set_bytes": 536870912,
+    "seconds": 120,
+    "worker_processes": 1
+  },
+  "source_commit": "78c5cf47245ff82980cf8cca0befd88a0283fb39",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/DEVELOPMENT_RESULT_v0_50.md": "5f490ceaf4839052622c272bd4e889734af63cb3cce2bb0a6f6da8c559e4f747",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/PRIOR_ART_GATE_v0_50.md": "414fb2a2750f9d5bbf178e93852b93a6fdfdae063a5b92d7d0c5e5d03b0cb4d1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/README.md": "bb0d97e63c8cdc6736cdab25a0e13e4a9e01670b589a108209d99153b2b785da",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/THEOREM_DRAFT_v0_50.md": "8e080efe34cce9a88519952d0c356dbe393368de87c003592609bc08f999a2a2",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/VERIFICATION_PROTOCOL_v0_50.md": "4cfd7623b4295506fdb7dda41c080fd075104bf3e417ad8dabeb238c6d31f78b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/reference_weight.py": "cc7a2fa9340525d1b249c58aaba446470747193a8709e9c4d75b0de7160b2123",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/test_reference_weight.py": "9f8d33a31ad0102f5e2b6bb33d6a56968fa2f689600781f31d71ec3bdc18c649",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/test_verifier_v0_50.py": "70cb32ed0942447dc1d9f154e0abaad3b35b32190fc696228d9ac26f290bf459",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/reference_weight_v0_50/verify_theorems_v0_50.py": "46cb44d64970743f83a89afe0f7df67633adec1d3a71f2ed3f244b653f75844d"
+  },
+  "status": "registered_before_exhaustive_verification",
+  "version": "0.50"
+}

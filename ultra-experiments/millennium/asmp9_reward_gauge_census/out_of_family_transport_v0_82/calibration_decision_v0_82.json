@@ -1,0 +1,20 @@
+{
+  "schema_version": "asmp9_out_of_family_calibration_decision_v0_82",
+  "status": "frozen_burned_calibration_authorizes_new_family_holdout",
+  "local_confirmation_authorized": true,
+  "global_confirmation_authorized": true,
+  "construction_specificity_intersection": {
+    "lower": 0.7343614199407966,
+    "upper": 0.750013550256881
+  },
+  "construction_prediction_envelope": {
+    "center": 0.9381510370100538,
+    "maximum_absolute_residual": 0.4173176869129162,
+    "lower": 0.5208333500971378,
+    "upper": 1.3554687239229698
+  },
+  "source_analysis_sha256": "05de98008345c00e5f7e352ff6eb75f34282912503672b59d2856fc75e7cd880",
+  "source_release_verification_sha256": "83bffe6db1f0b05dd7be16787fce021d47d6da8d100337fabd94741fc1dc79c3",
+  "outcomes_read_for_v082": false,
+  "claim_boundary": "Burned v0.68 construction quantities authorize only the prospectively frozen v0.82 new-family response-transport test."
+}

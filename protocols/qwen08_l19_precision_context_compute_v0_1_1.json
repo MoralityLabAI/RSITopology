@@ -1,0 +1,41 @@
+{
+  "protocol_id": "qwen08_l19_precision_context_compute_v0_1_1",
+  "status": "registered_not_run",
+  "amends": {
+    "protocol_id": "qwen08_l19_precision_context_v0_1",
+    "protocol_sha256": "6437d637d6a25efe47c462a0cadeb9aa2dd18a018a794f9e688befa4adb5ef8b",
+    "reference_implementation_sha256": "07be1e68c331c230c465fadc85044992d83f047163f35f26ab6e1da1e5918288"
+  },
+  "scope": "Computational implementation amendment only. The scientific object, prompt and capture universe, seeds, RNG call order, bootstrap strata, 1024 outer replicates, 64 inner replicates, quantiles, margins, gates, result categories, and claim boundary are unchanged.",
+  "equivalence_contract": {
+    "class_means": "Identical equally weighted class means within each frozen half.",
+    "rank_one_basis": "The leading right singular direction is computed through the equivalent sample-space Gram eigensystem; near-degenerate leading eigenvalues fall back to the v0.1 SVD implementation.",
+    "retention": "Squared absolute inner product of the two unit rank-one bases, algebraically identical to worst-direction rank-one subspace lineage.",
+    "rng": "Each cell uses the exact v0.1 stable seed and a single NumPy Generator. Bootstrap and permutation calls occur in the exact v0.1 order.",
+    "numerical_tolerance": 1e-10,
+    "degenerate_relative_eigengap_fallback": 1e-12
+  },
+  "checkpoint_contract": {
+    "outer_replicates_per_block": 16,
+    "maximum_intended_seconds_between_checkpoints": 600,
+    "format": "immutable hash-chained JSON block per physical cell",
+    "resume": "Validate the complete chain, binding hash, contiguous replicate ranges, previous hash, and post-block RNG state before continuing.",
+    "tamper_policy": "fail_closed",
+    "completed_scientific_output": "analysis_result.json is written only after every registered cell and replicate completes"
+  },
+  "resource_contract": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 250,
+    "timeout_seconds": 14400,
+    "gpu_allowance_mb": 1,
+    "checkpoint_every_seconds": 600,
+    "swap_bytes": 0,
+    "detached_job_object_required": true
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}

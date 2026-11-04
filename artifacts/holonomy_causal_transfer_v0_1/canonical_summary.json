@@ -1,0 +1,84 @@
+{
+  "all_gates_pass": true,
+  "claim_boundary": "CPU-synthetic causal path-transfer calibration only; no transformer, capability, self-improvement, or RSI claim.",
+  "decision": "pass",
+  "gates": {
+    "G0_matched_local_lineage": true,
+    "G1_path_identity": true,
+    "G2_bound_coverage": true,
+    "G3_flat_negative_control": true,
+    "G4_curved_positive_control": true,
+    "G5_incremental_prediction": true,
+    "G6_bound_authorization": true,
+    "G7_energy_invariance": true,
+    "G8_gauge_invariance": true,
+    "G9_orientation_reversal": true
+  },
+  "gauge_preflight": {
+    "discrepancies": {
+      "canonical_angles": 2.1316282072803006e-14,
+      "determinant": 1.4432899320127035e-15,
+      "directional_path_displacement": 1.1102230246251565e-16,
+      "response_disagreement": 1.942890293094024e-16,
+      "risk_bound": 5.551115123125783e-17
+    },
+    "maximum_discrepancy": 2.1316282072803006e-14
+  },
+  "metrics": {
+    "authorization_coverage": 0.9129050925925926,
+    "authorized_row_count": 3155,
+    "false_authorization_count": 0,
+    "loop_count": 12,
+    "maximum_bound_excess": 0.0,
+    "maximum_curved_exposed_displacement": 0.9821078567715196,
+    "maximum_curved_exposed_response_disagreement": 1.1837658463105298,
+    "maximum_energy_difference": 3.3306690738754696e-15,
+    "maximum_flat_displacement": 0.0,
+    "maximum_matched_lineage_difference": 0.0,
+    "maximum_path_identity_error": 9.992007221626409e-16,
+    "row_count": 3456
+  },
+  "orientation_control": {
+    "authorized": false,
+    "canonical_angles_suppressed": true,
+    "det_h": -1.0,
+    "orientation_flag": true
+  },
+  "permuted_holonomy_prediction": {
+    "augmented_sse": 26.51585691362748,
+    "baseline_sse": 27.983964490779396,
+    "group_count": 24,
+    "grouped_bootstrap_90_interval": [
+      0.030482278380083883,
+      0.07592835036769707
+    ],
+    "grouped_bootstrap_draws": 4096,
+    "relative_sse_reduction": 0.05246245854963294
+  },
+  "prediction": {
+    "augmented_sse": 3.0781039893764666,
+    "baseline_sse": 27.983964490779396,
+    "group_count": 24,
+    "grouped_bootstrap_90_interval": [
+      0.8490732306790634,
+      0.9232003405004633
+    ],
+    "grouped_bootstrap_draws": 4096,
+    "relative_sse_reduction": 0.8900047207253036
+  },
+  "protocol_id": "holonomy_causal_transfer_falsification_v0_1",
+  "protocol_sha256": "82bdbf1da84cf246dd63f94da743e17f39fd6d7305bfbfefb5ef22a8cb9e6020",
+  "run": {
+    "elapsed_seconds": 0.6634040000008099,
+    "ended_utc": "2026-07-16T18:41:20.075481+00:00",
+    "started_utc": "2026-07-16T18:41:19.412744+00:00",
+    "status": "completed"
+  },
+  "schema_version": "1.0.0",
+  "source_sha256": {
+    "holonomy.py": "96b7d48228282fc96d0783080d01c317d29f68e64530802e39349d9f7c952dd8",
+    "holonomy_causal.py": "e7575784e6d122d69d759dd4a5b2e833f932391fb9187bb35e835a0e5dac450d",
+    "risk_gate.py": "5fd6295a26c5566f88c108031cd50cca75563f56031c7824579ab1969948a9e6",
+    "runner": "deec8289895784b3ff052fdf56839b2040ac743695b897c28612b17b7e6312bf"
+  }
+}

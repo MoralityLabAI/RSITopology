@@ -1,0 +1,392 @@
+﻿{
+    "run_id":  "asmp10-grokking-liveness-v0-4d-final-continuation",
+    "ts_utc":  "2026-07-22T00:31:14.1764196Z",
+    "stop_owned_processes":  true,
+    "owned_pids":  [
+                       22972
+                   ],
+    "owned_process_tree":  [
+                               22972
+                           ],
+    "stopped":  [
+
+                ],
+    "wsl_action":  "skipped",
+    "standby_action":  "skipped",
+    "memory_before":  {
+                          "total_gb":  23.784,
+                          "free_gb":  7.889,
+                          "used_gb":  15.896,
+                          "pct_used":  66.8,
+                          "available_mb":  8041,
+                          "committed_gb":  22.167,
+                          "commit_limit_gb":  68.784,
+                          "cache_gb":  0.311,
+                          "standby_gb":  4.047,
+                          "modified_page_list_gb":  0.277,
+                          "pool_nonpaged_gb":  1.285,
+                          "pool_paged_gb":  0.834,
+                          "page_reads_per_sec":  429,
+                          "pages_input_per_sec":  1582
+                      },
+    "memory_after":  {
+                         "total_gb":  23.784,
+                         "free_gb":  7.753,
+                         "used_gb":  16.032,
+                         "pct_used":  67.4,
+                         "available_mb":  7936,
+                         "committed_gb":  22.602,
+                         "commit_limit_gb":  68.784,
+                         "cache_gb":  0.309,
+                         "standby_gb":  4.035,
+                         "modified_page_list_gb":  0.275,
+                         "pool_nonpaged_gb":  1.284,
+                         "pool_paged_gb":  0.833,
+                         "page_reads_per_sec":  23,
+                         "pages_input_per_sec":  80
+                     },
+    "gpu_before":  {
+                       "available":  true,
+                       "gpu":  [
+                                   "NVIDIA GeForce RTX 3050 Laptop GPU, 0, 0, 3964"
+                               ],
+                       "compute_apps":  [
+
+                                        ]
+                   },
+    "gpu_after":  {
+                      "available":  true,
+                      "gpu":  [
+                                  "NVIDIA GeForce RTX 3050 Laptop GPU, 0, 0, 3964"
+                              ],
+                      "compute_apps":  [
+
+                                       ]
+                  },
+    "lingering_owned_pids":  [
+
+                             ],
+    "suspect_training_processes":  [
+                                       {
+                                           "ProcessId":  10652,
+                                           "ParentProcessId":  4308,
+                                           "Name":  "powershell.exe",
+                                           "CommandLine":  "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -Command \"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\n$root=\u0027runs\\local-qwen3-1p7b-aicourt-vote-panel-v011\u0027\nCopy-Item -LiteralPath \\\"$root\\extractions.jsonl\\\" -Destination \\\"$root\\extractions.partial_after_46_attempts.jsonl\\\" -ErrorAction Stop\nCopy-Item -LiteralPath \\\"$root\\extractions.parquet\\\" -Destination \\\"$root\\extractions.partial_after_46_attempts.parquet\\\" -ErrorAction Stop\nCopy-Item -LiteralPath \\\"$root\\judgments.jsonl\\\" -Destination \\\"$root\\judgments.disclosure_taxonomy_v2_partial_after_46_attempts.jsonl\\\" -ErrorAction Stop\nCopy-Item -LiteralPath \\\"$root\\judgments.parquet\\\" -Destination \\\"$root\\judgments.disclosure_taxonomy_v2_partial_after_46_attempts.parquet\\\" -ErrorAction Stop\nuv run cfaudit extract --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --force\nuv run cfaudit judge --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --force\nuv run cfaudit analyze --run-id local-qwen3-1p7b-aicourt-vote-panel-v011\nuv run cfaudit report --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --output reports/pilot_report_local_qwen3_1p7b_aicourt_vote_panel_v011.md\""
+                                       },
+                                       {
+                                           "ProcessId":  3156,
+                                           "ParentProcessId":  10652,
+                                           "Name":  "uv.exe",
+                                           "CommandLine":  "\"C:\\Python311\\Scripts\\uv.exe\" run cfaudit judge --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --force"
+                                       },
+                                       {
+                                           "ProcessId":  27872,
+                                           "ParentProcessId":  3156,
+                                           "Name":  "cfaudit.exe",
+                                           "CommandLine":  "\"C:\\ValueLeakageExperiments\\.venv\\Scripts\\cfaudit.exe\" judge --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --force"
+                                       },
+                                       {
+                                           "ProcessId":  6216,
+                                           "ParentProcessId":  27872,
+                                           "Name":  "python.exe",
+                                           "CommandLine":  "\"C:\\ValueLeakageExperiments\\.venv\\Scripts\\python.exe\" \"C:\\ValueLeakageExperiments\\.venv\\Scripts\\cfaudit.exe\" judge --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --force"
+                                       },
+                                       {
+                                           "ProcessId":  6036,
+                                           "ParentProcessId":  6216,
+                                           "Name":  "python.exe",
+                                           "CommandLine":  "\"c:\\python312\\python.exe\" \"C:\\ValueLeakageExperiments\\.venv\\Scripts\\cfaudit.exe\" judge --run-id local-qwen3-1p7b-aicourt-vote-panel-v011 --force"
+                                       }
+                                   ],
+    "process_memory":  {
+                           "totals":  {
+                                          "working_set_gb":  20.922,
+                                          "private_commit_gb":  17.324
+                                      },
+                           "top_by_private_commit":  [
+                                                         {
+                                                             "Id":  22512,
+                                                             "ProcessName":  "WindowsTerminal",
+                                                             "private_gb":  0.953,
+                                                             "working_set_gb":  0.254,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11911.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe"
+                                                         },
+                                                         {
+                                                             "Id":  9096,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.569,
+                                                             "working_set_gb":  0.611,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  23584,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.548,
+                                                             "working_set_gb":  0.587,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  23740,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.515,
+                                                             "working_set_gb":  0.552,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  26900,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.505,
+                                                             "working_set_gb":  0.562,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  4760,
+                                                             "ProcessName":  "MsMpEng",
+                                                             "private_gb":  0.451,
+                                                             "working_set_gb":  0.45,
+                                                             "Path":  null
+                                                         },
+                                                         {
+                                                             "Id":  27596,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.393,
+                                                             "working_set_gb":  0.502,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  11596,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.391,
+                                                             "working_set_gb":  0.242,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  15652,
+                                                             "ProcessName":  "GalaxyClient",
+                                                             "private_gb":  0.381,
+                                                             "working_set_gb":  0.213,
+                                                             "Path":  "C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"
+                                                         },
+                                                         {
+                                                             "Id":  9976,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.334,
+                                                             "working_set_gb":  0.315,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  20324,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.333,
+                                                             "working_set_gb":  0.368,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  24316,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.298,
+                                                             "working_set_gb":  0.288,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  23352,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.294,
+                                                             "working_set_gb":  0.278,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  6516,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.293,
+                                                             "working_set_gb":  0.299,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  26388,
+                                                             "ProcessName":  "firefox",
+                                                             "private_gb":  0.262,
+                                                             "working_set_gb":  0.316,
+                                                             "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                         },
+                                                         {
+                                                             "Id":  10620,
+                                                             "ProcessName":  "explorer",
+                                                             "private_gb":  0.247,
+                                                             "working_set_gb":  0.303,
+                                                             "Path":  "C:\\WINDOWS\\Explorer.EXE"
+                                                         },
+                                                         {
+                                                             "Id":  5148,
+                                                             "ProcessName":  "KillerNetworkService",
+                                                             "private_gb":  0.231,
+                                                             "working_set_gb":  0.037,
+                                                             "Path":  null
+                                                         },
+                                                         {
+                                                             "Id":  25660,
+                                                             "ProcessName":  "ChatGPT",
+                                                             "private_gb":  0.222,
+                                                             "working_set_gb":  0.231,
+                                                             "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                         },
+                                                         {
+                                                             "Id":  23672,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.221,
+                                                             "working_set_gb":  0.235,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         },
+                                                         {
+                                                             "Id":  4772,
+                                                             "ProcessName":  "codex",
+                                                             "private_gb":  0.219,
+                                                             "working_set_gb":  0.199,
+                                                             "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                         }
+                                                     ],
+                           "top_by_working_set":  [
+                                                      {
+                                                          "Id":  3180,
+                                                          "ProcessName":  "Memory Compression",
+                                                          "working_set_gb":  0.847,
+                                                          "private_gb":  0.003,
+                                                          "Path":  null
+                                                      },
+                                                      {
+                                                          "Id":  9096,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.611,
+                                                          "private_gb":  0.569,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  23584,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.587,
+                                                          "private_gb":  0.548,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  26900,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.562,
+                                                          "private_gb":  0.505,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  23740,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.552,
+                                                          "private_gb":  0.515,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  27596,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.502,
+                                                          "private_gb":  0.393,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  4760,
+                                                          "ProcessName":  "MsMpEng",
+                                                          "working_set_gb":  0.45,
+                                                          "private_gb":  0.451,
+                                                          "Path":  null
+                                                      },
+                                                      {
+                                                          "Id":  20324,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.368,
+                                                          "private_gb":  0.333,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  26388,
+                                                          "ProcessName":  "firefox",
+                                                          "working_set_gb":  0.316,
+                                                          "private_gb":  0.262,
+                                                          "Path":  "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                                                      },
+                                                      {
+                                                          "Id":  9976,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.315,
+                                                          "private_gb":  0.334,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  10620,
+                                                          "ProcessName":  "explorer",
+                                                          "working_set_gb":  0.303,
+                                                          "private_gb":  0.247,
+                                                          "Path":  "C:\\WINDOWS\\Explorer.EXE"
+                                                      },
+                                                      {
+                                                          "Id":  6516,
+                                                          "ProcessName":  "ChatGPT",
+                                                          "working_set_gb":  0.299,
+                                                          "private_gb":  0.293,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                      },
+                                                      {
+                                                          "Id":  24316,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.288,
+                                                          "private_gb":  0.298,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  23352,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.278,
+                                                          "private_gb":  0.294,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  22512,
+                                                          "ProcessName":  "WindowsTerminal",
+                                                          "working_set_gb":  0.254,
+                                                          "private_gb":  0.953,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11911.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe"
+                                                      },
+                                                      {
+                                                          "Id":  11596,
+                                                          "ProcessName":  "ChatGPT",
+                                                          "working_set_gb":  0.242,
+                                                          "private_gb":  0.391,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                      },
+                                                      {
+                                                          "Id":  23672,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.235,
+                                                          "private_gb":  0.221,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  25660,
+                                                          "ProcessName":  "ChatGPT",
+                                                          "working_set_gb":  0.231,
+                                                          "private_gb":  0.222,
+                                                          "Path":  "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.715.7063.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+                                                      },
+                                                      {
+                                                          "Id":  22700,
+                                                          "ProcessName":  "codex",
+                                                          "working_set_gb":  0.229,
+                                                          "private_gb":  0.21,
+                                                          "Path":  "C:\\Users\\patri\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe"
+                                                      },
+                                                      {
+                                                          "Id":  15652,
+                                                          "ProcessName":  "GalaxyClient",
+                                                          "working_set_gb":  0.213,
+                                                          "private_gb":  0.381,
+                                                          "Path":  "C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"
+                                                      }
+                                                  ]
+                       },
+    "cleanup_passed":  true
+}

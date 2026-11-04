@@ -1,0 +1,87 @@
+{
+  "claim_boundary": {
+    "allowed": "Confidence-valid finite-sample propagation from registered iid query-channel estimates to finite-horizon adaptive upper-risk-polytope deficiency on the frozen v0.41 population fixture.",
+    "forbidden": [
+      "optimal multinomial confidence regions",
+      "matching minimax sample-complexity lower bounds",
+      "continuous or strategic channels",
+      "unknown loss functions",
+      "real-model evidence",
+      "ASMP-9 resolution"
+    ]
+  },
+  "confidence": {
+    "alpha": 0.05,
+    "channel_event": "Bonferroni-simultaneous shared-binary Hoeffding event over three query parameters",
+    "numerics": "80-digit Decimal log and square root, converted outward to binary float",
+    "policy_bound": "loss_span(theta) * min(1, horizon * max_query_tv)",
+    "deficiency_bound": "max_theta(source_policy_bound + reference_policy_bound)"
+  },
+  "decision_problems": {
+    "4_class_identification": {
+      "practical_margin": "1/1000",
+      "tolerance": "1/2"
+    },
+    "root_group_asymmetric": {
+      "practical_margin": "1/1000",
+      "tolerance": "1/10"
+    }
+  },
+  "expected_decisions_on_simultaneous_event": {
+    "4_class_identification/adaptive": "pass",
+    "4_class_identification/open_loop": "fail",
+    "root_group_asymmetric/adaptive": "pass",
+    "root_group_asymmetric/open_loop": "pass"
+  },
+  "gates": {
+    "A0": "Classification adaptive passes and open-loop fails with strict 1/1000 margins.",
+    "C0": "Every exact population deficiency lies inside its sampled confidence interval.",
+    "D0": "Both root-group modes pass with strict 1/1000 margins.",
+    "H0": "The registered simultaneous query-channel TV event holds on the visible synthetic population.",
+    "P0": "The exact preregistration test count passes.",
+    "R0": "Exactly two decision problems by two policy modes are emitted.",
+    "RESOURCE": "The single-process wall-time and memory ceilings hold.",
+    "S0": "Every registered source and environment hash matches.",
+    "U0": "The exact query, target, sample, seed-derivation, and pooling universe is preserved."
+  },
+  "horizon": 2,
+  "parent": "asmp9-sequential-risk-access-v0.41",
+  "population_fixture": {
+    "queries": {
+      "left_q": {
+        "error": "1/4",
+        "signature": [0, 1, 0, 0]
+      },
+      "right_q": {
+        "error": "1/3",
+        "signature": [0, 0, 0, 1]
+      },
+      "root_q": {
+        "error": "1/5",
+        "signature": [0, 0, 1, 1]
+      }
+    },
+    "true_deficiencies": {
+      "4_class_identification/adaptive": "61/135",
+      "4_class_identification/open_loop": "13/25",
+      "root_group_asymmetric/adaptive": "4/45",
+      "root_group_asymmetric/open_loop": "4/45"
+    }
+  },
+  "protocol_id": "asmp9-finite-sample-risk-access-v0.42",
+  "resource_ceiling": {
+    "max_peak_working_set_bytes": 1342177280,
+    "max_wall_seconds": 900,
+    "network": false,
+    "processes": 1
+  },
+  "sampling": {
+    "generator": "keyed BLAKE2b 64-bit streams with exact-modulus rejection sampling",
+    "samples_per_target_query": 48000,
+    "seed_rule": "SHA256(exact registration bytes || NUL || asmp9-v0.42-sampled-confirmation)",
+    "shared_parameter_estimator": "pool four target-specific flip counts within each query",
+    "targets": 4
+  },
+  "status": "prospective_unregistered",
+  "version": "0.42"
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-post-outage-cpu-smoke-v0-1-20260724",
+  "purpose": "Bounded CPU-only control for a post-outage CUDA-server startup hang.",
+  "measurement_contract": {
+    "audit_unit": "one frozen-manifest prompt plus one deterministic pre-sampling next-token probability",
+    "audit_count": 4,
+    "checkpoint_every_audits": 4,
+    "parallel_requests": 1,
+    "precision": "Q4_K_M",
+    "generation_tokens": 1,
+    "gradients": false,
+    "weights_modified": false,
+    "scientific_gate": false
+  },
+  "resource_caps": {
+    "memory_mb": 4096,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 600,
+    "gpu_allowance_mb": 0,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_post_outage_cpu_smoke_v0_1"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_post_outage_cpu_smoke_v0_1\\wrapper",
+  "checkpoint_strategy": "atomic progress.json after four completed audits; bounded replacement retry",
+  "exact_inner_command": [
+    "D:\\Research_Engine\\.venv-train\\Scripts\\python.exe",
+    "C:\\projects\\RSITopology\\scripts\\run_qwen08_completion_audits.py",
+    "--run-id",
+    "asmp8-qwen08-post-outage-cpu-smoke-v0-1-20260724",
+    "--server-path",
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064\\payload\\llama-server.exe",
+    "--model-path",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--prompt-manifest",
+    "C:\\projects\\HybridTRMLDT\\ldt_trm_research_gym_v0_0_2\\ldt_trm_research_gym\\data\\bridge\\qwen08_controller_task_prompt_manifest_v0_1.json",
+    "--output-dir",
+    "D:\\Research_Engine\\runs\\asmp8_qwen08_post_outage_cpu_smoke_v0_1",
+    "--audit-count",
+    "4",
+    "--checkpoint-every",
+    "4",
+    "--warmup-count",
+    "1",
+    "--parallel",
+    "1",
+    "--context-size",
+    "768",
+    "--batch-size",
+    "128",
+    "--ubatch-size",
+    "32",
+    "--gpu-layers",
+    "0",
+    "--threads",
+    "6",
+    "--port",
+    "8820"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  },
+  "claim_boundary": "Post-outage engineering diagnostic only; this is not an ASMP-8 scientific gate."
+}

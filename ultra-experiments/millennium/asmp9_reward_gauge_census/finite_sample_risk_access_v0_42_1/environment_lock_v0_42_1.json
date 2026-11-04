@@ -1,0 +1,13 @@
+{
+  "implementation_commit": "9b2de93a94aa944cc9269c40171f0a88e2cc09c9",
+  "packages": {
+    "numpy": "2.4.3",
+    "psutil": "7.0.0",
+    "pytest": "8.3.3",
+    "scipy": "1.16.2"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python_executable": "C:\\Python311\\python.exe",
+  "python_implementation": "CPython",
+  "python_version": "3.11.4"
+}

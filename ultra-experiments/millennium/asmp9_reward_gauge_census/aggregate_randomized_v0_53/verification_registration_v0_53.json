@@ -1,0 +1,63 @@
+{
+  "claim_boundary": "Exact finite subset-table insufficiency inside classical randomized confidence theory; no novelty, operational desirability, continuous or strategic robustness, physical preference-channel validation, or ASMP-9 resolution.",
+  "expected_family_size": 10,
+  "expected_test_count": 9,
+  "family": {
+    "alpha": "1/2",
+    "common_subset_table": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "deterministic_value": "1/2",
+    "p_numerators_over_20": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "randomized_formula": "1/(4p)",
+    "reference_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "reports": [
+      "0",
+      "1"
+    ],
+    "risk": "1"
+  },
+  "primary_witness": {
+    "first_randomized_value": "5/12",
+    "p_first": "3/5",
+    "p_second": "9/10",
+    "second_randomized_value": "5/18"
+  },
+  "protocol_id": "asmp9-aggregate-randomized-subset-insufficiency-v0.53",
+  "resource_caps": {
+    "peak_working_set_bytes": 268435456,
+    "seconds": 60,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.53-verification-registration-v1",
+  "source_commit": "029622fbe6e4dc00bd06b7c542a464d2ff81d836",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/PRIOR_ART_GATE_v0_53.md": "c26f082c9b86c0cf87300dfa44899b3badef6fc9d76bb955dc0eead352cbd67c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/THEOREM_DRAFT_v0_53.md": "9563dd3d510ba074fa9fbb78d3dcfc5cc7314bca4fb3dc7e5b3fb75688b8bdee",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/VERIFICATION_PROTOCOL_v0_53.md": "28d6a62efa6e63990b01e5c0c5a68accf9d378afaf93b8c2d45b5885a8faa209",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/aggregate_randomized.py": "d8a08820baafc28992df02b737b65b1d9b1e546bd2c1b37f5a0c880632ebd85c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/register_verification_v0_53.py": "fdff014572ae032ea0319c7829a4c98401732a79b6703cce856f59ada4dd6c6f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_aggregate_randomized.py": "a4d77766382efaf543b06837ef6c56f3ece2a9f5c4dc0206da92eececc40a89f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_verifier_v0_53.py": "1eaa841d34a69ac5535a374531ab83b2592a9a2b0a0670d88b71f5b31623a715",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/verify_theorems_v0_53.py": "e0bcb0a5696e7b7e9a9f1a6f9a96aab6e263ee97767381c67a7498b7ae861f94"
+  },
+  "test_command": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_aggregate_randomized.py ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/test_verifier_v0_53.py",
+  "verification_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/aggregate_randomized_v0_53/verify_theorems_v0_53.py"
+}

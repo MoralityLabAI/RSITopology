@@ -1,0 +1,56 @@
+{
+  "schema_version": "qwen_holonomy_jobobject_probe_v0_1",
+  "run_id": "asmp8-qwen08-cuda-throughput-batched-v0-2-20260723",
+  "amends": "protocols/asmp8_qwen08_cuda_throughput_batched_v0_1.json",
+  "amendment_reason": "The installed batched-bench parser rejected the documented long --npp flag. This retry changes only npp/ntg/npl to their accepted single-dash spellings.",
+  "purpose": "Non-claim CUDA prompt-batching scaling benchmark at the frozen manifest mean prompt length.",
+  "measurement_contract": {
+    "model": "Qwen3.5 0.8B Q4_K_M",
+    "prompt_tokens_per_sequence": 128,
+    "manifest_mean_tokens": 127.16840277777777,
+    "parallel_prompts": [1, 2, 4, 8],
+    "generation_tokens": 0,
+    "gradients": false,
+    "weights_modified": false
+  },
+  "resource_caps": {
+    "memory_mb": 2048,
+    "cpu_percent": 50,
+    "io_mb_s": 50,
+    "timeout_seconds": 600,
+    "gpu_allowance_mb": 1800,
+    "checkpoint_every_seconds": 120,
+    "swap_bytes": 0
+  },
+  "capture_parameters": {
+    "output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_cuda_throughput_batched_v0_2"
+  },
+  "wrapper_output_dir": "D:\\Research_Engine\\runs\\asmp8_qwen08_cuda_throughput_batched_v0_2\\wrapper",
+  "checkpoint_strategy": "one native batched-benchmark condition per registered parallel-prompt count",
+  "exact_inner_command": [
+    "D:\\models\\Tesseract\\runtime\\llama.cpp\\b10064-cuda12.4\\payload\\llama-batched-bench.exe",
+    "--model",
+    "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B\\Qwen3.5-0.8B-Q4_K_M.gguf",
+    "--ctx-size",
+    "2048",
+    "--batch-size",
+    "2048",
+    "--ubatch-size",
+    "512",
+    "--n-gpu-layers",
+    "99",
+    "--threads",
+    "6",
+    "-npp",
+    "128",
+    "-ntg",
+    "0",
+    "-npl",
+    "1,2,4,8",
+    "--output-format",
+    "jsonl"
+  ],
+  "cleanup_script": {
+    "path": "C:\\Users\\patri\\.codex\\skills\\hrm-trainer\\scripts\\post_run_memory_cleanup.ps1"
+  }
+}

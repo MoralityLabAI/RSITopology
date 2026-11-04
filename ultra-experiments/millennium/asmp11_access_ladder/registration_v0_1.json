@@ -1,0 +1,24 @@
+{
+  "schema_version": "asmp11_access_ladder_registration_v0_1",
+  "protocol_id": "asmp11.boolean_access_ladder.v0.1",
+  "registered_at_utc": "2026-07-21T00:00:00Z",
+  "status": "prospective_registration_before_claim_eligible_run",
+  "proposed_asmp_id": "ASMP-11",
+  "source_hashes": {
+    "PRIOR_ART_v0_1.md": "1e54c74867500a3879db4b9a55e5044cdc2872b1fb972e709c1de21b21b83988",
+    "PROTOCOL_v0_1.md": "366e42c54d0afcde1535a82ed82dda2c3b0629f694816bcdc30b9c2735389bfa",
+    "README.md": "792458546eaee32822243b80434521a20fbb1d527d52ddb8bc5c0b18ab1bdb93",
+    "access_ladder.py": "4e6b3f0cee00e4906883577b714c68177b139a5ad0c43e7e64adcefe023dea82",
+    "run.py": "a64aceec2e0bd5d2d01b6ea83bede766587a5aaa25df820db323a67d726ffa4a",
+    "test_access_ladder.py": "91ffbfc2084d328435d6ae8d6331c4ee8bb07cb9d67e7cb3555633b82ce84bc1",
+    "verify_result.py": "6d2afcbba420ccfb5cf35cdf1bbbf13606dbb9ff95e55a2a5cb1a0b376e1d798"
+  },
+  "registered_grid": {
+    "parent_variables": 6,
+    "mechanism_degrees": [2, 3, 4, 5, 6],
+    "observation_orders": [0, 1, 2, 3, 4, 5, 6],
+    "intervention_budgets": [0, 1, 2, 3, 4, 5, 6]
+  },
+  "claim_boundary": "Exact Boolean oracle-access instrument only; not a white-box cryptographic lower bound or real-model backdoor result.",
+  "output_policy": "write_once_non_aliasing"
+}

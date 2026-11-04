@@ -1,0 +1,340 @@
+{
+  "elapsed_seconds": 49.347228099999484,
+  "full_pair_cells": [
+    {
+      "bound": 9,
+      "dimension": 2,
+      "elapsed_seconds": 0.21829380001872778,
+      "failure_count": 0,
+      "maximum_constructed_width": 8,
+      "pair_count": 24976,
+      "ray_count": 224,
+      "theorem_width": 8
+    },
+    {
+      "bound": 10,
+      "dimension": 2,
+      "elapsed_seconds": 0.2785429999930784,
+      "failure_count": 0,
+      "maximum_constructed_width": 9,
+      "pair_count": 32640,
+      "ray_count": 256,
+      "theorem_width": 9
+    },
+    {
+      "bound": 11,
+      "dimension": 2,
+      "elapsed_seconds": 0.4742036000243388,
+      "failure_count": 0,
+      "maximum_constructed_width": 10,
+      "pair_count": 56280,
+      "ray_count": 336,
+      "theorem_width": 10
+    },
+    {
+      "bound": 12,
+      "dimension": 2,
+      "elapsed_seconds": 0.6185132999962661,
+      "failure_count": 0,
+      "maximum_constructed_width": 11,
+      "pair_count": 67528,
+      "ray_count": 368,
+      "theorem_width": 11
+    },
+    {
+      "bound": 13,
+      "dimension": 2,
+      "elapsed_seconds": 0.9795523999782745,
+      "failure_count": 0,
+      "maximum_constructed_width": 12,
+      "pair_count": 107416,
+      "ray_count": 464,
+      "theorem_width": 12
+    },
+    {
+      "bound": 14,
+      "dimension": 2,
+      "elapsed_seconds": 1.1558088000165299,
+      "failure_count": 0,
+      "maximum_constructed_width": 13,
+      "pair_count": 130816,
+      "ray_count": 512,
+      "theorem_width": 13
+    },
+    {
+      "bound": 15,
+      "dimension": 2,
+      "elapsed_seconds": 1.4657178000197746,
+      "failure_count": 0,
+      "maximum_constructed_width": 14,
+      "pair_count": 165600,
+      "ray_count": 576,
+      "theorem_width": 14
+    },
+    {
+      "bound": 16,
+      "dimension": 2,
+      "elapsed_seconds": 2.000619700003881,
+      "failure_count": 0,
+      "maximum_constructed_width": 15,
+      "pair_count": 204480,
+      "ray_count": 640,
+      "theorem_width": 15
+    },
+    {
+      "bound": 7,
+      "dimension": 3,
+      "elapsed_seconds": 34.27407949999906,
+      "failure_count": 0,
+      "maximum_constructed_width": 6,
+      "pair_count": 4151521,
+      "ray_count": 2882,
+      "theorem_width": 6
+    },
+    {
+      "bound": 1,
+      "dimension": 6,
+      "elapsed_seconds": 2.4869650999899022,
+      "failure_count": 0,
+      "maximum_constructed_width": 1,
+      "pair_count": 264628,
+      "ray_count": 728,
+      "theorem_width": 1
+    }
+  ],
+  "gates": {
+    "G0_registration_binding": true,
+    "G1_distinct_exact_signs": true,
+    "G2_constructed_width_bound": true,
+    "G3_lower_witness_validity": true,
+    "G4_lower_witness_sharpness": true,
+    "G5_fresh_grid_complete": true
+  },
+  "lower_witness_cells": [
+    {
+      "bound": 129,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 130,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 131,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 132,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 133,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 134,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 135,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 136,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 137,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 138,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 139,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 140,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 141,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 142,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 143,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 144,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 145,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 146,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 147,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 148,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 149,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 150,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 151,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 152,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 153,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 154,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 155,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 156,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 157,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 158,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 159,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    },
+    {
+      "bound": 160,
+      "bounded": true,
+      "narrower_separator_exists": false,
+      "primitive": true
+    }
+  ],
+  "protocol_id": "ASMP-9-EXACT-TIE-WIDTH-v0.4",
+  "random_cells": [
+    {
+      "bound": 4,
+      "dimension": 8,
+      "failure_count": 0,
+      "maximum_constructed_width": 3,
+      "pair_count": 4096,
+      "seed": 90410,
+      "theorem_width": 3
+    },
+    {
+      "bound": 8,
+      "dimension": 16,
+      "failure_count": 0,
+      "maximum_constructed_width": 1,
+      "pair_count": 4096,
+      "seed": 90411,
+      "theorem_width": 7
+    },
+    {
+      "bound": 16,
+      "dimension": 32,
+      "failure_count": 0,
+      "maximum_constructed_width": 1,
+      "pair_count": 4096,
+      "seed": 90412,
+      "theorem_width": 15
+    }
+  ],
+  "registration_commit": "3924a7f5fe45994a34a42764002f7713de80bde9",
+  "registration_sha256": "0dab8e656324f2d93891959232b4c4e2f84019890bf23fcdf6db5e91e0d61418",
+  "verdict": "sharp_exact_tie_width_theorem_implementation_verified"
+}

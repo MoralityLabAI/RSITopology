@@ -1,0 +1,42 @@
+{
+  "bindings": {
+    "protocol_v0_3.json": "b999ee7bdb456457f25c1999d762279501968738625c24521191eca6d3eaafc1",
+    "result_v0_3.json": "a3e96165b58027a98edf17ce5cd007e283ae65059af7ef8f9e36a471da028f8a"
+  },
+  "claim_support": "bounded_exact_grammar_only",
+  "inductive_closure": {
+    "base_case": true,
+    "checked_edges": 1280,
+    "pass": true,
+    "violations": []
+  },
+  "measurement_reliability": "independent_graph_replay_closure_and_digest_passed",
+  "mismatches": [],
+  "operational_decision": "close_toy_horizon_gap",
+  "pass": true,
+  "protocol_closure_matches": true,
+  "replayed_cells": 45,
+  "safe_cycle_replayed": true,
+  "schema_version": "asmp5_inductive_root_verification_v0_3",
+  "source_bindings": {
+    "inductive_root.py": "724e701a8d0acde0353d671128fb577994bf62b1daa41c606b0d9ea6262620e6",
+    "run.py": "ab1170032af1675959c6298c1939b9fa342b4320583f1479bac18fadccec393f",
+    "verify_independent.py": "4349ee53fb2f76be95079f902f9126999afe4b0b31b029e514afb6e9307e6916"
+  },
+  "transition_digest_matches": true,
+  "transition_relation": {
+    "allowed_count": 1088,
+    "checker_count": 16,
+    "radii": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "row_count": 10240,
+    "schema": "root_refinement_transition_truth_table_v1",
+    "sha256": "fecf0df05e101c21713118b32901810c2bccb639d390c188eacd3ba1d19ca925",
+    "template_width": 2
+  }
+}

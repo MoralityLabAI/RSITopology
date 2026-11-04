@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\projects\RSITopology\ultra-experiments\millennium\asmp9_reward_gauge_census\finite_sample_risk_access_v0_42\execute_confirmation_v0_42.py", line 217, in <module>
+    main()
+  File "C:\projects\RSITopology\ultra-experiments\millennium\asmp9_reward_gauge_census\finite_sample_risk_access_v0_42\execute_confirmation_v0_42.py", line 212, in main
+    payload = execute(args.registration.resolve(), args.output.resolve())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\RSITopology\ultra-experiments\millennium\asmp9_reward_gauge_census\finite_sample_risk_access_v0_42\execute_confirmation_v0_42.py", line 167, in execute
+    practical_margins={
+                      ^
+  File "C:\projects\RSITopology\ultra-experiments\millennium\asmp9_reward_gauge_census\finite_sample_risk_access_v0_42\execute_confirmation_v0_42.py", line 168, in <dictcomp>
+    name: float(value)
+          ^^^^^^^^^^^^
+ValueError: could not convert string to float: '1/1000'

@@ -1,0 +1,64 @@
+{
+  "binding": {
+    "commit": "47540897610836280876c03867ab89bd62cdb2b2",
+    "sealed_inputs": {
+      "ultra-experiments/millennium/asmp8_goodhart_frontier_census/README.md": {
+        "git_blob": "9841eb583c7646ca562c5db2ebd3b4fb601d69fd",
+        "sha256": "c9edbe1443df91e693888487a5bbd9086521f836bdb0a28c10a9f0d7d6f61e88"
+      },
+      "ultra-experiments/millennium/asmp8_goodhart_frontier_census/protocol_v0_1.json": {
+        "git_blob": "1dcfddfb4196b4892a54b03a82598ec6ca76df62",
+        "sha256": "c5d36d2f0ad2a5372d4b252ab76be9e5c4c2fa80dd98abebdea4dd13d5540b31"
+      },
+      "ultra-experiments/millennium/asmp8_goodhart_frontier_census/run.py": {
+        "git_blob": "a7784ef6a5bcc1733c0e466e8a70dbca52b01602",
+        "sha256": "96af9736a1a97a84f1756b3c42cc16db70b295e637c329fc46d7b923bd589b4b"
+      },
+      "ultra-experiments/millennium/asmp8_goodhart_frontier_census/test_goodhart_frontier.py": {
+        "git_blob": "690a4af9d6b75cc48dfe11356ef76cf41adf7d8c",
+        "sha256": "43ac69d940825d5dc365e9ebfb499c91bde814a1d5a8a5981b49108f660cdf7a"
+      },
+      "ultra-experiments/millennium/asmp8_goodhart_frontier_census/verify_result.py": {
+        "git_blob": "864e767af9755d0bda178c512ae8ec69554505bc",
+        "sha256": "2af864d5e6d68879e02033563fa69fe4af9ce7c50ba7c82a8093625cfb85c956"
+      }
+    },
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "environment": {
+    "numpy": "2.4.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4"
+  },
+  "outputs": {
+    "RESULT_v0_1.md": {
+      "bytes": 1844,
+      "sha256": "fe5a0d7c355697f70bbf511347a3178e45d04c724465b3ca52797c156a061355"
+    },
+    "alignment_bins_v0_1.csv": {
+      "bytes": 4013,
+      "sha256": "7ff9210a254e26b99a364240a769135ee774c9fe41ba4e2bae465c78cedcb117"
+    },
+    "phase_counts_v0_1.csv": {
+      "bytes": 216,
+      "sha256": "abb5c6fd6592692e06262f3e39965944524fac1f4201cc7591f1137b52bd34b2"
+    },
+    "result_v0_1.json": {
+      "bytes": 48529,
+      "sha256": "1688d040774397f92c4ad0802d00eb5df0d11dc9803aff3cc6a1f9f81e83d2b6"
+    },
+    "witnesses_v0_1.json": {
+      "bytes": 14417,
+      "sha256": "c4a0a34f1de212fd31ac1fa6e371f3ed504c56b7649869a81a1eab225d0c2610"
+    }
+  },
+  "protocol_id": "asmp8.goodhart_frontier.finite_census.v0.1",
+  "resources": {
+    "memory_ceiling": 536870912,
+    "python_peak_bytes": 9144632,
+    "wall_ceiling": 120,
+    "wall_seconds": 2.108075199997984
+  },
+  "schema_version": "asmp8_goodhart_frontier_census_receipt_v0_1",
+  "verdict": "scalar_kl_pressure_rejected_on_registered_class"
+}

@@ -1,0 +1,85 @@
+{
+  "protocol_id": "qwen08_projector_tomography_v0_1",
+  "schema_version": "1.0.0",
+  "status": "frozen_before_causal_run",
+  "frozen_on": "2026-07-19",
+  "purpose": "Measure the interaction order of four gauge-invariant, lineage-certified rank-one residual-stream projectors on held-out graph-reachability prompts.",
+  "claim_boundary": "This experiment can show whether coordinated activation-projector attenuation has stable non-additive effects on a frozen Qwen-0.8B task score. It does not authorize signed or disparate weight edits, establish a global rank-four fiber, demonstrate compactification, or provide evidence of recursive self-improvement.",
+  "model": {
+    "model_id": "Qwen/Qwen3.5-0.8B-Base",
+    "local_path": "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B-Base-HF",
+    "state_id": "base",
+    "quantization": "bitsandbytes_nf4_double_quant_float16_compute",
+    "disable_transformers_caching_allocator_warmup": true,
+    "model_file_sha256": "c2b1e5a17d9c1e27685d92ed9b382911ebb99955ecd89052d1721241adfbab6c"
+  },
+  "source_geometry": {
+    "prompt_manifest": "protocols/qwen08_dense_local_prompt_manifest_v0_1.json",
+    "capture_index": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1\\state_capture_index.json",
+    "capture_root": "D:\\Research_Engine\\runs\\qwen08_dense_local_base_capture_v0_1",
+    "certificate_file": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\lineage_certificates.jsonl",
+    "analysis_result": "D:\\Research_Engine\\runs\\qwen08_dense_local_holonomy_analysis_v0_1\\base--vs--naive_qlora\\analysis_result.json",
+    "behavior_family": "graph_reachability",
+    "context_shard": "shard-00",
+    "basis_half": "construction",
+    "evaluation_half": "geometry_validation",
+    "evaluation_rows_per_subcondition": 8,
+    "site_ids": [
+      "model.layers.11",
+      "model.layers.15",
+      "model.layers.19",
+      "model.layers.23"
+    ],
+    "required_certificate_level": "lineage_certified",
+    "consumer_status": "engineering_evidence_only"
+  },
+  "intervention": {
+    "object": "centered rank-one orthogonal projector at the final prompt token",
+    "formula": "h_prime = h - alpha * v * v^T * (h - mu)",
+    "alpha": 1.0,
+    "gauge_invariance": "The projector vv^T is invariant under v -> -v.",
+    "selected_arm": "top rank-one between-class-scatter direction reconstructed from construction rows",
+    "matched_random_arm": "seeded Haar direction orthogonalized against the selected direction at each site",
+    "random_seed": 2026071901,
+    "cube": "all 16 binary subsets of four site-local projectors",
+    "weight_mutation": false
+  },
+  "outcome": {
+    "completion_template": "\\nANSWER={expected_answer}",
+    "primary": "teacher-forced mean log probability of the registered completion",
+    "intervention_position": "final non-padding prompt token only",
+    "cache": false
+  },
+  "analysis": {
+    "interaction_basis": "Boolean multilinear monomials over the four on/off interventions",
+    "primary_comparison": "leave-one-subcondition-out prediction SSE for degree<=1 versus degree<=2",
+    "higher_order_report": "per-prompt exact order-energy spectrum through degree 4",
+    "cluster_unit": "subcondition_id",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 2026071902,
+    "gates": {
+      "N0_baseline_replay_max_abs_logprob_error": 0.0001,
+      "L0_selected_full_subset_median_abs_delta_min": 0.001,
+      "I1_degree2_relative_sse_reduction_point_min": 0.02,
+      "I1_degree2_relative_sse_reduction_lower95_min": 0.0,
+      "S0_selected_minus_random_interaction_fraction_lower95_min": 0.0
+    }
+  },
+  "resource_contract": {
+    "memory_mb": 6144,
+    "cpu_percent": 50,
+    "io_mb_s": 750,
+    "timeout_seconds": 3600,
+    "gpu_allowance_mb": 3440,
+    "checkpoint_every_seconds": 60,
+    "swap_bytes": 0,
+    "batch_size": 8
+  },
+  "stop_rules": {
+    "certificate_missing": "stop_before_model_load",
+    "source_hash_mismatch": "stop_before_model_load",
+    "resource_cap_abort": "report aborted and retain completed work units",
+    "liveness_failure": "report instrument_not_live; do not interpret interaction order",
+    "gate_failure": "report not_established without threshold changes"
+  }
+}

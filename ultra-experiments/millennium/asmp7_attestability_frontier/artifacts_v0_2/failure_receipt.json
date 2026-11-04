@@ -1,0 +1,10 @@
+{
+  "exception": "ValueError: Exceeds the limit (4300 digits) for integer string conversion",
+  "executed_utc_approx": "2026-07-21T16:00:00Z",
+  "experiment_id": "ASMP-7-EXCLUDED-BAND-DEGRADATION-v0.2",
+  "outcome_files_written": [],
+  "registration_sha256": "ceaea8469a1341a33408f96d75a03b492140adbe9cb3369a419998b34db2ba92",
+  "scientific_status": "unavailable_serialization_failure",
+  "traceback_location": "boundary_frontier.py:certificate_record -> attestability.py:fraction_text",
+  "version": "0.2"
+}

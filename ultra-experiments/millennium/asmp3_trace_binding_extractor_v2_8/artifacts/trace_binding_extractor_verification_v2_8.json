@@ -1,0 +1,18 @@
+{
+  "check_count": 9,
+  "checker": "clean_room_trace_compiler_mutant_firewall_resource_and_parent_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_exhaustive_trace_compiler_reconstructed": true,
+    "V2_all_trace_binding_mutants_reconstructed": true,
+    "V3_decision_only_firewall_reconstructed": true,
+    "V4_all_12_composition_rows_reconstructed": true,
+    "V5_every_rejection_extracts_query_bounded_witness": true,
+    "V6_all_extractor_resources_reconstructed": true,
+    "V7_parent_search_normal_form_and_coupling_contracts_match": true,
+    "V8_all_10_producer_gates_true": true
+  },
+  "claim_boundary": "This checker certifies extraction from trace-complete operational binding. It does not infer that stronger contract from a decision label or from every typed-successor rejection.",
+  "passed": true,
+  "schema_version": "asmp3_trace_binding_extractor_verification_v2_8"
+}

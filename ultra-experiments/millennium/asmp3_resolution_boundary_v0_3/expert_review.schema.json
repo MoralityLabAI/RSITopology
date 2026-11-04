@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "asmp3_v0_3_expert_review.schema.json",
+  "title": "ASMP-3 v0.3 independent expert review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "reviewer",
+    "expertise",
+    "conflicts",
+    "review_track",
+    "release_manifest_sha256",
+    "independent_initial_review",
+    "question_answers",
+    "verdict",
+    "material_issue_found",
+    "repository_storage_permission",
+    "independent_checker"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "asmp3_v0_3_expert_review_v3"
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expertise": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conflicts": {
+      "type": "string"
+    },
+    "review_track": {
+      "enum": [
+        "complexity_and_game_semantics",
+        "probability_noise_and_lower_bound"
+      ]
+    },
+    "release_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[A-F0-9]{64}$"
+    },
+    "independent_initial_review": {
+      "const": true
+    },
+    "question_answers": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question",
+          "answer",
+          "evidence"
+        ],
+        "properties": {
+          "question": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "answer": {
+            "enum": [
+              "yes",
+              "no",
+              "unclear"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "verdict": {
+      "enum": [
+        "accept",
+        "accept_with_nonmaterial_corrections",
+        "major_revision",
+        "reject"
+      ]
+    },
+    "material_issue_found": {
+      "type": "boolean"
+    },
+    "repository_storage_permission": {
+      "type": "boolean"
+    },
+    "independent_checker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "implemented_by_review_team",
+        "artifact",
+        "artifact_sha256",
+        "method",
+        "result"
+      ],
+      "properties": {
+        "implemented_by_review_team": {
+          "type": "boolean"
+        },
+        "artifact": {
+          "type": "string"
+        },
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^$|^[A-F0-9]{64}$"
+        },
+        "method": {
+          "type": "string"
+        },
+        "result": {
+          "enum": [
+            "pass",
+            "fail",
+            "not_run"
+          ]
+        }
+      }
+    }
+  }
+}

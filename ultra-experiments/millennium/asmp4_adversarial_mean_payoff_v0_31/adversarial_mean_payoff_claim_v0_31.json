@@ -1,0 +1,48 @@
+{
+  "schema_version": "asmp4_adversarial_mean_payoff_v0_31",
+  "theorem": {
+    "name": "memoryless-spoiler SCC multicycle region",
+    "formula": "R=intersection_tau union_C upward(conv{cycle means in C})",
+    "polarity": "limsup cost upper bounds equal mean-payoff-inf reward lower bounds under w=R-c",
+    "finite_memory": "the arbitrary-memory region is the closure of its finite-memory subregion"
+  },
+  "central_harness": {
+    "two_state_games": 256,
+    "budget_decisions": 2304,
+    "adversary_policies_per_game": 2,
+    "periodic_approximations": 64,
+    "increasing_memory_stages": 512
+  },
+  "independent_harness": {
+    "two_state_games": 81,
+    "budget_decisions": 1296,
+    "adversarial_policy_checks": 162
+  },
+  "boundaries": {
+    "adversarial_fork_corner": [
+      3,
+      3
+    ],
+    "nonconvex_controller_corners": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "infinite_memory_boundary": [
+      1,
+      1
+    ],
+    "finite_period_slack": "1/(k+1)"
+  },
+  "mutations_rejected": 8,
+  "predecessor_inventory": {
+    "packages": 31,
+    "tests": 344
+  },
+  "disposition": "finite adversarial additive public quotients now have an exact two-port region formula; nonlinear quotient construction remains open"
+}

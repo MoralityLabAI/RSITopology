@@ -1,0 +1,15 @@
+{
+  "schema_version": "confinement-experiment-config-v1",
+  "format_note": "JSON syntax, valid YAML 1.2",
+  "experiment": "06_spin_glass",
+  "run_id": "smoke_v1",
+  "seed": 2026071606,
+  "parameters": {
+    "dimensions": [8],
+    "evaluator_levels": [0.0, 0.5],
+    "disorder_realizations": 1,
+    "starts": 8,
+    "samplers": ["newton_random", "descent_seeded", "ascent_seeded"],
+    "quadratic_weights": [0.0]
+  }
+}

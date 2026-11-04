@@ -1,0 +1,40 @@
+{
+  "schema_version": "asmp9_prime_systemd_privilege_amendment_v0_34_3_2",
+  "status": "prospective_before_first_model_query",
+  "prepared_utc": "2026-07-29T07:34:08.210Z",
+  "amends": {
+    "block_device_amendment_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/PRIME_BLOCK_DEVICE_AMENDMENT_v0_34_3_1.json",
+    "block_device_amendment_sha256": "41567c239c9be6eecfb9a37d431e67a83eb98657f6b2354d11e9bd3fa3f756d5",
+    "git_commit": "9fd4b1a86ec75b61cc378113296cb8e7705c70cc"
+  },
+  "zero_query_abort": {
+    "reason": "The provider's ubuntu account requires privilege to create a transient systemd cgroup; systemd-run refused interactive authentication.",
+    "model_server_started": false,
+    "model_loaded": false,
+    "query_count": 0,
+    "gpu_memory_used_mb_after_abort": 2
+  },
+  "registered_invocation": {
+    "privilege_prefix": [
+      "sudo",
+      "env"
+    ],
+    "environment": {
+      "RUN_ROOT": "/",
+      "REPO_ROOT": "/workspace/asmp9_physical_v0343/repo",
+      "OUTPUT_DIR": "/workspace/asmp9_physical_v0343/output",
+      "REGISTRATION": "/workspace/asmp9_physical_v0343/repo/ultra-experiments/millennium/asmp9_reward_gauge_census/physical_acquisition_v0_34/burned_pilot_registration_v0_34_3.json"
+    },
+    "wrapper": "/workspace/asmp9_physical_v0343/repo/scripts/run_prime_asmp9_v0343_guarded.sh",
+    "wrapper_sha256": "06e302e079dd9ed1af2c7647c2a6cea7612b7ff99425659e1199d7b10d1e84f7"
+  },
+  "mechanical_effect": {
+    "purpose": "Permit the unchanged wrapper to create and enforce the registered systemd cgroup.",
+    "scientific_input_changed": false,
+    "sampling_contract_changed": false,
+    "analysis_contract_changed": false,
+    "resource_cap_changed": false,
+    "wrapper_bytes_changed": false
+  },
+  "claim_boundary": "This amendment supplies the privilege needed to enforce the already registered resource caps before the first model query. It creates no scientific evidence and grants no privilege outside the single owned wrapper invocation."
+}

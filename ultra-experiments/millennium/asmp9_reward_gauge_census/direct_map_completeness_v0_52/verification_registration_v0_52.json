@@ -1,0 +1,88 @@
+{
+  "claim_boundary": "Exact finite deterministic direct-map completeness only; classical Buehler corollary; no novelty, aggregate randomized coverage, continuous or strategic robustness, physical preference-channel validation, or ASMP-9 resolution.",
+  "controls": {
+    "equality_input": [
+      1,
+      2
+    ],
+    "equality_output": [
+      1,
+      2
+    ],
+    "experiment": {
+      "alpha": "1/2",
+      "probability_rows": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "risks": [
+        1,
+        1,
+        2
+      ]
+    },
+    "order": [
+      0,
+      1
+    ],
+    "strict_input": [
+      2,
+      2
+    ],
+    "strict_output": [
+      1,
+      2
+    ],
+    "table": [
+      0,
+      1,
+      1,
+      2
+    ]
+  },
+  "expected_census": {
+    "buehler_validity_mismatch_count": 0,
+    "candidate_direct_map_count": 3996,
+    "consistent_order_check_count": 3342,
+    "dominance_mismatch_count": 0,
+    "global_optimum_check_count": 1480,
+    "global_optimum_mismatch_count": 0,
+    "invalid_direct_map_count": 2502,
+    "reference_grid_count": 10,
+    "strict_dominance_check_count": 2454,
+    "table_count": 148,
+    "valid_direct_map_count": 1494
+  },
+  "expected_test_count": 11,
+  "protocol_id": "asmp9-deterministic-direct-map-completeness-v0.52",
+  "reference_grid": "all positive denominator-six triples summing to one",
+  "resource_caps": {
+    "peak_working_set_bytes": 536870912,
+    "seconds": 120,
+    "workers": 1
+  },
+  "schema": "asmp9-v0.52-verification-registration-v1",
+  "source_commit": "0b9b82f6629c9bd53f16d8bc594b872668e51ce8",
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/PRIOR_ART_GATE_v0_52.md": "87844dac4972b55d5fbf800d3acd9b9b7aae6b98fbee288cb892da99b6ffafb0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/THEOREM_DRAFT_v0_52.md": "f87e14b2603f913b74c34f7148c8df5ce4e10d4f6b2908018c718e223f62f494",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/VERIFICATION_PROTOCOL_v0_52.md": "672f1e1acbb4a843cd7c25406ca58eb0055fdc2b7fc340a44e8de055064e864e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/direct_map_completeness.py": "c745f48b650e59936cde8a2e48af24aa781bdae622bb87fdeabb3333e27e30a9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/register_verification_v0_52.py": "2f170108be5f892e2ff69b8ad016b7c611bba9fd4c548f9c0aae6378721f40a1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/test_direct_map_completeness.py": "4db5030d0f087fd89a345cf0038ef170fff13b8ae556568e024f448975a2808b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/test_verifier_v0_52.py": "ad58912ab1eb9afa56e496525143c6289cf04429c319ea287f48854dacc37006",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/verify_theorems_v0_52.py": "964bf06389dff691898cf630cb7eee95ea1ef19f4361a6bf747e233840b7adc0"
+  },
+  "test_command": "python -m pytest -q -p no:cacheprovider ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/test_direct_map_completeness.py ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/test_verifier_v0_52.py",
+  "verification_command": "python ultra-experiments/millennium/asmp9_reward_gauge_census/direct_map_completeness_v0_52/verify_theorems_v0_52.py"
+}

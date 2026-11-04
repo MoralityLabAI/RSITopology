@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 193.59983479999937,
+  "implementation_commit": "56126229126c8f6cfdacf366deef2b52b1762d5f",
+  "output_hashes": {
+    "RESULT_v0_10.md": "09ed78db19d566e5ed10408768d247aa9a46e21afc412e0e9d267ed6324bf401",
+    "result_v0_10.json": "a4b0910e4b26ec052c21d5baa5558876917f72eeb5c3acbfd89d553f49643cdc"
+  },
+  "protocol_id": "ASMP-9-FINITE-MDP-ACCESS-v0.10",
+  "registration_commit": "f54cbb1402a0b0e95c91b5fb43c94eb2463d2598",
+  "registration_sha256": "ba495fe67efd0ab94ef76ecce3ebccacea89366c029ae7c1130abcba470d5f0e"
+}

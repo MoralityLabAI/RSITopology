@@ -1,0 +1,8 @@
+{
+  "numpy": "2.4.4",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "psutil": "7.0.0",
+  "pytest": "8.3.3",
+  "python": "3.11.4",
+  "scipy": "1.16.2"
+}

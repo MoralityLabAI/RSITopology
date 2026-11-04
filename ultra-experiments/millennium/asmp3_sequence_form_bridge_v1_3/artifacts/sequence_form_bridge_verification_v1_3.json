@@ -1,0 +1,18 @@
+{
+  "check_count": 9,
+  "checker": "clean_room_sequence_constraint_and_dual_reconstruction",
+  "checks": {
+    "V0_schema_parent_status_boundary": true,
+    "V1_matching_registry_and_values_exact": true,
+    "V2_matching_sequence_certificates_reconstructed": true,
+    "V2b_nested_sequence_certificate_reconstructed": true,
+    "V3_concealment_registry_complete": true,
+    "V4_all_concealment_certificates_reconstructed": true,
+    "V5_sequence_compression_counts_exact": true,
+    "V6_imperfect_recall_rejection_recorded": true,
+    "V7_producer_gates_all_true": true
+  },
+  "claim_boundary": "This checker reconstructs the registered one-level signaling families and matching games; it is not an external review of all perfect-recall extensive games.",
+  "passed": true,
+  "schema_version": "asmp3_sequence_form_bridge_verification_v1_3"
+}

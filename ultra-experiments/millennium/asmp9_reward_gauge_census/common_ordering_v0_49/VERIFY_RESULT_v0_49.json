@@ -1,0 +1,116 @@
+{
+  "exhaustive_four_outcome": {
+    "common_chain_mismatches": 0,
+    "expected_ordered_pair_count": 28224,
+    "expected_table_count": 168,
+    "gauge_failures": 0,
+    "ordered_pair_count": 27889,
+    "positive_gauge_pairs": 169,
+    "table_count": 167,
+    "tight_dag_mismatches": 0
+  },
+  "gates": {
+    "D0": false,
+    "G0": true,
+    "H0": true,
+    "M0": true,
+    "RESOURCE": true,
+    "T0": true,
+    "V0": true
+  },
+  "minimal_witness": {
+    "common_optimizer_count": 0,
+    "first_bounds": [
+      "0",
+      "0",
+      "1",
+      "1"
+    ],
+    "first_cross_regret": "1/2",
+    "first_optimum": "1/2",
+    "one_outcome_order_count": 1,
+    "one_parameter_checks": 45,
+    "one_parameter_failures": 0,
+    "second_bounds": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "second_cross_regret": "1/2",
+    "second_optimum": "1/2"
+  },
+  "ok": false,
+  "protocol_id": "asmp9-common-ordering-verification-v0.49",
+  "registration_sha256": "d81ab79bb4544c5163c44f092607b19e04de2544ca1e81b7b97086b8adee3847",
+  "resource": {
+    "elapsed_seconds": 57.352090600004885,
+    "peak_working_set_bytes": 30326784,
+    "worker_processes": 1
+  },
+  "schema": "asmp9-v0.49-theorem-verification-v1",
+  "source_checks": [
+    {
+      "actual": "7cc678bc22e9647493cd5132e169f59c13cd2036eabdb3a84ac0dbb1b73126aa",
+      "expected": "7cc678bc22e9647493cd5132e169f59c13cd2036eabdb3a84ac0dbb1b73126aa",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/DEVELOPMENT_RESULT_v0_49.md"
+    },
+    {
+      "actual": "7383c892c4600e6de89d2286b0dcb5072f1f9fd975890ba769a48d92de648b0d",
+      "expected": "7383c892c4600e6de89d2286b0dcb5072f1f9fd975890ba769a48d92de648b0d",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/PRIOR_ART_GATE_v0_49.md"
+    },
+    {
+      "actual": "ddcea530bd56bbf45974f84fcc780cd4d0adef749c97c79f0a5947747e58dcb7",
+      "expected": "ddcea530bd56bbf45974f84fcc780cd4d0adef749c97c79f0a5947747e58dcb7",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/README.md"
+    },
+    {
+      "actual": "0c6fcf4d743e065ad57fa0235d309c8ba86e557fc8c209ea2457e3a0b9823e79",
+      "expected": "0c6fcf4d743e065ad57fa0235d309c8ba86e557fc8c209ea2457e3a0b9823e79",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/THEOREM_DRAFT_v0_49.md"
+    },
+    {
+      "actual": "bb856aadf2e84e23c8bf6888294cd008aab48e400347c3c24d193a974927290a",
+      "expected": "bb856aadf2e84e23c8bf6888294cd008aab48e400347c3c24d193a974927290a",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/VERIFICATION_PROTOCOL_v0_49.md"
+    },
+    {
+      "actual": "576c4911626977d237a0d9e1ee1cff0c9560ec3f0defa75c6a6aa1973ad57d00",
+      "expected": "576c4911626977d237a0d9e1ee1cff0c9560ec3f0defa75c6a6aa1973ad57d00",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/common_ordering.py"
+    },
+    {
+      "actual": "8562b9c5ed3f80e91d1f1f64aad8c13db4ac578679643c63fc103bf1f3f6cf15",
+      "expected": "8562b9c5ed3f80e91d1f1f64aad8c13db4ac578679643c63fc103bf1f3f6cf15",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/test_common_ordering.py"
+    },
+    {
+      "actual": "eec835144f2a571ca4dce58ce51af6dd02bee0f04cee4f0f3370a9c6473978c4",
+      "expected": "eec835144f2a571ca4dce58ce51af6dd02bee0f04cee4f0f3370a9c6473978c4",
+      "match": true,
+      "path": "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/verify_theorems_v0_49.py"
+    }
+  ],
+  "status": "finite_common_ordering_theorem_not_verified",
+  "tests": {
+    "expected": 7,
+    "ok": true,
+    "output": ".......                                                                  [100%]\n7 passed in 4.25s",
+    "returncode": 0
+  },
+  "v0_48_recovery": {
+    "common_optimizer_count": 1451520,
+    "distinct_required_scale_count": 17,
+    "first_optimizer_count": 1451520,
+    "gauge_scale_status": "no_positive_scale",
+    "second_optimizer_count": 4354560
+  }
+}

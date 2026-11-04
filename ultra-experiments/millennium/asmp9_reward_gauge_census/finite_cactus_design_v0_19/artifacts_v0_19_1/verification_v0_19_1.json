@@ -1,0 +1,21 @@
+{
+  "check_count": 11,
+  "checks": {
+    "all_edge": true,
+    "burned_cache_regression": true,
+    "comparators": true,
+    "dp_cells": true,
+    "fresh_bridge": true,
+    "fresh_factorization": true,
+    "protocol_hash": true,
+    "registered_gate_logic": true,
+    "registration_hash": true,
+    "regressions": true,
+    "sealed_files": true
+  },
+  "pass": true,
+  "protocol_sha256": "950ece8a2d71f73b4b8aa6771b252cadf4b05dd7efb6ba7d9539c3da7407e3dd",
+  "registration_sha256": "394c5be09d570a5621231d1f2633017902ba47b76494994db5ddf4d112c72e0a",
+  "result_sha256": "0a3bd91027dffe097f240f8ecf0d064985845743d5baad3161d257d3b4f1d1d9",
+  "verification_id": "ASMP-9-FINITE-CACTUS-DESIGN-v0.19.1-independent"
+}

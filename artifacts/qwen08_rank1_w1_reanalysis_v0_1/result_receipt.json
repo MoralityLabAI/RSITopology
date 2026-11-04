@@ -1,0 +1,105 @@
+{
+  "schema_version": "qwen08_rank1_w1_compact_result_receipt_v0_1",
+  "run_date": "2026-07-16",
+  "epistemic_status": "retrospective_reanalysis_not_a_new_confirmatory_preregistration",
+  "implementation_commit": "713a406bab9ad09acec153971c6bf543f756abf4",
+  "protocol": {
+    "path": "protocols/qwen08_rank1_w1_reanalysis_v0_1.json",
+    "sha256": "3bcbb8814f4d50094abc640b2fdb7363814277fa1446779327f6a288328803b2"
+  },
+  "external_artifacts": {
+    "authorization": {
+      "path": "D:\\Research_Engine\\authorizations\\qwen08_rank1_w1_reanalysis_v0_1.json",
+      "sha256": "a6f0a5be8089bc29f564245fe9114ae6be714f7890a2ec87e96db6d1267a860c"
+    },
+    "result": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_rank1_w1_reanalysis_v0_1\\result.json",
+      "sha256": "3f80dbe78c48396d106647ee8423122b6f8fd89350aa2cd8d2933eb2da232cad"
+    },
+    "report": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_rank1_w1_reanalysis_v0_1\\REPORT.md",
+      "sha256": "fb342439a1c1df4bf6fceb31b00483835abce9e22bc036bcfc1b5b39c767b99a"
+    },
+    "release_manifest": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_rank1_w1_reanalysis_v0_1\\release_manifest.json",
+      "sha256": "9a43b7f8aa56c41053a551dc8d047b4380448a77e8f13f20073e14f7320376f1"
+    },
+    "wrapper_summary": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_rank1_w1_reanalysis_v0_1\\_wrapper\\wrapper_summary.json",
+      "sha256": "08ea388465eccf1d94249353b312a3c3d04772722bd9e96d14c93387a671bef8"
+    },
+    "cleanup_summary": {
+      "path": "D:\\Research_Engine\\runs\\qwen08_rank1_w1_reanalysis_v0_1\\_wrapper\\cleanup_summary.json",
+      "sha256": "bee0bdd0deb3fc2ab1d69e0b0ddee4b91f2386cb6d27c4af6d982d42aa9a6ec8"
+    }
+  },
+  "site_results": [
+    {
+      "site": "model.layers.11",
+      "beta_1": 3,
+      "construction_generator_signs": [1, 1, 1],
+      "geometry_validation_generator_signs": [1, 1, 1],
+      "w1_zero": true,
+      "classification": "orientable_trivializable_on_admitted_graph"
+    },
+    {
+      "site": "model.layers.19",
+      "beta_1": 2,
+      "construction_generator_signs": [1, 1],
+      "geometry_validation_generator_signs": [1, 1],
+      "w1_zero": true,
+      "classification": "orientable_trivializable_on_admitted_graph"
+    },
+    {
+      "site": "model.layers.23",
+      "beta_1": 3,
+      "construction_generator_signs": [1, 1, 1],
+      "geometry_validation_generator_signs": [1, 1, 1],
+      "w1_zero": true,
+      "classification": "orientable_trivializable_on_admitted_graph"
+    }
+  ],
+  "derived_diagnostics": {
+    "registered_composite_count": 7,
+    "total_constraint_rank_over_gf2": 7,
+    "all_point_predictions_hit": true,
+    "all_observed_resampling_counts": "128/128",
+    "minimum_observed_clopper_pearson_95_lower": 0.9716,
+    "permutation_agreement_count_range": [54, 75],
+    "maximum_permutation_clopper_pearson_95_upper": 0.6723,
+    "descriptive_uniform_class_probability": 0.0078125,
+    "confirmatory_p_value": null,
+    "all_registered_diagnostics_passed": true
+  },
+  "precision": {
+    "float32_float64_analysis_sign_agreement": true,
+    "model_runtime_precision_status": "unavailable_single_4bit_model_capture"
+  },
+  "retrospective_vpd_comparator": {
+    "object": "Qwen3-1.7B VPD weight-component identity construction",
+    "rows": 192,
+    "split_sign_agreement": "192/192",
+    "stable_orientation_reversals": 176,
+    "stable_orientation_preserving": 16,
+    "natural_feature_claim": false,
+    "complete_w1_claim": false
+  },
+  "resource_receipt": {
+    "status": "completed",
+    "exit_code": 0,
+    "elapsed_seconds": 98.277,
+    "peak_ram_mb": 180.012,
+    "memory_cap_mb": 4096,
+    "peak_io_mb_s": 32.064,
+    "io_cap_mb_s": 250,
+    "cpu_percent_reported": 6.627,
+    "cpu_cap_percent": 50,
+    "peak_gpu_mb": 0,
+    "swap_bytes": 0,
+    "cleanup_passed": true
+  },
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false,
+  "downstream_gates_reopened": false
+}

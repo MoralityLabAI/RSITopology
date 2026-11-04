@@ -1,0 +1,27 @@
+{
+  "schema_version": "asmp9_out_of_family_release_manifest_v0_82",
+  "prereveal_commit": "44ff49fd53f1f504f6faf23dc06e744420005f11",
+  "registration_sha256": "9d77e777f020f0e4c696afb1cb15569fd6613dbb256107c988a6ae8aac06417a",
+  "decision": "out_of_family_response_transport_not_established",
+  "files": [
+    {"path": "registration_v0_82.json", "sha256": "9d77e777f020f0e4c696afb1cb15569fd6613dbb256107c988a6ae8aac06417a"},
+    {"path": "authorization_v0_82.json", "sha256": "adb131f0016a49330fe77a38d3b63d32a9a8acd23a766b7770735ad65d370f58"},
+    {"path": "protocol_v0_82.json", "sha256": "01c987076e8182c21e692e571a4d92c71b2ccc2595cc877d0029e23b6681d9ba"},
+    {"path": "scenario_manifest_v0_82.json", "sha256": "e5897f62e7bce6765ff0c3f440347d3e374881c78fbefe18123cbd306201c4aa"},
+    {"path": "prereveal_validation_v0_82.json", "sha256": "1058fc94bbd56f7e1f096e0ba8ac71c482799884fc28cefc41a487fbc36e042b"},
+    {"path": "artifacts_v0_82/records_v0_82.jsonl", "sha256": "0826af13da580bec025881cc0640b3105f914ca6de4ff548c6e5c3d6f170a2dc"},
+    {"path": "artifacts_v0_82/base_analysis_v0_82.json", "sha256": "1bdc894293fa83563da62a1409ba89fe240ec3fb6085b042417726c90ade4766"},
+    {"path": "artifacts_v0_82/base_analysis_receipt_v0_82.json", "sha256": "d833d0a89f981ff5497976a42b0d0257008d5884850c43d6bc5f66b601589b49"},
+    {"path": "artifacts_v0_82/base_decision_v0_82.json", "sha256": "ef8d2dd3e22a9769bd7635b5508f362fdb3a67c1d99a36aaad5fcdc57d01936b"},
+    {"path": "artifacts_v0_82/transport_analysis_v0_82.json", "sha256": "55db7f37082ce482cbb364246db814638237cfc888bd1da157719cead0f65d5c"},
+    {"path": "artifacts_v0_82/transport_receipt_v0_82.json", "sha256": "5627cfeb127ba18cd554aef4db9d1b8f70be74618d4a78521207057b104f3e1a"},
+    {"path": "artifacts_v0_82/independent_audit_v0_82.json", "sha256": "18ddea967d94b9420d54fca45178d03a2bbfc490ba18c074e822a1ae65925304"},
+    {"path": "artifacts_v0_82/completion_summary_v0_82.json", "sha256": "9be4cbab2279cbd97b652f5ee0cb88d0e1c1927b4255ead402da3519734da361"},
+    {"path": "artifacts_v0_82/wrapper_summary_v0_82.json", "sha256": "df20be47ed3d7822e6930d8cc3935ffd0c00fd9b97f2764e1e966f54e23ca27b"},
+    {"path": "artifacts_v0_82/cleanup_summary_v0_82.json", "sha256": "d48e19befe3a9405cc04cb8a980e8e5e8f94c91ddcb2fd2d6245170609ab49ea"},
+    {"path": "artifacts_v0_82/telemetry_v0_82.csv", "sha256": "bfa0c89817e9d2ed1d006b1e82a464cd2cd52d6538cd95d0f0b12354a2bd9191"},
+    {"path": "artifacts_v0_82/runner_events_v0_82.jsonl", "sha256": "f8bcdc3ab7ffb0d4e6a7ba8cb16129ba3ce919c2cdd0ceecb0c043d64ab3bc54"},
+    {"path": "artifacts_v0_82/wrapper_events_v0_82.jsonl", "sha256": "61932a7bc715b2bbffbe2d7b396e220b97ecb86d8420100836c3cb4e13a5e399"}
+  ],
+  "claim_boundary": "Hash manifest for one finite-registry Qwen response-transport result; not an ASMP-9 resolution."
+}

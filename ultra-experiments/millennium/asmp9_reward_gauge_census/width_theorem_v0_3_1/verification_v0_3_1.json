@@ -1,0 +1,12 @@
+{
+  "verdict": "verified",
+  "registration_sha256": "51f9fb42309bf440915968d46523e4a40caa348703cb87ccc2a45b471c108c58",
+  "checks": {
+    "all_gates_pass": true,
+    "corrected_scope": true,
+    "output_hashes": true,
+    "registration_hash": true,
+    "sealed_inputs": true,
+    "verdict": true
+  }
+}

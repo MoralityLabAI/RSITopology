@@ -1,0 +1,22 @@
+{
+  "check_count": 13,
+  "checks": {
+    "all_reported_gates": true,
+    "claim_boundary_preserved": true,
+    "curvature_recomputed": true,
+    "deployment_risks_recomputed": true,
+    "fiber_lp_value_recomputed": true,
+    "good_sets_individually_feasible_and_disjoint": true,
+    "identity": true,
+    "input_hashes": true,
+    "local_counterexample_recomputed": true,
+    "positive_fisher_recomputed": true,
+    "source_laws_recomputed": true,
+    "world_minus_good_set": true,
+    "world_plus_good_set": true
+  },
+  "passed": true,
+  "passed_count": 13,
+  "result_sha256": "4ca74700e0162d034f484c19bf1406a61218ae3e7110c2fac0e37f3ae3a0e2f0",
+  "schema_version": "asmp2_source_fiber_verification_v0_2"
+}

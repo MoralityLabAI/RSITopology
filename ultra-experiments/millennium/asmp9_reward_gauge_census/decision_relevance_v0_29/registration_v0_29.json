@@ -1,0 +1,21 @@
+{
+  "implementation_commit": "c54dde192b432b32feb41625a2db16f073e392b7",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/protocol_v0_29.json",
+  "registered_at_utc": "2026-07-29T04:53:08Z",
+  "registration_id": "ASMP-9-DECISION-RELEVANCE-v0.29-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/DEVELOPMENT_NOTE_v0_29.md": "8e9104a5501895216543b60e9aee7e8f4f5770ae4cde4355b2b75b24f68f57fa",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/PRIOR_ART_GATE_v0_29.md": "1406bb78b970508ab3a7784aea88c8fb8a13b4fdeca2ea26cbe6300b4f0e4bd0",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/README.md": "066bc0a45572b931071302feea25a613f5db0766295e00651aac41fc42d7ced8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/THEOREM_DRAFT_v0_29.md": "4a6b9eb549f40661ca0572fbe0ffaafe80b471845388128c99b87e89ffa33487",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/__init__.py": "0de5b79508d9b692c4492e6fbb05d1efcf0e877b20b3ee82fe8b2bb4ff7d106a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/decision_relevance.py": "ccdde9a5efdd22751f3ba5b0ceef0aaa1a2d649ae38239be30e003d7e0c66437",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/environment_lock_v0_29.json": "460d1f0d6757054bb6490a4ddad4776d8d128995a3f62eac7aec9a251a215837",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/protocol_v0_29.json": "46987f1ada3dffb97e17ab214743a09500a8a10a8cc116493837d510d2ef8d47",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/register_v0_29.py": "cee0482ac23a0fe3c68de875a53fa101907812f98d80b301101669a1a18df0e8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/run_verification_v0_29.py": "f0e54e5a9abc67404e52c6a98e407e49358bc819899dd590feda899536a39f54",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/test_decision_relevance.py": "a324d0dbede9c11e51950c2850532264760fe8a2933ea577d7d1a984d95db51a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/test_protocol_v0_29.py": "826e67be8e25c974f6dbd1d2d14c61df76bb6bcb562669f9f3130661be7bb7ff",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/decision_relevance_v0_29/verify_result_v0_29.py": "4251c2bf3416a46b9b4cf7046b3263f98ff40935409a9ed25613cd839d1e7581"
+  }
+}

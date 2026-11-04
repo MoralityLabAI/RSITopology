@@ -1,0 +1,33 @@
+{
+  "schema_version": "asmp2_active_design_amendment_v0_2_1",
+  "protocol_id": "asmp2.active_design_census.v0.2.1",
+  "parent_protocol": "protocol_v0_2.json",
+  "parent_protocol_sha256": "de42afaa6a1fc3fc2200d4f8f32e1df0b6a80de05da32d19e75c3bfcc9c63168",
+  "amendment_scope": "implementation_performance_only",
+  "scientific_contract_changes": "none",
+  "runner_algorithm": "rank-one null-projector recurrence using the least-significant selected environment as parent",
+  "verifier_algorithm": "independent rank-one null-projector recurrence using the most-significant selected environment as parent",
+  "residual_squared_rank_tolerance": 1e-10,
+  "score_chunk_size": 4096,
+  "required_cross_algorithm_check": "quantized complete-census digests must match",
+  "resource_ceiling": {
+    "wall_seconds": 180,
+    "python_peak_bytes": 1073741824,
+    "gpu_hours": 0,
+    "on_exceed": "unavailable_resource_cap"
+  },
+  "frozen_parent_fields": [
+    "dimension",
+    "environment_encoding",
+    "feature_basis",
+    "deployment_families",
+    "budgets",
+    "scientific_budgets",
+    "selectors",
+    "numeric_contract",
+    "scientific_thresholds",
+    "instrument_gates",
+    "evidence_labels",
+    "prohibited_claims"
+  ]
+}

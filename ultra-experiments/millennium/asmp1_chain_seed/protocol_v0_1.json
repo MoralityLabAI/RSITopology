@@ -1,0 +1,62 @@
+{
+  "schema_version": "asmp1_finite_chain_protocol_v0_1",
+  "status": "registered_before_full_enumeration",
+  "date": "2026-07-18",
+  "parent_problem": "ASMP-1",
+  "title": "Finite cut-response and intervention-design identifiability seed",
+  "object": {
+    "graph": "X -> H -> Y",
+    "sets": "finite labelled X and Y; hidden H labels are gauge",
+    "mechanisms": "all deterministic maps h:X->H and g:H->Y",
+    "environment": "every x in X",
+    "interventions": "do(H=a) for every a in H",
+    "observed": "all g(h(x)) and all g(a), with the hidden intervention interface relabelled by the same gauge",
+    "gauge_group": "Sym(H), acting as h -> pi composed with h and g -> g composed with pi inverse"
+  },
+  "predeclared_theorem": {
+    "unrestricted_hidden_use": "Compatible gauge orbits are in bijection with a set partition of each environment-output fiber X_y into at most k_y=|g^-1(y)| blocks. Their count is product_y sum_{j=0}^{k_y} S(n_y,j).",
+    "surjective_hidden_use": "If h is surjective, compatible gauge orbits are in bijection with partitions of X_y into exactly k_y blocks. Their count is product_y S(n_y,k_y).",
+    "identifiability_unrestricted": "Exactly when every output y has n_y<=1 or k_y<=1.",
+    "identifiability_surjective": "Exactly when every realized output y has k_y=1 or k_y=n_y."
+  },
+  "registered_counterexample": {
+    "X_size": 4,
+    "H_size": 3,
+    "Y_size": 2,
+    "g": [0, 0, 1],
+    "h_left": [0, 0, 1, 2],
+    "h_right": [0, 1, 1, 2],
+    "expected_compatible_surjective_orbits": 3,
+    "interpretation": "All input configurations and all hidden interventions are registered, g and both h maps are surjective, but the two h maps induce different input partitions and are not related by one hidden relabeling."
+  },
+  "registered_singleton_do_counterexample": {
+    "graph": "three independent fair Boolean parents X1,X2,X3 -> observed Boolean Y",
+    "f_one_set": [3, 4, 7],
+    "g_one_set": [3, 5, 6],
+    "measurements": "passive output count and every singleton perfect-intervention output count do(X_i=b); corresponding means are fixed row-scalings but the sealed receipt stores integer counts",
+    "input_gauge": "parent-coordinate permutations and parent-bit flips",
+    "output_labels": "observed Boolean labels 0 and 1 are frozen semantic labels, not gauge",
+    "expected_design_rank": 4,
+    "truth_table_dimension": 8,
+    "expected_result": "identical registered integer-count measurements, every parent essential, distinct registered input-gauge orbits, and truth-table difference in the exact design kernel",
+    "interpretation": "Singleton cut coverage sees only the constant and first-order Boolean interaction subspace; higher-order interactions remain unidentified."
+  },
+  "full_grid": {
+    "input_size": [1, 5],
+    "hidden_size": [1, 4],
+    "output_size": [1, 3],
+    "maps": "exhaustive",
+    "arithmetic": "exact integers only"
+  },
+  "gates": {
+    "G1": "zero orbit-count mismatches against the partition formula and exact analytic model/surjection census on every full-grid cell",
+    "G2": "every one of model_count times |Sym(H)| registered hidden relabelings is enumerated and preserves the observation signature",
+    "G3": "the registered counterexample has one observation signature and two distinct gauge orbits, with all stated surjectivity checks passing",
+    "G4": "when |H|=|Y|=2 and g and h are surjective, every observation signature has exactly one compatible gauge orbit",
+    "G5": "the registered three-parent singleton-do pair has identical measurements, distinct gauge orbits, all parents essential, exact design rank 4 of 8, and difference vector in the design kernel",
+    "G6": "the executed chain/star fixtures and expected counts exactly match the registered protocol values",
+    "G7": "the current output path passes non-aliasing and write-once preflight, the runner writes exclusively, and it emits a SHA-256 sidecar",
+    "G8": "the run records the registration commit and argv, verifies source/protocol/theorem bytes equal their committed blobs before enumeration, and rejects any pre/post hash change"
+  },
+  "claim_boundary": "The mathematical proof establishes the finite-chain counting theorem. A pass exhaustively verifies only the registered bounded grid and implementation, and verifies two exact finite counterexamples to bare cut coverage: downstream state aliasing and singleton-intervention rank deficiency. It does not turn bounded enumeration into a proof of the universal theorem, resolve the generic analytic ASMP-1 conjecture, establish transformer identifiability, or justify a causal abstraction outside the registered finite models."
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "percolation_phase_compact_result_receipt_v0_1",
+  "epistemic_status": "synthetic_model_only_phase_calibration",
+  "implementation_commit": "28ad382f06f3cb076924fd4992cb37f3aff11508",
+  "protocol": {
+    "path": "protocols/percolation_phase_v0_1.json",
+    "sha256": "56a28cf14da64662141d6c3fb1000e7ddbbc3ea8ada80141b0264d0fdf0386a6"
+  },
+  "configs": {
+    "smoke": {
+      "path": "configs/smoke/07_percolation_phase.yaml",
+      "sha256": "80c589dbd469e46c2d3c4a4ff98fa691123cf744376b219fa3d018a72020c27c"
+    },
+    "pilot": {
+      "path": "configs/pilot/07_percolation_phase.yaml",
+      "sha256": "9ce79feffb611d49281b120e02144a43dd88c9334466cf8a393af2399785ea04"
+    }
+  },
+  "external_artifacts": {
+    "smoke_authorization": {
+      "path": "D:\\Research_Engine\\authorizations\\percolation_phase_smoke_v1.json",
+      "sha256": "5e65a888c69f2b9a2fe9a9bbf1b1ca1afd0a2382cee055653d93177aca4c48ee"
+    },
+    "pilot_authorization": {
+      "path": "D:\\Research_Engine\\authorizations\\percolation_phase_pilot_v1.json",
+      "sha256": "081f06e0f8562f7e87aa41dfbd3fdd39797ebb14b04b5fff08d4143b0a82787d"
+    },
+    "smoke_run_receipt": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\07_percolation_phase\\smoke_v1\\run_receipt.json",
+      "sha256": "45c288312ba11c64b842fc551b6c3348fda6c23d349ce31efced83546f0c39d6"
+    },
+    "pilot_run_receipt": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\07_percolation_phase\\pilot_v1\\run_receipt.json",
+      "sha256": "1eaa88d9d60b8d7595804c36f7dbf64e8339244966d779c15a8adead8b2efee2"
+    },
+    "pilot_metrics": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\07_percolation_phase\\pilot_v1\\metrics.json",
+      "sha256": "30c861338f4763139d0e4a70bd8529accc959d63dd4594f35cd452af82efbad7"
+    },
+    "pilot_checksums": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\07_percolation_phase\\pilot_v1\\checksums.json",
+      "sha256": "54beba335276648e4a463a691f1e4962d8c53a449839e18e8ca2306e16e50b4a"
+    },
+    "pilot_figure": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\07_percolation_phase\\pilot_v1\\figure.png",
+      "sha256": "853fe222c9fb8eb69dc8cc2b767da45f6c8601f2a44bdfbabdc0010ff126e93f"
+    },
+    "pilot_wrapper_events": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\_wrapper\\pilot_v1\\wrapper_events.jsonl",
+      "sha256": "f6a4c1fbc09f27d0bf1eb064492219e2774bacd90626232cfc430fd5067e9632"
+    },
+    "pilot_wrapper_summary_after_replay": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\_wrapper\\pilot_v1\\wrapper_summary.json",
+      "sha256": "89300334f9ccac1a76f5a8689b976b80f88ebe260c157f20c1eb724fe2d0cd0c"
+    },
+    "pilot_cleanup_after_replay": {
+      "path": "D:\\Research_Engine\\runs\\confinement_percolation\\_wrapper\\pilot_v1\\cleanup_summary.json",
+      "sha256": "0d3014017cbd66c1bbbb6c57c47faf58a3296cf233e1fb7730c71e4fd985ec11"
+    }
+  },
+  "work_units": {"smoke": 24, "pilot": 384},
+  "registered_gates": {
+    "registered_loop_threshold_never_exceeds_cycle_threshold": true,
+    "q_zero_connected_graphs_are_coherent": true,
+    "sign_noise_treatment_exposure": true,
+    "named_retention_nulls_present": true,
+    "all_registered_gates_pass": true
+  },
+  "pilot_observations": {
+    "finite_sizes": [4, 6],
+    "observed_c4_tau_0_85_frustrated_frequency_by_q": {
+      "0.0": 0.0,
+      "0.05": 0.25,
+      "0.15": 1.0,
+      "0.5": 0.75
+    },
+    "observed_c6_tau_0_85_frustrated_frequency_by_q": {
+      "0.0": 0.0,
+      "0.05": 0.25,
+      "0.15": 1.0,
+      "0.5": 1.0
+    },
+    "observed_mean_critical_floors_c6": {
+      "tau_conn": 0.8841540638058311,
+      "tau_cycle": 0.910631345164324,
+      "tau_loop": 0.910631345164324
+    },
+    "threshold_nonordering_observed": true,
+    "byte_identical_pilot_replay": true
+  },
+  "resource_receipt_after_replay": {
+    "status": "completed",
+    "memory_cap_mb": 2048,
+    "cpu_cap_percent": 50,
+    "io_cap_mb_s": 50,
+    "swap_bytes": 0,
+    "peak_ram_mb": 178.262,
+    "peak_io_mb_s": 16.076,
+    "peak_gpu_mb": 0,
+    "cleanup_passed": true
+  },
+  "claim_boundary": "Synthetic finite-graph calibration only; no transformer, ALife, causal, edit, VPD, recursive-improvement, or RSI claim and no new attestation level.",
+  "outcomes_consumed": false,
+  "weight_mutation_performed": false,
+  "new_invariant_levels": false
+}

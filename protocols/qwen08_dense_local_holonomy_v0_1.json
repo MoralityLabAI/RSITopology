@@ -1,0 +1,103 @@
+{
+  "protocol_id": "qwen08_dense_local_holonomy_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_not_run",
+  "registered_on": "2026-07-16",
+  "scientific_parent": {
+    "protocol": "qwen08_between_class_support_recovery_v0_1",
+    "result_sha256": "f0a65b82cb580f4e139d3aaf3674e24959be0e39af5aa89b4089be25515f396b",
+    "branch_decision": "advance_to_denser_local_capture"
+  },
+  "purpose": "Falsify or recover local context-by-checkpoint identity geometry after the pooled global between-class object passed and the two-replica local object failed.",
+  "claim_boundary": "This is a development-model geometry experiment. It may establish local lineage, cycle availability, and noise-valid discrete holonomy on the frozen Qwen3.5-0.8B grid. It cannot establish semantic identity, causal edit value, VPD efficacy, capability preservation, compactification, recursive improvement, or RSI.",
+  "states": [
+    "base",
+    "naive_qlora"
+  ],
+  "state_axis_interpretation": "Engineering checkpoint axis only; the naive adapter is not an efficacy comparator.",
+  "sites": [
+    "model.layers.11",
+    "model.layers.15",
+    "model.layers.19",
+    "model.layers.23"
+  ],
+  "prompt_design": {
+    "seed": 2026071607,
+    "families": [
+      "affine_recurrence",
+      "symbol_transport",
+      "grid_rotation",
+      "graph_reachability"
+    ],
+    "subconditions_per_family": 9,
+    "context_shards": 4,
+    "halves": [
+      "construction",
+      "geometry_validation"
+    ],
+    "prompts_per_subcondition_per_half_per_shard": 16,
+    "prompts_per_state": 4608,
+    "zero_byte_overlap_required_with": [
+      "godel_globes_prompt_manifest_v0_1",
+      "qwen_holonomy_causal_outer_manifest_v0_1_1"
+    ]
+  },
+  "capture": {
+    "activation_object": "first tensor in residual-block output at the final non-padding prompt token",
+    "batch_size": 4,
+    "quantization": "bitsandbytes_nf4_double_quant_float16_compute",
+    "one_state_per_process": true,
+    "outcomes_read": false,
+    "generation": false,
+    "gradients": false,
+    "weight_mutation": false,
+    "proven_cap_profile": {
+      "memory_mb": 6144,
+      "cpu_percent": 50,
+      "io_mb_s": 750,
+      "timeout_seconds": 3600,
+      "gpu_allowance_mb": 3440,
+      "swap_bytes": 0
+    }
+  },
+  "primary_object": {
+    "kind": "cross_fitted_between_class_scatter",
+    "ranks": [1, 2, 3, 4, 5, 6, 7, 8],
+    "bootstrap_and_permutation_replicates": 128,
+    "minimum_strict_null_margin": 0.02,
+    "common_rank_rule": "For each site x family cell, choose the largest rank passing at every state x context node. No passing common rank stops that cell before graph construction."
+  },
+  "bifiltration": {
+    "lineage_floor": 0.9,
+    "nodes_per_cell": 8,
+    "possible_edges_per_connected_cell": 10,
+    "elementary_rectangles_per_cell": 3,
+    "connected_cycle_rank": 3,
+    "formula": "beta_1 = |E_tau| - |V| + c(G_tau)",
+    "beta_1_zero": "holonomy_unavailable"
+  },
+  "holonomy": {
+    "prompt_resampling_replicates": 128,
+    "orientation_reversal": "categorical denial; suppress canonical angles",
+    "construction_validation_agreement": "determinant component agrees and maximum-angle difference is at most max(1 degree, matched-noise upper 95)",
+    "noise_valid": "validation maximum canonical angle exceeds the matched flat-estimation-noise upper 95",
+    "budget": {
+      "maximum_canonical_angle_degrees": 5.0,
+      "maximum_identity_loss": 0.05
+    }
+  },
+  "aggregate_gate": {
+    "minimum_distinct_sites": 3,
+    "minimum_distinct_families": 2,
+    "causal_outer_opens_only_if": "At least one orientation-preserving loop is admitted, construction/validation-stable, and above its noise floor, while the aggregate site/family gate passes."
+  },
+  "fixed_stop_states": {
+    "no_common_supported_rank": "reject_local_between_class_object_at_development_scale",
+    "beta_1_zero": "holonomy_unavailable",
+    "loops_below_noise": "lineage_only_no_noise_valid_holonomy",
+    "geometry_without_aggregate_support": "engineering_geometry_only",
+    "noise_valid_aggregate_loops": "open_frozen_causal_outer_stage"
+  },
+  "qwen17_confirmation": "Blocked unless the development run opens the frozen causal outer stage and that causal stage passes its preregistered incremental-prediction and directional-dose gates.",
+  "new_invariant_levels": false
+}

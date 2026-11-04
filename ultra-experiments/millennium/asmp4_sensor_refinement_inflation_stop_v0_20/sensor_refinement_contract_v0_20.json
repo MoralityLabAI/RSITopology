@@ -1,0 +1,23 @@
+{
+  "schema_version": "asmp4_sensor_refinement_contract_v0_20",
+  "base": "any feasible finite registered raw sensor transducer with observer A and language L_T",
+  "refinement": {
+    "parameter": "positive integer m",
+    "alphabet": "Y_m=Y x {0,...,m-1}",
+    "support": "E_m(s,z) contains ((y,j),s') for every (y,s') in E(s,z) and every color j",
+    "color_semantics": "registered raw label with no effect on q, sensor successor, plant, or actuator"
+  },
+  "forced_raw_theorem": {
+    "feasibility": "invariant under refinement",
+    "belief_graph": "unchanged after forgetting colors",
+    "adjacency": "A_m=mA",
+    "language": "L_T(m)=m^T L_T",
+    "read_corner": "base read corner + log2(m)",
+    "write_counts": "unchanged"
+  },
+  "coarsened_theorem": {
+    "map": "pi(y,j)=y",
+    "effect": "recovers the base transducer and base read corner"
+  },
+  "stop_rule": "a plant-only forced-raw h_read cannot be canonical until the problem chooses a sensor experiment or an allowed sufficient-statistic quotient"
+}

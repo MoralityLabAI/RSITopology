@@ -1,0 +1,29 @@
+{
+  "schema_version": "asmp4_closure_stop_audit_v0_32",
+  "canonical_requirements": {
+    "count": 5,
+    "full_scope_proved": 0,
+    "conditional_evidence_rows": 5
+  },
+  "closed_conditional_layers": {
+    "count": 7,
+    "range": "v0.25-v0.31",
+    "includes_finite_adversarial_region": true,
+    "includes_three_nonadditive_factor_laws": true
+  },
+  "residual_root": {
+    "formal_registered_class": "missing",
+    "public_abstraction_or_replacement": "missing",
+    "global_finite_horizon_margin": "missing",
+    "finite_additive_region_computation": "closed"
+  },
+  "sealed_resources": 5,
+  "mutations_rejected": 8,
+  "reopening_conditions": 4,
+  "predecessor_inventory": {
+    "packages": 32,
+    "tests": 354
+  },
+  "decision": "convincing_harness_backed_operational_stop_on_autonomous_bounded_expansion",
+  "nonclaim": "ASMP-4 is not fully resolved; the stop requests a formal class plus abstraction theorem or external adjudication"
+}

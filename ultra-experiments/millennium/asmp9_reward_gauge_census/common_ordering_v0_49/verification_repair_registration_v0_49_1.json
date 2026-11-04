@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "Post-outcome universe-count repair only. No theorem value, witness, enumeration row, test, or scientific gate may change.",
+  "corrected_admissible_table_count": 167,
+  "corrected_ordered_pair_count": 27889,
+  "original_expected_table_count": 168,
+  "original_verification_sha256": "c31af79810f3cb29e85a19335a47cf4277b5de87ad2d25a87ffd210c8893803e",
+  "protocol_id": "asmp9-common-ordering-verification-repair-v0.49.1",
+  "registered_at": "2026-07-29T11:02:46-04:00",
+  "repair_source_commit": "2399cd04da172a326334c9691c391638746a3b6c",
+  "scientific_changes_permitted": false,
+  "source_sha256": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/UNIVERSE_REPAIR_PROTOCOL_v0_49_1.md": "8867960b753fe77b0cd793ecfc9114b7cb1245f244a4bdfe9e506bbccc1bd938",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/VERIFY_RESULT_v0_49.json": "c31af79810f3cb29e85a19335a47cf4277b5de87ad2d25a87ffd210c8893803e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/test_universe_repair_v0_49_1.py": "cd4ea177d9128eca09427028d1811c14aa8b9080af4a86198e660b6196b294e3",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/verification_registration_v0_49.json": "d81ab79bb4544c5163c44f092607b19e04de2544ca1e81b7b97086b8adee3847",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/common_ordering_v0_49/verify_theorems_v0_49_1.py": "e87ce785c326485c1516f735983f825241eaba21fd9068fe64dff69d85b2a0cc"
+  },
+  "status": "registered_after_count_mismatch_for_verifier_only",
+  "version": "0.49.1"
+}

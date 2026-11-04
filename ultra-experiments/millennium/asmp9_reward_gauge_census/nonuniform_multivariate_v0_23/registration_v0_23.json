@@ -1,0 +1,25 @@
+{
+  "implementation_commit": "1383f21c7a53e1d273d4139f95cff0c336d77e5f",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/protocol_v0_23.json",
+  "registered_at_utc": "2026-07-29T03:04:08Z",
+  "registration_id": "ASMP-9-NONUNIFORM-MULTIVARIATE-v0.23-registration",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/RESOLUTION_AUDIT_v0_22_1.md": "910432fbdc633dd0e26c37c7d3fba590ddd019c5dc09c291d40a356c22e7b00a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/DEVELOPMENT_NOTE_v0_23.md": "1bf0d489723be0b3b7a4514d7ea9561704c9a3f8732954e26e0a2cc2a1284069",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/PRIOR_ART_GATE_v0_23.md": "78938ba5ea47354f609e948996b85c31d54313f5b8e15bc28460bd5bf457ca11",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/README.md": "bac3b4a6f33e445059805711dc5a10d16b5557bf2d45378b6cd0b3dface52a36",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/THEORY_DRAFT_v0_23.md": "89c84e63ba3df67755a1b270c409760c0f964313409c5610bf557ab48c17efd7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/environment_lock_v0_23.json": "f0ec168c7dd89792b310363af0ccfb731efa2b5d3096901662f935d007c08de9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/nonuniform_multivariate.py": "2bd903832a42ef0d199ec7c0e7255c776d21f9d77271472db706c04c8eb1105e",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/protocol_v0_23.json": "e68062bfb327279b64a482e125cdb47dc0992cce5f8c658b9d34f065a41fa451",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/register_v0_23.py": "74777aa4769bdc9786df111bd908c993a73b24f9df67821ff0284c7a28937210",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/run_verification_v0_23.py": "b59960591028a99e12bce5c6d1b29375dab2e9aa6b828c6b5dcf01e143c2f111",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/test_nonuniform_multivariate_v0_23.py": "0574cec488461de1f3e88a49ee04ae414af3c628d77a782aad5bcb850c89b197",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/test_protocol_v0_23.py": "5e888a92372fdd2fe7146a3b6ab3e3ad04dd9ca4cd73dbb2ff8555f378cf22a8",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/nonuniform_multivariate_v0_23/verify_result_v0_23.py": "dc0fd2e4377d4ea09c20b437a64aefe40ee6ef40845d5d3cfafd74ed090ef532",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/artifacts_v0_22_1/RESULT_v0_22_1.md": "c913cb77f24e587dccd21925762953a722ed5c1271a541900f776b682e1d4daf",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/artifacts_v0_22_1/result_v0_22_1.json": "a1039daf298ba89e20c7ca8eccfee9f3428a57712de40043184b1824f01afd5b",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/burned_graph_registry_v0_22_1.json": "c4352bebc224ba657e3464abda6b293d2ad6ccbac8f2644400a93c6d59d5187f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/uniform_above_floor_v0_22_1/registration_v0_22_1.json": "ce2038c8a0277acada81cc4206d5ec2f2b703c98a861dd3423f0677094743420"
+  }
+}

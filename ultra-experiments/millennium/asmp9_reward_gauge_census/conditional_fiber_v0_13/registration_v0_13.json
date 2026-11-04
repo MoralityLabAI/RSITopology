@@ -1,0 +1,26 @@
+{
+  "registration_id": "ASMP-9-CONDITIONAL-FIBER-v0.13-registration",
+  "registered_at_utc": "2026-07-28T21:21:46Z",
+  "implementation_commit": "f1311be75bb3e88dfcd9a4d905c4b82d1998c51e",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/README.md": "990539d8d50c81e511bac44a21a827c194ac38c01a697637faaeb8b04c68e4ba",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PRIOR_ART_GATE_v0_13.md": "b07bdb4e54ebf9f4b6451ae123d14557d76da44aba653c0dac315eb24f0e66a7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/THEOREM_DRAFT_v0_13.md": "663330645b9b7a1f38c29e8907c242e977926b78df87bc37e09b97ec88d23db7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/THEOREM_v0_13.md": "02f750b26c9edd13d7f55da298f619d02d4ced76c9adf430a3387d4e8e577ee4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/DEVELOPMENT_NOTE_v0_13.md": "ab3c896e799f4a6a1b80eb176d0d60c4230254138addffcddf462de51e54d035",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/DEVELOPMENT_CENSUS_v0_13.json": "40067d8db440969e5ff4f7bf3bc7531cec77ec8a7edb9b674262c12d86d347ee",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/DEVELOPMENT_RECEIPT_v0_13.json": "b0f8dea2c1810220bcbc985ed3f5d2367f14dc8888b7cf9c256fe52308c3bca1",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/conditional_fiber.py": "2399501b0cf87c90cae330b961e76b6261ebca0bf7ac901e5820291c51ac3899",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/development_census.py": "0a01aa2ad002b6af48d4b7ad1c5970347c6752db3052af661ee5afc1c580f847",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_conditional_fiber.py": "7a9dce8906943c698a5ed40332b4663f897265234c65f575f7af26ea56332271",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/PROTOCOL_v0_13.md": "284356aae90921674dd08df8a689664de2537f02bba12ffce65fe596329bebe4",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/protocol_v0_13.json": "a20ece040c9c4621788dc5a0efeee0806c62655e145b227b09157f91cf0322c9",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/environment_v0_13.json": "22e5e7ef85f1ac0ed9552efee8535064986df8c3b43a90120ab6eaf450c3f9dd",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/experiment.py": "e86a8912d31ea4998ab07945f5a32530bc9edba2b127f3b1e14b09b82a9e4843",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_experiment.py": "460754d13d50d89507fa5a131671ac29513fe7dd2bf8a1b1ccb3d91664ea15be",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/run_verification.py": "708c1ea8781d6e9cbf5e1cc848dd537ab2eb354673a1ebf059fa4c1b3b6f4e98",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/test_run_verification.py": "0917fabdf4a3a5e07b29f3105de46868a96fba15ecdaebccbc03ebe97534344c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/conditional_fiber_v0_13/verify_result.py": "b41fa4cb6b1bc54234a887e48482e1849c293ba09888d0e6fe96c936f2ecd2ba"
+  }
+}

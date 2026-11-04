@@ -1,0 +1,59 @@
+{
+  "protocol_id": "ultra.transient_amplification.v0.1",
+  "status": "frozen_before_pilot",
+  "scientific_scope": "CPU-synthetic instrument validation; not transformer or RSI evidence",
+  "claim": {
+    "formal": "For x_(t+1)=A x_t in a frozen positive-definite metric M, every initial state with ||x_0||_M <= delta remains inside ||x_t||_M <= b for 0<=t<=T if and only if delta * G_T(A;M) <= b, where G_T(A;M)=max_t ||M^(1/2) A^t M^(-1/2)||_2.",
+    "control_failure": "A spectral-radius-only gate can pass while the exact finite-horizon gate fails when rho(A)<1 but delta*G_T(A;M)>b.",
+    "label_if_proved": "conditional_theorem",
+    "application_boundary": "A fitted local edit or response Jacobian may be screened for finite-horizon amplification; this does not establish that the linearization remains valid for finite model edits."
+  },
+  "primary_fixture": {
+    "dimension": 8,
+    "decay_eigenvalue": 0.9,
+    "normal_matrix": "0.9 * I",
+    "nonnormal_matrix": "0.9 * I + kappa * N, where N has ones on the first superdiagonal",
+    "coupling_grid": [0.0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225, 0.25],
+    "horizon": 40,
+    "initial_radius": 0.05,
+    "safety_radius": 0.5,
+    "metric": "Euclidean identity"
+  },
+  "liveness": {
+    "must_pass_case": "kappa=0: spectral and finite-horizon gates both pass",
+    "must_fail_case": "at least one registered kappa: rho(A)<1 while the exact finite-horizon gate fails",
+    "forced_status_rule": "If all registered couplings receive the same finite-horizon decision, the separation claim is forced_or_vacuous or instrument_failed, not confirmed."
+  },
+  "matched_controls": [
+    "all matrices have exactly the same eigenvalue multiset",
+    "normal control uses the same dimension, horizon, initial radius, safety radius, and metric",
+    "joint coordinate changes transform both A and M and must leave G_T invariant",
+    "a coordinate change applied to A without transforming M is reported as a different physical metric, not an invariance test"
+  ],
+  "gates": {
+    "G0_eigenvalue_match": "maximum sorted-eigenvalue discrepancy <= 1e-10",
+    "G1_exact_witness": "the top right singular vector at the maximizing time reproduces delta*G_T within 1e-10",
+    "G2_decision_accuracy": "singular-value gate agrees with exhaustive registered direction probes plus the exact witness for every coupling",
+    "G3_spectral_blind_spot": "spectral gate passes every coupling and disagrees with the exact finite-horizon gate for at least one coupling",
+    "G4_metric_covariance": "random invertible reframings with jointly transformed metrics preserve G_T to relative error <= 1e-8"
+  },
+  "registered_direction_probes": {
+    "seed": 17072026,
+    "count_per_matrix": 4096,
+    "distribution": "uniform unit directions from normalized iid standard normals",
+    "role": "lower-bound red-team coverage only; the exact singular-vector witness determines the universal decision"
+  },
+  "outputs": [
+    "protocol_sha256",
+    "per_coupling.csv",
+    "summary.json",
+    "transient_phase.png",
+    "receipt.json"
+  ],
+  "prohibited_claims": [
+    "recursive self-improvement exists",
+    "a transformer edit actually follows the planted Jordan-chain dynamics",
+    "spectral radius is useless in general",
+    "the synthetic fixture establishes a real-model safety threshold"
+  ]
+}

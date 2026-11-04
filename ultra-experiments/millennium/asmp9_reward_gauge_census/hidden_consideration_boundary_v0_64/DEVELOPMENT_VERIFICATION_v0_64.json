@@ -1,0 +1,30 @@
+{
+  "claim_eligible": false,
+  "counts": {
+    "collapse_rankings": 872,
+    "complete_signatures": 5912,
+    "compliance_pair_checks": 7329146,
+    "graph_cells": 1098,
+    "missing_edge_witnesses": 84
+  },
+  "files_sha256": {
+    "DEVELOPMENT_RESULT_v0_64.md": "82ecff555e0547e3e6d04f2e88f2f646a52576743b8b0249495f0d7b53884e99",
+    "PRIOR_ART_GATE_v0_64.md": "a0efe1fe5fd5d9521d50e4b743ca0c9b695aca810ba2be5f4894e1d87b72b32c",
+    "README.md": "84e533edf8ead5bbadc688f03fb8fd0bc5e2f2fa0222890e082e481bd6909438",
+    "REGISTRATION_DECISION_v0_64.md": "c5dbcb6c93a7e4d2001c65dcbb8e162947ecfa3028cc5ee9ef2e9c99f2f8cc8d",
+    "THEOREM_DRAFT_v0_64.md": "169a427697c4805969c679fa118b80e3a41a96fd4e1cdca15ebe25aa64f81ba8",
+    "hidden_consideration_boundary.py": "d50d092a75b8f1e76a59446cead44b0cb0c789494254dca7947ca70cd6c1afbb",
+    "test_hidden_consideration_boundary.py": "311f7466c04e65d5dc8ffdbfad855eba7aca17422bbf0d3f9a99533fa22e8e52",
+    "verify_development.py": "0ab1287ffc9b70dae972cf53931a4188bb1663b2c1fef22bde050f0d8e7e92b4"
+  },
+  "pytest": {
+    "command": "python -m pytest test_hidden_consideration_boundary.py -q -p no:cacheprovider",
+    "passed": 8
+  },
+  "registered": false,
+  "status": "development_checks_passed",
+  "verifier": {
+    "command": "python verify_development.py",
+    "implementation": "import-independent"
+  }
+}

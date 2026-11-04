@@ -1,0 +1,25 @@
+{
+  "schema_version": "asmp4_causal_branch_fiber_contract_v0_29",
+  "objective": "worst-path causal branching cost under public transcript factors",
+  "branch_cost": "max over leaves of sum log2 successor degree along the prefix path",
+  "causal_morphism": {
+    "prefix": "length-preserving and extension-consistent",
+    "local_fiber": "maximum number of target successor symbols mapped to one source successor at a target prefix",
+    "path_product": "F_i(T) is the maximum product of local fibers along a target port path"
+  },
+  "transfer": {
+    "finite_horizon": "B_i_target(T) <= B_i_source(T)+log2 F_i(T)",
+    "asymptotic": "rate slack nu_i=limsup_T log2 F_i(T)/T",
+    "exactness": "bidirectional subexponential local-fiber products preserve the branch-cost region"
+  },
+  "boundary": {
+    "injective_terminal": "terminal maximum fiber one can coexist with positive local branch-fiber entropy",
+    "clone": "m-to-one local merging each step attains log2 m rate slack",
+    "directions": "separate maps and profiles are required for read, write, and both transfer directions"
+  },
+  "nonclaims": [
+    "prefix-free minimax cost without a separate distortion theorem",
+    "arbitrary transcript-tree functionals",
+    "nonlinear quotient construction"
+  ]
+}

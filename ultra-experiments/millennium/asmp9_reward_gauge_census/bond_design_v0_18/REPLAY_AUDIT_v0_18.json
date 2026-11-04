@@ -1,0 +1,32 @@
+{
+  "audit_status": "pass",
+  "detached_replay_commit": "ec7f9bfda456f25eec5791178a2d6ed3c065d3f1",
+  "excluded_metadata_fields": [
+    "elapsed_seconds",
+    "execution_commit",
+    "peak_resident_bytes",
+    "started_at_utc"
+  ],
+  "original": {
+    "elapsed_seconds": 110.2143306999933,
+    "execution_commit": "c72ff1db597c22a56f1a1e13488967fdd116d30e",
+    "peak_resident_bytes": 23105536,
+    "report_sha256": "f1aaa8af2899537cbf79639424a1676dc2b12ef8f725a4af1178602ff0919cfc",
+    "result_sha256": "78c4a6039dae8230b0f64f3773f9dd6256ac938753d976010bf969f8ae3f3754",
+    "verifier_check_count": 8,
+    "verifier_passed_count": 8
+  },
+  "protocol_sha256": "c330d2ccda7ed464bb21a077a70bdb79b57941eaf18a850409eb0a776fb9aee8",
+  "registration_sha256": "696d7e46c385e3614e99f2da87cacf77bfb3a741c596ac5d4687ca59f8854d0a",
+  "replay": {
+    "elapsed_seconds": 107.86549860000378,
+    "execution_commit": "ec7f9bfda456f25eec5791178a2d6ed3c065d3f1",
+    "peak_resident_bytes": 23367680,
+    "report_sha256": "f1aaa8af2899537cbf79639424a1676dc2b12ef8f725a4af1178602ff0919cfc",
+    "result_sha256": "6ff267f1573e6f7f17c1d5ca2229b82924534f851bf44985e72cf7e76d8bafcf",
+    "verifier_check_count": 8,
+    "verifier_passed_count": 8
+  },
+  "report_byte_identical": true,
+  "scientific_payload_equal": true
+}

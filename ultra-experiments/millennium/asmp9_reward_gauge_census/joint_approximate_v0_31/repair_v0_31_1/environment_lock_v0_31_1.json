@@ -1,0 +1,7 @@
+{
+  "gpu": "forbidden",
+  "os": "Windows",
+  "protocol_id": "ASMP-9-JOINT-APPROXIMATE-v0.31.1-resource-repair",
+  "python": "3.11.4",
+  "repair_source": "v0.30 GetProcessMemoryInfo native declaration"
+}

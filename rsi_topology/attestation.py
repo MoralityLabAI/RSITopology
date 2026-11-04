@@ -26,6 +26,7 @@ SIGNED_USES = frozenset({"signed_intervention", "signed_reward", "disparate_weig
 ENERGY_USES = frozenset({"energy_reward", "bundle_energy_reward"})
 KNOWN_CONSUMERS = frozenset({"hrmmmm_control_harness", "vpd_edit_program", "blue_beam"})
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+NEGATIVE_CONTROL_MINIMUM_STRICT_MARGIN = 0.02
 
 
 def _canonical_bytes(value: Any) -> bytes:
@@ -45,7 +46,7 @@ def array_sha256(array: np.ndarray) -> str:
 
 @dataclass(frozen=True)
 class AttestationPolicy:
-    policy_id: str = "identity_attestation_v1"
+    policy_id: str = "identity_attestation_v1_1_negative_control"
     minimum_mean_edge_chordal_lineage: float = 0.95
     minimum_edge_worst_direction_retention: float = 0.90
     require_orientation_preserving: bool = True
@@ -222,6 +223,27 @@ def validate_anchor(record: AnchorRecord) -> tuple[str, ...]:
     return tuple(sorted(set(failures)))
 
 
+def _negative_control_gate(
+    record: AnchorRecord,
+) -> tuple[bool, float]:
+    """Recompute the strict v0.3 control margin from anchor metadata."""
+
+    control = record.metadata.get("matched_random_label_negative_control")
+    if not isinstance(control, Mapping):
+        return False, -1.0
+    try:
+        lower = float(control["random_family_retention_lower_95"])
+        null_upper = float(control["permutation_null_retention_upper_95"])
+    except (KeyError, TypeError, ValueError):
+        return False, -1.0
+    if not np.isfinite(lower) or not np.isfinite(null_upper):
+        return False, -1.0
+    observed_margin = lower - null_upper
+    threshold_margin = observed_margin - NEGATIVE_CONTROL_MINIMUM_STRICT_MARGIN
+    numerically_strict = threshold_margin > 1e-12
+    return bool(numerically_strict), threshold_margin
+
+
 def certify_record(
     record: AnchorRecord,
     policy: AttestationPolicy,
@@ -232,6 +254,10 @@ def certify_record(
     failures = list(validate_anchor(record))
     margins: dict[str, float] = {}
     attained = ENGINEERING_EVIDENCE
+    negative_control_passed, negative_control_margin = _negative_control_gate(record)
+    margins["matched_random_label_negative_control"] = negative_control_margin
+    if not negative_control_passed:
+        failures.append("negative_control_not_passed")
 
     path_receipts = {edge.edge_id: edge for edge in record.edge_receipts}
     required_edge_ids = list(record.spanning_tree_transport_path)
@@ -254,7 +280,11 @@ def certify_record(
         lineage_failures.append("lineage:mean_edge_below_threshold")
     if margins["minimum_edge_worst_direction_retention"] < 0:
         lineage_failures.append("lineage:worst_direction_below_threshold")
-    if not lineage_failures and not any(item.endswith("invalid_sha256") for item in failures):
+    if (
+        negative_control_passed
+        and not lineage_failures
+        and not any(item.endswith("invalid_sha256") for item in failures)
+    ):
         attained = LINEAGE_CERTIFIED
     failures.extend(item for item in lineage_failures if item not in failures)
 
@@ -276,6 +306,15 @@ def certify_record(
     margins["det_h_orientation"] = -1.0 if record.det_h_flag else 1.0
 
     holonomy_failures: list[str] = []
+    bifiltration = record.metadata.get("lineage_holonomy_bifiltration")
+    if isinstance(bifiltration, Mapping):
+        try:
+            cycle_rank = int(bifiltration["beta_1"])
+        except (KeyError, TypeError, ValueError):
+            cycle_rank = -1
+        margins["bifiltration_cycle_rank"] = float(cycle_rank)
+        if cycle_rank <= 0:
+            holonomy_failures.append("holonomy_unavailable")
     if not record.loop_receipts:
         holonomy_failures.append("holonomy:no_loop_receipts")
     if record.det_h_flag and policy.require_orientation_preserving:

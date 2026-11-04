@@ -1,0 +1,21 @@
+{
+  "registration_id": "ASMP-9-FINITE-MDP-ACCESS-v0.10-registration",
+  "registered_at_utc": "2026-07-28T19:39:07Z",
+  "implementation_commit": "56126229126c8f6cfdacf366deef2b52b1762d5f",
+  "protocol_path": "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/protocol_v0_10.json",
+  "sealed_files": {
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/THEOREM_DRAFT_v0_10.md": "28c01e85b730387859509c433a813cbfe4f09b08dcf2e18f62759b4e3efc361c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/PRIOR_ART_v0_10.md": "af5a2deec58080d378710e168e27633877fa219edca891db0cd0beb57cc06478",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/DEVELOPMENT_NOTE_v0_10.md": "8f5c2451597455844e27afe89aa2a9b6ee786a9a380090924f3a2f0afb67ab2a",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/mdp_access.py": "746c5cf721651965e9c45e161806dc66a99b000d71980e2fe3b9d97ee1858b06",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/test_mdp_access.py": "9efed14e486d819f592a581a2d84c35220e5fcea872c8caf5cb3adce0040ed9c",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/PROTOCOL_v0_10.md": "fc9011dbe5c38f68153c98745c602dfce40c2b4e664b494c5f5e6d5ea8759a0f",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/protocol_v0_10.json": "3ba8cede71d560b952fcf3d9097decc6d547d9d21328c5b7578ec5e77dda9ae5",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/environment_v0_10.json": "471ccb6d64cd83e9192d003deb17f174fe6cf03f4105cc0b417e90fc9f4ee519",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/experiment.py": "9193d494df4794efe5051092899a9f9e292e8590860ea77478e545578cf57a45",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/test_experiment.py": "df06f71ac189616499acbc6a8889815301d33e8d3e9ea948730771618389b1a7",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/run_verification.py": "4b883d160d94c756f6487dfb08ff9e9bbbb0dc5201e9ad9170310f41770556bb",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/verify_result.py": "73a95791954e79365b9c13d043c664ce93492f5fd7b591f6a65e57aba4bfa0ce",
+    "ultra-experiments/millennium/asmp9_reward_gauge_census/finite_mdp_access_v0_10/README.md": "32c13b00732044888369c3a50d23fecd04c0fd276561faf453ac508ab4b7930a"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "protocol_id": "qwen08_l19_precision_context_v0_1",
+  "schema_version": "1.0.0",
+  "status": "registered_not_run",
+  "registered_on": "2026-07-17",
+  "purpose": "Fresh paired four-bit versus float16, context-restricted rank-one lineage test at Qwen3.5-0.8B layers 19 and 23. The experiment tests whether the previously localized precision-sensitive context failure is reproducible, not whether an adapter is useful.",
+  "scientific_parent": {
+    "protocol": "qwen08_context_stageb_v0_1",
+    "protocol_sha256": "62c4e9d2c250957bfd3257c2775691d0078ae50fad772f443d741fcacef935b1",
+    "fourbit_analysis": "D:\\Research_Engine\\runs\\qwen08_context_stageb_analysis_v0_1\\main_4bit\\analysis_result.json",
+    "fourbit_analysis_sha256": "6f5cf951dcbcf91f3725f6521c0671e004f76ba82e0b568b5b74a690004bbc7d",
+    "float16_analysis": "D:\\Research_Engine\\runs\\qwen08_context_stageb_analysis_v0_1\\control_float16\\analysis_result.json",
+    "float16_analysis_sha256": "b7e5b25340d1247413610fb370cadb2c84754edf19302f520a7ec5bb9818a977"
+  },
+  "claim_boundary": "This is an outcome-free measurement study. It can establish or falsify precision-conditioned reproducibility of a rank-one between-class identity object on the frozen Qwen development model, fresh prompts, sites, states, and runtime precisions. It cannot establish causal edit value, VPD efficacy, monitor sufficiency, capability preservation, compactification, recursive self-improvement, or RSI. Holonomy remains a downstream diagnostic only and cannot produce a new attestation level or reopen a closed causal/VPD stage.",
+  "model_lock": {
+    "causal_protocol": "qwen_holonomy_causal_transfer_v0_1",
+    "causal_protocol_sha256": "a56473f6628887fb7dc7df43dc7660010be4f95a526d6587d0d6ec95ebabe872",
+    "model_id": "Qwen/Qwen3.5-0.8B-Base",
+    "model_path": "D:\\Research_Engine\\models\\Qwen3.5\\Qwen3.5-0.8B-Base-HF",
+    "model_revision": "local content-addressed development lock; config, tokenizer, and safetensors hashes are inherited from the causal protocol",
+    "tokenizer_source": "same local model directory; tokenizer.json hash is inherited from the causal protocol",
+    "weight_source": "same local model directory; model.safetensors hash is inherited from the causal protocol",
+    "base_file_hashes": {
+      "config.json": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204",
+      "model.safetensors-00001-of-00001.safetensors": "c2b1e5a17d9c1e27685d92ed9b382911ebb99955ecd89052d1721241adfbab6c",
+      "tokenizer.json": "fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927"
+    },
+    "states": ["base", "naive_qlora"],
+    "state_axis_interpretation": "Engineering checkpoint axis only; no adapter efficacy comparison is licensed."
+  },
+  "capture_order": [
+    {"precision": "4bit", "state": "base"},
+    {"precision": "4bit", "state": "naive_qlora"},
+    {"precision": "float16", "state": "base"},
+    {"precision": "float16", "state": "naive_qlora"}
+  ],
+  "sites": ["model.layers.19", "model.layers.23"],
+  "activation_object": "first tensor in residual-block output at the final non-padding prompt token",
+  "prompt_design": {
+    "generator": "Stage-B graph-reachability generator with opaque nonce appended after the capture instruction",
+    "seed": 2026071703,
+    "nonce_namespace": "stage-b",
+    "families": ["graph_reachability"],
+    "subconditions_per_family": 9,
+    "context_shards": 4,
+    "halves": ["construction", "geometry_validation"],
+    "prompts_per_subcondition_per_half_per_shard": 32,
+    "prompts_per_state": 2304,
+    "context_neighborhoods": {
+      "old_shard_02": ["shard-00", "shard-01"],
+      "old_shard_03": ["shard-02", "shard-03"]
+    },
+    "freshness": "The generated manifest must have zero byte-identical prompt overlap with qwen08_context_stageb_prompt_manifest_v0_1.json. Four-bit and float16 consume the same frozen prompt bytes, order, shard assignment, and tokenization contract; only precision metadata differs.",
+    "behavior_family_assignment": "graph_reachability is the sole frozen behavior family; no expected answers are consumed by geometry or support analysis."
+  },
+  "primary_object": {
+    "kind": "cross_fitted_between_class_scatter",
+    "rank": 1,
+    "support_statistic": "minimum_edge_worst_direction_retention split stability",
+    "bootstrap_replicates": 256,
+    "matched_random_label_permutation_replicates": 256,
+    "minimum_strict_null_margin": 0.02,
+    "support_margin_definition": "retention_lower_95 - (permutation_null_retention_upper_95 + minimum_strict_null_margin); positive means the inherited Stage-B rank-one gate passes.",
+    "rank_selection": "No rank selection: rank one only.",
+    "covariance_gram_status": "reported_ungated"
+  },
+  "negative_controls": {
+    "primary": "For every precision x state x site x context-shard node, independently permute frozen subcondition labels within each geometry half. The random-label null keeps the real activation spectrum and class counts.",
+    "required": "Every rank-one support decision uses the matched random-label null; paired precision bootstrap evidence cannot replace it.",
+    "synthetic": "Deterministic planted-support and label-null fixtures validate the support and interaction implementation before capture."
+  },
+  "primary_comparison": {
+    "fourbit": "four-bit nf4 double-quant, float16 compute, float32-stored activations",
+    "float16": "unquantized float16 model weights, float32-stored activations",
+    "common_cells": "Both conditions must contain the exact same prompt IDs, prompt bytes, ordering, states, sites, shards, halves, and activation tensor shape.",
+    "paired_bootstrap_outer_replicates": 1024,
+    "paired_bootstrap_inner_replicates": 64,
+    "paired_bootstrap_statistic": "For every L19 state x context-shard cell, jointly resample prompt IDs within each frozen half x subcondition stratum across four-bit and float16. Within every outer draw, recompute the complete signed gate margin M = Q0.05(real-label retention) - Q0.95(matched label-permutation retention) - 0.02 from 64 inner shared-resampling/permutation draws. The paired delta is M_float16 - M_4bit. This is supporting localization evidence only; each condition must separately pass or fail its 256-draw matched-null gate.",
+    "ci": "one-sided 95% lower confidence bound = empirical 0.05 quantile over the 1024 paired outer-bootstrap complete-margin draws",
+    "interaction_contrast": "sentinel paired complete-margin delta minus the per-draw median delta of all non-sentinel L19 state x context-shard cells",
+    "interaction_requirement": "The one-sided 95% lower bound for the interaction contrast must exceed 0.00 to call the sentinel precision-specific."
+  },
+  "sentinel": {
+    "site": "model.layers.19",
+    "state": "naive_qlora",
+    "context_shard": "shard-02",
+    "family": "graph_reachability",
+    "source_result": "four-bit Stage-B node has supported rank 0; corresponding float16 node has supported rank at least 1.",
+    "hypothesis": "Float16 has a positive support margin at the sentinel while four-bit does not, and its paired precision delta exceeds the non-sentinel median by a positive one-sided 95% lower bound.",
+    "fourbit_positive_control": {
+      "site": "model.layers.23",
+      "role": "A four-bit rank-one support control; float16 is captured at the same site so precision robustness can be assessed."
+    },
+    "failure_interpretation": "If the sentinel is not reproducible, or if the interaction contrast is not positive, report a non-replicated or non-specific precision effect. Do not search new sites, ranks, context neighborhoods, or prompts."
+  },
+  "precision_labels": {
+    "precision_robust": "Both precisions pass the matched random-label rank-one gate at the cell, and their paired one-sided 95% support-margin delta interval contains zero.",
+    "precision_specific": "Exactly one precision passes the matched random-label gate and the paired one-sided 95% support-margin delta excludes zero in the corresponding direction.",
+    "degraded_under_precision": "Float16 passes while four-bit fails and the paired one-sided 95% delta lower bound is strictly positive.",
+    "inconclusive": "All other combinations, including either capture or matched-null instrument failure."
+  },
+  "holonomy_diagnostic": {
+    "enabled_only_if": "A site has rank-one support at every required node in both precisions and the inherited lineage graph has beta_1 > 0.",
+    "allowed_outputs": ["rank-one det(H) sign receipts", "precision-agreement diagnostic", "orientation-reversal error receipt"],
+    "forbidden_outputs": ["new attestation level", "causal authorization", "VPD authorization", "continuous-holonomy or curvature claim at rank one"],
+    "rank_one_rule": "Every admitted elementary loop must have orientation-preserving det(H)>0. A negative determinant is an orientation-reversal error; canonical angles remain suppressed."
+  },
+  "result_categories": {
+    "positive": "sentinel_degraded_under_precision_replicated",
+    "negative": "sentinel_not_reproduced_or_not_precision_specific",
+    "instrument_failure": "invalid_capture_pair_or_negative_control_failure",
+    "diagnostic_only": "rank_one_orientation_diagnostic_only"
+  },
+  "resource_contract": {
+    "capture": {"memory_mb": 6144, "cpu_percent": 50, "io_mb_s": 750, "timeout_seconds": 3600, "gpu_allowance_mb": 3800, "checkpoint_every_seconds": 600, "swap_bytes": 0, "batch_size": 4},
+    "analysis": {"memory_mb": 2048, "cpu_percent": 50, "io_mb_s": 250, "timeout_seconds": 14400, "gpu_allowance_mb": 1, "checkpoint_every_seconds": 600, "swap_bytes": 0},
+    "abort_is_valid": true,
+    "local_uncapped_execution_prohibited": true
+  },
+  "outcomes_consumed": false,
+  "generation": false,
+  "gradients": false,
+  "weight_mutation": false,
+  "new_invariant_levels": false
+}
