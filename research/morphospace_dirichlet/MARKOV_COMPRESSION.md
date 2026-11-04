@@ -1,6 +1,6 @@
 # QD-02: a two-step spectral witness of non-autonomous macro-dynamics
 
-**2026-11-04 mathematical extension of [QD-01](README.md).** The propositions are elementary operator identities for finite reversible Markov chains with a declared observation partition. They do **not** claim original discovery of spectral lumpability, measured model agency, or Platonic causation. Relevant precedents: [spectral Markov compression](https://pmc.ncbi.nlm.nih.gov/articles/PMC7971158/), [strong lumpability](https://pmc.ncbi.nlm.nih.gov/articles/PMC2786939/), and [Barr–Thomas eigenvector condition](https://doi.org/10.1287/opre.25.6.1028).
+**2026-11-04 mathematical extension of [QD-01](README.md).** The propositions are elementary operator identities for finite reversible Markov chains with a declared observation partition. They do **not** claim original discovery of spectral lumpability, measured model agency, or Platonic causation. Relevant precedents: [spectral Markov compression](https://pmc.ncbi.nlm.nih.gov/articles/PMC7971158/), [strong lumpability](https://pmc.ncbi.nlm.nih.gov/articles/PMC2786939/), [Barr–Thomas eigenvector condition](https://doi.org/10.1287/opre.25.6.1028), and [Mori–Zwanzig coarse-graining memory kernels](https://pmc.ncbi.nlm.nih.gov/articles/PMC4644152/). The two-step identity below is a finite reversible specialization of established projection-operator algebra, presented here as a diagnostic, not as a newly discovered operator law.
 
 ## 1. Setup: reversible chain and conditional expectation
 
