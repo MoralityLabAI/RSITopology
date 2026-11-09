@@ -124,6 +124,36 @@ def q4_common_mask() -> tuple[int,...]:
     return tuple(weights)
 
 
+
+def q4_one_balanced_mask() -> tuple[int,...]:
+    """One balanced theta cycle, two frustrated; sharp eta=1/8.
+
+    Path gains (0,1,0), with the (A,C) four-cycle balanced. This
+    common-channel mask achieves the isolated four-cycle lower bound.
+    Denominator 16: zero mask 6, masks 4 and 8 weight 2, remaining
+    singleton/pair masks (1,2,16,17,32,34) weight 1.
+    """
+    weights=[0]*MASKS
+    weights[0]=6
+    weights[4]=weights[8]=2
+    for mask in (1,2,16,17,32,34):
+        weights[mask]=1
+    assert sum(weights)==16
+    assert uniform_cap_counts(tuple(weights))==2
+    return tuple(weights)
+
+
+def verify_q4_one_balanced_case() -> bool:
+    """Sharp by isolated-cycle restriction and explicit common mask."""
+    shifts=(0,0,0,1,0,0)
+    p0=theta_counts(4,(0,)*N_EDGES)
+    p1=theta_counts(4,shifts)
+    mask=q4_one_balanced_mask()
+    assert xor_convolve_counts(p0,mask)==xor_convolve_counts(p1,mask)
+    assert Fraction(uniform_cap_counts(mask),sum(mask))==Fraction(1,8)
+    return True
+
+
 def verify_q4_primal() -> bool:
     p0,p1=theta_laws(4)
     m=q4_common_mask()
@@ -209,11 +239,14 @@ def verify_q8_dual() -> bool:
 
 def exact_theta_certificate() -> dict[str,str|bool]:
     a=verify_q4_lower_lemma() and verify_q4_primal()
+    a1=verify_q4_one_balanced_case()
     b=verify_q8_primal() and verify_q8_dual()
     return {
         "graph":"K_{2,3}; two independent cycles with shared paths",
         "gains":"(0,1,2) path translations",
         "q4_exact_erasure":"1/6",
+        "q4_one_balanced_exact_erasure":"1/8",
+        "q4_one_balanced_verified":a1,
         "q4_lower_verified":a,
         "q8_exact_erasure":"29/630",
         "q8_primal_dual_verified":b,
