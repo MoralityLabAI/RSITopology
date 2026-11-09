@@ -1,5 +1,8 @@
 # BM-07: hypothesis-aware symmetrization of gain-cycle Boolean monitors
 
+> **BM-08 theorem correction (10 November 2026):** [SHARP_ERASURE_OPTIMALITY_BM08.md](SHARP_ERASURE_OPTIMALITY_BM08.md) proves the exact minimum per-bit hypothesis-aware erasure cap for every F2^s cycle of length L>=2. The BM-07 construction is optimal for q>=8. For q=4 and L>2, the sharp cap is 1/(2L), achieved by a common one-hot mask law, which improves the earlier construction. The remaining ASMP-14 multi-cycle frontier is open.
+
+
 **2026-11-09 | finite mathematical theorem packet.** This extends [BM-06](ALPHABET_CORRELATED_MINIMAX_BM06.md) by letting a readout attacker select a different correlated mask distribution depending on the true hidden holonomy. Such an attack is expressly outside BM-06's **common hypothesis-blind channel**. The output is a frozen finite-game access theorem, not an analysis of live agent behavior, and its novelty must be assessed against adversarial channel symmetrization and composite hypothesis testing.
 
 ## 1. Frozen access contract
@@ -73,7 +76,7 @@ Both have exactly 2^(L-2) masks containing any fixed edge position, so their mar
 
     P0 * Q0 = P1 * Q1,                                 (7)
 
-so the entire output TV is zero even though the connection's holonomy differs. This is an **explicit achievable erasure cap**, with a proven value for this construction. Its global optimality for L>=3 among all legal hypothesis-aware mask laws is an open problem.
+so the entire output TV is zero even though the connection's holonomy differs. This is an **explicit achievable erasure cap**, with a proven value for this construction. Its optimality for q>=8 is established in BM-08, and the q=4 construction is improved there.
 
 ### Fourier proof
 
