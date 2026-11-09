@@ -124,9 +124,6 @@ class AlphabetCorrelatedMonitorTests(unittest.TestCase):
                          (Fraction(3,8),Fraction(3,8)))
         self.assertIsNone(feasible_parity_composite_test(
             4,caps,Fraction(1,3),Fraction(1,3)))
-        self.assertEqual(feasible_parity_composite_test(
-            4,(Fraction(1,8),)*3,Fraction(1,2),Fraction(1,2)),
-            (Fraction(1,2),Fraction(1,2))) if False else None
         witness=feasible_parity_composite_test(
             4,(Fraction(1,8),)*3,Fraction(1,2),Fraction(1,2))
         self.assertIsNotNone(witness)
@@ -177,6 +174,28 @@ class AlphabetCorrelatedMonitorTests(unittest.TestCase):
         self.assertEqual(parity_test_error_bounds(
             q,(Fraction(0),)*length,*candidate),
             (Fraction(21,44),Fraction(21,44)))
+
+    def test_hypothesis_dependent_mask_is_outside_common_channel_model(self):
+        # This negative control permits the noise law to depend on the
+        # hidden hypothesis, violating the common-channel contract.
+        # For q=8,L=3, the clean flat even-parity probability is 11/32;
+        # the clean frustrated even-parity probability is 9/32.
+        # A hostile separate mask policy may harm the parity classifier
+        # beyond the common-channel minimax guarantee.
+        q,length=8,3
+        caps=(Fraction(1,8),)*length
+        clean={tuple([False]*length):Fraction(1)}
+        hostile=extremal_common_mask(caps)
+        a=apply_correlated_mask(full_cycle_law(length,q,flat=True),clean)
+        b=apply_correlated_mask(full_cycle_law(length,q,flat=False),hostile)
+        p0_wrong=sum((v for pat,v in a.items()
+                      if pat.count(False)%2==1),Fraction(0))
+        p1_wrong=sum((v for pat,v in b.items()
+                      if pat.count(False)%2==0),Fraction(0))
+        self.assertEqual((p0_wrong+p1_wrong)/2,Fraction(141,256))
+        self.assertGreater((p0_wrong+p1_wrong)/2,Fraction(1,2))
+        self.assertEqual(one_shot_minimax_bayes_error(q,caps),
+                         Fraction(63,128))
 
     def test_invalid_masks_and_error_contracts(self):
         with self.assertRaises(ValueError):
