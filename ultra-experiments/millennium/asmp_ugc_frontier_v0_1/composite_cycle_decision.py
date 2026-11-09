@@ -76,3 +76,29 @@ def clean_minimax_composite_rule(
     if verified != (fp,fn):
         raise AssertionError("independent error reconstruction disagrees")
     return fp,tuple(decision)
+
+
+
+def clean_minimax_dual_witness(
+    length: int, q: int
+) -> tuple[Fraction, Fraction]:
+    """Independent dual optimum and its exact mixing weight lambda.
+
+    max_{lambda in [0,1]} sum_k min(lambda*p_flat(k),
+                                   (1-lambda)*p_nonflat(k))
+    equals the minimum over randomized decision rules of max(FP,FN).
+    The concave piecewise-linear expression attains its maximum at zero,
+    one, or lambda=p_nonflat(k)/(p_flat(k)+p_nonflat(k)).
+    """
+    p0=cycle_failure_count_law(length,q,flat=True)
+    p1=cycle_failure_count_law(length,q,flat=False)
+    breakpoints={Fraction(0),Fraction(1)}
+    for a,b in zip(p0,p1):
+        if a+b:
+            breakpoints.add(b/(a+b))
+    candidates={
+        lam:sum((min(lam*a,(1-lam)*b) for a,b in zip(p0,p1)),Fraction(0))
+        for lam in breakpoints
+    }
+    lam=max(sorted(breakpoints),key=lambda x: candidates[x])
+    return candidates[lam],lam
