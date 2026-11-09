@@ -151,6 +151,24 @@ class HypothesisAwareTwoEdgeTests(unittest.TestCase):
                 self.assertGreaterEqual(threshold,0)
                 self.assertLessEqual(max(fp,fn),Fraction(1))
 
+    def test_q8_one_sixteenth_conditional_noise_robust_twenty_percent_gate(self):
+        q,eta=8,Fraction(1,16)
+        # This is a two-sided, HYPOTHESIS-AWARE conditional-readout
+        # certificate for a fixed flat/nonflat test on two parallel edges.
+        # It is not the optimal full-pattern multi-shot minimax test.
+        for n in range(1,31):
+            _,fp,fn=best_deterministic_mixed_threshold(q,eta,n)
+            self.assertGreater(max(fp,fn),Fraction(1,5))
+        threshold,fp,fn=best_deterministic_mixed_threshold(q,eta,31)
+        self.assertEqual(threshold,6)
+        self.assertLessEqual(fp,Fraction(1,5))
+        self.assertLessEqual(fn,Fraction(1,5))
+        self.assertGreater(fp,fn)
+        # The stationary witness realizes both extreme Bernoulli
+        # parameters, so the fixed-threshold guarantees are sharp.
+        self.assertEqual(mixed_event_probabilities(q,eta),
+                         (Fraction(1,8),Fraction(1,4)))
+
     def test_invalid_inputs_and_overspent_thresholds(self):
         with self.assertRaises(ValueError):
             hypothesis_aware_minimax_tv(3,Fraction(0))
