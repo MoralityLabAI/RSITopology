@@ -110,6 +110,8 @@ class AdaptiveMonitorTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             adaptive_success_probability(5,3,2)
         with self.assertRaises(ValueError):
+            adaptive_success_probability(3,3,2)
+        with self.assertRaises(ValueError):
             adaptive_success_probability(4,5,2)
         with self.assertRaises(ValueError):
             adaptive_success_probability(4,3,7)
