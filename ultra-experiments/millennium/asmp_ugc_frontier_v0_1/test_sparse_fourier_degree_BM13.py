@@ -21,7 +21,7 @@ from sharp_erasure_optimality import critical_erasure_cap
 class SparseFourierDegreeTests(unittest.TestCase):
     def test_small_five_term_theta_dual_proves_sixth_and_fifth_degree(self):
         self.assertTrue(verify_q4_primal() and verify_q4_lower_lemma())
-        self.assertEqual(set(THETA_DUAL_WALSH),(15,51,60,31,47))
+        self.assertEqual(set(THETA_DUAL_WALSH),{15,51,60,31,47})
         self.assertEqual(len(THETA_DUAL_WALSH),5)
         self.assertEqual(max(s.bit_count() for s in THETA_DUAL_WALSH),5)
         self.assertEqual(verify_sparse_dual("theta"),Fraction(1,6))
