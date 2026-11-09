@@ -98,13 +98,9 @@ def satisfaction_law(game: Game, indices: tuple[int, ...]):
         raise ValueError("invalid observed edges")
     hist = Counter()
     for a in product(range(game.q), repeat=game.vertices):
-        hist[tuple(a[game.edges[i][u_idx(1)]] == (a[game.edges[i][0]] ^ game.edges[i][2])
+        hist[tuple(a[game.edges[i][1]] == (a[game.edges[i][0]] ^ game.edges[i][2])
                    for i in indices)] += 1
     return {k: Fraction(v, game.q ** game.vertices) for k, v in hist.items()}
-
-
-def u_idx(index):
-    return index
 
 
 def regular_flat_cover(game: Game):
