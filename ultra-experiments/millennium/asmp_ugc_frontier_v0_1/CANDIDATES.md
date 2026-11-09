@@ -234,3 +234,18 @@ A state-aware readout attacker can choose the appropriate pair of masks after se
 A partial constructive guarantee is also available when the two-edge cap eta<1/q: the number of episodes with mixed Boolean bits provides a robust **two-sided** test under conditional hypothesis-aware readout laws. Its false-positive/negative bounds are exact binomial tails and hold under history-adaptive noise, because each episode's conditional mixed-bit probability stays separated. For q=8 and eta=1/16, 31 fresh episodes and a threshold of six mixed observations give both conditional errors below 20%. The channel still requires independent fresh labeling, readout mask independence from the current clean sample, and independently authenticated shift/restoration actions.
 
 This sharpens the ASMP admission target to a **symmetrizability-resistant oversight theorem** for a declared policy, graph ensemble, monitor channel, attacker knowledge, and priced interventions. Prior art on arbitrarily varying channels and adversarial hypothesis testing is explicitly cited in BM-07. The exact finite statements are an elementary specialization; no claim of a general AI-safety solution is made.
+
+
+## BM-08 sharp symmetrization threshold: the cycle case is now closed
+
+The [BM-08 exact lower-bound proof](SHARP_ERASURE_OPTIMALITY_BM08.md) completes the adversarial-readout **single-cycle** erasure problem left open after BM-07. For every cycle length L>=2 and q=2^s binary-vector labels, an adversary whose XOR readout mask may depend on flat/nonflat state but is independent of the current fresh uniform labeling can equalize the complete observation laws **if and only if** the uniform per-bit error cap satisfies
+
+    eta >= eta_star(q,L),
+    eta_star(2,L) = eta_star(4,L) = 1/(2L),
+    eta_star(q,L) = q*2^(L-2) /
+       ((q-2)^L + c_L*2^L)          for q>=8,
+    c_L=q-1 if L even, else 1.
+
+The old BM-07 parity-class mask construction is exactly optimal for q>=8, while a common unbiased one-hot mask achieves the *smaller* q=4 optimum. The lower bound holds for **all** correlated hypothesis-aware readout-mask distributions under the registered per-bit caps; it uses the full proper-subset Walsh identities to force a parity-character difference between the two mask laws, then charges the unavoidable Hamming weight of their nonoverlapping and shared odd-mask probability mass. Explicit mask witnesses and exact rational tests support the finite proof. The referenced BM-07 paper now carries this correction.
+
+The outstanding ASMP-14 theorem consequently concerns *interacting cycles, costly interventions, adaptive state-aware noise, audit roots and non-inert safety predicates*. BM-08 resolves only this single-cycle statistical symmetrization subproblem and does not assert novelty beyond the existing adversarial-channel theory.
