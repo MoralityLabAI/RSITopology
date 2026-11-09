@@ -126,3 +126,32 @@ New independent Python controls:
 The focused Linux workflow executes the entire ASMP seed suite under five minutes, including all prior BM-01..04 controls. This package uses the standard library and launches no GPU or live model actions.
 
 **Open ASMP-14 extension:** derive a single minimax theorem with an adversary allowed to choose a family of correlated and partially observed error channels, the controller choosing adaptive interventions under certified perturbation budgets, and an independently authenticated restoration process that itself has adversarially controlled error. A credible theorem needs a sharp non-inert positive class, exact error/utility quantifiers, matching information lower bounds, and a novelty audit against robust sequential design, partially observed stochastic games, and interactive-proof soundness. BM-05 supplies exact baselines and negative controls, not that general result.
+
+
+## E. A two-sided non-inert certification gate (BM-05/T4)
+
+The [executable gate](robust_certification_gate.py) turns the binary minimax parity risk and externally supplied restoration error budgets into **sufficient** authorization conditions. Consider N full-cycle episodes, of which at most B involve a known nonzero shift followed by a mandatory independent root attestation. The per-bit conditional noise law from part A is assumed on all correctly restored episodes. For each potential shifted step i, let rho_i bound the conditional probability of falsely accepting an unrecovered state, and let kappa_i bound the conditional false rejection of a genuinely restored state.
+
+Write R_N^* for the exact worst-case binary parity-majority error from (3). If the output is released only after all required audit passes, then
+
+    Pr[authorize wrong original-h verdict] <= R_N^* + sum_i rho_i,
+    Pr[authorize correct verdict | genuine restoration]
+        >= 1 - R_N^* - sum_i kappa_i.                        (9)
+
+These statements follow by event decomposition: if each required restoration is sound, parity-majority has error at most R_N^*; accepting a failed restoration contributes at most sum rho_i. In the all-genuine-restoration reference system, abstention due to false audit rejection costs at most sum kappa_i, while the parity error costs at most R_N^*. The bounds remain valid with adaptive timing because the audit coverage assumptions are conditional on the preceding history. False-accept **and** false-reject calibrations are mandatory for a usable certificate.
+
+For a declared maximum wrong-authorization alpha and minimum correct-authorization u0, approve only if the corresponding right-hand bounds in (9) meet alpha and u0, and the worst-case total **integer units** fit the hard cap:
+
+    units = N*observation_units
+          + B*(shift_bit_units + restoration_audit_units).
+
+This freezes B as a maximum permitted number of nonzero F₂ shifts. The utility floor excludes an always-abstain solution.
+
+**Exact positive control:** L=4, per-edge conditional noise eta=1/16, N=3, B=3. The minimax parity error is 5/32. If each accepted-failure audit bound rho_i=1/1000 and each genuine-restoration rejection bound kappa_i=1/100, the gate yields
+
+    wrong-authorization <= 5/32 + 3/1000 = 0.15925,
+    correct-authorization >= 1 - 5/32 - 3/100 = 0.81375.
+
+With observation cost 1, shift cost 1 and audit cost 1, worst-case resources are 9 units. This meets the sample targets alpha=1/5 and u0=4/5 if the resource cap is at least 9. The targeted tests reject the same noisy experiment at a tighter eight-unit cap, an inadequate attestation error budget, and a correlated-error allowance eta=1/8.
+
+The audit error rates are **premises** that must come from a genuinely independent attestation instrument; the finite code cannot establish that a real model edit restored its state. The probability bounds are conservative Bonferroni certificates, and the general joint adaptive minimax frontier remains an open research problem.
