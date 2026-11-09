@@ -45,7 +45,7 @@ Every proposed theorem must distinguish (i) a decision algorithm without a prove
 
 ### Nontrivial frontier to characterize
 
-Freeze a structurally restricted family (bounded treewidth, bounded residual-holonomy rank, locally expanding complexes, sparse cycle bases, or bounded graph separators), a gap promise and a proof model. Seek matching time/query/communication upper and lower bounds, plus an invariant parameter that predicts when gauge decoding admits efficient *certification* across both promise branches. A classification stated merely as "NP-hard in general" has already been exhausted by MaxCut.
+Freeze a structurally restricted family (bounded treewidth, bounded graph cycle rank, locally expanding complexes, sparse cycle bases, or bounded graph separators), a gap promise and a proof model. Seek matching time/query/communication upper and lower bounds, plus an invariant parameter that predicts when gauge decoding admits efficient *certification* across both promise branches. A classification stated merely as "NP-hard in general" has already been exhausted by MaxCut.
 
 **First falsifier:** compare exact cosystolic values, the signed spectral lower bounds and cycle ranks on small graph families; emit a witnessed example where an intended complexity parameter fails to order decoding difficulty. **First publishable output:** a structurally scoped polynomial-time verifier or parameterized lower bound with bit-complexity and completeness/soundness stated.
 
@@ -167,3 +167,9 @@ The criterion for promoting one to a new ASMP is a **closed, nontrivial mathemat
 ### Executable exact seed
 
 The co-located Python module and unittest suite deliberately use only the standard library and certify small finite statements: gauge class counts, full versus partial cycle access, forest-observation blindness, the MaxCut embedding, covering flattening and the descent-defect inequality. These controls are mathematical sanity checks and a base for counterexample generation, rather than evidence that any top-level ASMP has been resolved.
+
+## v0.1 sharp-bounds addendum, November 9, 2026
+
+See [SHARP_VISIBILITY_AND_DECODING_BOUNDS.md](SHARP_VISIBILITY_AND_DECODING_BOUNDS.md) for new exact results and corrected candidate scopes. The **holonomy-image rank** is too weak a tractability parameter for ASMP-13: even rank exactly one supports NP-hard MAX-CUT instances. Graph **cycle rank** beta1 is a genuine positive parameter, with an explicit q^(2 beta1) forest/chord decoder.
+
+For ASMP-14, a fresh uniform-label monitor that receives **all** ell Boolean satisfaction bits on a flat versus frustrated q-label cycle has exact total-variation separation (2/q)^(ell-1). This supplies a new alphabet-dependent sample barrier even beyond the original r<ell indistinguishability regime. When q=2 and readout bits suffer iid flips at rate eta, the exact full-cycle TV becomes |1-2eta|^ell. Both are elementary character/parity computations and are registered as negative controls, while the general priced monitoring frontier remains open.
