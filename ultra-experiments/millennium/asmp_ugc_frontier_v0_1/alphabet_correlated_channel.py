@@ -107,6 +107,8 @@ def one_shot_minimax_tv(
 ) -> Fraction:
     """Smallest possible full-pattern TV under a common unknown mask law."""
     caps = _caps(marginal_caps)
+    if q < 2:
+        raise ValueError("alphabet size must be >=2")
     return Fraction(2,q)**(len(caps)-1)*max(
         Fraction(0), 1-2*sum(caps, Fraction(0))
     )
@@ -117,9 +119,9 @@ def one_shot_minimax_bayes_error(
 ) -> Fraction:
     """Equal-prior randomized-minimax error, common hypothesis-blind mask.
 
-    Test: declare flat when the number of observed failures is even.
-    This is simultaneously a Bayes-optimal one-shot rule for every common
-    channel with parity-flip probability <=1/2. The extremal one-hot law
+    When sum(caps)<1/2, the minimax test declares flat for even observed
+    failure parity. When sum(caps)>=1/2, a fair coin is minimax because an
+    admissible mask law erases all information. The extremal one-hot law
     supplies a matching adversarial lower bound.
     """
     return (1-one_shot_minimax_tv(q,marginal_caps))/2
@@ -152,10 +154,10 @@ def parity_test_error_bounds(
     if not 0 <= a <= 1 or not 0 <= b <= 1:
         raise ValueError("decision probabilities must be in [0,1]")
     even0,even1 = clean_even_probabilities(len(caps),q)
-    pstar = min(Fraction(1,2),sum(caps, Fraction(0)))
+    pmax = min(Fraction(1),sum(caps, Fraction(0)))
     fp=Fraction(0)
     fn=Fraction(0)
-    for p in (Fraction(0),pstar):
+    for p in (Fraction(0),pmax):
         f0=even0*(1-p)+(1-even0)*p
         f1=even1*(1-p)+(1-even1)*p
         fp=max(fp, a*f0+b*(1-f0))
@@ -172,7 +174,7 @@ def feasible_parity_composite_test(
     """Exact LP feasibility for randomized parity-only (alpha,beta) constraints.
 
     The feasible set is a closed polygon in (a,b) in [0,1]^2 with four
-    linear error inequalities, one at p=0 and one at p=pstar under both
+    linear error inequalities, one at p=0 and one at p=pmax under both
     hypotheses. A nonempty bounded polygon has a vertex at the intersection
     of two of these lines. All such intersections are checked exactly.
 
@@ -185,13 +187,13 @@ def feasible_parity_composite_test(
     if not 0 <= alpha <= 1 or not 0 <= beta <= 1:
         raise ValueError("error targets must be in [0,1]")
     e0,e1=clean_even_probabilities(len(caps),q)
-    pstar=min(Fraction(1,2),sum(caps,Fraction(0)))
+    pmax=min(Fraction(1),sum(caps,Fraction(0)))
     # A*a+B*b <= C.
     constraints=[
         (-1,0,Fraction(0)), (1,0,Fraction(1)),
         (0,-1,Fraction(0)), (0,1,Fraction(1)),
     ]
-    for p in (Fraction(0),pstar):
+    for p in (Fraction(0),pmax):
         a0=e0*(1-p)+(1-e0)*p
         a1=e1*(1-p)+(1-e1)*p
         constraints.append((a0,1-a0,alpha))
