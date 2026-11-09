@@ -156,6 +156,8 @@ def descent_upper_bound(base: Game, lifted: Game, labels: tuple[int, ...], r: in
         lifts = lifted.edges[j*r:(j+1)*r]
         if sorted(x[0] % r for x in lifts) != list(range(r)):
             raise ValueError("incomplete lifted source fibers")
+        if sorted(x[1] % r for x in lifts) != list(range(r)):
+            raise ValueError("incomplete lifted target fibers")
         for x, y, t in lifts:
             if x//r != u or y//r != v or t != s:
                 raise ValueError("not a matched ordered cover")
