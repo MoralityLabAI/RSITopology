@@ -23,8 +23,8 @@ except ImportError:
 
 
 def _priors(q: int, length: int, eta: Fraction):
-    if q < 2 or q > 4 or length < 1 or length > 4:
-        raise ValueError("seed budget: 2<=q<=4, 1<=length<=4")
+    if q not in (2, 4) or length < 1 or length > 4:
+        raise ValueError("seed budget: q in {2,4}, 1<=length<=4")
     eta = Fraction(eta)
     if not 0 <= eta <= 1:
         raise ValueError("readout flip probability must lie in [0,1]")
