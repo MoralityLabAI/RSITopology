@@ -57,8 +57,8 @@ class AuditBudgetDesignTests(unittest.TestCase):
         expected = {
             0: (Fraction(1,4), None, Fraction(1,4), Fraction(0)),
             1: (Fraction(121,400), 0, Fraction(5,16), Fraction(1)),
-            2: (Fraction(0.32921875), 0, Fraction(89,256), Fraction(59,32)),
-            4: (Fraction(0.338046875), 0, Fraction(189,512), Fraction(199,64))
+            2: (Fraction('0.32921875'), 0, Fraction(89,256), Fraction(59,32)),
+            4: (Fraction('0.338046875'), 0, Fraction(189,512), Fraction(199,64))
         }
         for budget, (val,shift,correct,cost) in expected.items():
             out=optimal_costed_monitor(4,3,2,budget,model=model)
