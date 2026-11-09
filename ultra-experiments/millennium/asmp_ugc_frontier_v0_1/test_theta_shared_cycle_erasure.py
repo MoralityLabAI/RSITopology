@@ -6,9 +6,9 @@ import unittest
 from theta_shared_cycle_erasure import (
     N_EDGES, MASKS, THETA_EDGES, THETA_SHIFTS, Q8_FLAT,
     Q8_FRUSTRATED, Q8_DUAL_EQUALITY, Q8_DUAL_MARGINAL,
-    q4_common_mask, signed_walsh_count, theta_counts, theta_laws,
+    q4_common_mask, q4_one_balanced_mask, signed_walsh_count, theta_counts, theta_laws,
     uniform_cap_counts, xor_convolve_counts,
-    verify_q4_primal, verify_q4_lower_lemma,
+    verify_q4_primal, verify_q4_lower_lemma, verify_q4_one_balanced_case,
     verify_q8_primal, verify_q8_dual, exact_theta_certificate,
 )
 from sharp_erasure_optimality import critical_erasure_cap
@@ -51,6 +51,18 @@ class ThetaInteractingCycleTests(unittest.TestCase):
         for subset in (15,51,60,63):
             self.assertGreater(signed_walsh_count(p0,subset),0)
             self.assertEqual(signed_walsh_count(p1,subset),0)
+
+    def test_same_theta_graph_different_balance_pattern_changes_erasure(self):
+        self.assertTrue(verify_q4_one_balanced_case())
+        witness=q4_one_balanced_mask()
+        self.assertEqual(sum(witness),16)
+        self.assertEqual(uniform_cap_counts(witness),2)
+        self.assertEqual(Fraction(2,16),Fraction(1,8))
+        self.assertEqual(exact_theta_certificate()[
+            "q4_one_balanced_exact_erasure"],"1/8")
+        # A single balanced four-cycle with two unbalanced ones needs
+        # exactly 1/8; with all three unbalanced cycles it needs 1/6.
+        self.assertLess(Fraction(1,8),Fraction(1,6))
 
     def test_q8_primal_and_dual_exact_complementary_certificate(self):
         self.assertTrue(verify_q8_primal())
