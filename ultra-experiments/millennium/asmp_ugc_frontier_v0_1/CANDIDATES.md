@@ -173,3 +173,13 @@ The co-located Python module and unittest suite deliberately use only the standa
 See [SHARP_VISIBILITY_AND_DECODING_BOUNDS.md](SHARP_VISIBILITY_AND_DECODING_BOUNDS.md) for new exact results and corrected candidate scopes. The **holonomy-image rank** is too weak a tractability parameter for ASMP-13: even rank exactly one supports NP-hard MAX-CUT instances. Graph **cycle rank** beta1 is a genuine positive parameter, with an explicit q^(2 beta1) forest/chord decoder.
 
 For ASMP-14, a fresh uniform-label monitor that receives **all** ell Boolean satisfaction bits on a flat versus frustrated q-label cycle has exact total-variation separation (2/q)^(ell-1). This supplies a new alphabet-dependent sample barrier even beyond the original r<ell indistinguishability regime. When q=2 and readout bits suffer iid flips at rate eta, the exact full-cycle TV becomes |1-2eta|^ell. Both are elementary character/parity computations and are registered as negative controls, while the general priced monitoring frontier remains open.
+
+## BM-01/02 observation-quotient and active recovery amendments
+
+The [Boolean-monitor quotient theorem](BOOLEAN_MONITOR_QUOTIENT_BM01.md) characterizes the complete one-episode satisfaction-indicator law exactly: two F₂^s translation connections have identical laws if and only if they have identical families of balanced edge subsets. That information identifies the cosystolic optimum in principle but may leave numerical holonomy and minimal exact flat-cover degree ambiguous.
+
+A connected cactus pair with t triangles has identical passive Boolean laws, yet minimum flat-cover degrees 2 and 2^t. Its graph and target are fixed, yielding a direct ASMP-14/15 zero-TV impossibility under the registered passive monitor. The distinction persists under unlimited adaptive queries on independent fresh uniform labelings.
+
+The [active edge-shift recovery theorem](ACTIVE_PROBE_RECOVERY_BM02.md) introduces a *strictly stronger, charged interface*. A known shift x on one edge of a cycle reveals an exact equality test for the unknown holonomy h once the monitor can decide balance. Ideal balance-query reconstruction needs at most q-1 equality tests. The finite Bernoulli sampling version has an explicit one-sided detection budget, and the smallest cactus pair's Boolean TV rises from 0 to 1/4 after an intervention.
+
+These are mathematical baselines built from classical biased-graph and elementary statistical testing arguments. The potential new ASMP is an adversarial, resource- and intervention-aware transition between passive and active monitoring, with costs for state restoration, tampering, measurement noise and certification of the actual intervention.
