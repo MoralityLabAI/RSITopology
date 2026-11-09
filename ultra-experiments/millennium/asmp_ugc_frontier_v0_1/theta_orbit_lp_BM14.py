@@ -356,3 +356,93 @@ def masked_count_law(
     if sum(out.values())!=1 or any(v<0 for v in out.values()):
         raise AssertionError("invalid independent count channel")
     return out
+
+
+
+@dataclass(frozen=True)
+class OrbitLP:
+    """An exact rational standard-form erasure LP on mask weight orbits.
+
+    Variables are ordered Q0[t] for t in classes, Q1[t] for t in classes,
+    followed by eta. Equalities: all nonempty Walsh signatures plus the
+    two law normalizations. Inequalities: 2k path-marginal caps.
+    """
+    signatures:tuple[tuple[int,...],...]
+    equality_rows:tuple[tuple[Fraction,...],...]
+    equality_rhs:tuple[Fraction,...]
+    inequality_rows:tuple[tuple[Fraction,...],...]
+    inequality_rhs:tuple[Fraction,...]
+    objective:tuple[Fraction,...]
+
+
+def build_orbit_lp(model:OrbitModel,*,max_classes:int=100)->OrbitLP:
+    """Materialize an exact LP with 2M+1 variables and M+1 equalities.
+
+    Ordinary LP solvers can optimize the rational system; verification
+    remains independent with verify_orbit_primal / verify_orbit_dual.
+    max_classes bounds eager Fraction memory consumption; for larger
+    graphs use lazy Walsh rows and separation oracles.
+    """
+    cls=model.classes
+    M=len(cls);k=len(model.lengths)
+    if M>max_classes or max_classes<1:
+        raise ValueError("orbit LP exceeds registered eager class limit")
+    eq=[];rhs=[]
+    for s in cls:
+        if s==(0,)*k:
+            continue
+        p0,p1=model.clean_walsh(0,s),model.clean_walsh(1,s)
+        eq.append(tuple(p0*walsh_kernel(model.lengths,s,t) for t in cls)
+                  +tuple(-p1*walsh_kernel(model.lengths,s,t) for t in cls)
+                  +(Fraction(0),))
+        rhs.append(Fraction(0))
+    eq.append(tuple(Fraction(1) for _ in cls)+
+              tuple(Fraction(0) for _ in cls)+(Fraction(0),))
+    rhs.append(Fraction(1))
+    eq.append(tuple(Fraction(0) for _ in cls)+
+              tuple(Fraction(1) for _ in cls)+(Fraction(0),))
+    rhs.append(Fraction(1))
+    ineq=[];zero=[]
+    for h in (0,1):
+        for i,n in enumerate(model.lengths):
+            row=tuple(Fraction(t[i],n) if hh==h else Fraction(0)
+                      for hh in (0,1) for t in cls)+(Fraction(-1),)
+            ineq.append(row)
+            zero.append(Fraction(0))
+    objective=tuple(Fraction(0) for _ in range(2*M))+(Fraction(1),)
+    return OrbitLP(cls,tuple(eq),tuple(rhs),tuple(ineq),tuple(zero),
+                   objective)
+
+
+def check_orbit_lp_primal(
+    lp:OrbitLP,flat:dict[tuple[int,...],Fraction],
+    frustrated:dict[tuple[int,...],Fraction],eta:Fraction,
+)->bool:
+    """Independent exact matrix evaluation of an orbit primal point."""
+    x=tuple(Fraction(flat.get(t,0)) for t in lp.signatures)+tuple(
+        Fraction(frustrated.get(t,0)) for t in lp.signatures
+    )+(Fraction(eta),)
+    if any(v<0 for v in x):
+        return False
+    return (all(sum((a*b for a,b in zip(row,x)),Fraction(0))==rhs
+                for row,rhs in zip(lp.equality_rows,lp.equality_rhs))
+            and all(sum((a*b for a,b in zip(row,x)),Fraction(0))<=rhs
+                    for row,rhs in zip(lp.inequality_rows,lp.inequality_rhs)))
+
+
+def orbit_manifest(model:OrbitModel)->dict[str,int|tuple[int,...]]:
+    """Expose compression sizes and full-vs-orbit verification counts."""
+    M=model.dimension
+    m=model.edge_count
+    return {
+        "path_lengths":model.lengths,
+        "number_of_paths":len(model.lengths),
+        "number_of_edges":m,
+        "full_mask_states_per_world":1<<m,
+        "orbit_mask_states_per_world":M,
+        "full_walsh_signatures":1<<m,
+        "orbit_walsh_signatures":M,
+        "orbit_lp_variables":2*M+1,
+        "orbit_lp_equalities":M+1,
+        "orbit_lp_marginal_inequalities":2*len(model.lengths),
+    }
