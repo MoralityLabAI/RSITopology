@@ -133,6 +133,43 @@ class CorrelatedMinimaxTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             conditional_false_restoration_union_bound((Fraction(11, 10),))
 
+    def test_shared_burst_multi_episode_error_floor_independent_oracle(self):
+        # Draw ONE hidden mask, then fresh parity-coset labelings every
+        # episode. Under either hypothesis the mask parity is a persistent
+        # hidden bit. Exact exhaustive observation histories retain its
+        # one-shot Bayes error, unlike conditionally budgeted masks.
+        ell, eta = 3, Fraction(1,12)
+        masks = least_favorable_masks(ell,eta)
+        pstar = parity_flip_budget(ell,eta)
+        flat = full_cycle_law(ell,2,flat=True)
+        nonflat = full_cycle_law(ell,2,flat=False)
+        outcomes=tuple(product((False,True),repeat=ell))
+        for episodes in (1,2):
+            overlap=Fraction(0)
+            for history in product(outcomes, repeat=episodes):
+                masses=[]
+                for clean in (flat,nonflat):
+                    total=Fraction(0)
+                    for mask,maskprob in masks.items():
+                        likelihood=Fraction(1)
+                        for observed in history:
+                            unmasked=tuple(x != bit for x,bit in zip(observed,mask))
+                            likelihood*=clean.get(unmasked,Fraction(0))
+                        total+=maskprob*likelihood
+                    masses.append(total)
+                overlap+=min(masses)
+            self.assertEqual(overlap/2,pstar)
+        self.assertGreater(pstar,conditional_minimax_error(ell,eta,3))
+
+    def test_restoration_alias_extends_to_full_cycle_laws_for_all_actions(self):
+        for action in range(4):
+            effective_a=restoration_observation_class(1,2,action,4)
+            effective_b=restoration_observation_class(3,0,action,4)
+            self.assertEqual(effective_a,effective_b)
+            a=full_cycle_law(3,4,flat=(effective_a==0))
+            b=full_cycle_law(3,4,flat=(effective_b==0))
+            self.assertEqual(a,b)
+
     def test_probability_validations(self):
         with self.assertRaises(ValueError):
             least_favorable_masks(0,Fraction(1,4))
