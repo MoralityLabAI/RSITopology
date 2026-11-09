@@ -11,9 +11,8 @@ from correlated_minimax import (
     mask_marginals, minimum_guaranteed_parity_signal, parity_flip_budget,
     restoration_observation_class,
 )
-from frontier_bounds import (
-    apply_bsc, binary_parity_signal, full_cycle_law, tv_distance
-)
+from frontier_bounds import full_cycle_law, tv_distance
+from finite_sample_monitor import binary_parity_signal
 
 
 def independent_full_sequence_error(
