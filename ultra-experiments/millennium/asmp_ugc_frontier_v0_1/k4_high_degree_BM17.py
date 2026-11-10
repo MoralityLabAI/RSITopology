@@ -122,6 +122,7 @@ DEGREE_DUALS={
 
 
 DEGREE_ZERO_PRIMAL=Primal(1,{0:1},{0:1},Fraction(0))
+DEGREE_ZERO_DUAL=Dual(1,{},(0,0),1,(-1,0,0,0,0,0,0,0,0,0,0,0))
 
 
 def degree_certificate(d:int):
@@ -129,7 +130,7 @@ def degree_certificate(d:int):
     if not 0<=d<=6:
         raise ValueError("K4 has six observed edges")
     if d<=2:
-        return None
+        return DEGREE_ZERO_PRIMAL,DEGREE_ZERO_DUAL
     return DEGREE_PRIMALS[d], DEGREE_DUALS[d]
 
 
@@ -137,15 +138,6 @@ def degree_receipt():
     model=k4_pair()
     records={}
     for d in range(7):
-        if d<=2:
-            from_zero=DEGREE_ZERO_PRIMAL
-            # As all <=2 edge subsets are forests, clean moments agree.
-            from_generic=certify(model,d,from_zero,Dual(
-                1,{},(0,0),1,(-1,0,0,0,0,0,0,0,0,0,0,0)
-            )) if False else None
-            records[d]={"optimum":"0","certificate":"forest/no-noise",
-                        "watched":0}
-            continue
         report=certify(model,d,*degree_certificate(d))
         records[d]={
             "optimum":str(report.optimum),
