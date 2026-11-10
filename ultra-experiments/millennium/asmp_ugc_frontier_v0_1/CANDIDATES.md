@@ -588,3 +588,30 @@ Choosing `k=floor(n^(2/3))` yields an explicit **O(n^(−1/3)) bounded-Lipschitz
 The rate is **O(1/n) for every fixed polynomial degree** and improves the BL bound on that explicit test subspace. The equalities and upper bounds are independently verified by [BM-32 exact Python tests](test_robust_dyadic_observables_BM32.py) against BM-25 n2, BM-26 n3, BM-27 legal all-n masks and BM-30 equality frontier channels, including sample-character unbiasedness and real complete reported-output TV. Large n examples are checked only by symbolic rational bound calculations.
 
 **Precise unresolved bridge:** the scalar `5/52−eta_n(8,2)` still lacks an explicit n-rate. The BM-29 weighted lower theorem controls the **minimum of two signed measures**, a nonlinear operation that is generally unstable under mere low-degree moment approximation. To use BM-32 for the scalar threshold, construct a **polynomial or Lipschitz dual approximation** to BM-29's signed dyadic-overlap certificate, with independently verified uniform approximation error and coefficient norm or Lipschitz complexity, then combine it with the exact BM-32 rates. No scalar convergence-rate or new UGC/operational AI control claim is made.
+
+
+## BM-33: explicit Lipschitz signed-overlap dual finally proves a finite-n scalar rate
+
+The new [BM-33 finite-replica convergence theorem and exact rational controls](FINITE_ERASURE_RATE_BM33.md) close the rate-existence question from BM-29–32 **in the registered q=8, length-two repeated gain-path readout experiment**. An explicit continuous piecewise-**bilinear** dual potential `f(u,w)` on the physical symmetric two-bit mask coordinate domain `-1<=u<=1, 2|u|-1<=w<=1` satisfies two **global pointwise rational inequalities**:
+
+    |1-f(u,w)+f(u,w/2)| <=16(1-u)/5,
+    |3f(u,w)+15f(u,w/2)| <=1+16(1-u)/5.
+
+Its exact norm bounds are `sup|f|<=5/6` and `Lip_l1(f)<=64/15`. The construction uses a one-variable base function f0 with plateaus and two short ramps, having `f0(w)-f0(w/2)=1/5` and `|3f0(w)+15f0(w/2)|<=9/5` for every w>=3/8. Across ordinary Fourier parameter u, the potential is zero for u<=11/16, a convex scaling of f0 for u∈(11/16,3/4], and an explicitly clamped affine interpolation for u>3/4. Its continuum validity follows from exact breakpoint inequalities and convex interpolation, independently of any numerical LP or sampling grid. It is **tight on BM-27's three optimal directing mask modes**, reproducing the known sharp limiting cap.
+
+For ANY common directing probability measure `mu` and hypothesis-aware exceptional parity signed measures `nu0,nu1` dominated by mu, the pointwise dual implies the **robust dyadic-overlap inequality**
+`H<=16 J/5 + D[f]`, with `H=∫min(dnu0,dnu1)`, `J=∫(1-u)dmu`, and `D=(2I+7S_*)nu0-(I+8S_*)nu1`, `S(u,w)=(u,w/2)`. Nonnegative exceptional-mask probabilities give `C_exc>=(1-H)/4`, so the weighted readout budget obeys
+
+    8 C_ord + 5 C_exc >= 5/4 - (5/4) D[f].
+
+For an arbitrary legal **finite n** full eraser, BM-31's finite empirical replacement produces an explicit **finite atomic** directing measure with preserved mask-bit costs, and BM-32 bounds its dyadic defect in bounded-Lipschitz norm. Inserting the verified norm constants gives a **fully explicit scalar rate**, for all n>=2,1<=k<=n:
+
+    0 <=5/52-eta_n(8,2)
+      <= (200/39)*sqrt[k(k-1)/(2(n-1)(n-k+1))]
+           +(3584/117)/sqrt(k).
+
+Taking `k=floor(n^(2/3))` gives the **first certified eta_infinity-eta_n = O(n^(-1/3)) rate**, with a crude exact constant `5/52-eta_n<=51 n^(-1/3)` for n>=8. A separate rational squared-gap certificate `(5/52-eta_n)^2<=2[(200/39)^2*v+(3584/117)^2/k]` avoids floating point. This is a convergence-rate theorem, **not** a sharp finite-n solver: BM-28's n16 rational lower remains much stronger for ordinary finite sizes.
+
+The [BM-33 implementation](robust_overlap_potential_BM33.py) checks exact base breakpoints, the global three-regime proof, signed overlap for arbitrary finite measures **without imposing D=0**, and symbolic scalar rates. Its [independent tests](test_robust_overlap_potential_BM33.py) check the dual on more than 20,000 exact rational physical-domain points, randomized exact Lipschitz bounds, BM-27/30 equality measures, and actual BM-25/26/27 **full masked output witnesses** converted into finite empirical directing measures, cross-checking BM-32's separate dyadic defect calculation. The main finite-n proof uses only finite empirical histograms and their conditional iid samples; it **does not require BM-29's abstract infinite de Finetti limit** to derive the scalar inequality. The analytic theorem is written in prose with exact regression tests, not Lean-formalized.
+
+**Next ASMP frontier:** improve the conservative `n^(-1/3)` exponent/constants, seek exact finite n>=4 mask optima, extend the robust pointwise dual to larger alphabets and longer paths, and test separate costed trusted interventions. BM-33 is a finite Fourier/LP/equivariant channel theorem, without a new UGC result, deployed AI alignment guarantee or authenticated root-state restoration.
