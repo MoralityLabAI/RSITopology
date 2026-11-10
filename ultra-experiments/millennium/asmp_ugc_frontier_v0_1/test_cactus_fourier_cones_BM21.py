@@ -19,6 +19,8 @@ from gain_balanced_inclusion_BM21 import (
     contains_unbalanced_cycle,pure_cycle_minimal_difference,
 )
 from separator_factor_transfer_BM16 import exact_walsh
+from support_aware_completion_BM19 import verify_postprocessor_dual
+from parity_width_separation_BM20 import exact_separate
 from k4_high_degree_BM17 import k4_pair
 from diamond_weighted_fourier_BM10 import EDGES as DIAMOND_EDGES
 from theta_shared_cycle_erasure import THETA_EDGES
@@ -237,6 +239,73 @@ class BM21CactusFourierTests(unittest.TestCase):
             self.assertEqual(max(marg),common_eraser_dual_lower(c))
             self.assertTrue(all(p==0 for i,p in enumerate(marg)
                                 if c.bridge_mask&(1<<i)))
+
+    def test_symbolic_full_erasure_and_one_character_dual_all_cactus_controls(self):
+        examples=(
+            make_triangle_with_bridges(0,q=2),
+            make_triangle_with_bridges(3,q=4),
+            make_triangle_with_bridges(2,q=8),
+            two_triangles(4,(1,2)),
+            triangle_square(4,(1,2),bridges=1),
+            two_triangles(4,(0,2)),
+        )
+        for game in examples:
+            c=compile_cactus(game)
+            self.assertTrue(c.verify_symbolic_common_completion())
+            mask=explicit_common_eraser(c)
+            for S in range(1<<c.edge_count):
+                direct=sum((p*(-1 if (x&S).bit_count()%2 else 1)
+                            for x,p in mask.items()),Fraction(0))
+                self.assertEqual(c.common_eraser_walsh(S),direct)
+                self.assertEqual(c.delta(S)*direct,0)
+            self.assertEqual(
+                c.verify_shortest_cycle_dual_symbolic(),c.common_erasure_cap
+            )
+            active=min(c.unbalanced,key=lambda x:x.length).edge_mask
+            proof=c.shortest_cycle_dual()
+            self.assertEqual(
+                verify_postprocessor_dual(c.edge_count,(active,),proof),
+                c.common_erasure_cap
+            )
+            D=tuple(S for S in range(1<<c.edge_count) if c.delta(S))
+            self.assertEqual(
+                verify_postprocessor_dual(c.edge_count,D,proof),
+                c.common_erasure_cap
+            )
+
+    def test_250_bridge_symbolic_completion_and_BM20_active_width(self):
+        c=compile_cactus(make_triangle_with_bridges(250,q=4))
+        self.assertTrue(c.verify_symbolic_common_completion())
+        self.assertEqual(c.verify_shortest_cycle_dual_symbolic(),Fraction(1,6))
+        self.assertEqual(c.q4_support_count(),1<<250)
+        self.assertEqual(c.common_eraser_walsh(7),0)
+        self.assertEqual(c.common_eraser_walsh((1<<253)-1),0)
+        self.assertEqual(c.common_eraser_walsh(1<<252),1)
+        dual=c.shortest_cycle_dual()
+        # The dual is feasible for ALL 2^250 Fourier discrepancies.
+        # Its only active Fourier support is C, so separation stays width 2.
+        result=exact_separate(
+            c.edge_count,(7,),dual,order=tuple(range(c.edge_count)),
+            max_factor_bits=4,
+        )
+        self.assertEqual(result.maximum,0)
+        self.assertEqual(result.max_join_scope,3)
+        self.assertEqual(result.induced_width,2)
+        self.assertEqual(result.maximizing_mask,0)
+        self.assertLess(result.candidate_assignments,40)
+        self.assertEqual(dual.normalization,Fraction(1,6))
+        self.assertEqual(len(dual.characters),1)
+
+    def test_all_balanced_cactus_requires_no_mask_and_no_active_dual(self):
+        c=compile_cactus(make_triangle_with_bridges(3,q=4,shift=0))
+        self.assertTrue(c.verify_symbolic_common_completion())
+        self.assertEqual(c.common_eraser_walsh(0),1)
+        self.assertEqual(c.common_eraser_walsh((1<<c.edge_count)-1),1)
+        self.assertEqual(explicit_common_eraser(c),{0:Fraction(1)})
+        with self.assertRaises(ValueError):
+            c.shortest_cycle_dual()
+        with self.assertRaises(ValueError):
+            c.verify_shortest_cycle_dual_symbolic()
 
     def test_reject_overlap_non_cactus_and_disconnected_and_parallel(self):
         k4=k4_pair().other
