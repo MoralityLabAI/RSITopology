@@ -1,5 +1,8 @@
 # BM-32: Quantitative observable control of the signed dyadic equation
 
+> **Subsequent result, BM-33 (10 November 2026):** The [explicit Lipschitz signed-overlap dual](FINITE_ERASURE_RATE_BM33.md) now proves the finite scalar rate \(0\le5/52-\eta_n(8,2)\le O(n^{-1/3})\), including an explicit nonasymptotic inequality for every \(n\ge2\). Statements below calling the *existence* of a finite-n rate open describe the historical status before BM-33. Its numerical sharpness, finite-n exact optima for n>=4, and higher-alphabet extensions remain open.
+
+
 **10 November 2026 | finite-observation robustness and exact polynomial-moment rate.** This builds directly on [BM-29's signed dyadic overlap theorem](INFINITE_REPLICATION_LIMIT_BM29.md), [BM-30's limiting channel rigidity](OPTIMAL_CHANNEL_RIGIDITY_BM30.md) and [BM-31's finite-exchangeability extension](FINITE_EXCHANGEABILITY_RATE_BM31.md).
 
 **The research target** is an explicit scalar rate for `5/52−eta_n(8,2)`, where eta_n is the exact fully hypothesis-aware erasure threshold with n ordinary two-edge paths and one exceptional two-edge path over q=8. BM-32 proves a narrower but quantitative result: every feasible finite-n equalizer induces a genuinely infinite exchangeable **empirical replacement** channel whose BM-29 signed parity-measure equation is *approximately satisfied* at a precisely controlled finite-window rate. For **all bounded Lipschitz tests**, the defect is O(n^(-1/3)); for **every fixed-degree polynomial monomial**, it is O(1/n).
