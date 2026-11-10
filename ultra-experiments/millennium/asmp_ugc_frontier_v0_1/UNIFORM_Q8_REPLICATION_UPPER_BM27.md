@@ -1,5 +1,8 @@
 # BM-27: Uniform hypothesis-aware erasure at 5/52 on growing q=8 theta graphs
 
+> **Subsequent result, BM-29 (10 November 2026):** [The exact infinite-replication theorem](INFINITE_REPLICATION_LIMIT_BM29.md) proves **lim_n eta_n(8,2)=5/52** in the registered hypothesis-aware, current-clean-independent readout model. The open-limit statements below record the historical status before BM-29. Finite-n sharp formulas for n>=4 and a quantitative convergence rate remain open.
+
+
 **10 November 2026 | exact infinite-family UPPER theorem, finite algebraic proof and independent controls.** This advances the limiting-cost question after [BM-26's exact q=8 third-replica threshold](THREE_REPLICA_Q8_BM26.md). It gives a **uniform upper bound strictly below the common-channel optimum**, valid with arbitrarily many repeated observation paths, using a finite signed-convolution identity and legal nonnegative mask laws.
 
 The construction is exact under the registered observation and attacker contracts. It does **not** determine the asymptotic optimum: an independent lower-bound sequence approaching 5/52 is still required before a limiting-value theorem can be claimed. The group convolution and mixture manipulations are elementary finite probability mathematics.
