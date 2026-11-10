@@ -1,5 +1,8 @@
 # BM-28: A certified 16-replica lower bound for the q=8 masking limit
 
+> **Subsequent result, BM-29 (10 November 2026):** [The exact infinite-replication theorem](INFINITE_REPLICATION_LIMIT_BM29.md) proves **lim_n eta_n(8,2)=5/52** in the registered hypothesis-aware, current-clean-independent readout model. The open-limit statements below record the historical status before BM-29. Finite-n sharp formulas for n>=4 and a quantitative convergence rate remain open.
+
+
 **10 November 2026 | exact rational dual lower certificate with a frozen integer witness.**
 
 This strengthens the q=8 replication-limit problem following [BM-26](THREE_REPLICA_Q8_BM26.md) and the new [BM-27 all-n 5/52 upper construction](UNIFORM_Q8_REPLICATION_UPPER_BM27.md). It establishes a sharp *interval* for the infinite-replication value by certifying a far stronger finite-n lower bound using only exact integer arithmetic at verification time. The n=16 **optimum itself is not claimed exact**.
