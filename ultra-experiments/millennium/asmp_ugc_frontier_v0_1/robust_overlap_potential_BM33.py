@@ -1,6 +1,6 @@
 """BM-33: explicit Lipschitz dyadic dual and finite-n erasure threshold rate.
 
-Proves an exact continuous, piecewise-linear dual potential f(u,w)
+Proves an exact continuous, piecewise-bilinear dual potential f(u,w)
 for BM-29's signed dyadic overlap inequality, including arbitrary
 approximate signed flow D=(2I+7S_*)nu0-(I+8S_*)nu1.
 
@@ -94,7 +94,7 @@ def base_potential(w:Fraction)->Fraction:
 
 
 def robust_potential(u:Fraction,w:Fraction)->Fraction:
-    """Globally continuous piecewise-linear bounded/Lipschitz test.
+    """Globally continuous piecewise-bilinear bounded/Lipschitz test.
 
     For u<=11/16, f=0 and c(u)>=1.
     For 11/16<u<=3/4, f=(16u-11)*f0(w).
@@ -301,7 +301,7 @@ def optimized_window_rate(n:int)->FiniteRateReceipt:
 
 
 def certify_known_eta(n:int,eta:Fraction)->bool:
-    """Compare any independently certified exact eta_n with BM33's bound."""
+    """Compare a certified exact eta_n or a certified finite-n lower bound with BM33's bound."""
     from math import isqrt
     eta=Fraction(eta)
     if not 0<=eta<=LIMIT:
