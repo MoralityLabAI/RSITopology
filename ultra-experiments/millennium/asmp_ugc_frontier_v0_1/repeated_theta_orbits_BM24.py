@@ -134,11 +134,6 @@ def type_histogram_multiplicity(L:int,hist:tuple[int,...])->int:
     if L<1 or len(hist)!=L+1 or any(n<0 for n in hist):
         raise ValueError("valid path histogram required")
     n=sum(hist)
-    result=factorial(n)
-    for x in hist:
-        result//=factorial(x)
-    # factorial divisions must be performed as a single multinomial,
-    # so recompute exactly before multiplying by selected-edge choices.
     multi=factorial(n)//prod((factorial(x) for x in hist),start=1)
     return multi*prod((comb(L,s)**x for s,x in enumerate(hist)),start=1)
 
@@ -327,6 +322,54 @@ class RepeatedTheta:
         if cap is not None and eta>Fraction(cap):
             raise AssertionError("mask cost above supplied cap")
         return eta
+
+    def verify_dual(
+        self,norm:tuple[Fraction,Fraction],
+        walsh_coefficients:dict[tuple,Fraction],
+        signed_marginals:tuple[tuple[Fraction,...],tuple[Fraction,...]],
+        *,max_orbits:int=256
+    )->Fraction:
+        """Exact weak-LP dual on every orbit under both hypotheses.
+
+        The orbit Fourier multiplier is the SUM of individual Fourier
+        multipliers across a joint-type histogram orbit. Signed marginal
+        coefficients sum the full original edge multipliers by type.
+        For a mask histogram t, the orbit dual inequality is
+          norm[h] + (-1)^h sum_s y_s W_h(s) K(s,t)
+                  + sum_type z[h,type]*E[bit mask in type] <=0.
+        """
+        classes=self.all_signatures(max_orbits=max_orbits)
+        allowed=set(classes)
+        zero=tuple((t.count,)+(0,)*t.length for t in self.types)
+        if (len(norm)!=2 or len(signed_marginals)!=2
+            or any(len(row)!=self.groups for row in signed_marginals)
+            or any(s not in allowed or s==zero
+                   for s in walsh_coefficients)):
+            raise ValueError("dual dimensions or Fourier signatures invalid")
+        if (any(v>0 for row in signed_marginals for v in row)
+            or -sum((Fraction(v) for row in signed_marginals
+                     for v in row),Fraction(0))!=1):
+            raise ValueError("signed dual marginal coefficients must sum -1")
+        for h in (0,1):
+            for t in classes:
+                lhs=Fraction(norm[h])
+                for s,w in walsh_coefficients.items():
+                    lhs+=((1 if h==0 else -1)
+                          *Fraction(w)*self.clean_walsh_signature(h,s)
+                          *self.orbit_kernel(s,t))
+                lhs+=sum((
+                    Fraction(signed_marginals[h][i])*
+                    Fraction(sum(r*t[i][r]
+                                 for r in range(group.length+1)),
+                             group.count*group.length)
+                    for i,group in enumerate(self.types)
+                ),Fraction(0))
+                if lhs>0:
+                    raise AssertionError(
+                        "dual violated h=%d mask_hist=%s slack=%s" %
+                        (h,t,lhs)
+                    )
+        return Fraction(norm[0])+Fraction(norm[1])
 
     def max_bit_marginal(self,*laws)->Fraction:
         """Each original edge in a repeated path type has the same marginal."""
