@@ -47,9 +47,8 @@ def original_masks():
               Fraction(1,10)):
         for n in (2,3):
             yield f"BM30 c{c} n{n}",n,(
-                explicit_frontier_mask(n,c,0),
-                explicit_frontier_mask(n,c,1)
-            )
+                explicit_frontier_mask(n,c,0)),(
+                explicit_frontier_mask(n,c,1))
 
 
 class BM31EmpiricalExchangeabilityTests(unittest.TestCase):
