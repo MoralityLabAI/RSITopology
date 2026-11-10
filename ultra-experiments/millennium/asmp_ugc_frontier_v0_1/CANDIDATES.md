@@ -490,3 +490,29 @@ BM-26's monotonic projection theorem promotes the certified n=16 lower to every 
     4743879/50000000 <= eta_infinity(8,2) <= 5/52,
 
 with exact width `829573/650000000 ≈ 0.001276266154` (about **0.1276 percentage points**). The earlier exploratory n=16 numerical optimum `≈0.0948776078` was used only to generate the dual candidate; it is not a certified sharp value. The new lower almost reaches the candidate limit 5/52, which **remains unproved** without a uniform-in-n analytic lower family or equivalent infinite-exchangeability argument. The math is a finite Fourier/LP certificate under the frozen current-clean-input-independent world-aware masking contract, without an operational AI alignment or new UGC implication.
+
+
+## BM-29: exact de Finetti/dyadic-overlap theorem settles the q8 replication limit
+
+The new [BM-29 asymptotic theorem and full proof](INFINITE_REPLICATION_LIMIT_BM29.md) **settle BM-27/C1 in the registered full-Boolean, fresh-uniform-label, hypothesis-aware but current-clean-independent correlated-readout model**:
+
+    lim_(n->infty) eta_sym(n;q=8,L=2) = 5/52.
+
+BM-27's legal all-n **upper** at 5/52 was already exact. The new lower argument applies to a subsequential limit of the optimal finite-n masks after BM-24's ordinary-path/within-path exchangeability averaging. The finite **marginal-rigidity lemma** first shows that complete output equality forces the adversarial worlds to have identical *entire joint ordinary-noise marginals* and identical marginals including **either individual exceptional noise bit**, because all their common clean Walsh coefficients are strictly positive:
+`W_ord(b,r)=(3/4)^b[1+7*2^(−r)]/8>0`. A diagonal compactness limit, the classical de Finetti–Hewitt–Savage representation and the strong law yield a common directing measure `mu` over symmetric two-bit ordinary mask distributions. Write `u` for each ordinary noise bit's Fourier character and `w` for their joint parity character. Physical nonnegativity forces `w>=2u−1`. Each infinite ordinary output empirical pair law has Fourier coordinates `(3u/4,3u/4,w)` in the clean-matched mode and `(3u/4,3u/4,w/2)` in the unmatched mode.
+
+Let `nu_0,nu_1` be the exceptional-noise **pair-parity signed measures** conditional on this common directing state and `v` the common signed single-exception-bit measure. Equality of the masked infinite outputs gives the exact pushforward identity under `S(u,w)=(u,w/2)`:
+
+    (2I+7S_*)nu_0=(I+8S_*)nu_1.
+
+The sharp **dyadic-overlap lemma** states `H=integral min(dnu0,dnu1) <=(16/5)integral(1-u)dmu`. Its proof splits on u: for `u<=11/16`, absolute measure domination is enough; for `u>3/4`, physical w>1/2 makes the dyadic supports disjoint and forces zero exceptional parity; in the remaining `11/16<u<=3/4` regime, `w>3/8` means only **two dyadic levels** can interact. The signed masses on an interacting high/low chain satisfy the rigid ratio **(nu0H,nu1H,nu0L,nu1L)=(1,2,8,7)c**; domination forces total directing mass at least `10|c|`, and the positive overlap is at most `8|c|`. This yields the global 16/5 bound.
+
+Nonnegativity of the exceptional `11` noise atom and marginal rigidity give special-bit cost `C_s >=(1-H)/4`. Ordinary-bit noise cost is `C_o=integral(1-u)dmu/2`. Hence
+
+    8 C_o + 5 C_s >= 5/4,
+
+and because both costs are bounded by `eta_infty`, necessarily `eta_infty>=5/52`. BM-27's all-n channel **attains equality in every inequality**: its ordinary directing law has mass **3/13 on I**, **2/13 on A**, **8/13 on B**, with the two A/B dyadic parity states at `(u,w)=(3/4,1)` and `(3/4,1/2)`, signed overlap exactly **8/13**, and both per-bit costs **5/52**. Thus the bound is sharp, proving the exact limit.
+
+The new [pure-stdlib exact algebra verifier](infinite_replication_rigidity_BM29.py) and [independent tests](test_infinite_replication_rigidity_BM29.py) check all finite Fourier positivity identities, exact finite-world noise-marginal rigidity for BM-25/BM-26/BM-27, physical mask coordinates, signed 1:2:8:7 chain recurrences including negative masses, and equality of BM-27's 8:5 weighted cost. The **infinite exchangeability/measure disintegration steps are proved in prose and are not machine-formalized in Lean**. The mathematical statement is exact within its declared threat model, while independent expert review and novelty examination remain appropriate before publication.
+
+**Remaining ASMP-14 frontier:** finite-n q8 sharp optima for n>=4, a quantitative approach-to-limit bound, extension to q>=16 and longer paths, and integration with independently attested and costed interventions. BM-29 is a model-specific exchangeability/Fourier/signed-measure theorem, with no claim of live AI-control performance, a new UGC proof, or generalized agent-alignment safety.
