@@ -163,7 +163,7 @@ def verify_integer_dual():
     hists,numerators,denoms=ordinary_kernel_numerators(N)
     if len(hists)!=M_ORD or len(y)!=3*len(hists):
         raise AssertionError("histogram/certificate mismatch")
-    max_scaled=0
+    largest_slack=None
     equality_count=0
     checks=0
     for h in (0,1):
@@ -200,9 +200,11 @@ def verify_integer_dual():
                     )
                 if numerator==0:
                     equality_count+=1
-                max_scaled=max(max_scaled,numerator)
+                exact_slack=Fraction(numerator,SCALE*base*2*N)
+                if largest_slack is None or exact_slack>largest_slack:
+                    largest_slack=exact_slack
                 checks+=1
-    if checks!=2*M or equality_count<1 or max_scaled!=0:
+    if checks!=2*M or largest_slack is None or largest_slack>0:
         raise AssertionError("dual proof coverage/max-slack failed")
     return {
         "certified_lower":EXACT_LOWER,
@@ -213,7 +215,7 @@ def verify_integer_dual():
         "dual_inequalities_checked":checks,
         "active_Fourier_orbit_multipliers":sum(bool(v) for v in y),
         "tight_mask_orbit_inequalities":equality_count,
-        "max_dual_slack":Fraction(0),
+        "max_dual_slack":largest_slack,
         "certificate_sha256":EXPECTED_SHA256,
         "external_optimizer_needed":False,
     }
