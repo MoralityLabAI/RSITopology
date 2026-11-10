@@ -27,7 +27,7 @@ Let eta_n be the exact smallest per-bit masking allowance that equalizes the two
 
 The constants are explicit and the proof has no numerical LP discovery assumption. The rate is conservative at finite sizes, where independently certified BM-25/BM-26/BM-28 exact thresholds and lower bounds are substantially stronger; its significance is that it proves an **algebraic convergence rate** for all n rather than relying on numerical extrapolation or qualitative compactness.
 
-The mathematical proof consists of the following explicit pointwise dual, a robust signed-overlap inequality, and the already registered BM-31/BM-32 finite observation estimates.
+The mathematical proof consists of the following explicit pointwise dual, a robust signed-overlap inequality, and the already registered BM-31/BM-32 finite observation estimates. **The scalar finite-n theorem can be derived entirely from finite probability distributions**: BM-31's empirical replacement directing law has at most binomial(n+2,2) ordinary histogram atoms, and its first k conditionally i.i.d. samples are an explicit finite mixture. No abstract infinite de Finetti limit is required to prove (1), even though BM-29 originally established the limiting value through exchangeability.
 
 ## 2. A pointwise dual to the signed dyadic overlap
 
@@ -249,7 +249,7 @@ The square roots in (19) are real analytic bounds, while the [BM-33 implementati
 
 It uses (a+b)^2<=2a²+2b², so no floating-point square root is needed to validate the finite-rate claim. The suite checks the exact rates against BM-25 n2 and BM-26 n3 exact optima and the BM-28 n16 certified lower value, while retaining the exact BM-29/BM-30 limiting equality.
 
-The test suite includes arbitrary finite signed measures with *nonzero dyadic defect* to ensure (11)-(12) do not accidentally rely on the exact infinite relation D=0. A completely independent four-corner check numerically corroborates (10) on more than twenty thousand exact rational physical parameter points. The global theorem itself follows from the analytic endpoint and convexity argument.
+The test suite includes arbitrary finite signed measures with *nonzero dyadic defect* to ensure (11)-(12) do not accidentally rely on the exact infinite relation D=0. An end-to-end finite empirical-mask check additionally converts the registered BM-25 n=2, BM-26 n=3, and BM-27 n=2/3 world-aware attaining masks into their actual histogram directing measures, verifies the signed overlap and the BM-32 independent dyadic evaluation, and checks the new finite scalar bound directly. A completely independent four-corner check numerically corroborates (10) on more than twenty thousand exact rational physical parameter points. The global theorem itself follows from the analytic endpoint and convexity argument.
 
 ## 5. Open problems and mathematical scope
 
