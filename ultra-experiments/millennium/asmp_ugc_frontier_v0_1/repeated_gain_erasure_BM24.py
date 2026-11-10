@@ -260,3 +260,79 @@ def repeated_family_manifest(n:int,L:int,*,q:int=4)->dict[str,object]:
         "full_LP_solved":False,
         "full_Fourier_table_materialized":False,
     }
+
+
+
+def q4_sparse_full_dual(n:int,L:int):
+    """Exact one-character two-hypothesis erasure dual for ALL n,L.
+
+    Pick the 2L-edge cycle formed by the first ordinary path and the
+    exceptional path. The q4 clean Walsh coefficients on this entire
+    cycle are A=2^(2-2L)>0 flat and B=0 frustrated. Set
+      eta=1/(4L), normalization_h=(eta,0),
+      Walsh multiplier y_C=-eta/A,
+      marginal z_(flat,i)=-1/(2L) on the cycle, zero elsewhere.
+    For k flipped bits on that cycle the flat-world slack is
+      [1-(-1)^k]/(4L) - k/(2L) <=0.
+    The frustrated-world slack is identically zero. This is a short
+    exact dual valid for every mask in a 2^m space.
+    """
+    if n<1 or L<1:
+        raise ValueError("positive ordinary path count and length required")
+    model=gain_family(n,L,q=4)
+    mask=((1<<L)-1)|(((1<<L)-1)<<(n*L))
+    expected=Fraction(2)**(2-2*L)
+    if model.clean_walsh(0,mask)!=expected or model.clean_walsh(1,mask)!=0:
+        raise AssertionError("q4 full two-path cycle premise failed")
+    eta=exact_common_cap(L)
+    y=-eta/expected
+    from generic_fourier_erasure_BM17 import Dual
+    D=lcm(eta.denominator,y.denominator)
+    z=tuple(
+        -1 if mask&(1<<i) else 0 for i in range(model.m)
+    )+(0,)*model.m
+    return Dual(
+        D,{mask:int(y*D)},(int(eta*D),0),
+        2*L,z,
+    )
+
+
+def verify_q4_sparse_dual_symbolic(n:int,L:int)->Fraction:
+    """Check the one-character dual through all 2L+1 parity cases."""
+    proof=q4_sparse_full_dual(n,L)
+    eta=Fraction(proof.normalization_numerators[0],
+                 proof.walsh_denominator)
+    assert len(proof.walsh_numerators)==1
+    S,y_num=next(iter(proof.walsh_numerators.items()))
+    model=gain_family(n,L,q=4)
+    y=Fraction(y_num,proof.walsh_denominator)
+    A=model.clean_walsh(0,S)
+    B=model.clean_walsh(1,S)
+    assert B==0 and eta==-y*A
+    assert -sum(proof.marginal_numerators)==proof.marginal_denominator
+    assert all(x<=0 for x in proof.marginal_numerators)
+    for k in range(2*L+1):
+        world0=eta+y*A*(-1 if k%2 else 1)-Fraction(k,2*L)
+        if world0>0:
+            raise AssertionError("one-character dual violated at k=%d"%k)
+        # World1 has zero Fourier coefficient and zero normalization
+        # and marginal multiplier, hence every mask slack is zero.
+    if eta!=exact_common_cap(L):
+        raise AssertionError("dual objective mismatches the common eraser")
+    return eta
+
+
+def certify_q4_family_finite(n:int,L:int):
+    """Independent direct 2^m dual and full primal certificate for small n,L."""
+    from generic_fourier_erasure_BM17 import Pair,Primal,certify
+    model=gain_family(n,L,q=4)
+    if model.m>10:
+        raise ValueError("direct exact certification bounded at 10 edge bits")
+    weights,D=common_full_mask_integer(n,L,max_edges=10)
+    pair=Pair(model.game(0),model.game(1))
+    primal=Primal(D,weights,weights,exact_common_cap(L))
+    proof=q4_sparse_full_dual(n,L)
+    result=certify(pair,model.m,primal,proof)
+    if result.optimum!=verify_q4_sparse_dual_symbolic(n,L):
+        raise AssertionError("finite primal/dual does not match closed proof")
+    return result
