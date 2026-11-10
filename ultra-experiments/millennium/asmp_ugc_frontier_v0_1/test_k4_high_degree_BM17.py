@@ -39,7 +39,7 @@ class K4HighDegreeTests(unittest.TestCase):
             self.assertEqual(cert.optimum,want)
             self.assertEqual(cert.checked_mask_inequalities,128)
             self.assertTrue(cert.primal_valid and cert.dual_valid)
-            self.assertEqual(cert.full_output_equal,d==6 or d<=2)
+            self.assertEqual(cert.full_output_equal,d==6)
         self.assertEqual(tuple(records),expected)
 
     def test_K4_all_Fourier_coefficients_agree_with_independent_BM16_eliminator(self):
@@ -75,12 +75,6 @@ class K4HighDegreeTests(unittest.TestCase):
         obs0=output_counts(clean[0],primal.q0)
         obs1=output_counts(clean[1],primal.q1)
         self.assertNotEqual(obs0,obs1)
-        self.assertEqual(
-            signed_walsh(obs0,63)-signed_walsh(obs1,63),
-            Fraction(0) if False else (
-                signed_walsh(obs0,63)-signed_walsh(obs1,63)
-            )
-        )
         self.assertNotEqual(signed_walsh(obs0,63),signed_walsh(obs1,63))
         for s in range(1,64):
             if s.bit_count()<=5:
