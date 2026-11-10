@@ -10,6 +10,7 @@ from fourier_completion_BM18 import mask_marginals,convolve_clean
 from cactus_fourier_cones_BM21 import (
     CycleBlock,CactusCircuit,compile_cactus,
     one_hot_cycle_sampler,explicit_common_eraser,
+    explicit_hypothesis_aware_erasers,verify_hypothesis_aware_small,
     common_eraser_dual_lower,verify_common_eraser_small,
     make_triangle_with_bridges,
 )
@@ -306,6 +307,62 @@ class BM21CactusFourierTests(unittest.TestCase):
             c.shortest_cycle_dual()
         with self.assertRaises(ValueError):
             c.verify_shortest_cycle_dual_symbolic()
+
+    def test_exact_hypothesis_aware_cactus_cap_strictly_better_for_q8_q16(self):
+        from sharp_erasure_optimality import critical_erasure_cap
+        examples=(
+            (two_triangles(4,(1,2)),Fraction(1,6)),
+            (two_triangles(8,(1,2)),Fraction(1,14)),
+            (triangle_square(16,(1,2)),Fraction(1,86)),
+            (make_triangle_with_bridges(2,q=8),Fraction(1,14)),
+            (triangle_square(4,(1,2),bridges=1),Fraction(1,6)),
+            (make_triangle_with_bridges(2,q=2),Fraction(1,6)),
+        )
+        for game,expected in examples:
+            circuit=compile_cactus(game)
+            self.assertEqual(circuit.hypothesis_aware_erasure_cap,expected)
+            self.assertEqual(circuit.hypothesis_aware_erasure_cap,
+                             max(critical_erasure_cap(circuit.q,c.length)
+                                 for c in circuit.unbalanced))
+            self.assertTrue(verify_hypothesis_aware_small(circuit))
+            self.assertGreaterEqual(circuit.common_erasure_cap,
+                                    circuit.hypothesis_aware_erasure_cap)
+            a,b=explicit_hypothesis_aware_erasers(circuit)
+            self.assertEqual(max(mask_marginals(circuit.edge_count,a)+
+                                 mask_marginals(circuit.edge_count,b)),
+                             expected)
+            self.assertEqual(sum(a.values()),1)
+            self.assertEqual(sum(b.values()),1)
+            if circuit.q>=8:
+                self.assertLess(expected,circuit.common_erasure_cap)
+            else:
+                self.assertEqual(expected,circuit.common_erasure_cap)
+
+    def test_q8_two_triangle_full_output_world_specific_masks_direct(self):
+        game=two_triangles(8,(1,2))
+        circuit=compile_cactus(game)
+        a,b=explicit_hypothesis_aware_erasers(circuit)
+        flat=Game(game.vertices,game.bits,tuple(
+            (u,v,0) for u,v,g in game.edges
+        ))
+        p0,p1=census(flat),census(game)
+        self.assertNotEqual(p0,p1)
+        self.assertEqual(convolve_clean(circuit.edge_count,p0,a),
+                         convolve_clean(circuit.edge_count,p1,b))
+        self.assertNotEqual(a,b)
+        self.assertEqual(circuit.hypothesis_aware_erasure_cap,Fraction(1,14))
+
+    def test_balanced_cactus_state_aware_eraser_is_zero(self):
+        g=make_triangle_with_bridges(3,q=8,shift=0)
+        c=compile_cactus(g)
+        self.assertEqual(c.hypothesis_aware_erasure_cap,0)
+        self.assertEqual(explicit_hypothesis_aware_erasers(c),
+                         ({0:Fraction(1)},{0:Fraction(1)}))
+        self.assertTrue(verify_hypothesis_aware_small(c))
+        with self.assertRaises(ValueError):
+            explicit_hypothesis_aware_erasers(
+                compile_cactus(make_triangle_with_bridges(20,q=8))
+            )
 
     def test_reject_overlap_non_cactus_and_disconnected_and_parallel(self):
         k4=k4_pair().other
