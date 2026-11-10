@@ -363,9 +363,52 @@ class ThetaSupportCircuit:
             total+=weight*local
         return total
 
+    def q4_even_verify_upper_algebraic(self)->Fraction:
+        """Eight-state proof of all required Fourier mask annihilations.
+
+        Because two entire paths already force a clean discrepancy, a
+        common postprocessor must zero characters on their union,
+        irrespective of how many edges in the third path are selected.
+        The random path-activation law has every order>=2 Walsh moment
+        zero. For a pair J and outside path k, the extra factor is
+        (1-2*s_k/L_k*T_k), whose expectation against chi_J vanishes
+        from the pair and triple moment identities.
+
+        This O(8*8) test proves the result for arbitrarily long paths,
+        without iterating over prod_i(L_i+1) selected-count signatures.
+        """
+        eta=self.q4_even_erasure_cap()
+        law=self.q4_even_activation_law()
+        for J in range(8):
+            clean=self.full_delta(J)
+            if J.bit_count()<2 and clean:
+                raise AssertionError("degree-one full path mismatch")
+            moment=sum((w*(-1 if (T&J).bit_count()%2 else 1)
+                        for T,w in law.items()),Fraction(0))
+            if J.bit_count()>=2 and moment:
+                raise AssertionError("higher path activation parity not erased")
+            if J.bit_count()==2:
+                other=next(i for i in range(3) if not J&(1<<i))
+                mixed=sum((
+                    w*(-1 if (T&J).bit_count()%2 else 1)
+                    *(1 if T&(1<<other) else 0)
+                    for T,w in law.items()
+                ),Fraction(0))
+                if mixed:
+                    raise AssertionError("partial third path mixes a residual")
+        marg=tuple(sum((w for T,w in law.items()
+                        if T&(1<<i)),Fraction(0))/L
+                   for i,L in enumerate(self.lengths))
+        if max(marg)!=eta:
+            raise AssertionError("closed-form path mask cap is not attained")
+        return eta
+
     def q4_even_verify_upper_symbolic(self)->Fraction:
         """Verify ALL path-count signatures, using polynomial orbit work."""
-        eta=self.q4_even_erasure_cap()
+        eta=self.q4_even_verify_upper_algebraic()
+        M=prod((L+1 for L in self.lengths),start=1)
+        if M>20000:
+            raise ValueError("explicit Fourier signature check exceeds 20000 orbits")
         for s in product(*(range(L+1) for L in self.lengths)):
             S=sum(((1<<r)-1)*(mask&-mask)
                   for r,mask in zip(s,self.path_masks))
@@ -428,7 +471,7 @@ class ThetaSupportCircuit:
 
     def q4_even_receipt(self)->dict[str,object]:
         lower=self.q4_even_lower_proof()
-        upper=self.q4_even_verify_upper_symbolic()
+        upper=self.q4_even_verify_upper_algebraic()
         if lower["combined_lower_bound"]!=upper:
             raise AssertionError("sharp theorem primal and lower mismatch")
         return {
