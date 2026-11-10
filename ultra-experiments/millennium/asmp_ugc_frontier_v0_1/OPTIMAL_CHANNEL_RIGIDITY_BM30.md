@@ -1,5 +1,8 @@
 # BM-30: Rigidity, uniqueness and stability of the optimal q=8 masking channel
 
+> **Subsequent result, BM-33 (10 November 2026):** The [explicit Lipschitz signed-overlap dual](FINITE_ERASURE_RATE_BM33.md) now proves the finite scalar rate \(0\le5/52-\eta_n(8,2)\le O(n^{-1/3})\), including an explicit nonasymptotic inequality for every \(n\ge2\). Statements below calling the *existence* of a finite-n rate open describe the historical status before BM-33. Its numerical sharpness, finite-n exact optima for n>=4, and higher-alphabet extensions remain open.
+
+
 **10 November 2026 | asymptotic equality-case theorem, quantitative infinite-measure stability, exact finite checks.**
 
 This continues [BM-29's exact infinite-replication theorem](INFINITE_REPLICATION_LIMIT_BM29.md), which proves
