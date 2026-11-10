@@ -326,3 +326,95 @@ def symbolic_rate_manifest(n:int=10**12)->dict[str,object]:
         "BM32_unsquared_sampling_coefficient":"3584/117",
         "measure_theory_formalized_in_Lean":False,
     }
+
+
+
+@dataclass(frozen=True)
+class EmpiricalMaskDualReceipt:
+    n:int
+    k:int
+    ordinary_bit_cost:Fraction
+    exceptional_bit_cost:Fraction
+    dyadic_residual:Fraction
+    independent_BM32_residual:Fraction
+    signed_overlap_slack:Fraction
+    weighted_dual_slack:Fraction
+    complete_output_equal:bool
+    finite_scalar_rate_compatible:bool
+
+
+def certify_empirical_mask_dual(
+    n:int,k:int,q0:dict[int,Fraction],q1:dict[int,Fraction]
+)->EmpiricalMaskDualReceipt:
+    """End-to-end exact rational dual check on REAL finite masking witnesses.
+
+    The histogram directing measure is FINITE. Thus the robust overlap
+    and convergence-rate derivation here needs no infinite de Finetti
+    disintegration at all. All 2^(2n+2) small clean output probabilities
+    are checked separately by the BM-31 oracle.
+    """
+    if not 1<=k<=n<=5:
+        raise ValueError("explicit empirical mask receipt requires 1<=k<=n<=5")
+    try:
+        from .finite_empirical_extension_BM31 import (
+            empirical_joint_law,directing_law,certify_finite_window,
+        )
+        from .robust_dyadic_observables_BM32 import (
+            LipschitzTest,dyadic_residual,
+        )
+    except ImportError:
+        from finite_empirical_extension_BM31 import (
+            empirical_joint_law,directing_law,certify_finite_window,
+        )
+        from robust_dyadic_observables_BM32 import (
+            LipschitzTest,dyadic_residual,
+        )
+    check=certify_finite_window(n,k,q0,q1)
+    joint0=empirical_joint_law(n,q0)
+    joint1=empirical_joint_law(n,q1)
+    masses0=directing_law(n,joint0)
+    masses1=directing_law(n,joint1)
+    if masses0!=masses1:
+        raise AssertionError("ordinary empirical directing laws differ")
+    mu={}
+    nu0={}
+    nu1={}
+    v={}
+    for hist,mass in masses0.items():
+        u=Fraction(hist[0]-hist[2],n)
+        w=Fraction(hist[0]-hist[1]+hist[2],n)
+        key=(u,w)
+        if key in mu:
+            raise AssertionError("empirical coordinate map unexpectedly noninjective")
+        mu[key]=mass
+        parity=[]
+        single=[]
+        for joint in (joint0,joint1):
+            parity.append(sum((
+                weight*(-1 if z.bit_count()%2 else 1)
+                for (c,z),weight in joint.items() if c==hist
+            ),Fraction(0)))
+            single.append(sum((
+                weight*(-1 if z&1 else 1)
+                for (c,z),weight in joint.items() if c==hist
+            ),Fraction(0)))
+        if single[0]!=single[1]:
+            raise AssertionError("finite special single-bit rigidity failed")
+        nu0[key],nu1[key]=parity
+        v[key]=single[0]
+    result=overlap_dual_gap(mu,nu0,nu1,v)
+    test=LipschitzTest("BM33 dual",SUP_NORM,LIP_L1,robust_potential)
+    independent=dyadic_residual(n,joint0,joint1,test)
+    if independent!=result["dyadic_defect"]:
+        raise AssertionError("BM32 dyadic test and BM33 dual disagree")
+    eta=max(result["ordinary_bit_cost"],result["exceptional_bit_cost"])
+    if eta<LIMIT-LIMIT*abs(result["dyadic_defect"]):
+        raise AssertionError("finite empirical dual cost contradiction")
+    r=finite_rate(n,k)
+    if (LIMIT-eta)**2>r.bound_squared:
+        raise AssertionError("finite scalar convergence-rate failure")
+    return EmpiricalMaskDualReceipt(
+        n,k,result["ordinary_bit_cost"],result["exceptional_bit_cost"],
+        result["dyadic_defect"],independent,result["overlap_slack"],
+        result["weighted_slack"],check.true_output_laws_equal,True,
+    )
