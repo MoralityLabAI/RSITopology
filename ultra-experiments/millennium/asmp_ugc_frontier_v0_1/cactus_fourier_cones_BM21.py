@@ -164,6 +164,94 @@ class CactusCircuit:
             raise AssertionError("bad exact cactus support count")
         return result
 
+    def common_eraser_walsh(self,subset:int)->Fraction:
+        """Compact Fourier transform of the factorized one-hot cycle masks.
+
+        For each unbalanced C, the local mask is zero with probability
+        1/2 and a single uniformly chosen edge from C with probability
+        1/2. Its Fourier coefficient equals 1-|S intersect C|/|C|.
+        Distinct cactus cycles have disjoint edges, so multiply factors.
+        """
+        if not 0<=subset<(1<<self.edge_count):
+            raise ValueError("Walsh subset outside graph")
+        result=Fraction(1)
+        for block in self.unbalanced:
+            result*=1-Fraction(
+                (subset&block.edge_mask).bit_count(),block.length
+            )
+        return result
+
+    def verify_symbolic_common_completion(self)->bool:
+        """O(m) exact block-local proof of full erasure, without listing D.
+
+        On an unbalanced cycle all proper selected edge subsets are
+        forests and have identical clean Fourier coefficients. When the
+        whole cycle is selected, the common one-hot mask has Walsh
+        coefficient zero. Every bridge and balanced-cycle block is
+        identically distributed under both hypotheses. Product laws
+        therefore give exact complete output equality for any number
+        of cactus edges.
+        """
+        alpha=Fraction(self.q-2,self.q)
+        for block in self.cycles:
+            L=block.length
+            for count in range(L+1):
+                if count<L:
+                    a=b=alpha**count
+                else:
+                    t=Fraction(-2,self.q)**L
+                    a=alpha**L+(self.q-1)*t
+                    b=alpha**L-t if block.gain else a
+                R=1-Fraction(count,L) if block.gain else Fraction(1)
+                if (a-b)*R:
+                    raise AssertionError("cactus block completion character mismatch")
+        cap=self.common_erasure_cap
+        if cap<0 or cap>Fraction(1,2):
+            raise AssertionError("invalid block-common erasure budget")
+        return True
+
+    def shortest_cycle_dual(self):
+        """A one-character exact rational dual lower certificate.
+
+        The dual is valid for the ENTIRE residual support even if that
+        support is exponential: all other Fourier multipliers are zero.
+        The dual can be checked symbolically from the parity of the
+        shortest unbalanced cycle, or through BM-20's exact active-width
+        separator on that one Fourier support.
+        """
+        if not self.unbalanced:
+            raise ValueError("no residual distinction to certify")
+        shortest=min(self.unbalanced,key=lambda c:c.length)
+        L=shortest.length
+        try:
+            from .support_aware_completion_BM19 import PostprocessorDual
+        except ImportError:
+            from support_aware_completion_BM19 import PostprocessorDual
+        z=tuple(Fraction(-1,L) if shortest.edge_mask&(1<<i)
+                else Fraction(0) for i in range(self.edge_count))
+        return PostprocessorDual(
+            Fraction(1,2*L),
+            {shortest.edge_mask:Fraction(-1,2*L)},z
+        )
+
+    def verify_shortest_cycle_dual_symbolic(self)->Fraction:
+        """Check all possible parity/Hamming-weight cases in just O(L)."""
+        proof=self.shortest_cycle_dual()
+        shortest=min(self.unbalanced,key=lambda c:c.length)
+        L=shortest.length
+        for k in range(L+1):
+            slack=(proof.normalization
+                   +proof.characters[shortest.edge_mask]*
+                       (-1 if k%2 else 1)
+                   -Fraction(k,L))
+            if slack>0:
+                raise AssertionError("one-character cactus dual violated")
+        if -sum(proof.marginal_multipliers,Fraction(0))!=1:
+            raise AssertionError("dual normalization failed")
+        if proof.normalization!=self.common_erasure_cap:
+            raise AssertionError("dual objective does not match common eraser")
+        return proof.normalization
+
     def symbolic_receipt(self)->dict[str,object]:
         """No expansion of exponentially large Fourier support or masks."""
         t=self.bridge_mask.bit_count()
