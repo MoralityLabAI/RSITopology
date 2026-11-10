@@ -475,3 +475,18 @@ Each individual edge has mask marginal **exactly 5/52 in both worlds**. Expandin
     751225/13956626 <= eta_infinity(8,2) <= 5/52.
 
 The earlier exploratory LP values through n=16, reaching about **0.094878**, lie below and approach **5/52**. This motivates **BM-27/C1: eta_infinity=5/52**, with only the upper direction established. A uniform-in-n **lower** certificate, perhaps via de Finetti ordinary-mask mixtures and compatible conditional exceptional-mask couplings, is still missing. The five-component witness is classical XOR convolution/channel symmetrization mathematics specialized to the frozen gain-graph interface and carries no empirical model safety or new UGC claim.
+
+
+## BM-28: certified q8 n=16 lower narrows the replication limit near BM-27's 5/52
+
+The [BM-28 exact integer rational dual certificate](RATIONAL_N16_LOWER_BM28.md) sharply strengthens the lower endpoint of BM-27's open q=8, two-edge repeated-path limiting-value conjecture. For **n=16 ordinary paths plus one exceptional path**, with 34 Boolean readouts and q=8, a **fully hypothesis-aware correlated-mask erasure** requires at least
+
+    eta_16 >= 4743879/50000000 = 0.09487758.
+
+The rational dual was discovered by a numerical HiGHS LP and rounded to a *conservatively feasible* certificate. The 459 Walsh-orbit dual coefficients are losslessly stored as signed int64 integers at scale 10^8 in [a checksum-pinned archive](BM28_N16_RATIONAL_DUAL.b64), with 441 nonzero terms. The [independent pure-stdlib verifier](n16_rational_lower_BM28.py) rebuilds the exact BM-24 ordinary-path multivariate Krawtchouk kernel from integer polynomial coefficients, reconstructs all q=8 clean Fourier weights as rational powers of two, and checks **every one of 2*459=918 rational dual mask-orbit inequalities** using an integer common denominator. The signed marginal multipliers `(-29001113,-37951043,-33047844,0)/100000000` sum to -1; the normalization objective `(9487759-1)/100000000` is the asserted lower bound. Every mask-orbit inequality is nonpositive exactly, proving the same bound against the entire **2^34 underlying full-mask space per hypothesis** by BM-24's orbit symmetrization theorem. Tests cross-check the integer kernel and clean signal formula against independent BM-24 oracles on small n. **This is a lower certificate only**, with no exact n=16 optimum or attaining n=16 primal claimed.
+
+BM-26's monotonic projection theorem promotes the certified n=16 lower to every n>=16 and the limit. Paired with BM-27's exact all-n upper `5/52`, the current **rigorous** interval is
+
+    4743879/50000000 <= eta_infinity(8,2) <= 5/52,
+
+with exact width `829573/650000000 ≈ 0.001276266154` (about **0.1276 percentage points**). The earlier exploratory n=16 numerical optimum `≈0.0948776078` was used only to generate the dual candidate; it is not a certified sharp value. The new lower almost reaches the candidate limit 5/52, which **remains unproved** without a uniform-in-n analytic lower family or equivalent infinite-exchangeability argument. The math is a finite Fourier/LP certificate under the frozen current-clean-input-independent world-aware masking contract, without an operational AI alignment or new UGC implication.
