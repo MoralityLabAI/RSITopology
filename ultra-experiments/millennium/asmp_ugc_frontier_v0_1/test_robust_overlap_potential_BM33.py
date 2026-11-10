@@ -23,6 +23,7 @@ from robust_overlap_potential_BM33 import (
     pointwise_receipt,verify_analytic_potential,
     overlap_dual_gap,finite_rate,optimized_window_rate,
     certify_known_eta,symbolic_rate_manifest,
+    certify_empirical_mask_dual,
 )
 from infinite_replication_rigidity_BM29 import (
     bm27_directing_atoms,verify_bm27_equality_case,
@@ -33,6 +34,9 @@ from optimal_channel_rigidity_BM30 import (
 from state_aware_replication_BM25 import EXACT_ETA as ETA2
 from state_aware_three_replica_BM26 import EXACT_CAP as ETA3
 from n16_rational_lower_BM28 import EXACT_LOWER as LOWER16
+from state_aware_replication_BM25 import expanded_full_mask_law as bm25_mask
+from state_aware_three_replica_BM26 import full_mask_law as bm26_mask
+from replication_uniform_upper_BM27 import explicit_mask_law as bm27_mask
 from finite_empirical_extension_BM31 import (
     finite_alphabet_tv_squared_bound,
 )
@@ -226,6 +230,30 @@ class BM33RobustDualTests(unittest.TestCase):
             finite_rate(10,11)
         with self.assertRaises(ValueError):
             certify_known_eta(3,LIMIT+Fraction(1,10))
+
+    def test_real_finite_mask_channels_satisfy_robust_pointwise_dual(self):
+        examples=(
+            (2,bm25_mask(0),bm25_mask(1)),
+            (3,bm26_mask(0),bm26_mask(1)),
+            (2,bm27_mask(2,0),bm27_mask(2,1)),
+            (3,bm27_mask(3,0),bm27_mask(3,1)),
+        )
+        for n,a,b in examples:
+            for k in range(1,min(n,3)+1):
+                proof=certify_empirical_mask_dual(n,k,a,b)
+                self.assertTrue(proof.complete_output_equal)
+                self.assertTrue(proof.finite_scalar_rate_compatible)
+                self.assertEqual(
+                    proof.dyadic_residual,proof.independent_BM32_residual
+                )
+                self.assertGreaterEqual(proof.signed_overlap_slack,0)
+                self.assertGreaterEqual(proof.weighted_dual_slack,0)
+                self.assertLessEqual(
+                    max(proof.ordinary_bit_cost,proof.exceptional_bit_cost),
+                    LIMIT
+                )
+        with self.assertRaises(ValueError):
+            certify_empirical_mask_dual(6,1,{0:Fraction(1)},{0:Fraction(1)})
 
     def test_large_n_bound_is_nontrivial_and_has_correct_symbolic_rate(self):
         a=optimized_window_rate(10**9)
