@@ -106,7 +106,7 @@ def min_fill_order(m:int,scopes:tuple[tuple[int,...],...])->tuple[int,...]:
     order=[]
     while alive:
         def key(v:int):
-            nbr=sorted(adj[v]&alive-{v})
+            nbr=sorted(adj[v]&(alive-{v}))
             fill=sum(1 for i,u in enumerate(nbr)
                      for x in nbr[i+1:] if x not in adj[u])
             return (fill,len(nbr),v)
@@ -303,11 +303,9 @@ def moment_fingerprint(
     support=_support(m,support)
     if any(not 0<=mask<(1<<m) for mask in law):
         raise ValueError("mask outside domain")
-    return tuple(sum((p*v for mask,p in law.items())
-                     ,Fraction(0))
-                 for v in ()) if False else tuple(
-        sum((Fraction(p)*x for mask,p in law.items()
-             for x in (_moment_vector(m,support,mask)[i],)),Fraction(0))
+    return tuple(
+        sum((Fraction(p)*_moment_vector(m,support,mask)[i]
+             for mask,p in law.items()),Fraction(0))
         for i in range(1+len(support)+m)
     )
 
