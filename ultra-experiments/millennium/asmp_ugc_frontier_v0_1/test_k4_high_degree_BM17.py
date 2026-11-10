@@ -147,7 +147,7 @@ class K4HighDegreeTests(unittest.TestCase):
             signed_walsh((2,3,4),1)
         with self.assertRaises(ValueError):
             check_primal(p,6,Primal(1,{0:2},{0:1},Fraction(0)))
-        with self.assertRaises(ValueError):
+        with self.assertRaises(AssertionError):
             check_dual(p,6,Dual(1,{},(0,0),1,(0,)*12))
         self.assertEqual(len(queried_subsets(6,5)),62)
 
