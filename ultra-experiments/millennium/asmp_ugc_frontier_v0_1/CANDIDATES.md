@@ -559,3 +559,32 @@ This is `O(k/n)` in TV for `k=o(n)`. Thus even a growing window `k=floor(n^(2/3)
 The [pure-standard-library exact verifier](finite_empirical_extension_BM31.py) and [independent tests](test_finite_empirical_extension_BM31.py) compare the true hypergeometric projection with a separate full-mask bit projection, construct the with-replacement de Finetti extension, verify exact marginal rigidity on actual BM-25, BM-26, BM-27, BM-30 world-specific mask pairs, check complete Boolean output-TV and Fourier bounds, and exercise a sharp n=2 fixed-histogram collision counterexample. The rational entropy bound is independently verified against all registered finite mask witnesses and includes symbolic million-path sample-size controls. The proof is an application of classical finite de Finetti/Diaconis-Freedman and hypergeometric KL covariance analysis with an additional distinguished exceptional mask.
 
 **Crucial remaining open step:** BM-31 gives an explicit **finite-window distribution approximation**; it does not by itself give a scalar convergence rate for `5/52−eta_n`. To obtain that, prove a **robust finite-observation version** of BM-29's signed dyadic-overlap inequality: when two infinite exchangeable output mixtures differ by at most epsilon on k observed ordinary paths, establish an explicit error term `R(k,epsilon)` in `8C_o+5C_s>=5/4−R(k,epsilon)`. Combining that result with BM-31's `O(k/n)` window error would yield a quantitative finite-n threshold rate. BM-29's exact limit and BM-30's unique asymptotic mask remain intact; no AI-control deployment or UGC result is claimed.
+
+
+## BM-32: robust finite-observation dyadic equation and O(1/n) fixed Fourier moment rate
+
+The new [BM-32 quantitative observable theorem](ROBUST_DYADIC_OBSERVABILITY_BM32.md) advances BM-31's finite exchangeability program toward an explicit finite-n rate for BM-29's q8 erasure threshold. Take any **exact full-output equalizing** hypothesis-aware readout mask pair on n ordinary q8 length-two paths plus one exceptional pair. Symmetrize it as in BM-24 and pass to BM-31's **infinite empirical replacement extension**, retaining the common ordinary directing histogram law and world-dependent exceptional pair coupling. Let `mu` be its common ordinary directing measure, `nu0,nu1` its world-dependent signed exceptional **pair-parity measures**, and let the BM-29 dyadic pushforward defect be
+
+    D=(2I+7S_*)nu0-(I+8S_*)nu1,
+    S(u,w)=(u,w/2).
+
+The exact infinite BM-29 proof has D=0. For BM-31's finite-n approximant D may be nonzero. **BM-32/T1** gives an explicit finite-observation bound: for any `f(u,w)` with `sup|f|<=B` and `l1-Lipschitz<=L`, if the two approximating infinite channel output laws on k ordinary pairs plus the exceptional pair have total variation epsilon, then
+
+    |int f dD| <=32*B*epsilon +224*L/(3 sqrt(k)).
+
+Proof: estimate the latent ordinary mask's one-bit Fourier parameter `u` by `clip[(2/(3k))sum(X_i+Z_i)]` and pair parity `w` or `w/2` by `(1/k)sum X_i Z_i` on the observed ordinary path bits encoded as ±1. The conditional expected l1 estimation error is <=7/(3 sqrt(k)). Multiplying `f` of the empirical estimates by the observed **exceptional pair parity** produces an observable bounded by B. The two worlds' observable expectations differ by at most 2B epsilon, while their corresponding latent expectations differ by `D[f]/16`. The two estimation errors give the remaining term.
+
+Using BM-31's uniform `epsilon<=2*sqrt(v)` for `v=k(k−1)/[2(n−1)(n−k+1)]`, the resulting **exact rational squared** bound is
+
+    |D[f]|² <=2*[4096 B² v + (224L/3)²/k].
+
+Choosing `k=floor(n^(2/3))` yields an explicit **O(n^(−1/3)) bounded-Lipschitz dyadic-defect rate**, even though the original readout masks may correlate all 2n+2 bits.
+
+**BM-32/T2 is stronger for fixed-degree polynomial tests:** for a,b>=0 and d=a+b<=n, build the observable `G_(a,b)` from a distinct ordinary reported **first-bit parity** characters, b distinct ordinary **pair parities**, the exceptional pair parity, and a normalization factor `(4/3)^a`. Its expectation equals the corresponding latent signed monomial `u^a w^b` *exactly*, without empirical estimator variance, and
+
+    D[u^a w^b] =16*(E0 G_(a,b)-E1 G_(a,b)),
+    |D[u^a w^b]| <=32*(4/3)^a*d(d−1)/n.
+
+The rate is **O(1/n) for every fixed polynomial degree** and improves the BL bound on that explicit test subspace. The equalities and upper bounds are independently verified by [BM-32 exact Python tests](test_robust_dyadic_observables_BM32.py) against BM-25 n2, BM-26 n3, BM-27 legal all-n masks and BM-30 equality frontier channels, including sample-character unbiasedness and real complete reported-output TV. Large n examples are checked only by symbolic rational bound calculations.
+
+**Precise unresolved bridge:** the scalar `5/52−eta_n(8,2)` still lacks an explicit n-rate. The BM-29 weighted lower theorem controls the **minimum of two signed measures**, a nonlinear operation that is generally unstable under mere low-degree moment approximation. To use BM-32 for the scalar threshold, construct a **polynomial or Lipschitz dual approximation** to BM-29's signed dyadic-overlap certificate, with independently verified uniform approximation error and coefficient norm or Lipschitz complexity, then combine it with the exact BM-32 rates. No scalar convergence-rate or new UGC/operational AI control claim is made.
