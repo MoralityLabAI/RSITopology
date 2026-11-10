@@ -135,7 +135,7 @@ class BM30ChannelRigidityTests(unittest.TestCase):
         for c in (Fraction(0),Fraction(1,100),Fraction(1,20),
                   Fraction(1,12),Fraction(1,10)):
             self.assertGreater(frontier_costs(c)[2],LIMIT)
-        for c in (Fraction(1,40),Fraction(1,13),Fraction(1,9)):
+        for c in (Fraction(1,40),Fraction(1,13),Fraction(1,11)):
             # Sign of the crossing at c=1/13.
             o,s,_=frontier_costs(c)
             self.assertEqual((o>s)-(o<s),
