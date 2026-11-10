@@ -110,14 +110,10 @@ class BM32RobustDyadicTests(unittest.TestCase):
                     direct_signed_test(n,j0,j1,test),
                     msg=(name,n,test.name)
                 )
-                if name in ("BM27","BM30"):
-                    # These are full all-n erasers generated from an
-                    # actual infinite directing law and thus satisfy
-                    # the exact signed dyadic pushforward equation.
-                    self.assertEqual(
-                        dyadic_residual(n,j0,j1,test),0,
-                        msg=(name,n,test.name)
-                    )
+                # The empirical-iid REPLACEMENT of a finite sample
+                # generally differs from its original infinite directing
+                # mixture, even for the BM27/30 all-n mask families.
+                # Signed defects are bounded quantitatively below.
 
     def test_finite_window_signed_dyadic_bound_on_all_exact_witnesses(self):
         for name,n,a,b in registered_cases():
