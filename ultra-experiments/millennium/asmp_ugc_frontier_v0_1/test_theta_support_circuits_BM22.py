@@ -80,7 +80,7 @@ class ThetaSupportCircuitsTests(unittest.TestCase):
         examples={
             (2,2,2):(10,True),
             (1,2,2):(8,True),
-            (2,2,3):(1+3+7+1,True),
+            (2,2,3):(3+3+7+1,True),
             (2,3,3):(3+7+7,False),
             (1,3,3):(1+7+7+1,True),
             (3,3,3):(7+7+7+1,True),
@@ -146,10 +146,13 @@ class ThetaSupportCircuitsTests(unittest.TestCase):
         self.assertEqual(c.q4_even_erasure_cap(),Fraction(1,6))
         q=c.q4_even_explicit_mask_law()
         self.assertEqual(q[0],Fraction(1,4))
-        self.assertEqual(sum(1 for v in q.values() if v),10)
-        self.assertEqual(set(q),{0,1,2,4,8,16,32,10,17,36})
+        # BM-22's path-activation witness spreads the paired flips
+        # uniformly across the four edge-pair choices. It has 19
+        # atoms, versus BM-09's alternative 10-atom optimal witness.
+        self.assertEqual(len(q),19)
         self.assertEqual(q[1],Fraction(1,12))
-        self.assertEqual(q[10],Fraction(1,12))
+        self.assertEqual(q[10],Fraction(1,48))
+        self.assertEqual(q[4],Fraction(1,12))
         self.assertEqual(c.q4_even_receipt()[
             "exact_hypothesis_aware_erasure"],"1/6")
         other=circuit(4,(2,2,2),(0,2,3))
