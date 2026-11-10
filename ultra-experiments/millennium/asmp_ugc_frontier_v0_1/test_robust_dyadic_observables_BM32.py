@@ -16,6 +16,8 @@ from robust_dyadic_observables_BM32 import (
     robust_sampling_term_squared,assert_robust_dyadic_inequality,
     finite_n_squared_bound,empirical_extended_outputs,
     certify_finite_dyadic_window,growing_horizon_rate,
+    monomial_test,monomial_observable,monomial_signed_rate,
+    certify_monomial_window,
 )
 from finite_empirical_extension_BM31 import (
     empirical_joint_law,finite_alphabet_tv_squared_bound,
@@ -222,6 +224,81 @@ class BM32RobustDyadicTests(unittest.TestCase):
             max(finite_n_squared_bound(n,n,bound=t.bound,
                   lipschitz=t.lipschitz) for t in TESTS)
         )
+
+    def test_unbiased_monomial_character_estimator_equals_conditional_latent(self):
+        # Enumerate an independent one-path output law for every
+        # physical empirical ordinary mask and clean terminal regime.
+        for masklaw in (PAIR_I,PAIR_A,PAIR_B,PAIR_E):
+            chars=pair_walsh(masklaw)
+            for clean,parity_scale in (
+                (PAIR_A,Fraction(1)),
+                (PAIR_B,Fraction(1,2))
+            ):
+                output=xor_pair(clean,masklaw)
+                for a,b in ((0,0),(1,0),(0,1),(1,1),(2,0),(0,2)):
+                    # The sample-product construction uses a+b
+                    # conditionally independent ordinary path outputs.
+                    d=max(1,a+b)
+                    expected=chars[1]**a*(chars[3]*parity_scale)**b
+                    values=[(0,Fraction(1))]
+                    for j in range(d):
+                        new=[]
+                        for mask,p in values:
+                            for bits,q in enumerate(output):
+                                if q:
+                                    new.append((mask|(bits<<(2*j)),p*q))
+                        values=new
+                    # Exceptional pair parity is set to +1 so the
+                    # monomial statistic reduces to its ordinary part.
+                    observed=sum((
+                        p*monomial_observable(mask,d,a,b)
+                        for mask,p in values
+                    ),Fraction(0))
+                    self.assertEqual(observed,expected)
+
+    def test_all_existing_finite_exact_equalizers_have_O_degree_squared_over_n_defect(self):
+        for name,n,q0,q1 in registered_cases():
+            for a in range(min(n,3)+1):
+                for b in range(min(n,3)-a+1):
+                    result=certify_monomial_window(n,a,b,q0,q1)
+                    self.assertTrue(result.unbiased_identity_holds)
+                    self.assertEqual(result.degree,a+b)
+                    self.assertEqual(result.exact_signed_defect,
+                                     16*result.observed_walsh_difference)
+                    self.assertLessEqual(
+                        abs(result.exact_signed_defect),
+                        result.uniform_degree_rate,
+                        msg=(name,n,a,b)
+                    )
+                    self.assertEqual(
+                        result.uniform_degree_rate,
+                        monomial_signed_rate(n,a,b)
+                    )
+                    if a+b<=1:
+                        self.assertEqual(result.exact_signed_defect,0)
+
+    def test_symbolic_fixed_degree_signed_defect_has_inverse_n_rate(self):
+        for a,b in ((0,0),(1,0),(0,1),(1,1),(0,2),
+                    (2,0),(2,1),(3,0)):
+            d=a+b
+            last=None
+            for n in (max(1,d),10,100,1000,10**6,10**9):
+                rate=monomial_signed_rate(n,a,b)
+                self.assertGreaterEqual(rate,0)
+                self.assertEqual(
+                    rate*n,Fraction(32*d*(d-1))*Fraction(4,3)**a
+                )
+                if last is not None:
+                    self.assertLessEqual(rate,last)
+                last=rate
+        self.assertEqual(monomial_signed_rate(10**9,1,1),
+                         Fraction(256,3*10**9))
+        with self.assertRaises(ValueError):
+            monomial_signed_rate(2,2,1)
+        with self.assertRaises(ValueError):
+            monomial_test(-1,0)
+        with self.assertRaises(ValueError):
+            monomial_observable(0,1,2,0)
 
     def test_exact_bound_preserves_role_of_observation_tv(self):
         for n,k in ((2,2),(3,2),(5,3),(100,10),(10**6,10**4)):
