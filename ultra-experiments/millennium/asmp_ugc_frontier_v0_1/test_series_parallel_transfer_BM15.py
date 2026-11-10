@@ -68,8 +68,13 @@ class SPTransferTests(unittest.TestCase):
         ):
             node=theta_tree(lengths,gains)
             m=sum(lengths)
-            self.assertEqual(compile_game(q,node).edges,
-                             theta_path_game(q,lengths,gains).edges)
+            # Internal vertex IDs depend on the binary association of
+            # series nodes. Edge order, gains and Fourier laws are invariant.
+            compiled=compile_game(q,node)
+            canonical=theta_path_game(q,lengths,gains)
+            self.assertEqual(compiled.vertices,canonical.vertices)
+            self.assertEqual(tuple(g for _,_,g in compiled.edges),
+                             tuple(g for _,_,g in canonical.edges))
             for subset in range(1<<m):
                 self.assertEqual(walsh(q,node,subset),
                                  theta_walsh_transfer(q,lengths,gains,subset))
