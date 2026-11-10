@@ -265,3 +265,85 @@ def theorem_receipt(gain:int=1):
         "n_ge2_common_upper":str(projection_bounds(250,gain=gain)[1]),
         "higher_n_exact_optimum_claimed":False,
     }
+
+
+
+def _lift_mask(mask:int,n:int)->int:
+    """Embed first two ordinary paths and the LAST exceptional path."""
+    if not 0<=mask<64 or n<2:
+        raise ValueError("six-bit projected mask and >=2 ordinary paths required")
+    return (mask&15)|((mask>>4)<<(2*n))
+
+
+def lifted_full_dual(n:int,*,gain:int=1):
+    """Seven-character rational dual lower certificate on 2n+2 edge bits.
+
+    Extra ordinary-path coefficients and marginals are exactly zero.
+    The graph law marginal on the two retained ordinary paths and the
+    exceptional path equals the n=2 law, so the original seven-term dual
+    checks all 2^(2n+2) masks by checking just 2^6 projections.
+    """
+    if not isinstance(n,int) or n<2:
+        raise ValueError("at least two ordinary paths required")
+    network=gain_family(n,2,q=8,gain=gain)
+    old=sparse_full_dual()
+    m=network.m
+    coefficients={
+        _lift_mask(mask,n):weight
+        for mask,weight in old.walsh_numerators.items()
+    }
+    marg=[]
+    for h in (0,1):
+        old_z=old.marginal_numerators[h*6:(h+1)*6]
+        marg.extend(old_z[:4]+(0,)*(m-6)+old_z[4:])
+    return Dual(
+        old.walsh_denominator,coefficients,old.normalization_numerators,
+        old.marginal_denominator,tuple(marg),
+    )
+
+
+def verify_symbolic_lift(n:int,*,gain:int=1)->Fraction:
+    """Exact constant-local-support dual proof, even for n=250 or higher.
+
+    Verify all seven clean Fourier coefficients against n=2 by the
+    BM-24 gain-grouped transfer, and all 128 mask restrictions in Q.
+    Since every dual term and signed marginal is supported on six
+    retained bits, those 128 checks quantify over EVERY full mask.
+    """
+    network=gain_family(n,2,q=8,gain=gain)
+    old=model(gain)
+    base=sparse_full_dual()
+    extended=lifted_full_dual(n,gain=gain)
+    m=network.m
+    eta=EXACT_ETA
+    if -sum(extended.marginal_numerators)!=extended.marginal_denominator:
+        raise AssertionError("lifted dual marginal normalization invalid")
+    if len(extended.marginal_numerators)!=2*m:
+        raise AssertionError("wrong lifted dual dimensions")
+    for h in (0,1):
+        for S in base.walsh_numerators:
+            if network.clean_walsh(h,_lift_mask(S,n))!=old.clean_walsh(h,S):
+                raise AssertionError("projection changed a retained Fourier signal")
+        norm=Fraction(base.normalization_numerators[h],
+                      base.walsh_denominator)
+        for smallmask in range(64):
+            x=_lift_mask(smallmask,n)
+            slack=norm+sum((
+                (1 if h==0 else -1)*Fraction(w,extended.walsh_denominator)
+                *network.clean_walsh(h,S)
+                *(-1 if (x&S).bit_count()%2 else 1)
+                for S,w in extended.walsh_numerators.items()
+            ),Fraction(0))
+            slack+=sum((
+                Fraction(extended.marginal_numerators[h*m+i],
+                         extended.marginal_denominator)
+                for i in range(m) if x&(1<<i)
+            ),Fraction(0))
+            if slack>0:
+                raise AssertionError(
+                    "lifted dual violated (h=%d projected=%d)"%(h,smallmask)
+                )
+    if Fraction(sum(extended.normalization_numerators),
+                extended.walsh_denominator)!=eta:
+        raise AssertionError("lifted dual lower objective mismatches 5/118")
+    return eta
