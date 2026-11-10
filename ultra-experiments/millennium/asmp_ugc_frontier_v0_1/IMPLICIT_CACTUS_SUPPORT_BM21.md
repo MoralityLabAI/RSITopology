@@ -115,7 +115,7 @@ All proper-cycle Fourier factors and all balanced-cycle factors remain nonzero. 
 
 holds **exactly when** either some C in E_even is fully contained in S, or the number of cycles C in O fully contained in S is odd. This is a compact Boolean formula of size O(k); it accounts for exact cancellation among fully selected frustrated odd cycles.
 
-For example, two frustrated triangles attached at an articulation vertex have four independent selected-edge patterns per cycle? Each triangle actually has 2^3=8 possibilities, with seven proper subsets and one full subset. The six-edge Fourier discrepancy vanishes when **both** triangles are fully selected, because their q=4 full-cycle sign reversals cancel. The entire residual support has **14** selected-edge subsets, computed and independently verified.
+For example, two frustrated triangles attached at an articulation vertex each have 2^3=8 selected-edge subsets, with seven proper subsets and one full subset. The six-edge Fourier discrepancy vanishes when **both** triangles are fully selected, because their q=4 full-cycle sign reversals cancel. The entire residual support has **14** selected-edge subsets, computed and independently verified.
 
 There is also a closed-form **exact support count**, with no enumeration. Put `B_count=|B|+sum_(C balanced)|C|`, let `l_j` be lengths in O and `e_i` lengths in E_even. Define
 
