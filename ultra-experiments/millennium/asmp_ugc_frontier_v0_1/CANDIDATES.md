@@ -516,3 +516,28 @@ and because both costs are bounded by `eta_infty`, necessarily `eta_infty>=5/52`
 The new [pure-stdlib exact algebra verifier](infinite_replication_rigidity_BM29.py) and [independent tests](test_infinite_replication_rigidity_BM29.py) check all finite Fourier positivity identities, exact finite-world noise-marginal rigidity for BM-25/BM-26/BM-27, physical mask coordinates, signed 1:2:8:7 chain recurrences including negative masses, and equality of BM-27's 8:5 weighted cost. The **infinite exchangeability/measure disintegration steps are proved in prose and are not machine-formalized in Lean**. The mathematical statement is exact within its declared threat model, while independent expert review and novelty examination remain appropriate before publication.
 
 **Remaining ASMP-14 frontier:** finite-n q8 sharp optima for n>=4, a quantitative approach-to-limit bound, extension to q>=16 and longer paths, and integration with independently attested and costed interventions. BM-29 is a model-specific exchangeability/Fourier/signed-measure theorem, with no claim of live AI-control performance, a new UGC proof, or generalized agent-alignment safety.
+
+
+## BM-30: rigidity of the q8 optimal limiting readout channel and quantitative infinite stability
+
+The [BM-30 equality-case theorem and independent verifier](OPTIMAL_CHANNEL_RIGIDITY_BM30.md) sharpen BM-29's exact `eta_infinity(8,2)=5/52` result from a scalar threshold to a **unique symmetrized optimal infinite-channel law**. The theorem characterizes **ALL** infinite exchangeable channels attaining equality in the BM-29 weighted Fourier lower inequality `8 C_ordinary+5 C_exceptional>=5/4`: their de Finetti directing measure is concentrated on the three ordinary two-bit mask laws `I=(1,0,0,0)`, `A=(7/8,0,0,1/8)`, `B=(3/4,1/8,1/8,0)`. They form a one-parameter equality family, with `0<=c<=1/10` and
+
+    mu(I,A,B)=(1-10c,2c,8c),
+    nu0(I,A,B)=(0,c,8c), nu1(I,A,B)=(0,2c,7c).
+
+Saturation of the exceptional-mask nonnegativity inequality additionally determines the shared special one-bit signed measure `v=((1-10c)/2,3c/2,15c/2)`, hence the **unique conditional special mask distributions** on every positive-mass atom: I mode uses `E` in both worlds; A mode uses `(I+E)/2` flat and `A` frustrated; B mode uses `(3I+A)/4` flat and `(3I+B)/4` frustrated. Every `c` in the interval is realized by an exact **all-n finite legal readout eraser** obtained as a convex combination of the trivial `I_n tensor E` channel and BM-27's active non-I branches. Its ordinary and exceptional bit costs satisfy
+
+    C_o=5c/4, C_s=1/4-2c,
+    8 C_o+5 C_s=5/4.
+
+The minimax cap `max(C_o,C_s)` has the **unique** minimum at `c=1/13`, recovering BM-27's directing masses `(3,2,8)/13` and cap `5/52`. The equality proof strengthens BM-29's dyadic analysis: on ordinary one-bit Fourier parameter `u>5/8`, physical `w>=2u-1>1/4` allows at most **two** feasible dyadic levels, so the signed exceptional parity overlap is at most **4/5 of the directing measure**; for `u>3/4` the signed measures vanish. The sharp global overlap defect vanishes only for directing mass at `u=3/4` and `u=1`, and equality localizes their `w` and parity flows to the three modes.
+
+**Finite-n qualitative convergence:** any sequence of complete-output equalizing finite-n mask pairs whose budgets tend to `5/52`, after averaging ordinary path and within-pair permutations, has distributions on **every fixed k ordinary paths plus the exceptional pair** converging in total variation to the BM-27 mask projection. Compactness/de Finetti gives subsequential infinite limits; uniqueness forces all limits to coincide. This proves structural convergence **without an explicit n-rate**.
+
+**Quantitative infinite near-optimal stability:** for any infinite exchangeable equalizer with error cap <=`5/52+delta`, define `J=integral(1-u)dmu`, signed-overlap `H=integral min(dnu0,dnu1)`, `G=16J/5-H>=0`, and nonnegative exceptional-atom slack measure `T=(mu+nu0 wedge nu1)/2-v`. The exact weighted dual defect decomposes as `8C_o+5C_s-5/4=(5/4)G+(5/2)T(total)`. Consequently `G<=52delta/5` and `T(total)<=26delta/5`. A piecewise dyadic fiber inequality gives the explicit localization bound
+
+    mu{dist(u,{3/4,1})>=eps} <= min(1,52delta/min(1,16eps)).
+
+This controls **infinite** directing-measure mass away from the optimum's two ordinary single-bit Fourier values; it does not assert total-variation distance to the entire optimal channel at finite `delta`. The [BM-30 exact Python verifier](optimal_channel_rigidity_BM30.py) and [9 independent tests](test_optimal_channel_rigidity_BM30.py) check the whole rational equality frontier, signed parity flow, exceptional conditional mask laws, complete finite-n output equality for multiple parameters, uniqueness of the minimax intersection and stability algebra. The de Finetti measure-theory proof is in prose, **not formalized in Lean**; independent expert review remains appropriate.
+
+**Remaining ASMP mathematical frontier:** derive an explicit quantitative convergence rate for finite `eta_n(8,2)` and fixed-coordinate optimal masks using finite-exchangeability approximation and robust dyadic overlap; generalize the unique-limit-channel method to q>=16 and variable graph-core structures. BM-30 concerns the frozen hostile readout channel and does not establish deployed model safety, authenticated interventions or a new UGC proof.
