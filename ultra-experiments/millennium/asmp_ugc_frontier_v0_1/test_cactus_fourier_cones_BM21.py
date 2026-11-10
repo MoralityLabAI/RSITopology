@@ -120,8 +120,7 @@ class BM21CactusFourierTests(unittest.TestCase):
         c=compare_against_direct_labels(game)
         self.assertEqual(c.cycle_rank,2)
         self.assertEqual(tuple(v.length for v in c.cycles),(3,4))
-        self.assertEqual(c.common_erasure_cap,Fraction(1,8))
-        # Correction: max(1/6,1/8) = 1/6, shortest frustrated cycle.
+        # The shortest unbalanced block controls the uniform cap.
         self.assertEqual(c.common_erasure_cap,Fraction(1,6))
         self.assertTrue(verify_common_eraser_small(c))
         self.assertEqual(c.q4_support_count(),
