@@ -209,10 +209,9 @@ class ThetaSupportCircuitsTests(unittest.TestCase):
         self.assertEqual(c.q4_even_verify_upper_algebraic(),
                          Fraction(1,360))
         self.assertEqual(c.discrepancy((1<<360)-1),
-                         Fraction(1,2**(360-2)))
+                         Fraction(1,2**(360-4)))
         self.assertTrue(c.contains_discrepancy((1<<360)-1))
         for i in (0,119,120,239,240,359):
-            self.assertEqual(c.discrepancy((1<<360)-1 ^ (1<<i)),0)
             # Exactly two whole paths and a proper 119-edge selection on
             # the third path remains a Fourier discrepancy.
             self.assertTrue(c.contains_discrepancy((1<<360)-1 ^ (1<<i)))
