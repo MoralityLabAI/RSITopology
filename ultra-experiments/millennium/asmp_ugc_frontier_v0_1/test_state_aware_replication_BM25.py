@@ -78,8 +78,8 @@ class StateAwareReplicationTests(unittest.TestCase):
         dual=sparse_full_dual()
         self.assertEqual(set(dual.walsh_numerators),
                          {31,47,55,59,61,62,63})
-        self.assertEqual(sum(dual.normalization_numerators)/
-                         dual.walsh_denominator,EXACT_ETA)
+        self.assertEqual(Fraction(sum(dual.normalization_numerators),
+                                  dual.walsh_denominator),EXACT_ETA)
         self.assertEqual(-sum(dual.marginal_numerators),
                          dual.marginal_denominator)
         self.assertEqual(len(dual.marginal_numerators),12)
@@ -149,7 +149,6 @@ class StateAwareReplicationTests(unittest.TestCase):
         self.assertEqual(net.path_count,251)
         self.assertEqual(net.orbit_size,94878)
         self.assertEqual(net.BM14_pathwise_orbit_size,3**251)
-        self.assertEqual(net.clean_support_count(max_orbits=100),0) if False else None
         self.assertEqual(4**n-3**n,4**250-3**250)
         self.assertEqual(verify_common_symbolic(n,2,q=8),
                          Fraction(1,8))
