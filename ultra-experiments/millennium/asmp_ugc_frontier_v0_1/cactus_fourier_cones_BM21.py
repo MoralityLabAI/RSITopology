@@ -118,6 +118,52 @@ class CactusCircuit:
             subset,frustrated=True
         )*mask_hat(q1)
 
+    def q4_support_member(self,subset:int)->bool:
+        """Exact compressed Boolean formula for q=4 cactus residual support.
+
+        Every fully selected frustrated *even* cycle forces a difference;
+        otherwise the difference is present iff an odd number of fully
+        selected frustrated *odd* cycles occur. This uses the q=4 cycle
+        Walsh identities A_even>0, B_even=0, A_odd=-B_odd!=0.
+        """
+        if self.q!=4 or not 0<=subset<(1<<self.edge_count):
+            raise ValueError("q=4 and a valid edge subset required")
+        if any(c.length%2==0 and
+               subset&c.edge_mask==c.edge_mask for c in self.unbalanced):
+            return True
+        return sum(c.length%2==1 and
+                   subset&c.edge_mask==c.edge_mask
+                   for c in self.unbalanced)%2==1
+
+    def q4_support_count(self)->int:
+        """Exact count of D without enumerating the 2^m Walsh indices.
+
+        For odd frustrated cycles, selected-all contributes one choice
+        and selected-proper contributes 2^L-1; count even parity by
+        (prod(2^L)+prod(2^L-2))/2. Every frustrated even cycle must
+        be proper for a missing Fourier discrepancy; balanced cycles
+        and bridge selections can be arbitrary.
+        """
+        if self.q!=4:
+            raise ValueError("closed q4 support formula requires q=4")
+        odd=[c.length for c in self.unbalanced if c.length%2]
+        even=[c.length for c in self.unbalanced if not c.length%2]
+        balanced=sum(c.length for c in self.cycles if not c.gain)
+        bridge=self.bridge_mask.bit_count()
+        odd_space=1<<sum(odd)
+        parity_bias=1
+        for L in odd:
+            parity_bias*=((1<<L)-2)
+        even_parity=(odd_space+parity_bias)//2
+        no_even_full=1
+        for L in even:
+            no_even_full*=((1<<L)-1)
+        no_difference=even_parity*no_even_full*(1<<(balanced+bridge))
+        result=(1<<self.edge_count)-no_difference
+        if not 0<=result<=1<<self.edge_count:
+            raise AssertionError("bad exact cactus support count")
+        return result
+
     def symbolic_receipt(self)->dict[str,object]:
         """No expansion of exponentially large Fourier support or masks."""
         t=self.bridge_mask.bit_count()
@@ -130,6 +176,9 @@ class CactusCircuit:
             "exact_common_erasure_cap":str(self.common_erasure_cap),
             "unicyclic_support_count":(
                 self.unicyclic_support_count() if self.cycle_rank==1 else None
+            ),
+            "q4_exact_support_count":(
+                self.q4_support_count() if self.q==4 else None
             ),
             "explicit_Fourier_table_constructed":False,
             "explicit_2_to_m_mask_distribution_constructed":False,
