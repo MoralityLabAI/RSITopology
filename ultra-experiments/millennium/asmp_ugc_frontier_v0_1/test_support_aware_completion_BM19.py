@@ -13,6 +13,7 @@ from support_aware_completion_BM19 import (
     remaining_fourier_support,verify_postprocessor_primal,
     verify_postprocessor_dual,certify_support_optimum,
     postprocess_partial_pair,singleton_union_bound,support_lp_metadata,
+    build_support_lp,check_support_lp_matrix,
 )
 from support_aware_fixtures_BM19 import (
     FIXTURES,frozen_partial,fixture_receipt,certificate_manifest,
@@ -172,6 +173,20 @@ class SupportAwareCompletionTests(unittest.TestCase):
                     Fraction(0),{31:Fraction(1)},(Fraction(-1),)+(0,)*5
                 )
             )
+
+    def test_exact_LP_matrix_independently_matches_each_fixture(self):
+        for key,(support,rate,upper,dual) in FIXTURES.items():
+            pair,_=frozen_partial(*key)
+            lp=build_support_lp(pair.m,support)
+            self.assertEqual(len(lp.equalities),len(support)+1)
+            self.assertEqual(len(lp.inequalities),pair.m)
+            self.assertEqual(len(lp.objective),(1<<pair.m)+1)
+            self.assertTrue(check_support_lp_matrix(lp,upper,rate))
+            self.assertFalse(check_support_lp_matrix(
+                lp,upper,rate-Fraction(1,1000)
+            ))
+        with self.assertRaises(ValueError):
+            build_support_lp(9,(511,),max_mask_states=256)
 
     def test_receipts_manifest_is_consistent_with_registered_witnesses(self):
         manifest=certificate_manifest()
