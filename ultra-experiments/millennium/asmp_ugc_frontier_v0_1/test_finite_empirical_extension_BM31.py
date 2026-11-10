@@ -20,6 +20,8 @@ from finite_empirical_extension_BM31 import (
     with_replacement_window,total_variation,
     independent_project_full,exceptional_singlebit_marginal,
     certify_finite_window,growing_window_bound,
+    finite_alphabet_tv_squared_bound,finite_alphabet_exact_kl_bound,
+    entropy_growing_window_bound,
 )
 from state_aware_replication_BM25 import (
     expanded_full_mask_law as bm25_mask,
@@ -195,6 +197,73 @@ class BM31EmpiricalExchangeabilityTests(unittest.TestCase):
             Fraction(1,2000)
         )
         self.assertGreater(growing_window_bound(10**9)["k"],900)
+
+    def test_entropy_and_pinsker_rate_exact_rational_against_discrete_masks(self):
+        for n in (2,3,4,5,10,25,100,1000):
+            for k in range(1,min(n,20)+1):
+                kl=finite_alphabet_exact_kl_bound(n,k)
+                coarse=finite_alphabet_tv_squared_bound(n,k)
+                self.assertLessEqual(kl,coarse)
+                if k==1:
+                    self.assertEqual((kl,coarse),(0,0))
+                self.assertLessEqual(
+                    window_bounds(n,k)["three_color_mask_tv_squared_upper"],
+                    coarse
+                )
+                self.assertEqual(
+                    window_bounds(n,k)["three_color_output_tv_squared_upper"],
+                    4*coarse
+                )
+        # The hostile n=2 two-color fixed-histogram example saturates
+        # the collision bound, while the entropy bound is conservative.
+        n=2
+        joint={((1,0,1),0):Fraction(1)}
+        tv=total_variation(
+            without_replacement_window(n,2,joint),
+            with_replacement_window(n,2,joint)
+        )
+        self.assertEqual(tv,Fraction(1,2))
+        self.assertLessEqual(tv**2,
+                             finite_alphabet_tv_squared_bound(n,2))
+        with self.assertRaises(ValueError):
+            finite_alphabet_tv_squared_bound(4,2,colors=0)
+
+    def test_the_entropy_bound_extends_window_to_n_two_thirds(self):
+        for n in (1,8,64,1000,10**6,10**9):
+            result=entropy_growing_window_bound(n)
+            k=result["k"]
+            self.assertTrue(k**3<=n**2)
+            self.assertTrue((k+1)**3>n**2)
+            self.assertEqual(result["mask_tv_squared_upper"],
+                             finite_alphabet_tv_squared_bound(n,k))
+            self.assertEqual(result["output_between_worlds_tv_squared_upper"],
+                             4*finite_alphabet_tv_squared_bound(n,k))
+            self.assertFalse(result["finite_erasure_threshold_rate_claimed"])
+        self.assertEqual(entropy_growing_window_bound(10**9)["k"],10**6)
+        # At n=10^9, the first million ordinary pairs have a TV
+        # approximation error less than 1/1000, using only an exact
+        # rational bound and no 4^1,000,000 state materialization.
+        self.assertLess(
+            entropy_growing_window_bound(10**9)["mask_tv_squared_upper"],
+            Fraction(1,10**6)
+        )
+
+    def test_entropy_bound_on_every_existing_registered_equalizer(self):
+        for name,n,a,b in original_masks():
+            j0=empirical_joint_law(n,a)
+            j1=empirical_joint_law(n,b)
+            for k in range(1,min(n,3)+1):
+                bnd=finite_alphabet_tv_squared_bound(n,k)
+                actual0=total_variation(
+                    without_replacement_window(n,k,j0),
+                    with_replacement_window(n,k,j0)
+                )
+                actual1=total_variation(
+                    without_replacement_window(n,k,j1),
+                    with_replacement_window(n,k,j1)
+                )
+                self.assertLessEqual(max(actual0**2,actual1**2),bnd,
+                                     msg=(name,k))
 
     def test_consistent_finite_iid_extensions_project_to_the_same_k_law(self):
         # An infinite extension generated from one empirical directing
