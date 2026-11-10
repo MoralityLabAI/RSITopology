@@ -270,3 +270,117 @@ def growing_horizon_rate(n:int,*,bound:Fraction=1,
         "explicit_threshold_rate_claimed":False,
         "external_numeric_solver_used":False,
     }
+
+
+
+def monomial_test(a:int,b:int)->LipschitzTest:
+    """Bounded Fourier-coordinate test u^a*w^b, with L1-Lipschitz <=a+b."""
+    if any(not isinstance(v,int) or v<0 for v in (a,b)):
+        raise ValueError("monomial exponents must be nonnegative integers")
+    return LipschitzTest(
+        f"u^{a}*w^{b}",Fraction(1),Fraction(a+b),
+        lambda u,w:u**a*w**b
+    )
+
+
+def monomial_observable(mask:int,k:int,a:int,b:int)->Fraction:
+    """Unbiased exact degree-(a+b) observable for the latent test.
+
+    For the first a ordinary observed paths take their first-bit
+    character; for the next b paths take both-bit parity.
+    Multiplication by (4/3)^a cancels the clean single-bit Fourier
+    factor (3/4)^a. The distinguished exceptional pair parity
+    completes the signed test. The observable magnitude is exactly
+    (4/3)^a, while its expectation equals 1/16 of the desired
+    BM-29 signed dyadic test under an iid directing measure.
+    """
+    if (not isinstance(k,int) or k<1 or
+        any(not isinstance(x,int) or x<0 for x in (a,b)) or
+        a+b>k or not isinstance(mask,int) or
+        not 0<=mask<1<<(2*k+2)):
+        raise ValueError("invalid monomial observation query")
+    S=sum((1<<(2*j) for j in range(a)),0)
+    S|=sum((3<<(2*j) for j in range(a,a+b)),0)
+    S|=3<<(2*k)
+    chi=-1 if (mask&S).bit_count()%2 else 1
+    return chi*Fraction(4,3)**a
+
+
+def monomial_signed_rate(n:int,a:int,b:int)->Fraction:
+    """Uniform finite-n residual bound O(degree^2/n), exact rational.
+
+    Let d=a+b, 1<=d<=n (or d=0). BM31 outputs yield epsilon<=2e.
+    Since the monomial is observed unbiasedly with sup amplitude
+    (4/3)^a, the dyadic residual obeys
+        |D[u^a w^b]|<=64*(4/3)^a*e(n,d)
+                     <=32*(4/3)^a*d(d-1)/n.
+    Use the final bound, requiring only one rational arithmetic call.
+    """
+    if (not isinstance(n,int) or n<1 or
+        any(not isinstance(x,int) or x<0 for x in (a,b)) or
+        a+b>n):
+        raise ValueError("valid degree <= finite ordinary path count required")
+    d=a+b
+    return Fraction(32*d*(d-1),n)*Fraction(4,3)**a
+
+
+@dataclass(frozen=True)
+class MonomialDyadicReceipt:
+    n:int
+    degree:int
+    a:int
+    b:int
+    exact_signed_defect:Fraction
+    observed_walsh_difference:Fraction
+    output_total_variation:Fraction
+    exact_collision_rate:Fraction
+    uniform_degree_rate:Fraction
+    unbiased_identity_holds:bool
+
+
+def certify_monomial_window(
+    n:int,a:int,b:int,q0:dict[int,Fraction],q1:dict[int,Fraction]
+)->MonomialDyadicReceipt:
+    """Independent exact signed-moment/output duality on a finite mask law."""
+    d=a+b
+    if not 1<=n<=5 or d>n or min(a,b)<0:
+        raise ValueError("bounded registered monomial control only")
+    k=max(1,d)
+    j0=empirical_joint_law(n,q0)
+    j1=empirical_joint_law(n,q1)
+    out0,out1=empirical_extended_outputs(n,k,j0,j1)
+    test=monomial_test(a,b)
+    signed=dyadic_residual(n,j0,j1,test)
+    observed=sum(
+        (p*monomial_observable(mask,k,a,b)
+         for mask,p in out0.items()),Fraction(0)
+    )-sum(
+        (p*monomial_observable(mask,k,a,b)
+         for mask,p in out1.items()),Fraction(0)
+    )
+    if signed!=16*observed:
+        raise AssertionError("unbiased empirical monomial identity failed")
+    epsilon=total_variation(out0,out1)
+    if abs(signed)>32*Fraction(4,3)**a*epsilon:
+        raise AssertionError("measured output TV cannot support dyadic defect")
+    from_bound=64*Fraction(4,3)**a*(
+        1-Fraction(1) if k==1 else
+        __collision_probability(n,k)
+    )
+    if abs(signed)>from_bound:
+        raise AssertionError("finite exchangeability collision rate violated")
+    rate=monomial_signed_rate(n,a,b)
+    if abs(signed)>rate:
+        raise AssertionError("finite polynomial dyadic rate violated")
+    return MonomialDyadicReceipt(
+        n,d,a,b,signed,observed,epsilon,
+        __collision_probability(n,k),rate,True
+    )
+
+
+def __collision_probability(n:int,k:int)->Fraction:
+    """Independent exact falling-factorial collision formula."""
+    value=Fraction(1)
+    for j in range(k):
+        value*=Fraction(n-j,n)
+    return 1-value
