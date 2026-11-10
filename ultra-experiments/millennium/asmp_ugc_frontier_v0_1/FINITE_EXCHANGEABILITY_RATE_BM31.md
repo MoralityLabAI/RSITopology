@@ -1,5 +1,8 @@
 # BM-31: Quantitative finite exchangeability with a distinguished exceptional mask
 
+> **Subsequent result, BM-33 (10 November 2026):** The [explicit Lipschitz signed-overlap dual](FINITE_ERASURE_RATE_BM33.md) now proves the finite scalar rate \(0\le5/52-\eta_n(8,2)\le O(n^{-1/3})\), including an explicit nonasymptotic inequality for every \(n\ge2\). Statements below calling the *existence* of a finite-n rate open describe the historical status before BM-33. Its numerical sharpness, finite-n exact optima for n>=4, and higher-alphabet extensions remain open.
+
+
 **10 November 2026 | exact finite-window approximation theorem and independently checked rational controls.**
 
 This advances the next proof obligation after [BM-29's exact q8 replication limit](INFINITE_REPLICATION_LIMIT_BM29.md) and [BM-30's uniqueness/stability theorem](OPTIMAL_CHANNEL_RIGIDITY_BM30.md). The new result supplies an explicit **finite-n quantitative exchangeability extension**, preserving the exceptional-pair coupling and the legally capped individual mask errors. It also produces a rigorous approximate-output equality bound when applied to ANY exact finite erasing pair.
