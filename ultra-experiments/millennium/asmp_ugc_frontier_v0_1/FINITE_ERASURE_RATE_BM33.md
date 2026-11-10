@@ -2,7 +2,7 @@
 
 **10 November 2026 | exact scalar finite-n theorem, constructive dual, rational regression controls.**
 
-This closes the precise rate gap left by [BM-29's q8 limiting masking theorem](INFINITE_REPLICATION_LIMIT_BM29.md), [BM-30's uniqueness/stability theorem](OPTIMAL_CHANNEL_RIGIDITY_BM30.md), [BM-31's finite empirical exchangeability](FINITE_EXCHANGEABILITY_RATE_BM31.md), and [BM-32's quantitative signed-measure observables](ROBUST_DYADIC_OBSERVABILITY_BM32.md). The advance is an explicit **continuous piecewise-linear test function** whose pointwise signed-measure inequalities are already sharp at BM-27's unique limiting eraser. It converts BM-32's bounded-Lipschitz dyadic residual estimate into a numerical lower bound on the actual finite-n erasure cost.
+This closes the precise rate gap left by [BM-29's q8 limiting masking theorem](INFINITE_REPLICATION_LIMIT_BM29.md), [BM-30's uniqueness/stability theorem](OPTIMAL_CHANNEL_RIGIDITY_BM30.md), [BM-31's finite empirical exchangeability](FINITE_EXCHANGEABILITY_RATE_BM31.md), and [BM-32's quantitative signed-measure observables](ROBUST_DYADIC_OBSERVABILITY_BM32.md). The advance is an explicit **continuous piecewise-bilinear test function** whose pointwise signed-measure inequalities are already sharp at BM-27's unique limiting eraser. It converts BM-32's bounded-Lipschitz dyadic residual estimate into a numerical lower bound on the actual finite-n erasure cost.
 
 All statements are in the original frozen model: q=8=|F₂³|, n ordinary length-two paths with gains 0/0, one exceptional length-two path with gains 0/nonzero, fresh uniform vertex labels, complete Boolean edge-satisfaction reports, and **hypothesis-dependent within-episode correlated XOR masks independent of the current clean observation**. The adversary knows the hidden hypothesis and obeys a common maximum per-bit flip cap. The theorem applies to the full class of such masks.
 
@@ -94,7 +94,7 @@ Substitute (11) and C_ord=J/2 to obtain
 
 The missing task is to construct a *globally bounded, Lipschitz* f satisfying (8)-(9) with useful norms.
 
-## 3. BM-33/T2: an explicit exact piecewise-linear potential
+## 3. BM-33/T2: an explicit exact piecewise-bilinear potential
 
 Define the one-variable base function f0 on [-1,1] by
 
@@ -127,7 +127,7 @@ Now define the two-variable function f(u,w) by three u-regimes. Use clamp(x,0,t)
             clamp(2w-1,0,t),           3/4<u<=1,
                            t=4u-3.                (15)
 
-This defines a real continuous piecewise-linear function on the entire compact square [-1,1]², including all physical states. Its exact uniform bounds are
+This defines a real continuous piecewise-bilinear function on the entire compact square [-1,1]², including all physical states. Its exact uniform bounds are
 
     **sup|f|<=5/6,     Lip_l1(f)<=64/15.**         (16)
 
