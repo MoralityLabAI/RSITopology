@@ -21,6 +21,8 @@ from repeated_gain_erasure_BM24 import (
     common_mask_orbits,common_mask_character,
     verify_common_symbolic,clean_support_count_length_two,
     prove_matching_lower,common_full_mask_law,
+    q4_sparse_full_dual,verify_q4_sparse_dual_symbolic,
+    certify_q4_family_finite,
     common_full_mask_integer,sample_common_mask,repeated_family_manifest,
 )
 from generic_fourier_erasure_BM17 import census,signed_walsh
@@ -254,6 +256,30 @@ class RepeatedThetaOrbitTests(unittest.TestCase):
                 self.assertLessEqual(
                     ((mask>>(i*L))&((1<<L)-1)).bit_count(),1
                 )
+
+    def test_one_character_exact_full_erasure_dual_finite_and_symbolic(self):
+        for n,L in ((1,1),(2,1),(3,1),(1,2),(2,2),
+                    (3,2),(4,2),(1,3)):
+            eta=Fraction(1,4*L)
+            dual=q4_sparse_full_dual(n,L)
+            self.assertEqual(len(dual.walsh_numerators),1)
+            self.assertEqual(sum(dual.normalization_numerators),
+                             dual.walsh_denominator*eta)
+            self.assertEqual(-sum(dual.marginal_numerators),
+                             dual.marginal_denominator)
+            self.assertEqual(verify_q4_sparse_dual_symbolic(n,L),eta)
+            result=certify_q4_family_finite(n,L)
+            self.assertEqual(result.optimum,eta)
+            self.assertTrue(result.full_output_equal)
+            self.assertEqual(result.walsh_terms,1)
+        self.assertEqual(verify_q4_sparse_dual_symbolic(250,2),
+                         Fraction(1,8))
+        self.assertEqual(verify_q4_sparse_dual_symbolic(2,120),
+                         Fraction(1,480))
+        with self.assertRaises(ValueError):
+            certify_q4_family_finite(250,2)
+        with self.assertRaises(ValueError):
+            q4_sparse_full_dual(0,2)
 
     def test_duplicate_type_grouping_and_model_validation(self):
         model=RepeatedTheta.from_paths(4,(
