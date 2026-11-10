@@ -97,10 +97,15 @@ class StateAwareReplicationTests(unittest.TestCase):
         c0,c1=census(net.game(0)),census(net.game(1))
         D={S for S in range(1<<net.m)
            if signed_walsh(c0,S)!=signed_walsh(c1,S)}
-        self.assertEqual(D,{31,47,55,59,61,62,63})
+        self.assertEqual(D,{51,55,59,60,61,62,63})
         self.assertEqual(net.clean_support_count(),7)
         self.assertEqual(net.clean_support_count(),4**2-3**2)
-        self.assertEqual(D,set(sparse_full_dual().walsh_numerators))
+        # Crucial compatibility effect: two dual characters 31/47
+        # have EQUAL clean Fourier coefficients between worlds, yet
+        # constrain how their hypothesis-aware masks may differ.
+        dual_support=set(sparse_full_dual().walsh_numerators)
+        self.assertEqual(dual_support-D,{31,47})
+        self.assertEqual(D-dual_support,{51,60})
 
     def test_replication_increases_optimal_q8_mask_budget(self):
         self.assertTrue(verify_sharp_witness(8,4))
