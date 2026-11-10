@@ -299,3 +299,22 @@ The remaining proposed **ASMP-14 certificate-width theorem** should extend beyon
 [BM-16 general separator Fourier elimination](SEPARATOR_FACTOR_TRANSFER_BM16.md) handles **arbitrary finite gain graphs**, including K4 and a Wheatstone bridge, using exact normalized elimination of uniform vertex labels in a chosen order. For each selected edge subset S, its Fourier coefficient is the expectation of the product of `1-2 1[e satisfied]` factors. Under induced elimination width w, a single coefficient costs `poly(n,m) q^(w+1)` rational operations, with explicit q-dependence and checked boundary-message tables. A min-fill ordering on the q=4 K2,3 theta uses joined scopes of three variables; a deliberately poor order joins four. K4's entire q=4/q=8 64-subset Fourier table, Wheatstone three-boundary conditional tables, and all 32 Fourier subsets of BM-15's nested SP graph match independent full-label enumeration. A q=32 long-chain width-one control demonstrates q^2 temporary state size rather than complete vertex enumeration.
 
 **ASMP-14 refined structural frontier:** BM-11 removes articulation-block erasure costs exactly; BM-14 gives a polynomial-size **full** erasure LP only when an exact gain-path permutation symmetry survives; BM-15 and BM-16 broaden the **coefficient oracle** to arbitrary TTSP and low-treewidth graph structure. The remaining theorem must connect bounded separator/overlap width to verifiable approximate/optimal hostile-mask **primal and dual** representations with explicit alphabet size and error-contract assumptions. A treewidth-bounded Fourier coefficient oracle alone cannot establish the requisite 2^m mask-variable compression. No ASMP prize admission or empirical AI safety claim follows from these finite mathematical primitives.
+
+
+## BM-17 full Fourier degree obstruction on K4
+
+The [BM-17 exact K4 certificate](K4_FULL_DEGREE_OBSTRUCTION_BM17.md) is a new finite hostile-control instance for the proposed ASMP-14 certificate-width theorem, continuing BM-16 beyond two-terminal series-parallel graphs. Fix the 4-vertex complete graph K4 (six edges, treewidth three, cycle rank three), alphabet K=F2² (q=4), and gain shifts (0,0,0,1,2,1) against the flat connection. All four triangles are frustrated. Define eta_d as the minimum uniform per-bit readout-error allowance needed for hypothesis-aware, current-clean-sample-independent correlated XOR masks to equalize **all Walsh coefficients of degree at most d**, with the same marginal-error constraints for every d.
+
+The **exact** degree profile is
+
+    eta_0=eta_1=eta_2=0,
+    eta_3=1/6,
+    eta_4=1/5,
+    eta_5=4/19,
+    eta_6=3/14.
+
+The final degree-six Fourier constraint increases the optimum by **1/266** above degree five. This directly refutes any general shortcut that stops at degree m−1 (which had happened to suffice for the BM-13 diamond and theta instances). The q=4 K4 full erasure interaction index is 9/7 relative to its unbalanced shortest triangle.
+
+New [generic exact primal/dual Fourier erasure checker](generic_fourier_erasure_BM17.py) and [four fully rational K4 primal and dual data sets](k4_high_degree_BM17.py) certify every nonzero degree optimum by exact weak LP duality. The optimized full-degree witness uses an identical mask law under both hypotheses with integer denominator 56 and six marginals each equal to 3/14; the degree-five attaining distributions differ by hypothesis and still leave the complete output six-edge character distinguishable. The independent BM-16 factor-elimination oracle verifies every one of the 64 clean Walsh coefficients for both worlds; the certificate checker verifies all 128 mask-atom dual inequalities at each degree. The finite optimality computation uses standard LP theory and makes no general hardness claim.
+
+**ASMP research consequence:** even a width-three, 2-connected graph can need full-order weighted Fourier constraints to certify the exact hostile-mask erasure optimum. A bounded-separator *coefficient oracle* therefore does not imply a low-degree approximation scheme for the whole erasure LP. Further graph-family work must specify a quantitative degree/certificate-size approximation claim, including algebraic gain relationships, graph size, separator width, and the adversarial readout information model, and test it against BM-17's explicit rational negative control.
