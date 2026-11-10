@@ -73,6 +73,21 @@ class CactusCircuit:
         return len(self.cycles)
 
     @property
+    def hypothesis_aware_erasure_cap(self)->Fraction:
+        """Exact cactus cap even against world-dependent correlated readouts.
+
+        By BM-11 one-vertex-sum factorization and BM-08's isolated-cycle
+        optimum, each unbalanced cycle gives a projected lower bound.
+        Product local BM-08 attaining masks achieve the maximum bound.
+        """
+        try:
+            from .sharp_erasure_optimality import critical_erasure_cap
+        except ImportError:
+            from sharp_erasure_optimality import critical_erasure_cap
+        return max((critical_erasure_cap(self.q,c.length)
+                    for c in self.unbalanced),default=Fraction(0))
+
+    @property
     def common_erasure_cap(self)->Fraction:
         return max((Fraction(1,2*c.length) for c in self.unbalanced),
                    default=Fraction(0))
@@ -393,6 +408,68 @@ def explicit_common_eraser(circuit:CactusCircuit, *,
                    Fraction(0))<=circuit.common_erasure_cap
                for i in range(circuit.edge_count))
     return law
+
+
+def explicit_hypothesis_aware_erasers(
+    circuit:CactusCircuit,*,max_edges:int=14
+)->tuple[dict[int,Fraction],dict[int,Fraction]]:
+    """Exact BM-08 per-cycle adversarial masks assembled across cactus blocks.
+
+    Worlds 0/1 get different masks only where BM-08 needs that
+    distinction. All masks remain current-clean-sample-independent.
+    Product composition is over edge-disjoint cyclic blocks and
+    preserves the original per-coordinate flip caps.
+    """
+    if circuit.edge_count>max_edges:
+        raise ValueError("explicit joint mask pair exceeds resource cap")
+    try:
+        from .sharp_erasure_optimality import sharp_erasure_masks
+    except ImportError:
+        from sharp_erasure_optimality import sharp_erasure_masks
+    laws=({0:Fraction(1)},{0:Fraction(1)})
+    for block in circuit.unbalanced:
+        edges=tuple(i for i in range(circuit.edge_count)
+                    if block.edge_mask&(1<<i))
+        pair=sharp_erasure_masks(circuit.q,block.length)
+        next_laws=[]
+        for law,local in zip(laws,pair):
+            output={}
+            for m,p in law.items():
+                for bits,prob in local.items():
+                    mask=sum((1<<edges[j] for j,bit in enumerate(bits)
+                              if bit),0)
+                    if m&mask:
+                        raise AssertionError("overlapping cactus cycle mask")
+                    target=m|mask
+                    output[target]=output.get(target,Fraction(0))+p*prob
+            next_laws.append({
+                x:v for x,v in output.items() if v
+            })
+        laws=tuple(next_laws)
+    for law in laws:
+        if sum(law.values(),Fraction(0))!=1:
+            raise AssertionError("hypothesis-aware cactus mask normalization")
+        for i in range(circuit.edge_count):
+            p=sum((v for mask,v in law.items() if mask&(1<<i)),
+                  Fraction(0))
+            if p>circuit.hypothesis_aware_erasure_cap:
+                raise AssertionError("hypothesis-aware cactus cap violated")
+    return laws
+
+
+def verify_hypothesis_aware_small(circuit:CactusCircuit)->bool:
+    """Full 2^m Walsh check of independent world-specific cactus masks."""
+    a,b=explicit_hypothesis_aware_erasers(circuit)
+    for S in range(1<<circuit.edge_count):
+        hat0=sum((p*(-1 if (x&S).bit_count()%2 else 1)
+                  for x,p in a.items()),Fraction(0))
+        hat1=sum((p*(-1 if (x&S).bit_count()%2 else 1)
+                  for x,p in b.items()),Fraction(0))
+        if circuit.fourier(S)*hat0!=circuit.fourier(
+            S,frustrated=True
+        )*hat1:
+            raise AssertionError("joint state-aware erasure failed")
+    return True
 
 
 def common_eraser_dual_lower(circuit:CactusCircuit)->Fraction:
