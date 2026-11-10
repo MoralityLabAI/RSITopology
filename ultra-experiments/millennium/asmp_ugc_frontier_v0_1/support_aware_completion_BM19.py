@@ -202,3 +202,66 @@ def support_lp_metadata(m:int,support:tuple[int,...])->dict[str,int]:
         "marginal_inequality_rows":m,
         "dual_mask_inequalities":1<<m,
     }
+
+
+
+@dataclass(frozen=True)
+class SupportLP:
+    """Exact rational standard-form LP for a frozen residual Fourier support."""
+    m: int
+    support: tuple[int, ...]
+    equalities: tuple[tuple[Fraction, ...], ...]
+    equality_rhs: tuple[Fraction, ...]
+    inequalities: tuple[tuple[Fraction, ...], ...]
+    inequality_rhs: tuple[Fraction, ...]
+    objective: tuple[Fraction, ...]
+
+
+def build_support_lp(
+    m:int,support:tuple[int,...],*,max_mask_states:int=256
+)->SupportLP:
+    """Expose exact matrix to optional LP discovery software.
+
+    Variable order is R_mask for mask 0..2^m-1 and final variable r.
+    There are 2^m+1 variables, 1+|D| equality rows and m marginal rows.
+    CI always verifies returned witnesses independently with exact Q.
+    """
+    support=_validate_support(m,support)
+    n=1<<m
+    if max_mask_states<1 or n>max_mask_states:
+        raise ValueError("eager mask matrix exceeds caller's memory cap")
+    eq=[tuple(Fraction(1) for _ in range(n))+(Fraction(0),)]
+    eq.extend(tuple(Fraction(-1 if (mask&S).bit_count()%2 else 1)
+                    for mask in range(n))+(Fraction(0),)
+              for S in support)
+    inequalities=tuple(
+        tuple(Fraction(1 if mask&(1<<i) else 0)
+              for mask in range(n))+(Fraction(-1),)
+        for i in range(m)
+    )
+    return SupportLP(
+        m,support,tuple(eq),
+        (Fraction(1),)+(Fraction(0),)*len(support),
+        inequalities,(Fraction(0),)*m,
+        (Fraction(0),)*n+(Fraction(1),)
+    )
+
+
+def check_support_lp_matrix(
+    lp:SupportLP,witness:PostprocessorPrimal,r:Fraction
+)->bool:
+    """Independent direct-matrix feasibility check of an exact primal."""
+    if lp.m>12 or len(lp.objective)!=(1<<lp.m)+1:
+        raise ValueError("bad matrix dimensions")
+    if witness.denominator<=0:
+        raise ValueError("invalid witness denominator")
+    values=tuple(Fraction(witness.weights.get(i,0),witness.denominator)
+                 for i in range(1<<lp.m))+(Fraction(r),)
+    if any(v<0 for v in values):
+        return False
+    return (
+        all(sum((x*y for x,y in zip(row,values)),Fraction(0))==rhs
+            for row,rhs in zip(lp.equalities,lp.equality_rhs))
+        and all(sum((x*y for x,y in zip(row,values)),Fraction(0))<=rhs
+                for row,rhs in zip(lp.inequalities,lp.inequality_rhs))
+    )
