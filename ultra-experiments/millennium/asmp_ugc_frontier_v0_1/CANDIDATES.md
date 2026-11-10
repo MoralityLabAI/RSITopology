@@ -451,3 +451,27 @@ The strict n2-to-n3 increase is exactly `4715355/411720467`. At n=3 there are fo
 Adding an ordinary path cannot reduce the minimum hostile masking budget: projection from n+1 to n retains the uniform labeling marginal and mask admissibility. BM-24's common-channel construction supplies the n-independent upper `1/(4L)`. Thus for every q,L the monotone sequence eta_n(q,L) has a **well-defined limit**. For q=8,L=2, the new provable bound is `751225/13956626 <= eta_n <= 1/8` for all n>=3 and therefore the same limit bracket. The 29-orbit/255-full-character lower dual lifts to arbitrary n>=3 by retaining three ordinary paths and the final exceptional path; all global dual inequalities reduce to the 512 local checks. The lift is exactly tested on n=3,4,5,10,250, with a 502-edge large fixture. For q=2/4 the limit is already exactly the common 1/(4L).
 
 A separate SciPy/HiGHS quotient-LP scan returned **uncertified exploratory** rates rising from about 0.063875 at n=4 to 0.094878 at n=16. The scan gives no sharp rational primal/dual beyond n=3 and **does not establish the asymptotic value or convergence rate**; these remain open. The structural challenge is now to derive a uniform-in-n analytic lower or upper certificate for q>=8 and to determine whether the limit equals the common-channel 1/(4L). The BM-26 computation belongs to classical Fourier/LP symmetrization theory and establishes no live AI model oversight guarantee, new UGC theorem or independently attested intervention.
+
+
+## BM-27: A uniform q=8 hypothesis-aware erasure upper below the common-mask limit
+
+The [BM-27 five-component convolution construction](UNIFORM_Q8_REPLICATION_UPPER_BM27.md) provides an exact **uniform-in-n UPPER** on the full hypothesis-aware masking threshold left open by BM-26:
+
+    eta_n(q=8,L=2) <= 5/52 ≈ 0.0961538462,   ALL n>=1.
+
+This is strictly lower than BM-24's exact **common-channel** cost 1/8, an absolute improvement **3/104** and relative decrease **3/13**. The theorem uses a four-state pair distribution identity, not a numerical LP extrapolation. Conditional on the shared terminal difference, an ordinary two-edge path is distributed as `A=(7/8,0,0,1/8)` when its total gain matches, and `B=(3/4,1/8,1/8,0)` otherwise. Define identity mask `I=(1,0,0,0)` and the legal one-hot parity eraser `E=(1/2,1/4,1/4,0)`. The exact signed-measure equality `E=2B-I` and XOR convolution relation `A*E=B*E` hold.
+
+For n ordinary paths, put `A_n=A^(tensor n)` and `B_n=B^(tensor n)`. The clean laws are `P0=(A_n⊗A+7B_n⊗B)/8` and `P1=(A_n⊗B+B_n⊗A+6B_n⊗B)/8`. The **legal world-specific masks** are
+
+    Q0=[3 I_n⊗E + A_n⊗I + A_n⊗E
+                       +6 B_n⊗I +2 B_n⊗A]/13,
+    Q1=[3 I_n⊗E +2 A_n⊗A
+                       +6 B_n⊗I +2 B_n⊗B]/13.
+
+Each individual edge has mask marginal **exactly 5/52 in both worlds**. Expanding the convolutions by the five ordinary output categories `A_n, B_n, (A*A)^tensor n, (A*B)^tensor n, (B*B)^tensor n` gives **identical exact four-state exceptional coefficients in both worlds** by the two pair identities above. This proves complete masked output-law equality for **every n**, without enumerating Fourier subsets or relying on finite numerical pilots. A legal O(n) sampler implements the mixtures. The new pure-stdlib tests independently compare the uniform vertex-label census with the clean conditional mixture (n=1..3), check every complete output probability and per-edge marginal (n=1..4), cross-check the BM-24 exact histogram-orbit Fourier equalities, and exercise symbolic n=250 and n=1000 cases.
+
+**Improved limiting-value bracket:** BM-26 proves the monotone limit `eta_infinity(8,2)` exists. Its registered exact n=3 lower plus BM-27's all-n upper give
+
+    751225/13956626 <= eta_infinity(8,2) <= 5/52.
+
+The earlier exploratory LP values through n=16, reaching about **0.094878**, lie below and approach **5/52**. This motivates **BM-27/C1: eta_infinity=5/52**, with only the upper direction established. A uniform-in-n **lower** certificate, perhaps via de Finetti ordinary-mask mixtures and compatible conditional exceptional-mask couplings, is still missing. The five-component witness is classical XOR convolution/channel symmetrization mathematics specialized to the frozen gain-graph interface and carries no empirical model safety or new UGC claim.
