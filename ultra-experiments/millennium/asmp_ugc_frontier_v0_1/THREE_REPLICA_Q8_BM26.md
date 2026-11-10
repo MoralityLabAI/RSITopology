@@ -1,5 +1,8 @@
 # BM-26: Sharp eight-label erasure after three ordinary path replicas
 
+> **Subsequent result, BM-29 (10 November 2026):** [The exact infinite-replication theorem](INFINITE_REPLICATION_LIMIT_BM29.md) proves **lim_n eta_n(8,2)=5/52** in the registered hypothesis-aware, current-clean-independent readout model. The open-limit statements below record the historical status before BM-29. Finite-n sharp formulas for n>=4 and a quantitative convergence rate remain open.
+
+
 **10 November 2026 | exact rational finite theorem, independent primal/dual checks, monotone-limit bracket.** This extends [BM-25's two-ordinary-path q=8 theorem](REPLICATED_GAIN_Q8_BM25.md) on the growing-core theta family from [BM-24](WREATH_THETA_SYMMETRY_BM24.md).
 
 The result is confined to the registered statistical observation experiment. Every episode uses fresh, independently uniform gain-group vertex labels and full Boolean edge-satisfaction readouts. The adversary knows the flat/frustrated hidden hypothesis and chooses an arbitrary correlated XOR error-mask distribution independently of the **current** clean observation, with a common per-bit maximum flip probability eta. The upper and lower claims include all such hypothesis-dependent masks. No operational model-safety guarantee or conjectured Unique Games proof follows.
