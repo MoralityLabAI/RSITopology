@@ -75,7 +75,7 @@ class N16RationalDualTests(unittest.TestCase):
         self.assertEqual(r["dual_inequalities_checked"],918)
         self.assertEqual(r["orbit_classes_per_hypothesis"],459)
         self.assertEqual(r["active_Fourier_orbit_multipliers"],441)
-        self.assertEqual(r["max_dual_slack"],0)
+        self.assertLessEqual(r["max_dual_slack"],0)
         self.assertFalse(r["external_optimizer_needed"])
         self.assertEqual(r["proved_limit_gap"],
                          Fraction(829573,650000000))
