@@ -83,6 +83,83 @@ def window_bounds(n:int,k:int)->dict[str,Fraction]:
         "output_tv_between_worlds":min(Fraction(1),2*e),
         "max_abs_fourier_discrepancy":min(Fraction(2),4*e),
         "union_collision_upper":Fraction(k*(k-1),2*n),
+        "three_color_mask_tv_squared_upper":
+            finite_alphabet_tv_squared_bound(n,k),
+        "three_color_output_tv_squared_upper":
+            4*finite_alphabet_tv_squared_bound(n,k),
+    }
+
+
+def finite_alphabet_tv_squared_bound(n:int,k:int, *,
+                                     colors:int=3)->Fraction:
+    """An O(k/n) TV bound via a self-contained KL/chi-square argument.
+
+    Condition on the empirical histogram, with c<=3 nonempty colors.
+    At t draws without replacement, next-color law is
+      q_i=(n p_i - N_i(t))/(n-t).
+    Relative to the iid law p_i=c_i/n, use
+      KL(q||p)<=chi2(q||p).
+    The hypergeometric variance identity gives
+      E chi2(q||p) = t*(c-1)/((n-1)*(n-t)).
+    KL chain rule and Pinsker TV^2<=KL/2 yield
+      TV^2 <= (c-1)/(2*(n-1)) sum_{t=0}^{k-1} t/(n-t)
+            <= (c-1) k(k-1)/[4(n-1)(n-k+1)].
+    Return the LAST, closed rational upper bound. The exceptional
+    pair and one-flip orientations are conditional Markov kernels,
+    so total variation cannot increase when adding them.
+
+    This is a bound on the finite-window mask/infinite extension TV.
+    It is not a rate for the finite-n optimum eta_n.
+    """
+    _validate(n,k)
+    if not isinstance(colors,int) or colors<1:
+        raise ValueError("number of empirical pair types must be positive")
+    if n==1 or k==1 or colors==1:
+        return Fraction(0)
+    return Fraction((colors-1)*k*(k-1),
+                    4*(n-1)*(n-k+1))
+
+
+def finite_alphabet_exact_kl_bound(n:int,k:int, *,
+                                  colors:int=3)->Fraction:
+    """The sharper rational bound on TV^2 before bounding n-t below."""
+    _validate(n,k)
+    if not isinstance(colors,int) or colors<1:
+        raise ValueError("positive number of empirical categories required")
+    if n==1 or k==1 or colors==1:
+        return Fraction(0)
+    bound=Fraction(colors-1,2*(n-1))*sum(
+        (Fraction(t,n-t) for t in range(k)),Fraction(0)
+    )
+    if bound>finite_alphabet_tv_squared_bound(n,k,colors=colors):
+        raise AssertionError("entropy bound exceeds its closed coarse form")
+    return bound
+
+
+def entropy_growing_window_bound(n:int)->dict[str,object]:
+    """k=floor(n^(2/3)) with exact rate O(n^(-1/3)) in total variation.
+
+    The rational bound uses no O(k) collision/falling-factorial loop,
+    so the receipt works for n in the billions and k in the millions.
+    """
+    _validate(n)
+    lo,hi=1,n
+    while lo<hi:
+        mid=(lo+hi+1)//2
+        if mid**3<=n**2:
+            lo=mid
+        else:
+            hi=mid-1
+    k=lo
+    square=finite_alphabet_tv_squared_bound(n,k)
+    return {
+        "n":n,"k":k,
+        "mask_tv_squared_upper":square,
+        "output_between_worlds_tv_squared_upper":4*square,
+        "max_Fourier_gap_squared_upper":16*square,
+        "ordinary_paths_grow":True,
+        "asymptotic_window":"k=floor(n^(2/3)), TV=O(n^(-1/3))",
+        "finite_erasure_threshold_rate_claimed":False,
     }
 
 
@@ -332,6 +409,9 @@ def certify_finite_window(
     tv1=total_variation(true1,fake1)
     if max(tv0,tv1)>e:
         raise AssertionError("Diaconis-Freedman empirical coupling bound violated")
+    kl_bound=finite_alphabet_tv_squared_bound(n,k)
+    if max(tv0**2,tv1**2)>kl_bound:
+        raise AssertionError("finite-alphabet KL/Pinsker rate violated")
     clean0,clean1=exact_clean_law(k,0),exact_clean_law(k,1)
     true_out0=xor_convolve(clean0,true0)
     true_out1=xor_convolve(clean1,true1)
@@ -342,6 +422,8 @@ def certify_finite_window(
     tv=total_variation(fake_out0,fake_out1)
     if tv>2*e:
         raise AssertionError("approximate infinite output TV bound violated")
+    if tv**2>4*kl_bound:
+        raise AssertionError("approximate infinite output entropy rate violated")
     gaps=tuple(abs(sum((
         (fake_out0.get(x,0)-fake_out1.get(x,0))*
         (-1 if (x&S).bit_count()%2 else 1)
@@ -350,6 +432,8 @@ def certify_finite_window(
     worst=max(gaps,default=Fraction(0))
     if worst>4*e:
         raise AssertionError("approximate infinite Fourier discrepancy bound violated")
+    if worst**2>16*kl_bound:
+        raise AssertionError("approximate infinite Fourier entropy rate violated")
     return FiniteWindowReceipt(n,k,e,tv0,tv1,tv,worst,
                                mu_same,bits_same,true_out0==true_out1)
 
