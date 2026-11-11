@@ -74,7 +74,9 @@ class BM40SequentialTests(unittest.TestCase):
 
     def test_bound_on_fresh_episode_count_and_risk(self):
         r=certified_finite_affinity(25,Fraction(1,2),digits=22)
+        self.assertEqual(episodes_for_risk_upper(r.affinity_upper,Fraction(1,3)),90)
         m=episodes_for_risk_upper(r.affinity_upper,Fraction(1,20))
+        self.assertEqual(m,511)
         self.assertGreaterEqual(m,500)
         self.assertLessEqual(m,520)
         self.assertLessEqual(iid_bayes_error_upper(r.affinity_upper,m),
@@ -90,6 +92,9 @@ class BM40SequentialTests(unittest.TestCase):
         lo,hi=certified_asymptotic_affinity(Fraction(1,2))
         self.assertLess(hi-lo,Fraction(1,10**17))
         self.assertGreater(lo,Fraction(99,100))
+        full=certified_finite_affinity(25,Fraction(1),digits=22)
+        self.assertEqual(episodes_for_risk_upper(full.affinity_upper,Fraction(1,3)),13)
+        self.assertEqual(episodes_for_risk_upper(full.affinity_upper,Fraction(1,20)),72)
         r=theorem_receipt(25,Fraction(1,2),digits=20)
         self.assertEqual(r["n"],25)
         self.assertEqual(r["lambda"],"1/2")

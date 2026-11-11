@@ -57,3 +57,18 @@ The results provide a synthetic control baseline for Control-Harness and StegoBe
 ## Exact tests
 
 A pure-stdlib verifier checks rational histogram masses, exact radical intervals, monotone finite-n affinity contraction, the infinite-n directing-law limit, explicit error-bound searches, and the zero-signal BM-27 erasure. Independent full-cube regressions cover n<=3. This module introduces no stochastic optimizer, numerical likelihood approximations or external numerical dependency.
+
+
+## Certified n25 numerical receipts (exact arithmetic, 11 November 2026)
+
+The focused GitHub Actions job verifies the two full output laws through exact multinomial histograms and computes an integer-isqrt enclosure at 22 decimal digits. Its widths are below 1.4e-18, while all episode sufficiency thresholds are checked with Fraction powers.
+
+| Unmasked fraction lambda | Finite-n Hellinger affinity B_25 | Sufficient iid episodes for R*<=1/3 | Sufficient iid episodes for R*<=0.05 |
+| --- | ---: | ---: | ---: |
+| 0 | exactly 1 | no finite count | no finite count |
+| 1/2 | approximately 0.995502464524 | 90 | 511 |
+| 1 | approximately 0.968185042298 | 13 | 72 |
+
+The infinite-n lambda=1/2 Hellinger affinity is approximately 0.994672797513, so 25 paths retain only about 84% of its limiting squared-Hellinger separation 1-B. The 25-path one-episode *total variation* already exceeds 99.9% of its limiting value. These are different notions of information, with different convergence behavior.
+
+The 511-episode statement is an upper bound for the optimal equal-prior Bayes error under the registered **iid graded mask process**. The actual smallest optimal sample size may be lower. The guarantee does not transfer to a monitor that uses only a fixed polynomial score or to adversaries correlating masks across episodes.
