@@ -1,0 +1,22 @@
+name: BM-39 exact graded q8 visibility
+
+on:
+  push:
+    branches:
+      - research/bm39-graded-tv-20261111
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  exact-finite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact all-n formula and full-output census
+        run: |
+          cd ultra-experiments/millennium/asmp_ugc_frontier_v0_1
+          python -m unittest test_exact_graded_visibility_BM39 -v
