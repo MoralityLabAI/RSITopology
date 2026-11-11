@@ -1,5 +1,8 @@
 # BM-35: Exact smooth polynomial overlap dual and an \(O(1/n)\) erasure-rate theorem
 
+> **Subsequent tightening (BM-36, 11 November 2026):** The [triangular Hessian Bernstein certificate](TRIANGULAR_HESSIAN_RATE_BM36.md) improves this same polynomial's rate to \(0\le5/52-\eta_n(8,2)\le117/n\). The BM-35 \(348/n\) theorem and original rational certificate remain valid historical results.
+
+
 **11 November 2026 | constructive rational polynomial certificate, global Bernstein positivity proof, finite-sample Taylor bound.**
 
 This strengthens [BM-34's finite-replica \(O(n^{-1/2})\) bound](DIRECT_FINITE_CONCENTRATION_BM34.md) for the replicated q8 gain-graph observation channel. The new argument uses an explicitly certified **degree-five smooth polynomial** satisfying BM-33's robust signed-overlap dual inequalities at every physical noise parameter. Its bounded second derivatives convert the unbiased all-\(n\) Fourier estimator's variance into an **inverse-\(n\)** bias, giving the first registered finite-replica \(O(1/n)\) scalar theorem.

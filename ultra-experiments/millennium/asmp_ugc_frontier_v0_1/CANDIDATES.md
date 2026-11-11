@@ -673,3 +673,12 @@ which lies strictly between 347 and 348. The final squared-gap receipt \`(5/52-e
 The new [independent BM-35 tests](test_smooth_polynomial_overlap_BM35.py) check the entire Bernstein coefficient certificate, a separately evaluated dense exact rational physical grid, polynomial equality modes, complete rational Hessian envelopes against independently differentiated samples, deliberately corrupted polynomial rejection, and actual BM-25 n2, BM-26 n3, BM-27/BM-30 legal world-dependent **full masked-output laws** with an independent BM-32 signed-defect cross-check. Earlier BM-34's finite-path variance table supplies the complete conditional sampling proof. **No abstract infinite de Finetti limit or finite iid replacement is required** for the new rate.
 
 **Next ASMP frontier:** optimize the large but explicit \`348/n\` constant, investigate sharper finite-n asymptotics including possible exponential rates, formalize the Bernstein certificate in Lean if worthwhile, determine exact finite n>=4 optima, and extend the smooth dual method to q>=16 and heterogeneous gain cores. This is a finite statistical-channel theorem under fixed attacker access rules, with no operational AI oversight, authenticated intervention or UGC proof claim.
+
+
+## BM-36: exact triangular-support Bernstein tightening to 117/n
+
+[BM-36 proof](TRIANGULAR_HESSIAN_RATE_BM36.md) improves BM-35's exact all-n q8 finite-replica convergence coefficient using the **same** degree-five polynomial and unchanged hypothesis-aware correlated mask assumptions:
+
+    0 <= 5/52 - eta_n(8,2) <= 117/n,  every integer n>=1.
+
+Each ordinary Fourier observation is one of \`(-4/3,1),(0,-1),(4/3,1)\`, so all empirical means, conditional means and Taylor interpolation segments lie within their convex triangle. An independent exact cubic tensor-product Bernstein interpolation certificate on 32 triangle parameter cells bounds all three Hessian fields by checking **1,536 rational coefficients**. The resulting rate constant is exactly \`433489819753448825447087550392/3727057529810093862630619125\`, approximately 116.309. The independent verifier uses a four-node rational collocation inverse, separate from BM-35's symbolic Bernstein transform. The BM-35 global physical-domain dual certificate and BM-34 conditional variance identities remain in force. This is a certified tightening of a finite statistical-channel bound, pending external mathematical review, and makes no claim of an optimal finite-n threshold.
