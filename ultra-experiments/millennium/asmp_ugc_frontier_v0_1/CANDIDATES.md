@@ -615,3 +615,30 @@ Taking `k=floor(n^(2/3))` gives the **first certified eta_infinity-eta_n = O(n^(
 The [BM-33 implementation](robust_overlap_potential_BM33.py) checks exact base breakpoints, the global three-regime proof, signed overlap for arbitrary finite measures **without imposing D=0**, and symbolic scalar rates. Its [independent tests](test_robust_overlap_potential_BM33.py) check the dual on more than 20,000 exact rational physical-domain points, randomized exact Lipschitz bounds, BM-27/30 equality measures, and actual BM-25/26/27 **full masked output witnesses** converted into finite empirical directing measures, cross-checking BM-32's separate dyadic defect calculation. The main finite-n proof uses only finite empirical histograms and their conditional iid samples; it **does not require BM-29's abstract infinite de Finetti limit** to derive the scalar inequality. The analytic theorem is written in prose with exact regression tests, not Lean-formalized.
 
 **Next ASMP frontier:** improve the conservative `n^(-1/3)` exponent/constants, seek exact finite n>=4 mask optima, extend the robust pointwise dual to larger alphabets and longer paths, and test separate costed trusted interventions. BM-33 is a finite Fourier/LP/equivariant channel theorem, without a new UGC result, deployed AI alignment guarantee or authenticated root-state restoration.
+
+
+## BM-34: direct finite-population Fourier concentration improves scalar q8 rate to O(n^-1/2)
+
+The [BM-34 theorem, full finite proof and independent tests](DIRECT_FINITE_CONCENTRATION_BM34.md) strengthen BM-33's O(n^-1/3) error budget rate for the original **q=8, n ordinary two-edge paths, one exceptional two-edge path** gain-graph monitoring experiment. BM-34 works directly on the actual n-path completely equalizing **world-aware correlated XOR mask pair independent of the current clean sample**, with no empirical-iid mask replacement.
+
+After path/within-path permutation averaging, condition on the **complete empirical mask flip-count histogram** `C=(c0,c1,c2)`, exceptional two-bit mask Z and shared clean terminal difference. The ordinary mask type ordering is uniform; the empirical Fourier statistic is invariant under that ordering. Fixing any type order, the clean path draws and fair orientations of one-flip mask types are independent between ordinary paths. The exact output-path moment table for `U_i=(2/3)(X_i+Y_i)`, `V_i=X_i Y_i` under conditional clean regime A/B gives
+
+    E Ubar = u=(c0-c2)/n,
+    E Vbar = w (A) or w/2 (B), w=(c0-c1+c2)/n;
+    A: Var(Ubar)<=7/(9n), Var(Vbar)=0;
+    B: Var(Ubar)<=4/(9n), Var(Vbar)=3/(4n).
+
+Clipping Ubar into [-1,1] cannot increase its error. BM-33's globally certified pointwise robust-overlap dual has **separate coordinate Lipschitz constants** `L_u<=64/15` and `L_w<=18/5`, proved from its finite affine-region gradients. Conditional Jensen/Cauchy–Schwarz, with rational bounds `sqrt7<=8/3` and `sqrt3<=7/4`, bound the expected dual-potential estimation error in either clean regime by
+
+    1079/(180 sqrt(n)).
+
+Use the **same reported-output observable** `G=(-1)^(exceptional reported pair parity)*f(clip(Ubar),Vbar)` in both hidden worlds. Their *actual* complete output laws agree, so `E0 G=E1 G` exactly. Separately, its conditional ideal expectations in the original finite histogram law satisfy `E0 Gideal -E1 Gideal = D[f]/16` for BM-29's dyadic signed-parity defect. Thus `|D[f]|<=8632/(45 sqrt(n))` directly with **zero finite exchangeability TV penalty**. The BM-33 robust signed-measure overlap dual holds for the same finite empirical directing measure, giving
+
+    0 <= 5/52 - eta_n(8,2)
+       <= 2158/(117 sqrt(n)),       EVERY n>=1.
+
+This is a **full finite-n scalar convergence rate O(n^-1/2)**, strictly improving BM-33's O(n^-1/3) theorem and requiring no infinite de Finetti measure limit. A rational squared certificate `(5/52-eta_n)^2<=(2158/117)^2/n` supports exact verification. The large-n constant is conservative; BM-28's tight n16 bound remains stronger at modest sizes.
+
+The [BM-34 standard-library implementation](direct_finite_concentration_BM34.py) derives every one-path conditional mean/variance by exact XOR convolution, proves the separate Lipschitz constants and coefficient identities, and evaluates actual BM-25/26/27 mask output laws against independently calculated ideal signed defects. Its [independent tests](test_direct_finite_concentration_BM34.py) enumerate all conditional n-path ordinary outputs for every histogram up to n=4, check literal path variance values, test randomized exact coordinatewise Lipschitz inequalities, validate full-world BM-25/26/27/30 mask witnesses and compare the new O(n^-1/2) squared rate with BM-33's earlier rational upper and BM-28's n16 lower. The development builds on classical conditional variance and sampling-without-replacement concentration, with its special statistical argument proved explicitly. No operational AI-control guarantee, authentication, general ASMP proof or new UGC theorem follows.
+
+**Next frontier:** reduce the conservative 2158/117 coefficient, determine whether the actual scalar rate is O(1/n) or faster, solve sharp q8 finite n>=4 thresholds, and extend dual/variance constructions to q>=16 and more heterogeneous core networks.
