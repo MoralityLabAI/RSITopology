@@ -1,5 +1,8 @@
 # BM-33: A finite-replica convergence rate from an explicit Lipschitz overlap dual
 
+> **Subsequent result, BM-35 (11 November 2026):** The [exact degree-five rational Bernstein dual](SMOOTH_POLYNOMIAL_ERASURE_RATE_BM35.md) improves the scalar threshold rate to \(0\le5/52-\eta_n(8,2)\le348/n\) for every \(n\ge1\). The inverse-square-root and inverse-cube-root bounds below remain valid historical results. BM-35 proves continuum positivity by checking 5,760 exact rational Bernstein coefficients and uses conditional second-order Taylor bias on all ordinary reported paths.
+
+
 > **Subsequent result, BM-34 (11 November 2026):** [Direct finite-population conditional Fourier concentration](DIRECT_FINITE_CONCENTRATION_BM34.md) strengthens the scalar rate to **\(0\le5/52-\eta_n(8,2)\le2158/(117\sqrt n)\)** for every n>=1. The \(n^{-1/3}\) bound below is an earlier independently certified result. BM-34 avoids the finite-de-Finetti replacement error by using the permutation-invariant estimator on all n ordinary paths.
 
 
