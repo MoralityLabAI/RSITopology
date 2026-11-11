@@ -1,5 +1,8 @@
 # BM-33: A finite-replica convergence rate from an explicit Lipschitz overlap dual
 
+> **Subsequent result, BM-34 (11 November 2026):** [Direct finite-population conditional Fourier concentration](DIRECT_FINITE_CONCENTRATION_BM34.md) strengthens the scalar rate to **\(0\le5/52-\eta_n(8,2)\le2158/(117\sqrt n)\)** for every n>=1. The \(n^{-1/3}\) bound below is an earlier independently certified result. BM-34 avoids the finite-de-Finetti replacement error by using the permutation-invariant estimator on all n ordinary paths.
+
+
 **10 November 2026 | exact scalar finite-n theorem, constructive dual, rational regression controls.**
 
 This closes the precise rate gap left by [BM-29's q8 limiting masking theorem](INFINITE_REPLICATION_LIMIT_BM29.md), [BM-30's uniqueness/stability theorem](OPTIMAL_CHANNEL_RIGIDITY_BM30.md), [BM-31's finite empirical exchangeability](FINITE_EXCHANGEABILITY_RATE_BM31.md), and [BM-32's quantitative signed-measure observables](ROBUST_DYADIC_OBSERVABILITY_BM32.md). The advance is an explicit **continuous piecewise-bilinear test function** whose pointwise signed-measure inequalities are already sharp at BM-27's unique limiting eraser. It converts BM-32's bounded-Lipschitz dyadic residual estimate into a numerical lower bound on the actual finite-n erasure cost.
