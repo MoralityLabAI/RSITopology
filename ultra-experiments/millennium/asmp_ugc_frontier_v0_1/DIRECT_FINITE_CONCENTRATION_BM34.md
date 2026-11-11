@@ -1,5 +1,8 @@
 # BM-34: Direct finite-population concentration gives an O(n⁻¹ᐟ²) masking convergence rate
 
+> **Subsequent result, BM-35 (11 November 2026):** The [exact degree-five rational Bernstein dual](SMOOTH_POLYNOMIAL_ERASURE_RATE_BM35.md) improves the scalar threshold rate to \(0\le5/52-\eta_n(8,2)\le348/n\) for every \(n\ge1\). The inverse-square-root and inverse-cube-root bounds below remain valid historical results. BM-35 proves continuum positivity by checking 5,760 exact rational Bernstein coefficients and uses conditional second-order Taylor bias on all ordinary reported paths.
+
+
 **11 November 2026 | exact finite-channel theorem, independent conditional variance table and full-output checks.**
 
 This improves [BM-33's scalar finite-n rate](FINITE_ERASURE_RATE_BM33.md) for the q=8 replicated gain-path readout game. BM-33's approximate infinite-exchangeability extension incurs a finite-sampling error when it replaces without-replacement ordinary mask types with conditionally i.i.d. draws. The central observation of BM-34 is that its Fourier estimator is a **symmetric average over all n ordinary paths**. Conditional on the complete empirical mask histogram, the order of the n mask types is irrelevant, and the remaining clean/noise randomness has **independent path contributions**. This permits a direct nonasymptotic concentration bound with no finite de Finetti approximation and no logarithmic loss.
