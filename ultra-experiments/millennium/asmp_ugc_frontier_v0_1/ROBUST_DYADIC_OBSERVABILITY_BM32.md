@@ -1,5 +1,8 @@
 # BM-32: Quantitative observable control of the signed dyadic equation
 
+> **Subsequent result, BM-34 (11 November 2026):** [Direct finite-population conditional Fourier concentration](DIRECT_FINITE_CONCENTRATION_BM34.md) strengthens the scalar rate to **\(0\le5/52-\eta_n(8,2)\le2158/(117\sqrt n)\)** for every n>=1. The \(n^{-1/3}\) bound below is an earlier independently certified result. BM-34 avoids the finite-de-Finetti replacement error by using the permutation-invariant estimator on all n ordinary paths.
+
+
 > **Subsequent result, BM-33 (10 November 2026):** The [explicit Lipschitz signed-overlap dual](FINITE_ERASURE_RATE_BM33.md) now proves the finite scalar rate \(0\le5/52-\eta_n(8,2)\le O(n^{-1/3})\), including an explicit nonasymptotic inequality for every \(n\ge2\). Statements below calling the *existence* of a finite-n rate open describe the historical status before BM-33. Its numerical sharpness, finite-n exact optima for n>=4, and higher-alphabet extensions remain open.
 
 
