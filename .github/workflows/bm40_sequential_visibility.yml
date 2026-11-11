@@ -1,0 +1,32 @@
+name: BM-40 exact sequential visibility
+
+on:
+  push:
+    branches:
+      - research/bm40-sequential-visibility-20261111
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  finite-hellinger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exact Hellinger brackets and finite histogram oracle
+        run: |
+          cd ultra-experiments/millennium/asmp_ugc_frontier_v0_1
+          python -m unittest test_robust_sequential_visibility_BM40 -v
+      - name: Large iid-episode certificate receipt
+        run: |
+          cd ultra-experiments/millennium/asmp_ugc_frontier_v0_1
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from robust_sequential_visibility_BM40 import theorem_receipt
+          for lam in (Fraction(0),Fraction(1,2),Fraction(1)):
+              print("BM40",json.dumps(theorem_receipt(25,lam),sort_keys=True))
+          PY
