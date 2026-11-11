@@ -133,7 +133,7 @@ class BM35SmoothPolynomialDualTests(unittest.TestCase):
         altered[(0,0)]+=DENOMINATOR//100
         with self.assertRaises(AssertionError):
             verify_bernstein_certificate(coefficients=altered)
-        with self.assertRaises(AssertionError):
+        with self.assertRaises(ValueError):
             verify_bernstein_certificate(
                 coefficients={(9,0):DENOMINATOR}
             )
@@ -164,8 +164,10 @@ class BM35SmoothPolynomialDualTests(unittest.TestCase):
                 test,
             )
             self.assertEqual(proof.dyadic_defect,residual)
-            self.assertEqual(sum(proof.world_biases),
-                             sum(proof.world_biases))
+            self.assertEqual(
+                proof.world_biases[0]-proof.world_biases[1],
+                -proof.dyadic_defect/16
+            )
             if expected==LIMIT:
                 self.assertLessEqual(abs(proof.dyadic_defect),
                                      Fraction(32)*smooth_hessian_rate().
