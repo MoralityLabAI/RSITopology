@@ -86,7 +86,7 @@ except ImportError:
         empirical_joint_law, directing_law, exceptional_singlebit_marginal,
     )
     from replication_uniform_upper_BM27 import (
-        PAIR_A,PAIR_B,xor_pair,exact_clean_law,
+        PAIR_A,PAIR_B,xor_pair,exact_clean_law,xor_convolve,
     )
 
 
