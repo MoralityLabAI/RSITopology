@@ -642,3 +642,34 @@ This is a **full finite-n scalar convergence rate O(n^-1/2)**, strictly improvin
 The [BM-34 standard-library implementation](direct_finite_concentration_BM34.py) derives every one-path conditional mean/variance by exact XOR convolution, proves the separate Lipschitz constants and coefficient identities, and evaluates actual BM-25/26/27 mask output laws against independently calculated ideal signed defects. Its [independent tests](test_direct_finite_concentration_BM34.py) enumerate all conditional n-path ordinary outputs for every histogram up to n=4, check literal path variance values, test randomized exact coordinatewise Lipschitz inequalities, validate full-world BM-25/26/27/30 mask witnesses and compare the new O(n^-1/2) squared rate with BM-33's earlier rational upper and BM-28's n16 lower. The development builds on classical conditional variance and sampling-without-replacement concentration, with its special statistical argument proved explicitly. No operational AI-control guarantee, authentication, general ASMP proof or new UGC theorem follows.
 
 **Next frontier:** reduce the conservative 2158/117 coefficient, determine whether the actual scalar rate is O(1/n) or faster, solve sharp q8 finite n>=4 thresholds, and extend dual/variance constructions to q>=16 and more heterogeneous core networks.
+
+
+## BM-35: exact degree-five Bernstein overlap dual improves q8 finite erasure convergence to O(1/n)
+
+The new [BM-35 full finite proof and rational certificate](SMOOTH_POLYNOMIAL_ERASURE_RATE_BM35.md) strengthen BM-34's O(n^-1/2) threshold convergence rate in the original **q=8, two-edge ordinary and exceptional path, fully hypothesis-aware, correlated but current-clean-independent XOR readout masking model**:
+
+    0 <= 5/52 - eta_n(8,2) <= 348/n,  EVERY integer n>=1.
+
+The essential new ingredient is an **explicit globally smooth degree-five polynomial potential** f(u,w) with **15 nonzero rational monomial coefficients sharing one 26-digit denominator**, discovered by a numerical LP but **independently certified in exact arithmetic**. For every physical symmetric two-bit ordinary-mask Fourier coordinate \(-1<=u<=1\), \(2|u|-1<=w<=1\), and \(c=16(1-u)/5\), it satisfies the complete BM-33 pointwise signed-overlap dual:
+
+    c-1+f(u,w)-f(u,w/2) >=0;
+    c+1-f(u,w)+f(u,w/2) >=0;
+    1+c-3f(u,w)-15f(u,w/2) >=0;
+    1+c+3f(u,w)+15f(u,w/2) >=0.
+
+The [BM-35 rational checker](smooth_polynomial_overlap_BM35.py) partitions the full physical wedge into **40 rational unit-square cells**, converting each of the four dual slack polynomials into its **degree-(5,5) Bernstein basis**. It checks **5,760 exact Bernstein coefficients**, all nonnegative, with **72 exactly zero**. Since Bernstein basis functions are nonnegative over the complete square, this is a **continuum pointwise positivity proof** with no numerical grid or LP solver trusted at verification time. The polynomial is tight on BM-27's three optimal mask modes, recovering BM-29's \(5/52\) asymptotic equality conditions.
+
+For each symmetrized finite-n mask, condition on the exact ordinary mask type histogram, exceptional mask and clean terminal regime. BM-34's **unclipped**, permutation-invariant sample means \(\widehat U=(2/(3n))\sum_i(X_i+Y_i)\) and \(\widehat W=(1/n)\sum_iX_iY_i\) are unbiased for latent \((u,w)\) in clean regime A and \((u,w/2)\) in B. Their exact conditional variance bounds are A: \(7/(9n),0\); B: \(4/(9n),3/(4n)\). The polynomial's rational coefficient-wise Hessian envelope on \([-4/3,4/3]\times[-1,1]\) gives a second-order Taylor bias at most \(C/n\) per world, with \(C\approx112.8977028643\); its first-order term vanishes under conditional expectation. Because the two *complete reported output laws* are equal, the same observed exceptional-parity-weighted smooth potential has identical expectations under both worlds. The ideal histogram-conditioned expectations differ by BM-29's dyadic defect \(D[f]/16\), hence \(|D[f]|<=32C/n\).
+
+BM-33's **robust pointwise signed-overlap lower inequality** \(8C_{\mathrm{ord}}+5C_{\mathrm{exc}}\ge5/4-(5/4)D[f]\) applies directly to this finite atomic histogram law, yielding
+
+    eta_n >= 5/52 -(40/13)*C/n
+          >= 5/52 - 348/n.
+
+The sharper rational rate coefficient is exactly
+\`431565367752631556213009198104/1242352509936697954210206375\`,
+which lies strictly between 347 and 348. The final squared-gap receipt \`(5/52-eta_n)^2<=(348/n)^2\` is rational, requiring no floating-point square roots.
+
+The new [independent BM-35 tests](test_smooth_polynomial_overlap_BM35.py) check the entire Bernstein coefficient certificate, a separately evaluated dense exact rational physical grid, polynomial equality modes, complete rational Hessian envelopes against independently differentiated samples, deliberately corrupted polynomial rejection, and actual BM-25 n2, BM-26 n3, BM-27/BM-30 legal world-dependent **full masked-output laws** with an independent BM-32 signed-defect cross-check. Earlier BM-34's finite-path variance table supplies the complete conditional sampling proof. **No abstract infinite de Finetti limit or finite iid replacement is required** for the new rate.
+
+**Next ASMP frontier:** optimize the large but explicit \`348/n\` constant, investigate sharper finite-n asymptotics including possible exponential rates, formalize the Bernstein certificate in Lean if worthwhile, determine exact finite n>=4 optima, and extend the smooth dual method to q>=16 and heterogeneous gain cores. This is a finite statistical-channel theorem under fixed attacker access rules, with no operational AI oversight, authenticated intervention or UGC proof claim.
