@@ -1,0 +1,27 @@
+name: ASMP UGC frontier seed
+
+on:
+  push:
+    paths:
+      - 'ultra-experiments/millennium/asmp_ugc_frontier_v0_1/**'
+      - '.github/workflows/asmp-ugc-seed.yml'
+  pull_request:
+    paths:
+      - 'ultra-experiments/millennium/asmp_ugc_frontier_v0_1/**'
+      - '.github/workflows/asmp-ugc-seed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact bounded gauge/locality tests
+        run: python -m unittest discover -s ultra-experiments/millennium/asmp_ugc_frontier_v0_1 -p 'test_*.py' -v
