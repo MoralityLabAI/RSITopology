@@ -1,0 +1,162 @@
+{
+  "alias_witness": {
+    "added_edge": [
+      1,
+      5
+    ],
+    "added_edge_preserves_quotient": true,
+    "certificate": {
+      "closed_set": [
+        1
+      ],
+      "d": 13,
+      "schema": "collatz.closed_set.v1",
+      "source": 1,
+      "target": 5
+    },
+    "certificate_valid": true,
+    "certificate_valid_with_added_edge": false,
+    "d": 13,
+    "quotient": 1,
+    "source": 1,
+    "source_cycle": [
+      1
+    ],
+    "target": 5,
+    "target_cycle": [
+      5,
+      7
+    ]
+  },
+  "core_sha256": "24ff52171aedf890c33439896ab5e71de65d9b05d557ba61d162f3623aa5dbca",
+  "date": "2026-11-25",
+  "evidence": "exhaustive finite-domain control",
+  "parameters": [
+    {
+      "closed_set_certificates": 35,
+      "cycles": 3,
+      "d": 13,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 49,
+      "quotient_classes": 2,
+      "quotient_obstructions": 12,
+      "reachable_pairs": 14,
+      "same_quotient_distinct_basins": 18,
+      "same_quotient_unreachable": 23,
+      "states": 7
+    },
+    {
+      "closed_set_certificates": 181,
+      "cycles": 4,
+      "d": 29,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 225,
+      "quotient_classes": 2,
+      "quotient_obstructions": 28,
+      "reachable_pairs": 44,
+      "same_quotient_distinct_basins": 114,
+      "same_quotient_unreachable": 153,
+      "states": 15
+    },
+    {
+      "closed_set_certificates": 1121,
+      "cycles": 3,
+      "d": 73,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 1369,
+      "quotient_classes": 3,
+      "quotient_obstructions": 720,
+      "reachable_pairs": 248,
+      "same_quotient_distinct_basins": 0,
+      "same_quotient_unreachable": 401,
+      "states": 37
+    },
+    {
+      "closed_set_certificates": 2036,
+      "cycles": 3,
+      "d": 97,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 2401,
+      "quotient_classes": 3,
+      "quotient_obstructions": 1248,
+      "reachable_pairs": 365,
+      "same_quotient_distinct_basins": 0,
+      "same_quotient_unreachable": 788,
+      "states": 49
+    },
+    {
+      "closed_set_certificates": 10711,
+      "cycles": 6,
+      "d": 217,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 11881,
+      "quotient_classes": 5,
+      "quotient_obstructions": 7596,
+      "reachable_pairs": 1170,
+      "same_quotient_distinct_basins": 88,
+      "same_quotient_unreachable": 3115,
+      "states": 109
+    },
+    {
+      "closed_set_certificates": 23218,
+      "cycles": 7,
+      "d": 313,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 24649,
+      "quotient_classes": 3,
+      "quotient_obstructions": 12480,
+      "reachable_pairs": 1431,
+      "same_quotient_distinct_basins": 7096,
+      "same_quotient_unreachable": 10738,
+      "states": 157
+    },
+    {
+      "closed_set_certificates": 79299,
+      "cycles": 5,
+      "d": 577,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 83521,
+      "quotient_classes": 5,
+      "quotient_obstructions": 62784,
+      "reachable_pairs": 4222,
+      "same_quotient_distinct_basins": 0,
+      "same_quotient_unreachable": 16515,
+      "states": 289
+    },
+    {
+      "closed_set_certificates": 240725,
+      "cycles": 11,
+      "d": 1001,
+      "false_obstructions": 0,
+      "invariant_violations": 0,
+      "pairs": 251001,
+      "quotient_classes": 10,
+      "quotient_obstructions": 182084,
+      "reachable_pairs": 10276,
+      "same_quotient_distinct_basins": 18,
+      "same_quotient_unreachable": 58641,
+      "states": 501
+    }
+  ],
+  "schema": "collatz.reachability.audit.v1",
+  "totals": {
+    "closed_set_certificates": 357326,
+    "cycles": 42,
+    "false_obstructions": 0,
+    "invariant_violations": 0,
+    "pairs": 375096,
+    "quotient_classes": 33,
+    "quotient_obstructions": 266952,
+    "reachable_pairs": 17770,
+    "same_quotient_distinct_basins": 7334,
+    "same_quotient_unreachable": 90374,
+    "states": 1164
+  }
+}
