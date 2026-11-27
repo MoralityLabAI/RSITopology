@@ -1,0 +1,53 @@
+name: Epistemic holonomy synthetic proof audit
+permissions:
+  contents: read
+
+on:
+  push:
+    paths:
+      - 'research/epistemic_holonomy/**'
+      - 'tests/test_epistemic_holonomy.py'
+      - 'scripts/run_epistemic_holonomy.py'
+      - 'protocols/epistemic_holonomy_v0_1.json'
+      - '.github/workflows/epistemic-holonomy.yml'
+  pull_request:
+    paths:
+      - 'research/epistemic_holonomy/**'
+      - 'tests/test_epistemic_holonomy.py'
+      - 'scripts/run_epistemic_holonomy.py'
+      - 'protocols/epistemic_holonomy_v0_1.json'
+      - '.github/workflows/epistemic-holonomy.yml'
+  workflow_dispatch:
+jobs:
+  finite-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install minimal numerical test dependencies
+        run: python -m pip install numpy pytest
+      - name: Verify Hodge, gauge, copying, and semantic controls
+        run: python -m pytest -q tests/test_epistemic_holonomy.py
+      - name: Produce synthetic receipt
+        run: python scripts/run_epistemic_holonomy.py --output artifacts/epistemic_holonomy_eh01.json
+      - name: Audit frozen population gates
+        run: |
+          python - <<'PY'
+          import json
+          from math import log
+          from pathlib import Path
+          x = json.loads(Path("artifacts/epistemic_holonomy_eh01.json").read_text())
+          for row in x["rows"]:
+              n = row["total_signals"]
+              echo, fixed, fresh = row["echo"], row["corrected_echo_hodge"], row["independent"]
+              assert echo["hodge"]["cycle_rank"] == fixed["cycle_rank"] == n-1
+              assert abs(echo["hodge"]["max_abs_cycle_integral"] - (log(1.5) if n>1 else 0)) < 1e-10
+              assert fixed["is_flat"] and fresh["hodge"]["is_flat"]
+              assert echo["actual_prediction_accuracy"] == 0.6
+              if n > 1:
+                  assert fresh["expected_log_loss_nats"] < echo["expected_log_loss_nats"]
+          print("Frozen analytic gates passed")
+          PY

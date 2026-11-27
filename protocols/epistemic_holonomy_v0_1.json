@@ -1,0 +1,65 @@
+{
+  "protocol_id": "rsi-topology-epistemic-holonomy-eh01-v0.1",
+  "registered_on": "2026-11-10",
+  "status": "CPU_only_synthetic_control",
+  "scope": "finite provenance-marked graph and synthetic binary evidence; no live neural model",
+  "source_grouping": "one authentic trial or information origin is the independent unit; copies retain the origin ID",
+  "parameters": {
+    "binary_prior_H1": 0.5,
+    "source_reliability": 0.6,
+    "apparent_signal_counts": [
+      1,
+      2,
+      4,
+      8,
+      10,
+      16,
+      32
+    ],
+    "paired_seed": 11,
+    "paired_trials": 20000,
+    "float_tolerance_cycle": 1e-10
+  },
+  "comparators": {
+    "naive_echo": "copies mapped to provenance self-loops; increment log(0.6/0.4) each",
+    "corrected_echo": "same marked graph and edges; copied-source increments zero",
+    "fresh_independent": "each signal has a new independent evidence ID; true conditionally independent observations",
+    "gauge_transform": "add a vertex potential gradient; cycle integral invariant",
+    "flat_false": "equal transcript distributions across worlds with opposite external semantic labels"
+  },
+  "primary_gates": [
+    "for N>1, naive echo has N-1 cycles, each integral log(1.5) within 1e-10",
+    "for every N, corrected echo has same topology and vanishing cycle integrals",
+    "for every N, fresh evidence chain is flat",
+    "for N>1, echo expected log loss strictly increases with N, and fresh expected log loss is lower",
+    "for every N, true echo accuracy is exactly 0.6 and its MI is fixed at 1-h2(0.6)",
+    "finite graph gauge and indistinguishability tests pass",
+    "paired Monte Carlo at N=10 agrees with population echo accuracy within 0.01 and both losses within frozen tolerances"
+  ],
+  "analysis": {
+    "exact_metrics": [
+      "posterior_confidence",
+      "actual_accuracy",
+      "population_calibration_gap",
+      "expected_log_loss_nats",
+      "expected_brier",
+      "mutual_information_bits"
+    ],
+    "graph_metrics": [
+      "cycle_rank",
+      "cycle_integrals",
+      "hodge_cycle_l2",
+      "divergence_linf"
+    ],
+    "interpretation": "cycle holonomy diagnoses path dependence only relative to independently verified provenance marks"
+  },
+  "exclusions": [
+    "no novel general-purpose spectral theorem claimed",
+    "no behavioral control or RSI-risk certification",
+    "no new authorization level for signed reward or weight edits",
+    "no parameter tuning after outcomes",
+    "no model weights or externally hosted experiment"
+  ],
+  "run": "python scripts/run_epistemic_holonomy.py --output artifacts/epistemic_holonomy_eh01.json",
+  "test": "python -m pytest -q tests/test_epistemic_holonomy.py"
+}
